@@ -1,0 +1,620 @@
+{
+	"descriptions" : [
+		{
+			"id" : "between",
+			"properties" : { },
+			"conditions" : [
+				{
+					"label" : "Between zero and five",
+					"predicate" : {
+						"class" : "MAPluggableCondition",
+						"receiver" : {
+							"type" : "nil"
+						},
+						"selector" : "between:and:",
+						"arguments" : [
+							{
+								"value" : "0",
+								"type" : "integer"
+							},
+							{
+								"value" : "5",
+								"type" : "integer"
+							}
+						],
+						"index" : 0
+					}
+				}
+			],
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "between"
+			},
+			"class" : "MANumberDescription"
+		},
+		{
+			"id" : "boolean",
+			"properties" : {
+				"trueString" : {
+					"value" : "Yes!",
+					"type" : "string"
+				},
+				"falseString" : {
+					"value" : "No!",
+					"type" : "string"
+				}
+			},
+			"conditions" : [ ],
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "boolean"
+			},
+			"class" : "MABooleanDescription"
+		},
+		{
+			"id" : "chainField",
+			"properties" : { },
+			"conditions" : [ ],
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"writeSelector" : "value:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "value"
+					},
+					{
+						"name" : "value",
+						"class" : "MAVariableAccessor"
+					}
+				]
+			},
+			"class" : "MAStringDescription"
+		},
+		{
+			"id" : "composite",
+			"properties" : { },
+			"conditions" : [
+				{
+					"label" : "Starts A without z",
+					"predicate" : {
+						"conditions" : [
+							{
+								"class" : "MAPluggableCondition",
+								"receiver" : {
+									"type" : "nil"
+								},
+								"selector" : "beginsWith:",
+								"arguments" : [
+									{
+										"value" : "A",
+										"type" : "string"
+									}
+								],
+								"index" : 0
+							},
+							{
+								"conditions" : [
+									{
+										"class" : "MAPluggableCondition",
+										"receiver" : {
+											"type" : "nil"
+										},
+										"selector" : "endsWith:",
+										"arguments" : [
+											{
+												"value" : "z",
+												"type" : "string"
+											}
+										],
+										"index" : 0
+									}
+								],
+								"class" : "MANegationCondition"
+							}
+						],
+						"class" : "MAConjunctiveCondition"
+					}
+				}
+			],
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "composite"
+			},
+			"class" : "MAStringDescription"
+		},
+		{
+			"id" : "dictField",
+			"properties" : { },
+			"conditions" : [ ],
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "dictField"
+			},
+			"class" : "MAStringDescription"
+		},
+		{
+			"id" : "identityField",
+			"properties" : { },
+			"conditions" : [ ],
+			"accessor" : {
+				"class" : "MAIdentityAccessor"
+			},
+			"class" : "MAStringDescription"
+		},
+		{
+			"id" : "integer",
+			"properties" : { },
+			"conditions" : [
+				{
+					"label" : "No integer was entered",
+					"predicate" : {
+						"class" : "MAPluggableCondition",
+						"receiver" : {
+							"type" : "nil"
+						},
+						"selector" : "isInteger",
+						"arguments" : [ ],
+						"index" : 0
+					}
+				}
+			],
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "integer"
+			},
+			"class" : "MANumberDescription"
+		},
+		{
+			"id" : "lastArgument",
+			"properties" : { },
+			"conditions" : [
+				{
+					"label" : "Upper bound",
+					"predicate" : {
+						"class" : "MAPluggableCondition",
+						"receiver" : {
+							"value" : "3",
+							"type" : "integer"
+						},
+						"selector" : "between:and:",
+						"arguments" : [
+							{
+								"value" : "1",
+								"type" : "integer"
+							},
+							{
+								"type" : "nil"
+							}
+						],
+						"index" : 2
+					}
+				}
+			],
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "lastArgument"
+			},
+			"class" : "MANumberDescription"
+		},
+		{
+			"reference" : "number",
+			"labels" : [
+				{
+					"value" : {
+						"value" : "1",
+						"type" : "integer"
+					},
+					"label" : "One"
+				},
+				{
+					"value" : {
+						"value" : "2",
+						"type" : "integer"
+					},
+					"label" : "Two"
+				}
+			],
+			"properties" : {
+				"undefined" : {
+					"value" : "none",
+					"type" : "string"
+				}
+			},
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "many"
+			},
+			"options" : [
+				{
+					"value" : "1",
+					"type" : "integer"
+				},
+				{
+					"value" : "2",
+					"type" : "integer"
+				}
+			],
+			"conditions" : [ ],
+			"class" : "MAMultipleOptionDescription",
+			"id" : "many"
+		},
+		{
+			"id" : "member",
+			"properties" : { },
+			"conditions" : [
+				{
+					"label" : "Listed",
+					"predicate" : {
+						"class" : "MAPluggableCondition",
+						"receiver" : {
+							"value" : [
+								{
+									"value" : "1",
+									"type" : "integer"
+								},
+								{
+									"value" : "2",
+									"type" : "integer"
+								},
+								{
+									"value" : "3",
+									"type" : "integer"
+								}
+							],
+							"type" : "array"
+						},
+						"selector" : "includes:",
+						"arguments" : [
+							{
+								"type" : "nil"
+							}
+						],
+						"index" : 1
+					}
+				}
+			],
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "member"
+			},
+			"class" : "MANumberDescription"
+		},
+		{
+			"id" : "memo",
+			"properties" : {
+				"lineCount" : {
+					"value" : "5",
+					"type" : "integer"
+				}
+			},
+			"conditions" : [ ],
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "memo"
+			},
+			"class" : "MAMemoDescription"
+		},
+		{
+			"id" : "nullField",
+			"properties" : { },
+			"conditions" : [ ],
+			"accessor" : {
+				"uuid" : {
+					"value" : [
+						{
+							"value" : "0",
+							"type" : "integer"
+						},
+						{
+							"value" : "1",
+							"type" : "integer"
+						},
+						{
+							"value" : "2",
+							"type" : "integer"
+						},
+						{
+							"value" : "3",
+							"type" : "integer"
+						},
+						{
+							"value" : "4",
+							"type" : "integer"
+						},
+						{
+							"value" : "5",
+							"type" : "integer"
+						},
+						{
+							"value" : "6",
+							"type" : "integer"
+						},
+						{
+							"value" : "7",
+							"type" : "integer"
+						},
+						{
+							"value" : "8",
+							"type" : "integer"
+						},
+						{
+							"value" : "9",
+							"type" : "integer"
+						},
+						{
+							"value" : "10",
+							"type" : "integer"
+						},
+						{
+							"value" : "11",
+							"type" : "integer"
+						},
+						{
+							"value" : "12",
+							"type" : "integer"
+						},
+						{
+							"value" : "13",
+							"type" : "integer"
+						},
+						{
+							"value" : "14",
+							"type" : "integer"
+						},
+						{
+							"value" : "15",
+							"type" : "integer"
+						}
+					],
+					"type" : "array"
+				},
+				"class" : "MANullAccessor"
+			},
+			"class" : "MAStringDescription"
+		},
+		{
+			"id" : "number",
+			"properties" : {
+				"undefined" : {
+					"value" : "none",
+					"type" : "string"
+				},
+				"min" : {
+					"value" : "c004000000000000",
+					"type" : "float"
+				},
+				"max" : {
+					"value" : "10",
+					"type" : "integer"
+				}
+			},
+			"conditions" : [ ],
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "number"
+			},
+			"class" : "MANumberDescription"
+		},
+		{
+			"reference" : "number",
+			"labels" : [
+				{
+					"value" : {
+						"value" : "1",
+						"type" : "integer"
+					},
+					"label" : "One"
+				},
+				{
+					"value" : {
+						"value" : "2",
+						"type" : "integer"
+					},
+					"label" : "Two"
+				},
+				{
+					"value" : {
+						"value" : "ok",
+						"type" : "symbol"
+					},
+					"label" : "Okay"
+				}
+			],
+			"properties" : { },
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "one"
+			},
+			"options" : [
+				{
+					"value" : "1",
+					"type" : "integer"
+				},
+				{
+					"value" : "2",
+					"type" : "integer"
+				},
+				{
+					"value" : "ok",
+					"type" : "symbol"
+				}
+			],
+			"conditions" : [ ],
+			"class" : "MASingleOptionDescription",
+			"id" : "one"
+		},
+		{
+			"id" : "password",
+			"properties" : { },
+			"conditions" : [ ],
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "password"
+			},
+			"class" : "MAPasswordDescription"
+		},
+		{
+			"id" : "positive",
+			"properties" : { },
+			"conditions" : [
+				{
+					"label" : "No positive number was entered",
+					"predicate" : {
+						"class" : "MAPluggableCondition",
+						"receiver" : {
+							"type" : "nil"
+						},
+						"selector" : "positive",
+						"arguments" : [ ],
+						"index" : 0
+					}
+				}
+			],
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "positive"
+			},
+			"class" : "MANumberDescription"
+		},
+		{
+			"id" : "propertyField",
+			"properties" : { },
+			"conditions" : [ ],
+			"accessor" : {
+				"class" : "MAPropertyAccessor",
+				"key" : "note"
+			},
+			"class" : "MAStringDescription"
+		},
+		{
+			"id" : "root",
+			"properties" : {
+				"label" : {
+					"value" : "Portable",
+					"type" : "string"
+				}
+			},
+			"conditions" : [ ],
+			"children" : [
+				"number",
+				"symbol",
+				"memo",
+				"password",
+				"tokens",
+				"boolean",
+				"positive"
+			],
+			"class" : "MAContainer"
+		},
+		{
+			"id" : "selectorField",
+			"properties" : { },
+			"conditions" : [ ],
+			"accessor" : {
+				"writeSelector" : "value:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "value"
+			},
+			"class" : "MAStringDescription"
+		},
+		{
+			"id" : "string",
+			"properties" : {
+				"undefined" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			"conditions" : [ ],
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "string"
+			},
+			"class" : "MAStringDescription"
+		},
+		{
+			"id" : "symbol",
+			"properties" : { },
+			"conditions" : [ ],
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "symbol"
+			},
+			"class" : "MASymbolDescription"
+		},
+		{
+			"id" : "tokens",
+			"properties" : {
+				"separators" : {
+					"value" : ",; ",
+					"type" : "string"
+				}
+			},
+			"conditions" : [ ],
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "tokens"
+			},
+			"class" : "MATokenDescription",
+			"reference" : "number"
+		},
+		{
+			"id" : "variableField",
+			"properties" : { },
+			"conditions" : [ ],
+			"accessor" : {
+				"name" : "value",
+				"class" : "MAVariableAccessor"
+			},
+			"class" : "MAStringDescription"
+		}
+	],
+	"format" : "magritte.graph/3",
+	"objects" : [
+		{
+			"description" : "root",
+			"id" : "sample",
+			"values" : {
+				"symbol" : {
+					"value" : "ready",
+					"type" : "symbol"
+				},
+				"tokens" : {
+					"value" : [
+						{
+							"value" : "1",
+							"type" : "integer"
+						},
+						{
+							"value" : "2",
+							"type" : "integer"
+						}
+					],
+					"type" : "array"
+				},
+				"password" : {
+					"value" : "secret",
+					"type" : "string"
+				},
+				"memo" : {
+					"value" : "line1\nline2",
+					"type" : "string"
+				},
+				"positive" : {
+					"value" : "0",
+					"type" : "integer"
+				},
+				"number" : {
+					"value" : "3ff8000000000000",
+					"type" : "float"
+				},
+				"boolean" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		}
+	],
+	"root" : "root"
+}

@@ -1,0 +1,14 @@
+[
+	{
+		"source" : "/private/tmp/magritte-cpp-portable-native.json",
+		"objects" : 1,
+		"validated" : true,
+		"descriptions" : 23
+	},
+	{
+		"source" : "/private/tmp/magritte-swift-portable-native.json",
+		"objects" : 1,
+		"validated" : true,
+		"descriptions" : 23
+	}
+]

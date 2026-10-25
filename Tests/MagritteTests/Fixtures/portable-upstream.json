@@ -1,0 +1,29 @@
+{
+  "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
+  "reads": [
+    {
+      "description": "number",
+      "text": "1,2",
+      "value": {
+        "type": "integer",
+        "value": "12"
+      },
+      "reason": "Pinned MAStringReader>>visitNumberDescription: removes every thousandsSeparator character. Installed GT method predates this behavior."
+    },
+    {
+      "description": "one",
+      "text": "1,2",
+      "value": {
+        "type": "integer",
+        "value": "12"
+      },
+      "reason": "Single-option fallback visits its number reference, including upstream thousands-separator removal."
+    }
+  ],
+  "comparisonPolicy": {
+    "description": "Portable comparisons order Int64 and binary64 exactly, independent of VM SmallInteger representation. GT equality is exact, but its SmallInteger/Float relational coercion can round the integer.",
+    "case": 0,
+    "less": false,
+    "greater": true
+  }
+}

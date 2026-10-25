@@ -3,7 +3,7 @@ import Foundation
 public extension Description {
     var isRelation: Bool { ["MAToOneRelationDescription", "MAToManyRelationDescription", "MAToManyScalarRelationDescription"].contains(className) }
     var isOption: Bool { ["MASingleOptionDescription", "MAMultipleOptionDescription"].contains(className) }
-    var isReference: Bool { isRelation || isOption }
+    var isReference: Bool { isRelation || isOption || className == "MATokenDescription" }
     var isMultiple: Bool { ["MAToManyRelationDescription", "MAToManyScalarRelationDescription", "MAMultipleOptionDescription"].contains(className) }
     func referenceDescription() throws -> Description {
         guard let r = reference else { throw MagritteError("Reference description is unavailable; retain it in the graph") }; return r
@@ -11,15 +11,24 @@ public extension Description {
     func labelForOption(_ value: Value, limits: Limits = Limits()) throws -> String {
         let budget = Budget(limits)
         let key = try valueKey(value, tick: budget.tick)
+        func bounded(_ text: String) throws -> String {
+            try require(text.utf8.count <= limits.bytes && text.utf8.count <= limits.visits - budget.work, "Option label output limit")
+            budget.work += text.utf8.count; return text
+        }
+        if className == "MABooleanDescription" {
+            if case .boolean(let b) = value { guard case .string(let s) = property(b ? "trueString" : "falseString") else { throw MagritteError("Expected Boolean label") }; return try bounded(s) }
+            guard case .string(let s) = property("undefined") else { throw MagritteError("Expected undefined text") }; return try bounded(s)
+        }
         try require(isOption, "Option operation requires option description")
         for label in labels {
             try require(portableLabelKey(label.value), "Identity-sensitive option label key is not portable")
-            if try valueKey(label.value, tick: budget.tick) == key { return label.label }
+            if try sameLabelType(label.value, value) && valueKey(label.value, tick: budget.tick) == key { return try bounded(label.label) }
         }
-        return try renderOption(value, referenceDescription(), budget)
+        return try bounded(displayString(value))
     }
     func allOptions(limits: Limits = Limits()) throws -> [Value] { try allOptionsWith(.undefined, limits: limits) }
     func allOptionsWith(_ current: Value, limits: Limits = Limits()) throws -> [Value] {
+        if className == "MABooleanDescription" { try require(limits.visits >= 2 && limits.items >= 2, "Boolean option item/work limit"); return [.boolean(false), .boolean(true)] }
         let budget = Budget(limits)
         var contains = false
         let key = try valueKey(current, tick: budget.tick)
@@ -30,7 +39,7 @@ public extension Description {
         if try flag("sorted") {
             let ref = try referenceDescription()
             let ranked = try result.enumerated().map { i, v -> (Int, Value, String) in
-                let text = try renderOption(v, ref, budget)
+                let text = try writeString(v, using: ref, limits: limits)
                 try require(text.utf8.allSatisfy { $0 < 128 }, "Non-ASCII case-insensitive option sorting is not implemented")
                 return (i, v, text.lowercased())
             }
@@ -38,17 +47,6 @@ public extension Description {
         }
         if try !isMultiple && !flag("required") { result.insert(property("undefinedValue"), at: 0) }
         return result
-    }
-}
-private func renderOption(_ value: Value, _ reference: Description, _ budget: Budget) throws -> String {
-    if try valueKey(value, tick: budget.tick) == valueKey(reference.property("undefinedValue"), tick: budget.tick) {
-        if case .string(let s) = reference.property("undefined") { return s }; return ""
-    }
-    switch value {
-    case .string(let s), .character(let s): return s
-    case .integer(let i): return String(i)
-    case .boolean(let b): return b ? "true" : "false"
-    default: throw MagritteError("Unlabelled complex option rendering is not portable")
     }
 }
 public extension Graph {
@@ -67,14 +65,14 @@ private func kindOf(_ v: Value, _ kind: String, _ graph: Graph?) throws -> Bool 
     }
     if kind == "Object" { return true }
     switch (kind, v) {
-    case ("UndefinedObject", .undefined), ("String", .string), ("Character", .character), ("Boolean", .boolean), ("Number", .integer), ("Integer", .integer): return true
+    case ("UndefinedObject", .undefined), ("String", .string), ("String", .symbol), ("Symbol", .symbol), ("Float", .float), ("Number", .float), ("Character", .character), ("Boolean", .boolean), ("Number", .integer), ("Integer", .integer): return true
     case ("Collection", _): return v.isCollection
-    case ("SequenceableCollection", .string), ("SequenceableCollection", .array), ("SequenceableCollection", .collection("ordered", _)), ("Array", .array): return true
+    case ("SequenceableCollection", .string), ("SequenceableCollection", .symbol), ("SequenceableCollection", .array), ("SequenceableCollection", .collection("ordered", _)), ("Array", .array): return true
     case ("Set", .collection("set", _)), ("Bag", .collection("bag", _)), ("OrderedCollection", .collection("ordered", _)): return true
     default: return false
     }
 }
-private final class Budget {
+final class Budget {
     var work = 0
     let limits: Limits
     init(_ limits: Limits) { self.limits = limits }
@@ -83,13 +81,13 @@ private final class Budget {
     }
 }
 private func validateModel(_ d: Description, _ model: Model, _ graph: Graph?, _ budget: Budget, _ depth: Int) throws -> [ValidationError] {
-    try budget.tick(depth); try supported(d)
+    try budget.tick(depth); try supported(d); try checkPortableDescription(d, limits: budget.limits, work: &budget.work)
     if try !d.flag("visible") || d.flag("readOnly") { return [] }
     if !d.isContainer { return try validateField(d, model.read(using: d), graph, budget, depth + 1) }
     try require(d.conditions.isEmpty, "Container local conditions are not implemented")
     var errors: [ValidationError] = []
     for c in try d.orderedChildren() {
-        if c.isContainer && (model is AdaptiveModel || c.nativeRead != nil) {
+        if c.isContainer && (model is AdaptiveModel || c.nativeRead != nil || (c.accessor != nil && c.accessor?.className != "MAIdentityAccessor")) {
             errors += try validateField(c, model.read(using: c), graph, budget, depth + 1)
         } else { errors += try validateModel(c, model, graph, budget, depth + 1) }
     }
@@ -107,7 +105,7 @@ private func checkReferences(_ v: Value, _ graph: Graph?, _ budget: Budget, _ de
     }
 }
 private func validateField(_ d: Description, _ v: Value, _ graph: Graph?, _ budget: Budget, _ depth: Int) throws -> [ValidationError] {
-    try budget.tick(depth); try supported(d)
+    try budget.tick(depth); try supported(d); try checkPortableDescription(d, limits: budget.limits, work: &budget.work)
     if try !d.flag("visible") || d.flag("readOnly") { return [] }
     try checkReferences(v, graph, budget, depth)
     var errors: [ValidationError] = []
@@ -151,15 +149,16 @@ private func validateField(_ d: Description, _ v: Value, _ graph: Graph?, _ budg
             }
         } else { try check(v) }
     } else {
-        kind = try kindOf(v, d.className == "MAStringDescription" ? "String" : d.className == "MANumberDescription" ? "Number" : "Boolean", graph)
+        kind = try kindOf(v, d.className == "MASymbolDescription" ? "Symbol" : d.className == "MATokenDescription" ? "Array" : d.className == "MANumberDescription" ? "Number" : d.className == "MABooleanDescription" ? "Boolean" : "String", graph)
         if !kind { error("MAKindError") }
     }
     if !kind { return errors }
-    if d.className == "MANumberDescription", case .integer(let n) = v {
-        var range = false
-        if case .integer(let min) = d.property("min"), n < min { range = true }
-        if case .integer(let max) = d.property("max"), n > max { range = true }
-        if range { error("MARangeError") }
+    if d.className == "MANumberDescription" {
+        let min = d.property("min"), max = d.property("max")
+        if try (!min.isNil && compareNumbers(v, min) < 0) || (!max.isNil && compareNumbers(v, max) > 0) { error("MARangeError") }
+    }
+    for c in d.portableConditions {
+        if try !evaluatePredicate(c.predicate, v, limits: budget.limits, work: &budget.work) { errors.append(ValidationError(descriptionID: d.id, code: "MAConditionError", message: c.label)) }
     }
     for c in d.conditions {
         try budget.tick(depth)
@@ -171,8 +170,9 @@ public func validateValue(_ value: Value, using d: Description, graph: Graph? = 
     try validateField(d, value, graph, Budget(limits), 0)
 }
 public func validate(_ model: Model, using root: Description, limits: Limits = Limits(), graph: Graph? = nil) throws -> [ValidationError] {
-    try visit(root, limits: limits, supported)
-    return try validateModel(root, model, graph, Budget(limits), 0)
+    let budget = Budget(limits)
+    try visit(root, limits: limits) { try supported($0); try checkPortableDescription($0, limits: limits, work: &budget.work) }
+    return try validateModel(root, model, graph, budget, 0)
 }
 
 // Length-delimited semantic keys avoid quadratic unordered-collection matching.
@@ -188,6 +188,11 @@ func valueKey(_ value: Value, tick: (Int) throws -> Void, depth: Int = 0) throws
     case .undefined: return "0:"
     case .boolean(let b): return b ? "1:1" : "1:0"
     case .integer(let i): return "2:" + String(i)
+    case .symbol(let s): return "3:" + wrap(try hex(s))
+    case .float(let n):
+        try require(n.isFinite, "Non-finite float")
+        if let i = Int64(exactly: n) { return "2:" + String(i) }
+        return "9:" + (try floatBits(n))
     case .string(let s): return "3:" + wrap(try hex(s))
     case .reference(let id): return "5:" + wrap(try hex(id))
     case .character(let c): return "6:" + wrap(try hex(c))
@@ -202,8 +207,15 @@ func valueKey(_ value: Value, tick: (Int) throws -> Void, depth: Int = 0) throws
 
 func portableLabelKey(_ value: Value) -> Bool {
     switch value {
-    case .undefined, .boolean, .reference, .character: return true
+    case .undefined, .boolean, .reference, .character, .symbol: return true
     case .integer(let i): return i >= -1073741824 && i <= 1073741823
+    default: return false
+    }
+}
+
+func sameLabelType(_ a: Value, _ b: Value) -> Bool {
+    switch (a,b) {
+    case (.undefined,.undefined),(.boolean,.boolean),(.integer,.integer),(.reference,.reference),(.character,.character),(.symbol,.symbol): return true
     default: return false
     }
 }

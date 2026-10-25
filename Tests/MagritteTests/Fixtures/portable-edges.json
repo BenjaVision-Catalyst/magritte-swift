@@ -1,0 +1,295 @@
+{
+	"booleanOptions" : {
+		"value" : [
+			{
+				"value" : false,
+				"type" : "boolean"
+			},
+			{
+				"value" : true,
+				"type" : "boolean"
+			}
+		],
+		"type" : "array"
+	},
+	"emptySeparatorWrites" : [
+		{
+			"text" : "",
+			"input" : {
+				"value" : [ ],
+				"type" : "array"
+			}
+		},
+		{
+			"text" : "1",
+			"input" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			}
+		}
+	],
+	"containerText" : "A--Z",
+	"booleanLabels" : [
+		{
+			"input" : {
+				"type" : "nil"
+			},
+			"label" : ""
+		},
+		{
+			"input" : {
+				"value" : true,
+				"type" : "boolean"
+			},
+			"label" : "Yes!"
+		},
+		{
+			"input" : {
+				"value" : false,
+				"type" : "boolean"
+			},
+			"label" : "No!"
+		},
+		{
+			"input" : {
+				"value" : "x",
+				"type" : "string"
+			},
+			"label" : ""
+		}
+	],
+	"comparisons" : [
+		{
+			"left" : {
+				"value" : "9007199254740993",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "4340000000000000",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "43e0000000000000",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"equal" : true,
+			"right" : {
+				"value" : "c3e0000000000000",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : false
+		}
+	],
+	"floats" : [
+		{
+			"text" : "0.0",
+			"value" : {
+				"value" : "0000000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "-0.0",
+			"value" : {
+				"value" : "8000000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "5.0e-324",
+			"value" : {
+				"value" : "0000000000000001",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "1.7976931348623157e308",
+			"value" : {
+				"value" : "7fefffffffffffff",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "0.1",
+			"value" : {
+				"value" : "3fb999999999999a",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "1.0e-5",
+			"value" : {
+				"value" : "3ee4f8b588e368f1",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "0.0001",
+			"value" : {
+				"value" : "3f1a36e2eb1c432d",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "999999.0",
+			"value" : {
+				"value" : "412e847e00000000",
+				"type" : "float"
+			}
+		}
+	],
+	"reads" : [
+		{
+			"text" : "1e-3",
+			"value" : {
+				"value" : "3f50624dd2f1a9fc",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "12e2",
+			"value" : {
+				"value" : "1200",
+				"type" : "integer"
+			}
+		},
+		{
+			"text" : "9007199254740993e0",
+			"value" : {
+				"value" : "9007199254740993",
+				"type" : "integer"
+			}
+		},
+		{
+			"text" : "-9223372036854775808",
+			"value" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			}
+		},
+		{
+			"text" : "01",
+			"value" : {
+				"value" : "1",
+				"type" : "integer"
+			}
+		},
+		{
+			"text" : "-0",
+			"value" : {
+				"value" : "0",
+				"type" : "integer"
+			}
+		},
+		{
+			"text" : "0.0",
+			"value" : {
+				"value" : "0000000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "5.0e-324",
+			"value" : {
+				"value" : "0000000000000001",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "1.7976931348623157e308",
+			"value" : {
+				"value" : "7fefffffffffffff",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "1E3",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "1e+3",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "1.",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : ".5",
+			"error" : "MAReadError"
+		}
+	],
+	"passwords" : [
+		{
+			"input" : {
+				"type" : "nil"
+			},
+			"obfuscated" : "",
+			"isObfuscated" : false
+		},
+		{
+			"input" : {
+				"value" : "",
+				"type" : "string"
+			},
+			"obfuscated" : "",
+			"isObfuscated" : false
+		},
+		{
+			"input" : {
+				"value" : "é😀",
+				"type" : "string"
+			},
+			"obfuscated" : "**",
+			"isObfuscated" : false
+		},
+		{
+			"input" : {
+				"value" : "***",
+				"type" : "string"
+			},
+			"obfuscated" : "***",
+			"isObfuscated" : true
+		},
+		{
+			"input" : {
+				"value" : "***",
+				"type" : "symbol"
+			},
+			"obfuscated" : "***",
+			"isObfuscated" : true
+		},
+		{
+			"input" : {
+				"value" : "123",
+				"type" : "integer"
+			},
+			"obfuscated" : "***",
+			"isObfuscated" : false
+		}
+	]
+}

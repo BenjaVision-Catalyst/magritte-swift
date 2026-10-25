@@ -1,6 +1,6 @@
 # Semantic baseline and phased implementation
 
-The scalar and relationship/collection phases are implemented. This is still not a complete Magritte port; see [relationship evidence and boundaries](relationships.md).
+The scalar, relationship/collection and portable behavior phases are implemented for the documented profiles. This is still not a complete Magritte port; see [relationship evidence](relationships.md) and [portable behavior evidence and boundaries](portable-behavior.md).
 
 The authoritative upstream is [magritte-metamodel/magritte](https://github.com/magritte-metamodel/magritte), revision **d67f318686b7779aed79416db121e257d1191f2e** (2025-04-29). Paths below resolve against that commit. The target is its headless Magritte model, not an application-specific schema system. The graph representation serializes instances of that description hierarchy; there is no second field-schema model.
 
@@ -40,10 +40,11 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Nested containers | I, R | identity access for native models; stored child values for adaptive models |
 | union/intersection/copy protocol | N | no complete collection protocol |
 | MAStringDescription | I, R | required empty string remains valid; exact UTF-8 content; no normalization |
-| MABooleanDescription | I, R | false is present; integer zero is not Boolean |
-| MANumberDescription | I, R (integer subset) | inclusive bounds; exact signed 64-bit values |
-| Fractions, arbitrary precision integers, decimal/float, number formats | N | rejected rather than rounded; MANumberDescription is only partially implemented |
-| Date/time/duration, symbol, memo/password/token/URL, class/color/icon/file/directory/block/action/table descriptions | N | unsupported class fails import; see complete inventory |
+| MABooleanDescription | I, R | false is present; fixed options, aliases and configurable true/false text |
+| MANumberDescription | I, R (Int64/binary64) | inclusive bounds; finite floats; documented exact mixed-order policy |
+| Fractions, arbitrary precision integers, scaled decimals, full NumberParser grammar | N | explicit rejection; MANumberDescription remains partial |
+| Symbol, Memo, Password and Token descriptions | I, R | graph/3 scalar kinds, masking and token text conversion |
+| Date/time/duration, URL, class/color/icon/file/directory/block/action/table descriptions | N | unsupported class fails import; see complete inventory |
 | Required/optional, custom undefinedValue | I, R | required checks nil; undefined sentinel skips kind/specific/conditions |
 | Explicit defaults | I, R (property only) | raw read returns nil; defaultValue exposes declared default |
 | shouldCacheDefault metadata | I | upstream to-many default preserved |
@@ -52,9 +53,9 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | MADictionaryAccessor | I, R | native dictionary missing read returns nil |
 | MAPropertyAccessor semantics for common description properties | I, R (label/required) | Description implements Model; bootstrap describes seven common properties |
 | Local pluggable native accessors | I, X | C++ callbacks / Swift closures; native tests; export fails |
-| Selector/variable/identity/null/chain/composite/delegator strategies | N | no fictional cross-language selector execution |
+| Selector/variable/identity/null/chain strategies | I, R (profile) | graph/3 strategies and explicit host bindings; composite/delegator protocols N |
 | Native local scalar conditions | I, X | executed natively; kind errors skip conditions; nil sentinel skips them |
-| MACondition selector/receiver, conjunction and negation objects | N | some have portable meanings, but are not encoded yet |
+| MACondition selector/receiver, conjunction and negation objects | I, R (finite protocol) | labelled bounded graph/3 data; arbitrary messages/blocks and container conditions X |
 | Structured validation errors | I, R (leaf codes) | description identity, code, message; native validator accumulates leaf errors |
 | Upstream nested exception trees/custom error text/validator overrides | N | unknown semantic properties fail import |
 | Common and relation/option metadata | I, R (selected properties) | ordered/distinct/definitive/sorted/extensible retained; no invented coercion/uniqueness rules |
@@ -66,8 +67,8 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Mutable collection-object identity | N, X (current wire) | inline collections are value snapshots; object references retain identity |
 | Array/OrderedCollection/Set/Bag values | I, R | kind/order/multiplicity/equality and relation/option validation; Character bridge for String collections |
 | Visitor traversal | I (generic graph callback) | bounded composition/reference traversal, cycles terminate; full upstream dispatch hierarchy N |
-| Description/value JSON import/export | I, R | graph/1 and graph/2; GT -> both ports -> GT, aliases/cycles/nested objects/collections |
-| MAStringReader/Writer text conversion and other readers/writers | N | graph codec does not claim their semantics |
+| Description/value JSON import/export | I, R | graph/1, graph/2 and graph/3; GT -> both ports -> GT, aliases/cycles/nested objects/collections |
+| MAStringReader/Writer text conversion | I, R (profile) | scalars/options/tokens; writers also containers/relations; other interpreters N |
 | Self-description | I, R (bootstrap subset) | label/comment/group/required/readOnly/visible/priority; self-edit affects validation |
 | Complete self-description, recursive bootstrap of all descriptions/accessors | N | no completeness claim |
 | Straight/cached/checked mementos, conflicts/merging | N | reference records cached default only; no native memento API |
@@ -88,10 +89,12 @@ I = implemented; R = executed against the live reference for the stated subset; 
 
 ## Phases and exit criteria
 
-1. **Current increment:** audit and provenance, independent native libraries, scalar/adaptive/accessor core, bootstrap, bounded description/value interchange, shared GT-established Person fixture, runtime evolution, and explicit rejection tests. Install/package and test locally; publish precise gaps.
+1. **First slice (delivered):** audit and provenance, independent native libraries, scalar/adaptive/accessor core, bootstrap, bounded description/value interchange, shared GT-established Person fixture, runtime evolution, and explicit rejection tests. Install/package and test locally; publish precise gaps.
 2. **References and collections (delivered for the documented profile):** explicit reference graphs, static relationship/options hierarchy, object IDs/cycles, collection kind/equality/required rules, nested containers and bounded operations are implemented and checked against upstream source and GT. Remaining dynamic/reflective and collection-identity facilities are explicitly tracked in relationships.md, not claimed complete.
-3. **Behavior and scalar completeness:** portable forms of existing MACondition objects (e.g. isInteger selector and conjunction/negation), broader access strategies, exact numeric domains, remaining scalar descriptions, and MAStringReader/Writer behavior. Unsupported arbitrary closures must continue to fail export.
+3. **Portable behavior (delivered for the documented profile):** finite MACondition objects, broader access strategies, Symbol/Memo/Password/Token descriptions, finite binary64 and MAStringReader/Writer operations. Full numeric/scalar domains remain future work; arbitrary executable behavior continues to fail export.
 4. **Editing and meta-model completeness:** straight/cached/checked mementos, original/cache/default rules, conflict behavior, composition/copy semantics, full self-description and bootstrap round trips. Only then assess a complete headless-core claim against the inventory.
 5. **Optional interpreters:** native inspectors/presentation tools in separate targets. No networking, deployment or application-specific integration enters these core libraries.
 
 Each phase needs independently reviewed GT results and shared fixtures, not merely agreement between the two ports. Tests in this increment are newly written behavioral tests; upstream test source was not copied.
+
+Phase 0.3 adds Symbol, Memo, Password and Token descriptions and finite binary64, with text conversion and portable condition/accessor forms checked against live GT. Arbitrary integers/rationals/scaled decimals and date/time/color/URL/file/class descriptions remain N. Read portable-behavior.md for the two explicit GT/pinned-source or VM-dependent numeric policies; no complete scalar-domain claim is made.

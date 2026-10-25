@@ -1,0 +1,3849 @@
+{
+	"cases" : [
+		{
+			"description" : "number",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "number",
+			"input" : {
+				"value" : "-3",
+				"type" : "integer"
+			},
+			"errors" : [
+				"MARangeError"
+			]
+		},
+		{
+			"description" : "number",
+			"input" : {
+				"value" : "c004000000000000",
+				"type" : "float"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "number",
+			"input" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "number",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "number",
+			"input" : {
+				"value" : "3ff0000000000000",
+				"type" : "float"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "number",
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "number",
+			"input" : {
+				"value" : "3",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "number",
+			"input" : {
+				"value" : "5",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "number",
+			"input" : {
+				"value" : "10",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "number",
+			"input" : {
+				"value" : "x",
+				"type" : "string"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "positive",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "positive",
+			"input" : {
+				"value" : "-3",
+				"type" : "integer"
+			},
+			"errors" : [
+				"MAConditionError"
+			]
+		},
+		{
+			"description" : "positive",
+			"input" : {
+				"value" : "c004000000000000",
+				"type" : "float"
+			},
+			"errors" : [
+				"MAConditionError"
+			]
+		},
+		{
+			"description" : "positive",
+			"input" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "positive",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "positive",
+			"input" : {
+				"value" : "3ff0000000000000",
+				"type" : "float"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "positive",
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "positive",
+			"input" : {
+				"value" : "3",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "positive",
+			"input" : {
+				"value" : "5",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "positive",
+			"input" : {
+				"value" : "10",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "positive",
+			"input" : {
+				"value" : "x",
+				"type" : "string"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "integer",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "integer",
+			"input" : {
+				"value" : "-3",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "integer",
+			"input" : {
+				"value" : "c004000000000000",
+				"type" : "float"
+			},
+			"errors" : [
+				"MAConditionError"
+			]
+		},
+		{
+			"description" : "integer",
+			"input" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "integer",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "integer",
+			"input" : {
+				"value" : "3ff0000000000000",
+				"type" : "float"
+			},
+			"errors" : [
+				"MAConditionError"
+			]
+		},
+		{
+			"description" : "integer",
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			},
+			"errors" : [
+				"MAConditionError"
+			]
+		},
+		{
+			"description" : "integer",
+			"input" : {
+				"value" : "3",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "integer",
+			"input" : {
+				"value" : "5",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "integer",
+			"input" : {
+				"value" : "10",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "integer",
+			"input" : {
+				"value" : "x",
+				"type" : "string"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "between",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "between",
+			"input" : {
+				"value" : "-3",
+				"type" : "integer"
+			},
+			"errors" : [
+				"MAConditionError"
+			]
+		},
+		{
+			"description" : "between",
+			"input" : {
+				"value" : "c004000000000000",
+				"type" : "float"
+			},
+			"errors" : [
+				"MAConditionError"
+			]
+		},
+		{
+			"description" : "between",
+			"input" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "between",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "between",
+			"input" : {
+				"value" : "3ff0000000000000",
+				"type" : "float"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "between",
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "between",
+			"input" : {
+				"value" : "3",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "between",
+			"input" : {
+				"value" : "5",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "between",
+			"input" : {
+				"value" : "10",
+				"type" : "integer"
+			},
+			"errors" : [
+				"MAConditionError"
+			]
+		},
+		{
+			"description" : "between",
+			"input" : {
+				"value" : "x",
+				"type" : "string"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "member",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "member",
+			"input" : {
+				"value" : "-3",
+				"type" : "integer"
+			},
+			"errors" : [
+				"MAConditionError"
+			]
+		},
+		{
+			"description" : "member",
+			"input" : {
+				"value" : "c004000000000000",
+				"type" : "float"
+			},
+			"errors" : [
+				"MAConditionError"
+			]
+		},
+		{
+			"description" : "member",
+			"input" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"errors" : [
+				"MAConditionError"
+			]
+		},
+		{
+			"description" : "member",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "member",
+			"input" : {
+				"value" : "3ff0000000000000",
+				"type" : "float"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "member",
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			},
+			"errors" : [
+				"MAConditionError"
+			]
+		},
+		{
+			"description" : "member",
+			"input" : {
+				"value" : "3",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "member",
+			"input" : {
+				"value" : "5",
+				"type" : "integer"
+			},
+			"errors" : [
+				"MAConditionError"
+			]
+		},
+		{
+			"description" : "member",
+			"input" : {
+				"value" : "10",
+				"type" : "integer"
+			},
+			"errors" : [
+				"MAConditionError"
+			]
+		},
+		{
+			"description" : "member",
+			"input" : {
+				"value" : "x",
+				"type" : "string"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "lastArgument",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "lastArgument",
+			"input" : {
+				"value" : "-3",
+				"type" : "integer"
+			},
+			"errors" : [
+				"MAConditionError"
+			]
+		},
+		{
+			"description" : "lastArgument",
+			"input" : {
+				"value" : "c004000000000000",
+				"type" : "float"
+			},
+			"errors" : [
+				"MAConditionError"
+			]
+		},
+		{
+			"description" : "lastArgument",
+			"input" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"errors" : [
+				"MAConditionError"
+			]
+		},
+		{
+			"description" : "lastArgument",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [
+				"MAConditionError"
+			]
+		},
+		{
+			"description" : "lastArgument",
+			"input" : {
+				"value" : "3ff0000000000000",
+				"type" : "float"
+			},
+			"errors" : [
+				"MAConditionError"
+			]
+		},
+		{
+			"description" : "lastArgument",
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			},
+			"errors" : [
+				"MAConditionError"
+			]
+		},
+		{
+			"description" : "lastArgument",
+			"input" : {
+				"value" : "3",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "lastArgument",
+			"input" : {
+				"value" : "5",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "lastArgument",
+			"input" : {
+				"value" : "10",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "lastArgument",
+			"input" : {
+				"value" : "x",
+				"type" : "string"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "symbol",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "symbol",
+			"input" : {
+				"value" : "",
+				"type" : "string"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "symbol",
+			"input" : {
+				"value" : "Ada",
+				"type" : "string"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "symbol",
+			"input" : {
+				"value" : "Az",
+				"type" : "string"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "symbol",
+			"input" : {
+				"value" : "Ada",
+				"type" : "symbol"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "symbol",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "symbol",
+			"input" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "symbol",
+			"input" : {
+				"value" : [
+					{
+						"value" : "bad",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "memo",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "memo",
+			"input" : {
+				"value" : "",
+				"type" : "string"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "memo",
+			"input" : {
+				"value" : "Ada",
+				"type" : "string"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "memo",
+			"input" : {
+				"value" : "Az",
+				"type" : "string"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "memo",
+			"input" : {
+				"value" : "Ada",
+				"type" : "symbol"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "memo",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "memo",
+			"input" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "memo",
+			"input" : {
+				"value" : [
+					{
+						"value" : "bad",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "password",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "password",
+			"input" : {
+				"value" : "",
+				"type" : "string"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "password",
+			"input" : {
+				"value" : "Ada",
+				"type" : "string"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "password",
+			"input" : {
+				"value" : "Az",
+				"type" : "string"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "password",
+			"input" : {
+				"value" : "Ada",
+				"type" : "symbol"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "password",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "password",
+			"input" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "password",
+			"input" : {
+				"value" : [
+					{
+						"value" : "bad",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "composite",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "composite",
+			"input" : {
+				"value" : "",
+				"type" : "string"
+			},
+			"errors" : [
+				"MAConditionError"
+			]
+		},
+		{
+			"description" : "composite",
+			"input" : {
+				"value" : "Ada",
+				"type" : "string"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "composite",
+			"input" : {
+				"value" : "Az",
+				"type" : "string"
+			},
+			"errors" : [
+				"MAConditionError"
+			]
+		},
+		{
+			"description" : "composite",
+			"input" : {
+				"value" : "Ada",
+				"type" : "symbol"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "composite",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "composite",
+			"input" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "composite",
+			"input" : {
+				"value" : [
+					{
+						"value" : "bad",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "tokens",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "tokens",
+			"input" : {
+				"value" : "",
+				"type" : "string"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "tokens",
+			"input" : {
+				"value" : "Ada",
+				"type" : "string"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "tokens",
+			"input" : {
+				"value" : "Az",
+				"type" : "string"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "tokens",
+			"input" : {
+				"value" : "Ada",
+				"type" : "symbol"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "tokens",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"description" : "tokens",
+			"input" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "tokens",
+			"input" : {
+				"value" : [
+					{
+						"value" : "bad",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [ ]
+		}
+	],
+	"predicates" : [
+		{
+			"input" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "isInteger",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "isInteger",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "isInteger",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "isInteger",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "isInteger",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "positive",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "positive",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "positive",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "positive",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "positive",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "negative",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "negative",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "negative",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "negative",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "negative",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "even",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "even",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "even",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "even",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "even",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "odd",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "odd",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "odd",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "odd",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "odd",
+				"arguments" : [ ],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "=",
+				"arguments" : [
+					{
+						"value" : "3ff0000000000000",
+						"type" : "float"
+					}
+				],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "=",
+				"arguments" : [
+					{
+						"value" : "3ff0000000000000",
+						"type" : "float"
+					}
+				],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "=",
+				"arguments" : [
+					{
+						"value" : "3ff0000000000000",
+						"type" : "float"
+					}
+				],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "=",
+				"arguments" : [
+					{
+						"value" : "3ff0000000000000",
+						"type" : "float"
+					}
+				],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "=",
+				"arguments" : [
+					{
+						"value" : "3ff0000000000000",
+						"type" : "float"
+					}
+				],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "~=",
+				"arguments" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "~=",
+				"arguments" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "~=",
+				"arguments" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "~=",
+				"arguments" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "~=",
+				"arguments" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "<",
+				"arguments" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "<",
+				"arguments" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "<",
+				"arguments" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "<",
+				"arguments" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "<",
+				"arguments" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "<=",
+				"arguments" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "<=",
+				"arguments" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "<=",
+				"arguments" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "<=",
+				"arguments" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : "<=",
+				"arguments" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : ">",
+				"arguments" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : ">",
+				"arguments" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : ">",
+				"arguments" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : ">",
+				"arguments" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : ">",
+				"arguments" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : ">=",
+				"arguments" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : ">=",
+				"arguments" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : ">=",
+				"arguments" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : ">=",
+				"arguments" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			},
+			"predicate" : {
+				"class" : "MAPluggableCondition",
+				"receiver" : {
+					"type" : "nil"
+				},
+				"selector" : ">=",
+				"arguments" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"index" : 0
+			},
+			"result" : false
+		},
+		{
+			"input" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"conditions" : [ ],
+				"class" : "MAConjunctiveCondition"
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"conditions" : [ ],
+				"class" : "MAConjunctiveCondition"
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"conditions" : [ ],
+				"class" : "MAConjunctiveCondition"
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"predicate" : {
+				"conditions" : [ ],
+				"class" : "MAConjunctiveCondition"
+			},
+			"result" : true
+		},
+		{
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			},
+			"predicate" : {
+				"conditions" : [ ],
+				"class" : "MAConjunctiveCondition"
+			},
+			"result" : true
+		}
+	],
+	"writes" : [
+		{
+			"text" : "none",
+			"description" : "number",
+			"input" : {
+				"type" : "nil"
+			}
+		},
+		{
+			"text" : "1",
+			"description" : "number",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			}
+		},
+		{
+			"text" : "1.0",
+			"description" : "number",
+			"input" : {
+				"value" : "3ff0000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "1.5",
+			"description" : "number",
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "-0.0",
+			"description" : "number",
+			"input" : {
+				"value" : "8000000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "1.0e6",
+			"description" : "number",
+			"input" : {
+				"value" : "412e848000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "0.0001",
+			"description" : "number",
+			"input" : {
+				"value" : "3f1a36e2eb1c432d",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "0.001",
+			"description" : "number",
+			"input" : {
+				"value" : "3f50624dd2f1a9fc",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "ok",
+			"description" : "number",
+			"input" : {
+				"value" : "ok",
+				"type" : "symbol"
+			}
+		},
+		{
+			"text" : "Ada",
+			"description" : "number",
+			"input" : {
+				"value" : "Ada",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "N/A",
+			"description" : "string",
+			"input" : {
+				"type" : "nil"
+			}
+		},
+		{
+			"text" : "1",
+			"description" : "string",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			}
+		},
+		{
+			"text" : "1.0",
+			"description" : "string",
+			"input" : {
+				"value" : "3ff0000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "1.5",
+			"description" : "string",
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "-0.0",
+			"description" : "string",
+			"input" : {
+				"value" : "8000000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "1.0e6",
+			"description" : "string",
+			"input" : {
+				"value" : "412e848000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "0.0001",
+			"description" : "string",
+			"input" : {
+				"value" : "3f1a36e2eb1c432d",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "0.001",
+			"description" : "string",
+			"input" : {
+				"value" : "3f50624dd2f1a9fc",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "ok",
+			"description" : "string",
+			"input" : {
+				"value" : "ok",
+				"type" : "symbol"
+			}
+		},
+		{
+			"text" : "Ada",
+			"description" : "string",
+			"input" : {
+				"value" : "Ada",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "",
+			"description" : "symbol",
+			"input" : {
+				"type" : "nil"
+			}
+		},
+		{
+			"text" : "1",
+			"description" : "symbol",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			}
+		},
+		{
+			"text" : "1.0",
+			"description" : "symbol",
+			"input" : {
+				"value" : "3ff0000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "1.5",
+			"description" : "symbol",
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "-0.0",
+			"description" : "symbol",
+			"input" : {
+				"value" : "8000000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "1.0e6",
+			"description" : "symbol",
+			"input" : {
+				"value" : "412e848000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "0.0001",
+			"description" : "symbol",
+			"input" : {
+				"value" : "3f1a36e2eb1c432d",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "0.001",
+			"description" : "symbol",
+			"input" : {
+				"value" : "3f50624dd2f1a9fc",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "ok",
+			"description" : "symbol",
+			"input" : {
+				"value" : "ok",
+				"type" : "symbol"
+			}
+		},
+		{
+			"text" : "Ada",
+			"description" : "symbol",
+			"input" : {
+				"value" : "Ada",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "",
+			"description" : "memo",
+			"input" : {
+				"type" : "nil"
+			}
+		},
+		{
+			"text" : "1",
+			"description" : "memo",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			}
+		},
+		{
+			"text" : "1.0",
+			"description" : "memo",
+			"input" : {
+				"value" : "3ff0000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "1.5",
+			"description" : "memo",
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "-0.0",
+			"description" : "memo",
+			"input" : {
+				"value" : "8000000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "1.0e6",
+			"description" : "memo",
+			"input" : {
+				"value" : "412e848000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "0.0001",
+			"description" : "memo",
+			"input" : {
+				"value" : "3f1a36e2eb1c432d",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "0.001",
+			"description" : "memo",
+			"input" : {
+				"value" : "3f50624dd2f1a9fc",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "ok",
+			"description" : "memo",
+			"input" : {
+				"value" : "ok",
+				"type" : "symbol"
+			}
+		},
+		{
+			"text" : "Ada",
+			"description" : "memo",
+			"input" : {
+				"value" : "Ada",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "",
+			"description" : "password",
+			"input" : {
+				"type" : "nil"
+			}
+		},
+		{
+			"text" : "1",
+			"description" : "password",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			}
+		},
+		{
+			"text" : "1.0",
+			"description" : "password",
+			"input" : {
+				"value" : "3ff0000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "1.5",
+			"description" : "password",
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "-0.0",
+			"description" : "password",
+			"input" : {
+				"value" : "8000000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "1.0e6",
+			"description" : "password",
+			"input" : {
+				"value" : "412e848000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "0.0001",
+			"description" : "password",
+			"input" : {
+				"value" : "3f1a36e2eb1c432d",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "0.001",
+			"description" : "password",
+			"input" : {
+				"value" : "3f50624dd2f1a9fc",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "ok",
+			"description" : "password",
+			"input" : {
+				"value" : "ok",
+				"type" : "symbol"
+			}
+		},
+		{
+			"text" : "Ada",
+			"description" : "password",
+			"input" : {
+				"value" : "Ada",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "",
+			"description" : "one",
+			"input" : {
+				"type" : "nil"
+			}
+		},
+		{
+			"text" : "One",
+			"description" : "one",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			}
+		},
+		{
+			"text" : "1.0",
+			"description" : "one",
+			"input" : {
+				"value" : "3ff0000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "1.5",
+			"description" : "one",
+			"input" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "-0.0",
+			"description" : "one",
+			"input" : {
+				"value" : "8000000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "1.0e6",
+			"description" : "one",
+			"input" : {
+				"value" : "412e848000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "0.0001",
+			"description" : "one",
+			"input" : {
+				"value" : "3f1a36e2eb1c432d",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "0.001",
+			"description" : "one",
+			"input" : {
+				"value" : "3f50624dd2f1a9fc",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "Okay",
+			"description" : "one",
+			"input" : {
+				"value" : "ok",
+				"type" : "symbol"
+			}
+		},
+		{
+			"text" : "Ada",
+			"description" : "one",
+			"input" : {
+				"value" : "Ada",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "",
+			"description" : "boolean",
+			"input" : {
+				"type" : "nil"
+			}
+		},
+		{
+			"text" : "Yes!",
+			"description" : "boolean",
+			"input" : {
+				"value" : true,
+				"type" : "boolean"
+			}
+		},
+		{
+			"text" : "No!",
+			"description" : "boolean",
+			"input" : {
+				"value" : false,
+				"type" : "boolean"
+			}
+		},
+		{
+			"text" : "",
+			"description" : "tokens",
+			"input" : {
+				"type" : "nil"
+			}
+		},
+		{
+			"text" : "",
+			"description" : "tokens",
+			"input" : {
+				"value" : [ ],
+				"type" : "array"
+			}
+		},
+		{
+			"text" : "1,2",
+			"description" : "tokens",
+			"input" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"text" : "1,nil,2",
+			"description" : "tokens",
+			"input" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"type" : "nil"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"text" : "none",
+			"description" : "many",
+			"input" : {
+				"type" : "nil"
+			}
+		},
+		{
+			"text" : "none",
+			"description" : "many",
+			"input" : {
+				"value" : [ ],
+				"type" : "array"
+			}
+		},
+		{
+			"text" : "One, Two",
+			"description" : "many",
+			"input" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"text" : "One, nil, Two",
+			"description" : "many",
+			"input" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"type" : "nil"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"text" : "1.5-ready-line1\nline2-secret-1,2-Yes!-0",
+			"description" : "root",
+			"input" : {
+				"value" : "sample",
+				"type" : "reference"
+			}
+		}
+	],
+	"reads" : [
+		{
+			"text" : "",
+			"description" : "number",
+			"value" : {
+				"type" : "nil"
+			}
+		},
+		{
+			"text" : "1",
+			"description" : "number",
+			"value" : {
+				"value" : "1",
+				"type" : "integer"
+			}
+		},
+		{
+			"text" : "-2",
+			"description" : "number",
+			"value" : {
+				"value" : "-2",
+				"type" : "integer"
+			}
+		},
+		{
+			"text" : "1.5",
+			"description" : "number",
+			"value" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "1e3",
+			"description" : "number",
+			"value" : {
+				"value" : "1000",
+				"type" : "integer"
+			}
+		},
+		{
+			"text" : "+1",
+			"description" : "number",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : " 1",
+			"description" : "number",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "true",
+			"description" : "number",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "YES",
+			"description" : "number",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "Yes!",
+			"description" : "number",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "OFF",
+			"description" : "number",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "N/A trailing",
+			"description" : "number",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "One suffix",
+			"description" : "number",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "1,2",
+			"description" : "number",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "1, 2,  3",
+			"description" : "number",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : ",; 1;;2,",
+			"description" : "number",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "",
+			"description" : "boolean",
+			"value" : {
+				"type" : "nil"
+			}
+		},
+		{
+			"text" : "1",
+			"description" : "boolean",
+			"value" : {
+				"value" : true,
+				"type" : "boolean"
+			}
+		},
+		{
+			"text" : "-2",
+			"description" : "boolean",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "1.5",
+			"description" : "boolean",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "1e3",
+			"description" : "boolean",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "+1",
+			"description" : "boolean",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : " 1",
+			"description" : "boolean",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "true",
+			"description" : "boolean",
+			"value" : {
+				"value" : true,
+				"type" : "boolean"
+			}
+		},
+		{
+			"text" : "YES",
+			"description" : "boolean",
+			"value" : {
+				"value" : true,
+				"type" : "boolean"
+			}
+		},
+		{
+			"text" : "Yes!",
+			"description" : "boolean",
+			"value" : {
+				"value" : true,
+				"type" : "boolean"
+			}
+		},
+		{
+			"text" : "OFF",
+			"description" : "boolean",
+			"value" : {
+				"value" : false,
+				"type" : "boolean"
+			}
+		},
+		{
+			"text" : "N/A trailing",
+			"description" : "boolean",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "One suffix",
+			"description" : "boolean",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "1,2",
+			"description" : "boolean",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "1, 2,  3",
+			"description" : "boolean",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : ",; 1;;2,",
+			"description" : "boolean",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "",
+			"description" : "string",
+			"value" : {
+				"type" : "nil"
+			}
+		},
+		{
+			"text" : "1",
+			"description" : "string",
+			"value" : {
+				"value" : "1",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "-2",
+			"description" : "string",
+			"value" : {
+				"value" : "-2",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "1.5",
+			"description" : "string",
+			"value" : {
+				"value" : "1.5",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "1e3",
+			"description" : "string",
+			"value" : {
+				"value" : "1e3",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "+1",
+			"description" : "string",
+			"value" : {
+				"value" : "+1",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : " 1",
+			"description" : "string",
+			"value" : {
+				"value" : " 1",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "true",
+			"description" : "string",
+			"value" : {
+				"value" : "true",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "YES",
+			"description" : "string",
+			"value" : {
+				"value" : "YES",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "Yes!",
+			"description" : "string",
+			"value" : {
+				"value" : "Yes!",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "OFF",
+			"description" : "string",
+			"value" : {
+				"value" : "OFF",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "N/A trailing",
+			"description" : "string",
+			"value" : {
+				"type" : "nil"
+			}
+		},
+		{
+			"text" : "One suffix",
+			"description" : "string",
+			"value" : {
+				"value" : "One suffix",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "1,2",
+			"description" : "string",
+			"value" : {
+				"value" : "1,2",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "1, 2,  3",
+			"description" : "string",
+			"value" : {
+				"value" : "1, 2,  3",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : ",; 1;;2,",
+			"description" : "string",
+			"value" : {
+				"value" : ",; 1;;2,",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "",
+			"description" : "symbol",
+			"value" : {
+				"type" : "nil"
+			}
+		},
+		{
+			"text" : "1",
+			"description" : "symbol",
+			"value" : {
+				"value" : "1",
+				"type" : "symbol"
+			}
+		},
+		{
+			"text" : "-2",
+			"description" : "symbol",
+			"value" : {
+				"value" : "-2",
+				"type" : "symbol"
+			}
+		},
+		{
+			"text" : "1.5",
+			"description" : "symbol",
+			"value" : {
+				"value" : "1.5",
+				"type" : "symbol"
+			}
+		},
+		{
+			"text" : "1e3",
+			"description" : "symbol",
+			"value" : {
+				"value" : "1e3",
+				"type" : "symbol"
+			}
+		},
+		{
+			"text" : "+1",
+			"description" : "symbol",
+			"value" : {
+				"value" : "+1",
+				"type" : "symbol"
+			}
+		},
+		{
+			"text" : " 1",
+			"description" : "symbol",
+			"value" : {
+				"value" : " 1",
+				"type" : "symbol"
+			}
+		},
+		{
+			"text" : "true",
+			"description" : "symbol",
+			"value" : {
+				"value" : "true",
+				"type" : "symbol"
+			}
+		},
+		{
+			"text" : "YES",
+			"description" : "symbol",
+			"value" : {
+				"value" : "YES",
+				"type" : "symbol"
+			}
+		},
+		{
+			"text" : "Yes!",
+			"description" : "symbol",
+			"value" : {
+				"value" : "Yes!",
+				"type" : "symbol"
+			}
+		},
+		{
+			"text" : "OFF",
+			"description" : "symbol",
+			"value" : {
+				"value" : "OFF",
+				"type" : "symbol"
+			}
+		},
+		{
+			"text" : "N/A trailing",
+			"description" : "symbol",
+			"value" : {
+				"value" : "N/A trailing",
+				"type" : "symbol"
+			}
+		},
+		{
+			"text" : "One suffix",
+			"description" : "symbol",
+			"value" : {
+				"value" : "One suffix",
+				"type" : "symbol"
+			}
+		},
+		{
+			"text" : "1,2",
+			"description" : "symbol",
+			"value" : {
+				"value" : "1,2",
+				"type" : "symbol"
+			}
+		},
+		{
+			"text" : "1, 2,  3",
+			"description" : "symbol",
+			"value" : {
+				"value" : "1, 2,  3",
+				"type" : "symbol"
+			}
+		},
+		{
+			"text" : ",; 1;;2,",
+			"description" : "symbol",
+			"value" : {
+				"value" : ",; 1;;2,",
+				"type" : "symbol"
+			}
+		},
+		{
+			"text" : "",
+			"description" : "memo",
+			"value" : {
+				"type" : "nil"
+			}
+		},
+		{
+			"text" : "1",
+			"description" : "memo",
+			"value" : {
+				"value" : "1",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "-2",
+			"description" : "memo",
+			"value" : {
+				"value" : "-2",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "1.5",
+			"description" : "memo",
+			"value" : {
+				"value" : "1.5",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "1e3",
+			"description" : "memo",
+			"value" : {
+				"value" : "1e3",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "+1",
+			"description" : "memo",
+			"value" : {
+				"value" : "+1",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : " 1",
+			"description" : "memo",
+			"value" : {
+				"value" : " 1",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "true",
+			"description" : "memo",
+			"value" : {
+				"value" : "true",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "YES",
+			"description" : "memo",
+			"value" : {
+				"value" : "YES",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "Yes!",
+			"description" : "memo",
+			"value" : {
+				"value" : "Yes!",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "OFF",
+			"description" : "memo",
+			"value" : {
+				"value" : "OFF",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "N/A trailing",
+			"description" : "memo",
+			"value" : {
+				"value" : "N/A trailing",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "One suffix",
+			"description" : "memo",
+			"value" : {
+				"value" : "One suffix",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "1,2",
+			"description" : "memo",
+			"value" : {
+				"value" : "1,2",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "1, 2,  3",
+			"description" : "memo",
+			"value" : {
+				"value" : "1, 2,  3",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : ",; 1;;2,",
+			"description" : "memo",
+			"value" : {
+				"value" : ",; 1;;2,",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "",
+			"description" : "password",
+			"value" : {
+				"type" : "nil"
+			}
+		},
+		{
+			"text" : "1",
+			"description" : "password",
+			"value" : {
+				"value" : "1",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "-2",
+			"description" : "password",
+			"value" : {
+				"value" : "-2",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "1.5",
+			"description" : "password",
+			"value" : {
+				"value" : "1.5",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "1e3",
+			"description" : "password",
+			"value" : {
+				"value" : "1e3",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "+1",
+			"description" : "password",
+			"value" : {
+				"value" : "+1",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : " 1",
+			"description" : "password",
+			"value" : {
+				"value" : " 1",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "true",
+			"description" : "password",
+			"value" : {
+				"value" : "true",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "YES",
+			"description" : "password",
+			"value" : {
+				"value" : "YES",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "Yes!",
+			"description" : "password",
+			"value" : {
+				"value" : "Yes!",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "OFF",
+			"description" : "password",
+			"value" : {
+				"value" : "OFF",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "N/A trailing",
+			"description" : "password",
+			"value" : {
+				"value" : "N/A trailing",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "One suffix",
+			"description" : "password",
+			"value" : {
+				"value" : "One suffix",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "1,2",
+			"description" : "password",
+			"value" : {
+				"value" : "1,2",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "1, 2,  3",
+			"description" : "password",
+			"value" : {
+				"value" : "1, 2,  3",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : ",; 1;;2,",
+			"description" : "password",
+			"value" : {
+				"value" : ",; 1;;2,",
+				"type" : "string"
+			}
+		},
+		{
+			"text" : "",
+			"description" : "tokens",
+			"value" : {
+				"type" : "nil"
+			}
+		},
+		{
+			"text" : "1",
+			"description" : "tokens",
+			"value" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"text" : "-2",
+			"description" : "tokens",
+			"value" : {
+				"value" : [
+					{
+						"value" : "-2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"text" : "1.5",
+			"description" : "tokens",
+			"value" : {
+				"value" : [
+					{
+						"value" : "3ff8000000000000",
+						"type" : "float"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"text" : "1e3",
+			"description" : "tokens",
+			"value" : {
+				"value" : [
+					{
+						"value" : "1000",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"text" : "+1",
+			"description" : "tokens",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : " 1",
+			"description" : "tokens",
+			"value" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"text" : "true",
+			"description" : "tokens",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "YES",
+			"description" : "tokens",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "Yes!",
+			"description" : "tokens",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "OFF",
+			"description" : "tokens",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "N/A trailing",
+			"description" : "tokens",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "One suffix",
+			"description" : "tokens",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "1,2",
+			"description" : "tokens",
+			"value" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"text" : "1, 2,  3",
+			"description" : "tokens",
+			"value" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					},
+					{
+						"value" : "3",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"text" : ",; 1;;2,",
+			"description" : "tokens",
+			"value" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"text" : "",
+			"description" : "one",
+			"value" : {
+				"type" : "nil"
+			}
+		},
+		{
+			"text" : "1",
+			"description" : "one",
+			"value" : {
+				"value" : "1",
+				"type" : "integer"
+			}
+		},
+		{
+			"text" : "-2",
+			"description" : "one",
+			"value" : {
+				"value" : "-2",
+				"type" : "integer"
+			}
+		},
+		{
+			"text" : "1.5",
+			"description" : "one",
+			"value" : {
+				"value" : "3ff8000000000000",
+				"type" : "float"
+			}
+		},
+		{
+			"text" : "1e3",
+			"description" : "one",
+			"value" : {
+				"value" : "1000",
+				"type" : "integer"
+			}
+		},
+		{
+			"text" : "+1",
+			"description" : "one",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : " 1",
+			"description" : "one",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "true",
+			"description" : "one",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "YES",
+			"description" : "one",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "Yes!",
+			"description" : "one",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "OFF",
+			"description" : "one",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "N/A trailing",
+			"description" : "one",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "One suffix",
+			"description" : "one",
+			"value" : {
+				"value" : "1",
+				"type" : "integer"
+			}
+		},
+		{
+			"text" : "1,2",
+			"description" : "one",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "1, 2,  3",
+			"description" : "one",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : ",; 1;;2,",
+			"description" : "one",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "",
+			"description" : "many",
+			"value" : {
+				"type" : "nil"
+			}
+		},
+		{
+			"text" : "1",
+			"description" : "many",
+			"value" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"text" : "-2",
+			"description" : "many",
+			"value" : {
+				"value" : [
+					{
+						"value" : "-2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"text" : "1.5",
+			"description" : "many",
+			"value" : {
+				"value" : [
+					{
+						"value" : "3ff8000000000000",
+						"type" : "float"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"text" : "1e3",
+			"description" : "many",
+			"value" : {
+				"value" : [
+					{
+						"value" : "1000",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"text" : "+1",
+			"description" : "many",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : " 1",
+			"description" : "many",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "true",
+			"description" : "many",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "YES",
+			"description" : "many",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "Yes!",
+			"description" : "many",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "OFF",
+			"description" : "many",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "N/A trailing",
+			"description" : "many",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "One suffix",
+			"description" : "many",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : "1,2",
+			"description" : "many",
+			"value" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"text" : "1, 2,  3",
+			"description" : "many",
+			"error" : "MAReadError"
+		},
+		{
+			"text" : ",; 1;;2,",
+			"description" : "many",
+			"error" : "MAReadError"
+		}
+	],
+	"accessors" : [
+		{
+			"description" : "dictField",
+			"before" : {
+				"value" : "Before",
+				"type" : "string"
+			},
+			"after" : {
+				"value" : "After",
+				"type" : "string"
+			}
+		},
+		{
+			"description" : "propertyField",
+			"before" : {
+				"value" : "Before",
+				"type" : "string"
+			},
+			"after" : {
+				"value" : "After",
+				"type" : "string"
+			}
+		},
+		{
+			"description" : "selectorField",
+			"before" : {
+				"value" : "Before",
+				"type" : "string"
+			},
+			"after" : {
+				"value" : "After",
+				"type" : "string"
+			}
+		},
+		{
+			"description" : "variableField",
+			"before" : {
+				"value" : "Before",
+				"type" : "string"
+			},
+			"after" : {
+				"value" : "After",
+				"type" : "string"
+			}
+		},
+		{
+			"description" : "chainField",
+			"before" : {
+				"value" : "Before",
+				"type" : "string"
+			},
+			"after" : {
+				"value" : "After",
+				"type" : "string"
+			}
+		}
+	]
+}
