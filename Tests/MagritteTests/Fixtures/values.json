@@ -1,0 +1,101 @@
+{
+  "roundtrips": [
+    {
+      "type": "nil"
+    },
+    {
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "type": "boolean",
+      "value": true
+    },
+    {
+      "type": "integer",
+      "value": "-9223372036854775808"
+    },
+    {
+      "type": "integer",
+      "value": "9223372036854775807"
+    },
+    {
+      "type": "string",
+      "value": "A\u0000é𝄞"
+    },
+    {
+      "type": "array",
+      "value": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "integer",
+          "value": "9007199254740993"
+        },
+        {
+          "type": "array",
+          "value": []
+        }
+      ]
+    }
+  ],
+  "rejected": [
+    {
+      "type": "integer",
+      "value": "9223372036854775808"
+    },
+    {
+      "type": "integer",
+      "value": "-9223372036854775809"
+    },
+    {
+      "type": "integer",
+      "value": "01"
+    },
+    {
+      "type": "integer",
+      "value": "-0"
+    },
+    {
+      "type": "integer",
+      "value": "+1"
+    },
+    {
+      "type": "integer",
+      "value": "1.0"
+    },
+    {
+      "type": "integer",
+      "value": 42
+    },
+    {
+      "type": "boolean",
+      "value": 1
+    },
+    {
+      "type": "boolean",
+      "value": "true"
+    },
+    {
+      "type": "float",
+      "value": "1.5"
+    },
+    {
+      "type": "closure",
+      "value": "[true]"
+    },
+    {
+      "type": "reference",
+      "value": "missing"
+    },
+    {
+      "type": "nil",
+      "value": null
+    },
+    {
+      "type": "array",
+      "value": {}
+    }
+  ]
+}

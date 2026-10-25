@@ -1,0 +1,119 @@
+{
+  "captured": "2026-10-26",
+  "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
+  "note": "Hashes identify inspected live source; they do not assert equality to upstream. No installed Magritte Git revision was available in IceRepository registry.",
+  "methods": [
+    {
+      "classSide": false,
+      "methodClassName": "MADescription",
+      "methodName": "validateRequired:",
+      "liveSourceSHA256": "cb2a7515de74d33b500df9f0c5d10905723dca4b36f185fc9527004e04368418",
+      "upstreamFile": "source/Magritte-Model/MADescription.class.st"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MADescription",
+      "methodName": "validateKind:",
+      "liveSourceSHA256": "e7becdc45207943c6cb7811fe2020e90bd289629049c07f03cc3680113175c38",
+      "upstreamFile": "source/Magritte-Model/MADescription.class.st"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MADescription",
+      "methodName": "validateConditions:",
+      "liveSourceSHA256": "e47bb1af78168ed5022498ed3ca52c449647b83e93e5c99b74b256824a3bca9e",
+      "upstreamFile": "source/Magritte-Model/MADescription.class.st"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAValidatorVisitor",
+      "methodName": "validate:using:",
+      "liveSourceSHA256": "24b7c3631cf6890d38057c7455ff2cc99b1827c4ee25da0f8698ffe2ddee9fc3",
+      "upstreamFile": "source/Magritte-Model/MAValidatorVisitor.class.st"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAValidatorVisitor",
+      "methodName": "visit:",
+      "liveSourceSHA256": "db9c24c893fcf85d2e38c71e67af9ec2b820552d9a04aef02e54fc3979ec6cc6",
+      "upstreamFile": "source/Magritte-Model/MAValidatorVisitor.class.st"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAAdaptiveModel",
+      "methodName": "readUsing:",
+      "liveSourceSHA256": "654335fcebf64e39544090dd523f6d9b93b49d93adef4354e61fdec48f529ad6",
+      "upstreamFile": "source/Magritte-Model/MAAdaptiveModel.class.st"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAAdaptiveModel",
+      "methodName": "write:using:",
+      "liveSourceSHA256": "4f43a15d8dedb3279fdd2342032f05597ebd35078c08c05ab00be91e2b8e3264",
+      "upstreamFile": "source/Magritte-Model/MAAdaptiveModel.class.st"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAElementDescription",
+      "methodName": "default",
+      "liveSourceSHA256": "0ef3646ea3187175e795054a092640242b0e32bc4e112bd2175cff1639fb4efb",
+      "upstreamFile": "source/Magritte-Model/MAElementDescription.class.st"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAMagnitudeDescription",
+      "methodName": "isWithinRange:",
+      "liveSourceSHA256": "7398e67a12aab451455412b8b9320f3e9646fc95b84c907554336f61a5106e5c",
+      "upstreamFile": "source/Magritte-Model/MAMagnitudeDescription.class.st"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MADescription",
+      "methodName": "descriptionRequired",
+      "liveSourceSHA256": "daab66802b767e8ed610521bd0c9db667edd6060c0375ca3f5a0c68957ea4b46",
+      "upstreamFile": "source/Magritte-Model/MADescription.class.st"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MADescription",
+      "methodName": "descriptionLabel",
+      "liveSourceSHA256": "088b4921bd42a6bfa3431dafad27d7746c8ff9458bd3a762cb5a8fe508e7e503",
+      "upstreamFile": "source/Magritte-Model/MADescription.class.st"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAContainer",
+      "methodName": "descriptionChildren",
+      "liveSourceSHA256": "ed2c32b3c746d1a6196f30796572576360a389fb3f6f1094043d1d5bedbcb17d",
+      "upstreamFile": "source/Magritte-Model/MAContainer.class.st"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MADictionaryAccessor",
+      "methodName": "read:",
+      "liveSourceSHA256": "18f8349e189f47bb09a67e0273f0ed9b2d78c44761599f7237338cdb47856e8d",
+      "upstreamFile": "source/Magritte-Model/MADictionaryAccessor.class.st"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MADictionaryAccessor",
+      "methodName": "write:to:",
+      "liveSourceSHA256": "214043f9e1e5963725e714e1c221d4adf28fd558a6d5c307a8f8a5b1a0da3d19",
+      "upstreamFile": "source/Magritte-Model/MADictionaryAccessor.class.st"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAMemento",
+      "methodName": "cookRawPull:",
+      "liveSourceSHA256": "06c3ce14a1df50466b1411550f80781b8b4898f6d07dbcac47aaeeccd6ca8343",
+      "upstreamFile": "source/Magritte-Model/MAMemento.class.st"
+    },
+    {
+      "classSide": true,
+      "methodClassName": "MACondition",
+      "methodName": "selector:",
+      "liveSourceSHA256": "51975398a2e907e169073e47706e27219937d54f72fbd58f1f40db1e84c12b35",
+      "upstreamFile": "source/Magritte-Model/MACondition.class.st"
+    }
+  ]
+}

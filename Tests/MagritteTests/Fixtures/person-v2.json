@@ -1,0 +1,122 @@
+{
+	"descriptions" : [
+		{
+			"properties" : {
+				"label" : {
+					"value" : "Person",
+					"type" : "string"
+				}
+			},
+			"class" : "MAContainer",
+			"id" : "person",
+			"children" : [
+				"name",
+				"age",
+				"active",
+				"email"
+			]
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "name"
+			},
+			"properties" : {
+				"required" : {
+					"value" : true,
+					"type" : "boolean"
+				},
+				"label" : {
+					"value" : "Name",
+					"type" : "string"
+				},
+				"priority" : {
+					"value" : "20",
+					"type" : "integer"
+				}
+			},
+			"class" : "MAStringDescription",
+			"id" : "name"
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "age"
+			},
+			"properties" : {
+				"max" : {
+					"value" : "120",
+					"type" : "integer"
+				},
+				"priority" : {
+					"value" : "10",
+					"type" : "integer"
+				},
+				"label" : {
+					"value" : "Age",
+					"type" : "string"
+				},
+				"min" : {
+					"value" : "21",
+					"type" : "integer"
+				}
+			},
+			"class" : "MANumberDescription",
+			"id" : "age"
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "active"
+			},
+			"properties" : {
+				"label" : {
+					"value" : "Active",
+					"type" : "string"
+				},
+				"default" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			"class" : "MABooleanDescription",
+			"id" : "active"
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "email"
+			},
+			"properties" : {
+				"required" : {
+					"value" : true,
+					"type" : "boolean"
+				},
+				"label" : {
+					"value" : "Email",
+					"type" : "string"
+				}
+			},
+			"class" : "MAStringDescription",
+			"id" : "email"
+		}
+	],
+	"format" : "magritte.graph/1",
+	"objects" : [
+		{
+			"description" : "person",
+			"id" : "ada",
+			"values" : {
+				"name" : {
+					"value" : "Ada",
+					"type" : "string"
+				},
+				"age" : {
+					"value" : "20",
+					"type" : "integer"
+				}
+			}
+		}
+	],
+	"root" : "person"
+}

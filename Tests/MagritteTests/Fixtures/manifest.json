@@ -1,0 +1,16 @@
+{
+  "authority": "https://github.com/BenjaVision-Catalyst/magritte-cpp",
+  "path": "conformance",
+  "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
+  "files": {
+    "invalid-graphs.json": "d0453e85d342beac37d25ecd54e36376488665e5cadee3d9e6d30f2da612af95",
+    "live-methods.json": "c538d290f1456deedf892b3ba69a0464c8ba690dead6e26cbb49aedc51888d39",
+    "person-v1.json": "87541466c2f6d8e01828a31dfb3e3a31e11bc7eb3cafbe06bdd032716c7e0179",
+    "person-v2.json": "376c9ad1ba766ce2bc944c44b85d736bc47d46a5ca29324530479cfc3cfed5d1",
+    "reference-replay.json": "b7e9d6aefe8eab2223258786fb9bec348b9786b74480797a1af65c538041d2dc",
+    "reference.json": "bb1f0931967c685051231d3d644687213e4b33c237149ec73d873d7948e800f2",
+    "roundtrip-reference.json": "11079683a5c37e726a17641eaff15933501e3cdcaf1240b6815cf550519cc929",
+    "roundtrip-replay.json": "94587d4c4dbebdda51c26cbf4aec02728d1cf6390205cc7aafd3581fcacf4217",
+    "values.json": "3571971275d4b4a1e3bf41533d79fed062e957d97ed9e5d3d1279496ca1caed7"
+  }
+}

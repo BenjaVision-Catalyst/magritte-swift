@@ -1,0 +1,104 @@
+{
+	"rawMissing" : {
+		"type" : "nil"
+	},
+	"readonlyNil" : "valid",
+	"hiddenNil" : "valid",
+	"customUndefined" : "valid",
+	"mementoDefault" : {
+		"value" : true,
+		"type" : "boolean"
+	},
+	"cases" : [
+		{
+			"description" : "name",
+			"input" : {
+				"type" : "nil"
+			},
+			"result" : "MARequiredError"
+		},
+		{
+			"description" : "name",
+			"input" : {
+				"value" : "",
+				"type" : "string"
+			},
+			"result" : "valid"
+		},
+		{
+			"description" : "name",
+			"input" : {
+				"value" : "42",
+				"type" : "integer"
+			},
+			"result" : "MAKindError"
+		},
+		{
+			"description" : "age",
+			"input" : {
+				"type" : "nil"
+			},
+			"result" : "valid"
+		},
+		{
+			"description" : "age",
+			"input" : {
+				"value" : "17",
+				"type" : "integer"
+			},
+			"result" : "MARangeError"
+		},
+		{
+			"description" : "age",
+			"input" : {
+				"value" : "18",
+				"type" : "integer"
+			},
+			"result" : "valid"
+		},
+		{
+			"description" : "age",
+			"input" : {
+				"value" : "120",
+				"type" : "integer"
+			},
+			"result" : "valid"
+		},
+		{
+			"description" : "age",
+			"input" : {
+				"value" : "121",
+				"type" : "integer"
+			},
+			"result" : "MARangeError"
+		},
+		{
+			"description" : "active",
+			"input" : {
+				"value" : false,
+				"type" : "boolean"
+			},
+			"result" : "valid"
+		},
+		{
+			"description" : "active",
+			"input" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"result" : "MAKindError"
+		}
+	],
+	"containerOrder" : [
+		"name",
+		"age",
+		"active"
+	],
+	"selfLabel" : "Name",
+	"selfRequired" : true,
+	"priorityOrder" : [
+		"active",
+		"age",
+		"name"
+	]
+}

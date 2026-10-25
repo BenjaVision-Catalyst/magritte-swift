@@ -1,0 +1,1628 @@
+{
+  "revision": "d67f318686b7779aed79416db121e257d1191f2e",
+  "classes": [
+    {
+      "class": "MAAccessor",
+      "superclass": "MAObject",
+      "source": "source/Magritte-Model/MAAccessor.class.st",
+      "selectors": [
+        "asAccessor",
+        "canRead: aModel",
+        "canWrite: aModel",
+        "defaultLabelFor: aDescription",
+        "handlesSelector: aSelector",
+        "name",
+        "printOn: aStream",
+        "read: aModel",
+        "storeOn: aStream",
+        "write: anObject to: aModel"
+      ]
+    },
+    {
+      "class": "MAActionDescription",
+      "superclass": "MAObject",
+      "source": "source/Magritte-Model/MAActionDescription.class.st",
+      "selectors": [
+        "isAbstract",
+        "maPragma",
+        "<= anObject",
+        "= anObject",
+        "action",
+        "action: aValuable",
+        "comment",
+        "comment: aString",
+        "definingContext",
+        "definingContext: anMADefiningContext",
+        "enableBlock",
+        "enableBlock: aBlock",
+        "hash",
+        "icon",
+        "icon: aSymbol",
+        "initialize",
+        "isEnabled",
+        "isLabelVisible",
+        "isLabelVisible: aBoolean",
+        "isMutator",
+        "isMutator: anObject",
+        "label",
+        "label: aString",
+        "performOn: aModel",
+        "printOn: aStream",
+        "priority",
+        "priority: anInteger",
+        "selector",
+        "selector: aValuable",
+        "shortcut",
+        "shortcut: anObject"
+      ]
+    },
+    {
+      "class": "MAActionPragmaBuilder",
+      "superclass": "MAPragmaBuilder",
+      "source": "source/Magritte-Model/MAActionPragmaBuilder.class.st",
+      "selectors": [
+        "magritteDescriptionExtensionPragma",
+        "magritteDescriptionPragma"
+      ]
+    },
+    {
+      "class": "MAAdaptiveModel",
+      "superclass": "MABasicObject",
+      "source": "source/Magritte-Model/MAAdaptiveModel.class.st",
+      "selectors": [
+        "description: aDescription",
+        "defaultDescription",
+        "defaultDictionary",
+        "initialize",
+        "magritteDescription",
+        "magritteDescription: aDescription",
+        "readUsing: aDescription",
+        "values",
+        "values: aDictionary",
+        "write: anObject using: aDescription"
+      ]
+    },
+    {
+      "class": "MABasicObject",
+      "superclass": "GRObject",
+      "source": "source/Magritte-Model/MABasicObject.class.st",
+      "selectors": [
+        "defaultErrorClass"
+      ]
+    },
+    {
+      "class": "MABlockDescription",
+      "superclass": "MAElementDescription",
+      "source": "source/Magritte-Model/MABlockDescription.class.st",
+      "selectors": [
+        "defaultKind",
+        "defaultLineCount",
+        "isAbstract",
+        "label",
+        "acceptMagritte: aVisitor",
+        "descriptionLineCount",
+        "lineCount",
+        "lineCount: anInteger"
+      ]
+    },
+    {
+      "class": "MABooleanDescription",
+      "superclass": "MAElementDescription",
+      "source": "source/Magritte-Model/MABooleanDescription.class.st",
+      "selectors": [
+        "defaultFalseString",
+        "defaultFalseStrings",
+        "defaultKind",
+        "defaultTrueString",
+        "defaultTrueStrings",
+        "isAbstract",
+        "label",
+        "acceptMagritte: aVisitor",
+        "allOptions",
+        "allOptionsWith: anObject",
+        "descriptionFalseString",
+        "descriptionRequired",
+        "descriptionTrueString",
+        "falseString",
+        "falseString: aString",
+        "falseStrings",
+        "isExtensible",
+        "labelForOption: anObject",
+        "options",
+        "reference",
+        "trueString",
+        "trueString: aString",
+        "trueStrings"
+      ]
+    },
+    {
+      "class": "MACachedMemento",
+      "superclass": "MAMemento",
+      "source": "source/Magritte-Model/MACachedMemento.class.st",
+      "selectors": [
+        "isAbstract",
+        "cache",
+        "commit",
+        "hasChanges",
+        "readUsing: aDescription",
+        "reset",
+        "setCache: aDictionary",
+        "write: anObject using: aDescription"
+      ]
+    },
+    {
+      "class": "MAChainAccessor",
+      "superclass": "MADelegatorAccessor",
+      "source": "source/Magritte-Model/MAChainAccessor.class.st",
+      "selectors": [
+        "accessors: aSequenceableCollection",
+        "on: anAccessor accessor: anotherAccessor",
+        "= anObject",
+        "accessor",
+        "accessor: anAccessor",
+        "canRead: aModel",
+        "canWrite: aModel",
+        "defaultLabelFor: aDescription",
+        "descriptionAccessor",
+        "hash",
+        "name",
+        "postCopy",
+        "read: aModel",
+        "storeOn: aStream",
+        "write: anObject to: aModel"
+      ]
+    },
+    {
+      "class": "MACheckedMemento",
+      "superclass": "MACachedMemento",
+      "source": "source/Magritte-Model/MACheckedMemento.class.st",
+      "selectors": [
+        "hasConflict",
+        "hasModelChangedElsewhere",
+        "original",
+        "reset",
+        "setOriginal: aDictionary",
+        "shouldPush: anObject using: aDescription",
+        "validate"
+      ]
+    },
+    {
+      "class": "MAClassDescription",
+      "superclass": "MAElementDescription",
+      "source": "source/Magritte-Model/MAClassDescription.class.st",
+      "selectors": [
+        "defaultDisplayProperty",
+        "defaultKind",
+        "isAbstract",
+        "label",
+        "acceptMagritte: aVisitor"
+      ]
+    },
+    {
+      "class": "MAColorDescription",
+      "superclass": "MAElementDescription",
+      "source": "source/Magritte-Model/MAColorDescription.class.st",
+      "selectors": [
+        "defaultKind",
+        "isAbstract",
+        "label",
+        "acceptMagritte: aVisitor"
+      ]
+    },
+    {
+      "class": "MAComposedDescriptionBuilder",
+      "superclass": "MADescriptionBuilder",
+      "source": "source/Magritte-Model/MAComposedDescriptionBuilder.class.st",
+      "selectors": [
+        "setBuiltDescription: aDescription",
+        "visitContainer: aContainer",
+        "visitRelationDescription: aDescription"
+      ]
+    },
+    {
+      "class": "MACompositeAccessor",
+      "superclass": "MAChainAccessor",
+      "source": "source/Magritte-Model/MACompositeAccessor.class.st",
+      "selectors": [
+        "via: anAccessor using: aDescription",
+        "canRead: aModel",
+        "canWrite: aModel",
+        "elementsFrom: aModel",
+        "kind",
+        "kind: aClass",
+        "read: aModel",
+        "write: anObject to: aModel"
+      ]
+    },
+    {
+      "class": "MACompositeConflict",
+      "superclass": "Object",
+      "source": "source/Magritte-Model/MACompositeConflict.class.st",
+      "selectors": [
+        "= rhs",
+        "doesNotUnderstand: aMessage",
+        "hash",
+        "isKindOf: aClass",
+        "kind",
+        "kind: aClass",
+        "printOn: aStream",
+        "string",
+        "string: aString"
+      ]
+    },
+    {
+      "class": "MACondition",
+      "superclass": "MAObject",
+      "source": "source/Magritte-Model/MACondition.class.st",
+      "selectors": [
+        "isAbstract",
+        "receiver: anObject selector: aSelector",
+        "receiver: anObject selector: aSelector arguments: anArray index: anInteger",
+        "selector: aSelector",
+        "selector: aSelector argument: anObject",
+        "& aCondition",
+        "not",
+        "numArgs",
+        "value: anObject",
+        "| aCondition"
+      ]
+    },
+    {
+      "class": "MAConditionError",
+      "superclass": "MAValidationError",
+      "source": "source/Magritte-Model/MAConditionError.class.st",
+      "selectors": []
+    },
+    {
+      "class": "MAConflictError",
+      "superclass": "MAValidationError",
+      "source": "source/Magritte-Model/MAConflictError.class.st",
+      "selectors": []
+    },
+    {
+      "class": "MAConjunctiveCondition",
+      "superclass": "MACondition",
+      "source": "source/Magritte-Model/MAConjunctiveCondition.class.st",
+      "selectors": [
+        "& aCondition",
+        "initialize",
+        "value: anObject"
+      ]
+    },
+    {
+      "class": "MAContainer",
+      "superclass": "MADescription",
+      "source": "source/Magritte-Model/MAContainer.class.st",
+      "selectors": [
+        "defaultAccessor",
+        "defaultCollection",
+        "isAbstract",
+        "samplePersonDescription",
+        "samplePersonDumbledore",
+        "samplePersonHarryPotter",
+        "with: aDescription",
+        "withAll: aCollection",
+        "= anObject",
+        "acceptMagritte: aVisitor",
+        "add: aDescription",
+        "addAll: aCollection",
+        "allSatisfy: aBlock",
+        "anySatisfy: aBlock",
+        "asContainer",
+        "at: anIndex",
+        "at: anIndex ifAbsent: aBlock",
+        "children",
+        "collect: aBlock",
+        "copyEmpty",
+        "copyFrom: aStartIndex to: anEndIndex",
+        "copyWithout: anObject",
+        "copyWithoutAll: aCollection",
+        "descriptionBuilder",
+        "descriptionBuilder: aBuilderClass",
+        "descriptionBuilders",
+        "descriptionBuilders: aList",
+        "descriptionChildren",
+        "descriptionDefault",
+        "detect: aBlock",
+        "detect: aBlock ifNone: anExceptionBlock",
+        "do: aBlock",
+        "do: aBlock separatedBy: aSeparatorBlock",
+        "errorNotFound: aDescription",
+        "hasChildren",
+        "hash",
+        "includes: aDescription",
+        "initialize",
+        "inject: anObject into: aBlock",
+        "intersection: aCollection",
+        "isContainer",
+        "isEmpty",
+        "keysAndValuesDo: aBlock",
+        "magritteTemplate",
+        "moveDown: aDescription",
+        "moveUp: aDescription",
+        "noneSatisfy: aBlock",
+        "notEmpty",
+        "postCopy",
+        "print: anObject on: aStream",
+        "reject: aBlock",
+        "remove: aDescription",
+        "removeAll",
+        "select: aBlock",
+        "setChildren: aCollection",
+        "size",
+        "union: aContainer",
+        "with: aCollection do: aBlock"
+      ]
+    },
+    {
+      "class": "MADateAndTimeDescription",
+      "superclass": "MAMagnitudeDescription",
+      "source": "source/Magritte-Model/MADateAndTimeDescription.class.st",
+      "selectors": [
+        "defaultKind",
+        "isAbstract",
+        "label",
+        "acceptMagritte: aVisitor"
+      ]
+    },
+    {
+      "class": "MADateDescription",
+      "superclass": "MAMagnitudeDescription",
+      "source": "source/Magritte-Model/MADateDescription.class.st",
+      "selectors": [
+        "defaultKind",
+        "isAbstract",
+        "label",
+        "acceptMagritte: aVisitor"
+      ]
+    },
+    {
+      "class": "MADelegatorAccessor",
+      "superclass": "MAAccessor",
+      "source": "source/Magritte-Model/MADelegatorAccessor.class.st",
+      "selectors": [
+        "isAbstract",
+        "on: anAccessor",
+        "= anObject",
+        "canRead: aModel",
+        "canWrite: aModel",
+        "defaultLabelFor: aDescription",
+        "descriptionNext",
+        "hash",
+        "name",
+        "next",
+        "next: anAccessor",
+        "postCopy",
+        "read: aModel",
+        "storeOn: aStream",
+        "write: anObject to: aModel"
+      ]
+    },
+    {
+      "class": "MADescription",
+      "superclass": "MAObject",
+      "source": "source/Magritte-Model/MADescription.class.st",
+      "selectors": [
+        "defaultAccessor",
+        "defaultComment",
+        "defaultConditions",
+        "defaultDefault",
+        "defaultDisplayProperty",
+        "defaultGroup",
+        "defaultKind",
+        "defaultLabel",
+        "defaultPersistent",
+        "defaultPriority",
+        "defaultReadOnly",
+        "defaultRequired",
+        "defaultShouldCacheDefault",
+        "defaultStringReader",
+        "defaultStringWriter",
+        "defaultUndefined",
+        "defaultUndefinedValue",
+        "defaultValidator",
+        "defaultVisible",
+        "defaultVisibleInReport",
+        "grouping",
+        ", aDescription",
+        "<= anObject",
+        "= anObject",
+        "acceptMagritte: aVisitor",
+        "accessor",
+        "accessor: anObject",
+        "addCondition: aCondition",
+        "addCondition: aCondition labelled: aString",
+        "addCondition: aCondition labelled: aStringOrBlock ifValid: aDescription",
+        "asContainer",
+        "beHidden",
+        "beOptional",
+        "beReadOnly",
+        "beRequired",
+        "beVisible",
+        "beWriteable",
+        "canExpand",
+        "canExpand: aBoolean",
+        "chainAccessor: anArray",
+        "comment",
+        "comment: aString",
+        "conditions",
+        "conditions: anArray",
+        "conflictErrorMessage",
+        "conflictErrorMessage: aString",
+        "default",
+        "default: anObject",
+        "defaultCanExpand",
+        "defaultLabel",
+        "describedObject",
+        "descriptionAccessor",
+        "descriptionComment",
+        "descriptionDefault",
+        "descriptionGroup",
+        "descriptionLabel",
+        "descriptionName",
+        "descriptionPriority",
+        "descriptionReadOnly",
+        "descriptionRequired",
+        "descriptionStringReader",
+        "descriptionStringWriter",
+        "descriptionType",
+        "descriptionUndefined",
+        "descriptionUndefinedValue",
+        "descriptionValidator",
+        "descriptionVisible",
+        "display: aBlockOrSymbol",
+        "displayBlockOrSymbol",
+        "displayStringFor: anObject",
+        "fromString: aString",
+        "fromString: aString reader: aReader",
+        "fromStringCollection: aCollection",
+        "fromStringCollection: aCollection reader: aReader",
+        "group",
+        "group: aString",
+        "hasChildren",
+        "hasComment",
+        "hasLabel",
+        "hash",
+        "isContainer",
+        "isDescription",
+        "isGrouped",
+        "isKindDefined",
+        "isReadOnly",
+        "isRequired",
+        "isSatisfiedBy: anObject",
+        "isSortable",
+        "isVisible",
+        "kind",
+        "kind: aClass",
+        "kindErrorMessage",
+        "kindErrorMessage: aString",
+        "label",
+        "label: aString",
+        "multipleErrorsMessage",
+        "multipleErrorsMessage: aString",
+        "name",
+        "name: aSymbol",
+        "postCopy",
+        "printOn: aStream",
+        "priority",
+        "priority: aNumber",
+        "propertyAccessor: aSelector",
+        "read: aModel",
+        "readOnly",
+        "readOnly: aBoolean",
+        "readToString: aModel",
+        "required",
+        "required: aBoolean",
+        "requiredErrorMessage",
+        "requiredErrorMessage: aString",
+        "selectorAccessor: aSelector",
+        "shouldCacheDefault",
+        "shouldCacheDefault: aBoolean",
+        "stringReader",
+        "stringReader: aClass",
+        "stringWriter",
+        "stringWriter: aClass",
+        "toString: anObject",
+        "toString: anObject writer: aFormatter",
+        "toStringCollection: aCollection",
+        "toStringCollection: aCollection writer: aFormatter",
+        "tryValidation: tryBlock ifPass: passBlock",
+        "type",
+        "undefined",
+        "undefined: aString",
+        "undefinedValue",
+        "undefinedValue: anObject",
+        "validate: anObject",
+        "validateConditions: anObject",
+        "validateKind: anObject",
+        "validateRequired: anObject",
+        "validateSpecific: anObject",
+        "validator",
+        "validator: aClass",
+        "visible",
+        "visible: aBoolean",
+        "visibleInReport",
+        "visibleInReport: aBoolean",
+        "write: anObject to: aModel",
+        "writeFromString: aString to: aModel"
+      ]
+    },
+    {
+      "class": "MADescriptionBuilder",
+      "superclass": "MAVisitor",
+      "source": "source/Magritte-Model/MADescriptionBuilder.class.st",
+      "selectors": [
+        "buildFrom: aDescription target: aTarget",
+        "buildFrom: aDescription target: aTarget model: aModel",
+        "defaultPriority",
+        "buildFrom: aDescription target: aTarget",
+        "builtDescription",
+        "model",
+        "model: aModel",
+        "priority",
+        "priority: anObject",
+        "setBuiltDescription: aDescription",
+        "target",
+        "target: anObject",
+        "visitContainer: aContainer",
+        "visitDescription: anObject"
+      ]
+    },
+    {
+      "class": "MADescriptionContext",
+      "superclass": "MABasicObject",
+      "source": "source/Magritte-Model/MADescriptionContext.class.st",
+      "selectors": [
+        "= anObject",
+        "compiledMethod",
+        "compiledMethodGtViewFor: aView",
+        "hash",
+        "methodClass",
+        "methodSelector",
+        "methodSelector: anObject",
+        "modelClass",
+        "modelClass: anObject",
+        "printOn: aStream"
+      ]
+    },
+    {
+      "class": "MADescriptionFlattener",
+      "superclass": "MADescriptionBuilder",
+      "source": "source/Magritte-Model/MADescriptionFlattener.class.st",
+      "selectors": [
+        "addToBuildedDescription: aDescription for: aValue",
+        "expandDescription: aDescription for: aValue",
+        "visitToOneRelationDescription: aDescription"
+      ]
+    },
+    {
+      "class": "MADescriptionHolder",
+      "superclass": "MAValueHolder",
+      "source": "source/Magritte-Model/MADescriptionHolder.class.st",
+      "selectors": [
+        "descriptionClasses",
+        "groupChoice",
+        "groupMagnitude",
+        "groupMisc",
+        "groupOf: aClass",
+        "groupPick",
+        "groupText",
+        "descriptionValue",
+        "initialize"
+      ]
+    },
+    {
+      "class": "MADictionaryAccessor",
+      "superclass": "MAAccessor",
+      "source": "source/Magritte-Model/MADictionaryAccessor.class.st",
+      "selectors": [
+        "isAbstract",
+        "key: aSymbol",
+        "= anObject",
+        "canRead: aModel",
+        "canWrite: aModel",
+        "defaultLabelFor: aDescription",
+        "hash",
+        "key",
+        "key: aKey",
+        "keyDescription",
+        "name",
+        "read: aModel",
+        "storeOn: aStream",
+        "write: anObject to: aModel"
+      ]
+    },
+    {
+      "class": "MADirectoryDescription",
+      "superclass": "MAFileDescription",
+      "source": "source/Magritte-Model/MADirectoryDescription.class.st",
+      "selectors": [
+        "label",
+        "acceptMagritte: aVisitor"
+      ]
+    },
+    {
+      "class": "MADurationDescription",
+      "superclass": "MAMagnitudeDescription",
+      "source": "source/Magritte-Model/MADurationDescription.class.st",
+      "selectors": [
+        "defaultKind",
+        "isAbstract",
+        "label",
+        "acceptMagritte: aVisitor"
+      ]
+    },
+    {
+      "class": "MADynamicDescribedObject",
+      "superclass": "MADynamicVariable",
+      "source": "source/Magritte-Model/MADynamicDescribedObject.class.st",
+      "selectors": []
+    },
+    {
+      "class": "MADynamicDescriptionCache",
+      "superclass": "MADynamicVariable",
+      "source": "source/Magritte-Model/MADynamicDescriptionCache.class.st",
+      "selectors": [
+        "defaultValue"
+      ]
+    },
+    {
+      "class": "MADynamicOptions",
+      "superclass": "Object",
+      "source": "source/Magritte-Model/MADynamicOptions.class.st",
+      "selectors": [
+        "block: aBlock",
+        "block",
+        "block: aBlock",
+        "detect: anObject",
+        "includes: anObject",
+        "includesBlock",
+        "includesBlock: aBlock",
+        "maAllOptionsFor: anOptionDescription",
+        "maSelectMatching: aString",
+        "reader",
+        "reader: aBlock"
+      ]
+    },
+    {
+      "class": "MADynamicVariable",
+      "superclass": "GRNotification",
+      "source": "source/Magritte-Model/MADynamicVariable.class.st",
+      "selectors": [
+        "defaultValue",
+        "use: anObject during: aBlock",
+        "value",
+        "defaultAction"
+      ]
+    },
+    {
+      "class": "MAElementDescription",
+      "superclass": "MADescription",
+      "source": "source/Magritte-Model/MAElementDescription.class.st",
+      "selectors": [
+        "defaultAutoAccept",
+        "new",
+        "acceptMagritte: aVisitor",
+        "asContainer",
+        "autoAccept",
+        "autoAccept: aBoolean",
+        "default",
+        "default: anObject",
+        "definingContext",
+        "definingContext: anMADefiningContext",
+        "handleMessage: aMessage for: anObject",
+        "handlesSelector: aSelector",
+        "initialAnswer",
+        "initialAnswer: aValuable",
+        "isIgnorableValue: anObject",
+        "lazilyInitializeFrom: currentValue for: anObject",
+        "printFor: anObject on: aWriteStream",
+        "shouldWrite: anObject over: anotherObject",
+        "storeOn: aStream"
+      ]
+    },
+    {
+      "class": "MAError",
+      "superclass": "GRError",
+      "source": "source/Magritte-Model/MAError.class.st",
+      "selectors": []
+    },
+    {
+      "class": "MAFileDescription",
+      "superclass": "MAElementDescription",
+      "source": "source/Magritte-Model/MAFileDescription.class.st",
+      "selectors": [
+        "defaultDisplayProperty",
+        "defaultKind",
+        "isAbstract",
+        "label",
+        "acceptMagritte: aVisitor"
+      ]
+    },
+    {
+      "class": "MAFileModel",
+      "superclass": "MABasicObject",
+      "source": "source/Magritte-Model/MAFileModel.class.st",
+      "selectors": [
+        "defaultMimeType",
+        "defaultMimeTypes",
+        "initialize",
+        "mimetypeFor: aString",
+        "mimetypes",
+        "validCharacters",
+        "= anObject",
+        "contents",
+        "contents: aByteArray",
+        "extension",
+        "filename",
+        "filename: aString",
+        "filesize",
+        "finalize",
+        "hash",
+        "initialize",
+        "isApplication",
+        "isAudio",
+        "isEmpty",
+        "isImage",
+        "isText",
+        "isVideo",
+        "maintype",
+        "mimetype",
+        "mimetype: aString",
+        "readStream",
+        "subtype"
+      ]
+    },
+    {
+      "class": "MAIconDescription",
+      "superclass": "MAElementDescription",
+      "source": "source/Magritte-Model/MAIconDescription.class.st",
+      "selectors": [
+        "iconNameAccessor",
+        "iconNameAccessor: anObject"
+      ]
+    },
+    {
+      "class": "MAIdentityAccessor",
+      "superclass": "MAAccessor",
+      "source": "source/Magritte-Model/MAIdentityAccessor.class.st",
+      "selectors": [
+        "isAbstract",
+        "canRead: aModel",
+        "read: aModel",
+        "write: anObject to: aModel"
+      ]
+    },
+    {
+      "class": "MAKindError",
+      "superclass": "MAValidationError",
+      "source": "source/Magritte-Model/MAKindError.class.st",
+      "selectors": []
+    },
+    {
+      "class": "MAMagnitudeDescription",
+      "superclass": "MAElementDescription",
+      "source": "source/Magritte-Model/MAMagnitudeDescription.class.st",
+      "selectors": [
+        "defaultMax",
+        "defaultMin",
+        "acceptMagritte: aVisitor",
+        "descriptionMax",
+        "descriptionMin",
+        "isSortable",
+        "isWithinRange: anObject",
+        "max",
+        "max: aMagnitudeOrNil",
+        "min",
+        "min: aMagnitudeOrNil",
+        "min: aMinimumObject max: aMaximumObject",
+        "rangeErrorMessage",
+        "rangeErrorMessage: aString",
+        "validateSpecific: anObject"
+      ]
+    },
+    {
+      "class": "MAMemento",
+      "superclass": "MAObject",
+      "source": "source/Magritte-Model/MAMemento.class.st",
+      "selectors": [
+        "model: aModel",
+        "model: aModel description: aDescription",
+        "commit",
+        "cookRawPull: aDictionary",
+        "doesNotUnderstand: aMessage",
+        "has: firstDictionary changedFrom: secondDictionary",
+        "magritteDescription",
+        "model",
+        "printOn: aStream",
+        "pull",
+        "pullRaw",
+        "pullRawTransforming: aBlock",
+        "push: aDictionary",
+        "readUsing: aDescription",
+        "reset",
+        "setDescription: aDescription",
+        "setModel: aModel",
+        "shouldPush: anObject using: aDescription",
+        "validate"
+      ]
+    },
+    {
+      "class": "MAMemoDescription",
+      "superclass": "MAStringDescription",
+      "source": "source/Magritte-Model/MAMemoDescription.class.st",
+      "selectors": [
+        "defaultLineCount",
+        "label",
+        "acceptMagritte: aVisitor",
+        "descriptionLineCount",
+        "lineCount",
+        "lineCount: anInteger"
+      ]
+    },
+    {
+      "class": "MAMemoryFileModel",
+      "superclass": "MAFileModel",
+      "source": "source/Magritte-Model/MAMemoryFileModel.class.st",
+      "selectors": [
+        "= anObject",
+        "contents",
+        "contents: aByteArray",
+        "finalize",
+        "hash"
+      ]
+    },
+    {
+      "class": "MAMessagingStringWriter",
+      "superclass": "MAStringWriter",
+      "source": "source/Magritte-Model/MAMessagingStringWriter.class.st",
+      "selectors": [
+        "messageSend",
+        "messageSend: anObject",
+        "visitContainer: aDescription",
+        "visitDescription: aDescription",
+        "visitElementDescription: aDescription"
+      ]
+    },
+    {
+      "class": "MAMultipleErrors",
+      "superclass": "MAValidationError",
+      "source": "source/Magritte-Model/MAMultipleErrors.class.st",
+      "selectors": [
+        "description: aDescription errors: aCollection signal: aString",
+        "collection",
+        "printOn: aStream",
+        "setCollection: aCollection"
+      ]
+    },
+    {
+      "class": "MAMultipleOptionDescription",
+      "superclass": "MAOptionDescription",
+      "source": "source/Magritte-Model/MAMultipleOptionDescription.class.st",
+      "selectors": [
+        "defaultDistinct",
+        "defaultKind",
+        "defaultOrdered",
+        "isAbstract",
+        "label",
+        "acceptMagritte: aVisitor",
+        "beDistinct",
+        "beIndefinite",
+        "beOrdered",
+        "beUnordered",
+        "descriptionDistinct",
+        "descriptionOrdered",
+        "distinct",
+        "distinct: aBoolean",
+        "isDistinct",
+        "isMultiple",
+        "isOrdered",
+        "ordered",
+        "ordered: aBoolean",
+        "validateKind: anObject",
+        "validateRequired: anObject"
+      ]
+    },
+    {
+      "class": "MANegationCondition",
+      "superclass": "MACondition",
+      "source": "source/Magritte-Model/MANegationCondition.class.st",
+      "selectors": [
+        "with: aCondition",
+        "initializeWith: aCondition",
+        "value: anObject"
+      ]
+    },
+    {
+      "class": "MANullAccessor",
+      "superclass": "MAAccessor",
+      "source": "source/Magritte-Model/MANullAccessor.class.st",
+      "selectors": [
+        "isAbstract",
+        "new",
+        "uuid: anObject",
+        "= anObject",
+        "hash",
+        "maSetUp: aClass for: anMAElementDescription",
+        "read: aModel",
+        "storeOn: aStream",
+        "storeVia: anAccessor inDescriptionOn: aStream",
+        "uuid",
+        "uuid: anObject",
+        "write: anObject to: aModel"
+      ]
+    },
+    {
+      "class": "MANumberDescription",
+      "superclass": "MAMagnitudeDescription",
+      "source": "source/Magritte-Model/MANumberDescription.class.st",
+      "selectors": [
+        "defaultKind",
+        "defaultThousandsSeparator",
+        "isAbstract",
+        "label",
+        "acceptMagritte: aVisitor",
+        "beInteger",
+        "beNegative",
+        "bePositive",
+        "thousandsSeparator",
+        "thousandsSeparator: aCharacter"
+      ]
+    },
+    {
+      "class": "MAObject",
+      "superclass": "MABasicObject",
+      "source": "source/Magritte-Model/MAObject.class.st",
+      "selectors": [
+        "isAbstract",
+        "new",
+        "withAllConcreteClasses",
+        "withAllConcreteClassesDo: aBlock",
+        "= anObject",
+        "acceptMagritte: aVisitor",
+        "hash",
+        "postCopy"
+      ]
+    },
+    {
+      "class": "MAOptionDescription",
+      "superclass": "MAReferenceDescription",
+      "source": "source/Magritte-Model/MAOptionDescription.class.st",
+      "selectors": [
+        "defaultExtensible",
+        "defaultOptions",
+        "defaultSorted",
+        "acceptMagritte: aVisitor",
+        "allOptions",
+        "allOptionsWith: anObject",
+        "beExtensible",
+        "beLimited",
+        "beSorted",
+        "beUnsorted",
+        "descriptionDefault",
+        "descriptionExtensible",
+        "descriptionOptions",
+        "descriptionSorted",
+        "extensible",
+        "extensible: aBoolean",
+        "isExtensible",
+        "isSorted",
+        "labelForOption: anObject",
+        "options",
+        "options: anArray",
+        "optionsAndLabels: aCollection",
+        "optionsTextual",
+        "optionsTextual: aString",
+        "postCopy",
+        "prepareOptions: aCollection",
+        "shouldNotInclude: anObject",
+        "sortBlock",
+        "sorted",
+        "sorted: aBoolean",
+        "undefined: aString",
+        "validateOptionKind: anObject"
+      ]
+    },
+    {
+      "class": "MAPasswordDescription",
+      "superclass": "MAStringDescription",
+      "source": "source/Magritte-Model/MAPasswordDescription.class.st",
+      "selectors": [
+        "label",
+        "acceptMagritte: aVisitor",
+        "isObfuscated: anObject",
+        "isSortable",
+        "obfuscated: anObject"
+      ]
+    },
+    {
+      "class": "MAPluggableAccessor",
+      "superclass": "MAAccessor",
+      "source": "source/Magritte-Model/MAPluggableAccessor.class.st",
+      "selectors": [
+        "isAbstract",
+        "read: aReadBlock write: aWriteBlock",
+        "= anObject",
+        "canRead: aModel",
+        "canWrite: aModel",
+        "hash",
+        "read: aModel",
+        "readBlock",
+        "readBlock: aBlock",
+        "storeBlock: aBlock on: aStream",
+        "storeOn: aStream",
+        "write: anObject to: aModel",
+        "writeBlock",
+        "writeBlock: aBlock"
+      ]
+    },
+    {
+      "class": "MAPluggableCondition",
+      "superclass": "MACondition",
+      "source": "source/Magritte-Model/MAPluggableCondition.class.st",
+      "selectors": [
+        "initializeReceiver: anObject selector: aSelector arguments: anArray index: anInteger",
+        "value: anObject"
+      ]
+    },
+    {
+      "class": "MAPragmaBuilder",
+      "superclass": "MABasicObject",
+      "source": "source/Magritte-Model/MAPragmaBuilder.class.st",
+      "selectors": [
+        "containerPragma",
+        "for: anObject",
+        "magritteDescriptionExtensionPragma",
+        "magritteDescriptionPragma",
+        "magritteSelectors",
+        "applyExtensions: descriptionExtensions for: each of: anObject to: description",
+        "build: anObject cache: cache",
+        "buildContainer: anObject",
+        "buildDescriptions: anObject",
+        "description: description extendedBy: descriptionExtensions for: descriptionSelector of: anObject",
+        "descriptionExtensions: anObject",
+        "extensionsFrom: aDictionary matching: aSymbol",
+        "for: anObject",
+        "setDefiningContextOf: aDescription to: aSelector in: aClass",
+        "uniqueDescriptionSelectors: anObject"
+      ]
+    },
+    {
+      "class": "MAPriorityContainer",
+      "superclass": "MAContainer",
+      "source": "source/Magritte-Model/MAPriorityContainer.class.st",
+      "selectors": [
+        "defaultCollection",
+        "acceptMagritte: aVisitor",
+        "moveDown: aDescription",
+        "moveUp: aDescription",
+        "resort",
+        "setChildren: aCollection"
+      ]
+    },
+    {
+      "class": "MAPropertyAccessor",
+      "superclass": "MADictionaryAccessor",
+      "source": "source/Magritte-Model/MAPropertyAccessor.class.st",
+      "selectors": [
+        "read: aModel",
+        "write: anObject to: aModel"
+      ]
+    },
+    {
+      "class": "MAPropertyChangedAnnouncement",
+      "superclass": "Announcement",
+      "source": "source/Magritte-Model/MAPropertyChangedAnnouncement.class.st",
+      "selectors": [
+        "key",
+        "key: anObject",
+        "owner",
+        "owner: anObject",
+        "value",
+        "value: anObject"
+      ]
+    },
+    {
+      "class": "MAPropertyError",
+      "superclass": "MAError",
+      "source": "source/Magritte-Model/MAPropertyError.class.st",
+      "selectors": []
+    },
+    {
+      "class": "MARangeError",
+      "superclass": "MAValidationError",
+      "source": "source/Magritte-Model/MARangeError.class.st",
+      "selectors": []
+    },
+    {
+      "class": "MAReadError",
+      "superclass": "MAError",
+      "source": "source/Magritte-Model/MAReadError.class.st",
+      "selectors": []
+    },
+    {
+      "class": "MAReader",
+      "superclass": "MAStreamingVisitor",
+      "source": "source/Magritte-Model/MAReader.class.st",
+      "selectors": [
+        "read: aStream description: aDescription",
+        "error: aString",
+        "read: aStream description: aDescription"
+      ]
+    },
+    {
+      "class": "MAReferenceDescription",
+      "superclass": "MAElementDescription",
+      "source": "source/Magritte-Model/MAReferenceDescription.class.st",
+      "selectors": [
+        "defaultReference",
+        "acceptMagritte: aVisitor",
+        "descriptionReference",
+        "gtSearchSource",
+        "gtSearchSource: valuable",
+        "gtSearchTransform",
+        "gtSearchTransform: aValuable",
+        "initializer",
+        "initializer: valuable",
+        "isMultiple",
+        "postCopy",
+        "reference",
+        "reference: aDescription"
+      ]
+    },
+    {
+      "class": "MARelationDescription",
+      "superclass": "MAReferenceDescription",
+      "source": "source/Magritte-Model/MARelationDescription.class.st",
+      "selectors": [
+        "defaultClasses",
+        "acceptMagritte: aVisitor",
+        "allClasses",
+        "classes",
+        "classes: aCollection",
+        "commonClass",
+        "descriptionClasses",
+        "descriptionReference",
+        "postCopy",
+        "reference"
+      ]
+    },
+    {
+      "class": "MARequiredError",
+      "superclass": "MAValidationError",
+      "source": "source/Magritte-Model/MARequiredError.class.st",
+      "selectors": []
+    },
+    {
+      "class": "MASelectorAccessor",
+      "superclass": "MAAccessor",
+      "source": "source/Magritte-Model/MASelectorAccessor.class.st",
+      "selectors": [
+        "isAbstract",
+        "read: aReadSelector write: aWriteSelector",
+        "selector: aSelector",
+        "= anObject",
+        "canRead: aModel",
+        "canWrite: aModel",
+        "defaultLabelFor: aDescription",
+        "descriptionSelector",
+        "fieldDescription",
+        "handlesSelector: aSelector",
+        "hash",
+        "name",
+        "read: aModel",
+        "readSelector",
+        "readSelector: aSelector",
+        "selector",
+        "selector: aSelector",
+        "storeOn: aStream",
+        "write: anObject to: aModel",
+        "writeSelector",
+        "writeSelector: aSelector"
+      ]
+    },
+    {
+      "class": "MASingleOptionDescription",
+      "superclass": "MAOptionDescription",
+      "source": "source/Magritte-Model/MASingleOptionDescription.class.st",
+      "selectors": [
+        "example",
+        "isAbstract",
+        "label",
+        "acceptMagritte: aVisitor",
+        "descriptionGroupBy",
+        "groupBy",
+        "groupBy: anAccessor",
+        "isGrouped",
+        "prepareOptions: aCollection",
+        "validateKind: anObject"
+      ]
+    },
+    {
+      "class": "MASortBlock",
+      "superclass": "MABasicObject",
+      "source": "source/Magritte-Model/MASortBlock.class.st",
+      "selectors": [
+        "accessor: anAccessor selector: aSelector",
+        "selector: aSelector",
+        "fixTemps",
+        "initializeAccessor: anAccessor selector: aSelector",
+        "value: aFirstObject value: aSecondObject"
+      ]
+    },
+    {
+      "class": "MAStraightMemento",
+      "superclass": "MAMemento",
+      "source": "source/Magritte-Model/MAStraightMemento.class.st",
+      "selectors": [
+        "isAbstract",
+        "readUsing: aDescription",
+        "write: anObject using: aDescription"
+      ]
+    },
+    {
+      "class": "MAStreamingVisitor",
+      "superclass": "MAVisitor",
+      "source": "source/Magritte-Model/MAStreamingVisitor.class.st",
+      "selectors": [
+        "contents",
+        "object",
+        "object: anObject",
+        "object: anObject during: aBlock",
+        "stream",
+        "stream: aStream"
+      ]
+    },
+    {
+      "class": "MAStringDescription",
+      "superclass": "MAElementDescription",
+      "source": "source/Magritte-Model/MAStringDescription.class.st",
+      "selectors": [
+        "defaultKind",
+        "isAbstract",
+        "label",
+        "acceptMagritte: aVisitor",
+        "isSortable"
+      ]
+    },
+    {
+      "class": "MAStringReader",
+      "superclass": "MAReader",
+      "source": "source/Magritte-Model/MAStringReader.class.st",
+      "selectors": [
+        "isFalseUsing: aDescription",
+        "isTrueUsing: aDescription",
+        "nextMatchAll: aCollection on: aStream",
+        "objectReadFromKindOf: aDescription",
+        "read: aStream description: aDescription",
+        "visitBlockDescription: aDescription",
+        "visitBooleanDescription: aDescription",
+        "visitClassDescription: aDescription",
+        "visitColorDescription: aDescription",
+        "visitContainer: anObject",
+        "visitDurationDescription: aDescription",
+        "visitElementDescription: aDescription",
+        "visitFileDescription: aDescription",
+        "visitMultipleOptionDescription: aDescription",
+        "visitNumberDescription: aDescription",
+        "visitRelationDescription: aDescription",
+        "visitSingleOptionDescription: aDescription",
+        "visitStringDescription: aDescription",
+        "visitSymbolDescription: aDescription",
+        "visitTableDescription: aDescription",
+        "visitTimeDescription: aDescription",
+        "visitTokenDescription: aDescription",
+        "visitUrlDescription: aDescription"
+      ]
+    },
+    {
+      "class": "MAStringWriter",
+      "superclass": "MAWriter",
+      "source": "source/Magritte-Model/MAStringWriter.class.st",
+      "selectors": [
+        "defaultWriteStream",
+        "printObjectDescribedBy: aDescription",
+        "visitBooleanDescription: aDescription",
+        "visitColorDescription: aDescription",
+        "visitContainer: aDescription",
+        "visitElementDescription: aDescription",
+        "visitMultipleOptionDescription: aDescription",
+        "visitSingleOptionDescription: aDescription",
+        "visitTimeStampDescription: aDescription",
+        "visitToManyRelationDescription: aDescription",
+        "visitToOneRelationDescription: aDescription",
+        "visitTokenDescription: aDescription",
+        "write: anObject description: aDescription to: aStream"
+      ]
+    },
+    {
+      "class": "MASymbolDescription",
+      "superclass": "MAStringDescription",
+      "source": "source/Magritte-Model/MASymbolDescription.class.st",
+      "selectors": [
+        "defaultKind",
+        "label",
+        "acceptMagritte: aVisitor"
+      ]
+    },
+    {
+      "class": "MATableDescription",
+      "superclass": "MAReferenceDescription",
+      "source": "source/Magritte-Model/MATableDescription.class.st",
+      "selectors": [
+        "defaultColumnLabels",
+        "defaultKind",
+        "defaultRowLabels",
+        "isAbstract",
+        "label",
+        "acceptMagritte: aVisitor",
+        "columnCount",
+        "columnLabels",
+        "columnLabels: aCollection",
+        "columnLabelsTextual",
+        "columnLabelsTextual: aString",
+        "descriptionColumnLabels",
+        "descriptionDefault",
+        "descriptionRequired",
+        "descriptionRowLabels",
+        "rowCount",
+        "rowLabels",
+        "rowLabels: aCollection",
+        "rowLabelsTextual",
+        "rowLabelsTextual: aString",
+        "validateChildren: anObject",
+        "validateCounts: anObject",
+        "validateSpecific: anObject"
+      ]
+    },
+    {
+      "class": "MATableModel",
+      "superclass": "MABasicObject",
+      "source": "source/Magritte-Model/MATableModel.class.st",
+      "selectors": [
+        "rows: aRowCount columns: aColumnCount",
+        "rows: aRowCount columns: aColumnCount contents: anArray",
+        "= aTable",
+        "at: aRowIndex at: aColumnIndex",
+        "at: aRowIndex at: aColumnIndex put: aValue",
+        "checkAt: aRowIndex at: aColumnIndex",
+        "collect: aBlock",
+        "columnCount",
+        "contents",
+        "copyEmpty",
+        "copyRows: aRowCount columns: aColumnCount",
+        "do: aBlock",
+        "hash",
+        "indexAt: aRowIndex at: aColumnIndex",
+        "pointAt: anIndex",
+        "postCopy",
+        "reshapeRows: aRowCount columns: aColumnCount",
+        "rowCount",
+        "setColumnCount: anInteger",
+        "setContents: anArray",
+        "setRowCount: anInteger",
+        "uncheckedAt: aRowIndex at: aColumnIndex",
+        "uncheckedAt: aRowIndex at: aColumnIndex put: aValue"
+      ]
+    },
+    {
+      "class": "MATimeDescription",
+      "superclass": "MAMagnitudeDescription",
+      "source": "source/Magritte-Model/MATimeDescription.class.st",
+      "selectors": [
+        "defaultKind",
+        "isAbstract",
+        "label",
+        "acceptMagritte: aVisitor"
+      ]
+    },
+    {
+      "class": "MAToManyRelationDescription",
+      "superclass": "MARelationDescription",
+      "source": "source/Magritte-Model/MAToManyRelationDescription.class.st",
+      "selectors": [
+        "defaultDefinitive",
+        "defaultKind",
+        "defaultOrdered",
+        "defaultShouldCacheDefault",
+        "defaultSorted",
+        "isAbstract",
+        "label",
+        "acceptMagritte: aVisitor",
+        "beDefinitive",
+        "beModifiable",
+        "beOrdered",
+        "beSorted",
+        "beUnordered",
+        "beUnsorted",
+        "definitive",
+        "definitive: aBoolean",
+        "descriptionDefinitive",
+        "descriptionOrdered",
+        "descriptionSorted",
+        "isDefinitive",
+        "isMultiple",
+        "isOrdered",
+        "isSorted",
+        "ordered",
+        "ordered: aBoolean",
+        "sorted",
+        "sorted: aBoolean",
+        "validateKind: anObject",
+        "validateRequired: anObject"
+      ]
+    },
+    {
+      "class": "MAToManyScalarRelationDescription",
+      "superclass": "MAToManyRelationDescription",
+      "source": "source/Magritte-Model/MAToManyScalarRelationDescription.class.st",
+      "selectors": [
+        "label",
+        "acceptMagritte: aVisitor"
+      ]
+    },
+    {
+      "class": "MAToOneRelationDescription",
+      "superclass": "MARelationDescription",
+      "source": "source/Magritte-Model/MAToOneRelationDescription.class.st",
+      "selectors": [
+        "isAbstract",
+        "label",
+        "acceptMagritte: aVisitor",
+        "isDefinitive",
+        "isOrdered",
+        "validateKind: anObject"
+      ]
+    },
+    {
+      "class": "MATokenDescription",
+      "superclass": "MAReferenceDescription",
+      "source": "source/Magritte-Model/MATokenDescription.class.st",
+      "selectors": [
+        "defaultKind",
+        "defaultSeparators",
+        "isAbstract",
+        "label",
+        "acceptMagritte: aVisitor",
+        "descriptionSeparators",
+        "separators",
+        "separators: aString"
+      ]
+    },
+    {
+      "class": "MAUrlDescription",
+      "superclass": "MAElementDescription",
+      "source": "source/Magritte-Model/MAUrlDescription.class.st",
+      "selectors": [
+        "acceptMagritte: aVisitor"
+      ]
+    },
+    {
+      "class": "MAValidationError",
+      "superclass": "MAError",
+      "source": "source/Magritte-Model/MAValidationError.class.st",
+      "selectors": [
+        "description: aDescription signal: aString",
+        "isResumable",
+        "printOn: aStream",
+        "setDescription: aDescription"
+      ]
+    },
+    {
+      "class": "MAValidatorVisitor",
+      "superclass": "MAVisitor",
+      "source": "source/Magritte-Model/MAValidatorVisitor.class.st",
+      "selectors": [
+        "on: anObject description: aDescription",
+        "object",
+        "on: anObject description: aDescription",
+        "use: anObject during: aBlock",
+        "validate: anObject using: aDescription",
+        "visit: aDescription",
+        "visitContainer: aDescription",
+        "visitDescription: aDescription"
+      ]
+    },
+    {
+      "class": "MAValueHolder",
+      "superclass": "MABasicObject",
+      "source": "source/Magritte-Model/MAValueHolder.class.st",
+      "selectors": [
+        "on: anObject",
+        "contents",
+        "contents: anObject"
+      ]
+    },
+    {
+      "class": "MAVariableAccessor",
+      "superclass": "MAAccessor",
+      "source": "source/Magritte-Model/MAVariableAccessor.class.st",
+      "selectors": [
+        "isAbstract",
+        "name: aString",
+        "= anObject",
+        "canRead: aModel",
+        "canWrite: aModel",
+        "hash",
+        "name",
+        "name: aString",
+        "read: aModel",
+        "storeOn: aStream",
+        "write: anObject to: aModel"
+      ]
+    },
+    {
+      "class": "MAVisitor",
+      "superclass": "MABasicObject",
+      "source": "source/Magritte-Model/MAVisitor.class.st",
+      "selectors": [
+        "buildVisitorHierarchyForClass: aClass selector: aBlock classified: aSelector",
+        "visit: anObject",
+        "visitAll: aCollection",
+        "visitBlockDescription: anObject",
+        "visitBooleanDescription: anObject",
+        "visitClassDescription: anObject",
+        "visitColorDescription: anObject",
+        "visitContainer: anObject",
+        "visitDateAndTimeDescription: anObject",
+        "visitDateDescription: anObject",
+        "visitDescription: anObject",
+        "visitDirectoryDescription: anObject",
+        "visitDurationDescription: anObject",
+        "visitElementDescription: anObject",
+        "visitFileDescription: anObject",
+        "visitMagnitudeDescription: anObject",
+        "visitMemoDescription: anObject",
+        "visitMultipleOptionDescription: anObject",
+        "visitNumberDescription: anObject",
+        "visitOptionDescription: anObject",
+        "visitPasswordDescription: anObject",
+        "visitPriorityContainer: anObject",
+        "visitReferenceDescription: anObject",
+        "visitRelationDescription: anObject",
+        "visitReportContainer: anObject",
+        "visitSingleOptionDescription: anObject",
+        "visitStringDescription: anObject",
+        "visitSymbolDescription: anObject",
+        "visitTableDescription: anObject",
+        "visitTableReference: anObject",
+        "visitTimeDescription: anObject",
+        "visitTimeStampDescription: anObject",
+        "visitToManyRelationDescription: anObject",
+        "visitToManyScalarRelationDescription: anObject",
+        "visitToOneRelationDescription: anObject",
+        "visitTokenDescription: anObject",
+        "visitUrlDescription: aMAUrlDescription"
+      ]
+    },
+    {
+      "class": "MAWriteError",
+      "superclass": "MAError",
+      "source": "source/Magritte-Model/MAWriteError.class.st",
+      "selectors": []
+    },
+    {
+      "class": "MAWriter",
+      "superclass": "MAStreamingVisitor",
+      "source": "source/Magritte-Model/MAWriter.class.st",
+      "selectors": [
+        "write: anObject",
+        "write: anObject description: aDescription",
+        "write: anObject description: aDescription to: aStream",
+        "defaultWriteStream",
+        "error: aString",
+        "write: anObject",
+        "write: anObject description: aDescription",
+        "write: anObject description: aDescription to: aStream"
+      ]
+    },
+    {
+      "class": "ManifestMagritteModel",
+      "superclass": "PackageManifest",
+      "source": "source/Magritte-Model/ManifestMagritteModel.class.st",
+      "selectors": [
+        "ruleRBBadMessageRuleV1FalsePositive"
+      ]
+    }
+  ]
+}

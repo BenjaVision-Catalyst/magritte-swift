@@ -1,0 +1,1860 @@
+[
+  {
+    "name": "unknown class",
+    "graph": {
+      "descriptions": [
+        {
+          "properties": {
+            "label": {
+              "value": "Person",
+              "type": "string"
+            }
+          },
+          "class": "MAContainer",
+          "id": "person",
+          "children": [
+            "name",
+            "age",
+            "active"
+          ]
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "name"
+          },
+          "properties": {
+            "required": {
+              "value": true,
+              "type": "boolean"
+            },
+            "label": {
+              "value": "Name",
+              "type": "string"
+            },
+            "priority": {
+              "value": "20",
+              "type": "integer"
+            }
+          },
+          "class": "MAUrlDescription",
+          "id": "name"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "age"
+          },
+          "properties": {
+            "max": {
+              "value": "120",
+              "type": "integer"
+            },
+            "priority": {
+              "value": "10",
+              "type": "integer"
+            },
+            "label": {
+              "value": "Age",
+              "type": "string"
+            },
+            "min": {
+              "value": "18",
+              "type": "integer"
+            }
+          },
+          "class": "MANumberDescription",
+          "id": "age"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "active"
+          },
+          "properties": {
+            "label": {
+              "value": "Active",
+              "type": "string"
+            },
+            "default": {
+              "value": true,
+              "type": "boolean"
+            }
+          },
+          "class": "MABooleanDescription",
+          "id": "active"
+        }
+      ],
+      "format": "magritte.graph/1",
+      "objects": [
+        {
+          "description": "person",
+          "id": "ada",
+          "values": {
+            "name": {
+              "value": "Ada",
+              "type": "string"
+            },
+            "age": {
+              "value": "20",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "root": "person"
+    }
+  },
+  {
+    "name": "unknown property",
+    "graph": {
+      "descriptions": [
+        {
+          "properties": {
+            "label": {
+              "value": "Person",
+              "type": "string"
+            }
+          },
+          "class": "MAContainer",
+          "id": "person",
+          "children": [
+            "name",
+            "age",
+            "active"
+          ]
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "name"
+          },
+          "properties": {
+            "required": {
+              "value": true,
+              "type": "boolean"
+            },
+            "label": {
+              "value": "Name",
+              "type": "string"
+            },
+            "priority": {
+              "value": "20",
+              "type": "integer"
+            },
+            "validator": {
+              "type": "string",
+              "value": "IgnoreValidation"
+            }
+          },
+          "class": "MAStringDescription",
+          "id": "name"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "age"
+          },
+          "properties": {
+            "max": {
+              "value": "120",
+              "type": "integer"
+            },
+            "priority": {
+              "value": "10",
+              "type": "integer"
+            },
+            "label": {
+              "value": "Age",
+              "type": "string"
+            },
+            "min": {
+              "value": "18",
+              "type": "integer"
+            }
+          },
+          "class": "MANumberDescription",
+          "id": "age"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "active"
+          },
+          "properties": {
+            "label": {
+              "value": "Active",
+              "type": "string"
+            },
+            "default": {
+              "value": true,
+              "type": "boolean"
+            }
+          },
+          "class": "MABooleanDescription",
+          "id": "active"
+        }
+      ],
+      "format": "magritte.graph/1",
+      "objects": [
+        {
+          "description": "person",
+          "id": "ada",
+          "values": {
+            "name": {
+              "value": "Ada",
+              "type": "string"
+            },
+            "age": {
+              "value": "20",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "root": "person"
+    }
+  },
+  {
+    "name": "bad property kind",
+    "graph": {
+      "descriptions": [
+        {
+          "properties": {
+            "label": {
+              "value": "Person",
+              "type": "string"
+            }
+          },
+          "class": "MAContainer",
+          "id": "person",
+          "children": [
+            "name",
+            "age",
+            "active"
+          ]
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "name"
+          },
+          "properties": {
+            "required": {
+              "type": "string",
+              "value": "true"
+            },
+            "label": {
+              "value": "Name",
+              "type": "string"
+            },
+            "priority": {
+              "value": "20",
+              "type": "integer"
+            }
+          },
+          "class": "MAStringDescription",
+          "id": "name"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "age"
+          },
+          "properties": {
+            "max": {
+              "value": "120",
+              "type": "integer"
+            },
+            "priority": {
+              "value": "10",
+              "type": "integer"
+            },
+            "label": {
+              "value": "Age",
+              "type": "string"
+            },
+            "min": {
+              "value": "18",
+              "type": "integer"
+            }
+          },
+          "class": "MANumberDescription",
+          "id": "age"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "active"
+          },
+          "properties": {
+            "label": {
+              "value": "Active",
+              "type": "string"
+            },
+            "default": {
+              "value": true,
+              "type": "boolean"
+            }
+          },
+          "class": "MABooleanDescription",
+          "id": "active"
+        }
+      ],
+      "format": "magritte.graph/1",
+      "objects": [
+        {
+          "description": "person",
+          "id": "ada",
+          "values": {
+            "name": {
+              "value": "Ada",
+              "type": "string"
+            },
+            "age": {
+              "value": "20",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "root": "person"
+    }
+  },
+  {
+    "name": "foreign bound",
+    "graph": {
+      "descriptions": [
+        {
+          "properties": {
+            "label": {
+              "value": "Person",
+              "type": "string"
+            }
+          },
+          "class": "MAContainer",
+          "id": "person",
+          "children": [
+            "name",
+            "age",
+            "active"
+          ]
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "name"
+          },
+          "properties": {
+            "required": {
+              "value": true,
+              "type": "boolean"
+            },
+            "label": {
+              "value": "Name",
+              "type": "string"
+            },
+            "priority": {
+              "value": "20",
+              "type": "integer"
+            },
+            "min": {
+              "type": "integer",
+              "value": "0"
+            }
+          },
+          "class": "MAStringDescription",
+          "id": "name"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "age"
+          },
+          "properties": {
+            "max": {
+              "value": "120",
+              "type": "integer"
+            },
+            "priority": {
+              "value": "10",
+              "type": "integer"
+            },
+            "label": {
+              "value": "Age",
+              "type": "string"
+            },
+            "min": {
+              "value": "18",
+              "type": "integer"
+            }
+          },
+          "class": "MANumberDescription",
+          "id": "age"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "active"
+          },
+          "properties": {
+            "label": {
+              "value": "Active",
+              "type": "string"
+            },
+            "default": {
+              "value": true,
+              "type": "boolean"
+            }
+          },
+          "class": "MABooleanDescription",
+          "id": "active"
+        }
+      ],
+      "format": "magritte.graph/1",
+      "objects": [
+        {
+          "description": "person",
+          "id": "ada",
+          "values": {
+            "name": {
+              "value": "Ada",
+              "type": "string"
+            },
+            "age": {
+              "value": "20",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "root": "person"
+    }
+  },
+  {
+    "name": "dangling child",
+    "graph": {
+      "descriptions": [
+        {
+          "properties": {
+            "label": {
+              "value": "Person",
+              "type": "string"
+            }
+          },
+          "class": "MAContainer",
+          "id": "person",
+          "children": [
+            "name",
+            "age",
+            "active",
+            "missing"
+          ]
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "name"
+          },
+          "properties": {
+            "required": {
+              "value": true,
+              "type": "boolean"
+            },
+            "label": {
+              "value": "Name",
+              "type": "string"
+            },
+            "priority": {
+              "value": "20",
+              "type": "integer"
+            }
+          },
+          "class": "MAStringDescription",
+          "id": "name"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "age"
+          },
+          "properties": {
+            "max": {
+              "value": "120",
+              "type": "integer"
+            },
+            "priority": {
+              "value": "10",
+              "type": "integer"
+            },
+            "label": {
+              "value": "Age",
+              "type": "string"
+            },
+            "min": {
+              "value": "18",
+              "type": "integer"
+            }
+          },
+          "class": "MANumberDescription",
+          "id": "age"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "active"
+          },
+          "properties": {
+            "label": {
+              "value": "Active",
+              "type": "string"
+            },
+            "default": {
+              "value": true,
+              "type": "boolean"
+            }
+          },
+          "class": "MABooleanDescription",
+          "id": "active"
+        }
+      ],
+      "format": "magritte.graph/1",
+      "objects": [
+        {
+          "description": "person",
+          "id": "ada",
+          "values": {
+            "name": {
+              "value": "Ada",
+              "type": "string"
+            },
+            "age": {
+              "value": "20",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "root": "person"
+    }
+  },
+  {
+    "name": "duplicate child",
+    "graph": {
+      "descriptions": [
+        {
+          "properties": {
+            "label": {
+              "value": "Person",
+              "type": "string"
+            }
+          },
+          "class": "MAContainer",
+          "id": "person",
+          "children": [
+            "name",
+            "age",
+            "active",
+            "name"
+          ]
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "name"
+          },
+          "properties": {
+            "required": {
+              "value": true,
+              "type": "boolean"
+            },
+            "label": {
+              "value": "Name",
+              "type": "string"
+            },
+            "priority": {
+              "value": "20",
+              "type": "integer"
+            }
+          },
+          "class": "MAStringDescription",
+          "id": "name"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "age"
+          },
+          "properties": {
+            "max": {
+              "value": "120",
+              "type": "integer"
+            },
+            "priority": {
+              "value": "10",
+              "type": "integer"
+            },
+            "label": {
+              "value": "Age",
+              "type": "string"
+            },
+            "min": {
+              "value": "18",
+              "type": "integer"
+            }
+          },
+          "class": "MANumberDescription",
+          "id": "age"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "active"
+          },
+          "properties": {
+            "label": {
+              "value": "Active",
+              "type": "string"
+            },
+            "default": {
+              "value": true,
+              "type": "boolean"
+            }
+          },
+          "class": "MABooleanDescription",
+          "id": "active"
+        }
+      ],
+      "format": "magritte.graph/1",
+      "objects": [
+        {
+          "description": "person",
+          "id": "ada",
+          "values": {
+            "name": {
+              "value": "Ada",
+              "type": "string"
+            },
+            "age": {
+              "value": "20",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "root": "person"
+    }
+  },
+  {
+    "name": "duplicate identity",
+    "graph": {
+      "descriptions": [
+        {
+          "properties": {
+            "label": {
+              "value": "Person",
+              "type": "string"
+            }
+          },
+          "class": "MAContainer",
+          "id": "person",
+          "children": [
+            "name",
+            "age",
+            "active"
+          ]
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "name"
+          },
+          "properties": {
+            "required": {
+              "value": true,
+              "type": "boolean"
+            },
+            "label": {
+              "value": "Name",
+              "type": "string"
+            },
+            "priority": {
+              "value": "20",
+              "type": "integer"
+            }
+          },
+          "class": "MAStringDescription",
+          "id": "name"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "age"
+          },
+          "properties": {
+            "max": {
+              "value": "120",
+              "type": "integer"
+            },
+            "priority": {
+              "value": "10",
+              "type": "integer"
+            },
+            "label": {
+              "value": "Age",
+              "type": "string"
+            },
+            "min": {
+              "value": "18",
+              "type": "integer"
+            }
+          },
+          "class": "MANumberDescription",
+          "id": "age"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "active"
+          },
+          "properties": {
+            "label": {
+              "value": "Active",
+              "type": "string"
+            },
+            "default": {
+              "value": true,
+              "type": "boolean"
+            }
+          },
+          "class": "MABooleanDescription",
+          "id": "active"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "name"
+          },
+          "properties": {
+            "required": {
+              "value": true,
+              "type": "boolean"
+            },
+            "label": {
+              "value": "Name",
+              "type": "string"
+            },
+            "priority": {
+              "value": "20",
+              "type": "integer"
+            }
+          },
+          "class": "MAStringDescription",
+          "id": "name"
+        }
+      ],
+      "format": "magritte.graph/1",
+      "objects": [
+        {
+          "description": "person",
+          "id": "ada",
+          "values": {
+            "name": {
+              "value": "Ada",
+              "type": "string"
+            },
+            "age": {
+              "value": "20",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "root": "person"
+    }
+  },
+  {
+    "name": "nested container",
+    "graph": {
+      "descriptions": [
+        {
+          "properties": {
+            "label": {
+              "value": "Person",
+              "type": "string"
+            }
+          },
+          "class": "MAContainer",
+          "id": "person",
+          "children": [
+            "name",
+            "age",
+            "active",
+            "person"
+          ]
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "name"
+          },
+          "properties": {
+            "required": {
+              "value": true,
+              "type": "boolean"
+            },
+            "label": {
+              "value": "Name",
+              "type": "string"
+            },
+            "priority": {
+              "value": "20",
+              "type": "integer"
+            }
+          },
+          "class": "MAStringDescription",
+          "id": "name"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "age"
+          },
+          "properties": {
+            "max": {
+              "value": "120",
+              "type": "integer"
+            },
+            "priority": {
+              "value": "10",
+              "type": "integer"
+            },
+            "label": {
+              "value": "Age",
+              "type": "string"
+            },
+            "min": {
+              "value": "18",
+              "type": "integer"
+            }
+          },
+          "class": "MANumberDescription",
+          "id": "age"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "active"
+          },
+          "properties": {
+            "label": {
+              "value": "Active",
+              "type": "string"
+            },
+            "default": {
+              "value": true,
+              "type": "boolean"
+            }
+          },
+          "class": "MABooleanDescription",
+          "id": "active"
+        }
+      ],
+      "format": "magritte.graph/1",
+      "objects": [
+        {
+          "description": "person",
+          "id": "ada",
+          "values": {
+            "name": {
+              "value": "Ada",
+              "type": "string"
+            },
+            "age": {
+              "value": "20",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "root": "person"
+    }
+  },
+  {
+    "name": "unsupported accessor",
+    "graph": {
+      "descriptions": [
+        {
+          "properties": {
+            "label": {
+              "value": "Person",
+              "type": "string"
+            }
+          },
+          "class": "MAContainer",
+          "id": "person",
+          "children": [
+            "name",
+            "age",
+            "active"
+          ]
+        },
+        {
+          "accessor": {
+            "class": "MASelectorAccessor",
+            "key": "name"
+          },
+          "properties": {
+            "required": {
+              "value": true,
+              "type": "boolean"
+            },
+            "label": {
+              "value": "Name",
+              "type": "string"
+            },
+            "priority": {
+              "value": "20",
+              "type": "integer"
+            }
+          },
+          "class": "MAStringDescription",
+          "id": "name"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "age"
+          },
+          "properties": {
+            "max": {
+              "value": "120",
+              "type": "integer"
+            },
+            "priority": {
+              "value": "10",
+              "type": "integer"
+            },
+            "label": {
+              "value": "Age",
+              "type": "string"
+            },
+            "min": {
+              "value": "18",
+              "type": "integer"
+            }
+          },
+          "class": "MANumberDescription",
+          "id": "age"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "active"
+          },
+          "properties": {
+            "label": {
+              "value": "Active",
+              "type": "string"
+            },
+            "default": {
+              "value": true,
+              "type": "boolean"
+            }
+          },
+          "class": "MABooleanDescription",
+          "id": "active"
+        }
+      ],
+      "format": "magritte.graph/1",
+      "objects": [
+        {
+          "description": "person",
+          "id": "ada",
+          "values": {
+            "name": {
+              "value": "Ada",
+              "type": "string"
+            },
+            "age": {
+              "value": "20",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "root": "person"
+    }
+  },
+  {
+    "name": "executable condition",
+    "graph": {
+      "descriptions": [
+        {
+          "properties": {
+            "label": {
+              "value": "Person",
+              "type": "string"
+            }
+          },
+          "class": "MAContainer",
+          "id": "person",
+          "children": [
+            "name",
+            "age",
+            "active"
+          ]
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "name"
+          },
+          "properties": {
+            "required": {
+              "value": true,
+              "type": "boolean"
+            },
+            "label": {
+              "value": "Name",
+              "type": "string"
+            },
+            "priority": {
+              "value": "20",
+              "type": "integer"
+            }
+          },
+          "class": "MAStringDescription",
+          "id": "name",
+          "conditions": [
+            {
+              "block": "true"
+            }
+          ]
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "age"
+          },
+          "properties": {
+            "max": {
+              "value": "120",
+              "type": "integer"
+            },
+            "priority": {
+              "value": "10",
+              "type": "integer"
+            },
+            "label": {
+              "value": "Age",
+              "type": "string"
+            },
+            "min": {
+              "value": "18",
+              "type": "integer"
+            }
+          },
+          "class": "MANumberDescription",
+          "id": "age"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "active"
+          },
+          "properties": {
+            "label": {
+              "value": "Active",
+              "type": "string"
+            },
+            "default": {
+              "value": true,
+              "type": "boolean"
+            }
+          },
+          "class": "MABooleanDescription",
+          "id": "active"
+        }
+      ],
+      "format": "magritte.graph/1",
+      "objects": [
+        {
+          "description": "person",
+          "id": "ada",
+          "values": {
+            "name": {
+              "value": "Ada",
+              "type": "string"
+            },
+            "age": {
+              "value": "20",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "root": "person"
+    }
+  },
+  {
+    "name": "foreign object value",
+    "graph": {
+      "descriptions": [
+        {
+          "properties": {
+            "label": {
+              "value": "Person",
+              "type": "string"
+            }
+          },
+          "class": "MAContainer",
+          "id": "person",
+          "children": [
+            "name",
+            "age",
+            "active"
+          ]
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "name"
+          },
+          "properties": {
+            "required": {
+              "value": true,
+              "type": "boolean"
+            },
+            "label": {
+              "value": "Name",
+              "type": "string"
+            },
+            "priority": {
+              "value": "20",
+              "type": "integer"
+            }
+          },
+          "class": "MAStringDescription",
+          "id": "name"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "age"
+          },
+          "properties": {
+            "max": {
+              "value": "120",
+              "type": "integer"
+            },
+            "priority": {
+              "value": "10",
+              "type": "integer"
+            },
+            "label": {
+              "value": "Age",
+              "type": "string"
+            },
+            "min": {
+              "value": "18",
+              "type": "integer"
+            }
+          },
+          "class": "MANumberDescription",
+          "id": "age"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "active"
+          },
+          "properties": {
+            "label": {
+              "value": "Active",
+              "type": "string"
+            },
+            "default": {
+              "value": true,
+              "type": "boolean"
+            }
+          },
+          "class": "MABooleanDescription",
+          "id": "active"
+        }
+      ],
+      "format": "magritte.graph/1",
+      "objects": [
+        {
+          "description": "person",
+          "id": "ada",
+          "values": {
+            "name": {
+              "value": "Ada",
+              "type": "string"
+            },
+            "age": {
+              "value": "20",
+              "type": "integer"
+            },
+            "missing": {
+              "type": "nil"
+            }
+          }
+        }
+      ],
+      "root": "person"
+    }
+  },
+  {
+    "name": "duplicate object",
+    "graph": {
+      "descriptions": [
+        {
+          "properties": {
+            "label": {
+              "value": "Person",
+              "type": "string"
+            }
+          },
+          "class": "MAContainer",
+          "id": "person",
+          "children": [
+            "name",
+            "age",
+            "active"
+          ]
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "name"
+          },
+          "properties": {
+            "required": {
+              "value": true,
+              "type": "boolean"
+            },
+            "label": {
+              "value": "Name",
+              "type": "string"
+            },
+            "priority": {
+              "value": "20",
+              "type": "integer"
+            }
+          },
+          "class": "MAStringDescription",
+          "id": "name"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "age"
+          },
+          "properties": {
+            "max": {
+              "value": "120",
+              "type": "integer"
+            },
+            "priority": {
+              "value": "10",
+              "type": "integer"
+            },
+            "label": {
+              "value": "Age",
+              "type": "string"
+            },
+            "min": {
+              "value": "18",
+              "type": "integer"
+            }
+          },
+          "class": "MANumberDescription",
+          "id": "age"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "active"
+          },
+          "properties": {
+            "label": {
+              "value": "Active",
+              "type": "string"
+            },
+            "default": {
+              "value": true,
+              "type": "boolean"
+            }
+          },
+          "class": "MABooleanDescription",
+          "id": "active"
+        }
+      ],
+      "format": "magritte.graph/1",
+      "objects": [
+        {
+          "description": "person",
+          "id": "ada",
+          "values": {
+            "name": {
+              "value": "Ada",
+              "type": "string"
+            },
+            "age": {
+              "value": "20",
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "description": "person",
+          "id": "ada",
+          "values": {
+            "name": {
+              "value": "Ada",
+              "type": "string"
+            },
+            "age": {
+              "value": "20",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "root": "person"
+    }
+  },
+  {
+    "name": "dangling object description",
+    "graph": {
+      "descriptions": [
+        {
+          "properties": {
+            "label": {
+              "value": "Person",
+              "type": "string"
+            }
+          },
+          "class": "MAContainer",
+          "id": "person",
+          "children": [
+            "name",
+            "age",
+            "active"
+          ]
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "name"
+          },
+          "properties": {
+            "required": {
+              "value": true,
+              "type": "boolean"
+            },
+            "label": {
+              "value": "Name",
+              "type": "string"
+            },
+            "priority": {
+              "value": "20",
+              "type": "integer"
+            }
+          },
+          "class": "MAStringDescription",
+          "id": "name"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "age"
+          },
+          "properties": {
+            "max": {
+              "value": "120",
+              "type": "integer"
+            },
+            "priority": {
+              "value": "10",
+              "type": "integer"
+            },
+            "label": {
+              "value": "Age",
+              "type": "string"
+            },
+            "min": {
+              "value": "18",
+              "type": "integer"
+            }
+          },
+          "class": "MANumberDescription",
+          "id": "age"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "active"
+          },
+          "properties": {
+            "label": {
+              "value": "Active",
+              "type": "string"
+            },
+            "default": {
+              "value": true,
+              "type": "boolean"
+            }
+          },
+          "class": "MABooleanDescription",
+          "id": "active"
+        }
+      ],
+      "format": "magritte.graph/1",
+      "objects": [
+        {
+          "description": "missing",
+          "id": "ada",
+          "values": {
+            "name": {
+              "value": "Ada",
+              "type": "string"
+            },
+            "age": {
+              "value": "20",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "root": "person"
+    }
+  },
+  {
+    "name": "empty identity",
+    "graph": {
+      "descriptions": [
+        {
+          "properties": {
+            "label": {
+              "value": "Person",
+              "type": "string"
+            }
+          },
+          "class": "MAContainer",
+          "id": "person",
+          "children": [
+            "name",
+            "age",
+            "active"
+          ]
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "name"
+          },
+          "properties": {
+            "required": {
+              "value": true,
+              "type": "boolean"
+            },
+            "label": {
+              "value": "Name",
+              "type": "string"
+            },
+            "priority": {
+              "value": "20",
+              "type": "integer"
+            }
+          },
+          "class": "MAStringDescription",
+          "id": ""
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "age"
+          },
+          "properties": {
+            "max": {
+              "value": "120",
+              "type": "integer"
+            },
+            "priority": {
+              "value": "10",
+              "type": "integer"
+            },
+            "label": {
+              "value": "Age",
+              "type": "string"
+            },
+            "min": {
+              "value": "18",
+              "type": "integer"
+            }
+          },
+          "class": "MANumberDescription",
+          "id": "age"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "active"
+          },
+          "properties": {
+            "label": {
+              "value": "Active",
+              "type": "string"
+            },
+            "default": {
+              "value": true,
+              "type": "boolean"
+            }
+          },
+          "class": "MABooleanDescription",
+          "id": "active"
+        }
+      ],
+      "format": "magritte.graph/1",
+      "objects": [
+        {
+          "description": "person",
+          "id": "ada",
+          "values": {
+            "name": {
+              "value": "Ada",
+              "type": "string"
+            },
+            "age": {
+              "value": "20",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "root": "person"
+    }
+  },
+  {
+    "name": "scalar root",
+    "graph": {
+      "descriptions": [
+        {
+          "properties": {
+            "label": {
+              "value": "Person",
+              "type": "string"
+            }
+          },
+          "class": "MAContainer",
+          "id": "person",
+          "children": [
+            "name",
+            "age",
+            "active"
+          ]
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "name"
+          },
+          "properties": {
+            "required": {
+              "value": true,
+              "type": "boolean"
+            },
+            "label": {
+              "value": "Name",
+              "type": "string"
+            },
+            "priority": {
+              "value": "20",
+              "type": "integer"
+            }
+          },
+          "class": "MAStringDescription",
+          "id": "name"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "age"
+          },
+          "properties": {
+            "max": {
+              "value": "120",
+              "type": "integer"
+            },
+            "priority": {
+              "value": "10",
+              "type": "integer"
+            },
+            "label": {
+              "value": "Age",
+              "type": "string"
+            },
+            "min": {
+              "value": "18",
+              "type": "integer"
+            }
+          },
+          "class": "MANumberDescription",
+          "id": "age"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "active"
+          },
+          "properties": {
+            "label": {
+              "value": "Active",
+              "type": "string"
+            },
+            "default": {
+              "value": true,
+              "type": "boolean"
+            }
+          },
+          "class": "MABooleanDescription",
+          "id": "active"
+        }
+      ],
+      "format": "magritte.graph/1",
+      "objects": [
+        {
+          "description": "person",
+          "id": "ada",
+          "values": {
+            "name": {
+              "value": "Ada",
+              "type": "string"
+            },
+            "age": {
+              "value": "20",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "root": "name"
+    }
+  },
+  {
+    "name": "unknown envelope",
+    "graph": {
+      "descriptions": [
+        {
+          "properties": {
+            "label": {
+              "value": "Person",
+              "type": "string"
+            }
+          },
+          "class": "MAContainer",
+          "id": "person",
+          "children": [
+            "name",
+            "age",
+            "active"
+          ]
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "name"
+          },
+          "properties": {
+            "required": {
+              "value": true,
+              "type": "boolean"
+            },
+            "label": {
+              "value": "Name",
+              "type": "string"
+            },
+            "priority": {
+              "value": "20",
+              "type": "integer"
+            }
+          },
+          "class": "MAStringDescription",
+          "id": "name"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "age"
+          },
+          "properties": {
+            "max": {
+              "value": "120",
+              "type": "integer"
+            },
+            "priority": {
+              "value": "10",
+              "type": "integer"
+            },
+            "label": {
+              "value": "Age",
+              "type": "string"
+            },
+            "min": {
+              "value": "18",
+              "type": "integer"
+            }
+          },
+          "class": "MANumberDescription",
+          "id": "age"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "active"
+          },
+          "properties": {
+            "label": {
+              "value": "Active",
+              "type": "string"
+            },
+            "default": {
+              "value": true,
+              "type": "boolean"
+            }
+          },
+          "class": "MABooleanDescription",
+          "id": "active"
+        }
+      ],
+      "format": "magritte.graph/1",
+      "objects": [
+        {
+          "description": "person",
+          "id": "ada",
+          "values": {
+            "name": {
+              "value": "Ada",
+              "type": "string"
+            },
+            "age": {
+              "value": "20",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "root": "person",
+      "commands": []
+    }
+  },
+  {
+    "name": "noninteger bound",
+    "graph": {
+      "descriptions": [
+        {
+          "properties": {
+            "label": {
+              "value": "Person",
+              "type": "string"
+            }
+          },
+          "class": "MAContainer",
+          "id": "person",
+          "children": [
+            "name",
+            "age",
+            "active"
+          ]
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "name"
+          },
+          "properties": {
+            "required": {
+              "value": true,
+              "type": "boolean"
+            },
+            "label": {
+              "value": "Name",
+              "type": "string"
+            },
+            "priority": {
+              "value": "20",
+              "type": "integer"
+            }
+          },
+          "class": "MAStringDescription",
+          "id": "name"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "age"
+          },
+          "properties": {
+            "max": {
+              "value": "120",
+              "type": "integer"
+            },
+            "priority": {
+              "value": "10",
+              "type": "integer"
+            },
+            "label": {
+              "value": "Age",
+              "type": "string"
+            },
+            "min": {
+              "type": "float",
+              "value": "18.5"
+            }
+          },
+          "class": "MANumberDescription",
+          "id": "age"
+        },
+        {
+          "accessor": {
+            "class": "MADictionaryAccessor",
+            "key": "active"
+          },
+          "properties": {
+            "label": {
+              "value": "Active",
+              "type": "string"
+            },
+            "default": {
+              "value": true,
+              "type": "boolean"
+            }
+          },
+          "class": "MABooleanDescription",
+          "id": "active"
+        }
+      ],
+      "format": "magritte.graph/1",
+      "objects": [
+        {
+          "description": "person",
+          "id": "ada",
+          "values": {
+            "name": {
+              "value": "Ada",
+              "type": "string"
+            },
+            "age": {
+              "value": "20",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "root": "person"
+    }
+  }
+]
