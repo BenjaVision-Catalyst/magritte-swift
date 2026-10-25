@@ -38,6 +38,49 @@
           "value": []
         }
       ]
+    },
+    {
+      "type": "reference",
+      "value": "target"
+    },
+    {
+      "type": "character",
+      "value": "𝄞"
+    },
+    {
+      "type": "ordered",
+      "value": [
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "value": [
+        {
+          "type": "string",
+          "value": "x"
+        },
+        {
+          "type": "string",
+          "value": "y"
+        }
+      ]
+    },
+    {
+      "type": "bag",
+      "value": [
+        {
+          "type": "integer",
+          "value": "1"
+        },
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ]
     }
   ],
   "rejected": [
@@ -87,7 +130,7 @@
     },
     {
       "type": "reference",
-      "value": "missing"
+      "value": ""
     },
     {
       "type": "nil",
@@ -96,6 +139,31 @@
     {
       "type": "array",
       "value": {}
+    },
+    {
+      "type": "set",
+      "value": [
+        {
+          "type": "integer",
+          "value": "1"
+        },
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "type": "character",
+      "value": "é"
+    },
+    {
+      "type": "character",
+      "value": ""
+    },
+    {
+      "type": "dictionary",
+      "value": []
     }
   ]
 }

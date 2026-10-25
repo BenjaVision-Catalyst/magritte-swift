@@ -1,8 +1,8 @@
 # Magritte Swift
 
-An independent Swift Package port of [Magritte](https://github.com/magritte-metamodel/magritte). **0.1 is a tested first core/interchange increment, not a complete Magritte implementation.** No C++ dependency, UI, networking or application-framework integration.
+An independent Swift Package port of [Magritte](https://github.com/magritte-metamodel/magritte). **0.2 includes the scalar and relationship/collection phases; it is not a complete Magritte implementation.** No C++ dependency, UI, networking or application-framework integration.
 
-The headless Magritte library includes ordered/priority containers, a string/Boolean/Int64 scalar subset, runtime adaptive objects, dictionary/local function accessors, validation, common properties, a self-description bootstrap and bounded graph/value interchange.
+The headless Magritte library includes ordered/priority containers, a scalar subset, runtime adaptive objects, native accessors, to-one/to-many/scalar relations, static options, typed collections, cyclic references, validation, a self-description bootstrap and bounded graph/value interchange.
 
 ```sh
 swift test
@@ -34,3 +34,13 @@ let errors = try validate(person, using: person.description)
 Generic code writes values using the newly loaded descriptions; no Person class or per-schema translation is required. Existing application reference objects can instead use NativeModel and Description.nativeRead/nativeWrite closures. NativeModel retains its object. DictionaryModel uses dictionary keys; AdaptiveModel uses stable description IDs. Raw writes do not validate; call validation explicitly when accepting edits. Description implements Model, and descriptionModel() exposes common properties for the same generic reading/editing/validation APIs. Executed examples are in Tests/MagritteTests/ConformanceTests.swift.
 
 Read the [support matrix and phased plan](docs/audit.md), [interchange contract](docs/interchange.md), [shared reference evidence](docs/conformance.md) and [attribution](NOTICE.md). Tests bundle the single authoritative fixture set from magritte-cpp, pinned by revision and SHA-256 in conformance-source.json. Runtime description adoption is explicit; it is not a migration engine. Mutable objects require caller synchronization. Unsupported semantics throw; Int64 does not claim full Magritte number support.
+
+Relationship examples, GT evidence and remaining limits are documented in [relationships.md](docs/relationships.md). For reference-valued validation pass the owning Graph as the resolver context. The graph/2 fixture demonstrates aliases, cycles, options and nested adaptive values without domain-specific native types.
+
+```swift
+let graph = try Graph.decode(relationalJSON)
+let ada = graph.objects["ada"]!
+let target = try graph.resolve(ada.read(using: graph.descriptions["spouse"]!))
+let errors = try validate(ada, using: ada.description, graph: graph)
+let choices = try graph.descriptions["status"]!.allOptions()
+```

@@ -1,6 +1,6 @@
 # Semantic baseline and phased implementation
 
-This is the first core/interchange increment, not a complete Magritte port.
+The scalar and relationship/collection phases are implemented. This is still not a complete Magritte port; see [relationship evidence and boundaries](relationships.md).
 
 The authoritative upstream is [magritte-metamodel/magritte](https://github.com/magritte-metamodel/magritte), revision **d67f318686b7779aed79416db121e257d1191f2e** (2025-04-29). Paths below resolve against that commit. The target is its headless Magritte model, not an application-specific schema system. The graph representation serializes instances of that description hierarchy; there is no second field-schema model.
 
@@ -37,7 +37,8 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | MAContainer insertion order | I, R | reference containerOrder; graph child identities preserved |
 | MAPriorityContainer ascending order | I, R | reference priorityOrder; ties stable in ports, upstream tie policy not claimed |
 | Container add/remove | I | mutate children; no complete Smalltalk collection protocol |
-| Nested containers, union/intersection/copy protocol | N | nested imports explicitly rejected |
+| Nested containers | I, R | identity access for native models; stored child values for adaptive models |
+| union/intersection/copy protocol | N | no complete collection protocol |
 | MAStringDescription | I, R | required empty string remains valid; exact UTF-8 content; no normalization |
 | MABooleanDescription | I, R | false is present; integer zero is not Boolean |
 | MANumberDescription | I, R (integer subset) | inclusive bounds; exact signed 64-bit values |
@@ -45,7 +46,8 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Date/time/duration, symbol, memo/password/token/URL, class/color/icon/file/directory/block/action/table descriptions | N | unsupported class fails import; see complete inventory |
 | Required/optional, custom undefinedValue | I, R | required checks nil; undefined sentinel skips kind/specific/conditions |
 | Explicit defaults | I, R (property only) | raw read returns nil; defaultValue exposes declared default |
-| Lazy defaults/shouldCacheDefault, default copying | N | no automatic substitution or cache |
+| shouldCacheDefault metadata | I | upstream to-many default preserved |
+| Lazy defaults/default copying | N | no automatic substitution or cache |
 | Read-only/hidden validation skip | I, R | flags affect interpreter, raw write still writes |
 | MADictionaryAccessor | I, R | native dictionary missing read returns nil |
 | MAPropertyAccessor semantics for common description properties | I, R (label/required) | Description implements Model; bootstrap describes seven common properties |
@@ -55,13 +57,16 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | MACondition selector/receiver, conjunction and negation objects | N | some have portable meanings, but are not encoded yet |
 | Structured validation errors | I, R (leaf codes) | description identity, code, message; native validator accumulates leaf errors |
 | Upstream nested exception trees/custom error text/validator overrides | N | unknown semantic properties fail import |
-| Label/comment/group/priority/required/readOnly/visible/undefined metadata | I, R (selected properties) | retained, interpreted where stated |
+| Common and relation/option metadata | I, R (selected properties) | ordered/distinct/definitive/sorted/extensible retained; no invented coercion/uniqueness rules |
 | General property dictionary | I (bounded subset) | unknown semantics rejected; metadata: prefix preserves explicitly opaque consumer metadata |
 | Reference identity between description nodes | I | shared child instances survive import/export |
-| Relationship object identity, cycles, to-one/to-many, options | N | reference values/classes rejected, not flattened |
-| Ordered value arrays | I (interchange only) | exact recursive arrays; no relation/collection description validation yet |
-| Visitor traversal | I (generic callback) | bounded traversal; full upstream dispatch hierarchy N |
-| Description/value JSON import/export | I, R (Person) | GT -> both ports -> GT; native fixed-point round trips |
+| Relationship object identity, cycles, to-one/to-many/scalar-to-many | I, R | graph/2 explicit references and class constraints; no automatic validation cascade |
+| Static single/multiple options | I, R | membership/extensibility/prepared lists/identity-safe labels |
+| Dynamic options, grouping, arbitrary renderers/classes | N, X (current wire) | explicit failures; local native class bindings supported separately |
+| Mutable collection-object identity | N, X (current wire) | inline collections are value snapshots; object references retain identity |
+| Array/OrderedCollection/Set/Bag values | I, R | kind/order/multiplicity/equality and relation/option validation; Character bridge for String collections |
+| Visitor traversal | I (generic graph callback) | bounded composition/reference traversal, cycles terminate; full upstream dispatch hierarchy N |
+| Description/value JSON import/export | I, R | graph/1 and graph/2; GT -> both ports -> GT, aliases/cycles/nested objects/collections |
 | MAStringReader/Writer text conversion and other readers/writers | N | graph codec does not claim their semantics |
 | Self-description | I, R (bootstrap subset) | label/comment/group/required/readOnly/visible/priority; self-edit affects validation |
 | Complete self-description, recursive bootstrap of all descriptions/accessors | N | no completeness claim |
@@ -77,12 +82,14 @@ I = implemented; R = executed against the live reference for the stated subset; 
 4. Native validation returns a flat collection of structured leaf errors with English generic messages. Upstream may signal nested resumable exceptions. Codes/description identities, not localized messages or nesting, are the tested contract.
 5. The bootstrap's seven common properties are represented by ordinary descriptions and can be read/written/validated by the same Model/validator APIs. It is a seed for full self-description, not a separately maintained schema language.
 6. Native scalar condition and accessor functions and explicit default functions are local behavior. Export rejects every such function, including on hidden nodes. No closure, VM, RPC or expression-language evaluation is introduced. `defaultFunction` is explicitly evaluated by defaultValue; neither raw reads nor validation evaluates it implicitly. Container-local conditions are currently rejected by model validation.
-7. A finite allowlist of description classes, accessor forms and semantic properties is intentional for this increment. Extending that list requires implementing and testing the semantics. Opaque `metadata:` properties cannot introduce executable behavior.
+7. Graph/2 adds the audited relationship/option hierarchy; identity is independent of a description’s label or shape. Imported class names refer to real supported native equivalents, not schema IDs. See relationships.md for phase evidence and interchange.md for remaining boundaries.
+
+8. A finite allowlist of description classes, accessor forms and semantic properties is intentional for this increment. Extending that list requires implementing and testing the semantics. Opaque `metadata:` properties cannot introduce executable behavior.
 
 ## Phases and exit criteria
 
 1. **Current increment:** audit and provenance, independent native libraries, scalar/adaptive/accessor core, bootstrap, bounded description/value interchange, shared GT-established Person fixture, runtime evolution, and explicit rejection tests. Install/package and test locally; publish precise gaps.
-2. **References and collections:** implement relationship/reference/options hierarchy, identity tables, cyclic object graphs, collection ordering/uniqueness/kind/required rules, nested containers, aliasing and traversal budgets; verify against upstream tests and GT.
+2. **References and collections (delivered for the documented profile):** explicit reference graphs, static relationship/options hierarchy, object IDs/cycles, collection kind/equality/required rules, nested containers and bounded operations are implemented and checked against upstream source and GT. Remaining dynamic/reflective and collection-identity facilities are explicitly tracked in relationships.md, not claimed complete.
 3. **Behavior and scalar completeness:** portable forms of existing MACondition objects (e.g. isInteger selector and conjunction/negation), broader access strategies, exact numeric domains, remaining scalar descriptions, and MAStringReader/Writer behavior. Unsupported arbitrary closures must continue to fail export.
 4. **Editing and meta-model completeness:** straight/cached/checked mementos, original/cache/default rules, conflict behavior, composition/copy semantics, full self-description and bootstrap round trips. Only then assess a complete headless-core claim against the inventory.
 5. **Optional interpreters:** native inspectors/presentation tools in separate targets. No networking, deployment or application-specific integration enters these core libraries.

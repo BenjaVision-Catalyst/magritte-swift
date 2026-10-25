@@ -1,0 +1,579 @@
+{
+	"descriptions" : [
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "chars"
+			},
+			"class" : "MAToManyScalarRelationDescription",
+			"reference" : "stringRef",
+			"id" : "chars",
+			"classes" : [
+				"Character"
+			],
+			"properties" : { }
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "choice"
+			},
+			"class" : "MASingleOptionDescription",
+			"options" : [
+				{
+					"value" : "ada",
+					"type" : "reference"
+				}
+			],
+			"reference" : "person",
+			"id" : "choice",
+			"labels" : [
+				{
+					"value" : {
+						"value" : "ada",
+						"type" : "reference"
+					},
+					"label" : "Ada option"
+				}
+			],
+			"properties" : { }
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "choice"
+			},
+			"class" : "MASingleOptionDescription",
+			"options" : [
+				{
+					"value" : "ada",
+					"type" : "reference"
+				}
+			],
+			"reference" : "person",
+			"id" : "choiceExt",
+			"labels" : [
+				{
+					"value" : {
+						"value" : "ada",
+						"type" : "reference"
+					},
+					"label" : "Ada option"
+				}
+			],
+			"properties" : {
+				"extensible" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "collectionOptions"
+			},
+			"class" : "MASingleOptionDescription",
+			"options" : [
+				{
+					"value" : [
+						{
+							"value" : "1",
+							"type" : "integer"
+						},
+						{
+							"value" : "2",
+							"type" : "integer"
+						}
+					],
+					"type" : "array"
+				},
+				{
+					"value" : [
+						{
+							"value" : "2",
+							"type" : "integer"
+						},
+						{
+							"value" : "1",
+							"type" : "integer"
+						}
+					],
+					"type" : "set"
+				},
+				{
+					"value" : [
+						{
+							"value" : "1",
+							"type" : "integer"
+						},
+						{
+							"value" : "1",
+							"type" : "integer"
+						}
+					],
+					"type" : "bag"
+				}
+			],
+			"reference" : "stringRef",
+			"id" : "collectionOptions",
+			"labels" : [ ],
+			"properties" : { }
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "spouse"
+			},
+			"class" : "MAToOneRelationDescription",
+			"reference" : "person",
+			"id" : "emptyClasses",
+			"classes" : [ ],
+			"properties" : { }
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "friends"
+			},
+			"class" : "MAToManyRelationDescription",
+			"reference" : "person",
+			"id" : "emptyManyClasses",
+			"classes" : [ ],
+			"properties" : {
+				"ordered" : {
+					"value" : true,
+					"type" : "boolean"
+				},
+				"definitive" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "extensibleNumber"
+			},
+			"class" : "MASingleOptionDescription",
+			"options" : [
+				{
+					"value" : "1",
+					"type" : "integer"
+				},
+				{
+					"value" : "-1",
+					"type" : "integer"
+				}
+			],
+			"reference" : "numberRef",
+			"id" : "extensibleNumber",
+			"labels" : [ ],
+			"properties" : {
+				"extensible" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "friends"
+			},
+			"class" : "MAToManyRelationDescription",
+			"reference" : "person",
+			"id" : "friends",
+			"classes" : [
+				"MAAdaptiveModel"
+			],
+			"properties" : {
+				"ordered" : {
+					"value" : true,
+					"type" : "boolean"
+				},
+				"definitive" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "friends"
+			},
+			"class" : "MAToManyRelationDescription",
+			"reference" : "person",
+			"id" : "friendsRequired",
+			"classes" : [
+				"MAAdaptiveModel"
+			],
+			"properties" : {
+				"ordered" : {
+					"value" : true,
+					"type" : "boolean"
+				},
+				"required" : {
+					"value" : true,
+					"type" : "boolean"
+				},
+				"definitive" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		},
+		{
+			"properties" : { },
+			"class" : "MAContainer",
+			"id" : "group",
+			"children" : [
+				"name"
+			]
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "limitedNumber"
+			},
+			"class" : "MASingleOptionDescription",
+			"options" : [
+				{
+					"value" : "1",
+					"type" : "integer"
+				},
+				{
+					"value" : "-1",
+					"type" : "integer"
+				}
+			],
+			"reference" : "numberRef",
+			"id" : "limitedNumber",
+			"labels" : [
+				{
+					"value" : {
+						"value" : "1",
+						"type" : "integer"
+					},
+					"label" : "one"
+				},
+				{
+					"value" : {
+						"value" : "-1",
+						"type" : "integer"
+					},
+					"label" : "minus one"
+				}
+			],
+			"properties" : { }
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "name"
+			},
+			"properties" : {
+				"required" : {
+					"value" : true,
+					"type" : "boolean"
+				},
+				"label" : {
+					"value" : "Name",
+					"type" : "string"
+				}
+			},
+			"class" : "MAStringDescription",
+			"id" : "name"
+		},
+		{
+			"properties" : { },
+			"class" : "MAContainer",
+			"id" : "nested",
+			"children" : [
+				"group"
+			]
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "numberRef"
+			},
+			"properties" : {
+				"min" : {
+					"value" : "0",
+					"type" : "integer"
+				}
+			},
+			"class" : "MANumberDescription",
+			"id" : "numberRef"
+		},
+		{
+			"properties" : {
+				"label" : {
+					"value" : "Person",
+					"type" : "string"
+				}
+			},
+			"class" : "MAContainer",
+			"id" : "person",
+			"children" : [
+				"name",
+				"spouse",
+				"friends",
+				"scores",
+				"tags",
+				"status"
+			]
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "scores"
+			},
+			"class" : "MAToManyScalarRelationDescription",
+			"reference" : "numberRef",
+			"id" : "scores",
+			"classes" : [
+				"Integer"
+			],
+			"properties" : { }
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "scores"
+			},
+			"class" : "MAToManyScalarRelationDescription",
+			"reference" : "numberRef",
+			"id" : "scoresRequired",
+			"classes" : [
+				"Integer"
+			],
+			"properties" : {
+				"required" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "spouse"
+			},
+			"class" : "MAToOneRelationDescription",
+			"reference" : "person",
+			"id" : "spouse",
+			"classes" : [
+				"MAAdaptiveModel"
+			],
+			"properties" : { }
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "status"
+			},
+			"class" : "MASingleOptionDescription",
+			"options" : [
+				{
+					"value" : "b",
+					"type" : "string"
+				},
+				{
+					"value" : "a",
+					"type" : "string"
+				}
+			],
+			"reference" : "stringRef",
+			"id" : "status",
+			"labels" : [ ],
+			"properties" : {
+				"sorted" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "status"
+			},
+			"class" : "MASingleOptionDescription",
+			"options" : [
+				{
+					"value" : "b",
+					"type" : "string"
+				},
+				{
+					"value" : "a",
+					"type" : "string"
+				}
+			],
+			"reference" : "stringRef",
+			"id" : "statusExt",
+			"labels" : [ ],
+			"properties" : {
+				"extensible" : {
+					"value" : true,
+					"type" : "boolean"
+				},
+				"sorted" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "stringRef"
+			},
+			"properties" : { },
+			"class" : "MAStringDescription",
+			"id" : "stringRef"
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "tags"
+			},
+			"class" : "MAMultipleOptionDescription",
+			"options" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				}
+			],
+			"reference" : "stringRef",
+			"id" : "tags",
+			"labels" : [ ],
+			"properties" : {
+				"required" : {
+					"value" : true,
+					"type" : "boolean"
+				},
+				"distinct" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "tags"
+			},
+			"class" : "MAMultipleOptionDescription",
+			"options" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				}
+			],
+			"reference" : "stringRef",
+			"id" : "tagsExt",
+			"labels" : [ ],
+			"properties" : {
+				"required" : {
+					"value" : true,
+					"type" : "boolean"
+				},
+				"distinct" : {
+					"value" : true,
+					"type" : "boolean"
+				},
+				"extensible" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		}
+	],
+	"format" : "magritte.graph/2",
+	"objects" : [
+		{
+			"description" : "person",
+			"id" : "ada",
+			"values" : {
+				"name" : {
+					"value" : "Ada",
+					"type" : "string"
+				},
+				"scores" : {
+					"value" : [
+						{
+							"value" : "-1",
+							"type" : "integer"
+						},
+						{
+							"value" : "2",
+							"type" : "integer"
+						}
+					],
+					"type" : "ordered"
+				},
+				"status" : {
+					"value" : "a",
+					"type" : "string"
+				},
+				"tags" : {
+					"value" : [
+						{
+							"value" : "b",
+							"type" : "string"
+						},
+						{
+							"value" : "a",
+							"type" : "string"
+						}
+					],
+					"type" : "set"
+				},
+				"spouse" : {
+					"value" : "bob",
+					"type" : "reference"
+				},
+				"friends" : {
+					"value" : [
+						{
+							"value" : "bob",
+							"type" : "reference"
+						},
+						{
+							"value" : "bob",
+							"type" : "reference"
+						},
+						{
+							"value" : "ada",
+							"type" : "reference"
+						}
+					],
+					"type" : "array"
+				}
+			}
+		},
+		{
+			"description" : "person",
+			"id" : "bob",
+			"values" : {
+				"spouse" : {
+					"value" : "ada",
+					"type" : "reference"
+				}
+			}
+		}
+	],
+	"root" : "person"
+}

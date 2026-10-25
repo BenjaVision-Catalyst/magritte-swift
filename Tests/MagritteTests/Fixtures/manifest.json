@@ -9,8 +9,15 @@
     "person-v2.json": "376c9ad1ba766ce2bc944c44b85d736bc47d46a5ca29324530479cfc3cfed5d1",
     "reference-replay.json": "b7e9d6aefe8eab2223258786fb9bec348b9786b74480797a1af65c538041d2dc",
     "reference.json": "bb1f0931967c685051231d3d644687213e4b33c237149ec73d873d7948e800f2",
+    "relations-invalid.json": "3e30bbd3d9ca9565231cd6bf30ba3760e869b06ac563cc7a60dd5d8aa8de9ff4",
+    "relations-live-methods.json": "1d1e8a35cf0c5cb222a0118237d12b7f1d6796a513e754f8b02a50fe6d48d88c",
+    "relations-reference-replay.json": "b8d179d388e70cb6790000d68d2c8bc641f6b46e7ed674cdd50b21f3eb5f7ed0",
+    "relations-reference.json": "b410f10ec2528d6d7f249f93b419363bab6cef145df3b08e275ab7da91b57d31",
+    "relations-roundtrip-reference.json": "296f9306805a64d308f8544faeadbc6d8fc637a25dcfcd5f9c712b4bd5fbb3eb",
+    "relations-roundtrip-replay.json": "6f1b29ac516d82db722f1c0785f5d22c1c015198aa4828ecc9359be1a0c3a885",
+    "relations-v2.json": "2d801bbf62db1ddf8317df5d26e01c348d8b2f7c77b8af798966a1f494224db0",
     "roundtrip-reference.json": "11079683a5c37e726a17641eaff15933501e3cdcaf1240b6815cf550519cc929",
     "roundtrip-replay.json": "94587d4c4dbebdda51c26cbf4aec02728d1cf6390205cc7aafd3581fcacf4217",
-    "values.json": "3571971275d4b4a1e3bf41533d79fed062e957d97ed9e5d3d1279496ca1caed7"
+    "values.json": "e466d484df56254e55636d258b8cdb176868f686a5c7b7abcefe17daecc66b7f"
   }
 }

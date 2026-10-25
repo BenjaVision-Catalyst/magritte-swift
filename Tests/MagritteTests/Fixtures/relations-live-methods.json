@@ -1,0 +1,72 @@
+{
+  "captured": "2026-10-26",
+  "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
+  "methods": [
+    {
+      "classSide": false,
+      "methodClassName": "MAOptionDescription",
+      "methodName": "validateOptionKind:",
+      "liveSourceSHA256": "c3c7226771ab609419786d4e63ea1659e1d44cd803ef698ada7965be493a9a95"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAOptionDescription",
+      "methodName": "allOptionsWith:",
+      "liveSourceSHA256": "1727386be1464c4a7bbe668f85d0b79935f28294e8b361e23a97c414e997ee00"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAOptionDescription",
+      "methodName": "labelForOption:",
+      "liveSourceSHA256": "62a728da2d0a76fd50e98e9247c9d33091e604f3450831b138bcc3c3cdbf8b60"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAOptionDescription",
+      "methodName": "optionsAndLabels:",
+      "liveSourceSHA256": "6cf62123fae2cd3d9e2fab04f114517601b0595eecfbf3531dc1a281999bf370"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MASingleOptionDescription",
+      "methodName": "prepareOptions:",
+      "liveSourceSHA256": "a5c7a43430e85a02e312c1acba7746e421ef94b8a9bea3abb412726fc9efd8b1"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAMultipleOptionDescription",
+      "methodName": "validateKind:",
+      "liveSourceSHA256": "fdc657ad5b65e14c515b1be3ea8451c278e76dd7f89083fd40a17d9d1009cd76"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAToOneRelationDescription",
+      "methodName": "validateKind:",
+      "liveSourceSHA256": "37c43781e29a0d124c6fe92f2bf93df059326d37f03893280d700e48e8d19f8c"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAToManyRelationDescription",
+      "methodName": "validateKind:",
+      "liveSourceSHA256": "64c0d6e0c224296e9c57d04951397659fcb066afee654a7c3742c479b44655c4"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAToManyRelationDescription",
+      "methodName": "validateRequired:",
+      "liveSourceSHA256": "133db5f4d48014ea12d77402d45225c625638296a4cff6559869e79133f57a18"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAVisitor",
+      "methodName": "visitReferenceDescription:",
+      "liveSourceSHA256": "902b73f8de4ad478c5c333d114fdfe044bb8bb52f5aca10145c7cefb05c7cb52"
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAValidatorVisitor",
+      "methodName": "visitContainer:",
+      "liveSourceSHA256": "45b87f1f642a8c4dbc0730bd7aea4002fadb076d79f82c323bb2080826d7e6d8"
+    }
+  ]
+}

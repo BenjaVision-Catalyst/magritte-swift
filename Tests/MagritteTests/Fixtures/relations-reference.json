@@ -1,0 +1,2019 @@
+{
+	"optionCases" : [
+		{
+			"description" : "status",
+			"current" : {
+				"type" : "nil"
+			},
+			"allOptions" : {
+				"value" : [
+					{
+						"type" : "nil"
+					},
+					{
+						"value" : "a",
+						"type" : "string"
+					},
+					{
+						"value" : "b",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			},
+			"withCurrent" : {
+				"value" : [
+					{
+						"type" : "nil"
+					},
+					{
+						"value" : "a",
+						"type" : "string"
+					},
+					{
+						"value" : "b",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"description" : "status",
+			"current" : {
+				"value" : "c",
+				"type" : "string"
+			},
+			"allOptions" : {
+				"value" : [
+					{
+						"type" : "nil"
+					},
+					{
+						"value" : "a",
+						"type" : "string"
+					},
+					{
+						"value" : "b",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			},
+			"withCurrent" : {
+				"value" : [
+					{
+						"type" : "nil"
+					},
+					{
+						"value" : "a",
+						"type" : "string"
+					},
+					{
+						"value" : "b",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"description" : "status",
+			"current" : {
+				"value" : "a",
+				"type" : "string"
+			},
+			"allOptions" : {
+				"value" : [
+					{
+						"type" : "nil"
+					},
+					{
+						"value" : "a",
+						"type" : "string"
+					},
+					{
+						"value" : "b",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			},
+			"withCurrent" : {
+				"value" : [
+					{
+						"type" : "nil"
+					},
+					{
+						"value" : "a",
+						"type" : "string"
+					},
+					{
+						"value" : "b",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"description" : "statusExt",
+			"current" : {
+				"type" : "nil"
+			},
+			"allOptions" : {
+				"value" : [
+					{
+						"type" : "nil"
+					},
+					{
+						"value" : "a",
+						"type" : "string"
+					},
+					{
+						"value" : "b",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			},
+			"withCurrent" : {
+				"value" : [
+					{
+						"type" : "nil"
+					},
+					{
+						"value" : "a",
+						"type" : "string"
+					},
+					{
+						"value" : "b",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"description" : "statusExt",
+			"current" : {
+				"value" : "c",
+				"type" : "string"
+			},
+			"allOptions" : {
+				"value" : [
+					{
+						"type" : "nil"
+					},
+					{
+						"value" : "a",
+						"type" : "string"
+					},
+					{
+						"value" : "b",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			},
+			"withCurrent" : {
+				"value" : [
+					{
+						"type" : "nil"
+					},
+					{
+						"value" : "a",
+						"type" : "string"
+					},
+					{
+						"value" : "b",
+						"type" : "string"
+					},
+					{
+						"value" : "c",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"description" : "statusExt",
+			"current" : {
+				"value" : "a",
+				"type" : "string"
+			},
+			"allOptions" : {
+				"value" : [
+					{
+						"type" : "nil"
+					},
+					{
+						"value" : "a",
+						"type" : "string"
+					},
+					{
+						"value" : "b",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			},
+			"withCurrent" : {
+				"value" : [
+					{
+						"type" : "nil"
+					},
+					{
+						"value" : "a",
+						"type" : "string"
+					},
+					{
+						"value" : "b",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"description" : "tags",
+			"current" : {
+				"type" : "nil"
+			},
+			"allOptions" : {
+				"value" : [
+					{
+						"value" : "a",
+						"type" : "string"
+					},
+					{
+						"value" : "b",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			},
+			"withCurrent" : {
+				"value" : [
+					{
+						"value" : "a",
+						"type" : "string"
+					},
+					{
+						"value" : "b",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"description" : "tags",
+			"current" : {
+				"value" : "c",
+				"type" : "string"
+			},
+			"allOptions" : {
+				"value" : [
+					{
+						"value" : "a",
+						"type" : "string"
+					},
+					{
+						"value" : "b",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			},
+			"withCurrent" : {
+				"value" : [
+					{
+						"value" : "a",
+						"type" : "string"
+					},
+					{
+						"value" : "b",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"description" : "tags",
+			"current" : {
+				"value" : "a",
+				"type" : "string"
+			},
+			"allOptions" : {
+				"value" : [
+					{
+						"value" : "a",
+						"type" : "string"
+					},
+					{
+						"value" : "b",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			},
+			"withCurrent" : {
+				"value" : [
+					{
+						"value" : "a",
+						"type" : "string"
+					},
+					{
+						"value" : "b",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"description" : "limitedNumber",
+			"current" : {
+				"type" : "nil"
+			},
+			"allOptions" : {
+				"value" : [
+					{
+						"type" : "nil"
+					},
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "-1",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"withCurrent" : {
+				"value" : [
+					{
+						"type" : "nil"
+					},
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "-1",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"description" : "limitedNumber",
+			"current" : {
+				"value" : "c",
+				"type" : "string"
+			},
+			"allOptions" : {
+				"value" : [
+					{
+						"type" : "nil"
+					},
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "-1",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"withCurrent" : {
+				"value" : [
+					{
+						"type" : "nil"
+					},
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "-1",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"description" : "limitedNumber",
+			"current" : {
+				"value" : "a",
+				"type" : "string"
+			},
+			"allOptions" : {
+				"value" : [
+					{
+						"type" : "nil"
+					},
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "-1",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"withCurrent" : {
+				"value" : [
+					{
+						"type" : "nil"
+					},
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "-1",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			}
+		}
+	],
+	"cases" : [
+		{
+			"description" : "spouse",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "spouse",
+			"input" : {
+				"value" : "ada",
+				"type" : "reference"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "spouse",
+			"input" : {
+				"value" : "bob",
+				"type" : "reference"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "spouse",
+			"input" : {
+				"value" : "Ada",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"description" : "spouse",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "spouse",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"description" : "spouse",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "emptyClasses",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "emptyClasses",
+			"input" : {
+				"value" : "ada",
+				"type" : "reference"
+			},
+			"errors" : [
+				{
+					"description" : "emptyClasses",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "emptyClasses",
+			"input" : {
+				"value" : "bob",
+				"type" : "reference"
+			},
+			"errors" : [
+				{
+					"description" : "emptyClasses",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "emptyClasses",
+			"input" : {
+				"value" : "Ada",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"description" : "emptyClasses",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "emptyClasses",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"description" : "emptyClasses",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "choice",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "choice",
+			"input" : {
+				"value" : "ada",
+				"type" : "reference"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "choice",
+			"input" : {
+				"value" : "bob",
+				"type" : "reference"
+			},
+			"errors" : [
+				{
+					"description" : "choice",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "choice",
+			"input" : {
+				"value" : "Ada",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"description" : "choice",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "choice",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"description" : "choice",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "choiceExt",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "choiceExt",
+			"input" : {
+				"value" : "ada",
+				"type" : "reference"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "choiceExt",
+			"input" : {
+				"value" : "bob",
+				"type" : "reference"
+			},
+			"errors" : [
+				{
+					"description" : "name",
+					"code" : "MARequiredError"
+				},
+				{
+					"description" : "tags",
+					"code" : "MARequiredError"
+				}
+			]
+		},
+		{
+			"description" : "choiceExt",
+			"input" : {
+				"value" : "Ada",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"description" : "choiceExt",
+					"code" : "runtimeError"
+				}
+			]
+		},
+		{
+			"description" : "choiceExt",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"description" : "choiceExt",
+					"code" : "runtimeError"
+				}
+			]
+		},
+		{
+			"description" : "friends",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "friends",
+			"input" : {
+				"value" : [ ],
+				"type" : "array"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "friends",
+			"input" : {
+				"value" : [
+					{
+						"value" : "ada",
+						"type" : "reference"
+					},
+					{
+						"value" : "bob",
+						"type" : "reference"
+					},
+					{
+						"value" : "bob",
+						"type" : "reference"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "friends",
+			"input" : {
+				"value" : [
+					{
+						"value" : "ada",
+						"type" : "reference"
+					},
+					{
+						"value" : "1",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"description" : "friends",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "friends",
+			"input" : {
+				"value" : [
+					{
+						"value" : "bob",
+						"type" : "reference"
+					},
+					{
+						"value" : "ada",
+						"type" : "reference"
+					}
+				],
+				"type" : "set"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "friends",
+			"input" : {
+				"value" : [
+					{
+						"value" : "bob",
+						"type" : "reference"
+					},
+					{
+						"value" : "bob",
+						"type" : "reference"
+					}
+				],
+				"type" : "bag"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "friends",
+			"input" : {
+				"value" : "",
+				"type" : "string"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "friends",
+			"input" : {
+				"value" : "ab",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"description" : "friends",
+					"code" : "MAKindError"
+				},
+				{
+					"description" : "friends",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "friends",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"description" : "friends",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "friendsRequired",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [
+				{
+					"description" : "friendsRequired",
+					"code" : "MARequiredError"
+				}
+			]
+		},
+		{
+			"description" : "friendsRequired",
+			"input" : {
+				"value" : [ ],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"description" : "friendsRequired",
+					"code" : "MARequiredError"
+				}
+			]
+		},
+		{
+			"description" : "friendsRequired",
+			"input" : {
+				"value" : [
+					{
+						"value" : "ada",
+						"type" : "reference"
+					},
+					{
+						"value" : "bob",
+						"type" : "reference"
+					},
+					{
+						"value" : "bob",
+						"type" : "reference"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "friendsRequired",
+			"input" : {
+				"value" : [
+					{
+						"value" : "ada",
+						"type" : "reference"
+					},
+					{
+						"value" : "1",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"description" : "friendsRequired",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "friendsRequired",
+			"input" : {
+				"value" : [
+					{
+						"value" : "bob",
+						"type" : "reference"
+					},
+					{
+						"value" : "ada",
+						"type" : "reference"
+					}
+				],
+				"type" : "set"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "friendsRequired",
+			"input" : {
+				"value" : [
+					{
+						"value" : "bob",
+						"type" : "reference"
+					},
+					{
+						"value" : "bob",
+						"type" : "reference"
+					}
+				],
+				"type" : "bag"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "friendsRequired",
+			"input" : {
+				"value" : "",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"description" : "friendsRequired",
+					"code" : "MARequiredError"
+				}
+			]
+		},
+		{
+			"description" : "friendsRequired",
+			"input" : {
+				"value" : "ab",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"description" : "friendsRequired",
+					"code" : "MAKindError"
+				},
+				{
+					"description" : "friendsRequired",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "friendsRequired",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"description" : "friendsRequired",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "emptyManyClasses",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "emptyManyClasses",
+			"input" : {
+				"value" : [ ],
+				"type" : "array"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "emptyManyClasses",
+			"input" : {
+				"value" : [
+					{
+						"value" : "ada",
+						"type" : "reference"
+					},
+					{
+						"value" : "bob",
+						"type" : "reference"
+					},
+					{
+						"value" : "bob",
+						"type" : "reference"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"description" : "emptyManyClasses",
+					"code" : "MAKindError"
+				},
+				{
+					"description" : "emptyManyClasses",
+					"code" : "MAKindError"
+				},
+				{
+					"description" : "emptyManyClasses",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "emptyManyClasses",
+			"input" : {
+				"value" : [
+					{
+						"value" : "ada",
+						"type" : "reference"
+					},
+					{
+						"value" : "1",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"description" : "emptyManyClasses",
+					"code" : "MAKindError"
+				},
+				{
+					"description" : "emptyManyClasses",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "emptyManyClasses",
+			"input" : {
+				"value" : [
+					{
+						"value" : "bob",
+						"type" : "reference"
+					},
+					{
+						"value" : "ada",
+						"type" : "reference"
+					}
+				],
+				"type" : "set"
+			},
+			"errors" : [
+				{
+					"description" : "emptyManyClasses",
+					"code" : "MAKindError"
+				},
+				{
+					"description" : "emptyManyClasses",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "emptyManyClasses",
+			"input" : {
+				"value" : [
+					{
+						"value" : "bob",
+						"type" : "reference"
+					},
+					{
+						"value" : "bob",
+						"type" : "reference"
+					}
+				],
+				"type" : "bag"
+			},
+			"errors" : [
+				{
+					"description" : "emptyManyClasses",
+					"code" : "MAKindError"
+				},
+				{
+					"description" : "emptyManyClasses",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "emptyManyClasses",
+			"input" : {
+				"value" : "",
+				"type" : "string"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "emptyManyClasses",
+			"input" : {
+				"value" : "ab",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"description" : "emptyManyClasses",
+					"code" : "MAKindError"
+				},
+				{
+					"description" : "emptyManyClasses",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "emptyManyClasses",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"description" : "emptyManyClasses",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "scores",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "scores",
+			"input" : {
+				"value" : [ ],
+				"type" : "array"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "scores",
+			"input" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "-1",
+						"type" : "integer"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "scores",
+			"input" : {
+				"value" : [
+					{
+						"value" : "x",
+						"type" : "string"
+					},
+					{
+						"value" : "1",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"description" : "scores",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "scores",
+			"input" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "ordered"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "scores",
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					},
+					{
+						"value" : "1",
+						"type" : "integer"
+					}
+				],
+				"type" : "set"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "scores",
+			"input" : {
+				"value" : "",
+				"type" : "string"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "scores",
+			"input" : {
+				"value" : "é",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"description" : "scores",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "scores",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"description" : "scores",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "scoresRequired",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [
+				{
+					"description" : "scoresRequired",
+					"code" : "MARequiredError"
+				}
+			]
+		},
+		{
+			"description" : "scoresRequired",
+			"input" : {
+				"value" : [ ],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"description" : "scoresRequired",
+					"code" : "MARequiredError"
+				}
+			]
+		},
+		{
+			"description" : "scoresRequired",
+			"input" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "-1",
+						"type" : "integer"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "scoresRequired",
+			"input" : {
+				"value" : [
+					{
+						"value" : "x",
+						"type" : "string"
+					},
+					{
+						"value" : "1",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"description" : "scoresRequired",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "scoresRequired",
+			"input" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "ordered"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "scoresRequired",
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					},
+					{
+						"value" : "1",
+						"type" : "integer"
+					}
+				],
+				"type" : "set"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "scoresRequired",
+			"input" : {
+				"value" : "",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"description" : "scoresRequired",
+					"code" : "MARequiredError"
+				}
+			]
+		},
+		{
+			"description" : "scoresRequired",
+			"input" : {
+				"value" : "é",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"description" : "scoresRequired",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "scoresRequired",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"description" : "scoresRequired",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "chars",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "chars",
+			"input" : {
+				"value" : [ ],
+				"type" : "array"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "chars",
+			"input" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "-1",
+						"type" : "integer"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"description" : "chars",
+					"code" : "MAKindError"
+				},
+				{
+					"description" : "chars",
+					"code" : "MAKindError"
+				},
+				{
+					"description" : "chars",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "chars",
+			"input" : {
+				"value" : [
+					{
+						"value" : "x",
+						"type" : "string"
+					},
+					{
+						"value" : "1",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"description" : "chars",
+					"code" : "MAKindError"
+				},
+				{
+					"description" : "chars",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "chars",
+			"input" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "ordered"
+			},
+			"errors" : [
+				{
+					"description" : "chars",
+					"code" : "MAKindError"
+				},
+				{
+					"description" : "chars",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "chars",
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					},
+					{
+						"value" : "1",
+						"type" : "integer"
+					}
+				],
+				"type" : "set"
+			},
+			"errors" : [
+				{
+					"description" : "chars",
+					"code" : "MAKindError"
+				},
+				{
+					"description" : "chars",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "chars",
+			"input" : {
+				"value" : "",
+				"type" : "string"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "chars",
+			"input" : {
+				"value" : "é",
+				"type" : "string"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "chars",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"description" : "chars",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "tags",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [
+				{
+					"description" : "tags",
+					"code" : "MARequiredError"
+				}
+			]
+		},
+		{
+			"description" : "tags",
+			"input" : {
+				"value" : [ ],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"description" : "tags",
+					"code" : "MARequiredError"
+				}
+			]
+		},
+		{
+			"description" : "tags",
+			"input" : {
+				"value" : [
+					{
+						"value" : "a",
+						"type" : "string"
+					},
+					{
+						"value" : "a",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "tags",
+			"input" : {
+				"value" : [
+					{
+						"value" : "a",
+						"type" : "string"
+					},
+					{
+						"value" : "x",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"description" : "tags",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "tags",
+			"input" : {
+				"value" : [
+					{
+						"value" : "b",
+						"type" : "string"
+					},
+					{
+						"value" : "a",
+						"type" : "string"
+					}
+				],
+				"type" : "set"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "tags",
+			"input" : {
+				"value" : "ab",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"description" : "tags",
+					"code" : "MAKindError"
+				},
+				{
+					"description" : "tags",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "tags",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"description" : "tags",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "tagsExt",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [
+				{
+					"description" : "tagsExt",
+					"code" : "MARequiredError"
+				}
+			]
+		},
+		{
+			"description" : "tagsExt",
+			"input" : {
+				"value" : [ ],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"description" : "tagsExt",
+					"code" : "MARequiredError"
+				}
+			]
+		},
+		{
+			"description" : "tagsExt",
+			"input" : {
+				"value" : [
+					{
+						"value" : "a",
+						"type" : "string"
+					},
+					{
+						"value" : "a",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "tagsExt",
+			"input" : {
+				"value" : [
+					{
+						"value" : "a",
+						"type" : "string"
+					},
+					{
+						"value" : "x",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "tagsExt",
+			"input" : {
+				"value" : [
+					{
+						"value" : "b",
+						"type" : "string"
+					},
+					{
+						"value" : "a",
+						"type" : "string"
+					}
+				],
+				"type" : "set"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "tagsExt",
+			"input" : {
+				"value" : "ab",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"description" : "stringRef",
+					"code" : "MAKindError"
+				},
+				{
+					"description" : "stringRef",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "tagsExt",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"description" : "tagsExt",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "limitedNumber",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "limitedNumber",
+			"input" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "limitedNumber",
+			"input" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"description" : "limitedNumber",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "limitedNumber",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "limitedNumber",
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"description" : "limitedNumber",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "limitedNumber",
+			"input" : {
+				"value" : "x",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"description" : "limitedNumber",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "extensibleNumber",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "extensibleNumber",
+			"input" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "extensibleNumber",
+			"input" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "extensibleNumber",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "extensibleNumber",
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "extensibleNumber",
+			"input" : {
+				"value" : "x",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"description" : "numberRef",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "collectionOptions",
+			"input" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "collectionOptions",
+			"input" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "ordered"
+			},
+			"errors" : [
+				{
+					"description" : "collectionOptions",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "collectionOptions",
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					},
+					{
+						"value" : "1",
+						"type" : "integer"
+					}
+				],
+				"type" : "set"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "collectionOptions",
+			"input" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "1",
+						"type" : "integer"
+					}
+				],
+				"type" : "bag"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "collectionOptions",
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					},
+					{
+						"value" : "1",
+						"type" : "integer"
+					}
+				],
+				"type" : "bag"
+			},
+			"errors" : [
+				{
+					"description" : "collectionOptions",
+					"code" : "MAKindError"
+				}
+			]
+		},
+		{
+			"description" : "nested",
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "nested",
+			"input" : {
+				"value" : "ada",
+				"type" : "reference"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "nested",
+			"input" : {
+				"value" : "bob",
+				"type" : "reference"
+			},
+			"errors" : [ ]
+		},
+		{
+			"description" : "nested",
+			"input" : {
+				"value" : "text",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"description" : "nested",
+					"code" : "runtimeError"
+				}
+			]
+		}
+	],
+	"labels" : [
+		{
+			"description" : "limitedNumber",
+			"input" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"label" : "one"
+		},
+		{
+			"description" : "choice",
+			"input" : {
+				"value" : "ada",
+				"type" : "reference"
+			},
+			"label" : "Ada option"
+		}
+	]
+}
