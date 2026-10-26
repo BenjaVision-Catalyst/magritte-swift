@@ -1,0 +1,142 @@
+{
+  "captured": "2026-10-26",
+  "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
+  "methods": [
+    {
+      "classSide": false,
+      "methodClassName": "MAPluggableAccessor",
+      "methodName": "canRead:",
+      "liveSourceSHA256": "869da9e3296d72615c0d6d8a19cdfd42c0e52055632b6bdef8b5a284dac10f16",
+      "upstreamSourceSHA256": "869da9e3296d72615c0d6d8a19cdfd42c0e52055632b6bdef8b5a284dac10f16",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAPluggableAccessor",
+      "methodName": "canWrite:",
+      "liveSourceSHA256": "bd73e09230c65ddd78bd648491173ef1c8ad51c3658efe070e64527916029b2f",
+      "upstreamSourceSHA256": "bd73e09230c65ddd78bd648491173ef1c8ad51c3658efe070e64527916029b2f",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAPluggableAccessor",
+      "methodName": "read:",
+      "liveSourceSHA256": "0fa46d7151011a2d97d4a9dbb9132220f1f6370a28f01e470f6c7f21cbb6ebd5",
+      "upstreamSourceSHA256": "0fa46d7151011a2d97d4a9dbb9132220f1f6370a28f01e470f6c7f21cbb6ebd5",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAPluggableAccessor",
+      "methodName": "write:to:",
+      "liveSourceSHA256": "64961df9ffb05d076dd3946fe9a0fbbc004597fcb902b4414c3c320ee9b4e8c9",
+      "upstreamSourceSHA256": "64961df9ffb05d076dd3946fe9a0fbbc004597fcb902b4414c3c320ee9b4e8c9",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAPluggableAccessor",
+      "methodName": "readBlock",
+      "liveSourceSHA256": "c1d495ab7163ac27e1090d612ba7c624fe54b94f15e51da2c8c89461eb1fe35c",
+      "upstreamSourceSHA256": "c1d495ab7163ac27e1090d612ba7c624fe54b94f15e51da2c8c89461eb1fe35c",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAPluggableAccessor",
+      "methodName": "readBlock:",
+      "liveSourceSHA256": "f7df9cfc8aeaaaef8d8e9ad895b8be7c8d9b1f81c270723e1f77a5c92e501fb5",
+      "upstreamSourceSHA256": "f7df9cfc8aeaaaef8d8e9ad895b8be7c8d9b1f81c270723e1f77a5c92e501fb5",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAPluggableAccessor",
+      "methodName": "writeBlock",
+      "liveSourceSHA256": "73364d064f3f42bd4e653ed94970ad6fe4f7ed09fdba861e2f5d7e598e3f6ab4",
+      "upstreamSourceSHA256": "73364d064f3f42bd4e653ed94970ad6fe4f7ed09fdba861e2f5d7e598e3f6ab4",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAPluggableAccessor",
+      "methodName": "writeBlock:",
+      "liveSourceSHA256": "fe85322e2b04644d1a7be4bf1e96bddc748204d47b74deff0c0572ac3ce0e6f2",
+      "upstreamSourceSHA256": "fe85322e2b04644d1a7be4bf1e96bddc748204d47b74deff0c0572ac3ce0e6f2",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAPluggableAccessor",
+      "methodName": "=",
+      "liveSourceSHA256": "8100e2e901f126fde074536e01769bc79726f898e53fdea297b82bc4b18c3338",
+      "upstreamSourceSHA256": "8100e2e901f126fde074536e01769bc79726f898e53fdea297b82bc4b18c3338",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAPluggableAccessor",
+      "methodName": "hash",
+      "liveSourceSHA256": "6040dd10ae5cc28bb6056a992189bf30d62f8443255024c4154e6a8a7691bafa",
+      "upstreamSourceSHA256": "6040dd10ae5cc28bb6056a992189bf30d62f8443255024c4154e6a8a7691bafa",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAObject",
+      "methodName": "postCopy",
+      "liveSourceSHA256": "a75cc403760f7c6ebdd82ceaeb2e92c1fa50d283fcc8852fa64aacc85408135d",
+      "upstreamSourceSHA256": "a75cc403760f7c6ebdd82ceaeb2e92c1fa50d283fcc8852fa64aacc85408135d",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAAccessor",
+      "methodName": "defaultLabelFor:",
+      "liveSourceSHA256": "7bc08a9736017af91eea6cb7d3cc01c8045f14f5d1f7aabedddd5105c6380e81",
+      "upstreamSourceSHA256": "7bc08a9736017af91eea6cb7d3cc01c8045f14f5d1f7aabedddd5105c6380e81",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAAccessor",
+      "methodName": "name",
+      "liveSourceSHA256": "ceb5c5ff3f99e92306c6e5d2c70003d0cabda98ec565e4d7c1e8b39cc87639c9",
+      "upstreamSourceSHA256": "ceb5c5ff3f99e92306c6e5d2c70003d0cabda98ec565e4d7c1e8b39cc87639c9",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": true,
+      "methodClassName": "MAPluggableAccessor",
+      "methodName": "read:write:",
+      "liveSourceSHA256": "2657360577db312b731b16d9a4baa9debe8cd587db28cafde4d3483ea173a3c0",
+      "upstreamSourceSHA256": "2657360577db312b731b16d9a4baa9debe8cd587db28cafde4d3483ea173a3c0",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": true,
+      "methodClassName": "MAPluggableAccessor",
+      "methodName": "isAbstract",
+      "liveSourceSHA256": "ed2d54fe0e865ee698c2c5e4e10fa6ce08fd67ed2b32003557d3ecfa2b299639",
+      "upstreamSourceSHA256": "ed2d54fe0e865ee698c2c5e4e10fa6ce08fd67ed2b32003557d3ecfa2b299639",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MADescription",
+      "methodName": "postCopy",
+      "liveSourceSHA256": "07a6b125e16ec1ec783a1ef4c7450aa5c56de522926a2f72b28ae345875585a9",
+      "upstreamSourceSHA256": "07a6b125e16ec1ec783a1ef4c7450aa5c56de522926a2f72b28ae345875585a9",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAObject",
+      "methodName": "=",
+      "liveSourceSHA256": "2b02f7a74f58370bd398a98aaad8006ee0a43b4357de16774bce2f72e1a52bfb",
+      "upstreamSourceSHA256": "2b02f7a74f58370bd398a98aaad8006ee0a43b4357de16774bce2f72e1a52bfb",
+      "matchesUpstreamIgnoringWhitespace": true
+    }
+  ]
+}

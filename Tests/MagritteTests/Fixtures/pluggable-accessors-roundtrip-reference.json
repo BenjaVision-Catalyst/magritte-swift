@@ -1,0 +1,38 @@
+[
+	{
+		"source" : "/private/tmp/magritte-cpp-pluggable-native.json",
+		"descriptions" : 2,
+		"objects" : 1,
+		"validated" : true,
+		"reads" : [
+			{
+				"text" : "edited",
+				"id" : "sample",
+				"values" : {
+					"field" : {
+						"value" : "edited",
+						"type" : "string"
+					}
+				}
+			}
+		]
+	},
+	{
+		"source" : "/private/tmp/magritte-swift-pluggable-native.json",
+		"descriptions" : 2,
+		"objects" : 1,
+		"validated" : true,
+		"reads" : [
+			{
+				"text" : "edited",
+				"id" : "sample",
+				"values" : {
+					"field" : {
+						"value" : "edited",
+						"type" : "string"
+					}
+				}
+			}
+		]
+	}
+]

@@ -53,9 +53,9 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Read-only/hidden validation skip | I, R | flags affect interpreter, raw write still writes |
 | MADictionaryAccessor | I, R | native dictionary missing read returns nil |
 | Description property/selector accessors | I, R (selected fields) | retained seven-property bootstrap plus class-specific selector metadata graphs |
-| Local pluggable native accessors | I, X | C++ callbacks / Swift closures; native tests; export fails |
+| Local pluggable native accessors | I, R (first-class accessor profile), X (wire) | independent block slots, identity equality/copy, chains/mementos and empty annotated schema; pluggable-accessors.md; direct Description callbacks remain separate |
 | Selector/variable/identity/null/chain strategies | I, R (profile) | graph/3 strategies and explicit host bindings; delegator added in graph/4; other composite protocols N |
-| Accessor canRead/canWrite protocol | I, R (eight represented strategies) | host selector/variable discovery, absent slots, short-circuit/error/side-effect traces; accessor-capabilities.md |
+| Accessor canRead/canWrite protocol | I, R (nine represented strategies) | host selector/variable discovery, absent slots, short-circuit/error/side-effect traces; accessor-capabilities.md |
 | Native local scalar conditions | I, X | executed natively; kind errors skip conditions; nil sentinel skips them |
 | MACondition selector/receiver, conjunction and negation objects | I, R (finite protocol) | labelled bounded graph/3 data; arbitrary messages/blocks and container conditions X |
 | Structured validation errors | I, R (leaf codes) | description identity, code, message; native validator accumulates leaf errors |
@@ -77,7 +77,7 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Self-description | I, R (selected class-specific profile) | fifteen supported classes in reflective profile; staged metadata edits govern subsequent model validation |
 | Recursive description self-description | I, R (selected profile) | lazy bounded sessions; children/reference/name/optionsTextual; three metadata levels and imported-schema edits |
 | MAClassDescription and class-valued metadata | I, R | runtime-registered identities, class/subclass discovery and graph/4; registration.md |
-| Accessor/condition self-description | I, R (selected profile) | eight accessor classes; three conditions have no annotated fields; actual local accessor identity and memento edits |
+| Accessor/condition self-description | I, R (selected profile) | nine accessor classes (pluggable has no annotated fields); three conditions have no annotated fields; actual local accessor identity and memento edits |
 | Memento self-description and finite recursive bootstrap | I, R (profile) | exact represented schema identity; nested editors; 74-node reachable bootstrap and current schema closure; bootstrap.md |
 | Complete hierarchy self-description and arbitrary reflection | N | selected annotations remain explicit; no arbitrary message execution; full class-protocol coverage remains pending |
 | Straight/cached/checked mementos, conflicts/merging | I, R (direct field profile) | 48 scenarios/201 snapshots; raw commit, destructive conflict reset, checked selective push; collection alias gap in editing.md |
@@ -123,3 +123,5 @@ Phase 0.9 implements visitor dispatch for the represented description hierarchy 
 Phase 0.10 implements native `MADynamicOptions` and explicit Options collection/provider results. [dynamic-options.md](dynamic-options.md) records the audit, 25 matching Magritte source fingerprints, actual kernel wrapping behavior, an explicit GT String prefix projection, callback traces and graph/4 snapshot round trips. Grouping, mutable collection identity, accessor capabilities/inferred labels, scalar domains and full cache/interpreter protocols remain open.
 
 Phase 0.11 implements capability discovery for the eight represented accessors and independent absent selector slots. [accessor-capabilities.md](accessor-capabilities.md) records 54 GT cases, 15 matching source fingerprints and accessor-record round trips. Composite/pluggable accessor objects, inferred labels, arbitrary host reflection and the other documented gaps remain open.
+
+Phase 0.12 implements first-class local MAPluggableAccessor behavior, identity-bearing block slots, accessor equality and shallow-copy/composition/editing semantics. [pluggable-accessors.md](pluggable-accessors.md) records 17 matching source fingerprints, actual GT traces and portable graph round trips after explicit accessor replacement. Composite conflicts, inferred labels, arbitrary host reflection, mutable collection identity and the remaining scalar/cache/interpreter protocols remain pending.

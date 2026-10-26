@@ -23,6 +23,9 @@ private final class CompositionWork {
       for (x, y) in zip(a.steps, b.steps) { if try !accessor(x, y, depth + 1) { return false } }
       return true
     }
+    if a.className == "MAPluggableAccessor" {
+      return a.readBlock === b.readBlock && a.writeBlock === b.writeBlock
+    }
     if a.className == "MANullAccessor" {
       return try valueKey(a.uuid) { depth in try self.tick(depth) }
         == valueKey(b.uuid) { depth in try self.tick(depth) }
@@ -90,6 +93,9 @@ private func mergeOwners(_ result: inout DescriptionCopy, _ source: Description,
 private func containerFields(_ d: Description) throws -> [Description] {
   try require(d.isContainer, "Composition operation requires a container")
   return try d.orderedChildren()
+}
+public func accessorEqual(_ a: Accessor, _ b: Accessor, limits: Limits = Limits()) throws -> Bool {
+  try CompositionWork(limits).accessor(a, b, 0)
 }
 public func descriptionEqual(_ a: Description, _ b: Description, limits: Limits = Limits()) throws
   -> Bool

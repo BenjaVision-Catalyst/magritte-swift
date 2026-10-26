@@ -1,0 +1,426 @@
+{
+	"capabilities" : [
+		{
+			"canWrite" : false,
+			"write" : false,
+			"canRead" : false,
+			"calls" : [ ],
+			"model" : "dictionary",
+			"read" : false
+		},
+		{
+			"canWrite" : false,
+			"write" : false,
+			"canRead" : false,
+			"calls" : [ ],
+			"model" : "object",
+			"read" : false
+		},
+		{
+			"canWrite" : false,
+			"write" : false,
+			"canRead" : false,
+			"calls" : [ ],
+			"model" : "nil",
+			"read" : false
+		},
+		{
+			"canWrite" : true,
+			"write" : true,
+			"canRead" : false,
+			"calls" : [ ],
+			"model" : "dictionary",
+			"read" : false
+		},
+		{
+			"canWrite" : true,
+			"write" : true,
+			"canRead" : false,
+			"calls" : [ ],
+			"model" : "object",
+			"read" : false
+		},
+		{
+			"canWrite" : true,
+			"write" : true,
+			"canRead" : false,
+			"calls" : [ ],
+			"model" : "nil",
+			"read" : false
+		},
+		{
+			"canWrite" : false,
+			"write" : false,
+			"canRead" : true,
+			"calls" : [ ],
+			"model" : "dictionary",
+			"read" : true
+		},
+		{
+			"canWrite" : false,
+			"write" : false,
+			"canRead" : true,
+			"calls" : [ ],
+			"model" : "object",
+			"read" : true
+		},
+		{
+			"canWrite" : false,
+			"write" : false,
+			"canRead" : true,
+			"calls" : [ ],
+			"model" : "nil",
+			"read" : true
+		},
+		{
+			"canWrite" : true,
+			"write" : true,
+			"canRead" : true,
+			"calls" : [ ],
+			"model" : "dictionary",
+			"read" : true
+		},
+		{
+			"canWrite" : true,
+			"write" : true,
+			"canRead" : true,
+			"calls" : [ ],
+			"model" : "object",
+			"read" : true
+		},
+		{
+			"canWrite" : true,
+			"write" : true,
+			"canRead" : true,
+			"calls" : [ ],
+			"model" : "nil",
+			"read" : true
+		}
+	],
+	"chains" : [
+		{
+			"value" : {
+				"value" : true,
+				"type" : "boolean"
+			},
+			"calls" : [
+				"head"
+			],
+			"operation" : "canRead",
+			"inner" : {
+				"value" : "start",
+				"type" : "string"
+			}
+		},
+		{
+			"value" : {
+				"value" : true,
+				"type" : "boolean"
+			},
+			"calls" : [
+				"head"
+			],
+			"operation" : "canWrite",
+			"inner" : {
+				"value" : "start",
+				"type" : "string"
+			}
+		},
+		{
+			"value" : {
+				"value" : "start",
+				"type" : "string"
+			},
+			"calls" : [
+				"head",
+				"tailRead"
+			],
+			"operation" : "read",
+			"inner" : {
+				"value" : "start",
+				"type" : "string"
+			}
+		},
+		{
+			"value" : {
+				"type" : "nil"
+			},
+			"calls" : [
+				"head",
+				"tailWrite"
+			],
+			"operation" : "write",
+			"inner" : {
+				"value" : "changed",
+				"type" : "string"
+			}
+		}
+	],
+	"memento" : [
+		{
+			"model" : {
+				"value" : "base",
+				"type" : "string"
+			},
+			"editor" : {
+				"value" : "base",
+				"type" : "string"
+			},
+			"changed" : false
+		},
+		{
+			"model" : {
+				"value" : "base",
+				"type" : "string"
+			},
+			"editor" : {
+				"value" : "edited",
+				"type" : "string"
+			},
+			"changed" : true
+		},
+		{
+			"model" : {
+				"value" : "edited",
+				"type" : "string"
+			},
+			"editor" : {
+				"value" : "edited",
+				"type" : "string"
+			},
+			"changed" : false
+		}
+	],
+	"failures" : {
+		"throwingWrite" : "Error",
+		"missingRead" : "MessageNotUnderstood",
+		"missingWrite" : "MessageNotUnderstood",
+		"throwingRead" : "Error"
+	},
+	"class" : {
+		"superclass" : "MAAccessor",
+		"abstract" : false,
+		"name" : "MAPluggableAccessor",
+		"label" : "Pluggable Accessor"
+	},
+	"readWrites" : [
+		{
+			"input" : {
+				"type" : "nil"
+			},
+			"value" : {
+				"type" : "nil"
+			},
+			"calls" : [
+				[
+					"write",
+					true,
+					{
+						"type" : "nil"
+					}
+				],
+				[
+					"read",
+					true
+				]
+			]
+		},
+		{
+			"input" : {
+				"value" : false,
+				"type" : "boolean"
+			},
+			"value" : {
+				"value" : false,
+				"type" : "boolean"
+			},
+			"calls" : [
+				[
+					"write",
+					true,
+					{
+						"value" : false,
+						"type" : "boolean"
+					}
+				],
+				[
+					"read",
+					true
+				]
+			]
+		},
+		{
+			"input" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"value" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"calls" : [
+				[
+					"write",
+					true,
+					{
+						"value" : "0",
+						"type" : "integer"
+					}
+				],
+				[
+					"read",
+					true
+				]
+			]
+		},
+		{
+			"input" : {
+				"value" : "42",
+				"type" : "integer"
+			},
+			"value" : {
+				"value" : "42",
+				"type" : "integer"
+			},
+			"calls" : [
+				[
+					"write",
+					true,
+					{
+						"value" : "42",
+						"type" : "integer"
+					}
+				],
+				[
+					"read",
+					true
+				]
+			]
+		},
+		{
+			"input" : {
+				"value" : "Ada",
+				"type" : "string"
+			},
+			"value" : {
+				"value" : "Ada",
+				"type" : "string"
+			},
+			"calls" : [
+				[
+					"write",
+					true,
+					{
+						"value" : "Ada",
+						"type" : "string"
+					}
+				],
+				[
+					"read",
+					true
+				]
+			]
+		},
+		{
+			"input" : {
+				"value" : "token",
+				"type" : "symbol"
+			},
+			"value" : {
+				"value" : "token",
+				"type" : "symbol"
+			},
+			"calls" : [
+				[
+					"write",
+					true,
+					{
+						"value" : "token",
+						"type" : "symbol"
+					}
+				],
+				[
+					"read",
+					true
+				]
+			]
+		},
+		{
+			"input" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"value" : {
+				"value" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"calls" : [
+				[
+					"write",
+					true,
+					{
+						"value" : [
+							{
+								"value" : "1",
+								"type" : "integer"
+							},
+							{
+								"value" : "2",
+								"type" : "integer"
+							}
+						],
+						"type" : "array"
+					}
+				],
+				[
+					"read",
+					true
+				]
+			]
+		}
+	],
+	"equality" : [
+		true,
+		true,
+		false,
+		false,
+		false,
+		true,
+		true
+	],
+	"copy" : {
+		"outputs" : [
+			1,
+			2,
+			3,
+			99
+		],
+		"sameWriteBlock" : true,
+		"equalAfterReplacement" : false,
+		"descriptionReadShared" : true,
+		"descriptionEqual" : true,
+		"counter" : 3,
+		"sameReadBlock" : true,
+		"descriptionAccessorDistinct" : true,
+		"distinctAccessor" : true
+	},
+	"metadataFields" : [ ]
+}

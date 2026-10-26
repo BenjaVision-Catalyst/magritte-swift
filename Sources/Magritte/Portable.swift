@@ -28,6 +28,23 @@ public struct PortableCondition {
   }
 }
 public struct Accessor {
+  /// Identity-bearing native closures model Magritte block slots.
+  public final class ReadBlock {
+    private let body: (Model) throws -> Value
+    public init(_ body: @escaping (Model) throws -> Value) { self.body = body }
+    public func callAsFunction(_ model: Model) throws -> Value { try body(model) }
+  }
+  public final class WriteBlock {
+    private let body: (Model, Value) throws -> Void
+    public init(_ body: @escaping (Model, Value) throws -> Void) { self.body = body }
+    public func callAsFunction(_ model: Model, _ value: Value) throws { try body(model, value) }
+  }
+  public var readBlock: ReadBlock?, writeBlock: WriteBlock?
+  public static func pluggable(read: ReadBlock? = nil, write: WriteBlock? = nil) -> Accessor {
+    var result = Accessor(className: "MAPluggableAccessor")
+    result.readBlock = read; result.writeBlock = write
+    return result
+  }
   public var className: String, name: String, writeName: String
   public var uuid: Value = .undefined
   public var steps: [Accessor]
@@ -215,6 +232,15 @@ private func predicate(_ p: Predicate, _ input: Value, _ w: Work, _ depth: Int) 
 }
 private func checkAccessor(_ a: Accessor, _ w: Work, _ depth: Int) throws {
   try w.tick(depth)
+  try require(
+    a.className == "MAPluggableAccessor" || (a.readBlock == nil && a.writeBlock == nil),
+    "Blocks require a pluggable accessor")
+  if a.className == "MAPluggableAccessor" {
+    try require(
+      a.name.isEmpty && a.writeName.isEmpty && a.uuid.isNil && a.steps.isEmpty,
+      "Invalid pluggable accessor shape")
+    return
+  }
   try require(a.className == "MANullAccessor" || a.uuid.isNil, "Unexpected null accessor token")
   _ = try w.key(a.uuid)
   if !a.uuid.isNil {
@@ -253,6 +279,14 @@ private func accessRead(_ a: Accessor, _ model: Model, _ graph: Graph?, _ w: Wor
   throws -> Value
 {
   try w.tick(depth)
+  if a.className == "MAPluggableAccessor" {
+    guard let block = a.readBlock else {
+      throw MagritteError("Pluggable accessor read block is missing")
+    }
+    let result = try block(model)
+    _ = try encodeValue(result, limits: w.limits)
+    return result
+  }
   if a.className == "MANullAccessor" { throw MagritteError("MAReadError: null accessor") }
   if a.className == "MAIdentityAccessor" {
     guard let graph else {
@@ -288,6 +322,14 @@ private func accessWrite(
   _ a: Accessor, _ model: Model, _ value: Value, _ graph: Graph?, _ w: Work, _ depth: Int
 ) throws {
   try w.tick(depth)
+  if a.className == "MAPluggableAccessor" {
+    _ = try encodeValue(value, limits: w.limits)
+    guard let block = a.writeBlock else {
+      throw MagritteError("Pluggable accessor write block is missing")
+    }
+    try block(model, value)
+    return
+  }
   if a.className == "MANullAccessor" || a.className == "MAIdentityAccessor" {
     throw MagritteError("MAWriteError: read-only accessor")
   }
@@ -327,6 +369,9 @@ private func accessCan(
   _ writing: Bool
 ) throws -> Bool {
   try w.tick(depth)
+  if a.className == "MAPluggableAccessor" {
+    return writing ? a.writeBlock != nil : a.readBlock != nil
+  }
   if ["MADictionaryAccessor", "MAPropertyAccessor"].contains(a.className) { return true }
   if a.className == "MANullAccessor" { return false }
   if a.className == "MAIdentityAccessor" { return !writing }
@@ -777,6 +822,9 @@ func predicateValue(_ any: Any, _ limits: Limits, _ depth: Int = 0) throws -> Pr
 }
 func accessorWire(_ a: Accessor, _ limits: Limits, _ depth: Int = 0) throws -> [String: Any] {
   try require(depth <= limits.depth, "Accessor depth limit")
+  try require(
+    a.className != "MAPluggableAccessor",
+    "Pluggable accessor blocks are local and cannot be exported")
   var j: [String: Any] = ["class": a.className]
   switch a.className {
   case "MANullAccessor": j["uuid"] = try wire(a.uuid, limits)
@@ -795,6 +843,7 @@ func accessorValue(_ any: Any, _ limits: Limits, _ depth: Int = 0) throws -> Acc
   try require(depth <= limits.depth, "Accessor depth limit")
   let j = try dictionary(any)
   var a = Accessor(className: try text(j["class"]))
+  try require(a.className != "MAPluggableAccessor", "Pluggable accessor blocks cannot be imported")
   switch a.className {
   case "MANullAccessor":
     try keys(j, ["class", "uuid"])

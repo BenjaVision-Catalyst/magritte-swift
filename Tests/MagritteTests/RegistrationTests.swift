@@ -65,9 +65,10 @@ final class RegistrationTests: XCTestCase {
     let old = try before.describeReflective(relation)
     let previous = try XCTUnwrap(before.resolver.descriptions[old.id + ".classes"]).options
     let definitions = try rows(f["additional"]).map(info)
+    let added = definitions.filter { registry.find($0.name) == nil }.count
     try registry.registerClasses(definitions)
     XCTAssertEqual(projected(registry.allClasses()), f["classes"] as? [String])
-    XCTAssertEqual(try previous.count + definitions.count, registry.allClasses().count)
+    XCTAssertEqual(try previous.count + added, registry.allClasses().count)
     XCTAssertEqual(before.resolver.descriptions[old.id + ".classes"]?.options, previous)
     for q in try rows(f["queries"]) {
       let name = try text(q["class"])

@@ -365,7 +365,9 @@ private final class DescriptionBinding: Model {
     if name == "name" {
       if let value = target.properties["name"] { return value }
       let a = try target.effectiveAccessor
-      if ["MAIdentityAccessor", "MANullAccessor"].contains(a.className) { return .undefined }
+      if ["MAIdentityAccessor", "MANullAccessor", "MAPluggableAccessor"].contains(a.className) {
+        return .undefined
+      }
       return a.className != "MAVariableAccessor" ? .symbol(a.name) : .string(a.name)
     }
     if name == "optionsTextual", target.isOption {

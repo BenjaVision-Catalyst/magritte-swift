@@ -114,6 +114,9 @@ public final class ClassRegistry: @unchecked Sendable {
         name: "MAPasswordDescription", superclass: "MAStringDescription", isAbstract: false,
         label: "Password"),
       ClassInfo(
+        name: "MAPluggableAccessor", superclass: "MAAccessor", isAbstract: false,
+        label: "Pluggable Accessor"),
+      ClassInfo(
         name: "MAPluggableCondition", superclass: "MACondition", isAbstract: false,
         label: "Pluggable Condition"),
       ClassInfo(

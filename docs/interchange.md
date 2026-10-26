@@ -104,3 +104,5 @@ Graph/4 supports memento class identities through the runtime class environment.
 ## Runtime class environment (0.8)
 
 Class values and class constraints resolve existing runtime registrations; imports do not define classes. Applications register the corresponding canonical identities before reading their graphs. The built-in hierarchy is a seed, not an allowlist. Class tags and constraint wire shapes are unchanged, and legacy Value/accessor feature gates remain. Native adaptive instances retain their own MAAdaptiveModel class identity. Registration does not synthesize implementations for unknown description/accessor/interpreter records. See registration.md.
+
+First-class MAPluggableAccessor instances are native-only in 0.12. Import/export rejects them even with absent blocks, through nested accessor records or after accessor-object materialization. Only an explicit replacement with a supported portable accessor permits graph export; [pluggable-accessors.md](pluggable-accessors.md) records the boundary and tested portable result. Class-valued metadata naming the registered class remains ordinary data.
