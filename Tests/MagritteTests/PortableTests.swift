@@ -83,7 +83,7 @@ final class PortableTests: XCTestCase {
     let report = try json("portable-reference")
     for c in try cases(report, "accessors") {
       let d = try XCTUnwrap(g.descriptions[c["description"] as? String ?? ""])
-      let a = d.effectiveAccessor
+      let a = try d.effectiveAccessor
       let encoded = try encodeAccessor(a)
       XCTAssertEqual(try encodeAccessor(decodeAccessor(encoded)), encoded)
       let dictionary = DictionaryModel()

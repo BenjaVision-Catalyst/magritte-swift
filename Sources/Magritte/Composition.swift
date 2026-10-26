@@ -18,7 +18,7 @@ private final class CompositionWork {
     try a.check(limits: limits)
     try b.check(limits: limits)
     if a.className != b.className { return false }
-    if a.className == "MAChainAccessor" {
+    if a.className == "MAChainAccessor" || a.className == "MADelegatorAccessor" {
       if a.steps.count != b.steps.count { return false }
       for (x, y) in zip(a.steps, b.steps) { if try !accessor(x, y, depth + 1) { return false } }
       return true
@@ -124,7 +124,8 @@ public func copyDescription(_ source: Description, newID: String, limits: Limits
     n.conditions = d.conditions
     n.portableConditions = d.portableConditions
     n.accessor = d.accessor
-    n.nativeRead = d.nativeRead
+    if let object = d.accessorObject { n.accessorObject = try AccessorObject.fromAccessor(id: id + ".accessor", object.snapshot(limits: limits), limits: limits); n.accessor = nil }
+      n.nativeRead = d.nativeRead
     n.nativeWrite = d.nativeWrite
     n.defaultFunction = d.defaultFunction
     retained.append(n)
@@ -271,7 +272,7 @@ public func copyRange(_ d: Description, range: Range<Int>, newID: String, limits
 }
 extension Description {
   public func kindOf(_ name: String) -> Bool {
-    name == "Object" || name == "MAObject" || name == "MADescription" || name == className
+    name == "Object" || name == "MABasicObject" || name == "MAObject" || name == "MADescription" || name == className
       || (name == "MAElementDescription" && !isContainer) || (name == "MAContainer" && isContainer)
       || (name == "MAReferenceDescription" && isReference)
       || (name == "MARelationDescription" && isRelation)

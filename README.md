@@ -1,6 +1,6 @@
 # Magritte Swift
 
-An independent Swift Package port of [Magritte](https://github.com/magritte-metamodel/magritte). **0.5 adds recursive description metadata sessions and selective composition/copy semantics; it is not a complete Magritte implementation.** No C++ dependency, UI, networking or application-framework integration.
+An independent Swift Package port of [Magritte](https://github.com/magritte-metamodel/magritte). **0.6 adds class values and accessor/condition self-description; it is not a complete Magritte implementation.** No C++ dependency, UI, networking or application-framework integration.
 
 The headless Magritte library includes ordered/priority containers, a scalar subset, runtime adaptive objects, native accessors, to-one/to-many/scalar relations, static options, typed collections, cyclic references, validation, a self-description bootstrap and bounded graph/value interchange.
 
@@ -50,3 +50,5 @@ The 0.3 phase adds labelled portable MACondition objects, dictionary/property/se
 The 0.4 phase adds editing and metadata editors, including original/cache tracking, conflict reset and selective checked commits. Class-specific self-description covers all fourteen supported classes through ordinary selector accessors. See [editing.md](docs/editing.md) for APIs, GT/upstream evidence, collection snapshot boundaries and remaining metadata gaps. Editing state stays local; committed descriptions and objects use graph/3.
 
 The 0.5 phase recursively describes metadata objects and edits their child/reference links through ordinary mementos. Description equality, concatenation, union/intersection, selective copies, filtering and transformation follow the audited Magritte protocol. See [composition.md](docs/composition.md) for ownership, APIs, GT evidence and profile limits. Generated metadata remains ordinary graph/3 data; local adapters are explicit session state.
+
+The 0.6 phase adds MAClassDescription, a finite class registry, class-valued interpreter/relation metadata and live accessor-object editing. Conditions retain their actual upstream empty annotated schemas. See [reflection.md](docs/reflection.md) for APIs, GT evidence, graph/4 and explicit accessor snapshot boundaries.

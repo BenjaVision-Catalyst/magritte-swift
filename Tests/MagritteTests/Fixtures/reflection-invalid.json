@@ -1,0 +1,64 @@
+[
+  {
+    "kind": "value",
+    "input": {
+      "type": "class",
+      "value": "UnknownClass"
+    }
+  },
+  {
+    "kind": "value",
+    "input": {
+      "type": "class",
+      "value": ""
+    }
+  },
+  {
+    "kind": "value",
+    "input": {
+      "type": "class",
+      "value": 1
+    }
+  },
+  {
+    "kind": "value",
+    "input": {
+      "type": "class",
+      "value": "String",
+      "extra": true
+    }
+  },
+  {
+    "kind": "accessor",
+    "input": {
+      "class": "MADelegatorAccessor"
+    }
+  },
+  {
+    "kind": "accessor",
+    "input": {
+      "class": "MADelegatorAccessor",
+      "next": {
+        "class": "MADictionaryAccessor",
+        "key": "key"
+      },
+      "steps": []
+    }
+  },
+  {
+    "kind": "accessor",
+    "input": {
+      "class": "MADelegatorAccessor",
+      "next": {
+        "class": "MADictionaryAccessor"
+      }
+    }
+  },
+  {
+    "kind": "accessor",
+    "input": {
+      "class": "MADelegatorAccessor",
+      "next": null
+    }
+  }
+]

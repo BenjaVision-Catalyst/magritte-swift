@@ -1,0 +1,14 @@
+[
+	{
+		"source" : "/private/tmp/magritte-cpp-reflection-native.json",
+		"objects" : 1,
+		"validated" : true,
+		"descriptions" : 54
+	},
+	{
+		"source" : "/private/tmp/magritte-swift-reflection-native.json",
+		"objects" : 1,
+		"validated" : true,
+		"descriptions" : 54
+	}
+]

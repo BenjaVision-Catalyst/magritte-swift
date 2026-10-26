@@ -1,6 +1,6 @@
 # Semantic baseline and phased implementation
 
-The scalar, relationship/collection, portable behavior, editing, recursive metadata and composition phases are implemented for the documented profiles. This is still not a complete Magritte port; see [relationship evidence](relationships.md) and [portable behavior evidence and boundaries](portable-behavior.md) and [editing/self-description evidence](editing.md) and [recursive composition evidence](composition.md).
+The scalar, relationship/collection, portable behavior, editing, recursive metadata, composition and class/accessor reflection phases are implemented for the documented profiles. This is still not a complete Magritte port; see [relationship evidence](relationships.md) and [portable behavior evidence and boundaries](portable-behavior.md) and [editing/self-description evidence](editing.md) and [recursive composition evidence](composition.md) and [class/accessor reflection evidence](reflection.md).
 
 The authoritative upstream is [magritte-metamodel/magritte](https://github.com/magritte-metamodel/magritte), revision **d67f318686b7779aed79416db121e257d1191f2e** (2025-04-29). Paths below resolve against that commit. The target is its headless Magritte model, not an application-specific schema system. The graph representation serializes instances of that description hierarchy; there is no second field-schema model.
 
@@ -44,7 +44,7 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | MANumberDescription | I, R (Int64/binary64) | inclusive bounds; finite floats; documented exact mixed-order policy |
 | Fractions, arbitrary precision integers, scaled decimals, full NumberParser grammar | N | explicit rejection; MANumberDescription remains partial |
 | Symbol, Memo, Password and Token descriptions | I, R | graph/3 scalar kinds, masking and token text conversion |
-| Date/time/duration, URL, class/color/icon/file/directory/block/action/table descriptions | N | unsupported class fails import; see complete inventory |
+| Date/time/duration, URL, color/icon/file/directory/block/action/table descriptions | N | unsupported class fails import; see complete inventory |
 | Required/optional, custom undefinedValue | I, R | required checks nil; undefined sentinel skips kind/specific/conditions |
 | Explicit defaults | I, R (property only) | raw read returns nil; defaultValue exposes declared default |
 | shouldCacheDefault | I, R | editing default filtering, including pinned/live difference; see editing.md |
@@ -54,7 +54,7 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | MADictionaryAccessor | I, R | native dictionary missing read returns nil |
 | Description property/selector accessors | I, R (selected fields) | retained seven-property bootstrap plus class-specific selector metadata graphs |
 | Local pluggable native accessors | I, X | C++ callbacks / Swift closures; native tests; export fails |
-| Selector/variable/identity/null/chain strategies | I, R (profile) | graph/3 strategies and explicit host bindings; composite/delegator protocols N |
+| Selector/variable/identity/null/chain strategies | I, R (profile) | graph/3 strategies and explicit host bindings; delegator added in graph/4; other composite protocols N |
 | Native local scalar conditions | I, X | executed natively; kind errors skip conditions; nil sentinel skips them |
 | MACondition selector/receiver, conjunction and negation objects | I, R (finite protocol) | labelled bounded graph/3 data; arbitrary messages/blocks and container conditions X |
 | Structured validation errors | I, R (leaf codes) | description identity, code, message; native validator accumulates leaf errors |
@@ -68,11 +68,13 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Mutable collection-object identity | N, X (current wire) | inline collections are value snapshots; object references retain identity |
 | Array/OrderedCollection/Set/Bag values | I, R | kind/order/multiplicity/equality and relation/option validation; Character bridge for String collections |
 | Visitor traversal | I (generic graph callback) | bounded composition/reference traversal, cycles terminate; full upstream dispatch hierarchy N |
-| Description/value JSON import/export | I, R | graph/1, graph/2 and graph/3; GT -> both ports -> GT, aliases/cycles/nested objects/collections |
+| Description/value JSON import/export | I, R | graph/1–4; GT -> both ports -> GT, aliases/cycles/nested objects/collections |
 | MAStringReader/Writer text conversion | I, R (profile) | scalars/options/tokens; writers also containers/relations; other interpreters N |
-| Self-description | I, R (selected class-specific profile) | all fourteen supported classes; staged metadata edits govern subsequent model validation |
+| Self-description | I, R (selected class-specific profile) | fifteen supported classes in reflective profile; staged metadata edits govern subsequent model validation |
 | Recursive description self-description | I, R (selected profile) | lazy bounded sessions; children/reference/name/optionsTextual; three metadata levels and imported-schema edits |
-| Complete self-description of accessors/conditions/mementos/classes | N | reflection/class-valued properties and full hierarchy bootstrap remain unsupported |
+| MAClassDescription and class-valued metadata | I, R (finite registry) | 61 classes; interpreter options limited to implemented choices; graph/4 |
+| Accessor/condition self-description | I, R (selected profile) | eight accessor classes; three conditions have no annotated fields; actual local accessor identity and memento edits |
+| Complete hierarchy/memento self-description and arbitrary reflection | N | supported annotation selections remain explicit; no class discovery or arbitrary message execution |
 | Straight/cached/checked mementos, conflicts/merging | I, R (direct field profile) | 48 scenarios/201 snapshots; raw commit, destructive conflict reset, checked selective push; collection alias gap in editing.md |
 | Native user interfaces, persistence interpreters | N | headless consumers may be added separately |
 | GemStone/platform adapters | N | deferred |
@@ -94,13 +96,15 @@ I = implemented; R = executed against the live reference for the stated subset; 
 1. **First slice (delivered):** audit and provenance, independent native libraries, scalar/adaptive/accessor core, bootstrap, bounded description/value interchange, shared GT-established Person fixture, runtime evolution, and explicit rejection tests. Install/package and test locally; publish precise gaps.
 2. **References and collections (delivered for the documented profile):** explicit reference graphs, static relationship/options hierarchy, object IDs/cycles, collection kind/equality/required rules, nested containers and bounded operations are implemented and checked against upstream source and GT. Remaining dynamic/reflective and collection-identity facilities are explicitly tracked in relationships.md, not claimed complete.
 3. **Portable behavior (delivered for the documented profile):** finite MACondition objects, broader access strategies, Symbol/Memo/Password/Token descriptions, finite binary64 and MAStringReader/Writer operations. Full numeric/scalar domains remain future work; arbitrary executable behavior continues to fail export.
-4. **Editing (delivered for the documented profile), meta-model completeness (pending):** straight/cached/checked mementos, original/cache/default rules, conflict behavior and selected class-specific metadata editing are implemented and checked against GT/upstream. Selected recursive description metadata and composition/copy semantics are delivered in 0.5. Full mutable collection identity, class reflection and metadata for accessors/conditions/mementos remain future work. Only then assess a complete headless-core claim against the inventory.
+4. **Editing (delivered for the documented profile), meta-model completeness (pending):** straight/cached/checked mementos, original/cache/default rules, conflict behavior and selected class-specific metadata editing are implemented and checked against GT/upstream. Selected recursive description metadata and composition/copy semantics are delivered in 0.5. The 0.6 class/accessor reflection profile is delivered; full mutable collection identity, arbitrary reflection and memento metadata remain future work. Only then assess a complete headless-core claim against the inventory.
 5. **Optional interpreters:** native inspectors/presentation tools in separate targets. No networking, deployment or application-specific integration enters these core libraries.
 
 Each phase needs independently reviewed GT results and shared fixtures, not merely agreement between the two ports. Tests in this increment are newly written behavioral tests; upstream test source was not copied.
 
-Phase 0.3 adds Symbol, Memo, Password and Token descriptions and finite binary64, with text conversion and portable condition/accessor forms checked against live GT. Arbitrary integers/rationals/scaled decimals and date/time/color/URL/file/class descriptions remain N. Read portable-behavior.md for the two explicit GT/pinned-source or VM-dependent numeric policies; no complete scalar-domain claim is made.
+Phase 0.3 adds Symbol, Memo, Password and Token descriptions and finite binary64, with text conversion and portable condition/accessor forms checked against live GT. Arbitrary integers/rationals/scaled decimals and date/time/color/URL/file descriptions remain N (Class is added in 0.6). Read portable-behavior.md for the two explicit GT/pinned-source or VM-dependent numeric policies; no complete scalar-domain claim is made.
 
 Phase 0.4 adds the bounded editing and class-specific self-description profiles. The eight shouldWrite matrix differences from installed GT intentionally follow the pinned upstream symmetric rule; mutable collection alias behavior remains unsupported. editing.md records both boundaries and the live evidence.
 
 Phase 0.5 implements recursive description metadata sessions and selective composition/copy semantics for the current hierarchy. composition.md records the live GT evidence, supported annotation selection and explicit label/class-list/SortedCollection projections. This is not a complete reflective metamodel or graph deep-clone claim.
+
+Phase 0.6 implements MAClassDescription, finite class values and class-valued relation/interpreter metadata, plus live accessor-object editing and faithful condition self-description. reflection.md records the 26 source matches, GT schema/getter/editing evidence, graph/4 round trips and explicit identity/registry limits.

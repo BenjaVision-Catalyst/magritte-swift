@@ -3,7 +3,7 @@ import CoreFoundation
 
 public indirect enum Value: Equatable {
     case undefined, boolean(Bool), integer(Int64), string(String), array([Value])
-    case reference(String), character(String), collection(kind: String, elements: [Value]), symbol(String), float(Double)
+    case reference(String), character(String), collection(kind: String, elements: [Value]), symbol(String), float(Double), classValue(String)
     public var isNil: Bool { if case .undefined = self { return true }; return false }
     public static func == (lhs: Value, rhs: Value) -> Bool {
         do { return try valueKey(lhs, tick: { _ in }) == valueKey(rhs, tick: { _ in }) }
@@ -73,7 +73,9 @@ public final class Description: Model {
     public var conditions: [Condition] = []
     public var portableConditions: [PortableCondition] = []
     public var accessor: Accessor?
-    public var effectiveAccessor: Accessor { accessor ?? Accessor(className: isContainer ? "MAIdentityAccessor" : "MADictionaryAccessor", name: key) }
+    public var accessorObject: AccessorObject?
+    public var effectiveAccessor: Accessor { get throws { if let accessorObject { return try accessorObject.snapshot() }; return accessor ?? Accessor(className: isContainer ? "MAIdentityAccessor" : "MADictionaryAccessor", name: key) } }
+    public func materializeAccessor(limits: Limits = Limits()) throws { if let object = accessorObject { let value = try object.snapshot(limits: limits); accessor = isContainer && value.className == "MAIdentityAccessor" ? nil : value; accessorObject = nil } }
     public var nativeRead: ((AnyObject) throws -> Value)?
     public var nativeWrite: ((AnyObject, Value) throws -> Void)?
     public var defaultFunction: (() throws -> Value)?
@@ -84,6 +86,9 @@ public final class Description: Model {
     public func property(_ name: String) -> Value {
         if let v = properties[name] { return v }
         switch name {
+        case "stringReader": return .classValue("MAStringReader")
+        case "stringWriter": return .classValue("MAStringWriter")
+        case "validator": return .classValue("MAValidatorVisitor")
         case "separators": return .string(" ,;\r\n\t")
         case "thousandsSeparator": return .character(",")
         case "lineCount": return .integer(3)
@@ -96,7 +101,7 @@ public final class Description: Model {
         case "shouldCacheDefault": return .boolean(isRelation && isMultiple)
         case "priority": return .integer(0)
         case "undefined": return .string("")
-        case "label": return .string(accessor?.name ?? key)
+        case "label": return .string(accessorObject?.value.name ?? accessor?.name ?? key)
         default: return .undefined
         }
     }
@@ -118,8 +123,8 @@ public final class Description: Model {
         let ranked = try children.enumerated().map { ($0.offset, $0.element, try $0.element.priority()) }
         return ranked.sorted { $0.2 == $1.2 ? $0.0 < $1.0 : $0.2 < $1.2 }.map { $0.1 }
     }
-    public func read(using description: Description) throws -> Value { if let a = description.accessor { return try a.read(self) }; return property(description.key) }
-    public func write(_ value: Value, using description: Description) throws { if let a = description.accessor { try a.write(value, to: self) } else { properties[description.key] = value } }
+    public func read(using description: Description) throws -> Value { if description.accessor != nil || description.accessorObject != nil { return try description.effectiveAccessor.read(self) }; return property(description.key) }
+    public func write(_ value: Value, using description: Description) throws { if description.accessor != nil || description.accessorObject != nil { try description.effectiveAccessor.write(value, to: self) } else { properties[description.key] = value } }
 }
 public final class AdaptiveModel: Model {
     public var usesStoredContainerValues: Bool { true }
@@ -162,7 +167,7 @@ func require(_ condition: Bool, _ message: String) throws {
     if !condition { throw MagritteError(message) }
 }
 func supported(_ d: Description) throws {
-    try require(["MAContainer", "MAPriorityContainer", "MAStringDescription", "MASymbolDescription", "MAMemoDescription", "MAPasswordDescription", "MATokenDescription", "MANumberDescription", "MABooleanDescription", "MAToOneRelationDescription", "MAToManyRelationDescription", "MAToManyScalarRelationDescription", "MASingleOptionDescription", "MAMultipleOptionDescription"].contains(d.className), "Unsupported description class: \(d.className)")
+    try require(["MAContainer", "MAPriorityContainer", "MAStringDescription", "MASymbolDescription", "MAMemoDescription", "MAPasswordDescription", "MATokenDescription", "MANumberDescription", "MABooleanDescription", "MAToOneRelationDescription", "MAToManyRelationDescription", "MAToManyScalarRelationDescription", "MASingleOptionDescription", "MAMultipleOptionDescription", "MAClassDescription"].contains(d.className), "Unsupported description class: \(d.className)")
     for (k, v) in d.properties {
         switch k {
         case "required", "readOnly", "visible", "ordered", "distinct", "definitive", "sorted", "extensible", "shouldCacheDefault":
@@ -184,6 +189,9 @@ func supported(_ d: Description) throws {
             if case .float(let n) = v { try require(n.isFinite, "Non-finite numeric bound") }
         case "label", "comment", "group", "undefined":
             if !v.isNil, case .string = v {} else if !v.isNil { throw MagritteError("Expected text property: \(k)") }
+        case "stringReader", "stringWriter", "validator":
+            let expected = k == "stringReader" ? "MAStringReader" : k == "stringWriter" ? "MAStringWriter" : "MAValidatorVisitor"
+            try require(v == .classValue(expected), "Unsupported interpreter class override")
         case "name":
             switch v { case .undefined, .string, .symbol: break; default: throw MagritteError("Expected description name") }
         case "default", "undefinedValue": break
@@ -320,6 +328,8 @@ func value(_ any: Any, _ limits: Limits, _ depth: Int = 0) throws -> Value {
     guard let v = d["value"] else { throw MagritteError("Missing value") }
     switch type {
     case "string": return .string(try text(v))
+    case "class":
+        let name = try identity(v); try require(knownClass(name), "Unknown portable class"); return .classValue(name)
     case "symbol": return .symbol(try text(v))
     case "float": return .float(try floatFromBits(text(v)))
     case "reference": return .reference(try identity(v))
@@ -356,6 +366,7 @@ func wire(_ v: Value, _ limits: Limits, _ depth: Int = 0) throws -> [String: Any
     case .integer(let i): return ["type": "integer", "value": String(i)]
     case .string(let s): return ["type": "string", "value": s]
     case .symbol(let s): return ["type": "symbol", "value": s]
+    case .classValue(let name): try require(knownClass(name), "Unknown portable class"); return ["type": "class", "value": name]
     case .float(let n): return ["type": "float", "value": try floatBits(n)]
     case .reference(let id): return ["type": "reference", "value": try identity(id)]
     case .character(let s):
@@ -388,7 +399,15 @@ public final class Graph {
         let j = try dictionary(parse(data, limits))
         try keys(j, ["format", "root", "descriptions", "objects"])
         let format = try text(j["format"])
-        try require(["magritte.graph/1", "magritte.graph/2", "magritte.graph/3"].contains(format), "Unsupported format")
+        try require(["magritte.graph/1", "magritte.graph/2", "magritte.graph/3", "magritte.graph/4"].contains(format), "Unsupported format")
+        if format != "magritte.graph/4" {
+            func legacy(_ node: Any) throws {
+                if let object = node as? [String: Any] {
+                    try require((object["type"] as? String) != "class" && (object["class"] as? String) != "MADelegatorAccessor", "Class values and delegators require graph/4")
+                    for value in object.values { try legacy(value) }
+                } else if let array = node as? [Any] { for value in array { try legacy(value) } }
+            }; try legacy(j)
+        }
         let g = Graph(root: try identity(j["root"])); g.format = format
         let nodes = try list(j["descriptions"])
         try require(nodes.count <= limits.nodes, "Description node limit")
@@ -399,18 +418,19 @@ public final class Graph {
             if d.isRelation { names.formUnion(["reference", "classes"]) }
             if d.isOption { names.formUnion(["reference", "options", "labels"]) }
             if d.className == "MATokenDescription" { names.insert("reference") }
-            if format == "magritte.graph/3" { names.insert("conditions") }
+            if format >= "magritte.graph/3" { names.insert("conditions") }
             try keys(n, names)
+            try require(format == "magritte.graph/4" || d.className != "MAClassDescription", "Class descriptions require graph/4")
             try require(format != "magritte.graph/1" || !d.isReference, "Reference descriptions require graph/2")
             guard let props = n["properties"] else { throw MagritteError("Missing properties") }
             for (k, v) in try dictionary(props) { _ = try identity(k); d.properties[k] = try value(v, limits) }
             if !d.isContainer {
                 guard let accessor = n["accessor"] else { throw MagritteError("Missing accessor") }
                 let a = try accessorValue(accessor, limits)
-                try require(format == "magritte.graph/3" || a.className == "MADictionaryAccessor", "Accessor requires graph/3")
+                try require(format >= "magritte.graph/3" || a.className == "MADictionaryAccessor", "Accessor requires graph/3")
                 if a.className == "MADictionaryAccessor" { d.key = a.name } else { d.accessor = a }
             }
-            if format == "magritte.graph/3" {
+            if format >= "magritte.graph/3" {
                 for c in try list(n["conditions"]) {
                     let entry = try dictionary(c); try keys(entry, ["label", "predicate"])
                     guard let p = entry["predicate"] else { throw MagritteError("Missing predicate") }
@@ -458,7 +478,7 @@ public final class Graph {
                 var unique = Set<String>()
                 for c in try list(n["classes"]) {
                     let cls = try identity(c)
-                    try require((format == "magritte.graph/3" || (cls != "Symbol" && cls != "Float" && (!cls.hasPrefix("MA") || cls == "MABasicObject" || cls == "MAAdaptiveModel"))) && kinds.contains(cls) && unique.insert(cls).inserted, "Unsupported or duplicate class constraint")
+                    try require((format >= "magritte.graph/3" || (cls != "Symbol" && cls != "Float" && (!cls.hasPrefix("MA") || cls == "MABasicObject" || cls == "MAAdaptiveModel"))) && (kinds.contains(cls) || (format == "magritte.graph/4" && knownClass(cls))) && unique.insert(cls).inserted, "Unsupported or duplicate class constraint")
                     d.classes.append(cls)
                 }
             }
@@ -520,7 +540,8 @@ public final class Graph {
             switch v {
             case .reference:
                 try require(format != "magritte.graph/1", "Object references require graph/2"); _ = try g.resolve(v)
-            case .symbol, .float: try require(format == "magritte.graph/3", "Symbol/Float requires graph/3")
+            case .classValue: try require(format == "magritte.graph/4", "Class values require graph/4")
+            case .symbol, .float: try require(format >= "magritte.graph/3", "Symbol/Float requires graph/3")
             case .character: try require(format != "magritte.graph/1", "Characters require graph/2")
             case .collection(_, let a):
                 try require(format != "magritte.graph/1", "Typed collections require graph/2")
@@ -545,11 +566,12 @@ public final class Graph {
         for id in descriptions.keys.sorted() {
             guard let d = descriptions[id] else { throw MagritteError("Missing description") }
             try require(id == d.id, "Inconsistent description identity"); try supported(d); try checkPortableDescription(d, limits: limits, work: &portableWork)
+            try require(d.accessorObject == nil, "Live accessor identity is local; materialize an explicit snapshot before export")
             try require(d.conditions.isEmpty && d.nativeRead == nil && d.nativeWrite == nil && d.defaultFunction == nil, "Local executable behavior is not portable")
             var props: [String: Any] = [:]
             for (k, v) in d.properties { props[k] = try wire(v, limits) }
             var n: [String: Any] = ["id": d.id, "class": d.className, "properties": props]
-            if format == "magritte.graph/3" {
+            if format >= "magritte.graph/3" {
                 n["conditions"] = try d.portableConditions.map { ["label": $0.label, "predicate": try predicateWire($0.predicate, limits)] as [String: Any] }
             } else { try require(d.portableConditions.isEmpty, "Conditions require graph/3") }
             if d.isContainer {

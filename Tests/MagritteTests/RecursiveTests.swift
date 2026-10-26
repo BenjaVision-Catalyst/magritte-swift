@@ -149,8 +149,8 @@ final class RecursiveTests: XCTestCase {
     try editor.commit()
     let structure = try CheckedMemento(
       model: context.bind(first), description: second, graph: context.resolver)
-    let remaining = first.children.filter {
-      !["comment", "max"].contains($0.effectiveAccessor.name)
+    let remaining = try first.children.filter {
+      try !["comment", "max"].contains($0.effectiveAccessor.name)
     }
     try structure.write(
       .collection(kind: "ordered", elements: remaining.map { .reference($0.id) }),
@@ -191,7 +191,7 @@ final class RecursiveTests: XCTestCase {
     let option = try XCTUnwrap(graph?.descriptions["option"])
     let num = try XCTUnwrap(graph?.descriptions["num"])
     let left = try XCTUnwrap(graph?.descriptions["left"])
-    option.accessor = option.effectiveAccessor
+    option.accessor = try option.effectiveAccessor
     let copy = try copyDescription(option, newID: "copy")
     XCTAssertFalse(copy.root === option)
     XCTAssertFalse(try copy.root.referenceDescription() === num)
@@ -199,7 +199,7 @@ final class RecursiveTests: XCTestCase {
     XCTAssertEqual(num.property("min"), .integer(1))
     XCTAssertNotNil(copy.root.accessor)
     copy.root.accessor?.name = "changed"
-    XCTAssertEqual(option.effectiveAccessor.name, "option")
+    XCTAssertEqual(try option.effectiveAccessor.name, "option")
     copy.root.options.append(.integer(3))
     XCTAssertEqual(option.options.count, 2)
     let container = try copyDescription(left, newID: "container.copy")

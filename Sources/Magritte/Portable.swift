@@ -120,7 +120,7 @@ private func checkPredicate(_ p: Predicate, _ w: Work, _ depth: Int) throws {
 func checkPortableDescription(_ d: Description, limits: Limits, work: inout Int) throws {
   let w = Work(limits, work)
   try w.tick(0)
-  if let accessor = d.accessor { try checkAccessor(accessor, w, 0) }
+  if d.accessorObject != nil { try checkAccessor(d.effectiveAccessor, w, 0) } else if let accessor = d.accessor { try checkAccessor(accessor, w, 0) }
   for c in d.portableConditions { try checkPredicate(c.predicate, w, 0) }
   work = w.count
 }
@@ -214,6 +214,9 @@ private func checkAccessor(_ a: Accessor, _ w: Work, _ depth: Int) throws {
       }
     }
   }
+  if a.className == "MADelegatorAccessor" {
+    try require(a.steps.count == 1 && a.name.isEmpty && a.writeName.isEmpty, "Invalid delegator accessor"); try checkAccessor(a.steps[0], w, depth + 1); return
+  }
   if a.className == "MAChainAccessor" {
     try require(
       a.steps.count >= 2 && a.name.isEmpty && a.writeName.isEmpty, "Invalid chain accessor")
@@ -252,6 +255,7 @@ private func accessRead(_ a: Accessor, _ model: Model, _ graph: Graph?, _ w: Wor
     }
     throw MagritteError("Identity target is unregistered")
   }
+  if a.className == "MADelegatorAccessor" { return try accessRead(a.steps[0], model, graph, w, depth + 1) }
   if a.className != "MAChainAccessor" {
     return try model.readSlot(strategy: a.className, name: a.name)
   }
@@ -273,6 +277,7 @@ private func accessWrite(
   if a.className == "MANullAccessor" || a.className == "MAIdentityAccessor" {
     throw MagritteError("MAWriteError: read-only accessor")
   }
+  if a.className == "MADelegatorAccessor" { try accessWrite(a.steps[0], model, value, graph, w, depth + 1); return }
   if a.className != "MAChainAccessor" {
     try model.writeSlot(
       strategy: a.className, name: a.className == "MASelectorAccessor" ? a.writeName : a.name,
@@ -312,6 +317,10 @@ extension Description {
     if strategy == "MASelectorAccessor" {
       try require(name.hasSuffix(":"), "Description setter requires a keyword selector")
       let key = String(name.dropLast()); try require(metadataSelector(self, key, writing: true), "Unsupported description setter")
+      if ["stringReader", "stringWriter", "validator"].contains(key) {
+        let expected = key == "stringReader" ? "MAStringReader" : key == "stringWriter" ? "MAStringWriter" : "MAValidatorVisitor"
+        try require(value == .classValue(expected), "Unsupported interpreter class")
+      }
       if key == "default" { defaultFunction = nil }; properties[key] = value; return
     }
     try require(strategy == "MAPropertyAccessor", "Description slot requires property accessor")
@@ -537,8 +546,8 @@ private func writeModel(_ d: Description, _ model: Model, _ graph: Graph?, _ w: 
     if !first { result += "-" }
     first = false
     if try !child.flag("visible") { continue }
-    if child.isContainer && !model.usesStoredContainerValues && child.nativeRead == nil
-      && (child.accessor == nil || child.accessor?.className == "MAIdentityAccessor")
+    if try child.isContainer && !model.usesStoredContainerValues && child.nativeRead == nil
+      && ((child.accessor == nil && child.accessorObject == nil) || child.effectiveAccessor.className == "MAIdentityAccessor")
     {
       result += try writeModel(child, model, graph, w, depth + 1)
     } else {
@@ -558,6 +567,8 @@ private func write(
   } else if d.isContainer {
     guard let graph else { throw MagritteError("Container writer requires graph resolver") }
     result = try writeModel(d, graph.resolve(value), graph, w, depth + 1)
+  } else if d.className == "MAClassDescription" {
+    guard case .classValue(let name) = value, knownClass(name) else { throw MagritteError("Class writer requires a portable Class") }; result = name
   } else if d.className == "MABooleanDescription" {
     guard case .boolean(let b) = value else {
       throw MagritteError("Boolean writer requires Boolean")
@@ -619,6 +630,7 @@ private func write(
     case .string(let s), .symbol(let s), .character(let s): result = s
     case .integer(let i): result = String(i)
     case .float(let n): result = try floatText(n)
+    case .classValue(let name): try require(knownClass(name), "Unknown portable class"); result = name
     case .boolean(let b): result = b ? "true" : "false"
     default: throw MagritteError("Unsupported display string")
     }
@@ -702,6 +714,7 @@ func accessorWire(_ a: Accessor, _ limits: Limits, _ depth: Int = 0) throws -> [
   var j: [String: Any] = ["class": a.className]
   switch a.className {
   case "MANullAccessor": j["uuid"] = try wire(a.uuid, limits)
+  case "MADelegatorAccessor": j["next"] = try accessorWire(a.steps[0], limits, depth + 1)
   case "MAChainAccessor": j["steps"] = try a.steps.map { try accessorWire($0, limits, depth + 1) }
   case "MASelectorAccessor":
     j["readSelector"] = a.name
@@ -721,6 +734,8 @@ func accessorValue(_ any: Any, _ limits: Limits, _ depth: Int = 0) throws -> Acc
     try keys(j, ["class", "uuid"])
     guard let v = j["uuid"] else { throw MagritteError("Missing null token") }
     a.uuid = try value(v, limits)
+  case "MADelegatorAccessor":
+    try keys(j, ["class", "next"]); a.steps = [try accessorValue(j["next"] as Any, limits, depth + 1)]
   case "MAChainAccessor":
     try keys(j, ["class", "steps"])
     a.steps = try list(j["steps"]).map { try accessorValue($0, limits, depth + 1) }
@@ -768,6 +783,7 @@ func displayString(_ value: Value) throws -> String {
   case .string(let s), .symbol(let s), .character(let s): return s
   case .integer(let i): return String(i)
   case .float(let n): return try floatText(n)
+  case .classValue(let name): try require(knownClass(name), "Unknown portable class"); return name
   case .boolean(let b): return b ? "true" : "false"
   default: throw MagritteError("Unsupported display string")
   }

@@ -64,6 +64,7 @@ private func kindOf(_ v: Value, _ kind: String, _ graph: Graph?) throws -> Bool 
         return try graph.resolve(v).kindOf(kind)
     }
     if kind == "Object" { return true }
+    if ["Class", "ClassDescription", "Behavior"].contains(kind) { if case .classValue = v { return true }; return false }
     switch (kind, v) {
     case ("UndefinedObject", .undefined), ("String", .string), ("String", .symbol), ("Symbol", .symbol), ("Float", .float), ("Number", .float), ("Character", .character), ("Boolean", .boolean), ("Number", .integer), ("Integer", .integer): return true
     case ("Collection", _): return v.isCollection
@@ -87,7 +88,7 @@ private func validateModel(_ d: Description, _ model: Model, _ graph: Graph?, _ 
     try require(d.conditions.isEmpty, "Container local conditions are not implemented")
     var errors: [ValidationError] = []
     for c in try d.orderedChildren() {
-        if c.isContainer && (model.usesStoredContainerValues || c.nativeRead != nil || (c.accessor != nil && c.accessor?.className != "MAIdentityAccessor")) {
+        if try c.isContainer && (model.usesStoredContainerValues || c.nativeRead != nil || ((c.accessor != nil || c.accessorObject != nil) && c.effectiveAccessor.className != "MAIdentityAccessor")) {
             errors += try validateField(c, model.read(using: c), graph, budget, depth + 1)
         } else { errors += try validateModel(c, model, graph, budget, depth + 1) }
     }
@@ -149,7 +150,7 @@ private func validateField(_ d: Description, _ v: Value, _ graph: Graph?, _ budg
             }
         } else { try check(v) }
     } else {
-        kind = try kindOf(v, d.className == "MASymbolDescription" ? "Symbol" : d.className == "MATokenDescription" ? "Array" : d.className == "MANumberDescription" ? "Number" : d.className == "MABooleanDescription" ? "Boolean" : "String", graph)
+        kind = try kindOf(v, d.className == "MAClassDescription" ? "Class" : d.className == "MASymbolDescription" ? "Symbol" : d.className == "MATokenDescription" ? "Array" : d.className == "MANumberDescription" ? "Number" : d.className == "MABooleanDescription" ? "Boolean" : "String", graph)
         if !kind { error("MAKindError") }
     }
     if !kind { return errors }
@@ -188,6 +189,7 @@ func valueKey(_ value: Value, tick: (Int) throws -> Void, depth: Int = 0) throws
     case .undefined: return "0:"
     case .boolean(let b): return b ? "1:1" : "1:0"
     case .integer(let i): return "2:" + String(i)
+    case .classValue(let name): try require(knownClass(name), "Unknown portable class"); return "10:" + wrap(try hex(name))
     case .symbol(let s): return "3:" + wrap(try hex(s))
     case .float(let n):
         try require(n.isFinite, "Non-finite float")
@@ -207,7 +209,7 @@ func valueKey(_ value: Value, tick: (Int) throws -> Void, depth: Int = 0) throws
 
 func portableLabelKey(_ value: Value) -> Bool {
     switch value {
-    case .undefined, .boolean, .reference, .character, .symbol: return true
+    case .undefined, .boolean, .reference, .character, .symbol, .classValue: return true
     case .integer(let i): return i >= -1073741824 && i <= 1073741823
     default: return false
     }
@@ -215,7 +217,7 @@ func portableLabelKey(_ value: Value) -> Bool {
 
 func sameLabelType(_ a: Value, _ b: Value) -> Bool {
     switch (a,b) {
-    case (.undefined,.undefined),(.boolean,.boolean),(.integer,.integer),(.reference,.reference),(.character,.character),(.symbol,.symbol): return true
+    case (.undefined,.undefined),(.boolean,.boolean),(.integer,.integer),(.reference,.reference),(.character,.character),(.symbol,.symbol),(.classValue,.classValue): return true
     default: return false
     }
 }

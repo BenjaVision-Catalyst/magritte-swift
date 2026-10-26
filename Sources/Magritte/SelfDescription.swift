@@ -2,7 +2,7 @@ import Foundation
 
 func descriptionType(_ d: Description) throws -> String {
   let names = [
-    "MAContainer": "Container", "MAPriorityContainer": "Priority Container",
+    "MAClassDescription": "Class", "MAContainer": "Container", "MAPriorityContainer": "Priority Container",
     "MAStringDescription": "String", "MASymbolDescription": "Symbol",
     "MAMemoDescription": "Memo", "MAPasswordDescription": "Password",
     "MANumberDescription": "Number", "MABooleanDescription": "Boolean",
@@ -19,7 +19,7 @@ func descriptionType(_ d: Description) throws -> String {
 func metadataSelector(_ d: Description, _ name: String, writing: Bool) -> Bool {
   if [
     "label", "comment", "group", "required", "readOnly", "visible", "priority", "undefined",
-    "undefinedValue", "shouldCacheDefault",
+    "undefinedValue", "shouldCacheDefault", "stringReader", "stringWriter", "validator",
   ].contains(name) {
     return true
   }
@@ -45,6 +45,7 @@ func metadataSelector(_ d: Description, _ name: String, writing: Bool) -> Bool {
 public func descriptionModelFor(_ target: Description, limits: Limits = Limits()) throws -> Graph {
   _ = try descriptionType(target)
   let graph = Graph(root: "meta." + target.className)
+  if target.className == "MAClassDescription" { graph.format = "magritte.graph/4" }
   let root = Description(id: "meta." + target.className, className: "MAContainer")
   root.properties["label"] = .string(target.className)
   graph.descriptions[root.id] = root
@@ -70,7 +71,7 @@ public func descriptionModelFor(_ target: Description, limits: Limits = Limits()
     return d
   }
   add("type", "MAStringDescription", "Kind", 0).properties["readOnly"] = .boolean(true)
-  let labelDefault = Value.string(target.accessor?.name ?? target.key)
+  let labelDefault = Value.string(target.accessorObject?.value.name ?? target.accessor?.name ?? target.key)
   add("label", "MAStringDescription", "Label", 100, labelDefault)
   add("comment", "MAMemoDescription", "Comment", 110, .undefined)
   add("group", "MAStringDescription", "Group", 105, .undefined)
