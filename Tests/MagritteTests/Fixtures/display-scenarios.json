@@ -1,0 +1,399 @@
+{
+  "authority": "Pinned upstream source and test intent; not a live GT execution.",
+  "cases": [
+    {
+      "description": "MAStringDescription",
+      "mode": "default",
+      "input": {
+        "type": "string",
+        "value": "Ada"
+      },
+      "direct": "Ada",
+      "writer": "Ada"
+    },
+    {
+      "description": "MAStringDescription",
+      "mode": "asString",
+      "input": {
+        "type": "string",
+        "value": "Ada"
+      },
+      "direct": "Ada",
+      "writer": "Ada"
+    },
+    {
+      "description": "MAStringDescription",
+      "mode": "block0",
+      "input": {
+        "type": "string",
+        "value": "Ada"
+      },
+      "direct": "fixed",
+      "writer": "fixed"
+    },
+    {
+      "description": "MAStringDescription",
+      "mode": "block1",
+      "input": {
+        "type": "string",
+        "value": "Ada"
+      },
+      "direct": "[Ada]",
+      "writer": "[Ada]"
+    },
+    {
+      "description": "MAStringDescription",
+      "mode": "block2",
+      "input": {
+        "type": "string",
+        "value": "Ada"
+      },
+      "direct": "Display:Ada",
+      "writer": "Display:Ada"
+    },
+    {
+      "description": "MASymbolDescription",
+      "mode": "default",
+      "input": {
+        "type": "symbol",
+        "value": "ready"
+      },
+      "direct": "ready",
+      "writer": "ready"
+    },
+    {
+      "description": "MASymbolDescription",
+      "mode": "asString",
+      "input": {
+        "type": "symbol",
+        "value": "ready"
+      },
+      "direct": "ready",
+      "writer": "ready"
+    },
+    {
+      "description": "MASymbolDescription",
+      "mode": "block0",
+      "input": {
+        "type": "symbol",
+        "value": "ready"
+      },
+      "direct": "fixed",
+      "writer": "fixed"
+    },
+    {
+      "description": "MASymbolDescription",
+      "mode": "block1",
+      "input": {
+        "type": "symbol",
+        "value": "ready"
+      },
+      "direct": "[ready]",
+      "writer": "[ready]"
+    },
+    {
+      "description": "MASymbolDescription",
+      "mode": "block2",
+      "input": {
+        "type": "symbol",
+        "value": "ready"
+      },
+      "direct": "Display:ready",
+      "writer": "Display:ready"
+    },
+    {
+      "description": "MANumberDescription",
+      "mode": "default",
+      "input": {
+        "type": "integer",
+        "value": "7"
+      },
+      "direct": "7",
+      "writer": "7"
+    },
+    {
+      "description": "MANumberDescription",
+      "mode": "asString",
+      "input": {
+        "type": "integer",
+        "value": "7"
+      },
+      "direct": "7",
+      "writer": "7"
+    },
+    {
+      "description": "MANumberDescription",
+      "mode": "block0",
+      "input": {
+        "type": "integer",
+        "value": "7"
+      },
+      "direct": "fixed",
+      "writer": "fixed"
+    },
+    {
+      "description": "MANumberDescription",
+      "mode": "block1",
+      "input": {
+        "type": "integer",
+        "value": "7"
+      },
+      "direct": "[7]",
+      "writer": "[7]"
+    },
+    {
+      "description": "MANumberDescription",
+      "mode": "block2",
+      "input": {
+        "type": "integer",
+        "value": "7"
+      },
+      "direct": "Display:7",
+      "writer": "Display:7"
+    },
+    {
+      "description": "MAClassDescription",
+      "mode": "default",
+      "input": {
+        "type": "class",
+        "value": "MANumberDescription"
+      },
+      "direct": "MANumberDescription",
+      "writer": "MANumberDescription"
+    },
+    {
+      "description": "MAClassDescription",
+      "mode": "asString",
+      "input": {
+        "type": "class",
+        "value": "MANumberDescription"
+      },
+      "direct": "MANumberDescription",
+      "writer": "MANumberDescription"
+    },
+    {
+      "description": "MAClassDescription",
+      "mode": "block0",
+      "input": {
+        "type": "class",
+        "value": "MANumberDescription"
+      },
+      "direct": "fixed",
+      "writer": "fixed"
+    },
+    {
+      "description": "MAClassDescription",
+      "mode": "block1",
+      "input": {
+        "type": "class",
+        "value": "MANumberDescription"
+      },
+      "direct": "[MANumberDescription]",
+      "writer": "[MANumberDescription]"
+    },
+    {
+      "description": "MAClassDescription",
+      "mode": "block2",
+      "input": {
+        "type": "class",
+        "value": "MANumberDescription"
+      },
+      "direct": "Display:MANumberDescription",
+      "writer": "Display:MANumberDescription"
+    },
+    {
+      "description": "MAPasswordDescription",
+      "mode": "default",
+      "input": {
+        "type": "string",
+        "value": "é\u0000😀"
+      },
+      "direct": "é\u0000😀",
+      "writer": "é\u0000😀"
+    },
+    {
+      "description": "MAPasswordDescription",
+      "mode": "asString",
+      "input": {
+        "type": "string",
+        "value": "é\u0000😀"
+      },
+      "direct": "é\u0000😀",
+      "writer": "é\u0000😀"
+    },
+    {
+      "description": "MAPasswordDescription",
+      "mode": "block0",
+      "input": {
+        "type": "string",
+        "value": "é\u0000😀"
+      },
+      "direct": "fixed",
+      "writer": "fixed"
+    },
+    {
+      "description": "MAPasswordDescription",
+      "mode": "block1",
+      "input": {
+        "type": "string",
+        "value": "é\u0000😀"
+      },
+      "direct": "[é\u0000😀]",
+      "writer": "[é\u0000😀]"
+    },
+    {
+      "description": "MAPasswordDescription",
+      "mode": "block2",
+      "input": {
+        "type": "string",
+        "value": "é\u0000😀"
+      },
+      "direct": "Display:é\u0000😀",
+      "writer": "Display:é\u0000😀"
+    },
+    {
+      "description": "MAStringDescription",
+      "mode": "default",
+      "input": {
+        "type": "nil"
+      },
+      "direct": "nil",
+      "writer": "(none)"
+    },
+    {
+      "description": "MAStringDescription",
+      "mode": "block0",
+      "input": {
+        "type": "nil"
+      },
+      "direct": "fixed",
+      "writer": "(none)"
+    },
+    {
+      "description": "MAStringDescription",
+      "mode": "nil",
+      "input": {
+        "type": "nil"
+      },
+      "direct": null,
+      "writer": "(none)"
+    },
+    {
+      "description": "MAStringDescription",
+      "mode": "nil",
+      "input": {
+        "type": "string",
+        "value": "Ada"
+      },
+      "direct": null,
+      "writer": null
+    },
+    {
+      "description": "MAStringDescription",
+      "mode": "missing",
+      "input": {
+        "type": "string",
+        "value": "Ada"
+      },
+      "direct": null,
+      "writer": null
+    },
+    {
+      "description": "MAStringDescription",
+      "mode": "too-many",
+      "input": {
+        "type": "string",
+        "value": "Ada"
+      },
+      "direct": null,
+      "writer": null
+    },
+    {
+      "description": "MAStringDescription",
+      "mode": "throw",
+      "input": {
+        "type": "string",
+        "value": "Ada"
+      },
+      "direct": null,
+      "writer": null
+    },
+    {
+      "description": "MAStringDescription",
+      "mode": "throw",
+      "input": {
+        "type": "nil"
+      },
+      "direct": null,
+      "writer": "(none)"
+    },
+    {
+      "description": "MAStringDescription",
+      "mode": "yourself",
+      "input": {
+        "type": "string",
+        "value": "Ada"
+      },
+      "direct": "Ada",
+      "writer": "Ada"
+    },
+    {
+      "description": "MANumberDescription",
+      "mode": "yourself",
+      "input": {
+        "type": "integer",
+        "value": "7"
+      },
+      "direct": null,
+      "writer": null
+    },
+    {
+      "description": "MAClassDescription",
+      "mode": "label",
+      "input": {
+        "type": "class",
+        "value": "MANumberDescription"
+      },
+      "direct": "Number",
+      "writer": "Number"
+    },
+    {
+      "description": "MABooleanDescription",
+      "mode": "block0",
+      "input": {
+        "type": "boolean",
+        "value": true
+      },
+      "direct": "fixed",
+      "writer": "true"
+    },
+    {
+      "description": "MABooleanDescription",
+      "mode": "block2",
+      "input": {
+        "type": "boolean",
+        "value": false
+      },
+      "direct": "Display:false",
+      "writer": "false"
+    },
+    {
+      "description": "MAStringDescription",
+      "mode": "block0",
+      "input": {
+        "type": "array",
+        "value": [
+          {
+            "type": "integer",
+            "value": "1"
+          },
+          {
+            "type": "nil"
+          }
+        ]
+      },
+      "direct": "fixed",
+      "writer": "fixed"
+    }
+  ]
+}

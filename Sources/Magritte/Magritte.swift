@@ -42,8 +42,9 @@ public struct ValidationError: Equatable {
     public let descriptionID: String, code: String, message: String
 }
 public protocol Model: AnyObject {
-    var usesStoredContainerValues: Bool { get }
-    func kindOf(_ name: String) -> Bool
+  func displayMessage(_ selector: String, argument: Description?) throws -> Value
+  var usesStoredContainerValues: Bool { get }
+  func kindOf(_ name: String) -> Bool
   func respondsToSelector(_ selector: String) throws -> Bool
   func hasVariable(_ name: String) throws -> Bool
   func readSlot(strategy: String, name: String) throws -> Value
@@ -53,8 +54,12 @@ public protocol Model: AnyObject {
     func write(_ value: Value, using description: Description) throws
 }
 public extension Model {
-    var usesStoredContainerValues: Bool { false }
-    func kindOf(_ name: String) -> Bool { ClassRegistry.shared.includesBehavior("Object", name) }
+  func displayMessage(_ selector: String, argument: Description? = nil) throws -> Value {
+    try require(argument == nil, "Unbound display message with description argument");
+    return try readSlot(strategy: "MASelectorAccessor", name: selector)
+  }
+  var usesStoredContainerValues: Bool { false }
+  func kindOf(_ name: String) -> Bool { ClassRegistry.shared.includesBehavior("Object", name) }
   func respondsToSelector(_ selector: String) throws -> Bool { false }
   func hasVariable(_ name: String) throws -> Bool { false }
   func readSlot(strategy: String, name: String) throws -> Value { throw MagritteError("Unbound accessor read") }
@@ -73,6 +78,7 @@ open class Description: Model {
     public var className: String
     public var key: String
   public var definingContext: DescriptionContext?
+  public var displayBlock: DisplayBlock?
   public var properties: [String: Value] = [:]
   public var children: [Description] = []
     public weak var reference: Description?
@@ -111,6 +117,10 @@ open class Description: Model {
     }
     public var isContainer: Bool { className == "MAContainer" || className == "MAPriorityContainer" }
   public func property(_ name: String, limits: Limits = Limits()) throws -> Value {
+    if name == "displayBlockOrSymbol", displayBlock != nil {
+      throw MagritteError(
+        "Display block is local; inspect displayBlock rather than a Value snapshot")
+    }
     if let v = properties[name] {
       if name == "label" || name == "name" { _ = try encodeValue(v, limits: limits) }; return v
     }
@@ -133,6 +143,7 @@ open class Description: Model {
         kind = "String"
       }
       return .classValue(kind)
+    case "displayBlockOrSymbol": return .symbol("greaseString")
     case "stringReader": return .classValue("MAStringReader")
     case "stringWriter": return .classValue("MAStringWriter")
         case "validator": return .classValue("MAValidatorVisitor")
@@ -222,11 +233,17 @@ public final class DictionaryModel: Model {
     public func write(_ value: Value, using description: Description) throws { try description.effectiveAccessor.write(value, to: self, graph: resolver) }
 }
 public final class NativeModel: Model {
-    public weak var resolver: Graph?
-    // Explicit host bindings, keyed by strategy + ":" + selector/variable/property name.
-    public var readers: [String: (AnyObject) throws -> Value] = [:]
-    public var writers: [String: (AnyObject, Value) throws -> Void] = [:]
-    public let object: AnyObject
+  public var displayReaders: [String: (AnyObject, Description?) throws -> Value] = [:]
+  public func displayMessage(_ selector: String, argument: Description? = nil) throws -> Value {
+    if let f = displayReaders[selector] { return try f(object, argument) }
+    try require(argument == nil, "Unbound display message with description argument")
+    return try readSlot(strategy: "MASelectorAccessor", name: selector)
+  }
+  public weak var resolver: Graph?
+  // Explicit host bindings, keyed by strategy + ":" + selector/variable/property name.
+  public var readers: [String: (AnyObject) throws -> Value] = [:]
+  public var writers: [String: (AnyObject, Value) throws -> Void] = [:]
+  public let object: AnyObject
     public let ancestry: [String]
     public init(_ object: AnyObject, ancestry: [String] = []) { self.object = object; self.ancestry = ancestry }
     public convenience init(registered object: AnyObject) throws {
@@ -268,7 +285,13 @@ func supported(_ d: Description) throws {
         case "lineCount":
             try require(d.className == "MAMemoDescription", "Line count requires memo")
             guard case .integer = v else { throw MagritteError("Expected memo line count") }
-        case "priority":
+    case "displayBlockOrSymbol":
+      switch v {
+      case .undefined, .symbol: break;
+      default:
+        throw MagritteError("Display must be Symbol or nil; use displayBlock for local callbacks")
+      }
+    case "priority":
       try require(isNumber(v), "Expected numeric priority")
     case "min", "max":
       try require(d.className == "MANumberDescription", "Range requires number description")
@@ -583,12 +606,18 @@ public final class Graph {
                 }
             } else {
                 try require(!["MATokenDescription", "MASymbolDescription", "MAMemoDescription", "MAPasswordDescription"].contains(d.className), "Description requires graph/3")
-                for k in d.properties.keys { try require(!["separators", "thousandsSeparator", "lineCount", "trueString", "falseString", "trueStrings", "falseStrings"].contains(k), "Property requires graph/3") }
-            }
-            try require(g.descriptions[d.id] == nil, "Duplicate description identity")
-            g.descriptions[d.id] = d
+        for k in d.properties.keys {
+          try require(
+            ![
+              "separators", "thousandsSeparator", "lineCount", "trueString", "falseString",
+              "trueStrings", "falseStrings", "displayBlockOrSymbol",
+            ].contains(k), "Property requires graph/3")
         }
-        // Check owning edges before assigning them so rejected imports cannot leak ARC cycles.
+      }
+      try require(g.descriptions[d.id] == nil, "Duplicate description identity")
+      g.descriptions[d.id] = d
+    }
+    // Check owning edges before assigning them so rejected imports cannot leak ARC cycles.
         var composition: [String: [String]] = [:]
         var portableWork = 0
         for node in nodes {
@@ -713,10 +742,13 @@ public final class Graph {
             try require(id == d.id, "Inconsistent description identity"); try supported(d); try checkPortableDescription(d, limits: limits, work: &portableWork)
             try require(!d.options.isDynamic, "Local dynamic option providers are not portable; replace with explicit static options before export")
             try require(d.accessorObject == nil, "Live accessor identity is local; materialize an explicit snapshot before export")
-            try require(d.conditions.isEmpty && d.nativeRead == nil && d.nativeWrite == nil && d.defaultFunction == nil, "Local executable behavior is not portable")
-            var props: [String: Any] = [:]
-            for (k, v) in d.properties { props[k] = try wire(v, limits) }
-            var n: [String: Any] = ["id": d.id, "class": d.className, "properties": props]
+      try require(
+        d.conditions.isEmpty && d.nativeRead == nil && d.nativeWrite == nil
+          && d.defaultFunction == nil && d.displayBlock == nil,
+        "Local executable behavior is not portable")
+      var props: [String: Any] = [:]
+      for (k, v) in d.properties { props[k] = try wire(v, limits) }
+      var n: [String: Any] = ["id": d.id, "class": d.className, "properties": props]
       if let c = d.definingContext {
         try require(format == "magritte.graph/4", "Defining context requires graph/4");
         n["definingContext"] = [

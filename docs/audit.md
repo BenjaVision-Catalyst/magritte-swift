@@ -71,7 +71,8 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Static single/multiple options | I, R | membership/extensibility/prepared lists/identity-safe labels |
 | Runtime native class registration and hierarchy discovery | I, R (platform bridge) | typed bindings, inherited constraints, live discovery for new metadata and registered class interchange |
 | Dynamic option providers | I, R (native Value profile), X (wire) | live completion/membership/reader callbacks, provider identity, copy/array-wrapper semantics; dynamic-options.md |
-| Option grouping and arbitrary renderers | N, X (current wire) | separate executable/presentation protocols remain unsupported |
+| Description display selectors/blocks and option-label fallback | I (native Value profile), fresh R deferred | culled display arguments, host message bindings, reference-based sort conversion and selector snapshots; display.md |
+| Option grouping / arbitrary interpreter instances | N, X (current wire) | grouping and MAMessagingStringWriter remain separate gaps |
 | Mutable collection-object identity | N, X (current wire) | inline collections are value snapshots; object references retain identity |
 | Array/OrderedCollection/Set/Bag values | I, R | kind/order/multiplicity/equality and relation/option validation; Character bridge for String collections |
 | Visitor dispatch and base description builder | I, R (represented hierarchy) | 21 dispatch points, superclass fallback, explicit traversal, stateful copy/enrichment; visitors.md |
@@ -141,3 +142,5 @@ Phase 0.15 implements MACompositeAccessor and local MACompositeConflict objects,
 Phase 0.16 implements builder composition and description flattening with explicit host description/hook bindings and bounded exact Fraction priorities. [builders.md](builders.md) records the missing upstream selectors, 18 matching source fingerprints, 19/24/9 behavioral case groups, 130 numeric comparisons, probe cleanup and flattened graph round trips. Pragma/cache orchestration and arbitrary reflection remain separate gaps.
 
 Phase 0.17 implements runtime pragma description discovery, dynamic identity caches/described-object scope and defining contexts. [pragma-discovery.md](pragma-discovery.md) records eighteen captured GT method sources (sixteen exact whitespace-normalized matches and two gsCode-only additions), seventeen source-derived native scenarios, ownership/error bounds and graph/4 snapshots. At the user’s request GT was left unused after the initial source inspection; fresh live-GT behavior and replay remain deferred. The I status for this phase does not imply R.
+
+Phase 0.18 implements description display selectors/native blocks, option fallback and comparator-time reference formatting. [display.md](display.md) records 22 upstream fingerprints, 39 source-derived scenarios, native ownership/message/bounds tests and equivalent graph snapshots. GT was not accessed at the user’s request; no fresh R status or GT replay is claimed. Full scalar reflection, grouping and arbitrary interpreter instances remain pending.

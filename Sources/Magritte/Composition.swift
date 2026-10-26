@@ -151,6 +151,7 @@ public func copyDescription(_ source: Description, newID: String, limits: Limits
       n.nativeRead = d.nativeRead
     n.nativeWrite = d.nativeWrite
     n.defaultFunction = d.defaultFunction
+    n.displayBlock = d.displayBlock
     retained.append(n)
     if d.isReference {
       n.reference = try clone(d.referenceDescription(), id + ".reference", depth + 1)

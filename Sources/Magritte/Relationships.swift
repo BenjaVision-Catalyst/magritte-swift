@@ -8,12 +8,16 @@ public extension Description {
     func referenceDescription() throws -> Description {
         guard let r = reference else { throw MagritteError("Reference description is unavailable; retain it in the graph") }; return r
     }
-    func labelForOption(_ value: Value, limits: Limits = Limits()) throws -> String {
-        let budget = Budget(limits)
-        let key = try valueKey(value, tick: budget.tick)
-        func bounded(_ text: String) throws -> String {
-            try require(text.utf8.count <= limits.bytes && text.utf8.count <= limits.visits - budget.work, "Option label output limit")
-            budget.work += text.utf8.count; return text
+  func labelForOption(_ value: Value, limits: Limits = Limits(), graph: Graph? = nil) throws
+    -> String
+  {
+    let budget = Budget(limits)
+    let key = try valueKey(value, tick: budget.tick)
+    func bounded(_ text: String) throws -> String {
+      try require(
+        text.utf8.count <= limits.bytes && text.utf8.count <= limits.visits - budget.work,
+        "Option label output limit")
+      budget.work += text.utf8.count; return text
         }
         if className == "MABooleanDescription" {
       if case .boolean(let b) = value {
@@ -30,18 +34,23 @@ public extension Description {
             try require(portableLabelKey(label.value), "Identity-sensitive option label key is not portable")
             if try sameLabelType(label.value, value) && valueKey(label.value, tick: budget.tick) == key { return try bounded(label.label) }
         }
-        return try bounded(displayString(value))
+    return try bounded(displayStringFor(value, graph: graph, limits: limits))
+  }
+  func allOptions(limits: Limits = Limits(), graph: Graph? = nil) throws -> Options {
+    if isOption, case .dynamic = options { return options }
+    return try allOptionsWith(.undefined, limits: limits, graph: graph)
+  }
+  func allOptionsWith(_ current: Value, limits: Limits = Limits(), graph: Graph? = nil) throws
+    -> Options
+  {
+    if className == "MABooleanDescription" {
+      try require(limits.visits >= 2 && limits.items >= 2, "Boolean option item/work limit");
+      return [.boolean(false), .boolean(true)]
     }
-    func allOptions(limits: Limits = Limits()) throws -> Options {
-        if isOption, case .dynamic = options { return options }
-        return try allOptionsWith(.undefined, limits: limits)
-    }
-    func allOptionsWith(_ current: Value, limits: Limits = Limits()) throws -> Options {
-        if className == "MABooleanDescription" { try require(limits.visits >= 2 && limits.items >= 2, "Boolean option item/work limit"); return [.boolean(false), .boolean(true)] }
-        try require(isOption, "Option operation requires option description")
-        if case .dynamic(let source) = options {
-            if try flag("extensible") && !current.isNil && !source.includes(current, limits: limits) {
-                throw MagritteError("Dynamic options do not implement copyWith:")
+    try require(isOption, "Option operation requires option description")
+    if case .dynamic(let source) = options {
+      if try flag("extensible") && !current.isNil && !source.includes(current, limits: limits) {
+        throw MagritteError("Dynamic options do not implement copyWith:")
             }
             var items: [OptionItem] = []
       if try !isMultiple && !flag("required") {
@@ -61,13 +70,23 @@ public extension Description {
         if try flag("extensible") && !current.isNil && !contains { result.append(current) }
         if try flag("sorted") {
             let ref = try referenceDescription()
-            let ranked = try result.enumerated().map { i, v -> (Int, Value, String) in
-                let text = try writeString(v, using: ref, limits: limits)
-                try require(text.utf8.allSatisfy { $0 < 128 }, "Non-ASCII case-insensitive option sorting is not implemented")
-                return (i, v, text.lowercased())
-            }
-            result = ranked.sorted { $0.2 == $1.2 ? $0.0 < $1.0 : $0.2 < $1.2 }.map { $0.1 }
-        }
+      func sortKey(_ value: Value) throws -> String {
+        let text = try writeString(value, using: ref, graph: graph, limits: limits)
+        try require(
+          text.utf8.allSatisfy { $0 < 128 },
+          "Non-ASCII case-insensitive option sorting is not implemented")
+        return text.lowercased()
+      }
+      result = try result.sorted { a, b in
+        let left = try sortKey(a), right = try sortKey(b)
+        try budget.tick(0);
+        try require(left.utf8.count <= limits.visits - budget.work, "Option sorting work limit");
+        budget.work += left.utf8.count
+        try require(right.utf8.count <= limits.visits - budget.work, "Option sorting work limit");
+        budget.work += right.utf8.count
+        return left < right
+      }
+    }
     if try !isMultiple && !flag("required") { result.insert(try property("undefinedValue"), at: 0) }
     return Options(result)
     }

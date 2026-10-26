@@ -112,3 +112,7 @@ Phase 0.13 derives missing names/labels from their accessors without storing inf
 ## Defining contexts (0.17)
 
 Graph/4 optionally accepts `definingContext` on any description node, with exactly `modelClass` (tagged Class or nil) and `methodSelector` (tagged Symbol or nil). It snapshots `MADescriptionContext` data, resolving classes through the existing registry; graph/1–3 reject this member. Local copies share context identity, but wire snapshots do not preserve context aliasing or contain executable method bodies, callbacks or dynamic cache state. Existing graph/4 nodes without this member remain valid. See [pragma-discovery.md](pragma-discovery.md).
+
+## Display configuration (0.18)
+
+Graph/3–4 accepts `displayBlockOrSymbol` as a Symbol or explicit nil property. Absence means `#greaseString`; nil remains distinct and fails if invoked. Legacy graph/1–2 rejects this property. Selectors are data naming explicitly supported scalar or host-bound methods; import neither installs methods nor executes them. Native display blocks reject export on every node, including hidden nodes. Replacing a block with a selector explicitly materializes a portable configuration. See [display.md](display.md).

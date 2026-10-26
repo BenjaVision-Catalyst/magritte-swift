@@ -791,10 +791,10 @@ private func write(
   } else if d.isContainer {
     guard let graph else { throw MagritteError("Container writer requires graph resolver") }
     result = try writeModel(d, graph.resolve(value), graph, w, depth + 1)
-  } else if let c = value.conflict, d.className != "MABooleanDescription", !d.isReference {
-    result = c.string
   } else if d.className == "MAClassDescription" {
-    guard case .classValue(let name) = value, knownClass(name) else { throw MagritteError("Class writer requires a portable Class") }; result = name
+    guard case .classValue(let name) = value, knownClass(name) else {
+      throw MagritteError("Class writer requires a portable Class")
+    }; result = try d.displayStringFor(value, graph: graph, limits: w.limits)
   } else if d.className == "MABooleanDescription" {
     guard case .boolean(let b) = value else {
       throw MagritteError("Boolean writer requires Boolean")
@@ -811,7 +811,7 @@ private func write(
         break
       }
     }
-    if !found { result = try displayString(value) }
+    if !found { result = try d.displayStringFor(value, graph: graph, limits: w.limits) }
   } else if d.className == "MATokenDescription" || d.isMultiple {
     try require(
       value.collectionCount() <= w.limits.visits - w.count, "Writer collection work limit")
@@ -841,7 +841,7 @@ private func write(
               break
             }
           }
-          if !found { result += try displayString(e) }
+          if !found { result += try d.displayStringFor(e, graph: graph, limits: w.limits) }
         } else {
           result += try write(ref, e, graph, w, depth + 1, d.className != "MATokenDescription")
         }
@@ -851,17 +851,7 @@ private func write(
   } else if d.isRelation {
     result = try write(d.referenceDescription(), value, graph, w, depth + 1, true)
   } else {
-    switch value {
-    case .undefined: result = "nil"
-    case .string(let s), .symbol(let s), .character(let s): result = s
-    case .integer(let i): result = String(i)
-    case .float(let n): result = try floatText(n)
-    case .fraction: result = try displayString(value)
-    case .conflict(let c): result = c.string
-    case .classValue(let name): try require(knownClass(name), "Unknown portable class"); result = name
-    case .boolean(let b): result = b ? "true" : "false"
-    default: throw MagritteError("Unsupported display string")
-    }
+    result = try d.displayStringFor(value, graph: graph, limits: w.limits)
   }
   try w.tick(depth, result.utf8.count)
   try require(result.utf8.count <= w.limits.bytes, "String output byte limit")
