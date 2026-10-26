@@ -46,7 +46,7 @@ The existing `descriptionModel()` seven-property bootstrap is retained. New `des
 
 These graphs match the selected upstream metadata methods, including defaults, ordering, labels, reference descriptions and constraints. Getter/setter execution uses a finite set of description selectors; no reflective message evaluator is added. Derived type has no raw setter; its read-only description causes staged edits to be ignored on commit. A constant default setter replaces any local default function. Container default getters return undefinedValue, as upstream MADescription does. An absent label uses the accessor name as-is; Smalltalk's camel-case inflection remains outside the profile.
 
-Structural children/reference/classes/options/accessor/condition editing, the name/display/reader/writer/validator descriptions, complete recursive bootstrap and metadata descriptions of accessors/conditions/mementos remain unimplemented. shouldCacheDefault is accessible as an explicit supported selector but has no invented annotation field. Do not interpret this selected factory as the entire upstream magritteDescription.
+The 0.5 recursive session adds children/reference/name/optionsTextual metadata editing; see composition.md. Class-valued classes/reader/writer/validator metadata, accessor/condition editing, complete hierarchy bootstrap and metadata descriptions of accessors/conditions/mementos remain unimplemented. shouldCacheDefault is accessible as an explicit supported selector but has no invented annotation field. Do not interpret this selected factory as the entire upstream magritteDescription.
 
 C++ example (graph owns the editor's field descriptions):
 

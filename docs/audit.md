@@ -1,6 +1,6 @@
 # Semantic baseline and phased implementation
 
-The scalar, relationship/collection, portable behavior and editing phases are implemented for the documented profiles. This is still not a complete Magritte port; see [relationship evidence](relationships.md) and [portable behavior evidence and boundaries](portable-behavior.md) and [editing/self-description evidence](editing.md).
+The scalar, relationship/collection, portable behavior, editing, recursive metadata and composition phases are implemented for the documented profiles. This is still not a complete Magritte port; see [relationship evidence](relationships.md) and [portable behavior evidence and boundaries](portable-behavior.md) and [editing/self-description evidence](editing.md) and [recursive composition evidence](composition.md).
 
 The authoritative upstream is [magritte-metamodel/magritte](https://github.com/magritte-metamodel/magritte), revision **d67f318686b7779aed79416db121e257d1191f2e** (2025-04-29). Paths below resolve against that commit. The target is its headless Magritte model, not an application-specific schema system. The graph representation serializes instances of that description hierarchy; there is no second field-schema model.
 
@@ -38,7 +38,7 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | MAPriorityContainer ascending order | I, R | reference priorityOrder; ties stable in ports, upstream tie policy not claimed |
 | Container add/remove | I | mutate children; no complete Smalltalk collection protocol |
 | Nested containers | I, R | identity access for native models; stored child values for adaptive models |
-| union/intersection/copy protocol | N | no complete collection protocol |
+| Concatenation/union/intersection/select/collect/copy protocol | I, R (profile) | equality-class composition, selective reference copies and shared container children; range/exclusion/empty copies; full collection protocol N |
 | MAStringDescription | I, R | required empty string remains valid; exact UTF-8 content; no normalization |
 | MABooleanDescription | I, R | false is present; fixed options, aliases and configurable true/false text |
 | MANumberDescription | I, R (Int64/binary64) | inclusive bounds; finite floats; documented exact mixed-order policy |
@@ -71,7 +71,8 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Description/value JSON import/export | I, R | graph/1, graph/2 and graph/3; GT -> both ports -> GT, aliases/cycles/nested objects/collections |
 | MAStringReader/Writer text conversion | I, R (profile) | scalars/options/tokens; writers also containers/relations; other interpreters N |
 | Self-description | I, R (selected class-specific profile) | all fourteen supported classes; staged metadata edits govern subsequent model validation |
-| Complete self-description, recursive bootstrap of all descriptions/accessors | N | no completeness claim |
+| Recursive description self-description | I, R (selected profile) | lazy bounded sessions; children/reference/name/optionsTextual; three metadata levels and imported-schema edits |
+| Complete self-description of accessors/conditions/mementos/classes | N | reflection/class-valued properties and full hierarchy bootstrap remain unsupported |
 | Straight/cached/checked mementos, conflicts/merging | I, R (direct field profile) | 48 scenarios/201 snapshots; raw commit, destructive conflict reset, checked selective push; collection alias gap in editing.md |
 | Native user interfaces, persistence interpreters | N | headless consumers may be added separately |
 | GemStone/platform adapters | N | deferred |
@@ -93,7 +94,7 @@ I = implemented; R = executed against the live reference for the stated subset; 
 1. **First slice (delivered):** audit and provenance, independent native libraries, scalar/adaptive/accessor core, bootstrap, bounded description/value interchange, shared GT-established Person fixture, runtime evolution, and explicit rejection tests. Install/package and test locally; publish precise gaps.
 2. **References and collections (delivered for the documented profile):** explicit reference graphs, static relationship/options hierarchy, object IDs/cycles, collection kind/equality/required rules, nested containers and bounded operations are implemented and checked against upstream source and GT. Remaining dynamic/reflective and collection-identity facilities are explicitly tracked in relationships.md, not claimed complete.
 3. **Portable behavior (delivered for the documented profile):** finite MACondition objects, broader access strategies, Symbol/Memo/Password/Token descriptions, finite binary64 and MAStringReader/Writer operations. Full numeric/scalar domains remain future work; arbitrary executable behavior continues to fail export.
-4. **Editing (delivered for the documented profile), meta-model completeness (pending):** straight/cached/checked mementos, original/cache/default rules, conflict behavior and selected class-specific metadata editing are implemented and checked against GT/upstream. Full composition/copy/collection-identity semantics and recursive self-description remain future work. Only then assess a complete headless-core claim against the inventory.
+4. **Editing (delivered for the documented profile), meta-model completeness (pending):** straight/cached/checked mementos, original/cache/default rules, conflict behavior and selected class-specific metadata editing are implemented and checked against GT/upstream. Selected recursive description metadata and composition/copy semantics are delivered in 0.5. Full mutable collection identity, class reflection and metadata for accessors/conditions/mementos remain future work. Only then assess a complete headless-core claim against the inventory.
 5. **Optional interpreters:** native inspectors/presentation tools in separate targets. No networking, deployment or application-specific integration enters these core libraries.
 
 Each phase needs independently reviewed GT results and shared fixtures, not merely agreement between the two ports. Tests in this increment are newly written behavioral tests; upstream test source was not copied.
@@ -101,3 +102,5 @@ Each phase needs independently reviewed GT results and shared fixtures, not mere
 Phase 0.3 adds Symbol, Memo, Password and Token descriptions and finite binary64, with text conversion and portable condition/accessor forms checked against live GT. Arbitrary integers/rationals/scaled decimals and date/time/color/URL/file/class descriptions remain N. Read portable-behavior.md for the two explicit GT/pinned-source or VM-dependent numeric policies; no complete scalar-domain claim is made.
 
 Phase 0.4 adds the bounded editing and class-specific self-description profiles. The eight shouldWrite matrix differences from installed GT intentionally follow the pinned upstream symmetric rule; mutable collection alias behavior remains unsupported. editing.md records both boundaries and the live evidence.
+
+Phase 0.5 implements recursive description metadata sessions and selective composition/copy semantics for the current hierarchy. composition.md records the live GT evidence, supported annotation selection and explicit label/class-list/SortedCollection projections. This is not a complete reflective metamodel or graph deep-clone claim.

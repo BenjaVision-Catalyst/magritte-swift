@@ -84,3 +84,7 @@ The text reader/writer APIs are separate from JSON interchange and do not valida
 ## Editing and metadata (0.4)
 
 Mementos/caches/originals are local state with no wire representation. Committed portable objects/descriptions continue to use graph/3. The expanded descriptionModelFor factory produces ordinary graph/3 descriptions, including upstream MASelectorAccessor metadata fields and auxiliary reference descriptions. Description model adapters execute only the finite metadata getter/setter profile in editing.md. No tags or graph version were added. Raw model/default behavior remains separate from memento reads; collection values retain snapshot semantics, not live GT aliasing.
+
+## Recursive description metadata (0.5)
+
+Graph/3 accepts the finite supported description hierarchy and ancestors as relation class constraints, plus name (nil/String/Symbol) as a semantic property. These are actual native description classes for local metadata bindings, not fictional adaptive-object ancestry. RecursiveDescriptionModel.schemas exports ordinary generated descriptions without its native bindings; importing those schemas permits further metadata editing. The local resolver itself continues to reject export. composition.md records supported annotation selection, class-list/label/SortedCollection projections, Symbolic fallback-name policy and selective copy ownership. No new Value tag or executable wire language is added. Duplicate children produced by local composition still fail the graph codec; applications must resolve them explicitly.

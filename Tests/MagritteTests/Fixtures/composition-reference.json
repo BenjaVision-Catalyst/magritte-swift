@@ -1,0 +1,1668 @@
+{
+	"equalities" : [
+		{
+			"rhs" : "a",
+			"equal" : true,
+			"lhs" : "a"
+		},
+		{
+			"rhs" : "b",
+			"equal" : false,
+			"lhs" : "a"
+		},
+		{
+			"rhs" : "c",
+			"equal" : false,
+			"lhs" : "a"
+		},
+		{
+			"rhs" : "chain",
+			"equal" : false,
+			"lhs" : "a"
+		},
+		{
+			"rhs" : "ct",
+			"equal" : false,
+			"lhs" : "a"
+		},
+		{
+			"rhs" : "identity",
+			"equal" : false,
+			"lhs" : "a"
+		},
+		{
+			"rhs" : "left",
+			"equal" : false,
+			"lhs" : "a"
+		},
+		{
+			"rhs" : "null",
+			"equal" : false,
+			"lhs" : "a"
+		},
+		{
+			"rhs" : "num",
+			"equal" : false,
+			"lhs" : "a"
+		},
+		{
+			"rhs" : "option",
+			"equal" : false,
+			"lhs" : "a"
+		},
+		{
+			"rhs" : "priority",
+			"equal" : false,
+			"lhs" : "a"
+		},
+		{
+			"rhs" : "property",
+			"equal" : false,
+			"lhs" : "a"
+		},
+		{
+			"rhs" : "right",
+			"equal" : false,
+			"lhs" : "a"
+		},
+		{
+			"rhs" : "selector",
+			"equal" : false,
+			"lhs" : "a"
+		},
+		{
+			"rhs" : "twin",
+			"equal" : true,
+			"lhs" : "a"
+		},
+		{
+			"rhs" : "variable",
+			"equal" : false,
+			"lhs" : "a"
+		},
+		{
+			"rhs" : "a",
+			"equal" : false,
+			"lhs" : "b"
+		},
+		{
+			"rhs" : "b",
+			"equal" : true,
+			"lhs" : "b"
+		},
+		{
+			"rhs" : "c",
+			"equal" : false,
+			"lhs" : "b"
+		},
+		{
+			"rhs" : "chain",
+			"equal" : false,
+			"lhs" : "b"
+		},
+		{
+			"rhs" : "ct",
+			"equal" : false,
+			"lhs" : "b"
+		},
+		{
+			"rhs" : "identity",
+			"equal" : false,
+			"lhs" : "b"
+		},
+		{
+			"rhs" : "left",
+			"equal" : false,
+			"lhs" : "b"
+		},
+		{
+			"rhs" : "null",
+			"equal" : false,
+			"lhs" : "b"
+		},
+		{
+			"rhs" : "num",
+			"equal" : false,
+			"lhs" : "b"
+		},
+		{
+			"rhs" : "option",
+			"equal" : false,
+			"lhs" : "b"
+		},
+		{
+			"rhs" : "priority",
+			"equal" : false,
+			"lhs" : "b"
+		},
+		{
+			"rhs" : "property",
+			"equal" : false,
+			"lhs" : "b"
+		},
+		{
+			"rhs" : "right",
+			"equal" : false,
+			"lhs" : "b"
+		},
+		{
+			"rhs" : "selector",
+			"equal" : false,
+			"lhs" : "b"
+		},
+		{
+			"rhs" : "twin",
+			"equal" : false,
+			"lhs" : "b"
+		},
+		{
+			"rhs" : "variable",
+			"equal" : false,
+			"lhs" : "b"
+		},
+		{
+			"rhs" : "a",
+			"equal" : false,
+			"lhs" : "c"
+		},
+		{
+			"rhs" : "b",
+			"equal" : false,
+			"lhs" : "c"
+		},
+		{
+			"rhs" : "c",
+			"equal" : true,
+			"lhs" : "c"
+		},
+		{
+			"rhs" : "chain",
+			"equal" : false,
+			"lhs" : "c"
+		},
+		{
+			"rhs" : "ct",
+			"equal" : true,
+			"lhs" : "c"
+		},
+		{
+			"rhs" : "identity",
+			"equal" : false,
+			"lhs" : "c"
+		},
+		{
+			"rhs" : "left",
+			"equal" : false,
+			"lhs" : "c"
+		},
+		{
+			"rhs" : "null",
+			"equal" : false,
+			"lhs" : "c"
+		},
+		{
+			"rhs" : "num",
+			"equal" : false,
+			"lhs" : "c"
+		},
+		{
+			"rhs" : "option",
+			"equal" : false,
+			"lhs" : "c"
+		},
+		{
+			"rhs" : "priority",
+			"equal" : false,
+			"lhs" : "c"
+		},
+		{
+			"rhs" : "property",
+			"equal" : false,
+			"lhs" : "c"
+		},
+		{
+			"rhs" : "right",
+			"equal" : false,
+			"lhs" : "c"
+		},
+		{
+			"rhs" : "selector",
+			"equal" : false,
+			"lhs" : "c"
+		},
+		{
+			"rhs" : "twin",
+			"equal" : false,
+			"lhs" : "c"
+		},
+		{
+			"rhs" : "variable",
+			"equal" : false,
+			"lhs" : "c"
+		},
+		{
+			"rhs" : "a",
+			"equal" : false,
+			"lhs" : "chain"
+		},
+		{
+			"rhs" : "b",
+			"equal" : false,
+			"lhs" : "chain"
+		},
+		{
+			"rhs" : "c",
+			"equal" : false,
+			"lhs" : "chain"
+		},
+		{
+			"rhs" : "chain",
+			"equal" : true,
+			"lhs" : "chain"
+		},
+		{
+			"rhs" : "ct",
+			"equal" : false,
+			"lhs" : "chain"
+		},
+		{
+			"rhs" : "identity",
+			"equal" : false,
+			"lhs" : "chain"
+		},
+		{
+			"rhs" : "left",
+			"equal" : false,
+			"lhs" : "chain"
+		},
+		{
+			"rhs" : "null",
+			"equal" : false,
+			"lhs" : "chain"
+		},
+		{
+			"rhs" : "num",
+			"equal" : false,
+			"lhs" : "chain"
+		},
+		{
+			"rhs" : "option",
+			"equal" : false,
+			"lhs" : "chain"
+		},
+		{
+			"rhs" : "priority",
+			"equal" : false,
+			"lhs" : "chain"
+		},
+		{
+			"rhs" : "property",
+			"equal" : false,
+			"lhs" : "chain"
+		},
+		{
+			"rhs" : "right",
+			"equal" : false,
+			"lhs" : "chain"
+		},
+		{
+			"rhs" : "selector",
+			"equal" : false,
+			"lhs" : "chain"
+		},
+		{
+			"rhs" : "twin",
+			"equal" : false,
+			"lhs" : "chain"
+		},
+		{
+			"rhs" : "variable",
+			"equal" : false,
+			"lhs" : "chain"
+		},
+		{
+			"rhs" : "a",
+			"equal" : false,
+			"lhs" : "ct"
+		},
+		{
+			"rhs" : "b",
+			"equal" : false,
+			"lhs" : "ct"
+		},
+		{
+			"rhs" : "c",
+			"equal" : true,
+			"lhs" : "ct"
+		},
+		{
+			"rhs" : "chain",
+			"equal" : false,
+			"lhs" : "ct"
+		},
+		{
+			"rhs" : "ct",
+			"equal" : true,
+			"lhs" : "ct"
+		},
+		{
+			"rhs" : "identity",
+			"equal" : false,
+			"lhs" : "ct"
+		},
+		{
+			"rhs" : "left",
+			"equal" : false,
+			"lhs" : "ct"
+		},
+		{
+			"rhs" : "null",
+			"equal" : false,
+			"lhs" : "ct"
+		},
+		{
+			"rhs" : "num",
+			"equal" : false,
+			"lhs" : "ct"
+		},
+		{
+			"rhs" : "option",
+			"equal" : false,
+			"lhs" : "ct"
+		},
+		{
+			"rhs" : "priority",
+			"equal" : false,
+			"lhs" : "ct"
+		},
+		{
+			"rhs" : "property",
+			"equal" : false,
+			"lhs" : "ct"
+		},
+		{
+			"rhs" : "right",
+			"equal" : false,
+			"lhs" : "ct"
+		},
+		{
+			"rhs" : "selector",
+			"equal" : false,
+			"lhs" : "ct"
+		},
+		{
+			"rhs" : "twin",
+			"equal" : false,
+			"lhs" : "ct"
+		},
+		{
+			"rhs" : "variable",
+			"equal" : false,
+			"lhs" : "ct"
+		},
+		{
+			"rhs" : "a",
+			"equal" : false,
+			"lhs" : "identity"
+		},
+		{
+			"rhs" : "b",
+			"equal" : false,
+			"lhs" : "identity"
+		},
+		{
+			"rhs" : "c",
+			"equal" : false,
+			"lhs" : "identity"
+		},
+		{
+			"rhs" : "chain",
+			"equal" : false,
+			"lhs" : "identity"
+		},
+		{
+			"rhs" : "ct",
+			"equal" : false,
+			"lhs" : "identity"
+		},
+		{
+			"rhs" : "identity",
+			"equal" : true,
+			"lhs" : "identity"
+		},
+		{
+			"rhs" : "left",
+			"equal" : false,
+			"lhs" : "identity"
+		},
+		{
+			"rhs" : "null",
+			"equal" : false,
+			"lhs" : "identity"
+		},
+		{
+			"rhs" : "num",
+			"equal" : false,
+			"lhs" : "identity"
+		},
+		{
+			"rhs" : "option",
+			"equal" : false,
+			"lhs" : "identity"
+		},
+		{
+			"rhs" : "priority",
+			"equal" : false,
+			"lhs" : "identity"
+		},
+		{
+			"rhs" : "property",
+			"equal" : false,
+			"lhs" : "identity"
+		},
+		{
+			"rhs" : "right",
+			"equal" : false,
+			"lhs" : "identity"
+		},
+		{
+			"rhs" : "selector",
+			"equal" : false,
+			"lhs" : "identity"
+		},
+		{
+			"rhs" : "twin",
+			"equal" : false,
+			"lhs" : "identity"
+		},
+		{
+			"rhs" : "variable",
+			"equal" : false,
+			"lhs" : "identity"
+		},
+		{
+			"rhs" : "a",
+			"equal" : false,
+			"lhs" : "left"
+		},
+		{
+			"rhs" : "b",
+			"equal" : false,
+			"lhs" : "left"
+		},
+		{
+			"rhs" : "c",
+			"equal" : false,
+			"lhs" : "left"
+		},
+		{
+			"rhs" : "chain",
+			"equal" : false,
+			"lhs" : "left"
+		},
+		{
+			"rhs" : "ct",
+			"equal" : false,
+			"lhs" : "left"
+		},
+		{
+			"rhs" : "identity",
+			"equal" : false,
+			"lhs" : "left"
+		},
+		{
+			"rhs" : "left",
+			"equal" : true,
+			"lhs" : "left"
+		},
+		{
+			"rhs" : "null",
+			"equal" : false,
+			"lhs" : "left"
+		},
+		{
+			"rhs" : "num",
+			"equal" : false,
+			"lhs" : "left"
+		},
+		{
+			"rhs" : "option",
+			"equal" : false,
+			"lhs" : "left"
+		},
+		{
+			"rhs" : "priority",
+			"equal" : false,
+			"lhs" : "left"
+		},
+		{
+			"rhs" : "property",
+			"equal" : false,
+			"lhs" : "left"
+		},
+		{
+			"rhs" : "right",
+			"equal" : false,
+			"lhs" : "left"
+		},
+		{
+			"rhs" : "selector",
+			"equal" : false,
+			"lhs" : "left"
+		},
+		{
+			"rhs" : "twin",
+			"equal" : false,
+			"lhs" : "left"
+		},
+		{
+			"rhs" : "variable",
+			"equal" : false,
+			"lhs" : "left"
+		},
+		{
+			"rhs" : "a",
+			"equal" : false,
+			"lhs" : "null"
+		},
+		{
+			"rhs" : "b",
+			"equal" : false,
+			"lhs" : "null"
+		},
+		{
+			"rhs" : "c",
+			"equal" : false,
+			"lhs" : "null"
+		},
+		{
+			"rhs" : "chain",
+			"equal" : false,
+			"lhs" : "null"
+		},
+		{
+			"rhs" : "ct",
+			"equal" : false,
+			"lhs" : "null"
+		},
+		{
+			"rhs" : "identity",
+			"equal" : false,
+			"lhs" : "null"
+		},
+		{
+			"rhs" : "left",
+			"equal" : false,
+			"lhs" : "null"
+		},
+		{
+			"rhs" : "null",
+			"equal" : true,
+			"lhs" : "null"
+		},
+		{
+			"rhs" : "num",
+			"equal" : false,
+			"lhs" : "null"
+		},
+		{
+			"rhs" : "option",
+			"equal" : false,
+			"lhs" : "null"
+		},
+		{
+			"rhs" : "priority",
+			"equal" : false,
+			"lhs" : "null"
+		},
+		{
+			"rhs" : "property",
+			"equal" : false,
+			"lhs" : "null"
+		},
+		{
+			"rhs" : "right",
+			"equal" : false,
+			"lhs" : "null"
+		},
+		{
+			"rhs" : "selector",
+			"equal" : false,
+			"lhs" : "null"
+		},
+		{
+			"rhs" : "twin",
+			"equal" : false,
+			"lhs" : "null"
+		},
+		{
+			"rhs" : "variable",
+			"equal" : false,
+			"lhs" : "null"
+		},
+		{
+			"rhs" : "a",
+			"equal" : false,
+			"lhs" : "num"
+		},
+		{
+			"rhs" : "b",
+			"equal" : false,
+			"lhs" : "num"
+		},
+		{
+			"rhs" : "c",
+			"equal" : false,
+			"lhs" : "num"
+		},
+		{
+			"rhs" : "chain",
+			"equal" : false,
+			"lhs" : "num"
+		},
+		{
+			"rhs" : "ct",
+			"equal" : false,
+			"lhs" : "num"
+		},
+		{
+			"rhs" : "identity",
+			"equal" : false,
+			"lhs" : "num"
+		},
+		{
+			"rhs" : "left",
+			"equal" : false,
+			"lhs" : "num"
+		},
+		{
+			"rhs" : "null",
+			"equal" : false,
+			"lhs" : "num"
+		},
+		{
+			"rhs" : "num",
+			"equal" : true,
+			"lhs" : "num"
+		},
+		{
+			"rhs" : "option",
+			"equal" : false,
+			"lhs" : "num"
+		},
+		{
+			"rhs" : "priority",
+			"equal" : false,
+			"lhs" : "num"
+		},
+		{
+			"rhs" : "property",
+			"equal" : false,
+			"lhs" : "num"
+		},
+		{
+			"rhs" : "right",
+			"equal" : false,
+			"lhs" : "num"
+		},
+		{
+			"rhs" : "selector",
+			"equal" : false,
+			"lhs" : "num"
+		},
+		{
+			"rhs" : "twin",
+			"equal" : false,
+			"lhs" : "num"
+		},
+		{
+			"rhs" : "variable",
+			"equal" : false,
+			"lhs" : "num"
+		},
+		{
+			"rhs" : "a",
+			"equal" : false,
+			"lhs" : "option"
+		},
+		{
+			"rhs" : "b",
+			"equal" : false,
+			"lhs" : "option"
+		},
+		{
+			"rhs" : "c",
+			"equal" : false,
+			"lhs" : "option"
+		},
+		{
+			"rhs" : "chain",
+			"equal" : false,
+			"lhs" : "option"
+		},
+		{
+			"rhs" : "ct",
+			"equal" : false,
+			"lhs" : "option"
+		},
+		{
+			"rhs" : "identity",
+			"equal" : false,
+			"lhs" : "option"
+		},
+		{
+			"rhs" : "left",
+			"equal" : false,
+			"lhs" : "option"
+		},
+		{
+			"rhs" : "null",
+			"equal" : false,
+			"lhs" : "option"
+		},
+		{
+			"rhs" : "num",
+			"equal" : false,
+			"lhs" : "option"
+		},
+		{
+			"rhs" : "option",
+			"equal" : true,
+			"lhs" : "option"
+		},
+		{
+			"rhs" : "priority",
+			"equal" : false,
+			"lhs" : "option"
+		},
+		{
+			"rhs" : "property",
+			"equal" : false,
+			"lhs" : "option"
+		},
+		{
+			"rhs" : "right",
+			"equal" : false,
+			"lhs" : "option"
+		},
+		{
+			"rhs" : "selector",
+			"equal" : false,
+			"lhs" : "option"
+		},
+		{
+			"rhs" : "twin",
+			"equal" : false,
+			"lhs" : "option"
+		},
+		{
+			"rhs" : "variable",
+			"equal" : false,
+			"lhs" : "option"
+		},
+		{
+			"rhs" : "a",
+			"equal" : false,
+			"lhs" : "priority"
+		},
+		{
+			"rhs" : "b",
+			"equal" : false,
+			"lhs" : "priority"
+		},
+		{
+			"rhs" : "c",
+			"equal" : false,
+			"lhs" : "priority"
+		},
+		{
+			"rhs" : "chain",
+			"equal" : false,
+			"lhs" : "priority"
+		},
+		{
+			"rhs" : "ct",
+			"equal" : false,
+			"lhs" : "priority"
+		},
+		{
+			"rhs" : "identity",
+			"equal" : false,
+			"lhs" : "priority"
+		},
+		{
+			"rhs" : "left",
+			"equal" : false,
+			"lhs" : "priority"
+		},
+		{
+			"rhs" : "null",
+			"equal" : false,
+			"lhs" : "priority"
+		},
+		{
+			"rhs" : "num",
+			"equal" : false,
+			"lhs" : "priority"
+		},
+		{
+			"rhs" : "option",
+			"equal" : false,
+			"lhs" : "priority"
+		},
+		{
+			"rhs" : "priority",
+			"equal" : true,
+			"lhs" : "priority"
+		},
+		{
+			"rhs" : "property",
+			"equal" : false,
+			"lhs" : "priority"
+		},
+		{
+			"rhs" : "right",
+			"equal" : false,
+			"lhs" : "priority"
+		},
+		{
+			"rhs" : "selector",
+			"equal" : false,
+			"lhs" : "priority"
+		},
+		{
+			"rhs" : "twin",
+			"equal" : false,
+			"lhs" : "priority"
+		},
+		{
+			"rhs" : "variable",
+			"equal" : false,
+			"lhs" : "priority"
+		},
+		{
+			"rhs" : "a",
+			"equal" : false,
+			"lhs" : "property"
+		},
+		{
+			"rhs" : "b",
+			"equal" : false,
+			"lhs" : "property"
+		},
+		{
+			"rhs" : "c",
+			"equal" : false,
+			"lhs" : "property"
+		},
+		{
+			"rhs" : "chain",
+			"equal" : false,
+			"lhs" : "property"
+		},
+		{
+			"rhs" : "ct",
+			"equal" : false,
+			"lhs" : "property"
+		},
+		{
+			"rhs" : "identity",
+			"equal" : false,
+			"lhs" : "property"
+		},
+		{
+			"rhs" : "left",
+			"equal" : false,
+			"lhs" : "property"
+		},
+		{
+			"rhs" : "null",
+			"equal" : false,
+			"lhs" : "property"
+		},
+		{
+			"rhs" : "num",
+			"equal" : false,
+			"lhs" : "property"
+		},
+		{
+			"rhs" : "option",
+			"equal" : false,
+			"lhs" : "property"
+		},
+		{
+			"rhs" : "priority",
+			"equal" : false,
+			"lhs" : "property"
+		},
+		{
+			"rhs" : "property",
+			"equal" : true,
+			"lhs" : "property"
+		},
+		{
+			"rhs" : "right",
+			"equal" : false,
+			"lhs" : "property"
+		},
+		{
+			"rhs" : "selector",
+			"equal" : false,
+			"lhs" : "property"
+		},
+		{
+			"rhs" : "twin",
+			"equal" : false,
+			"lhs" : "property"
+		},
+		{
+			"rhs" : "variable",
+			"equal" : false,
+			"lhs" : "property"
+		},
+		{
+			"rhs" : "a",
+			"equal" : false,
+			"lhs" : "right"
+		},
+		{
+			"rhs" : "b",
+			"equal" : false,
+			"lhs" : "right"
+		},
+		{
+			"rhs" : "c",
+			"equal" : false,
+			"lhs" : "right"
+		},
+		{
+			"rhs" : "chain",
+			"equal" : false,
+			"lhs" : "right"
+		},
+		{
+			"rhs" : "ct",
+			"equal" : false,
+			"lhs" : "right"
+		},
+		{
+			"rhs" : "identity",
+			"equal" : false,
+			"lhs" : "right"
+		},
+		{
+			"rhs" : "left",
+			"equal" : false,
+			"lhs" : "right"
+		},
+		{
+			"rhs" : "null",
+			"equal" : false,
+			"lhs" : "right"
+		},
+		{
+			"rhs" : "num",
+			"equal" : false,
+			"lhs" : "right"
+		},
+		{
+			"rhs" : "option",
+			"equal" : false,
+			"lhs" : "right"
+		},
+		{
+			"rhs" : "priority",
+			"equal" : false,
+			"lhs" : "right"
+		},
+		{
+			"rhs" : "property",
+			"equal" : false,
+			"lhs" : "right"
+		},
+		{
+			"rhs" : "right",
+			"equal" : true,
+			"lhs" : "right"
+		},
+		{
+			"rhs" : "selector",
+			"equal" : false,
+			"lhs" : "right"
+		},
+		{
+			"rhs" : "twin",
+			"equal" : false,
+			"lhs" : "right"
+		},
+		{
+			"rhs" : "variable",
+			"equal" : false,
+			"lhs" : "right"
+		},
+		{
+			"rhs" : "a",
+			"equal" : false,
+			"lhs" : "selector"
+		},
+		{
+			"rhs" : "b",
+			"equal" : false,
+			"lhs" : "selector"
+		},
+		{
+			"rhs" : "c",
+			"equal" : false,
+			"lhs" : "selector"
+		},
+		{
+			"rhs" : "chain",
+			"equal" : false,
+			"lhs" : "selector"
+		},
+		{
+			"rhs" : "ct",
+			"equal" : false,
+			"lhs" : "selector"
+		},
+		{
+			"rhs" : "identity",
+			"equal" : false,
+			"lhs" : "selector"
+		},
+		{
+			"rhs" : "left",
+			"equal" : false,
+			"lhs" : "selector"
+		},
+		{
+			"rhs" : "null",
+			"equal" : false,
+			"lhs" : "selector"
+		},
+		{
+			"rhs" : "num",
+			"equal" : false,
+			"lhs" : "selector"
+		},
+		{
+			"rhs" : "option",
+			"equal" : false,
+			"lhs" : "selector"
+		},
+		{
+			"rhs" : "priority",
+			"equal" : false,
+			"lhs" : "selector"
+		},
+		{
+			"rhs" : "property",
+			"equal" : false,
+			"lhs" : "selector"
+		},
+		{
+			"rhs" : "right",
+			"equal" : false,
+			"lhs" : "selector"
+		},
+		{
+			"rhs" : "selector",
+			"equal" : true,
+			"lhs" : "selector"
+		},
+		{
+			"rhs" : "twin",
+			"equal" : false,
+			"lhs" : "selector"
+		},
+		{
+			"rhs" : "variable",
+			"equal" : false,
+			"lhs" : "selector"
+		},
+		{
+			"rhs" : "a",
+			"equal" : true,
+			"lhs" : "twin"
+		},
+		{
+			"rhs" : "b",
+			"equal" : false,
+			"lhs" : "twin"
+		},
+		{
+			"rhs" : "c",
+			"equal" : false,
+			"lhs" : "twin"
+		},
+		{
+			"rhs" : "chain",
+			"equal" : false,
+			"lhs" : "twin"
+		},
+		{
+			"rhs" : "ct",
+			"equal" : false,
+			"lhs" : "twin"
+		},
+		{
+			"rhs" : "identity",
+			"equal" : false,
+			"lhs" : "twin"
+		},
+		{
+			"rhs" : "left",
+			"equal" : false,
+			"lhs" : "twin"
+		},
+		{
+			"rhs" : "null",
+			"equal" : false,
+			"lhs" : "twin"
+		},
+		{
+			"rhs" : "num",
+			"equal" : false,
+			"lhs" : "twin"
+		},
+		{
+			"rhs" : "option",
+			"equal" : false,
+			"lhs" : "twin"
+		},
+		{
+			"rhs" : "priority",
+			"equal" : false,
+			"lhs" : "twin"
+		},
+		{
+			"rhs" : "property",
+			"equal" : false,
+			"lhs" : "twin"
+		},
+		{
+			"rhs" : "right",
+			"equal" : false,
+			"lhs" : "twin"
+		},
+		{
+			"rhs" : "selector",
+			"equal" : false,
+			"lhs" : "twin"
+		},
+		{
+			"rhs" : "twin",
+			"equal" : true,
+			"lhs" : "twin"
+		},
+		{
+			"rhs" : "variable",
+			"equal" : false,
+			"lhs" : "twin"
+		},
+		{
+			"rhs" : "a",
+			"equal" : false,
+			"lhs" : "variable"
+		},
+		{
+			"rhs" : "b",
+			"equal" : false,
+			"lhs" : "variable"
+		},
+		{
+			"rhs" : "c",
+			"equal" : false,
+			"lhs" : "variable"
+		},
+		{
+			"rhs" : "chain",
+			"equal" : false,
+			"lhs" : "variable"
+		},
+		{
+			"rhs" : "ct",
+			"equal" : false,
+			"lhs" : "variable"
+		},
+		{
+			"rhs" : "identity",
+			"equal" : false,
+			"lhs" : "variable"
+		},
+		{
+			"rhs" : "left",
+			"equal" : false,
+			"lhs" : "variable"
+		},
+		{
+			"rhs" : "null",
+			"equal" : false,
+			"lhs" : "variable"
+		},
+		{
+			"rhs" : "num",
+			"equal" : false,
+			"lhs" : "variable"
+		},
+		{
+			"rhs" : "option",
+			"equal" : false,
+			"lhs" : "variable"
+		},
+		{
+			"rhs" : "priority",
+			"equal" : false,
+			"lhs" : "variable"
+		},
+		{
+			"rhs" : "property",
+			"equal" : false,
+			"lhs" : "variable"
+		},
+		{
+			"rhs" : "right",
+			"equal" : false,
+			"lhs" : "variable"
+		},
+		{
+			"rhs" : "selector",
+			"equal" : false,
+			"lhs" : "variable"
+		},
+		{
+			"rhs" : "twin",
+			"equal" : false,
+			"lhs" : "variable"
+		},
+		{
+			"rhs" : "variable",
+			"equal" : true,
+			"lhs" : "variable"
+		}
+	],
+	"graph" : {
+		"descriptions" : [
+			{
+				"id" : "a",
+				"properties" : {
+					"label" : {
+						"value" : "First",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "30",
+						"type" : "integer"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"class" : "MADictionaryAccessor",
+					"key" : "a"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "b",
+				"properties" : {
+					"priority" : {
+						"value" : "10",
+						"type" : "integer"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"class" : "MADictionaryAccessor",
+					"key" : "b"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "c",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"class" : "MADictionaryAccessor",
+					"key" : "c"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "chain",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"class" : "MAChainAccessor",
+					"steps" : [
+						{
+							"writeSelector" : "value:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "value"
+						},
+						{
+							"name" : "value",
+							"class" : "MAVariableAccessor"
+						}
+					]
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "ct",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"class" : "MADictionaryAccessor",
+					"key" : "c"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "identity",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"class" : "MAIdentityAccessor"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "left",
+				"properties" : {
+					"label" : {
+						"value" : "Left",
+						"type" : "string"
+					}
+				},
+				"conditions" : [ ],
+				"children" : [
+					"a",
+					"b",
+					"twin"
+				],
+				"class" : "MAContainer"
+			},
+			{
+				"id" : "null",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"uuid" : {
+						"type" : "nil"
+					},
+					"class" : "MANullAccessor"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "num",
+				"properties" : {
+					"min" : {
+						"value" : "1",
+						"type" : "integer"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"class" : "MADictionaryAccessor",
+					"key" : "num"
+				},
+				"class" : "MANumberDescription"
+			},
+			{
+				"reference" : "num",
+				"labels" : [ ],
+				"properties" : { },
+				"accessor" : {
+					"class" : "MADictionaryAccessor",
+					"key" : "option"
+				},
+				"options" : [
+					{
+						"value" : "1",
+						"type" : "integer"
+					},
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"conditions" : [ ],
+				"class" : "MASingleOptionDescription",
+				"id" : "option"
+			},
+			{
+				"id" : "priority",
+				"properties" : { },
+				"conditions" : [ ],
+				"children" : [
+					"b",
+					"a"
+				],
+				"class" : "MAPriorityContainer"
+			},
+			{
+				"id" : "property",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"class" : "MAPropertyAccessor",
+					"key" : "a"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "right",
+				"properties" : { },
+				"conditions" : [ ],
+				"children" : [
+					"twin",
+					"c",
+					"ct"
+				],
+				"class" : "MAContainer"
+			},
+			{
+				"id" : "selector",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "value:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "value"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "twin",
+				"properties" : {
+					"required" : {
+						"value" : true,
+						"type" : "boolean"
+					},
+					"label" : {
+						"value" : "Other",
+						"type" : "string"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"class" : "MADictionaryAccessor",
+					"key" : "a"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "variable",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"name" : "value",
+					"class" : "MAVariableAccessor"
+				},
+				"class" : "MAStringDescription"
+			}
+		],
+		"format" : "magritte.graph/3",
+		"objects" : [ ],
+		"root" : "left"
+	},
+	"copy" : {
+		"propertiesDistinct" : true,
+		"copyChildLabelAfterSourceEdit" : "Shared",
+		"containerCollectionDistinct" : true,
+		"sourceMinAfterCopyEdit" : {
+			"value" : "1",
+			"type" : "integer"
+		},
+		"accessorDistinct" : true,
+		"optionsDistinct" : true,
+		"optionsEqual" : true,
+		"referenceEqual" : true,
+		"referenceDistinct" : true,
+		"containerChildrenShared" : true,
+		"sourceLabelAfterCopyEdit" : "Left",
+		"rootDistinct" : true
+	},
+	"operations" : [
+		{
+			"operation" : "concat",
+			"lhs" : "left",
+			"class" : "MAContainer",
+			"rhs" : "right",
+			"children" : [
+				"a",
+				"b",
+				"twin",
+				"twin",
+				"c",
+				"ct"
+			],
+			"label" : "Left"
+		},
+		{
+			"operation" : "concat",
+			"lhs" : "a",
+			"class" : "MAContainer",
+			"rhs" : "b",
+			"children" : [
+				"a",
+				"b"
+			],
+			"label" : ""
+		},
+		{
+			"operation" : "union",
+			"lhs" : "left",
+			"class" : "MAContainer",
+			"rhs" : "right",
+			"children" : [
+				"a",
+				"b",
+				"twin",
+				"c",
+				"ct"
+			],
+			"label" : "Left"
+		},
+		{
+			"operation" : "intersection",
+			"lhs" : "left",
+			"class" : "MAContainer",
+			"rhs" : "right",
+			"children" : [
+				"twin"
+			],
+			"label" : "Left"
+		},
+		{
+			"operation" : "copy",
+			"lhs" : "left",
+			"class" : "MAContainer",
+			"rhs" : "",
+			"children" : [
+				"a",
+				"b",
+				"twin"
+			],
+			"label" : "Left"
+		},
+		{
+			"operation" : "empty",
+			"lhs" : "left",
+			"class" : "MAContainer",
+			"rhs" : "",
+			"children" : [ ],
+			"label" : "Left"
+		},
+		{
+			"operation" : "range",
+			"lhs" : "left",
+			"class" : "MAContainer",
+			"rhs" : "",
+			"children" : [
+				"b",
+				"twin"
+			],
+			"label" : "Left"
+		},
+		{
+			"operation" : "select",
+			"lhs" : "left",
+			"class" : "MAContainer",
+			"rhs" : "",
+			"children" : [
+				"a",
+				"twin"
+			],
+			"label" : "Left"
+		},
+		{
+			"operation" : "reject",
+			"lhs" : "left",
+			"class" : "MAContainer",
+			"rhs" : "",
+			"children" : [
+				"b"
+			],
+			"label" : "Left"
+		},
+		{
+			"operation" : "collect",
+			"lhs" : "left",
+			"class" : "MAContainer",
+			"rhs" : "",
+			"children" : [
+				"a",
+				"num",
+				"twin"
+			],
+			"label" : "Left"
+		},
+		{
+			"operation" : "copy",
+			"lhs" : "priority",
+			"class" : "MAPriorityContainer",
+			"rhs" : "",
+			"children" : [
+				"b",
+				"a"
+			],
+			"label" : ""
+		},
+		{
+			"operation" : "concat",
+			"lhs" : "priority",
+			"class" : "MAPriorityContainer",
+			"rhs" : "right",
+			"children" : [
+				"ct",
+				"twin",
+				"c",
+				"b",
+				"a"
+			],
+			"label" : ""
+		}
+	]
+}

@@ -184,6 +184,8 @@ func supported(_ d: Description) throws {
             if case .float(let n) = v { try require(n.isFinite, "Non-finite numeric bound") }
         case "label", "comment", "group", "undefined":
             if !v.isNil, case .string = v {} else if !v.isNil { throw MagritteError("Expected text property: \(k)") }
+        case "name":
+            switch v { case .undefined, .string, .symbol: break; default: throw MagritteError("Expected description name") }
         case "default", "undefinedValue": break
         default: try require(k.hasPrefix("metadata:"), "Unsupported semantic property: \(k)")
         }
@@ -452,11 +454,11 @@ public final class Graph {
                 d.reference = ref
             }
             if d.isRelation {
-                let kinds: Set<String> = ["Object", "MABasicObject", "MAAdaptiveModel", "UndefinedObject", "String", "Symbol", "Float", "Boolean", "Number", "Integer", "Character", "Collection", "SequenceableCollection", "Array", "OrderedCollection", "Set", "Bag"]
+                let kinds: Set<String> = ["Object", "MABasicObject", "MAAdaptiveModel", "UndefinedObject", "String", "Symbol", "Float", "Boolean", "Number", "Integer", "Character", "Collection", "SequenceableCollection", "Array", "OrderedCollection", "Set", "Bag", "MAObject", "MADescription", "MAElementDescription", "MAReferenceDescription", "MARelationDescription", "MAOptionDescription", "MAMagnitudeDescription", "MAContainer", "MAPriorityContainer", "MAStringDescription", "MASymbolDescription", "MAMemoDescription", "MAPasswordDescription", "MATokenDescription", "MANumberDescription", "MABooleanDescription", "MAToOneRelationDescription", "MAToManyRelationDescription", "MAToManyScalarRelationDescription", "MASingleOptionDescription", "MAMultipleOptionDescription"]
                 var unique = Set<String>()
                 for c in try list(n["classes"]) {
                     let cls = try identity(c)
-                    try require((format == "magritte.graph/3" || (cls != "Symbol" && cls != "Float")) && kinds.contains(cls) && unique.insert(cls).inserted, "Unsupported or duplicate class constraint")
+                    try require((format == "magritte.graph/3" || (cls != "Symbol" && cls != "Float" && (!cls.hasPrefix("MA") || cls == "MABasicObject" || cls == "MAAdaptiveModel"))) && kinds.contains(cls) && unique.insert(cls).inserted, "Unsupported or duplicate class constraint")
                     d.classes.append(cls)
                 }
             }

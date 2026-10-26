@@ -1,0 +1,72 @@
+{
+	"referenceSame" : true,
+	"referenceClass" : "MANumberDescription",
+	"options" : [
+		{
+			"rendered" : "",
+			"error" : false,
+			"unchangedOnFailure" : false,
+			"options" : [ ],
+			"text" : ""
+		},
+		{
+			"rendered" : "1\r2\r3",
+			"error" : false,
+			"unchangedOnFailure" : false,
+			"options" : [
+				{
+					"value" : "1",
+					"type" : "integer"
+				},
+				{
+					"value" : "2",
+					"type" : "integer"
+				},
+				{
+					"value" : "3",
+					"type" : "integer"
+				}
+			],
+			"text" : "1\r\n2\n3"
+		},
+		{
+			"rendered" : "1\r2\r3",
+			"error" : true,
+			"unchangedOnFailure" : true,
+			"options" : [
+				{
+					"value" : "1",
+					"type" : "integer"
+				},
+				{
+					"value" : "2",
+					"type" : "integer"
+				},
+				{
+					"value" : "3",
+					"type" : "integer"
+				}
+			],
+			"text" : "4\nbad"
+		},
+		{
+			"rendered" : "1\r\r2",
+			"error" : false,
+			"unchangedOnFailure" : false,
+			"options" : [
+				{
+					"value" : "1",
+					"type" : "integer"
+				},
+				{
+					"type" : "nil"
+				},
+				{
+					"value" : "2",
+					"type" : "integer"
+				}
+			],
+			"text" : "1\n\n2"
+		}
+	]
+}

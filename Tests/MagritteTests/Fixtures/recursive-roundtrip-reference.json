@@ -1,0 +1,14 @@
+[
+	{
+		"source" : "/private/tmp/magritte-cpp-recursive-native.json",
+		"objects" : 0,
+		"validated" : true,
+		"descriptions" : 47
+	},
+	{
+		"source" : "/private/tmp/magritte-swift-recursive-native.json",
+		"objects" : 0,
+		"validated" : true,
+		"descriptions" : 47
+	}
+]
