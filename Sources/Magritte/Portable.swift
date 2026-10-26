@@ -493,7 +493,7 @@ extension Description {
       return name == "undefined" && value.isNil ? .string("") : value
     }
     try require(strategy == "MAPropertyAccessor", "Description slot requires property accessor")
-    return properties[name] ?? .undefined
+    return try propertyAt(name, ifAbsent: { .undefined })
   }
   public func writeSlot(strategy: String, name: String, value: Value) throws {
     if strategy == "MASelectorAccessor" {
@@ -507,7 +507,7 @@ extension Description {
       if key == "default" { defaultFunction = nil }; properties[key] = value; return
     }
     try require(strategy == "MAPropertyAccessor", "Description slot requires property accessor")
-    properties[name] = value
+    _ = try propertyPut(name, value)
   }
 }
 extension NativeModel {

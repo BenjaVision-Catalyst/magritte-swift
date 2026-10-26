@@ -65,7 +65,8 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Structured validation errors | I, R (leaf codes) | description identity, code, message; native validator accumulates leaf errors |
 | Upstream nested exception trees/custom error text/validator overrides | N | unknown semantic properties fail import |
 | Common and relation/option metadata | I, R (selected properties) | ordered/distinct/definitive/sorted/extensible retained; no invented coercion/uniqueness rules |
-| General property dictionary | I (bounded subset) | unknown semantics rejected; metadata: prefix preserves explicitly opaque consumer metadata |
+| Stored property dictionary protocol | I (Value profile without announcer), fresh R deferred | strict/lazy/conditional access, nil removal and MAPropertyAccessor; properties.md; unknown semantic wire fields still reject |
+| Property announcements and general lazy default initialization | N | subscribers/announcers and maLazyPropertyUsing: remain separate gaps |
 | Reference identity between description nodes | I | shared child instances survive import/export |
 | Relationship object identity, cycles, to-one/to-many/scalar-to-many | I, R | graph/2 explicit references and class constraints; no automatic validation cascade |
 | Static single/multiple options | I, R | membership/extensibility/prepared lists/identity-safe labels |
@@ -150,3 +151,5 @@ Phase 0.18 implements description display selectors/native blocks, option fallba
 Phase 0.19 implements local MASortBlock evaluation, Value-target identity/delegator/chain access and inherited/native-overridable sortability queries. [sorting.md](sorting.md) records fourteen upstream fingerprints, 69 comparison cases, fifteen sortability cases, native trace/identity/error tests and equivalent imported-schema snapshots. GT was not accessed at the user’s request; no fresh R or live replay is claimed. No executable sort plan or unrelated sorting framework is introduced.
 
 Phase 0.20 implements reference getter display propagation and option undefined setter cascades for explicitly bound references. [reference-access.md](reference-access.md) records twenty upstream fingerprints, 24 getter and 24 setter cases, corrected reference-specific display expectations, codec/copy boundaries and native timing/error checks. GT was not accessed; fresh R remains deferred. Lazy reference creation/template derivation and Boolean self-reference convenience remain gaps.
+
+Phase 0.21 implements MATPropertyOwner stored-Value lookup/conditional/update semantics on descriptions and connects MAPropertyAccessor to that storage protocol. [properties.md](properties.md) records 21 selected source fingerprints, fifty state/result/trace cases, reentrant/error/copy/wire tests and explicit no-announcer boundaries. GT was not accessed; fresh R remains deferred. No generic event system or new schema language is introduced.

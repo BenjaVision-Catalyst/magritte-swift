@@ -124,3 +124,7 @@ MASortBlock is a registered class identity, with local accessor/message executio
 ## Reference access versus snapshots (0.20)
 
 Import/export and ownership/copy traversal inspect raw reference edges. They do not execute the display-propagating runtime getter or undefined setter. An absent display inherited at runtime is represented by default absence on the target after clearing its override, preserving legacy graph behavior. Explicit Symbol/nil values retain their stored presence. Native blocks still reject export throughout the graph. Bound reference identities and existing graph formats are unchanged. See [reference-access.md](reference-access.md).
+
+## Stored property operations (0.21)
+
+The new property API changes no wire forms. Supported explicit presence/nil remain data; inferred defaults do not become stored entries during lookup. Unknown semantic property names still reject export and `metadata:` remains opaque. Local callable/announcer objects are not new Value kinds. See [properties.md](properties.md).

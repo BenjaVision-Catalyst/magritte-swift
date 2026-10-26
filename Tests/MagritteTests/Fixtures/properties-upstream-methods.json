@@ -1,0 +1,153 @@
+{
+  "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
+  "verification": "Upstream source only; GT was not accessed. Announcement methods document the excluded subscribed case, not implementation coverage.",
+  "methods": [
+    {
+      "className": "MATPropertyOwner",
+      "classSide": false,
+      "selector": "errorPropertyNotFound:",
+      "sourceSHA256": "2e6ee0430944e7e01bd971f749f5bd0150bb562917939e06e3bf420febb4d8f6",
+      "path": "source/Magritte-Model/MATPropertyOwner.trait.st"
+    },
+    {
+      "className": "MATPropertyOwner",
+      "classSide": false,
+      "selector": "hasProperty:",
+      "sourceSHA256": "bf84dbc458faa7055ee4effcf68693678af0237eecebb8c3b1b5cd8ffaf58f55",
+      "path": "source/Magritte-Model/MATPropertyOwner.trait.st"
+    },
+    {
+      "className": "MATPropertyOwner",
+      "classSide": false,
+      "selector": "postCopyProperties",
+      "sourceSHA256": "c6515694f1179955e3ada08acd2e049b55a848dd2c133bf0ea064f670a0ea971",
+      "path": "source/Magritte-Model/MATPropertyOwner.trait.st"
+    },
+    {
+      "className": "MATPropertyOwner",
+      "classSide": false,
+      "selector": "propertyAnnounceKey:oldValue:newValue:",
+      "sourceSHA256": "54619d092de3f3bdbf9eb4121d29f12941072c456ae4268f43ed5fd0f5020e3c",
+      "path": "source/Magritte-Model/MATPropertyOwner.trait.st"
+    },
+    {
+      "className": "MATPropertyOwner",
+      "classSide": false,
+      "selector": "propertyAnnouncerDo:",
+      "sourceSHA256": "215b44ebd350d31076b36d9a76c5dfc57a60506d1cd2025ab6641356a439eb03",
+      "path": "source/Magritte-Model/MATPropertyOwner.trait.st"
+    },
+    {
+      "className": "MATPropertyOwner",
+      "classSide": false,
+      "selector": "propertyAt:",
+      "sourceSHA256": "599860bbe3bf06cd83b50ac4637607d5b186aa2578285cac92a6d81b0631710a",
+      "path": "source/Magritte-Model/MATPropertyOwner.trait.st"
+    },
+    {
+      "className": "MATPropertyOwner",
+      "classSide": false,
+      "selector": "propertyAt:ifAbsent:",
+      "sourceSHA256": "4612f77ecf4e5180cb0794acf29a9b11457e5b66cb5cbff95080625331ca40a9",
+      "path": "source/Magritte-Model/MATPropertyOwner.trait.st"
+    },
+    {
+      "className": "MATPropertyOwner",
+      "classSide": false,
+      "selector": "propertyAt:ifAbsentPut:",
+      "sourceSHA256": "c0e0b92b21afc4dea13e1e653971d9cd64e227fc90516c48627007723912e9fe",
+      "path": "source/Magritte-Model/MATPropertyOwner.trait.st"
+    },
+    {
+      "className": "MATPropertyOwner",
+      "classSide": false,
+      "selector": "propertyAt:ifPresent:",
+      "sourceSHA256": "a41089b2dcb71fc0b767ca65e6a68ef55fdcf1f203e29931fda72706718a83eb",
+      "path": "source/Magritte-Model/MATPropertyOwner.trait.st"
+    },
+    {
+      "className": "MATPropertyOwner",
+      "classSide": false,
+      "selector": "propertyAt:ifPresent:ifAbsent:",
+      "sourceSHA256": "b3501bb4f1d8fe70643e0d65502941ee0339ec9a1c6a9d84512f5b96d1d6967b",
+      "path": "source/Magritte-Model/MATPropertyOwner.trait.st"
+    },
+    {
+      "className": "MATPropertyOwner",
+      "classSide": false,
+      "selector": "propertyAt:ifPresent:ifAbsentPut:",
+      "sourceSHA256": "3fa8b3bd85b3518016689eb36cd4779a65ebba734f3c46cdd1176648bcaa59d9",
+      "path": "source/Magritte-Model/MATPropertyOwner.trait.st"
+    },
+    {
+      "className": "MATPropertyOwner",
+      "classSide": false,
+      "selector": "propertyAt:put:",
+      "sourceSHA256": "94ba8194cc37ab7ad1abb3aac4ead83ed47a62156c011b767e5338d5e57206f2",
+      "path": "source/Magritte-Model/MATPropertyOwner.trait.st"
+    },
+    {
+      "className": "MATPropertyOwner",
+      "classSide": false,
+      "selector": "propertyAt:putRemovingNil:",
+      "sourceSHA256": "bbdf7a0eb6e13645a3888c8a03c130a83eb3e23493574105df0e0ad13dec4824",
+      "path": "source/Magritte-Model/MATPropertyOwner.trait.st"
+    },
+    {
+      "className": "MAPropertyAccessor",
+      "classSide": false,
+      "selector": "read:",
+      "sourceSHA256": "f1d91f437d7a244e3c95e44b8ba0e3e81e82397e2e0a4aec1980829f00b637d8",
+      "path": "source/Magritte-Model/MAPropertyAccessor.class.st"
+    },
+    {
+      "className": "MAPropertyAccessor",
+      "classSide": false,
+      "selector": "write:to:",
+      "sourceSHA256": "5c6a0a89801e5f9f7d1ecf6a80e7e1da901e308223f1a9e9225ad4197b3e0752",
+      "path": "source/Magritte-Model/MAPropertyAccessor.class.st"
+    },
+    {
+      "className": "MAObjectTest",
+      "classSide": false,
+      "selector": "testPropertiesAt",
+      "sourceSHA256": "e7dd3fc58a8022d68cdd6ec692056d25466c9a26ed1b3e08351f99a0a1ba9504",
+      "path": "source/Magritte-Tests-Model/MAObjectTest.class.st"
+    },
+    {
+      "className": "MAObjectTest",
+      "classSide": false,
+      "selector": "testPropertiesAtIfAbsent",
+      "sourceSHA256": "008c447bbc6ab795bdddda4d5011433d275d084a5942a58d2d9596ae34dffc44",
+      "path": "source/Magritte-Tests-Model/MAObjectTest.class.st"
+    },
+    {
+      "className": "MAObjectTest",
+      "classSide": false,
+      "selector": "testPropertiesAtIfAbsentPut",
+      "sourceSHA256": "a385854e64cd6e7532af2aa2ad14b3c85711f48b36f9f63e969710bd22a91c9c",
+      "path": "source/Magritte-Tests-Model/MAObjectTest.class.st"
+    },
+    {
+      "className": "MAObjectTest",
+      "classSide": false,
+      "selector": "testPropertiesAtIfPresent",
+      "sourceSHA256": "9b3e99c93eeb1eee127a66fa7c025bcaf47256fd00878d8e7541aa2a860d6147",
+      "path": "source/Magritte-Tests-Model/MAObjectTest.class.st"
+    },
+    {
+      "className": "MAObjectTest",
+      "classSide": false,
+      "selector": "testPropertiesAtPut",
+      "sourceSHA256": "ac5c3f521cbb98209be678e7619e9b6bee93b2c3068980b55a04694def1bb555",
+      "path": "source/Magritte-Tests-Model/MAObjectTest.class.st"
+    },
+    {
+      "className": "MAObjectTest",
+      "classSide": false,
+      "selector": "testPropertiesHas",
+      "sourceSHA256": "0ce840f58ec68b1c40d8ade145aeebf01f32c7f9eaa8eb6d3c7b29ae6c512518",
+      "path": "source/Magritte-Tests-Model/MAObjectTest.class.st"
+    }
+  ]
+}

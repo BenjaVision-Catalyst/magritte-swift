@@ -1,0 +1,795 @@
+{
+  "authority": "Pinned MATPropertyOwner storage methods, with no propertyAnnouncer installed; source-derived native expectations, not GT executions.",
+  "cases": [
+    {
+      "initial": null,
+      "operation": "get",
+      "result": null,
+      "hasProperty": false,
+      "stored": null,
+      "trace": []
+    },
+    {
+      "initial": null,
+      "operation": "fallback",
+      "result": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "hasProperty": false,
+      "stored": null,
+      "trace": [
+        "absent"
+      ]
+    },
+    {
+      "initial": null,
+      "operation": "absentPut",
+      "result": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "trace": [
+        "absent"
+      ]
+    },
+    {
+      "initial": null,
+      "operation": "present",
+      "result": {
+        "type": "nil"
+      },
+      "hasProperty": false,
+      "stored": null,
+      "trace": []
+    },
+    {
+      "initial": null,
+      "operation": "presentElse",
+      "result": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "hasProperty": false,
+      "stored": null,
+      "trace": [
+        "absent"
+      ]
+    },
+    {
+      "initial": null,
+      "operation": "presentPut",
+      "result": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "trace": [
+        "absent"
+      ]
+    },
+    {
+      "initial": null,
+      "operation": "put",
+      "result": {
+        "type": "string",
+        "value": "replacement"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "string",
+        "value": "replacement"
+      },
+      "trace": []
+    },
+    {
+      "initial": null,
+      "operation": "putNil",
+      "result": {
+        "type": "nil"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "nil"
+      },
+      "trace": []
+    },
+    {
+      "initial": null,
+      "operation": "removeNil",
+      "result": {
+        "type": "nil"
+      },
+      "hasProperty": false,
+      "stored": null,
+      "trace": []
+    },
+    {
+      "initial": null,
+      "operation": "removingSet",
+      "result": {
+        "type": "string",
+        "value": "replacement"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "string",
+        "value": "replacement"
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "nil"
+      },
+      "operation": "get",
+      "result": {
+        "type": "nil"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "nil"
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "nil"
+      },
+      "operation": "fallback",
+      "result": {
+        "type": "nil"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "nil"
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "nil"
+      },
+      "operation": "absentPut",
+      "result": {
+        "type": "nil"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "nil"
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "nil"
+      },
+      "operation": "present",
+      "result": {
+        "type": "string",
+        "value": "present"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "nil"
+      },
+      "trace": [
+        "present"
+      ]
+    },
+    {
+      "initial": {
+        "type": "nil"
+      },
+      "operation": "presentElse",
+      "result": {
+        "type": "string",
+        "value": "present"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "nil"
+      },
+      "trace": [
+        "present"
+      ]
+    },
+    {
+      "initial": {
+        "type": "nil"
+      },
+      "operation": "presentPut",
+      "result": {
+        "type": "string",
+        "value": "present"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "nil"
+      },
+      "trace": [
+        "present"
+      ]
+    },
+    {
+      "initial": {
+        "type": "nil"
+      },
+      "operation": "put",
+      "result": {
+        "type": "string",
+        "value": "replacement"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "string",
+        "value": "replacement"
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "nil"
+      },
+      "operation": "putNil",
+      "result": {
+        "type": "nil"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "nil"
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "nil"
+      },
+      "operation": "removeNil",
+      "result": {
+        "type": "nil"
+      },
+      "hasProperty": false,
+      "stored": null,
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "nil"
+      },
+      "operation": "removingSet",
+      "result": {
+        "type": "string",
+        "value": "replacement"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "string",
+        "value": "replacement"
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "boolean",
+        "value": false
+      },
+      "operation": "get",
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "boolean",
+        "value": false
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "boolean",
+        "value": false
+      },
+      "operation": "fallback",
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "boolean",
+        "value": false
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "boolean",
+        "value": false
+      },
+      "operation": "absentPut",
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "boolean",
+        "value": false
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "boolean",
+        "value": false
+      },
+      "operation": "present",
+      "result": {
+        "type": "string",
+        "value": "present"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "boolean",
+        "value": false
+      },
+      "trace": [
+        "present"
+      ]
+    },
+    {
+      "initial": {
+        "type": "boolean",
+        "value": false
+      },
+      "operation": "presentElse",
+      "result": {
+        "type": "string",
+        "value": "present"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "boolean",
+        "value": false
+      },
+      "trace": [
+        "present"
+      ]
+    },
+    {
+      "initial": {
+        "type": "boolean",
+        "value": false
+      },
+      "operation": "presentPut",
+      "result": {
+        "type": "string",
+        "value": "present"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "boolean",
+        "value": false
+      },
+      "trace": [
+        "present"
+      ]
+    },
+    {
+      "initial": {
+        "type": "boolean",
+        "value": false
+      },
+      "operation": "put",
+      "result": {
+        "type": "string",
+        "value": "replacement"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "string",
+        "value": "replacement"
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "boolean",
+        "value": false
+      },
+      "operation": "putNil",
+      "result": {
+        "type": "nil"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "nil"
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "boolean",
+        "value": false
+      },
+      "operation": "removeNil",
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "hasProperty": false,
+      "stored": null,
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "boolean",
+        "value": false
+      },
+      "operation": "removingSet",
+      "result": {
+        "type": "string",
+        "value": "replacement"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "string",
+        "value": "replacement"
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "integer",
+        "value": "7"
+      },
+      "operation": "get",
+      "result": {
+        "type": "integer",
+        "value": "7"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "integer",
+        "value": "7"
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "integer",
+        "value": "7"
+      },
+      "operation": "fallback",
+      "result": {
+        "type": "integer",
+        "value": "7"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "integer",
+        "value": "7"
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "integer",
+        "value": "7"
+      },
+      "operation": "absentPut",
+      "result": {
+        "type": "integer",
+        "value": "7"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "integer",
+        "value": "7"
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "integer",
+        "value": "7"
+      },
+      "operation": "present",
+      "result": {
+        "type": "string",
+        "value": "present"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "integer",
+        "value": "7"
+      },
+      "trace": [
+        "present"
+      ]
+    },
+    {
+      "initial": {
+        "type": "integer",
+        "value": "7"
+      },
+      "operation": "presentElse",
+      "result": {
+        "type": "string",
+        "value": "present"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "integer",
+        "value": "7"
+      },
+      "trace": [
+        "present"
+      ]
+    },
+    {
+      "initial": {
+        "type": "integer",
+        "value": "7"
+      },
+      "operation": "presentPut",
+      "result": {
+        "type": "string",
+        "value": "present"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "integer",
+        "value": "7"
+      },
+      "trace": [
+        "present"
+      ]
+    },
+    {
+      "initial": {
+        "type": "integer",
+        "value": "7"
+      },
+      "operation": "put",
+      "result": {
+        "type": "string",
+        "value": "replacement"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "string",
+        "value": "replacement"
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "integer",
+        "value": "7"
+      },
+      "operation": "putNil",
+      "result": {
+        "type": "nil"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "nil"
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "integer",
+        "value": "7"
+      },
+      "operation": "removeNil",
+      "result": {
+        "type": "integer",
+        "value": "7"
+      },
+      "hasProperty": false,
+      "stored": null,
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "integer",
+        "value": "7"
+      },
+      "operation": "removingSet",
+      "result": {
+        "type": "string",
+        "value": "replacement"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "string",
+        "value": "replacement"
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "string",
+        "value": "seed"
+      },
+      "operation": "get",
+      "result": {
+        "type": "string",
+        "value": "seed"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "string",
+        "value": "seed"
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "string",
+        "value": "seed"
+      },
+      "operation": "fallback",
+      "result": {
+        "type": "string",
+        "value": "seed"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "string",
+        "value": "seed"
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "string",
+        "value": "seed"
+      },
+      "operation": "absentPut",
+      "result": {
+        "type": "string",
+        "value": "seed"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "string",
+        "value": "seed"
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "string",
+        "value": "seed"
+      },
+      "operation": "present",
+      "result": {
+        "type": "string",
+        "value": "present"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "string",
+        "value": "seed"
+      },
+      "trace": [
+        "present"
+      ]
+    },
+    {
+      "initial": {
+        "type": "string",
+        "value": "seed"
+      },
+      "operation": "presentElse",
+      "result": {
+        "type": "string",
+        "value": "present"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "string",
+        "value": "seed"
+      },
+      "trace": [
+        "present"
+      ]
+    },
+    {
+      "initial": {
+        "type": "string",
+        "value": "seed"
+      },
+      "operation": "presentPut",
+      "result": {
+        "type": "string",
+        "value": "present"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "string",
+        "value": "seed"
+      },
+      "trace": [
+        "present"
+      ]
+    },
+    {
+      "initial": {
+        "type": "string",
+        "value": "seed"
+      },
+      "operation": "put",
+      "result": {
+        "type": "string",
+        "value": "replacement"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "string",
+        "value": "replacement"
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "string",
+        "value": "seed"
+      },
+      "operation": "putNil",
+      "result": {
+        "type": "nil"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "nil"
+      },
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "string",
+        "value": "seed"
+      },
+      "operation": "removeNil",
+      "result": {
+        "type": "string",
+        "value": "seed"
+      },
+      "hasProperty": false,
+      "stored": null,
+      "trace": []
+    },
+    {
+      "initial": {
+        "type": "string",
+        "value": "seed"
+      },
+      "operation": "removingSet",
+      "result": {
+        "type": "string",
+        "value": "replacement"
+      },
+      "hasProperty": true,
+      "stored": {
+        "type": "string",
+        "value": "replacement"
+      },
+      "trace": []
+    }
+  ]
+}
