@@ -1,0 +1,1387 @@
+{
+  "authority": "Pinned upstream source-derived printing expectations; no GT execution. Indices/order use the existing native direct-child profile.",
+  "containers": [
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": null,
+      "formatter": false,
+      "output": "  ",
+      "trace": [
+        "read:a",
+        "read:b",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": null,
+      "formatter": true,
+      "output": "  ",
+      "trace": [
+        "read:a",
+        "read:b",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": "|",
+      "formatter": false,
+      "output": "||",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": "|",
+      "formatter": true,
+      "output": "||",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": "",
+      "formatter": false,
+      "output": "",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": "",
+      "formatter": true,
+      "output": "",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": null,
+      "formatter": false,
+      "output": "  A",
+      "trace": [
+        "read:a",
+        "read:b",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": null,
+      "formatter": true,
+      "output": "  [A]",
+      "trace": [
+        "read:a",
+        "read:b",
+        "read:c",
+        "format:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": "|",
+      "formatter": false,
+      "output": "||A",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": "|",
+      "formatter": true,
+      "output": "||[A]",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c",
+        "format:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": "",
+      "formatter": false,
+      "output": "A",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": "",
+      "formatter": true,
+      "output": "[A]",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c",
+        "format:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": null,
+      "formatter": false,
+      "output": " A ",
+      "trace": [
+        "read:a",
+        "read:b",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": null,
+      "formatter": true,
+      "output": " [A] ",
+      "trace": [
+        "read:a",
+        "read:b",
+        "format:b",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": "|",
+      "formatter": false,
+      "output": "|A|",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": "|",
+      "formatter": true,
+      "output": "|[A]|",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "format:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": "",
+      "formatter": false,
+      "output": "A",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": "",
+      "formatter": true,
+      "output": "[A]",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "format:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": null,
+      "formatter": false,
+      "output": " A A",
+      "trace": [
+        "read:a",
+        "read:b",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": null,
+      "formatter": true,
+      "output": " [A] [A]",
+      "trace": [
+        "read:a",
+        "read:b",
+        "format:b",
+        "read:c",
+        "format:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": "|",
+      "formatter": false,
+      "output": "|A|A",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": "|",
+      "formatter": true,
+      "output": "|[A]|[A]",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "format:b",
+        "separator",
+        "read:c",
+        "format:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": "",
+      "formatter": false,
+      "output": "AA",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": "",
+      "formatter": true,
+      "output": "[A][A]",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "format:b",
+        "separator",
+        "read:c",
+        "format:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": null,
+      "formatter": false,
+      "output": "A  ",
+      "trace": [
+        "read:a",
+        "read:b",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": null,
+      "formatter": true,
+      "output": "[A]  ",
+      "trace": [
+        "read:a",
+        "format:a",
+        "read:b",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": "|",
+      "formatter": false,
+      "output": "A||",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": "|",
+      "formatter": true,
+      "output": "[A]||",
+      "trace": [
+        "read:a",
+        "format:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": "",
+      "formatter": false,
+      "output": "A",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": "",
+      "formatter": true,
+      "output": "[A]",
+      "trace": [
+        "read:a",
+        "format:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": null,
+      "formatter": false,
+      "output": "A  A",
+      "trace": [
+        "read:a",
+        "read:b",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": null,
+      "formatter": true,
+      "output": "[A]  [A]",
+      "trace": [
+        "read:a",
+        "format:a",
+        "read:b",
+        "read:c",
+        "format:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": "|",
+      "formatter": false,
+      "output": "A||A",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": "|",
+      "formatter": true,
+      "output": "[A]||[A]",
+      "trace": [
+        "read:a",
+        "format:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c",
+        "format:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": "",
+      "formatter": false,
+      "output": "AA",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": "",
+      "formatter": true,
+      "output": "[A][A]",
+      "trace": [
+        "read:a",
+        "format:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c",
+        "format:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": null,
+      "formatter": false,
+      "output": "A A ",
+      "trace": [
+        "read:a",
+        "read:b",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": null,
+      "formatter": true,
+      "output": "[A] [A] ",
+      "trace": [
+        "read:a",
+        "format:a",
+        "read:b",
+        "format:b",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": "|",
+      "formatter": false,
+      "output": "A|A|",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": "|",
+      "formatter": true,
+      "output": "[A]|[A]|",
+      "trace": [
+        "read:a",
+        "format:a",
+        "separator",
+        "read:b",
+        "format:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": "",
+      "formatter": false,
+      "output": "AA",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "nil"
+        }
+      ],
+      "separator": "",
+      "formatter": true,
+      "output": "[A][A]",
+      "trace": [
+        "read:a",
+        "format:a",
+        "separator",
+        "read:b",
+        "format:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": null,
+      "formatter": false,
+      "output": "A A A",
+      "trace": [
+        "read:a",
+        "read:b",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": null,
+      "formatter": true,
+      "output": "[A] [A] [A]",
+      "trace": [
+        "read:a",
+        "format:a",
+        "read:b",
+        "format:b",
+        "read:c",
+        "format:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": "|",
+      "formatter": false,
+      "output": "A|A|A",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": "|",
+      "formatter": true,
+      "output": "[A]|[A]|[A]",
+      "trace": [
+        "read:a",
+        "format:a",
+        "separator",
+        "read:b",
+        "format:b",
+        "separator",
+        "read:c",
+        "format:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": "",
+      "formatter": false,
+      "output": "AAA",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "type": "string",
+          "value": "A"
+        }
+      ],
+      "separator": "",
+      "formatter": true,
+      "output": "[A][A][A]",
+      "trace": [
+        "read:a",
+        "format:a",
+        "separator",
+        "read:b",
+        "format:b",
+        "separator",
+        "read:c",
+        "format:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "type": "integer",
+          "value": "0"
+        },
+        {
+          "type": "string",
+          "value": ""
+        }
+      ],
+      "separator": null,
+      "formatter": false,
+      "output": "false 0 ",
+      "trace": [
+        "read:a",
+        "read:b",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "type": "integer",
+          "value": "0"
+        },
+        {
+          "type": "string",
+          "value": ""
+        }
+      ],
+      "separator": null,
+      "formatter": true,
+      "output": "[false] [0] []",
+      "trace": [
+        "read:a",
+        "format:a",
+        "read:b",
+        "format:b",
+        "read:c",
+        "format:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "type": "integer",
+          "value": "0"
+        },
+        {
+          "type": "string",
+          "value": ""
+        }
+      ],
+      "separator": "|",
+      "formatter": false,
+      "output": "false|0|",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "type": "integer",
+          "value": "0"
+        },
+        {
+          "type": "string",
+          "value": ""
+        }
+      ],
+      "separator": "|",
+      "formatter": true,
+      "output": "[false]|[0]|[]",
+      "trace": [
+        "read:a",
+        "format:a",
+        "separator",
+        "read:b",
+        "format:b",
+        "separator",
+        "read:c",
+        "format:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "type": "integer",
+          "value": "0"
+        },
+        {
+          "type": "string",
+          "value": ""
+        }
+      ],
+      "separator": "",
+      "formatter": false,
+      "output": "false0",
+      "trace": [
+        "read:a",
+        "separator",
+        "read:b",
+        "separator",
+        "read:c"
+      ]
+    },
+    {
+      "values": [
+        {
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "type": "integer",
+          "value": "0"
+        },
+        {
+          "type": "string",
+          "value": ""
+        }
+      ],
+      "separator": "",
+      "formatter": true,
+      "output": "[false][0][]",
+      "trace": [
+        "read:a",
+        "format:a",
+        "separator",
+        "read:b",
+        "format:b",
+        "separator",
+        "read:c",
+        "format:c"
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "value": {
+        "type": "nil"
+      },
+      "readToString": "(nil)",
+      "printFor": ""
+    },
+    {
+      "value": {
+        "type": "boolean",
+        "value": false
+      },
+      "readToString": "false",
+      "printFor": "false"
+    },
+    {
+      "value": {
+        "type": "integer",
+        "value": "0"
+      },
+      "readToString": "0",
+      "printFor": "0"
+    },
+    {
+      "value": {
+        "type": "string",
+        "value": ""
+      },
+      "readToString": "",
+      "printFor": ""
+    },
+    {
+      "value": {
+        "type": "string",
+        "value": "Ada"
+      },
+      "readToString": "Ada",
+      "printFor": "Ada"
+    }
+  ]
+}

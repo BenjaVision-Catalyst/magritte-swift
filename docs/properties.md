@@ -92,3 +92,5 @@ python3 tools/compare-graphs.py /tmp/properties-cpp.json /tmp/properties-swift.j
 ```
 
 These checks use standalone code and saved fixtures, with no GT connection.
+
+Phase 0.24 adds local print-hook slots under `maPrintString` and `maPrintStringSeparator`, with the same explicit Value-versus-callable boundary. `hasProperty` sees installed hooks; Value lookup/removal cannot return them, and a checked Value write replaces the local slot. Typed clear operations remove presence. These settings remain rejected by all graph formats. See [printing.md](printing.md).

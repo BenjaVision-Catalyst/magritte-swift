@@ -96,6 +96,8 @@ open class Description: Model {
     public var key: String
   public var definingContext: DescriptionContext?
   public var displayBlock: DisplayBlock?
+  public var printStringBlock: PrintValueBlock?
+  public var printSeparatorBlock: PrintSeparatorBlock?
   open var isSortable: Bool {
     let registry = ClassRegistry.shared
     if registry.includesBehavior(className, "MAPasswordDescription") { return false }
@@ -143,6 +145,11 @@ open class Description: Model {
     if name == "displayBlockOrSymbol", displayBlock != nil {
       throw MagritteError(
         "Display block is local; inspect displayBlock rather than a Value snapshot")
+    }
+    if (name == "maPrintString" && printStringBlock != nil)
+      || (name == "maPrintStringSeparator" && printSeparatorBlock != nil)
+    {
+      throw MagritteError("Print block is local; inspect its callable slot")
     }
     if name == "requiredErrorMessage" { return try requiredErrorMessage(limits: limits) }
     if name == "kindErrorMessage" { return try kindErrorMessage(limits: limits) }
@@ -333,6 +340,8 @@ func supported(_ d: Description) throws {
         case "lineCount":
             try require(d.className == "MAMemoDescription", "Line count requires memo")
             guard case .integer = v else { throw MagritteError("Expected memo line count") }
+    case "maPrintString", "maPrintStringSeparator":
+      try require(v.isNil, "Print settings require local callable slots or explicit nil")
     case "displayBlockOrSymbol":
       switch v {
       case .undefined, .symbol: break;
@@ -652,11 +661,17 @@ public final class Graph {
       try require(format == "magritte.graph/4" || d.className != "MAClassDescription", "Class descriptions require graph/4")
             try require(format != "magritte.graph/1" || !d.isReference, "Reference descriptions require graph/2")
             guard let props = n["properties"] else { throw MagritteError("Missing properties") }
-            for (k, v) in try dictionary(props) { _ = try identity(k); d.properties[k] = try value(v, limits) }
-            if !d.isContainer {
-                guard let accessor = n["accessor"] else { throw MagritteError("Missing accessor") }
-                let a = try accessorValue(accessor, limits)
-                try require(format >= "magritte.graph/3" || a.className == "MADictionaryAccessor", "Accessor requires graph/3")
+      for (k, v) in try dictionary(props) {
+        _ = try identity(k);
+        try require(
+          k != "maPrintString" && k != "maPrintStringSeparator",
+          "Print settings are local callable state")
+        d.properties[k] = try value(v, limits)
+      }
+      if !d.isContainer {
+        guard let accessor = n["accessor"] else { throw MagritteError("Missing accessor") }
+        let a = try accessorValue(accessor, limits)
+        try require(format >= "magritte.graph/3" || a.className == "MADictionaryAccessor", "Accessor requires graph/3")
                 if a.className == "MADictionaryAccessor" { d.key = a.name } else { d.accessor = a }
             }
             if format >= "magritte.graph/3" {
@@ -807,7 +822,9 @@ public final class Graph {
             try require(d.accessorObject == nil, "Live accessor identity is local; materialize an explicit snapshot before export")
       try require(
         d.conditions.isEmpty && d.nativeRead == nil && d.nativeWrite == nil
-          && d.defaultFunction == nil && d.displayBlock == nil,
+          && d.defaultFunction == nil && d.displayBlock == nil && d.printStringBlock == nil
+          && d.printSeparatorBlock == nil && d.properties["maPrintString"] == nil
+          && d.properties["maPrintStringSeparator"] == nil,
         "Local executable behavior is not portable")
       var props: [String: Any] = [:]
       for (k, v) in d.properties { props[k] = try wire(v, limits) }

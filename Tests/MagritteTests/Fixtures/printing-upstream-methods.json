@@ -1,0 +1,118 @@
+{
+  "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
+  "verification": "Upstream source only; GT was not accessed.",
+  "methods": [
+    {
+      "className": "MADescription",
+      "classSide": false,
+      "selector": "postCopy",
+      "sourceSHA256": "07a6b125e16ec1ec783a1ef4c7450aa5c56de522926a2f72b28ae345875585a9",
+      "path": "source/Magritte-Model/MADescription.class.st"
+    },
+    {
+      "className": "MADescription",
+      "classSide": false,
+      "selector": "read:",
+      "sourceSHA256": "d09fc85b9b84026562a19618b2178153d0c4170089de43fdf845ffeb33fcc953",
+      "path": "source/Magritte-Model/MADescription.class.st"
+    },
+    {
+      "className": "MADescription",
+      "classSide": false,
+      "selector": "readToString:",
+      "sourceSHA256": "cb1aeed224aafbcad43ab3e4a9df80b4c134027ac403f868a3f89d77963d35f0",
+      "path": "source/Magritte-Model/MADescription.class.st"
+    },
+    {
+      "className": "MADescription",
+      "classSide": false,
+      "selector": "toString:",
+      "sourceSHA256": "afa15ce640ef15f16d2b0dd7ce3ef1c2567fb23decd043bbd2a430fe1bb41cc5",
+      "path": "source/Magritte-Model/MADescription.class.st"
+    },
+    {
+      "className": "MADescription",
+      "classSide": false,
+      "selector": "toString:writer:",
+      "sourceSHA256": "b26cd606ade88678ac70bff7a14cbb28dbaf38d16ab49f001868809a7fd980a1",
+      "path": "source/Magritte-Model/MADescription.class.st"
+    },
+    {
+      "className": "MAElementDescription",
+      "classSide": false,
+      "selector": "printFor:on:",
+      "sourceSHA256": "ae3f09558a2c88e207a6862576b62c75c0a5d891b21318128c39e6b4b910eee3",
+      "path": "source/Magritte-Model/MAElementDescription.class.st"
+    },
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "do:separatedBy:",
+      "sourceSHA256": "abaaa4356e46c6442846bc20c884fbbe22e2aa523912ec5e5c9d5c94dfe7c6c5",
+      "path": "source/Magritte-Model/MAContainer.class.st"
+    },
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "postCopy",
+      "sourceSHA256": "9e54a74154ad92697bdc336b33a2b86b9a70a6732bbb806f1f73ee463a29aa3f",
+      "path": "source/Magritte-Model/MAContainer.class.st"
+    },
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "print:on:",
+      "sourceSHA256": "d5d0052412dc656f1b9604ef5536a586368ef82ff079b579c7325a41e4ea68c9",
+      "path": "source/Magritte-Model/MAContainer.class.st"
+    },
+    {
+      "className": "MAStringWriter",
+      "classSide": false,
+      "selector": "printObjectDescribedBy:",
+      "sourceSHA256": "c79085aee4bde8a50c487ad97e373b71f705f655a59ffcd0af081712fdabcd97",
+      "path": "source/Magritte-Model/MAStringWriter.class.st"
+    },
+    {
+      "className": "MAStringWriter",
+      "classSide": false,
+      "selector": "visitContainer:",
+      "sourceSHA256": "c718c7cf1b4cbe911f996c255c04d3c5b668ca93b1a8c8cd0b780b01d7f65e50",
+      "path": "source/Magritte-Model/MAStringWriter.class.st"
+    },
+    {
+      "className": "MAStringWriter",
+      "classSide": false,
+      "selector": "write:description:to:",
+      "sourceSHA256": "5b46bc2b0a3573a8a78aa62baf4dc54f47baebc3e8f567889845567e6fbfb7e6",
+      "path": "source/Magritte-Model/MAStringWriter.class.st"
+    },
+    {
+      "className": "MATPropertyOwner",
+      "classSide": false,
+      "selector": "postCopyProperties",
+      "sourceSHA256": "c6515694f1179955e3ada08acd2e049b55a848dd2c133bf0ea064f670a0ea971",
+      "path": "source/Magritte-Model/MATPropertyOwner.trait.st"
+    },
+    {
+      "className": "MATPropertyOwner",
+      "classSide": false,
+      "selector": "propertyAt:ifAbsent:",
+      "sourceSHA256": "4612f77ecf4e5180cb0794acf29a9b11457e5b66cb5cbff95080625331ca40a9",
+      "path": "source/Magritte-Model/MATPropertyOwner.trait.st"
+    },
+    {
+      "className": "MATPropertyOwner",
+      "classSide": false,
+      "selector": "propertyAt:ifPresent:ifAbsent:",
+      "sourceSHA256": "b3501bb4f1d8fe70643e0d65502941ee0339ec9a1c6a9d84512f5b96d1d6967b",
+      "path": "source/Magritte-Model/MATPropertyOwner.trait.st"
+    },
+    {
+      "className": "MATPropertyOwner",
+      "classSide": false,
+      "selector": "propertyAt:put:",
+      "sourceSHA256": "94ba8194cc37ab7ad1abb3aac4ead83ed47a62156c011b767e5338d5e57206f2",
+      "path": "source/Magritte-Model/MATPropertyOwner.trait.st"
+    }
+  ]
+}

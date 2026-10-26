@@ -79,6 +79,8 @@
     "portable-v3.json": "782d978f4bfd5519ff9410e4b7045d0301d0ce8099e0fbb2d323e823c16305c1",
     "pragma-live-methods.json": "617bb145f3532adf2e1dd2d3c1152053b18bf24fcfa6a9622c6eba0a205e8f70",
     "pragma-scenarios.json": "abcf128ec8cc9827d916c82831145035fc118f3cd92bca2ef22f2722a2a69062",
+    "printing-scenarios.json": "7ab19f52f16bb7a17d437159fa848a4ba6d01697d33a660634c1cb30439481eb",
+    "printing-upstream-methods.json": "3772a36051b172e5a7e0a723d76db8c48bbc9e604a5dfa858d38f00ad0e74116",
     "properties-scenarios.json": "db286a951e0076b3823243240be29472111d7477662bec5028ad059887a69b9b",
     "properties-upstream-methods.json": "d76c153e9ee4e95505b2bccb107d5d68a6de86c4b0259edc675efa9c5c10f6b6",
     "recursive-live-methods.json": "ad0bbb457f1f5f25d5079d136dc7983c4250d26a43facfcfff8bedcbeff69245",

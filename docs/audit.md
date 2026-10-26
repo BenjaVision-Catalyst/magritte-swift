@@ -84,6 +84,7 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Reference display / option undefined setter | I (bound-reference profile), fresh R deferred | getter side effects, repeated interpreter access, bounded option cascades and raw snapshot traversal; reference-access.md |
 | Graph callback traversal | I | bounded composition/reference traversal, cycles terminate; distinct from MAVisitor dispatch |
 | Description/value JSON import/export | I, R | graph/1–4; GT -> both ports -> GT, aliases/cycles/nested objects/collections |
+| Described-object printing | I (native model/Value profile), fresh R deferred | readToString, element printFor, container print, local field/separator hooks and bounded native stream; printing.md; hooks X on wire |
 | MAStringReader/Writer text conversion | I, R (profile) | scalars/options/tokens; writers also containers/relations; other interpreters N |
 | Self-description | I, R (selected class-specific profile) | fifteen supported classes in reflective profile; staged metadata edits govern subsequent model validation |
 | Recursive description self-description | I, R (selected profile) | lazy bounded sessions; children/reference/name/optionsTextual; three metadata levels and imported-schema edits |
@@ -158,3 +159,5 @@ Phase 0.21 implements MATPropertyOwner stored-Value lookup/conditional/update se
 Phase 0.22 implements element nil-only lazy initialization, selector-backed maLazyPropertyUsing: and initialAnswer fallback/storage. [lazy.md](lazy.md) records twelve source fingerprints, 144 lazy/six answer cases, write/error/reference/copy/wire tests and explicit callback/collection boundaries. No new annotated fields are invented. GT was not accessed; fresh R remains deferred.
 
 Phase 0.23 implements description-specific required/kind/range/conflict messages, generated range writer behavior, and checked-memento conflict text after reset. [messages.md](messages.md) records 22 source fingerprints, 35 getter/forty validation cases, native callback/child/error/reset/copy/wire tests and the explicit String emission boundary. GT was not accessed; fresh R remains deferred.
+
+Phase 0.24 implements described-object readToString/printFor/container print and local maPrintString/maPrintStringSeparator hooks. [printing.md](printing.md) records sixteen source fingerprints, 54 container/five element cases, callback/read/separator timing, partial failures, shallow copy identity, codec rejection and native output bounds. Ordinary writers are unchanged. GT was not accessed; fresh R remains deferred.

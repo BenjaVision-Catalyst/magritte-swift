@@ -1,8 +1,8 @@
 {
   "repository": "https://github.com/BenjaVision-Catalyst/magritte-cpp",
-  "revision": "65a6ad892eea288d71a09f10fa646ac722a12f7d",
+  "revision": "b9c4e929400525acade82b1eebce07a2cd61c44d",
   "path": "conformance",
-  "manifestSHA256": "e101615d04a7bb37abf61ded7ebb70c0bea02706c2c94127b22b8e41a84eb8ad",
+  "manifestSHA256": "98dffb05eb90481150fc83e88c16322148004371bb87aeb28a9874b4771d0b47",
   "mirror": "Tests/MagritteTests/Fixtures",
   "purpose": "Shared semantic and interchange fixtures only; no implementation dependency"
 }

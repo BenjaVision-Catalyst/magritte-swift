@@ -17,11 +17,18 @@ private func checkedProperty(_ value: Value, _ limits: Limits) throws -> Value {
 extension Description {
   public func hasProperty(_ name: String) -> Bool {
     properties[name] != nil || (name == "displayBlockOrSymbol" && displayBlock != nil)
+      || (name == "maPrintString" && printStringBlock != nil)
+      || (name == "maPrintStringSeparator" && printSeparatorBlock != nil)
   }
   public func propertyAt(_ name: String, limits: Limits = Limits()) throws -> Value {
     try propertyKey(name, limits)
     if name == "displayBlockOrSymbol", displayBlock != nil {
       throw MagritteError("Display block has no stored Value representation")
+    }
+    if (name == "maPrintString" && printStringBlock != nil)
+      || (name == "maPrintStringSeparator" && printSeparatorBlock != nil)
+    {
+      throw MagritteError("Print block has no stored Value representation")
     }
     guard let value = properties[name] else {
       throw MagritteError("MAPropertyError: property not found: " + name)
@@ -75,6 +82,8 @@ extension Description {
     try writable(self, name)
     try checkLocalValue(value, limits: limits)
     properties[name] = value
+    if name == "maPrintString" { printStringBlock = nil }
+    if name == "maPrintStringSeparator" { printSeparatorBlock = nil }
     if name == "displayBlockOrSymbol" { displayBlock = nil }
     return value
   }
