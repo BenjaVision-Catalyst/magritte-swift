@@ -1,0 +1,6383 @@
+{
+  "authority": "Pinned Magritte Object extension source-derived initialization and isSameAs:using: expectations. Primitive equality uses the existing supported native Value profile; GT was not accessed.",
+  "initialization": [
+    {
+      "readOnly": false,
+      "visible": false,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "nil"
+      },
+      "writes": [
+        {
+          "type": "nil"
+        }
+      ],
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": false,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": [
+        {
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": false,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": [
+        {
+          "type": "integer",
+          "value": "0"
+        }
+      ],
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": false,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": [
+        {
+          "type": "string",
+          "value": ""
+        }
+      ],
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": false,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "writes": [
+        {
+          "type": "string",
+          "value": "seed"
+        }
+      ],
+      "result": {
+        "type": "string",
+        "value": "seed"
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": false,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "writes": [
+        {
+          "type": "array",
+          "value": []
+        }
+      ],
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": false,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "nil"
+      },
+      "writes": [
+        {
+          "type": "nil"
+        }
+      ],
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": false,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": [
+        {
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": false,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": [
+        {
+          "type": "integer",
+          "value": "0"
+        }
+      ],
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": false,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": [
+        {
+          "type": "string",
+          "value": ""
+        }
+      ],
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": false,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "writes": [
+        {
+          "type": "string",
+          "value": "seed"
+        }
+      ],
+      "result": {
+        "type": "string",
+        "value": "seed"
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": false,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "writes": [
+        {
+          "type": "array",
+          "value": []
+        }
+      ],
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": true,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "nil"
+      },
+      "writes": [
+        {
+          "type": "nil"
+        }
+      ],
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": true,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": [
+        {
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": true,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": [
+        {
+          "type": "integer",
+          "value": "0"
+        }
+      ],
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": true,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": [
+        {
+          "type": "string",
+          "value": ""
+        }
+      ],
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": true,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "writes": [
+        {
+          "type": "string",
+          "value": "seed"
+        }
+      ],
+      "result": {
+        "type": "string",
+        "value": "seed"
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": true,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "writes": [
+        {
+          "type": "array",
+          "value": []
+        }
+      ],
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": true,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "nil"
+      },
+      "writes": [
+        {
+          "type": "nil"
+        }
+      ],
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": true,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": [
+        {
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": true,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": [
+        {
+          "type": "integer",
+          "value": "0"
+        }
+      ],
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": true,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": [
+        {
+          "type": "string",
+          "value": ""
+        }
+      ],
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": true,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "writes": [
+        {
+          "type": "string",
+          "value": "seed"
+        }
+      ],
+      "result": {
+        "type": "string",
+        "value": "seed"
+      }
+    },
+    {
+      "readOnly": false,
+      "visible": true,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "writes": [
+        {
+          "type": "array",
+          "value": []
+        }
+      ],
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": false,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "nil"
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": false,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": false,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": false,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": false,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": false,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": false,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "nil"
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": false,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": false,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": false,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": false,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": false,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": true,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "nil"
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": true,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": true,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": true,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": true,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": true,
+      "shouldCacheDefault": false,
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": true,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "nil"
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": true,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": true,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": true,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": true,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    },
+    {
+      "readOnly": true,
+      "visible": true,
+      "shouldCacheDefault": true,
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "writes": [],
+      "result": {
+        "type": "string",
+        "value": "prior"
+      }
+    }
+  ],
+  "comparison": [
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "boolean",
+        "value": false
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "integer",
+        "value": "0"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": ""
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "boolean",
+        "value": false
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "integer",
+        "value": "0"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": ""
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": "seed"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "string",
+        "value": "other"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": true
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "array",
+        "value": []
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "string",
+        "value": ""
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "string",
+        "value": "other"
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "array",
+        "value": []
+      },
+      "result": false
+    },
+    {
+      "default": {
+        "type": "array",
+        "value": []
+      },
+      "left": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "right": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": true
+    }
+  ]
+}

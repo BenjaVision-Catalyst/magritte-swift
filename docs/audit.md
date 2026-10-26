@@ -48,6 +48,8 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Symbol, Memo, Password and Token descriptions | I, R | graph/3 scalar kinds, masking and token text conversion |
 | Date/time/duration, URL, color/icon/file/directory/block/action/table descriptions | N | unsupported class fails import; see complete inventory |
 | Required/optional, custom undefinedValue | I, R | required checks nil; undefined sentinel skips kind/specific/conditions |
+| Model default initialization / isSameAs | I (explicit description/provider and native Value profile), fresh R deferred | raw default writes, right-readability gating, nil/default equivalence and host equality; model-protocol.md |
+| Generic Object readUsing nil fallback | N (generic native adapters) | pinned Object replaces nil with undefinedValue; native generic adapters retain raw nil; AdaptiveModel has its own absent-nil protocol |
 | Explicit defaults | I, R (property only) | raw read returns nil; defaultValue exposes declared default |
 | shouldCacheDefault | I, R | editing default filtering, including pinned/live difference; see editing.md |
 | Memento default substitution/cache | I, R | straight nil/default and cached sentinel/default cooking; raw models unchanged |
@@ -161,3 +163,5 @@ Phase 0.22 implements element nil-only lazy initialization, selector-backed maLa
 Phase 0.23 implements description-specific required/kind/range/conflict messages, generated range writer behavior, and checked-memento conflict text after reset. [messages.md](messages.md) records 22 source fingerprints, 35 getter/forty validation cases, native callback/child/error/reset/copy/wire tests and the explicit String emission boundary. GT was not accessed; fresh R remains deferred.
 
 Phase 0.24 implements described-object readToString/printFor/container print and local maPrintString/maPrintStringSeparator hooks. [printing.md](printing.md) records sixteen source fingerprints, 54 container/five element cases, callback/read/separator timing, partial failures, shallow copy identity, codec rejection and native output bounds. Ordinary writers are unchanged. GT was not accessed; fresh R remains deferred.
+
+Phase 0.25 implements explicit-description/provider model initialization and isSameAs:using: comparison. [model-protocol.md](model-protocol.md) records fourteen Magritte source fingerprints, separately attributed Pharo membership review, 48 initialization/384 comparison cases, timing/failure/default/container/provider/reference/bounds tests and portable models. The generic Object nil-read fallback gap is now explicit. Callable default Values, automatic per-object discovery and model hashing remain separate gaps. GT was not accessed; fresh R remains deferred.

@@ -1,0 +1,111 @@
+{
+  "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
+  "verification": "Upstream source only; GT was not accessed.",
+  "methods": [
+    {
+      "className": "Object",
+      "classSide": false,
+      "selector": "initializeMagritte",
+      "sourceSHA256": "12d4adc6362c000f2ddd68e497e632d23aba54de23b231dc170678ff287cf7e8",
+      "path": "source/Magritte-Model/Object.extension.st"
+    },
+    {
+      "className": "Object",
+      "classSide": false,
+      "selector": "isSameAs:",
+      "sourceSHA256": "a5c78770ee6515f91345d0217848fc3131cfe170772cc5fdd3b49a02325d6deb",
+      "path": "source/Magritte-Model/Object.extension.st"
+    },
+    {
+      "className": "Object",
+      "classSide": false,
+      "selector": "isSameAs:using:",
+      "sourceSHA256": "6c9eb0fdb6c719a293c06031bf848afeffb7aa06326717c838a1a95e3cdf1ab6",
+      "path": "source/Magritte-Model/Object.extension.st"
+    },
+    {
+      "className": "Object",
+      "classSide": false,
+      "selector": "readUsing:",
+      "sourceSHA256": "4d9f6c8a7aa5309d28ed8eaee85e2c1963c6b1861c8e69a10f4153b23a22effd",
+      "path": "source/Magritte-Model/Object.extension.st"
+    },
+    {
+      "className": "Object",
+      "classSide": false,
+      "selector": "write:using:",
+      "sourceSHA256": "6354df2b421be94aa6ad4b7705ea357e4414b6bbd7d65be3f357f8c36548511e",
+      "path": "source/Magritte-Model/Object.extension.st"
+    },
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "allSatisfy:",
+      "sourceSHA256": "6e9bac7b50dba1b813086fe8a34b822c17700cc7a7dbb43967f2e83efd0378d9",
+      "path": "source/Magritte-Model/MAContainer.class.st"
+    },
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "do:",
+      "sourceSHA256": "6d03f043b1175b1889c31f93f773b5a2ef658b00c756b59f0629096dcba8ce89",
+      "path": "source/Magritte-Model/MAContainer.class.st"
+    },
+    {
+      "className": "MAElementDescription",
+      "classSide": false,
+      "selector": "default",
+      "sourceSHA256": "0865275448dbc3b35c7daf4841156a8617e9ff7054e9bb79b5846b66cf2e8fc2",
+      "path": "source/Magritte-Model/MAElementDescription.class.st"
+    },
+    {
+      "className": "MADescription",
+      "classSide": false,
+      "selector": "default",
+      "sourceSHA256": "3e512f39b00394285260a7f449230cf2aeefa0f8121b13ab48d3c45641ce4c7c",
+      "path": "source/Magritte-Model/MADescription.class.st"
+    },
+    {
+      "className": "MADescription",
+      "classSide": false,
+      "selector": "isReadOnly",
+      "sourceSHA256": "a326dcc0322e0543fa513c3fcdedce7233ba99dc7865ffe6b6cecb460e11902b",
+      "path": "source/Magritte-Model/MADescription.class.st"
+    },
+    {
+      "className": "MADescription",
+      "classSide": false,
+      "selector": "read:",
+      "sourceSHA256": "d09fc85b9b84026562a19618b2178153d0c4170089de43fdf845ffeb33fcc953",
+      "path": "source/Magritte-Model/MADescription.class.st"
+    },
+    {
+      "className": "MADescription",
+      "classSide": false,
+      "selector": "write:to:",
+      "sourceSHA256": "ca6175be6406c34d0d3ee874cb4dd870eeb987e8061eea9c42e20781429c4cd8",
+      "path": "source/Magritte-Model/MADescription.class.st"
+    },
+    {
+      "className": "MASelectorAccessor",
+      "classSide": false,
+      "selector": "canRead:",
+      "sourceSHA256": "7001ba4106174e4f5626a36a56121c095c5e0a6228db96edf483bb3a99c92952",
+      "path": "source/Magritte-Model/MASelectorAccessor.class.st"
+    },
+    {
+      "className": "MAAccessor",
+      "classSide": false,
+      "selector": "canRead:",
+      "sourceSHA256": "d8f36d72fb4a47c2b98fcae7faff368a4fc7f2030d2a26256df8396810b3763b",
+      "path": "source/Magritte-Model/MAAccessor.class.st"
+    }
+  ],
+  "supportingKernel": {
+    "note": "Pharo source review confirms includesAll short-circuits in argument order, and array membership compares the stored default as the left equality receiver. This is supporting kernel evidence, not a live-GT or Magritte method fingerprint.",
+    "urls": [
+      "https://github.com/pharo-project/pharo/blob/81f614957ca93536d2483a0f64480456b0350451/src/Collections-Abstract/Collection.class.st",
+      "https://github.com/pharo-project/pharo/blob/81f614957ca93536d2483a0f64480456b0350451/src/Collections-Sequenceable/SequenceableCollection.class.st"
+    ]
+  }
+}

@@ -140,3 +140,7 @@ Graph/3–4 accepts `requiredErrorMessage`, `kindErrorMessage`, and `conflictErr
 ## Local printing hooks (0.24)
 
 The described-object printing protocol adds no wire forms. `maPrintString` and `maPrintStringSeparator` are local callable settings and reject import/export in every graph version, even when represented by explicit nil. Actual native hook slots also reject export regardless of visibility. Clear hooks explicitly before exporting an ordinary graph. Imported descriptions and objects can be printed with the existing supported writers. See [printing.md](printing.md).
+
+## Local model protocols (0.25)
+
+Model initialization and described comparison operate on existing descriptions, defaults, accessors and model Values. They add no wire representation or semantic property. Local description providers and host equality implementations are not serialized. Ordinary imported graphs can be initialized and compared using the supplied native Model hooks and existing Value equality profile. See [model-protocol.md](model-protocol.md) for raw-default and adapter boundaries.
