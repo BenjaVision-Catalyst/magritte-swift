@@ -376,6 +376,7 @@ final class BuildersTests: XCTestCase {
     priorities.className = "MAPriorityContainer"
     priorities.children[0].properties["priority"] = try .rational(10001, 100)
     priorities.children[1].properties["priority"] = .integer(100)
+    try priorities.resort()
     XCTAssertEqual(try priorities.orderedChildren()[0].id, "small")
     XCTAssertThrowsError(try Value.rational(1, 0))
     XCTAssertThrowsError(try Value.rational(1, -1))

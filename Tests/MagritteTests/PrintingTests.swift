@@ -247,6 +247,7 @@ final class PrintingTests: XCTestCase {
     a.properties["priority"] = .integer(3)
     b.properties["priority"] = .integer(1)
     c.properties["priority"] = .integer(2)
+    try root.resort()
     let sorted = PrintStream()
     try root.print(model, on: sorted)
     XCTAssertEqual(sorted.contents, "B C A")

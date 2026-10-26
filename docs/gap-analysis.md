@@ -1,6 +1,6 @@
 # Magritte port gap analysis — 27 October 2026
 
-**0.27 update:** MAG-001 is implemented for registered subclasses of the existing executable profile; see [inherited execution](inheritance.md). MAG-002 is also implemented in 0.28; see [default/self references](default-references.md). The next foundational phase is MAG-003, container mutation and persistent ordering. Baseline counts and probe observations below remain the original 0.26 audit evidence.
+**0.27 update:** MAG-001 is implemented for registered subclasses of the existing executable profile; see [inherited execution](inheritance.md). MAG-002 is also implemented in 0.28; see [default/self references](default-references.md). MAG-003 is implemented in 0.29 over native vectors/arrays; see [container mutation](container-mutation.md). The next foundational gap is MAG-004, mutable collection identity. Baseline counts and probe observations below remain the original 0.26 audit evidence.
 
 At that baseline, both ports implemented a substantial headless Magritte profile, but were not yet faithful across the full model protocol. The most consequential remaining gaps were **inherited execution for registered description subclasses, default reference semantics, persistent container state and mutable collection identity**. Adding more class names or small convenience methods will not close those gaps.
 
@@ -41,7 +41,7 @@ Statuses below apply to **both** ports. “Limited” denotes an intentional cur
 | --- | --- | --- |
 | MAG-001 | Done, 0.27 | Inherited execution implemented for registered descendants of supported families; [evidence and boundaries](inheritance.md). |
 | MAG-002 | Done, 0.28 | Default/self references, relation helpers and nullable graph/4 storage implemented; [evidence and ownership](default-references.md). |
-| MAG-003 | P1 | Containers: raw child mutation and rich enumeration exist; source mutation APIs and stored priority-order behavior are incomplete. |
+| MAG-003 | Done, 0.29 | Native source-shaped mutations, persistent priority state and graph adaptation implemented; [evidence and boundaries](container-mutation.md). |
 | MAG-004 | P1 | Collection identity: inline Values are snapshots; mutable aliases/cycles and associated memento/copy behavior are missing. |
 | MAG-005 | P2 | Validation: flat String leaf errors; no source-shaped nested error/continuation protocol, container conditions or nil-message emission. |
 | MAG-006 | P2 | Interpreters: default reader/writer/validator classes only; wider local selection, stateful streaming and message writers are incomplete. |
@@ -77,7 +77,7 @@ The native evidence is in C++ `src/magritte.cpp`, `src/collections.cpp`, `src/se
 
 There is a source caveat: `MARelationDescription>>reference` has a nil fallback to a common-class template, but its superclass getter normally creates a nonnil String description first. Do not specify an always-active automatic template intersection from a comment or historical paper. Audit that actual branch and relevant platform overrides before implementing it.
 
-### Container state is more than sorted output
+### MAG-003 finding at 0.26 (closed in 0.29)
 
 The ports expose child arrays/vectors and sort a fresh view whenever `orderedChildren` runs. A two-child priority container changes observed order immediately after one child's priority is mutated, without an explicit resort. Upstream [MAPriorityContainer](https://github.com/magritte-metamodel/magritte/blob/d67f318686b7779aed79416db121e257d1191f2e/source/Magritte-Model/MAPriorityContainer.class.st) stores a SortedCollection, converts it in `setChildren:`, provides `resort`, and refuses move operations. An automatically re-sorted projection does not establish equivalent backing-state behavior.
 
@@ -105,7 +105,7 @@ Some upstream source needs investigation rather than literal copying: `MAMessagi
 
 1. **Completed in 0.27: inherited description execution (MAG-001).** The phase closes the registered-subclass inconsistency across the current 15-class profile. No new scalar domains are needed for this phase.
 2. **Reference semantics completed in 0.28 (MAG-002); grouped options remain MAG-008.** Default/self references and relation helper behavior are implemented; grouping remains a separate accessor/metadata phase.
-3. **Container mutation/order (MAG-003).** Establish persistent source-shaped state and explicit mutations. Document the still-deferred mutable collection alias boundary.
+3. **Completed in 0.29: container mutation/order (MAG-003).** Native vector/array state and source-shaped mutations are implemented. Mutable backing collection aliases remain MAG-004.
 4. **Collection identity and mementos (MAG-004).** Handle local identity/copy semantics first; extend interchange only where required and specified.
 5. **Validation, interpreter selection, announcements and schema closure (MAG-005–007 and MAG-009).** Deliver as separate coherent changes using the ledger's dependencies. Reuse the implemented visitor, property and method-registration layers.
 6. **Expand value/model families (MAG-010–014).** Temporal values and numeric round-trip closure are useful early candidates; then select source-defined table/file, action or utility families. Keep Unicode and arbitrary-precision work separately testable.

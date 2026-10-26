@@ -1,5 +1,7 @@
 # Container lookup and enumeration (0.14)
 
+**0.29 update:** source-shaped mutation and persistent stored order are implemented; see [container-mutation.md](container-mutation.md). Historical evidence below retains its original profile.
+
 Both ports now expose the direct collection query and enumeration protocol of `MAContainer` and `MAPriorityContainer`. The phase adds no new description hierarchy, wire format, consumer framework or executable property. It complements the previously implemented composition/copy operations.
 
 ## Audit and reference

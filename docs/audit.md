@@ -37,8 +37,8 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Feature | State | Evidence / boundary |
 | --- | --- | --- |
 | MAContainer insertion order | I, R | reference containerOrder; graph child identities preserved |
-| MAPriorityContainer ascending order | I, R (sorted view) | reference priorityOrder; native reads re-sort a snapshot; persistent state/resort gap in MAG-003; upstream tie policy not claimed |
-| Container add/remove | I (raw children only) | source mutation APIs and priority backing-state semantics remain partial; gap-analysis.md, MAG-003 |
+| MAPriorityContainer stored priority order | I (native array profile), historical R for initial sort | persistent sequence, explicit conversion/resort, inherited mutation and graph/4 state; container-mutation.md |
+| Container mutation | I (native array profile), fresh R deferred | add/addAll/remove/removeAll/setChildren/moves/resort; equality versus identity, receiver returns and stored-order copy/metadata behavior; container-mutation.md |
 | Container lookup, detection and enumeration | I, R (direct children) | lazy fallbacks, equality membership, short-circuit predicates, indexed/separated/paired iteration and reduction; container-enumeration.md |
 | Nested containers | I, R | identity access for native models; stored child values for adaptive models |
 | Concatenation/union/intersection/select/collect/copy protocol | I, R (profile) | equality-class composition, selective reference copies and shared container children; range/exclusion/empty copies; full collection protocol N |
@@ -175,3 +175,5 @@ Phase 0.26 implements Object>>readUsing: nil-only undefinedValue fallback in gen
 Phase 0.27 closes MAG-001 for registered descendants of implemented description families. [inheritance.md](inheritance.md) records inherited execution, source fingerprints, semantic scenarios, class identity, graph/4 gates and explicit local override boundaries. GT was not accessed.
 
 Phase 0.28 closes MAG-002 for the native ownership profile. [default-references.md](default-references.md) records lazy defaults, Boolean self-reference, relation helper results, source fallback analysis, copy/lifetime and nullable graph/4 semantics. GT was not accessed.
+
+Phase 0.29 closes MAG-003 over native vectors/arrays. [container-mutation.md](container-mutation.md) records source mutation rules, supporting collection evidence, persistent order, copy/builders/metadata and graph/4 state adaptation. Backing-collection identity remains MAG-004. GT was not accessed.

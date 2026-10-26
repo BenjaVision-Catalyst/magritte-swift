@@ -31,6 +31,7 @@ final class ConformanceTests: XCTestCase {
         let r = try XCTUnwrap(json(fixture("reference")) as? [String: Any])
         XCTAssertEqual(try root.orderedChildren().map(\.id), r["containerOrder"] as? [String])
         root.className = "MAPriorityContainer"
+        try root.setChildren(root.children)
         XCTAssertEqual(try root.orderedChildren().map(\.id), r["priorityOrder"] as? [String])
         name.properties["readOnly"] = .boolean(true)
         XCTAssertTrue(try Magritte.validateValue(.undefined, using: name).isEmpty)

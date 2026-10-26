@@ -36,6 +36,8 @@
     "composite-roundtrip-replay.json": "2d7cd6f8c1983d8a6f5a82e019711f24803b9bd0861d40f7577018417ff91bf0",
     "composition-reference.json": "2eee528056bdd0f8db644831253f67ac146b7c7403a82f9df0ab9f36be56b609",
     "composition-replay.json": "252db5b5443593ee69b0923d6ff7ce69f958ec2550e362b158e9d9dfe9fbe6ea",
+    "container-mutation-scenarios.json": "9eee9702cf00ceda59f2a47f925b01d7b50587c1dc9caab2dc87e56f62c14a26",
+    "container-mutation-upstream-methods.json": "209af7f5cd1d922dd56826be444bfe016b990844c1d3d4fa212f2d06e1e9ddfa",
     "container-protocol-live-methods.json": "4aa912cca6d7535a446034e1e824d33160ad4eb8ca6b276b861c02c32b218c7c",
     "container-protocol-reference.json": "9296f6c5c8b0bf4c91f31dac28cca44883529edb59aba0fb1af2a8ec76b2c675",
     "container-protocol-replay.json": "0f492c3346a18c55841f35dbe6aae62087097fee36a27b3d8767adf58db8eb18",

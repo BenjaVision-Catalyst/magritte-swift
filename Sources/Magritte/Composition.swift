@@ -139,7 +139,7 @@ public func copyDescription(_ source: Description, newID: String, limits: Limits
     let n = Description(id: id, className: d.className, key: d.key)
     n.properties = d.properties
     n.definingContext = d.definingContext
-    n.children = d.children
+    if n.isContainer { try n.setChildren(d.children, limits: limits) }
     n.classes = d.classes
     n.options = d.isOption ? d.options.copy() : d.options
     n.labels = d.labels
@@ -185,7 +185,7 @@ public func concatenate(
   let wrapped = try asContainer(a, newID: newID + ".source", limits: limits)
   var result = try copyDescription(wrapped.root, newID: newID, limits: limits)
   try mergeOwners(&result, b, limits)
-  result.root.children += try b.isContainer ? b.orderedChildren() : [b]
+  try result.root.addAll(b.isContainer ? b.orderedChildren() : [b], limits: limits)
   try require(result.root.children.count <= limits.items, "Composition item limit")
   return result
 }
@@ -205,7 +205,7 @@ public func unionDescriptions(
         break
       }
     }
-    if !contains { result.root.children.append(d) }
+    if !contains { try result.root.add(d, limits: limits) }
   }
   try require(result.root.children.count <= limits.items, "Composition item limit")
   return result
@@ -218,7 +218,7 @@ public func intersectDescriptions(
   let work = CompositionWork(limits)
   var result = try copyDescription(a, newID: newID, limits: limits)
   try mergeOwners(&result, b, limits)
-  result.root.children = []
+  try result.root.removeAll(limits: limits)
   for d in left {
     var contains = false
     for e in right {
@@ -235,7 +235,7 @@ public func intersectDescriptions(
           break
         }
       }
-      if !duplicate { result.root.children.append(d) }
+      if !duplicate { try result.root.add(d, limits: limits) }
     }
   }
   return result
@@ -246,7 +246,7 @@ public func selectDescriptions(
 ) throws -> DescriptionCopy {
   let items = try containerFields(d)
   let result = try copyDescription(d, newID: newID, limits: limits)
-  result.root.children = try items.filter(predicate)
+  try result.root.setChildren(items.filter(predicate), limits: limits)
   return result
 }
 public func copyWithout(
@@ -271,12 +271,14 @@ public func collectDescriptions(
 ) throws -> DescriptionCopy {
   let items = try containerFields(d)
   var result = try copyDescription(d, newID: newID, limits: limits)
-  result.root.children = []
+  try result.root.removeAll(limits: limits)
+  var collected: [Description] = []
   for item in items {
     let next = try transform(item)
     try mergeOwners(&result, next, limits)
-    result.root.children.append(next)
+    collected.append(next)
   }
+  try result.root.setChildren(collected, limits: limits)
   return result
 }
 public func copyEmpty(_ d: Description, newID: String, limits: Limits = Limits()) throws
@@ -284,7 +286,7 @@ public func copyEmpty(_ d: Description, newID: String, limits: Limits = Limits()
 {
   _ = try containerFields(d)
   let result = try copyDescription(d, newID: newID, limits: limits)
-  result.root.children = []
+  try result.root.removeAll(limits: limits)
   return result
 }
 /// Zero-based half-open native range; upstream copyFrom:to: is one-based inclusive.
@@ -295,11 +297,17 @@ public func copyRange(_ d: Description, range: Range<Int>, newID: String, limits
   try require(
     range.lowerBound >= 0 && range.upperBound <= items.count, "Composition range outside children")
   let result = try copyDescription(d, newID: newID, limits: limits)
-  result.root.children = Array(items[range])
+  try result.root.setChildren(Array(items[range]), limits: limits)
   return result
 }
 extension Description {
   public func kindOf(_ name: String) -> Bool {
     ClassRegistry.shared.includesBehavior(className,name)
   }
+}
+
+func firstEqualChild(_ children: [Description], _ sought: Description, _ limits: Limits) throws -> Int? {
+  let work = CompositionWork(limits)
+  for (i, child) in children.enumerated() { if try work.equal(sought, child) { return i } }
+  return nil
 }

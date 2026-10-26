@@ -1,0 +1,638 @@
+{
+  "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
+  "verification": "Source-derived native scenarios; GT was not accessed. Pharo insertion/bulk-add profile is pinned separately. Mutation methods implicitly return the container; moves use identity, remove uses sought-object equality.",
+  "nodes": {
+    "a": {
+      "key": "a",
+      "priority": 10
+    },
+    "b": {
+      "key": "b",
+      "priority": 20
+    },
+    "c": {
+      "key": "c",
+      "priority": 30
+    },
+    "d": {
+      "key": "d",
+      "priority": 25
+    },
+    "e": {
+      "key": "e",
+      "priority": 15
+    },
+    "missing": {
+      "key": "missing",
+      "priority": 100
+    },
+    "aEqual": {
+      "key": "a",
+      "priority": 99
+    }
+  },
+  "cases": [
+    {
+      "class": "MAContainer",
+      "base": "MAContainer",
+      "steps": [
+        {
+          "action": "set",
+          "expected": [
+            "a",
+            "b",
+            "a"
+          ],
+          "children": [
+            "a",
+            "b",
+            "a"
+          ]
+        },
+        {
+          "action": "moveDown",
+          "expected": [
+            "b",
+            "a",
+            "a"
+          ],
+          "child": "a"
+        },
+        {
+          "action": "moveUp",
+          "expected": [
+            "b",
+            "a",
+            "a"
+          ],
+          "child": "aEqual"
+        },
+        {
+          "action": "remove",
+          "expected": [
+            "b",
+            "a"
+          ],
+          "child": "aEqual"
+        },
+        {
+          "action": "moveDown",
+          "expected": [
+            "b",
+            "a"
+          ],
+          "child": "missing"
+        },
+        {
+          "action": "moveUp",
+          "expected": [
+            "b",
+            "a"
+          ],
+          "child": "b"
+        },
+        {
+          "action": "moveDown",
+          "expected": [
+            "b",
+            "a"
+          ],
+          "child": "a"
+        },
+        {
+          "action": "remove",
+          "expected": [
+            "b",
+            "a"
+          ],
+          "child": "missing",
+          "error": true
+        },
+        {
+          "action": "moveUp",
+          "expected": [
+            "a",
+            "b"
+          ],
+          "child": "a"
+        },
+        {
+          "action": "add",
+          "expected": [
+            "a",
+            "b",
+            "c"
+          ],
+          "child": "c"
+        },
+        {
+          "action": "addAll",
+          "expected": [
+            "a",
+            "b",
+            "c",
+            "c",
+            "aEqual"
+          ],
+          "children": [
+            "c",
+            "aEqual"
+          ]
+        },
+        {
+          "action": "remove",
+          "expected": [
+            "b",
+            "c",
+            "c",
+            "aEqual"
+          ],
+          "child": "a"
+        },
+        {
+          "action": "remove",
+          "expected": [
+            "b",
+            "c",
+            "aEqual"
+          ],
+          "child": "c"
+        },
+        {
+          "action": "clear",
+          "expected": []
+        }
+      ]
+    },
+    {
+      "class": "MutatingContainer",
+      "base": "MAContainer",
+      "steps": [
+        {
+          "action": "set",
+          "expected": [
+            "a",
+            "b",
+            "a"
+          ],
+          "children": [
+            "a",
+            "b",
+            "a"
+          ]
+        },
+        {
+          "action": "moveDown",
+          "expected": [
+            "b",
+            "a",
+            "a"
+          ],
+          "child": "a"
+        },
+        {
+          "action": "moveUp",
+          "expected": [
+            "b",
+            "a",
+            "a"
+          ],
+          "child": "aEqual"
+        },
+        {
+          "action": "remove",
+          "expected": [
+            "b",
+            "a"
+          ],
+          "child": "aEqual"
+        },
+        {
+          "action": "moveDown",
+          "expected": [
+            "b",
+            "a"
+          ],
+          "child": "missing"
+        },
+        {
+          "action": "moveUp",
+          "expected": [
+            "b",
+            "a"
+          ],
+          "child": "b"
+        },
+        {
+          "action": "moveDown",
+          "expected": [
+            "b",
+            "a"
+          ],
+          "child": "a"
+        },
+        {
+          "action": "remove",
+          "expected": [
+            "b",
+            "a"
+          ],
+          "child": "missing",
+          "error": true
+        },
+        {
+          "action": "moveUp",
+          "expected": [
+            "a",
+            "b"
+          ],
+          "child": "a"
+        },
+        {
+          "action": "add",
+          "expected": [
+            "a",
+            "b",
+            "c"
+          ],
+          "child": "c"
+        },
+        {
+          "action": "addAll",
+          "expected": [
+            "a",
+            "b",
+            "c",
+            "c",
+            "aEqual"
+          ],
+          "children": [
+            "c",
+            "aEqual"
+          ]
+        },
+        {
+          "action": "remove",
+          "expected": [
+            "b",
+            "c",
+            "c",
+            "aEqual"
+          ],
+          "child": "a"
+        },
+        {
+          "action": "remove",
+          "expected": [
+            "b",
+            "c",
+            "aEqual"
+          ],
+          "child": "c"
+        },
+        {
+          "action": "clear",
+          "expected": []
+        }
+      ]
+    },
+    {
+      "class": "MAPriorityContainer",
+      "base": "MAPriorityContainer",
+      "steps": [
+        {
+          "action": "set",
+          "expected": [
+            "a",
+            "b",
+            "c"
+          ],
+          "children": [
+            "c",
+            "a",
+            "b"
+          ]
+        },
+        {
+          "action": "priority",
+          "expected": [
+            "a",
+            "b",
+            "c"
+          ],
+          "child": "a",
+          "value": 40
+        },
+        {
+          "action": "addAll",
+          "expected": [
+            "a",
+            "b",
+            "c"
+          ],
+          "children": []
+        },
+        {
+          "action": "add",
+          "expected": [
+            "a",
+            "b",
+            "d",
+            "c"
+          ],
+          "child": "d"
+        },
+        {
+          "action": "add",
+          "expected": [
+            "e",
+            "a",
+            "b",
+            "d",
+            "c"
+          ],
+          "child": "e"
+        },
+        {
+          "action": "remove",
+          "expected": [
+            "e",
+            "a",
+            "d",
+            "c"
+          ],
+          "child": "b"
+        },
+        {
+          "action": "resort",
+          "expected": [
+            "e",
+            "d",
+            "c",
+            "a"
+          ]
+        },
+        {
+          "action": "set",
+          "expected": [
+            "b",
+            "c",
+            "a"
+          ],
+          "children": [
+            "c",
+            "b",
+            "a"
+          ]
+        },
+        {
+          "action": "priority",
+          "expected": [
+            "b",
+            "c",
+            "a"
+          ],
+          "child": "b",
+          "value": 50
+        },
+        {
+          "action": "addAll",
+          "expected": [
+            "d",
+            "b",
+            "c",
+            "a"
+          ],
+          "children": [
+            "d"
+          ]
+        },
+        {
+          "action": "addAll",
+          "expected": [
+            "e",
+            "d",
+            "c",
+            "c",
+            "a",
+            "b"
+          ],
+          "children": [
+            "e",
+            "c"
+          ]
+        },
+        {
+          "action": "moveUp",
+          "expected": [
+            "e",
+            "d",
+            "c",
+            "c",
+            "a",
+            "b"
+          ],
+          "child": "d",
+          "error": true
+        },
+        {
+          "action": "moveDown",
+          "expected": [
+            "e",
+            "d",
+            "c",
+            "c",
+            "a",
+            "b"
+          ],
+          "child": "missing",
+          "error": true
+        },
+        {
+          "action": "remove",
+          "expected": [
+            "e",
+            "d",
+            "c",
+            "c",
+            "b"
+          ],
+          "child": "aEqual"
+        },
+        {
+          "action": "clear",
+          "expected": []
+        }
+      ]
+    },
+    {
+      "class": "MutatingPriorityContainer",
+      "base": "MAPriorityContainer",
+      "steps": [
+        {
+          "action": "set",
+          "expected": [
+            "a",
+            "b",
+            "c"
+          ],
+          "children": [
+            "c",
+            "a",
+            "b"
+          ]
+        },
+        {
+          "action": "priority",
+          "expected": [
+            "a",
+            "b",
+            "c"
+          ],
+          "child": "a",
+          "value": 40
+        },
+        {
+          "action": "addAll",
+          "expected": [
+            "a",
+            "b",
+            "c"
+          ],
+          "children": []
+        },
+        {
+          "action": "add",
+          "expected": [
+            "a",
+            "b",
+            "d",
+            "c"
+          ],
+          "child": "d"
+        },
+        {
+          "action": "add",
+          "expected": [
+            "e",
+            "a",
+            "b",
+            "d",
+            "c"
+          ],
+          "child": "e"
+        },
+        {
+          "action": "remove",
+          "expected": [
+            "e",
+            "a",
+            "d",
+            "c"
+          ],
+          "child": "b"
+        },
+        {
+          "action": "resort",
+          "expected": [
+            "e",
+            "d",
+            "c",
+            "a"
+          ]
+        },
+        {
+          "action": "set",
+          "expected": [
+            "b",
+            "c",
+            "a"
+          ],
+          "children": [
+            "c",
+            "b",
+            "a"
+          ]
+        },
+        {
+          "action": "priority",
+          "expected": [
+            "b",
+            "c",
+            "a"
+          ],
+          "child": "b",
+          "value": 50
+        },
+        {
+          "action": "addAll",
+          "expected": [
+            "d",
+            "b",
+            "c",
+            "a"
+          ],
+          "children": [
+            "d"
+          ]
+        },
+        {
+          "action": "addAll",
+          "expected": [
+            "e",
+            "d",
+            "c",
+            "c",
+            "a",
+            "b"
+          ],
+          "children": [
+            "e",
+            "c"
+          ]
+        },
+        {
+          "action": "moveUp",
+          "expected": [
+            "e",
+            "d",
+            "c",
+            "c",
+            "a",
+            "b"
+          ],
+          "child": "d",
+          "error": true
+        },
+        {
+          "action": "moveDown",
+          "expected": [
+            "e",
+            "d",
+            "c",
+            "c",
+            "a",
+            "b"
+          ],
+          "child": "missing",
+          "error": true
+        },
+        {
+          "action": "remove",
+          "expected": [
+            "e",
+            "d",
+            "c",
+            "c",
+            "b"
+          ],
+          "child": "aEqual"
+        },
+        {
+          "action": "clear",
+          "expected": []
+        }
+      ]
+    }
+  ]
+}

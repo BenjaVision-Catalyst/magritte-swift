@@ -265,7 +265,7 @@ open class DescriptionFlattener: DescriptionBuilder {
         throw MagritteError("Built description cannot add field")
       }
       try require(root.children.count < limits.items, "Flattener item limit")
-      root.children.append(d)
+      try root.add(d, limits: limits)
     }
   }
 }

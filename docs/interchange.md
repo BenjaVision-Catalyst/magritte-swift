@@ -156,3 +156,7 @@ Graph/4 accepts registered, concrete description subclasses whose hierarchy reac
 ## Lazy reference storage (0.28)
 
 Graph/4 permits JSON null in the required `reference` field of reference-description nodes, preserving uninitialized/reset storage. Graph/1–3 reject null references. Import/export never executes the getter or allocates a default. Once a default has been materialized, its actual ID and registered node are required as for other edges. Boolean self-reference is derived behavior, with no stored/wire self edge. Explicit weak-edge expiry and unregistered/aliased targets still fail. See [default-references.md](default-references.md) for ownership, copy and metadata reset behavior.
+
+## Persistent container sequences (0.29)
+
+Graph/4 priority nodes emit `childrenOrder: "stored"`, preserving the exact child sequence through import, including stale priorities. The marker is allowed only on priority containers and only with that value. Unmarked priority nodes retain construction-form import through setChildren. Exporting stale priority order to graph/1–3 fails; source state is never silently resorted on export. Graph/4 also permits duplicate child IDs, representing repeated references to one description node; older formats reject duplicates. Native array/vector identity is not serialized. See [container-mutation.md](container-mutation.md).

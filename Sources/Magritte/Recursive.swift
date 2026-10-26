@@ -421,7 +421,7 @@ private final class DescriptionBinding: Model {
         "Children require a bounded collection")
       let next = try value.elements().map(description)
       let previous = target.children
-      target.children = next
+      try target.setChildren(next, limits: s.limits)
       do { try visit(target, limits: s.limits) { _ in } } catch {
         target.children = previous
         throw error

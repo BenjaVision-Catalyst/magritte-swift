@@ -193,7 +193,7 @@ final class InheritanceTests: XCTestCase {
     b.className = "InheritedStringDescription"
     a.properties["priority"] = .integer(2)
     b.properties["priority"] = .integer(1)
-    priority.children = [a, b]
+    try priority.setChildren([a, b])
     XCTAssertTrue(try priority.orderedChildren()[0] === b)
     let model = DictionaryModel(["a": .string("A"), "b": .string("B")])
     XCTAssertTrue(try validate(model, using: priority).isEmpty)

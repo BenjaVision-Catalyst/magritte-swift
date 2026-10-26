@@ -229,7 +229,7 @@ open class DescriptionBuilder: Visitor {
       owners[ObjectIdentifier(description)] != nil,
       "Use buildFrom or setBuiltDescription to retain builder inputs")
     try setBuiltDescriptionRaw(copyForBuild(description))
-    builtDescription!.children.removeAll()
+    try builtDescription!.removeAll(limits: limits)
     let children = try description.orderedChildren()
     try require(children.count <= limits.items, "Builder item limit")
     for child in children { try visit(copyForBuild(child)) }
@@ -241,7 +241,7 @@ open class DescriptionBuilder: Visitor {
     if let root = builtDescription {
       try require(root.isContainer, "Built scalar description cannot add another description")
       try require(root.children.count < limits.items, "Builder item limit")
-      root.children.append(description)
+      try root.add(description, limits: limits)
     } else {
       try setBuiltDescription(description)
     }

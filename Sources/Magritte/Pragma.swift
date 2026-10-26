@@ -316,7 +316,7 @@ open class PragmaBuilder {
       }
       try require(
         root.children.count + fields.count <= cache.limits.items, "Discovered container item limit")
-      root.children += fields
+      try root.addAll(fields, limits: cache.limits)
       try cache.retain(DescriptionCopy(root: root))
       return cache.result(root)
     }

@@ -240,14 +240,7 @@ open class Description: Model {
     return i
     }
     public func orderedChildren() throws -> [Description] {
-        if !descriptionIs(self, "MAPriorityContainer") { return children }
-        // Stable ties are a documented port policy, not a claim about upstream ties.
-    let ranked = try children.enumerated().map {
-      ($0.offset, $0.element, try $0.element.priorityValue())
-    }
-    return try ranked.sorted {
-      let c = try compareNumbers($0.2, $1.2); return c == 0 ? $0.0 < $1.0 : c < 0
-    }.map { $0.1 }
+        return children
   }
   public func read(using description: Description) throws -> Value {
     let value: Value
@@ -664,6 +657,10 @@ public final class Graph {
             if d.isOption { names.formUnion(["reference", "options", "labels"]) }
             if descriptionIs(d, "MATokenDescription") { names.insert("reference") }
             if format >= "magritte.graph/3" { names.insert("conditions") }
+      if let order = n["childrenOrder"] {
+        try require(format == "magritte.graph/4" && descriptionIs(d, "MAPriorityContainer") && (order as? String) == "stored", "Stored children order requires a graph/4 priority container")
+        names.insert("childrenOrder")
+      }
       if let raw = n["definingContext"] {
         try require(format == "magritte.graph/4", "Defining context requires graph/4");
         names.insert("definingContext"); let c = try dictionary(raw);
@@ -785,13 +782,16 @@ public final class Graph {
             }
             if !d.isContainer { continue }
             var unique = Set<String>()
-            for child in try list(n["children"]) {
+            let childList = try list(n["children"])
+            try require(childList.count <= limits.items, "Expected bounded children array")
+            for child in childList {
                 let id = try identity(child)
-                try require(unique.insert(id).inserted, "Duplicate container child")
+                try require(unique.insert(id).inserted || format == "magritte.graph/4", "Duplicate container child requires graph/4")
                 guard let c = g.descriptions[id] else { throw MagritteError("Dangling description identity") }
                 try require(format != "magritte.graph/1" || !c.isContainer, "Nested containers require graph/2")
                 d.children.append(c)
             }
+            if n["childrenOrder"] == nil { try d.setChildren(d.children, limits: limits) }
         }
         guard let root = g.descriptions[g.root], root.isContainer else { throw MagritteError("Root must identify a container") }
         var checked = Set<ObjectIdentifier>(), graphWork = 0
@@ -871,6 +871,12 @@ public final class Graph {
             if d.isContainer {
                 try require(d.accessor == nil, "Container accessors are implicit identity")
                 for c in d.children { try require(descriptions[c.id] === c, "Unregistered child identity") }
+                if descriptionIs(d, "MAPriorityContainer") {
+                  if format == "magritte.graph/4" { n["childrenOrder"] = "stored" }
+                  else if d.children.count > 1 {
+                    for i in 1..<d.children.count { try require(compareNumbers(d.children[i-1].priorityValue(), d.children[i].priorityValue()) <= 0, "Stale priority order requires graph/4") }
+                  }
+                }
                 n["children"] = d.children.map(\.id)
             } else { n["accessor"] = try accessorWire(d.effectiveAccessor, limits) }
             if d.isReference {

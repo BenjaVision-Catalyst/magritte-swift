@@ -1,0 +1,257 @@
+{
+  "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
+  "verification": "Upstream source only; GT was not accessed.",
+  "methods": [
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "add:",
+      "path": "source/Magritte-Model/MAContainer.class.st",
+      "sourceSHA256": "89bdd6e4c00e062b089d7a8ec4a142bf561918e5b413ad62b777bc0c304235b2"
+    },
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "addAll:",
+      "path": "source/Magritte-Model/MAContainer.class.st",
+      "sourceSHA256": "c5418a21aeec0a971ce5b299fe3e7fcb319e3bf7a8f4ff4063e0f81260aee276"
+    },
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "collect:",
+      "path": "source/Magritte-Model/MAContainer.class.st",
+      "sourceSHA256": "41824d6c5d34f5b41d3469ce4aa7debdeebbb8bca9b4a0f05cfaf4349f521008"
+    },
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "copyEmpty",
+      "path": "source/Magritte-Model/MAContainer.class.st",
+      "sourceSHA256": "336fbdf40ca0ed07b826ca9f8193a64e6b8d6e2f24eba770138c3d4a0e0e0dd1"
+    },
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "copyFrom:to:",
+      "path": "source/Magritte-Model/MAContainer.class.st",
+      "sourceSHA256": "d84ac041c005579500b1a8445767de0df34c586ff8218ed25cce8fc019997fa7"
+    },
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "descriptionChildren",
+      "path": "source/Magritte-Model/MAContainer.class.st",
+      "sourceSHA256": "c66264689835f1d2d03c90c7e33775e7a0f04f80cb7409b3c72aa88d86a1c072"
+    },
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "moveDown:",
+      "path": "source/Magritte-Model/MAContainer.class.st",
+      "sourceSHA256": "0d04913ab197ce6c33d5c0ad0c0ef85b086229038f2a1863b01dab0dd519bd5b"
+    },
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "moveUp:",
+      "path": "source/Magritte-Model/MAContainer.class.st",
+      "sourceSHA256": "79c97d188515ef74b254e826484eaa4dd69bd445149aa6b609c17f2943625858"
+    },
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "postCopy",
+      "path": "source/Magritte-Model/MAContainer.class.st",
+      "sourceSHA256": "d527b5b1ae3a327411b8aaef5e323e256e2b549225cb1855f6c83cd0ff63a049"
+    },
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "remove:",
+      "path": "source/Magritte-Model/MAContainer.class.st",
+      "sourceSHA256": "20791812a8282065bb0c5708efc1ee161e0b21f94557c6207149fd7de4e869b4"
+    },
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "removeAll",
+      "path": "source/Magritte-Model/MAContainer.class.st",
+      "sourceSHA256": "3ae3d840ac5d788d29e4d824c864b766faadb31e4123bde446b76a405c50395f"
+    },
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "select:",
+      "path": "source/Magritte-Model/MAContainer.class.st",
+      "sourceSHA256": "e885cf650434813d070a3b0d7bb410601f2d629afa0a3b46a95eb8770050f5d5"
+    },
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "setChildren:",
+      "path": "source/Magritte-Model/MAContainer.class.st",
+      "sourceSHA256": "e4402aa9893639b51e8947ab0f20f4e9677cf91e61e740869d239fc1a813c05a"
+    },
+    {
+      "className": "MAPriorityContainer",
+      "classSide": true,
+      "selector": "defaultCollection",
+      "path": "source/Magritte-Model/MAPriorityContainer.class.st",
+      "sourceSHA256": "f80f45a3ee8d7e585953d779338dd84e4314495675844347ee3215722187552f"
+    },
+    {
+      "className": "MAPriorityContainer",
+      "classSide": false,
+      "selector": "moveDown:",
+      "path": "source/Magritte-Model/MAPriorityContainer.class.st",
+      "sourceSHA256": "2b1ca9f692b621d25c5cc4de74ae97d4252bacaa5970f2f5aa031c243b51f816"
+    },
+    {
+      "className": "MAPriorityContainer",
+      "classSide": false,
+      "selector": "moveUp:",
+      "path": "source/Magritte-Model/MAPriorityContainer.class.st",
+      "sourceSHA256": "1c5bfcf985b7cf988136de7d2e8bd22608d1a11aacfa8e107302a7cd5abb7ccd"
+    },
+    {
+      "className": "MAPriorityContainer",
+      "classSide": false,
+      "selector": "resort",
+      "path": "source/Magritte-Model/MAPriorityContainer.class.st",
+      "sourceSHA256": "a60d279f923e655e9d6b9f75a74b94e9c44b0f6f8a57358420c5ef47201d5749"
+    },
+    {
+      "className": "MAPriorityContainer",
+      "classSide": false,
+      "selector": "setChildren:",
+      "path": "source/Magritte-Model/MAPriorityContainer.class.st",
+      "sourceSHA256": "f20bbc084f0aa87f1f7a27995e2756c07c6895d12d719cf9e77ad52b77c61984"
+    },
+    {
+      "className": "SequenceableCollection",
+      "classSide": false,
+      "selector": "moveDown:",
+      "path": "source/Magritte-Model/SequenceableCollection.extension.st",
+      "sourceSHA256": "b9cb00e1dc9c1b6b0b2eaef190fe5937ef026f92c70ac3d64151d16e84072218"
+    },
+    {
+      "className": "SequenceableCollection",
+      "classSide": false,
+      "selector": "moveUp:",
+      "path": "source/Magritte-Model/SequenceableCollection.extension.st",
+      "sourceSHA256": "185066e0fe91d5be83635707467c745118df2ffcad04bd0874543a49779b1503"
+    },
+    {
+      "className": "MADescription",
+      "classSide": false,
+      "selector": "<=",
+      "path": "source/Magritte-Model/MADescription.class.st",
+      "sourceSHA256": "07ec95e3b2870f7b2f46dd4793d0ac22403377d189d52dacfd83ee8cce0d1e35"
+    },
+    {
+      "className": "MADescription",
+      "classSide": false,
+      "selector": "=",
+      "path": "source/Magritte-Model/MADescription.class.st",
+      "sourceSHA256": "3b92afdf6ae56c9afa9f84fab04ba1fe8cb6870e9e885e46b677bd4f6299024e"
+    },
+    {
+      "className": "MAContainerTest",
+      "classSide": false,
+      "selector": "testAdd",
+      "path": "source/Magritte-Tests-Model/MAContainerTest.class.st",
+      "sourceSHA256": "58171c3b9a3df17ad74ffc42eb08f70db8e268e27cc448302f26823608fb39d5"
+    },
+    {
+      "className": "MAContainerTest",
+      "classSide": false,
+      "selector": "testAddAll",
+      "path": "source/Magritte-Tests-Model/MAContainerTest.class.st",
+      "sourceSHA256": "fbfa7f6cc89fa5a63d6764dc063c7872bd269abe1b9286f9f9ca04476bcffc6d"
+    },
+    {
+      "className": "MAContainerTest",
+      "classSide": false,
+      "selector": "testMoveDown",
+      "path": "source/Magritte-Tests-Model/MAContainerTest.class.st",
+      "sourceSHA256": "54b227824668cbe64ba24308bd2c14dcebb54dbc680188ee7841d210ebdd89e2"
+    },
+    {
+      "className": "MAContainerTest",
+      "classSide": false,
+      "selector": "testMoveUp",
+      "path": "source/Magritte-Tests-Model/MAContainerTest.class.st",
+      "sourceSHA256": "511f3da98bb0ad77fcea3c9a695804e3dec95097d17bb7b9727bce5c0fce88c6"
+    },
+    {
+      "className": "MAContainerTest",
+      "classSide": false,
+      "selector": "testRemove",
+      "path": "source/Magritte-Tests-Model/MAContainerTest.class.st",
+      "sourceSHA256": "b0971e1ade3bffb2a4deb06604410315efb3ff4096dad0caac851f6336e742b0"
+    },
+    {
+      "className": "MAContainerTest",
+      "classSide": false,
+      "selector": "testRemoveAll",
+      "path": "source/Magritte-Tests-Model/MAContainerTest.class.st",
+      "sourceSHA256": "9eba6e69dff42308190a0c434c7894b21d37c84b922e19bfd99ac2c4916f27d8"
+    },
+    {
+      "className": "MAExtensionsTest",
+      "classSide": false,
+      "selector": "testMoveDown",
+      "path": "source/Magritte-Tests-Model/MAExtensionsTest.class.st",
+      "sourceSHA256": "5351e5c1c57f72b2c9f9e44257043bb75120e91adce3d28c961a81a20a240339"
+    },
+    {
+      "className": "MAExtensionsTest",
+      "classSide": false,
+      "selector": "testMoveUp",
+      "path": "source/Magritte-Tests-Model/MAExtensionsTest.class.st",
+      "sourceSHA256": "e3dd6189c7a6cd5103509ff50f7066052c74b193c806e5deaf0546e4b817bca7"
+    }
+  ],
+  "supportingKernel": {
+    "revision": "81f614957ca93536d2483a0f64480456b0350451",
+    "methods": [
+      {
+        "className": "SortedCollection",
+        "classSide": false,
+        "selector": "add:",
+        "sourceSHA256": "f198058bc55ddd8a8fa4f937a70db427a7455421268023f45029345ee52135a0",
+        "url": "https://github.com/pharo-project/pharo/blob/81f614957ca93536d2483a0f64480456b0350451/src/Collections-Sequenceable/SortedCollection.class.st"
+      },
+      {
+        "className": "SortedCollection",
+        "classSide": false,
+        "selector": "addAll:",
+        "sourceSHA256": "97a9285937dd5524d63930f33420420bcb52b2147a597299be338ee244c0aa23",
+        "url": "https://github.com/pharo-project/pharo/blob/81f614957ca93536d2483a0f64480456b0350451/src/Collections-Sequenceable/SortedCollection.class.st"
+      },
+      {
+        "className": "SortedCollection",
+        "classSide": false,
+        "selector": "indexForInserting:",
+        "sourceSHA256": "c62c15a791dae37544a9453f7108c0d4064b7efe3c29df6617eea533c9c27d07",
+        "url": "https://github.com/pharo-project/pharo/blob/81f614957ca93536d2483a0f64480456b0350451/src/Collections-Sequenceable/SortedCollection.class.st"
+      },
+      {
+        "className": "OrderedCollection",
+        "classSide": true,
+        "selector": "newFrom:",
+        "sourceSHA256": "7e0c99b70b239bd0e5d076f97d76e26d989ea6d2dfc23fdec5a091fab07022b9",
+        "url": "https://github.com/pharo-project/pharo/blob/81f614957ca93536d2483a0f64480456b0350451/src/Collections-Sequenceable/OrderedCollection.class.st"
+      },
+      {
+        "className": "OrderedCollection",
+        "classSide": false,
+        "selector": "remove:ifAbsent:",
+        "sourceSHA256": "fc38dfe752a7a5c243b84bf70eb77cb4bf1fd6fd76c501828600cb9d987f4e9f",
+        "url": "https://github.com/pharo-project/pharo/blob/81f614957ca93536d2483a0f64480456b0350451/src/Collections-Sequenceable/OrderedCollection.class.st"
+      }
+    ],
+    "note": "Supporting Pharo collection profile; no whole-image provenance, VM tie-order or failed-sort permutation claim."
+  }
+}

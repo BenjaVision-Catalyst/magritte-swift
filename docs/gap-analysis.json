@@ -271,8 +271,8 @@
       "kind": "missing_semantics",
       "priority": "P1",
       "status": {
-        "cpp": "partial",
-        "swift": "partial"
+        "cpp": "implemented_native_array_profile",
+        "swift": "implemented_native_array_profile"
       },
       "depends_on": [
         "MAG-001"
@@ -315,7 +315,12 @@
       ],
       "observation_keys": [
         "priority_order"
-      ]
+      ],
+      "resolution": {
+        "phase": "0.29",
+        "documentation": "container-mutation.md",
+        "boundary": "Native vector/array sequences and shared native child identity; explicit source mutations; graph/4 stored-order marker/duplicate references; backing-collection aliases remain MAG-004."
+      }
     },
     {
       "id": "MAG-004",
@@ -1017,6 +1022,14 @@
       "status": "implemented_native_ownership_profile",
       "evidence": "default-references.md",
       "source_fingerprints": "default-reference-upstream-methods.json (shared fixtures)",
+      "gt_accessed": false
+    },
+    {
+      "phase": "0.29",
+      "gap": "MAG-003",
+      "status": "implemented_native_array_profile",
+      "evidence": "container-mutation.md",
+      "source_fingerprints": "container-mutation-upstream-methods.json (shared fixtures)",
       "gt_accessed": false
     }
   ]

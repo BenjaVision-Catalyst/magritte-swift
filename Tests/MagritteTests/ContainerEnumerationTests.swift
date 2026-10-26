@@ -21,7 +21,7 @@ final class ContainerEnumerationTests: XCTestCase {
       let cls = try XCTUnwrap(expected["class"] as? String)
       let empty = try XCTUnwrap(expected["empty"] as? Bool)
       let d = Description(id: "root", className: cls)
-      if !empty { d.children = [field("a", 30), field("b", 10), field("c", 20)] }
+      if !empty { try d.setChildren([field("a", 30), field("b", 10), field("c", 20)]) }
       let fallback = field("fallback")
       var row: [String: Any] = ["class": cls, "empty": empty]
       var trace: [Any] = []
