@@ -503,6 +503,7 @@ extension Description {
         let expected = key == "stringReader" ? "MAStringReader" : key == "stringWriter" ? "MAStringWriter" : "MAValidatorVisitor"
         try require(value == .classValue(expected), "Unsupported interpreter class")
       }
+      if key == "undefined" { try setUndefined(value); return }
       if key == "default" { defaultFunction = nil }; properties[key] = value; return
     }
     try require(strategy == "MAPropertyAccessor", "Description slot requires property accessor")
@@ -754,7 +755,6 @@ private func read(_ d: Description, _ input: String, _ w: Work, _ depth: Int, _ 
     return try read(d.referenceDescription(), input, w, depth + 1, false)
   case "MATokenDescription":
     let separators = Set(try propText(d, "separators").unicodeScalars)
-    let ref = try d.referenceDescription()
     var result: [Value] = []
     var token = ""
     for c in input.unicodeScalars {
@@ -762,22 +762,25 @@ private func read(_ d: Description, _ input: String, _ w: Work, _ depth: Int, _ 
       if !separators.contains(c) {
         token.unicodeScalars.append(c)
       } else if !token.isEmpty {
-        result.append(try read(ref, token, w, depth + 1, true))
+        result.append(try read(d.referenceDescription(), token, w, depth + 1, true))
         token = ""
       }
     }
-    if !token.isEmpty { result.append(try read(ref, token, w, depth + 1, true)) }
+    if !token.isEmpty {
+      result.append(try read(d.referenceDescription(), token, w, depth + 1, true))
+    }
     return .array(result)
   case "MAMultipleOptionDescription":
     let chars = Array(input.unicodeScalars)
-    let ref = try d.referenceDescription()
     var start = 0
     var result: [Value] = []
     while start < chars.count {
       var end = start
       while end < chars.count && chars[end] != "," { end += 1 }
       result.append(
-        try read(ref, String(String.UnicodeScalarView(chars[start..<end])), w, depth + 1, true))
+        try read(
+          d.referenceDescription(), String(String.UnicodeScalarView(chars[start..<end])), w,
+          depth + 1, true))
       start = end + 1
       if start < chars.count && chars[start] == " " { start += 1 }
     }
@@ -841,7 +844,6 @@ private func write(
   } else if d.className == "MATokenDescription" || d.isMultiple {
     try require(
       value.collectionCount() <= w.limits.visits - w.count, "Writer collection work limit")
-    let ref = try d.referenceDescription()
     var sep = ", "
     if try d.className == "MATokenDescription" && value.collectionCount() > 1 {
       guard let c = try propText(d, "separators").unicodeScalars.first else {
@@ -869,7 +871,8 @@ private func write(
           }
           if !found { result += try d.displayStringFor(e, graph: graph, limits: w.limits) }
         } else {
-          result += try write(ref, e, graph, w, depth + 1, d.className != "MATokenDescription")
+          result += try write(
+            d.referenceDescription(), e, graph, w, depth + 1, d.className != "MATokenDescription")
         }
         try require(result.utf8.count <= w.limits.bytes, "String output byte limit")
       }

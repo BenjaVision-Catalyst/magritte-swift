@@ -190,7 +190,7 @@ open class DescriptionBuilder: Visitor {
       owners[key] = d
       identities[d.id] = key
       pending += d.children.map { ($0, depth + 1) }
-      if d.isReference { pending.append((try d.referenceDescription(), depth + 1)) }
+      if d.isReference { pending.append((try referenceTarget(d), depth + 1)) }
     }
   }
   private func copyForBuild(_ source: Description) throws -> Description {

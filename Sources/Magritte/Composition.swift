@@ -81,7 +81,7 @@ private func retainDescriptions(_ source: Description, _ limits: Limits) throws 
     if !seen.insert(ObjectIdentifier(d)).inserted { return }
     result.append(d)
     for child in d.children { try walk(child) }
-    if d.isReference { try walk(d.referenceDescription()) }
+    if d.isReference { try walk(referenceTarget(d)) }
   }
   try walk(source)
   return result
@@ -154,7 +154,7 @@ public func copyDescription(_ source: Description, newID: String, limits: Limits
     n.displayBlock = d.displayBlock
     retained.append(n)
     if d.isReference {
-      n.reference = try clone(d.referenceDescription(), id + ".reference", depth + 1)
+      n.reference = try clone(referenceTarget(d), id + ".reference", depth + 1)
     }
     active.remove(ObjectIdentifier(d))
     return n

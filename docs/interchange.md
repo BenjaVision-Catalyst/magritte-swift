@@ -120,3 +120,7 @@ Graph/3–4 accepts `displayBlockOrSymbol` as a Symbol or explicit nil property.
 ## Local accessor-based comparison (0.19)
 
 MASortBlock is a registered class identity, with local accessor/message execution and no new Value or graph form. A Class value may name the registered class, but does not instantiate or serialize a sort block. Existing accessor and description snapshots retain their wire meanings. `isSortable` is a query rather than a stored semantic property. See [sorting.md](sorting.md).
+
+## Reference access versus snapshots (0.20)
+
+Import/export and ownership/copy traversal inspect raw reference edges. They do not execute the display-propagating runtime getter or undefined setter. An absent display inherited at runtime is represented by default absence on the target after clearing its override, preserving legacy graph behavior. Explicit Symbol/nil values retain their stored presence. Native blocks still reject export throughout the graph. Bound reference identities and existing graph formats are unchanged. See [reference-access.md](reference-access.md).

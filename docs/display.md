@@ -85,3 +85,5 @@ python3 tools/compare-graphs.py /tmp/display-cpp.json /tmp/display-swift.json
 ```
 
 These checks use standalone libraries and saved fixtures only, with no GT connection.
+
+Phase 0.20 corrects the reference-specific boundary of this phase: reading a reference overwrites its display from the owner, so a child renderer is not independent of that getter. Relation/token conversion inherits the owner setting through reference access, and sorting obtains that reference for each operand. Native tests were corrected to reflect the upstream getter; the scalar display fixtures remain unchanged. See [reference-access.md](reference-access.md).

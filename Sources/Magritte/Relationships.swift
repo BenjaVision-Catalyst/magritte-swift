@@ -5,9 +5,6 @@ public extension Description {
     var isOption: Bool { ["MASingleOptionDescription", "MAMultipleOptionDescription"].contains(className) }
     var isReference: Bool { isRelation || isOption || className == "MATokenDescription" }
     var isMultiple: Bool { ["MAToManyRelationDescription", "MAToManyScalarRelationDescription", "MAMultipleOptionDescription"].contains(className) }
-    func referenceDescription() throws -> Description {
-        guard let r = reference else { throw MagritteError("Reference description is unavailable; retain it in the graph") }; return r
-    }
   func labelForOption(_ value: Value, limits: Limits = Limits(), graph: Graph? = nil) throws
     -> String
   {
@@ -69,9 +66,9 @@ public extension Description {
         var result = try options.values(limits: limits)
         if try flag("extensible") && !current.isNil && !contains { result.append(current) }
         if try flag("sorted") {
-            let ref = try referenceDescription()
       func sortKey(_ value: Value) throws -> String {
-        let text = try writeString(value, using: ref, graph: graph, limits: limits)
+        let text = try writeString(
+          value, using: referenceDescription(), graph: graph, limits: limits)
         try require(
           text.utf8.allSatisfy { $0 < 128 },
           "Non-ASCII case-insensitive option sorting is not implemented")

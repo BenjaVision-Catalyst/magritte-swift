@@ -82,6 +82,8 @@
     "recursive-roundtrip-replay.json": "975a3dac0b9bd12e69d5abe9917268bff138bb42f6b010365f4d25f4b210fb87",
     "recursive-structural-reference.json": "b673c3b6a101e9bdc2c7fabcf9fd9d76b46eb75e3bf98bcf7981d03cf58cacd9",
     "recursive-structural-replay.json": "aa645347ff5c3ebe84d868b4680544d23c5615b7755c3f73bda700d93cd78085",
+    "reference-access-scenarios.json": "2a1ce9b5337c8a989e58d312bb991d6f6704360ab87408fd5f2f60ea5593e6c3",
+    "reference-access-upstream-methods.json": "7e31294bb34bdce2407baeaf724cf7a00b130f05449b1d4583df81156a9854a2",
     "reference-replay.json": "b7e9d6aefe8eab2223258786fb9bec348b9786b74480797a1af65c538041d2dc",
     "reference.json": "bb1f0931967c685051231d3d644687213e4b33c237149ec73d873d7948e800f2",
     "reflection-invalid.json": "8bec1e01b40bbae35c4b8de390b9609381897cf6e34350992b23d773877469b3",

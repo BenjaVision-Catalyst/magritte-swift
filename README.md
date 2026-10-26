@@ -1,6 +1,6 @@
 # Magritte Swift
 
-An independent Swift Package port of [Magritte](https://github.com/magritte-metamodel/magritte). **0.19 adds accessor-based comparison and sortability queries; it is not a complete Magritte implementation.** No C++ dependency, UI, networking or application-framework integration.
+An independent Swift Package port of [Magritte](https://github.com/magritte-metamodel/magritte). **0.20 adds reference display propagation and option undefined setters; it is not a complete Magritte implementation.** No C++ dependency, UI, networking or application-framework integration.
 
 The headless Magritte library includes ordered/priority containers, a scalar subset, runtime adaptive objects, native accessors, to-one/to-many/scalar relations, static options, typed collections, cyclic references, validation, a self-description bootstrap and bounded graph/value interchange.
 
@@ -78,3 +78,5 @@ Runtime method registration, recursive discovery, defining contexts and the defe
 Description display conversion, option label/sort behavior, source evidence and native API boundaries are documented in [display.md](docs/display.md). GT was not accessed for this phase.
 
 The MASortBlock protocol, Value-target accessors and source/native verification are documented in [sorting.md](docs/sorting.md). GT was not accessed for this phase.
+
+Reference getter side effects, option undefined cascades and snapshot boundaries are documented in [reference-access.md](docs/reference-access.md). GT was not accessed for this phase.

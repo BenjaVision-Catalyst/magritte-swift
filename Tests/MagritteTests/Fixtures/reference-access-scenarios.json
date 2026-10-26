@@ -1,0 +1,271 @@
+{
+  "authority": "Pinned upstream getter/setter bodies with explicit bound reference graphs; source-derived native expectations, no GT run.",
+  "display": [
+    {
+      "className": "MASingleOptionDescription",
+      "ownerDisplay": "absent",
+      "result": "Ada"
+    },
+    {
+      "className": "MASingleOptionDescription",
+      "ownerDisplay": "asString",
+      "result": "Ada"
+    },
+    {
+      "className": "MASingleOptionDescription",
+      "ownerDisplay": "nil",
+      "result": null
+    },
+    {
+      "className": "MASingleOptionDescription",
+      "ownerDisplay": "block",
+      "result": "Reference:Ada"
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "ownerDisplay": "absent",
+      "result": "Ada"
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "ownerDisplay": "asString",
+      "result": "Ada"
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "ownerDisplay": "nil",
+      "result": null
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "ownerDisplay": "block",
+      "result": "Reference:Ada"
+    },
+    {
+      "className": "MATokenDescription",
+      "ownerDisplay": "absent",
+      "result": "Ada"
+    },
+    {
+      "className": "MATokenDescription",
+      "ownerDisplay": "asString",
+      "result": "Ada"
+    },
+    {
+      "className": "MATokenDescription",
+      "ownerDisplay": "nil",
+      "result": null
+    },
+    {
+      "className": "MATokenDescription",
+      "ownerDisplay": "block",
+      "result": "Reference:Ada"
+    },
+    {
+      "className": "MAToOneRelationDescription",
+      "ownerDisplay": "absent",
+      "result": "Ada"
+    },
+    {
+      "className": "MAToOneRelationDescription",
+      "ownerDisplay": "asString",
+      "result": "Ada"
+    },
+    {
+      "className": "MAToOneRelationDescription",
+      "ownerDisplay": "nil",
+      "result": null
+    },
+    {
+      "className": "MAToOneRelationDescription",
+      "ownerDisplay": "block",
+      "result": "Reference:Ada"
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "ownerDisplay": "absent",
+      "result": "Ada"
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "ownerDisplay": "asString",
+      "result": "Ada"
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "ownerDisplay": "nil",
+      "result": null
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "ownerDisplay": "block",
+      "result": "Reference:Ada"
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "ownerDisplay": "absent",
+      "result": "Ada"
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "ownerDisplay": "asString",
+      "result": "Ada"
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "ownerDisplay": "nil",
+      "result": null
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "ownerDisplay": "block",
+      "result": "Reference:Ada"
+    }
+  ],
+  "undefined": [
+    {
+      "className": "MASingleOptionDescription",
+      "route": "direct",
+      "value": "(missing)",
+      "targetValue": "(missing)"
+    },
+    {
+      "className": "MASingleOptionDescription",
+      "route": "direct",
+      "value": null,
+      "targetValue": null
+    },
+    {
+      "className": "MASingleOptionDescription",
+      "route": "selector",
+      "value": "(missing)",
+      "targetValue": "(missing)"
+    },
+    {
+      "className": "MASingleOptionDescription",
+      "route": "selector",
+      "value": null,
+      "targetValue": null
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "route": "direct",
+      "value": "(missing)",
+      "targetValue": "(missing)"
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "route": "direct",
+      "value": null,
+      "targetValue": null
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "route": "selector",
+      "value": "(missing)",
+      "targetValue": "(missing)"
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "route": "selector",
+      "value": null,
+      "targetValue": null
+    },
+    {
+      "className": "MATokenDescription",
+      "route": "direct",
+      "value": "(missing)",
+      "targetValue": "reference-before"
+    },
+    {
+      "className": "MATokenDescription",
+      "route": "direct",
+      "value": null,
+      "targetValue": "reference-before"
+    },
+    {
+      "className": "MATokenDescription",
+      "route": "selector",
+      "value": "(missing)",
+      "targetValue": "reference-before"
+    },
+    {
+      "className": "MATokenDescription",
+      "route": "selector",
+      "value": null,
+      "targetValue": "reference-before"
+    },
+    {
+      "className": "MAToOneRelationDescription",
+      "route": "direct",
+      "value": "(missing)",
+      "targetValue": "reference-before"
+    },
+    {
+      "className": "MAToOneRelationDescription",
+      "route": "direct",
+      "value": null,
+      "targetValue": "reference-before"
+    },
+    {
+      "className": "MAToOneRelationDescription",
+      "route": "selector",
+      "value": "(missing)",
+      "targetValue": "reference-before"
+    },
+    {
+      "className": "MAToOneRelationDescription",
+      "route": "selector",
+      "value": null,
+      "targetValue": "reference-before"
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "route": "direct",
+      "value": "(missing)",
+      "targetValue": "reference-before"
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "route": "direct",
+      "value": null,
+      "targetValue": "reference-before"
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "route": "selector",
+      "value": "(missing)",
+      "targetValue": "reference-before"
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "route": "selector",
+      "value": null,
+      "targetValue": "reference-before"
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "route": "direct",
+      "value": "(missing)",
+      "targetValue": "reference-before"
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "route": "direct",
+      "value": null,
+      "targetValue": "reference-before"
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "route": "selector",
+      "value": "(missing)",
+      "targetValue": "reference-before"
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "route": "selector",
+      "value": null,
+      "targetValue": "reference-before"
+    }
+  ]
+}

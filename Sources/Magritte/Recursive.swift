@@ -97,13 +97,13 @@ private func reflectedMetadata(
         ? "String Reader" : key == "stringWriter" ? "String Writer" : "Validator")
     d.properties["default"] = .classValue(cls)
     d.options = Options(try registry.withAllSubclasses(cls).map(Value.classValue))
-    try d.referenceDescription().className = "MAClassDescription"
+    try referenceTarget(d).className = "MAClassDescription"
   }
   if target.isRelation {
     let d = addMetadata(graph, "classes", "MAMultipleOptionDescription", 400)
     d.properties["label"] = .string("Classes")
     d.properties["default"] = .collection(kind: "set", elements: [])
-    try d.referenceDescription().className = "MAClassDescription"
+    try referenceTarget(d).className = "MAClassDescription"
     d.options = Options(registry.allClasses().map(Value.classValue))
   }
   return graph
@@ -150,7 +150,7 @@ private final class RecursiveState {
           && accessors[d.id] == nil && conditions[d.id] == nil, "Reflection identity collision")
       pending[d.id] = d
       for c in d.children { try walk(c) }
-      if d.isReference { try walk(d.referenceDescription()) }
+      if d.isReference { try walk(referenceTarget(d)) }
     }
     try walk(target)
     let added = pending.keys.filter { graph.descriptions[$0] == nil }.count
@@ -644,7 +644,7 @@ public final class RecursiveDescriptionModel {
       result.descriptions[d.id] = d
       try require(result.descriptions.count <= state.limits.nodes, "Schema node limit")
       for c in try d.orderedChildren() { try include(c, depth + 1) }
-      if d.isReference { try include(d.referenceDescription(), depth + 1) }
+      if d.isReference { try include(referenceTarget(d), depth + 1) }
     }
     for id in state.metaIDs.sorted() { try include(state.graph.descriptions[id]!, 0) }
     for id in state.modelSchemaIDs.sorted() { try include(state.graph.descriptions[id]!, 0) }

@@ -370,9 +370,12 @@ func supported(_ d: Description) throws {
     }
     try require(!d.isContainer || d.portableConditions.isEmpty, "Portable container conditions require a model message protocol")
     try require(d.isContainer || d.children.isEmpty, "Scalar cannot contain children")
-    if d.isReference { _ = try d.referenceDescription() }
-    else { try require(d.reference == nil, "Reference slot requires a reference description") }
-    try require(d.isRelation || d.classes.isEmpty, "Classes require a relation")
+  if d.isReference {
+    _ = try referenceTarget(d)
+  } else {
+    try require(d.reference == nil, "Reference slot requires a reference description")
+  }
+  try require(d.isRelation || d.classes.isEmpty, "Classes require a relation")
     if !d.isOption {
         guard case .collection(let options) = d.options, options.isEmpty, d.labels.isEmpty else {
             throw MagritteError("Options require an option description")
@@ -402,9 +405,9 @@ public func visit(_ root: Description, limits: Limits = Limits(), _ visitor: (De
         try require(seen.count <= limits.nodes, "Description node limit")
         try composition(d, 0); try visitor(d)
         for c in try d.orderedChildren() { try walk(c, depth + 1) }
-        if d.isReference { try walk(d.referenceDescription(), depth + 1) }
-    }
-    try walk(root, 0)
+    if d.isReference { try walk(referenceTarget(d), depth + 1) }
+  }
+  try walk(root, 0)
 }
 public func descriptionModel() -> Description {
     let container = Description(id: "MADescription.bootstrap", className: "MAContainer")
@@ -808,9 +811,9 @@ public final class Graph {
                 n["children"] = d.children.map(\.id)
             } else { n["accessor"] = try accessorWire(d.effectiveAccessor, limits) }
             if d.isReference {
-                let ref = try d.referenceDescription()
-                try require(descriptions[ref.id] === ref, "Unregistered reference description")
-                n["reference"] = ref.id
+        let ref = try referenceTarget(d)
+        try require(descriptions[ref.id] === ref, "Unregistered reference description")
+        n["reference"] = ref.id
             }
             if d.isRelation { n["classes"] = d.classes }
             if d.isOption {
