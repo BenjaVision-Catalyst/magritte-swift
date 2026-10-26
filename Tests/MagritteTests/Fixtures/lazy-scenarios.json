@@ -1,0 +1,2417 @@
+{
+  "authority": "Pinned upstream nil-only lazy substitution/cache rules and initialAnswer fallback; source-derived native expectations, no GT execution.",
+  "lazy": [
+    {
+      "className": "MAStringDescription",
+      "cache": null,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": null,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": "seed"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": null,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": null,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": null,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": null,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": null,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": null,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": null,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": null,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": null,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": null,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": false,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": false,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": "seed"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": false,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": false,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": false,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": false,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": false,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": false,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": false,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": false,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": false,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": false,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": true,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      },
+      "writes": 1
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": true,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": "seed"
+      },
+      "writes": 1
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": true,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": true,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": true,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": true,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": true,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": true,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": true,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": true,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": true,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAStringDescription",
+      "cache": true,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      },
+      "writes": 1
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": "seed"
+      },
+      "writes": 1
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": "seed"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      },
+      "writes": 1
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": "seed"
+      },
+      "writes": 1
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      },
+      "writes": 1
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": "seed"
+      },
+      "writes": 1
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": null,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": "seed"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": false,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      },
+      "writes": 1
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": "seed"
+      },
+      "writes": 1
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "cache": true,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": null,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": null,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": "seed"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": null,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": null,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": null,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": null,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": null,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": null,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": null,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": null,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": null,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": null,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": false,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": false,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": "seed"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": false,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": false,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": false,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": false,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": false,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": false,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": false,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": false,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": false,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": false,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": true,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      },
+      "writes": 1
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": true,
+      "current": {
+        "type": "nil"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": "seed"
+      },
+      "writes": 1
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": true,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": true,
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": true,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": true,
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": true,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": true,
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": true,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": true,
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": true,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "cache": true,
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "writes": 0
+    }
+  ],
+  "answers": [
+    {
+      "default": {
+        "type": "nil"
+      },
+      "answer": null,
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "answer": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "default": {
+        "type": "nil"
+      },
+      "answer": {
+        "type": "string",
+        "value": "answer"
+      },
+      "result": {
+        "type": "string",
+        "value": "answer"
+      }
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "answer": null,
+      "result": {
+        "type": "string",
+        "value": "seed"
+      }
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "answer": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "default": {
+        "type": "string",
+        "value": "seed"
+      },
+      "answer": {
+        "type": "string",
+        "value": "answer"
+      },
+      "result": {
+        "type": "string",
+        "value": "answer"
+      }
+    }
+  ]
+}

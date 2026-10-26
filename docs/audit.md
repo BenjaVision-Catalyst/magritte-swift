@@ -51,7 +51,7 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Explicit defaults | I, R (property only) | raw read returns nil; defaultValue exposes declared default |
 | shouldCacheDefault | I, R | editing default filtering, including pinned/live difference; see editing.md |
 | Memento default substitution/cache | I, R | straight nil/default and cached sentinel/default cooking; raw models unchanged |
-| General lazy initialization/default copying | N | mutable collection identity and full copy protocol unsupported |
+| Lazy default initialization | I (Value profile), fresh R deferred | nil-only substitution, conditional raw write and selector-backed property bridge; lazy.md; mutable collection identity/default copying remain unsupported |
 | Read-only/hidden validation skip | I, R | flags affect interpreter, raw write still writes |
 | MADictionaryAccessor | I, R | native dictionary missing read returns nil |
 | Accessor-derived names and labels | I, R (ASCII inflection profile) | exact name kinds, chain ordering, nil/empty overrides and default metadata; Unicode inflection N; accessor-inference.md |
@@ -66,7 +66,7 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Upstream nested exception trees/custom error text/validator overrides | N | unknown semantic properties fail import |
 | Common and relation/option metadata | I, R (selected properties) | ordered/distinct/definitive/sorted/extensible retained; no invented coercion/uniqueness rules |
 | Stored property dictionary protocol | I (Value profile without announcer), fresh R deferred | strict/lazy/conditional access, nil removal and MAPropertyAccessor; properties.md; unknown semantic wire fields still reject |
-| Property announcements and general lazy default initialization | N | subscribers/announcers and maLazyPropertyUsing: remain separate gaps |
+| Property announcements | N | subscribers and announcers remain unsupported |
 | Reference identity between description nodes | I | shared child instances survive import/export |
 | Relationship object identity, cycles, to-one/to-many/scalar-to-many | I, R | graph/2 explicit references and class constraints; no automatic validation cascade |
 | Static single/multiple options | I, R | membership/extensibility/prepared lists/identity-safe labels |
@@ -153,3 +153,5 @@ Phase 0.19 implements local MASortBlock evaluation, Value-target identity/delega
 Phase 0.20 implements reference getter display propagation and option undefined setter cascades for explicitly bound references. [reference-access.md](reference-access.md) records twenty upstream fingerprints, 24 getter and 24 setter cases, corrected reference-specific display expectations, codec/copy boundaries and native timing/error checks. GT was not accessed; fresh R remains deferred. Lazy reference creation/template derivation and Boolean self-reference convenience remain gaps.
 
 Phase 0.21 implements MATPropertyOwner stored-Value lookup/conditional/update semantics on descriptions and connects MAPropertyAccessor to that storage protocol. [properties.md](properties.md) records 21 selected source fingerprints, fifty state/result/trace cases, reentrant/error/copy/wire tests and explicit no-announcer boundaries. GT was not accessed; fresh R remains deferred. No generic event system or new schema language is introduced.
+
+Phase 0.22 implements element nil-only lazy initialization, selector-backed maLazyPropertyUsing: and initialAnswer fallback/storage. [lazy.md](lazy.md) records twelve source fingerprints, 144 lazy/six answer cases, write/error/reference/copy/wire tests and explicit callback/collection boundaries. No new annotated fields are invented. GT was not accessed; fresh R remains deferred.

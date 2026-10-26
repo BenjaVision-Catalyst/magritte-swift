@@ -167,6 +167,7 @@ open class Description: Model {
       }
       return .classValue(kind)
     case "displayBlockOrSymbol": return .symbol("greaseString")
+    case "initialAnswer": return try initialAnswer(limits: limits)
     case "stringReader": return .classValue("MAStringReader")
     case "stringWriter": return .classValue("MAStringWriter")
         case "validator": return .classValue("MAValidatorVisitor")
@@ -362,6 +363,8 @@ func supported(_ d: Description) throws {
           throw MagritteError("Description kind must be Class or nil")
         }
       }
+    case "initialAnswer":
+      try require(!d.isContainer, "Initial answer requires an element description")
     case "name":
       switch v { case .undefined, .string, .symbol: break; default: throw MagritteError("Expected description name") }
         case "default", "undefinedValue": break
@@ -656,7 +659,7 @@ public final class Graph {
           try require(
             ![
               "separators", "thousandsSeparator", "lineCount", "trueString", "falseString",
-              "trueStrings", "falseStrings", "displayBlockOrSymbol",
+              "trueStrings", "falseStrings", "displayBlockOrSymbol", "initialAnswer",
             ].contains(k), "Property requires graph/3")
         }
       }

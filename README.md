@@ -1,6 +1,6 @@
 # Magritte Swift
 
-An independent Swift Package port of [Magritte](https://github.com/magritte-metamodel/magritte). **0.21 adds stored property lookup and lazy conditional operations; it is not a complete Magritte implementation.** No C++ dependency, UI, networking or application-framework integration.
+An independent Swift Package port of [Magritte](https://github.com/magritte-metamodel/magritte). **0.22 adds nil-only lazy initialization and initial-answer fallback; it is not a complete Magritte implementation.** No C++ dependency, UI, networking or application-framework integration.
 
 The headless Magritte library includes ordered/priority containers, a scalar subset, runtime adaptive objects, native accessors, to-one/to-many/scalar relations, static options, typed collections, cyclic references, validation, a self-description bootstrap and bounded graph/value interchange.
 
@@ -82,3 +82,5 @@ The MASortBlock protocol, Value-target accessors and source/native verification 
 Reference getter side effects, option undefined cascades and snapshot boundaries are documented in [reference-access.md](docs/reference-access.md). GT was not accessed for this phase.
 
 Stored property semantics, nil/presence rules and source/native evidence are documented in [properties.md](docs/properties.md). GT was not accessed for this phase.
+
+Nil-only lazy initialization, the raw stored-property bridge and initial-answer fallback are documented in [lazy.md](docs/lazy.md), with source-derived evidence and explicit snapshot/callback boundaries. GT was not accessed for this phase.

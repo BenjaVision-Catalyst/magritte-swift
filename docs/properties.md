@@ -74,7 +74,7 @@ Stored keys use the existing nonempty printable ASCII identity profile. Values a
 
 No new graph version, tag or semantic property allowlist entry is added. Supported stored presence, including nil, survives snapshots. Unknown semantic names may be stored locally but still fail graph export; `metadata:` retains its existing explicitly opaque consumer-metadata meaning. Default-aware getters, validators and codecs retain their existing contracts. Direct access to the low-level `properties` map remains available and bypasses the checked operation API.
 
-General lazy default initialization through `maLazyPropertyUsing:`, full property-object identity and the other audit gaps remain separate phases.
+Phase 0.22 adds nil-only lazy default initialization through `maLazyPropertyUsing:`; see [lazy.md](lazy.md). Full mutable property-object identity and the other audit gaps remain separate phases.
 
 ## Executed standalone checks
 

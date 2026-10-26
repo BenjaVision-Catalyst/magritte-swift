@@ -43,7 +43,7 @@ Collections are **value snapshots** in this profile. Object identity/aliasing is
 
 ## Validation, options and presentation
 
-Common properties: required/readOnly/visible (Boolean), priority (integer), label/comment/group/undefined (string or nil), min/max (integer or nil, number descriptions), default/undefinedValue (any supported value), and shouldCacheDefault (Boolean). Relationship/option properties additionally include ordered, distinct, definitive, sorted, extensible where those properties apply. shouldCacheDefault defaults true for to-many relations, false elsewhere; editing mementos interpret this property as documented in editing.md; general lazy initialization remains unsupported. Unknown semantic properties fail. Explicitly opaque `metadata:` properties round-trip without executable interpretation.
+Common properties: required/readOnly/visible (Boolean), priority (integer), label/comment/group/undefined (string or nil), min/max (integer or nil, number descriptions), default/undefinedValue (any supported value), and shouldCacheDefault (Boolean). Relationship/option properties additionally include ordered, distinct, definitive, sorted, extensible where those properties apply. shouldCacheDefault defaults true for to-many relations, false elsewhere; editing mementos interpret this property as documented in editing.md, and explicit nil-only lazy initialization follows lazy.md. Unknown semantic properties fail. Explicitly opaque `metadata:` properties round-trip without executable interpretation.
 
 Required checks nil; multiple descriptions also reject empty Collections. Values equal to undefinedValue skip kind/specific/condition validation after required checks. Hidden/read-only descriptions skip validation. Raw writes do not validate or enforce presentation flags. Numeric min/max are inclusive. Local native conditions/default/accessor functions remain local, and exporting any such function fails even on unused/hidden nodes.
 
@@ -128,3 +128,7 @@ Import/export and ownership/copy traversal inspect raw reference edges. They do 
 ## Stored property operations (0.21)
 
 The new property API changes no wire forms. Supported explicit presence/nil remain data; inferred defaults do not become stored entries during lookup. Unknown semantic property names still reject export and `metadata:` remains opaque. Local callable/announcer objects are not new Value kinds. See [properties.md](properties.md).
+
+## Initial answers (0.22)
+
+Graph/3–4 accepts `initialAnswer` on element descriptions as any supported Value. Absence falls back to the declared default; an explicit nil remains nil. Graph/1–2 and containers reject this property. No new tag/version or annotated metadata field is added. Lazy initialization remains an explicit local operation rather than a raw-read/codec side effect. Callable defaults are not new wire Values. See [lazy.md](lazy.md).

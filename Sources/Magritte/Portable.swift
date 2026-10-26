@@ -489,6 +489,7 @@ extension Description {
       if name == "hasLabel" { return .boolean(try hasLabel()) }
       if name == "type" { return .string(try descriptionType(self)) }
       if name == "default" { return try defaultValue() }
+      if name == "initialAnswer" { return try initialAnswer() }
       let value = try property(name);
       return name == "undefined" && value.isNil ? .string("") : value
     }
@@ -504,6 +505,7 @@ extension Description {
         try require(value == .classValue(expected), "Unsupported interpreter class")
       }
       if key == "undefined" { try setUndefined(value); return }
+      if key == "initialAnswer" { try setInitialAnswer(value); return }
       if key == "default" { defaultFunction = nil }; properties[key] = value; return
     }
     try require(strategy == "MAPropertyAccessor", "Description slot requires property accessor")

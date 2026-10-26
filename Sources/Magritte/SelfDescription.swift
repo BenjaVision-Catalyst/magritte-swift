@@ -23,6 +23,7 @@ func metadataSelector(_ d: Description, _ name: String, writing: Bool) -> Bool {
   ].contains(name) {
     return true
   }
+  if name == "initialAnswer" { return !d.isContainer }
   if name == "name" { return true }
   if ["defaultLabel", "hasLabel", "isSortable"].contains(name) { return !writing }
   if name == "type" { return !writing }

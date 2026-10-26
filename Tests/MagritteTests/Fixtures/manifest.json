@@ -55,6 +55,8 @@
     "editing-roundtrip-replay.json": "6963583ffbbae05375e02038c33cb05ef6a1a022581b392aabec8b6566a6063c",
     "editing-scenarios.json": "0527267c642544b5e4c07ef5faf1829a38289fc66333a0132cd7fda03aec7a45",
     "invalid-graphs.json": "d0453e85d342beac37d25ecd54e36376488665e5cadee3d9e6d30f2da612af95",
+    "lazy-scenarios.json": "491811ea5d9b151a059890bd85b5e9f1cad5e8216c1733b829173a4dacf7eee9",
+    "lazy-upstream-methods.json": "14962baf6540c31cfacb532dbff494e8b7575c07c93bbcc3ed4818ec9ad1ac44",
     "live-methods.json": "c538d290f1456deedf892b3ba69a0464c8ba690dead6e26cbb49aedc51888d39",
     "person-v1.json": "87541466c2f6d8e01828a31dfb3e3a31e11bc7eb3cafbe06bdd032716c7e0179",
     "person-v2.json": "376c9ad1ba766ce2bc944c44b85d736bc47d46a5ca29324530479cfc3cfed5d1",
