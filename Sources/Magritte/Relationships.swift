@@ -87,7 +87,7 @@ private func validateModel(_ d: Description, _ model: Model, _ graph: Graph?, _ 
     try require(d.conditions.isEmpty, "Container local conditions are not implemented")
     var errors: [ValidationError] = []
     for c in try d.orderedChildren() {
-        if c.isContainer && (model is AdaptiveModel || c.nativeRead != nil || (c.accessor != nil && c.accessor?.className != "MAIdentityAccessor")) {
+        if c.isContainer && (model.usesStoredContainerValues || c.nativeRead != nil || (c.accessor != nil && c.accessor?.className != "MAIdentityAccessor")) {
             errors += try validateField(c, model.read(using: c), graph, budget, depth + 1)
         } else { errors += try validateModel(c, model, graph, budget, depth + 1) }
     }

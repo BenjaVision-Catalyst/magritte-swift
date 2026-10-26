@@ -3,6 +3,14 @@
   "path": "conformance",
   "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
   "files": {
+    "editing-boundaries-reference.json": "3e33ea9e66b2b9c3ca7e0f01150f6464fd57b28de619d2ba67912049bb9d8db3",
+    "editing-boundaries-replay.json": "61fb8a52b03bc278718381e5b318f07f307247947ad8783f626291042fa7abe5",
+    "editing-live-methods.json": "a5dd01360c7cdfde63802b6bb460ce8763aa1768b73b4b93dfa8e604a66f2d44",
+    "editing-reference-replay.json": "8fe71018183f0b39afafd0192f32fd9e7d4d1c07fe9d8b55d1449aae1849125a",
+    "editing-reference.json": "96e6e899766863f2dd0c85142c78278daa458b8f12fc6d04d8b8b1edaeb69c1f",
+    "editing-roundtrip-reference.json": "68421203b2da15be5a02e39f5a367d9da546f4fbca2fd0277ed0a129e3af5a5f",
+    "editing-roundtrip-replay.json": "6963583ffbbae05375e02038c33cb05ef6a1a022581b392aabec8b6566a6063c",
+    "editing-scenarios.json": "0527267c642544b5e4c07ef5faf1829a38289fc66333a0132cd7fda03aec7a45",
     "invalid-graphs.json": "d0453e85d342beac37d25ecd54e36376488665e5cadee3d9e6d30f2da612af95",
     "live-methods.json": "c538d290f1456deedf892b3ba69a0464c8ba690dead6e26cbb49aedc51888d39",
     "person-v1.json": "87541466c2f6d8e01828a31dfb3e3a31e11bc7eb3cafbe06bdd032716c7e0179",
@@ -28,6 +36,8 @@
     "relations-v2.json": "2d801bbf62db1ddf8317df5d26e01c348d8b2f7c77b8af798966a1f494224db0",
     "roundtrip-reference.json": "11079683a5c37e726a17641eaff15933501e3cdcaf1240b6815cf550519cc929",
     "roundtrip-replay.json": "94587d4c4dbebdda51c26cbf4aec02728d1cf6390205cc7aafd3581fcacf4217",
+    "self-description-reference.json": "01e45773e6577910320ba145a8f20e814f0c79e0b5917ebd8ebcf2163fd63989",
+    "self-description-replay.json": "3c71ea7fcb917a30ccbb8338a02a28316f3efff35eb7b4709e750425cee56f6b",
     "values.json": "e466d484df56254e55636d258b8cdb176868f686a5c7b7abcefe17daecc66b7f"
   }
 }

@@ -1,0 +1,9155 @@
+[
+	{
+		"stagedReads" : [
+			{
+				"field" : "meta.MAContainer.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			}
+		],
+		"edits" : [
+			{
+				"field" : "meta.MAContainer.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			}
+		],
+		"graph" : {
+			"descriptions" : [
+				{
+					"id" : "meta.MAContainer",
+					"properties" : {
+						"label" : {
+							"value" : "MAContainer",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"children" : [
+						"meta.MAContainer.type",
+						"meta.MAContainer.label",
+						"meta.MAContainer.comment",
+						"meta.MAContainer.group",
+						"meta.MAContainer.priority",
+						"meta.MAContainer.readOnly",
+						"meta.MAContainer.required",
+						"meta.MAContainer.visible",
+						"meta.MAContainer.undefined",
+						"meta.MAContainer.undefinedValue"
+					],
+					"class" : "MAContainer"
+				},
+				{
+					"id" : "meta.MAContainer.comment",
+					"properties" : {
+						"label" : {
+							"value" : "Comment",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "110",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "comment:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "comment"
+					},
+					"class" : "MAMemoDescription"
+				},
+				{
+					"id" : "meta.MAContainer.group",
+					"properties" : {
+						"label" : {
+							"value" : "Group",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "105",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "group:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "group"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAContainer.label",
+					"properties" : {
+						"label" : {
+							"value" : "Label",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "100",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "Value",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "label:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "label"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAContainer.priority",
+					"properties" : {
+						"required" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Priority",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "priority:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "priority"
+					},
+					"class" : "MANumberDescription"
+				},
+				{
+					"id" : "meta.MAContainer.readOnly",
+					"properties" : {
+						"label" : {
+							"value" : "Read-only",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "200",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "readOnly:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "readOnly"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAContainer.required",
+					"properties" : {
+						"label" : {
+							"value" : "Required",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "220",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "required:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "required"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAContainer.type",
+					"properties" : {
+						"readOnly" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Kind",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "type:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "type"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAContainer.undefined",
+					"properties" : {
+						"label" : {
+							"value" : "Undefined String",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "140",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefined:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefined"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"reference" : "meta.MAContainer.undefinedValue.reference",
+					"properties" : {
+						"priority" : {
+							"value" : "150",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"classes" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefinedValue:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefinedValue"
+					},
+					"conditions" : [ ],
+					"class" : "MAToOneRelationDescription",
+					"id" : "meta.MAContainer.undefinedValue"
+				},
+				{
+					"id" : "meta.MAContainer.undefinedValue.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAContainer.visible",
+					"properties" : {
+						"label" : {
+							"value" : "Visible",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "210",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : true,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "visible:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "visible"
+					},
+					"class" : "MABooleanDescription"
+				}
+			],
+			"format" : "magritte.graph/3",
+			"objects" : [ ],
+			"root" : "meta.MAContainer"
+		},
+		"finalReads" : [
+			{
+				"field" : "meta.MAContainer.type",
+				"value" : {
+					"value" : "Container",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			}
+		],
+		"reads" : [
+			{
+				"field" : "meta.MAContainer.type",
+				"value" : {
+					"value" : "Container",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.label",
+				"value" : {
+					"value" : "Custom",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.priority",
+				"value" : {
+					"value" : "17",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAContainer.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			}
+		],
+		"slots" : { },
+		"editValidation" : [ ],
+		"key" : "Value",
+		"properties" : {
+			"group" : {
+				"value" : "Group",
+				"type" : "string"
+			},
+			"required" : {
+				"value" : true,
+				"type" : "boolean"
+			},
+			"undefined" : {
+				"value" : "N/A",
+				"type" : "string"
+			},
+			"comment" : {
+				"value" : "About",
+				"type" : "string"
+			},
+			"priority" : {
+				"value" : "17",
+				"type" : "integer"
+			},
+			"label" : {
+				"value" : "Custom",
+				"type" : "string"
+			}
+		},
+		"sampleValidation" : [ ],
+		"type" : "Container",
+		"class" : "MAContainer",
+		"validation" : [ ]
+	},
+	{
+		"stagedReads" : [
+			{
+				"field" : "meta.MAPriorityContainer.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			}
+		],
+		"edits" : [
+			{
+				"field" : "meta.MAPriorityContainer.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			}
+		],
+		"graph" : {
+			"descriptions" : [
+				{
+					"id" : "meta.MAPriorityContainer",
+					"properties" : {
+						"label" : {
+							"value" : "MAPriorityContainer",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"children" : [
+						"meta.MAPriorityContainer.type",
+						"meta.MAPriorityContainer.label",
+						"meta.MAPriorityContainer.comment",
+						"meta.MAPriorityContainer.group",
+						"meta.MAPriorityContainer.priority",
+						"meta.MAPriorityContainer.readOnly",
+						"meta.MAPriorityContainer.required",
+						"meta.MAPriorityContainer.visible",
+						"meta.MAPriorityContainer.undefined",
+						"meta.MAPriorityContainer.undefinedValue"
+					],
+					"class" : "MAContainer"
+				},
+				{
+					"id" : "meta.MAPriorityContainer.comment",
+					"properties" : {
+						"label" : {
+							"value" : "Comment",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "110",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "comment:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "comment"
+					},
+					"class" : "MAMemoDescription"
+				},
+				{
+					"id" : "meta.MAPriorityContainer.group",
+					"properties" : {
+						"label" : {
+							"value" : "Group",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "105",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "group:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "group"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAPriorityContainer.label",
+					"properties" : {
+						"label" : {
+							"value" : "Label",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "100",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "Value",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "label:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "label"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAPriorityContainer.priority",
+					"properties" : {
+						"required" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Priority",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "priority:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "priority"
+					},
+					"class" : "MANumberDescription"
+				},
+				{
+					"id" : "meta.MAPriorityContainer.readOnly",
+					"properties" : {
+						"label" : {
+							"value" : "Read-only",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "200",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "readOnly:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "readOnly"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAPriorityContainer.required",
+					"properties" : {
+						"label" : {
+							"value" : "Required",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "220",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "required:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "required"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAPriorityContainer.type",
+					"properties" : {
+						"readOnly" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Kind",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "type:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "type"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAPriorityContainer.undefined",
+					"properties" : {
+						"label" : {
+							"value" : "Undefined String",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "140",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefined:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefined"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"reference" : "meta.MAPriorityContainer.undefinedValue.reference",
+					"properties" : {
+						"priority" : {
+							"value" : "150",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"classes" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefinedValue:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefinedValue"
+					},
+					"conditions" : [ ],
+					"class" : "MAToOneRelationDescription",
+					"id" : "meta.MAPriorityContainer.undefinedValue"
+				},
+				{
+					"id" : "meta.MAPriorityContainer.undefinedValue.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAPriorityContainer.visible",
+					"properties" : {
+						"label" : {
+							"value" : "Visible",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "210",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : true,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "visible:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "visible"
+					},
+					"class" : "MABooleanDescription"
+				}
+			],
+			"format" : "magritte.graph/3",
+			"objects" : [ ],
+			"root" : "meta.MAPriorityContainer"
+		},
+		"finalReads" : [
+			{
+				"field" : "meta.MAPriorityContainer.type",
+				"value" : {
+					"value" : "Priority Container",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			}
+		],
+		"reads" : [
+			{
+				"field" : "meta.MAPriorityContainer.type",
+				"value" : {
+					"value" : "Priority Container",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.label",
+				"value" : {
+					"value" : "Custom",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.priority",
+				"value" : {
+					"value" : "17",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPriorityContainer.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			}
+		],
+		"slots" : { },
+		"editValidation" : [ ],
+		"key" : "Value",
+		"properties" : {
+			"group" : {
+				"value" : "Group",
+				"type" : "string"
+			},
+			"required" : {
+				"value" : true,
+				"type" : "boolean"
+			},
+			"undefined" : {
+				"value" : "N/A",
+				"type" : "string"
+			},
+			"comment" : {
+				"value" : "About",
+				"type" : "string"
+			},
+			"priority" : {
+				"value" : "17",
+				"type" : "integer"
+			},
+			"label" : {
+				"value" : "Custom",
+				"type" : "string"
+			}
+		},
+		"sampleValidation" : [ ],
+		"type" : "Priority Container",
+		"class" : "MAPriorityContainer",
+		"validation" : [ ]
+	},
+	{
+		"stagedReads" : [
+			{
+				"field" : "meta.MAStringDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			}
+		],
+		"edits" : [
+			{
+				"field" : "meta.MAStringDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			}
+		],
+		"graph" : {
+			"descriptions" : [
+				{
+					"id" : "meta.MAStringDescription",
+					"properties" : {
+						"label" : {
+							"value" : "MAStringDescription",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"children" : [
+						"meta.MAStringDescription.type",
+						"meta.MAStringDescription.label",
+						"meta.MAStringDescription.comment",
+						"meta.MAStringDescription.group",
+						"meta.MAStringDescription.priority",
+						"meta.MAStringDescription.readOnly",
+						"meta.MAStringDescription.required",
+						"meta.MAStringDescription.visible",
+						"meta.MAStringDescription.undefined",
+						"meta.MAStringDescription.undefinedValue",
+						"meta.MAStringDescription.default"
+					],
+					"class" : "MAContainer"
+				},
+				{
+					"id" : "meta.MAStringDescription.comment",
+					"properties" : {
+						"label" : {
+							"value" : "Comment",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "110",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "comment:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "comment"
+					},
+					"class" : "MAMemoDescription"
+				},
+				{
+					"id" : "meta.MAStringDescription.default",
+					"properties" : {
+						"label" : {
+							"value" : "Default",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "default:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "default"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAStringDescription.group",
+					"properties" : {
+						"label" : {
+							"value" : "Group",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "105",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "group:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "group"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAStringDescription.label",
+					"properties" : {
+						"label" : {
+							"value" : "Label",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "100",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "Value",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "label:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "label"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAStringDescription.priority",
+					"properties" : {
+						"required" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Priority",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "priority:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "priority"
+					},
+					"class" : "MANumberDescription"
+				},
+				{
+					"id" : "meta.MAStringDescription.readOnly",
+					"properties" : {
+						"label" : {
+							"value" : "Read-only",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "200",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "readOnly:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "readOnly"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAStringDescription.required",
+					"properties" : {
+						"label" : {
+							"value" : "Required",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "220",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "required:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "required"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAStringDescription.type",
+					"properties" : {
+						"readOnly" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Kind",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "type:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "type"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAStringDescription.undefined",
+					"properties" : {
+						"label" : {
+							"value" : "Undefined String",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "140",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefined:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefined"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"reference" : "meta.MAStringDescription.undefinedValue.reference",
+					"properties" : {
+						"priority" : {
+							"value" : "150",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"classes" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefinedValue:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefinedValue"
+					},
+					"conditions" : [ ],
+					"class" : "MAToOneRelationDescription",
+					"id" : "meta.MAStringDescription.undefinedValue"
+				},
+				{
+					"id" : "meta.MAStringDescription.undefinedValue.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAStringDescription.visible",
+					"properties" : {
+						"label" : {
+							"value" : "Visible",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "210",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : true,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "visible:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "visible"
+					},
+					"class" : "MABooleanDescription"
+				}
+			],
+			"format" : "magritte.graph/3",
+			"objects" : [ ],
+			"root" : "meta.MAStringDescription"
+		},
+		"finalReads" : [
+			{
+				"field" : "meta.MAStringDescription.type",
+				"value" : {
+					"value" : "String",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			}
+		],
+		"reads" : [
+			{
+				"field" : "meta.MAStringDescription.type",
+				"value" : {
+					"value" : "String",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.label",
+				"value" : {
+					"value" : "Custom",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.priority",
+				"value" : {
+					"value" : "17",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAStringDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			}
+		],
+		"slots" : { },
+		"editValidation" : [ ],
+		"key" : "Value",
+		"properties" : {
+			"group" : {
+				"value" : "Group",
+				"type" : "string"
+			},
+			"required" : {
+				"value" : true,
+				"type" : "boolean"
+			},
+			"undefined" : {
+				"value" : "N/A",
+				"type" : "string"
+			},
+			"comment" : {
+				"value" : "About",
+				"type" : "string"
+			},
+			"priority" : {
+				"value" : "17",
+				"type" : "integer"
+			},
+			"label" : {
+				"value" : "Custom",
+				"type" : "string"
+			}
+		},
+		"sampleValidation" : [ ],
+		"type" : "String",
+		"class" : "MAStringDescription",
+		"validation" : [ ]
+	},
+	{
+		"stagedReads" : [
+			{
+				"field" : "meta.MASymbolDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			}
+		],
+		"edits" : [
+			{
+				"field" : "meta.MASymbolDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			}
+		],
+		"graph" : {
+			"descriptions" : [
+				{
+					"id" : "meta.MASymbolDescription",
+					"properties" : {
+						"label" : {
+							"value" : "MASymbolDescription",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"children" : [
+						"meta.MASymbolDescription.type",
+						"meta.MASymbolDescription.label",
+						"meta.MASymbolDescription.comment",
+						"meta.MASymbolDescription.group",
+						"meta.MASymbolDescription.priority",
+						"meta.MASymbolDescription.readOnly",
+						"meta.MASymbolDescription.required",
+						"meta.MASymbolDescription.visible",
+						"meta.MASymbolDescription.undefined",
+						"meta.MASymbolDescription.undefinedValue",
+						"meta.MASymbolDescription.default"
+					],
+					"class" : "MAContainer"
+				},
+				{
+					"id" : "meta.MASymbolDescription.comment",
+					"properties" : {
+						"label" : {
+							"value" : "Comment",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "110",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "comment:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "comment"
+					},
+					"class" : "MAMemoDescription"
+				},
+				{
+					"id" : "meta.MASymbolDescription.default",
+					"properties" : {
+						"label" : {
+							"value" : "Default",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "default:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "default"
+					},
+					"class" : "MASymbolDescription"
+				},
+				{
+					"id" : "meta.MASymbolDescription.group",
+					"properties" : {
+						"label" : {
+							"value" : "Group",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "105",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "group:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "group"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MASymbolDescription.label",
+					"properties" : {
+						"label" : {
+							"value" : "Label",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "100",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "Value",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "label:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "label"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MASymbolDescription.priority",
+					"properties" : {
+						"required" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Priority",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "priority:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "priority"
+					},
+					"class" : "MANumberDescription"
+				},
+				{
+					"id" : "meta.MASymbolDescription.readOnly",
+					"properties" : {
+						"label" : {
+							"value" : "Read-only",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "200",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "readOnly:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "readOnly"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MASymbolDescription.required",
+					"properties" : {
+						"label" : {
+							"value" : "Required",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "220",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "required:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "required"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MASymbolDescription.type",
+					"properties" : {
+						"readOnly" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Kind",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "type:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "type"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MASymbolDescription.undefined",
+					"properties" : {
+						"label" : {
+							"value" : "Undefined String",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "140",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefined:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefined"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"reference" : "meta.MASymbolDescription.undefinedValue.reference",
+					"properties" : {
+						"priority" : {
+							"value" : "150",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"classes" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefinedValue:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefinedValue"
+					},
+					"conditions" : [ ],
+					"class" : "MAToOneRelationDescription",
+					"id" : "meta.MASymbolDescription.undefinedValue"
+				},
+				{
+					"id" : "meta.MASymbolDescription.undefinedValue.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MASymbolDescription.visible",
+					"properties" : {
+						"label" : {
+							"value" : "Visible",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "210",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : true,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "visible:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "visible"
+					},
+					"class" : "MABooleanDescription"
+				}
+			],
+			"format" : "magritte.graph/3",
+			"objects" : [ ],
+			"root" : "meta.MASymbolDescription"
+		},
+		"finalReads" : [
+			{
+				"field" : "meta.MASymbolDescription.type",
+				"value" : {
+					"value" : "Symbol",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			}
+		],
+		"reads" : [
+			{
+				"field" : "meta.MASymbolDescription.type",
+				"value" : {
+					"value" : "Symbol",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.label",
+				"value" : {
+					"value" : "Custom",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.priority",
+				"value" : {
+					"value" : "17",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MASymbolDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			}
+		],
+		"slots" : { },
+		"editValidation" : [ ],
+		"key" : "Value",
+		"properties" : {
+			"group" : {
+				"value" : "Group",
+				"type" : "string"
+			},
+			"required" : {
+				"value" : true,
+				"type" : "boolean"
+			},
+			"undefined" : {
+				"value" : "N/A",
+				"type" : "string"
+			},
+			"comment" : {
+				"value" : "About",
+				"type" : "string"
+			},
+			"priority" : {
+				"value" : "17",
+				"type" : "integer"
+			},
+			"label" : {
+				"value" : "Custom",
+				"type" : "string"
+			}
+		},
+		"sampleValidation" : [ ],
+		"type" : "Symbol",
+		"class" : "MASymbolDescription",
+		"validation" : [ ]
+	},
+	{
+		"stagedReads" : [
+			{
+				"field" : "meta.MAMemoDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.lineCount",
+				"value" : {
+					"value" : "6",
+					"type" : "integer"
+				}
+			}
+		],
+		"edits" : [
+			{
+				"field" : "meta.MAMemoDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.lineCount",
+				"value" : {
+					"value" : "6",
+					"type" : "integer"
+				}
+			}
+		],
+		"graph" : {
+			"descriptions" : [
+				{
+					"id" : "meta.MAMemoDescription",
+					"properties" : {
+						"label" : {
+							"value" : "MAMemoDescription",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"children" : [
+						"meta.MAMemoDescription.type",
+						"meta.MAMemoDescription.label",
+						"meta.MAMemoDescription.comment",
+						"meta.MAMemoDescription.group",
+						"meta.MAMemoDescription.priority",
+						"meta.MAMemoDescription.readOnly",
+						"meta.MAMemoDescription.required",
+						"meta.MAMemoDescription.visible",
+						"meta.MAMemoDescription.undefined",
+						"meta.MAMemoDescription.undefinedValue",
+						"meta.MAMemoDescription.default",
+						"meta.MAMemoDescription.lineCount"
+					],
+					"class" : "MAContainer"
+				},
+				{
+					"id" : "meta.MAMemoDescription.comment",
+					"properties" : {
+						"label" : {
+							"value" : "Comment",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "110",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "comment:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "comment"
+					},
+					"class" : "MAMemoDescription"
+				},
+				{
+					"id" : "meta.MAMemoDescription.default",
+					"properties" : {
+						"label" : {
+							"value" : "Default",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "default:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "default"
+					},
+					"class" : "MAMemoDescription"
+				},
+				{
+					"id" : "meta.MAMemoDescription.group",
+					"properties" : {
+						"label" : {
+							"value" : "Group",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "105",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "group:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "group"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAMemoDescription.label",
+					"properties" : {
+						"label" : {
+							"value" : "Label",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "100",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "Value",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "label:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "label"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAMemoDescription.lineCount",
+					"properties" : {
+						"label" : {
+							"value" : "Number of Lines",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "400",
+							"type" : "integer"
+						},
+						"min" : {
+							"value" : "1",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "3",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [
+						{
+							"label" : "No integer was entered",
+							"predicate" : {
+								"class" : "MAPluggableCondition",
+								"receiver" : {
+									"type" : "nil"
+								},
+								"selector" : "isInteger",
+								"arguments" : [ ],
+								"index" : 0
+							}
+						}
+					],
+					"accessor" : {
+						"writeSelector" : "lineCount:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "lineCount"
+					},
+					"class" : "MANumberDescription"
+				},
+				{
+					"id" : "meta.MAMemoDescription.priority",
+					"properties" : {
+						"required" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Priority",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "priority:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "priority"
+					},
+					"class" : "MANumberDescription"
+				},
+				{
+					"id" : "meta.MAMemoDescription.readOnly",
+					"properties" : {
+						"label" : {
+							"value" : "Read-only",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "200",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "readOnly:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "readOnly"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAMemoDescription.required",
+					"properties" : {
+						"label" : {
+							"value" : "Required",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "220",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "required:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "required"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAMemoDescription.type",
+					"properties" : {
+						"readOnly" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Kind",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "type:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "type"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAMemoDescription.undefined",
+					"properties" : {
+						"label" : {
+							"value" : "Undefined String",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "140",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefined:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefined"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"reference" : "meta.MAMemoDescription.undefinedValue.reference",
+					"properties" : {
+						"priority" : {
+							"value" : "150",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"classes" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefinedValue:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefinedValue"
+					},
+					"conditions" : [ ],
+					"class" : "MAToOneRelationDescription",
+					"id" : "meta.MAMemoDescription.undefinedValue"
+				},
+				{
+					"id" : "meta.MAMemoDescription.undefinedValue.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAMemoDescription.visible",
+					"properties" : {
+						"label" : {
+							"value" : "Visible",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "210",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : true,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "visible:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "visible"
+					},
+					"class" : "MABooleanDescription"
+				}
+			],
+			"format" : "magritte.graph/3",
+			"objects" : [ ],
+			"root" : "meta.MAMemoDescription"
+		},
+		"finalReads" : [
+			{
+				"field" : "meta.MAMemoDescription.type",
+				"value" : {
+					"value" : "Memo",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.lineCount",
+				"value" : {
+					"value" : "6",
+					"type" : "integer"
+				}
+			}
+		],
+		"reads" : [
+			{
+				"field" : "meta.MAMemoDescription.type",
+				"value" : {
+					"value" : "Memo",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.label",
+				"value" : {
+					"value" : "Custom",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.priority",
+				"value" : {
+					"value" : "17",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAMemoDescription.lineCount",
+				"value" : {
+					"value" : "4",
+					"type" : "integer"
+				}
+			}
+		],
+		"slots" : { },
+		"editValidation" : [ ],
+		"key" : "Value",
+		"properties" : {
+			"group" : {
+				"value" : "Group",
+				"type" : "string"
+			},
+			"required" : {
+				"value" : true,
+				"type" : "boolean"
+			},
+			"undefined" : {
+				"value" : "N/A",
+				"type" : "string"
+			},
+			"comment" : {
+				"value" : "About",
+				"type" : "string"
+			},
+			"priority" : {
+				"value" : "17",
+				"type" : "integer"
+			},
+			"label" : {
+				"value" : "Custom",
+				"type" : "string"
+			},
+			"lineCount" : {
+				"value" : "4",
+				"type" : "integer"
+			}
+		},
+		"sampleValidation" : [ ],
+		"type" : "Memo",
+		"class" : "MAMemoDescription",
+		"validation" : [ ]
+	},
+	{
+		"stagedReads" : [
+			{
+				"field" : "meta.MAPasswordDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			}
+		],
+		"edits" : [
+			{
+				"field" : "meta.MAPasswordDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			}
+		],
+		"graph" : {
+			"descriptions" : [
+				{
+					"id" : "meta.MAPasswordDescription",
+					"properties" : {
+						"label" : {
+							"value" : "MAPasswordDescription",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"children" : [
+						"meta.MAPasswordDescription.type",
+						"meta.MAPasswordDescription.label",
+						"meta.MAPasswordDescription.comment",
+						"meta.MAPasswordDescription.group",
+						"meta.MAPasswordDescription.priority",
+						"meta.MAPasswordDescription.readOnly",
+						"meta.MAPasswordDescription.required",
+						"meta.MAPasswordDescription.visible",
+						"meta.MAPasswordDescription.undefined",
+						"meta.MAPasswordDescription.undefinedValue",
+						"meta.MAPasswordDescription.default"
+					],
+					"class" : "MAContainer"
+				},
+				{
+					"id" : "meta.MAPasswordDescription.comment",
+					"properties" : {
+						"label" : {
+							"value" : "Comment",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "110",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "comment:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "comment"
+					},
+					"class" : "MAMemoDescription"
+				},
+				{
+					"id" : "meta.MAPasswordDescription.default",
+					"properties" : {
+						"label" : {
+							"value" : "Default",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "default:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "default"
+					},
+					"class" : "MAPasswordDescription"
+				},
+				{
+					"id" : "meta.MAPasswordDescription.group",
+					"properties" : {
+						"label" : {
+							"value" : "Group",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "105",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "group:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "group"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAPasswordDescription.label",
+					"properties" : {
+						"label" : {
+							"value" : "Label",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "100",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "Value",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "label:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "label"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAPasswordDescription.priority",
+					"properties" : {
+						"required" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Priority",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "priority:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "priority"
+					},
+					"class" : "MANumberDescription"
+				},
+				{
+					"id" : "meta.MAPasswordDescription.readOnly",
+					"properties" : {
+						"label" : {
+							"value" : "Read-only",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "200",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "readOnly:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "readOnly"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAPasswordDescription.required",
+					"properties" : {
+						"label" : {
+							"value" : "Required",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "220",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "required:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "required"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAPasswordDescription.type",
+					"properties" : {
+						"readOnly" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Kind",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "type:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "type"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAPasswordDescription.undefined",
+					"properties" : {
+						"label" : {
+							"value" : "Undefined String",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "140",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefined:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefined"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"reference" : "meta.MAPasswordDescription.undefinedValue.reference",
+					"properties" : {
+						"priority" : {
+							"value" : "150",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"classes" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefinedValue:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefinedValue"
+					},
+					"conditions" : [ ],
+					"class" : "MAToOneRelationDescription",
+					"id" : "meta.MAPasswordDescription.undefinedValue"
+				},
+				{
+					"id" : "meta.MAPasswordDescription.undefinedValue.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAPasswordDescription.visible",
+					"properties" : {
+						"label" : {
+							"value" : "Visible",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "210",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : true,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "visible:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "visible"
+					},
+					"class" : "MABooleanDescription"
+				}
+			],
+			"format" : "magritte.graph/3",
+			"objects" : [ ],
+			"root" : "meta.MAPasswordDescription"
+		},
+		"finalReads" : [
+			{
+				"field" : "meta.MAPasswordDescription.type",
+				"value" : {
+					"value" : "Password",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			}
+		],
+		"reads" : [
+			{
+				"field" : "meta.MAPasswordDescription.type",
+				"value" : {
+					"value" : "Password",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.label",
+				"value" : {
+					"value" : "Custom",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.priority",
+				"value" : {
+					"value" : "17",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAPasswordDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			}
+		],
+		"slots" : { },
+		"editValidation" : [ ],
+		"key" : "Value",
+		"properties" : {
+			"group" : {
+				"value" : "Group",
+				"type" : "string"
+			},
+			"required" : {
+				"value" : true,
+				"type" : "boolean"
+			},
+			"undefined" : {
+				"value" : "N/A",
+				"type" : "string"
+			},
+			"comment" : {
+				"value" : "About",
+				"type" : "string"
+			},
+			"priority" : {
+				"value" : "17",
+				"type" : "integer"
+			},
+			"label" : {
+				"value" : "Custom",
+				"type" : "string"
+			}
+		},
+		"sampleValidation" : [ ],
+		"type" : "Password",
+		"class" : "MAPasswordDescription",
+		"validation" : [ ]
+	},
+	{
+		"stagedReads" : [
+			{
+				"field" : "meta.MANumberDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.default",
+				"value" : {
+					"value" : "8",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.min",
+				"value" : {
+					"value" : "7",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.max",
+				"value" : {
+					"value" : "12",
+					"type" : "integer"
+				}
+			}
+		],
+		"edits" : [
+			{
+				"field" : "meta.MANumberDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.min",
+				"value" : {
+					"value" : "7",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.max",
+				"value" : {
+					"value" : "12",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.default",
+				"value" : {
+					"value" : "8",
+					"type" : "integer"
+				}
+			}
+		],
+		"graph" : {
+			"descriptions" : [
+				{
+					"id" : "meta.MANumberDescription",
+					"properties" : {
+						"label" : {
+							"value" : "MANumberDescription",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"children" : [
+						"meta.MANumberDescription.type",
+						"meta.MANumberDescription.label",
+						"meta.MANumberDescription.comment",
+						"meta.MANumberDescription.group",
+						"meta.MANumberDescription.priority",
+						"meta.MANumberDescription.readOnly",
+						"meta.MANumberDescription.required",
+						"meta.MANumberDescription.visible",
+						"meta.MANumberDescription.undefined",
+						"meta.MANumberDescription.undefinedValue",
+						"meta.MANumberDescription.default",
+						"meta.MANumberDescription.min",
+						"meta.MANumberDescription.max"
+					],
+					"class" : "MAContainer"
+				},
+				{
+					"id" : "meta.MANumberDescription.comment",
+					"properties" : {
+						"label" : {
+							"value" : "Comment",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "110",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "comment:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "comment"
+					},
+					"class" : "MAMemoDescription"
+				},
+				{
+					"id" : "meta.MANumberDescription.default",
+					"properties" : {
+						"label" : {
+							"value" : "Default",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "default:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "default"
+					},
+					"class" : "MANumberDescription"
+				},
+				{
+					"id" : "meta.MANumberDescription.group",
+					"properties" : {
+						"label" : {
+							"value" : "Group",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "105",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "group:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "group"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MANumberDescription.label",
+					"properties" : {
+						"label" : {
+							"value" : "Label",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "100",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "Value",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "label:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "label"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MANumberDescription.max",
+					"properties" : {
+						"label" : {
+							"value" : "Maximum",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "410",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "max:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "max"
+					},
+					"class" : "MANumberDescription"
+				},
+				{
+					"id" : "meta.MANumberDescription.min",
+					"properties" : {
+						"label" : {
+							"value" : "Min",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "400",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "min:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "min"
+					},
+					"class" : "MANumberDescription"
+				},
+				{
+					"id" : "meta.MANumberDescription.priority",
+					"properties" : {
+						"required" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Priority",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "priority:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "priority"
+					},
+					"class" : "MANumberDescription"
+				},
+				{
+					"id" : "meta.MANumberDescription.readOnly",
+					"properties" : {
+						"label" : {
+							"value" : "Read-only",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "200",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "readOnly:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "readOnly"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MANumberDescription.required",
+					"properties" : {
+						"label" : {
+							"value" : "Required",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "220",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "required:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "required"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MANumberDescription.type",
+					"properties" : {
+						"readOnly" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Kind",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "type:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "type"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MANumberDescription.undefined",
+					"properties" : {
+						"label" : {
+							"value" : "Undefined String",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "140",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefined:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefined"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"reference" : "meta.MANumberDescription.undefinedValue.reference",
+					"properties" : {
+						"priority" : {
+							"value" : "150",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"classes" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefinedValue:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefinedValue"
+					},
+					"conditions" : [ ],
+					"class" : "MAToOneRelationDescription",
+					"id" : "meta.MANumberDescription.undefinedValue"
+				},
+				{
+					"id" : "meta.MANumberDescription.undefinedValue.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MANumberDescription.visible",
+					"properties" : {
+						"label" : {
+							"value" : "Visible",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "210",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : true,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "visible:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "visible"
+					},
+					"class" : "MABooleanDescription"
+				}
+			],
+			"format" : "magritte.graph/3",
+			"objects" : [ ],
+			"root" : "meta.MANumberDescription"
+		},
+		"finalReads" : [
+			{
+				"field" : "meta.MANumberDescription.type",
+				"value" : {
+					"value" : "Number",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.default",
+				"value" : {
+					"value" : "8",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.min",
+				"value" : {
+					"value" : "7",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.max",
+				"value" : {
+					"value" : "12",
+					"type" : "integer"
+				}
+			}
+		],
+		"reads" : [
+			{
+				"field" : "meta.MANumberDescription.type",
+				"value" : {
+					"value" : "Number",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.label",
+				"value" : {
+					"value" : "Custom",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.priority",
+				"value" : {
+					"value" : "17",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.default",
+				"value" : {
+					"value" : "3",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.min",
+				"value" : {
+					"value" : "2",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MANumberDescription.max",
+				"value" : {
+					"value" : "10",
+					"type" : "integer"
+				}
+			}
+		],
+		"slots" : { },
+		"editValidation" : [ ],
+		"key" : "Value",
+		"properties" : {
+			"group" : {
+				"value" : "Group",
+				"type" : "string"
+			},
+			"required" : {
+				"value" : true,
+				"type" : "boolean"
+			},
+			"undefined" : {
+				"value" : "N/A",
+				"type" : "string"
+			},
+			"comment" : {
+				"value" : "About",
+				"type" : "string"
+			},
+			"priority" : {
+				"value" : "17",
+				"type" : "integer"
+			},
+			"max" : {
+				"value" : "10",
+				"type" : "integer"
+			},
+			"default" : {
+				"value" : "3",
+				"type" : "integer"
+			},
+			"label" : {
+				"value" : "Custom",
+				"type" : "string"
+			},
+			"min" : {
+				"value" : "2",
+				"type" : "integer"
+			}
+		},
+		"sampleValidation" : [
+			"MARangeError"
+		],
+		"type" : "Number",
+		"class" : "MANumberDescription",
+		"validation" : [ ]
+	},
+	{
+		"stagedReads" : [
+			{
+				"field" : "meta.MABooleanDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.trueString",
+				"value" : {
+					"value" : "YES!",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.falseString",
+				"value" : {
+					"value" : "NO!",
+					"type" : "string"
+				}
+			}
+		],
+		"edits" : [
+			{
+				"field" : "meta.MABooleanDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.trueString",
+				"value" : {
+					"value" : "YES!",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.falseString",
+				"value" : {
+					"value" : "NO!",
+					"type" : "string"
+				}
+			}
+		],
+		"graph" : {
+			"descriptions" : [
+				{
+					"id" : "meta.MABooleanDescription",
+					"properties" : {
+						"label" : {
+							"value" : "MABooleanDescription",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"children" : [
+						"meta.MABooleanDescription.type",
+						"meta.MABooleanDescription.label",
+						"meta.MABooleanDescription.comment",
+						"meta.MABooleanDescription.group",
+						"meta.MABooleanDescription.priority",
+						"meta.MABooleanDescription.readOnly",
+						"meta.MABooleanDescription.visible",
+						"meta.MABooleanDescription.undefined",
+						"meta.MABooleanDescription.undefinedValue",
+						"meta.MABooleanDescription.default",
+						"meta.MABooleanDescription.trueString",
+						"meta.MABooleanDescription.falseString"
+					],
+					"class" : "MAContainer"
+				},
+				{
+					"id" : "meta.MABooleanDescription.comment",
+					"properties" : {
+						"label" : {
+							"value" : "Comment",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "110",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "comment:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "comment"
+					},
+					"class" : "MAMemoDescription"
+				},
+				{
+					"id" : "meta.MABooleanDescription.default",
+					"properties" : {
+						"label" : {
+							"value" : "Default",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "default:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "default"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MABooleanDescription.falseString",
+					"properties" : {
+						"label" : {
+							"value" : "False String",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "410",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "false",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "falseString:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "falseString"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MABooleanDescription.group",
+					"properties" : {
+						"label" : {
+							"value" : "Group",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "105",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "group:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "group"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MABooleanDescription.label",
+					"properties" : {
+						"label" : {
+							"value" : "Label",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "100",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "Value",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "label:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "label"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MABooleanDescription.priority",
+					"properties" : {
+						"required" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Priority",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "priority:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "priority"
+					},
+					"class" : "MANumberDescription"
+				},
+				{
+					"id" : "meta.MABooleanDescription.readOnly",
+					"properties" : {
+						"label" : {
+							"value" : "Read-only",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "200",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "readOnly:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "readOnly"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MABooleanDescription.trueString",
+					"properties" : {
+						"label" : {
+							"value" : "True String",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "400",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "true",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "trueString:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "trueString"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MABooleanDescription.type",
+					"properties" : {
+						"readOnly" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Kind",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "type:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "type"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MABooleanDescription.undefined",
+					"properties" : {
+						"label" : {
+							"value" : "Undefined String",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "140",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefined:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefined"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"reference" : "meta.MABooleanDescription.undefinedValue.reference",
+					"properties" : {
+						"priority" : {
+							"value" : "150",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"classes" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefinedValue:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefinedValue"
+					},
+					"conditions" : [ ],
+					"class" : "MAToOneRelationDescription",
+					"id" : "meta.MABooleanDescription.undefinedValue"
+				},
+				{
+					"id" : "meta.MABooleanDescription.undefinedValue.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MABooleanDescription.visible",
+					"properties" : {
+						"label" : {
+							"value" : "Visible",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "210",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : true,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "visible:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "visible"
+					},
+					"class" : "MABooleanDescription"
+				}
+			],
+			"format" : "magritte.graph/3",
+			"objects" : [ ],
+			"root" : "meta.MABooleanDescription"
+		},
+		"finalReads" : [
+			{
+				"field" : "meta.MABooleanDescription.type",
+				"value" : {
+					"value" : "Boolean",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.trueString",
+				"value" : {
+					"value" : "YES!",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.falseString",
+				"value" : {
+					"value" : "NO!",
+					"type" : "string"
+				}
+			}
+		],
+		"reads" : [
+			{
+				"field" : "meta.MABooleanDescription.type",
+				"value" : {
+					"value" : "Boolean",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.label",
+				"value" : {
+					"value" : "Custom",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.priority",
+				"value" : {
+					"value" : "17",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.trueString",
+				"value" : {
+					"value" : "true",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MABooleanDescription.falseString",
+				"value" : {
+					"value" : "false",
+					"type" : "string"
+				}
+			}
+		],
+		"slots" : { },
+		"editValidation" : [ ],
+		"key" : "Value",
+		"properties" : {
+			"group" : {
+				"value" : "Group",
+				"type" : "string"
+			},
+			"required" : {
+				"value" : true,
+				"type" : "boolean"
+			},
+			"undefined" : {
+				"value" : "N/A",
+				"type" : "string"
+			},
+			"comment" : {
+				"value" : "About",
+				"type" : "string"
+			},
+			"priority" : {
+				"value" : "17",
+				"type" : "integer"
+			},
+			"label" : {
+				"value" : "Custom",
+				"type" : "string"
+			}
+		},
+		"sampleValidation" : [ ],
+		"type" : "Boolean",
+		"class" : "MABooleanDescription",
+		"validation" : [ ]
+	},
+	{
+		"stagedReads" : [
+			{
+				"field" : "meta.MATokenDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.separators",
+				"value" : {
+					"value" : "|;",
+					"type" : "string"
+				}
+			}
+		],
+		"edits" : [
+			{
+				"field" : "meta.MATokenDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.separators",
+				"value" : {
+					"value" : "|;",
+					"type" : "string"
+				}
+			}
+		],
+		"graph" : {
+			"descriptions" : [
+				{
+					"id" : "meta.MATokenDescription",
+					"properties" : {
+						"label" : {
+							"value" : "MATokenDescription",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"children" : [
+						"meta.MATokenDescription.type",
+						"meta.MATokenDescription.label",
+						"meta.MATokenDescription.comment",
+						"meta.MATokenDescription.group",
+						"meta.MATokenDescription.priority",
+						"meta.MATokenDescription.readOnly",
+						"meta.MATokenDescription.required",
+						"meta.MATokenDescription.visible",
+						"meta.MATokenDescription.undefined",
+						"meta.MATokenDescription.undefinedValue",
+						"meta.MATokenDescription.default",
+						"meta.MATokenDescription.separators"
+					],
+					"class" : "MAContainer"
+				},
+				{
+					"id" : "meta.MATokenDescription.comment",
+					"properties" : {
+						"label" : {
+							"value" : "Comment",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "110",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "comment:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "comment"
+					},
+					"class" : "MAMemoDescription"
+				},
+				{
+					"id" : "meta.MATokenDescription.default",
+					"properties" : {
+						"separators" : {
+							"value" : " ,;\r\n\t",
+							"type" : "string"
+						},
+						"label" : {
+							"value" : "Default",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "default:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "default"
+					},
+					"class" : "MATokenDescription",
+					"reference" : "meta.MATokenDescription.default.reference"
+				},
+				{
+					"id" : "meta.MATokenDescription.default.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MATokenDescription.group",
+					"properties" : {
+						"label" : {
+							"value" : "Group",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "105",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "group:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "group"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MATokenDescription.label",
+					"properties" : {
+						"label" : {
+							"value" : "Label",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "100",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "Value",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "label:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "label"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MATokenDescription.priority",
+					"properties" : {
+						"required" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Priority",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "priority:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "priority"
+					},
+					"class" : "MANumberDescription"
+				},
+				{
+					"id" : "meta.MATokenDescription.readOnly",
+					"properties" : {
+						"label" : {
+							"value" : "Read-only",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "200",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "readOnly:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "readOnly"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MATokenDescription.required",
+					"properties" : {
+						"label" : {
+							"value" : "Required",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "220",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "required:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "required"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MATokenDescription.separators",
+					"properties" : {
+						"label" : {
+							"value" : "Separators",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "250",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "separators:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "separators"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MATokenDescription.type",
+					"properties" : {
+						"readOnly" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Kind",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "type:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "type"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MATokenDescription.undefined",
+					"properties" : {
+						"label" : {
+							"value" : "Undefined String",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "140",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefined:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefined"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"reference" : "meta.MATokenDescription.undefinedValue.reference",
+					"properties" : {
+						"priority" : {
+							"value" : "150",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"classes" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefinedValue:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefinedValue"
+					},
+					"conditions" : [ ],
+					"class" : "MAToOneRelationDescription",
+					"id" : "meta.MATokenDescription.undefinedValue"
+				},
+				{
+					"id" : "meta.MATokenDescription.undefinedValue.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MATokenDescription.visible",
+					"properties" : {
+						"label" : {
+							"value" : "Visible",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "210",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : true,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "visible:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "visible"
+					},
+					"class" : "MABooleanDescription"
+				}
+			],
+			"format" : "magritte.graph/3",
+			"objects" : [ ],
+			"root" : "meta.MATokenDescription"
+		},
+		"finalReads" : [
+			{
+				"field" : "meta.MATokenDescription.type",
+				"value" : {
+					"value" : "Token",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.separators",
+				"value" : {
+					"value" : "|;",
+					"type" : "string"
+				}
+			}
+		],
+		"reads" : [
+			{
+				"field" : "meta.MATokenDescription.type",
+				"value" : {
+					"value" : "Token",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.label",
+				"value" : {
+					"value" : "Custom",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.priority",
+				"value" : {
+					"value" : "17",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MATokenDescription.separators",
+				"value" : {
+					"value" : "; ",
+					"type" : "string"
+				}
+			}
+		],
+		"slots" : {
+			"separators" : {
+				"value" : "; ",
+				"type" : "string"
+			}
+		},
+		"editValidation" : [ ],
+		"key" : "Value",
+		"properties" : {
+			"group" : {
+				"value" : "Group",
+				"type" : "string"
+			},
+			"required" : {
+				"value" : true,
+				"type" : "boolean"
+			},
+			"undefined" : {
+				"value" : "N/A",
+				"type" : "string"
+			},
+			"comment" : {
+				"value" : "About",
+				"type" : "string"
+			},
+			"priority" : {
+				"value" : "17",
+				"type" : "integer"
+			},
+			"label" : {
+				"value" : "Custom",
+				"type" : "string"
+			}
+		},
+		"sampleValidation" : [ ],
+		"type" : "Token",
+		"class" : "MATokenDescription",
+		"validation" : [ ]
+	},
+	{
+		"stagedReads" : [
+			{
+				"field" : "meta.MAToOneRelationDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			}
+		],
+		"edits" : [
+			{
+				"field" : "meta.MAToOneRelationDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			}
+		],
+		"graph" : {
+			"descriptions" : [
+				{
+					"id" : "meta.MAToOneRelationDescription",
+					"properties" : {
+						"label" : {
+							"value" : "MAToOneRelationDescription",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"children" : [
+						"meta.MAToOneRelationDescription.type",
+						"meta.MAToOneRelationDescription.label",
+						"meta.MAToOneRelationDescription.comment",
+						"meta.MAToOneRelationDescription.group",
+						"meta.MAToOneRelationDescription.priority",
+						"meta.MAToOneRelationDescription.readOnly",
+						"meta.MAToOneRelationDescription.required",
+						"meta.MAToOneRelationDescription.visible",
+						"meta.MAToOneRelationDescription.undefined",
+						"meta.MAToOneRelationDescription.undefinedValue",
+						"meta.MAToOneRelationDescription.default"
+					],
+					"class" : "MAContainer"
+				},
+				{
+					"id" : "meta.MAToOneRelationDescription.comment",
+					"properties" : {
+						"label" : {
+							"value" : "Comment",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "110",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "comment:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "comment"
+					},
+					"class" : "MAMemoDescription"
+				},
+				{
+					"reference" : "meta.MAToOneRelationDescription.default.reference",
+					"properties" : {
+						"label" : {
+							"value" : "Default",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"classes" : [ ],
+					"accessor" : {
+						"writeSelector" : "default:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "default"
+					},
+					"conditions" : [ ],
+					"class" : "MAToOneRelationDescription",
+					"id" : "meta.MAToOneRelationDescription.default"
+				},
+				{
+					"id" : "meta.MAToOneRelationDescription.default.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAToOneRelationDescription.group",
+					"properties" : {
+						"label" : {
+							"value" : "Group",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "105",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "group:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "group"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAToOneRelationDescription.label",
+					"properties" : {
+						"label" : {
+							"value" : "Label",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "100",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "Value",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "label:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "label"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAToOneRelationDescription.priority",
+					"properties" : {
+						"required" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Priority",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "priority:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "priority"
+					},
+					"class" : "MANumberDescription"
+				},
+				{
+					"id" : "meta.MAToOneRelationDescription.readOnly",
+					"properties" : {
+						"label" : {
+							"value" : "Read-only",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "200",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "readOnly:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "readOnly"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAToOneRelationDescription.required",
+					"properties" : {
+						"label" : {
+							"value" : "Required",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "220",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "required:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "required"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAToOneRelationDescription.type",
+					"properties" : {
+						"readOnly" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Kind",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "type:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "type"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAToOneRelationDescription.undefined",
+					"properties" : {
+						"label" : {
+							"value" : "Undefined String",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "140",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefined:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefined"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"reference" : "meta.MAToOneRelationDescription.undefinedValue.reference",
+					"properties" : {
+						"priority" : {
+							"value" : "150",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"classes" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefinedValue:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefinedValue"
+					},
+					"conditions" : [ ],
+					"class" : "MAToOneRelationDescription",
+					"id" : "meta.MAToOneRelationDescription.undefinedValue"
+				},
+				{
+					"id" : "meta.MAToOneRelationDescription.undefinedValue.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAToOneRelationDescription.visible",
+					"properties" : {
+						"label" : {
+							"value" : "Visible",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "210",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : true,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "visible:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "visible"
+					},
+					"class" : "MABooleanDescription"
+				}
+			],
+			"format" : "magritte.graph/3",
+			"objects" : [ ],
+			"root" : "meta.MAToOneRelationDescription"
+		},
+		"finalReads" : [
+			{
+				"field" : "meta.MAToOneRelationDescription.type",
+				"value" : {
+					"value" : "1:1 Relation",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			}
+		],
+		"reads" : [
+			{
+				"field" : "meta.MAToOneRelationDescription.type",
+				"value" : {
+					"value" : "1:1 Relation",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.label",
+				"value" : {
+					"value" : "Custom",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.priority",
+				"value" : {
+					"value" : "17",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAToOneRelationDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			}
+		],
+		"slots" : { },
+		"editValidation" : [ ],
+		"key" : "Value",
+		"properties" : {
+			"group" : {
+				"value" : "Group",
+				"type" : "string"
+			},
+			"required" : {
+				"value" : true,
+				"type" : "boolean"
+			},
+			"undefined" : {
+				"value" : "N/A",
+				"type" : "string"
+			},
+			"comment" : {
+				"value" : "About",
+				"type" : "string"
+			},
+			"priority" : {
+				"value" : "17",
+				"type" : "integer"
+			},
+			"label" : {
+				"value" : "Custom",
+				"type" : "string"
+			}
+		},
+		"sampleValidation" : [ ],
+		"type" : "1:1 Relation",
+		"class" : "MAToOneRelationDescription",
+		"validation" : [ ]
+	},
+	{
+		"stagedReads" : [
+			{
+				"field" : "meta.MAToManyRelationDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.ordered",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.definitive",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.sorted",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		],
+		"edits" : [
+			{
+				"field" : "meta.MAToManyRelationDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.ordered",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.definitive",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.sorted",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		],
+		"graph" : {
+			"descriptions" : [
+				{
+					"id" : "meta.MAToManyRelationDescription",
+					"properties" : {
+						"label" : {
+							"value" : "MAToManyRelationDescription",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"children" : [
+						"meta.MAToManyRelationDescription.type",
+						"meta.MAToManyRelationDescription.label",
+						"meta.MAToManyRelationDescription.comment",
+						"meta.MAToManyRelationDescription.group",
+						"meta.MAToManyRelationDescription.priority",
+						"meta.MAToManyRelationDescription.readOnly",
+						"meta.MAToManyRelationDescription.required",
+						"meta.MAToManyRelationDescription.visible",
+						"meta.MAToManyRelationDescription.undefined",
+						"meta.MAToManyRelationDescription.undefinedValue",
+						"meta.MAToManyRelationDescription.default",
+						"meta.MAToManyRelationDescription.ordered",
+						"meta.MAToManyRelationDescription.definitive",
+						"meta.MAToManyRelationDescription.sorted"
+					],
+					"class" : "MAContainer"
+				},
+				{
+					"id" : "meta.MAToManyRelationDescription.comment",
+					"properties" : {
+						"label" : {
+							"value" : "Comment",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "110",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "comment:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "comment"
+					},
+					"class" : "MAMemoDescription"
+				},
+				{
+					"reference" : "meta.MAToManyRelationDescription.default.reference",
+					"properties" : {
+						"label" : {
+							"value" : "Default",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"classes" : [ ],
+					"accessor" : {
+						"writeSelector" : "default:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "default"
+					},
+					"conditions" : [ ],
+					"class" : "MAToManyRelationDescription",
+					"id" : "meta.MAToManyRelationDescription.default"
+				},
+				{
+					"id" : "meta.MAToManyRelationDescription.default.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAToManyRelationDescription.definitive",
+					"properties" : {
+						"label" : {
+							"value" : "Definitive",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "265",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "definitive:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "definitive"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAToManyRelationDescription.group",
+					"properties" : {
+						"label" : {
+							"value" : "Group",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "105",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "group:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "group"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAToManyRelationDescription.label",
+					"properties" : {
+						"label" : {
+							"value" : "Label",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "100",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "Value",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "label:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "label"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAToManyRelationDescription.ordered",
+					"properties" : {
+						"label" : {
+							"value" : "Ordered",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "260",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "ordered:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "ordered"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAToManyRelationDescription.priority",
+					"properties" : {
+						"required" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Priority",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "priority:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "priority"
+					},
+					"class" : "MANumberDescription"
+				},
+				{
+					"id" : "meta.MAToManyRelationDescription.readOnly",
+					"properties" : {
+						"label" : {
+							"value" : "Read-only",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "200",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "readOnly:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "readOnly"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAToManyRelationDescription.required",
+					"properties" : {
+						"label" : {
+							"value" : "Required",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "220",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "required:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "required"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAToManyRelationDescription.sorted",
+					"properties" : {
+						"label" : {
+							"value" : "Sorted",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "240",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "sorted:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "sorted"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAToManyRelationDescription.type",
+					"properties" : {
+						"readOnly" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Kind",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "type:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "type"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAToManyRelationDescription.undefined",
+					"properties" : {
+						"label" : {
+							"value" : "Undefined String",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "140",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefined:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefined"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"reference" : "meta.MAToManyRelationDescription.undefinedValue.reference",
+					"properties" : {
+						"priority" : {
+							"value" : "150",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"classes" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefinedValue:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefinedValue"
+					},
+					"conditions" : [ ],
+					"class" : "MAToOneRelationDescription",
+					"id" : "meta.MAToManyRelationDescription.undefinedValue"
+				},
+				{
+					"id" : "meta.MAToManyRelationDescription.undefinedValue.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAToManyRelationDescription.visible",
+					"properties" : {
+						"label" : {
+							"value" : "Visible",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "210",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : true,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "visible:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "visible"
+					},
+					"class" : "MABooleanDescription"
+				}
+			],
+			"format" : "magritte.graph/3",
+			"objects" : [ ],
+			"root" : "meta.MAToManyRelationDescription"
+		},
+		"finalReads" : [
+			{
+				"field" : "meta.MAToManyRelationDescription.type",
+				"value" : {
+					"value" : "1:m Relation",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.ordered",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.definitive",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.sorted",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		],
+		"reads" : [
+			{
+				"field" : "meta.MAToManyRelationDescription.type",
+				"value" : {
+					"value" : "1:m Relation",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.label",
+				"value" : {
+					"value" : "Custom",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.priority",
+				"value" : {
+					"value" : "17",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.ordered",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.definitive",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyRelationDescription.sorted",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			}
+		],
+		"slots" : { },
+		"editValidation" : [ ],
+		"key" : "Value",
+		"properties" : {
+			"group" : {
+				"value" : "Group",
+				"type" : "string"
+			},
+			"required" : {
+				"value" : true,
+				"type" : "boolean"
+			},
+			"undefined" : {
+				"value" : "N/A",
+				"type" : "string"
+			},
+			"comment" : {
+				"value" : "About",
+				"type" : "string"
+			},
+			"priority" : {
+				"value" : "17",
+				"type" : "integer"
+			},
+			"label" : {
+				"value" : "Custom",
+				"type" : "string"
+			}
+		},
+		"sampleValidation" : [ ],
+		"type" : "1:m Relation",
+		"class" : "MAToManyRelationDescription",
+		"validation" : [ ]
+	},
+	{
+		"stagedReads" : [
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.ordered",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.definitive",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.sorted",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		],
+		"edits" : [
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.ordered",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.definitive",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.sorted",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		],
+		"graph" : {
+			"descriptions" : [
+				{
+					"id" : "meta.MAToManyScalarRelationDescription",
+					"properties" : {
+						"label" : {
+							"value" : "MAToManyScalarRelationDescription",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"children" : [
+						"meta.MAToManyScalarRelationDescription.type",
+						"meta.MAToManyScalarRelationDescription.label",
+						"meta.MAToManyScalarRelationDescription.comment",
+						"meta.MAToManyScalarRelationDescription.group",
+						"meta.MAToManyScalarRelationDescription.priority",
+						"meta.MAToManyScalarRelationDescription.readOnly",
+						"meta.MAToManyScalarRelationDescription.required",
+						"meta.MAToManyScalarRelationDescription.visible",
+						"meta.MAToManyScalarRelationDescription.undefined",
+						"meta.MAToManyScalarRelationDescription.undefinedValue",
+						"meta.MAToManyScalarRelationDescription.default",
+						"meta.MAToManyScalarRelationDescription.ordered",
+						"meta.MAToManyScalarRelationDescription.definitive",
+						"meta.MAToManyScalarRelationDescription.sorted"
+					],
+					"class" : "MAContainer"
+				},
+				{
+					"id" : "meta.MAToManyScalarRelationDescription.comment",
+					"properties" : {
+						"label" : {
+							"value" : "Comment",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "110",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "comment:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "comment"
+					},
+					"class" : "MAMemoDescription"
+				},
+				{
+					"reference" : "meta.MAToManyScalarRelationDescription.default.reference",
+					"properties" : {
+						"label" : {
+							"value" : "Default",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"classes" : [ ],
+					"accessor" : {
+						"writeSelector" : "default:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "default"
+					},
+					"conditions" : [ ],
+					"class" : "MAToManyScalarRelationDescription",
+					"id" : "meta.MAToManyScalarRelationDescription.default"
+				},
+				{
+					"id" : "meta.MAToManyScalarRelationDescription.default.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAToManyScalarRelationDescription.definitive",
+					"properties" : {
+						"label" : {
+							"value" : "Definitive",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "265",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "definitive:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "definitive"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAToManyScalarRelationDescription.group",
+					"properties" : {
+						"label" : {
+							"value" : "Group",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "105",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "group:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "group"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAToManyScalarRelationDescription.label",
+					"properties" : {
+						"label" : {
+							"value" : "Label",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "100",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "Value",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "label:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "label"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAToManyScalarRelationDescription.ordered",
+					"properties" : {
+						"label" : {
+							"value" : "Ordered",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "260",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "ordered:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "ordered"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAToManyScalarRelationDescription.priority",
+					"properties" : {
+						"required" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Priority",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "priority:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "priority"
+					},
+					"class" : "MANumberDescription"
+				},
+				{
+					"id" : "meta.MAToManyScalarRelationDescription.readOnly",
+					"properties" : {
+						"label" : {
+							"value" : "Read-only",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "200",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "readOnly:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "readOnly"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAToManyScalarRelationDescription.required",
+					"properties" : {
+						"label" : {
+							"value" : "Required",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "220",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "required:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "required"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAToManyScalarRelationDescription.sorted",
+					"properties" : {
+						"label" : {
+							"value" : "Sorted",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "240",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "sorted:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "sorted"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAToManyScalarRelationDescription.type",
+					"properties" : {
+						"readOnly" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Kind",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "type:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "type"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAToManyScalarRelationDescription.undefined",
+					"properties" : {
+						"label" : {
+							"value" : "Undefined String",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "140",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefined:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefined"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"reference" : "meta.MAToManyScalarRelationDescription.undefinedValue.reference",
+					"properties" : {
+						"priority" : {
+							"value" : "150",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"classes" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefinedValue:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefinedValue"
+					},
+					"conditions" : [ ],
+					"class" : "MAToOneRelationDescription",
+					"id" : "meta.MAToManyScalarRelationDescription.undefinedValue"
+				},
+				{
+					"id" : "meta.MAToManyScalarRelationDescription.undefinedValue.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAToManyScalarRelationDescription.visible",
+					"properties" : {
+						"label" : {
+							"value" : "Visible",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "210",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : true,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "visible:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "visible"
+					},
+					"class" : "MABooleanDescription"
+				}
+			],
+			"format" : "magritte.graph/3",
+			"objects" : [ ],
+			"root" : "meta.MAToManyScalarRelationDescription"
+		},
+		"finalReads" : [
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.type",
+				"value" : {
+					"value" : "1:m scalar Relation",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.ordered",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.definitive",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.sorted",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		],
+		"reads" : [
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.type",
+				"value" : {
+					"value" : "1:m scalar Relation",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.label",
+				"value" : {
+					"value" : "Custom",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.priority",
+				"value" : {
+					"value" : "17",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.default",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.ordered",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.definitive",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAToManyScalarRelationDescription.sorted",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			}
+		],
+		"slots" : { },
+		"editValidation" : [ ],
+		"key" : "Value",
+		"properties" : {
+			"group" : {
+				"value" : "Group",
+				"type" : "string"
+			},
+			"required" : {
+				"value" : true,
+				"type" : "boolean"
+			},
+			"undefined" : {
+				"value" : "N/A",
+				"type" : "string"
+			},
+			"comment" : {
+				"value" : "About",
+				"type" : "string"
+			},
+			"priority" : {
+				"value" : "17",
+				"type" : "integer"
+			},
+			"label" : {
+				"value" : "Custom",
+				"type" : "string"
+			}
+		},
+		"sampleValidation" : [ ],
+		"type" : "1:m scalar Relation",
+		"class" : "MAToManyScalarRelationDescription",
+		"validation" : [ ]
+	},
+	{
+		"stagedReads" : [
+			{
+				"field" : "meta.MASingleOptionDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.sorted",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.extensible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		],
+		"edits" : [
+			{
+				"field" : "meta.MASingleOptionDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.sorted",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.extensible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		],
+		"graph" : {
+			"descriptions" : [
+				{
+					"id" : "meta.MASingleOptionDescription",
+					"properties" : {
+						"label" : {
+							"value" : "MASingleOptionDescription",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"children" : [
+						"meta.MASingleOptionDescription.type",
+						"meta.MASingleOptionDescription.label",
+						"meta.MASingleOptionDescription.comment",
+						"meta.MASingleOptionDescription.group",
+						"meta.MASingleOptionDescription.priority",
+						"meta.MASingleOptionDescription.readOnly",
+						"meta.MASingleOptionDescription.required",
+						"meta.MASingleOptionDescription.visible",
+						"meta.MASingleOptionDescription.undefined",
+						"meta.MASingleOptionDescription.undefinedValue",
+						"meta.MASingleOptionDescription.sorted",
+						"meta.MASingleOptionDescription.extensible"
+					],
+					"class" : "MAContainer"
+				},
+				{
+					"id" : "meta.MASingleOptionDescription.comment",
+					"properties" : {
+						"label" : {
+							"value" : "Comment",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "110",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "comment:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "comment"
+					},
+					"class" : "MAMemoDescription"
+				},
+				{
+					"id" : "meta.MASingleOptionDescription.extensible",
+					"properties" : {
+						"label" : {
+							"value" : "Extensible",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "250",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "extensible:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "extensible"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MASingleOptionDescription.group",
+					"properties" : {
+						"label" : {
+							"value" : "Group",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "105",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "group:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "group"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MASingleOptionDescription.label",
+					"properties" : {
+						"label" : {
+							"value" : "Label",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "100",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "Value",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "label:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "label"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MASingleOptionDescription.priority",
+					"properties" : {
+						"required" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Priority",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "priority:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "priority"
+					},
+					"class" : "MANumberDescription"
+				},
+				{
+					"id" : "meta.MASingleOptionDescription.readOnly",
+					"properties" : {
+						"label" : {
+							"value" : "Read-only",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "200",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "readOnly:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "readOnly"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MASingleOptionDescription.required",
+					"properties" : {
+						"label" : {
+							"value" : "Required",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "220",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "required:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "required"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MASingleOptionDescription.sorted",
+					"properties" : {
+						"label" : {
+							"value" : "Sorted",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "240",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "sorted:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "sorted"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MASingleOptionDescription.type",
+					"properties" : {
+						"readOnly" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Kind",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "type:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "type"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MASingleOptionDescription.undefined",
+					"properties" : {
+						"label" : {
+							"value" : "Undefined String",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "140",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefined:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefined"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"reference" : "meta.MASingleOptionDescription.undefinedValue.reference",
+					"properties" : {
+						"priority" : {
+							"value" : "150",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"classes" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefinedValue:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefinedValue"
+					},
+					"conditions" : [ ],
+					"class" : "MAToOneRelationDescription",
+					"id" : "meta.MASingleOptionDescription.undefinedValue"
+				},
+				{
+					"id" : "meta.MASingleOptionDescription.undefinedValue.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MASingleOptionDescription.visible",
+					"properties" : {
+						"label" : {
+							"value" : "Visible",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "210",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : true,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "visible:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "visible"
+					},
+					"class" : "MABooleanDescription"
+				}
+			],
+			"format" : "magritte.graph/3",
+			"objects" : [ ],
+			"root" : "meta.MASingleOptionDescription"
+		},
+		"finalReads" : [
+			{
+				"field" : "meta.MASingleOptionDescription.type",
+				"value" : {
+					"value" : "Single-Option",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.sorted",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.extensible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		],
+		"reads" : [
+			{
+				"field" : "meta.MASingleOptionDescription.type",
+				"value" : {
+					"value" : "Single-Option",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.label",
+				"value" : {
+					"value" : "Custom",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.priority",
+				"value" : {
+					"value" : "17",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.sorted",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MASingleOptionDescription.extensible",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			}
+		],
+		"slots" : { },
+		"editValidation" : [ ],
+		"key" : "Value",
+		"properties" : {
+			"group" : {
+				"value" : "Group",
+				"type" : "string"
+			},
+			"required" : {
+				"value" : true,
+				"type" : "boolean"
+			},
+			"undefined" : {
+				"value" : "N/A",
+				"type" : "string"
+			},
+			"comment" : {
+				"value" : "About",
+				"type" : "string"
+			},
+			"priority" : {
+				"value" : "17",
+				"type" : "integer"
+			},
+			"label" : {
+				"value" : "Custom",
+				"type" : "string"
+			}
+		},
+		"sampleValidation" : [ ],
+		"type" : "Single-Option",
+		"class" : "MASingleOptionDescription",
+		"validation" : [ ]
+	},
+	{
+		"stagedReads" : [
+			{
+				"field" : "meta.MAMultipleOptionDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.sorted",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.extensible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.distinct",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.ordered",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		],
+		"edits" : [
+			{
+				"field" : "meta.MAMultipleOptionDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.type",
+				"value" : {
+					"value" : "Ignored",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.sorted",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.extensible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.distinct",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.ordered",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		],
+		"graph" : {
+			"descriptions" : [
+				{
+					"id" : "meta.MAMultipleOptionDescription",
+					"properties" : {
+						"label" : {
+							"value" : "MAMultipleOptionDescription",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"children" : [
+						"meta.MAMultipleOptionDescription.type",
+						"meta.MAMultipleOptionDescription.label",
+						"meta.MAMultipleOptionDescription.comment",
+						"meta.MAMultipleOptionDescription.group",
+						"meta.MAMultipleOptionDescription.priority",
+						"meta.MAMultipleOptionDescription.readOnly",
+						"meta.MAMultipleOptionDescription.required",
+						"meta.MAMultipleOptionDescription.visible",
+						"meta.MAMultipleOptionDescription.undefined",
+						"meta.MAMultipleOptionDescription.undefinedValue",
+						"meta.MAMultipleOptionDescription.sorted",
+						"meta.MAMultipleOptionDescription.extensible",
+						"meta.MAMultipleOptionDescription.distinct",
+						"meta.MAMultipleOptionDescription.ordered"
+					],
+					"class" : "MAContainer"
+				},
+				{
+					"id" : "meta.MAMultipleOptionDescription.comment",
+					"properties" : {
+						"label" : {
+							"value" : "Comment",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "110",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "comment:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "comment"
+					},
+					"class" : "MAMemoDescription"
+				},
+				{
+					"id" : "meta.MAMultipleOptionDescription.distinct",
+					"properties" : {
+						"label" : {
+							"value" : "Distinct",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "250",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "distinct:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "distinct"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAMultipleOptionDescription.extensible",
+					"properties" : {
+						"label" : {
+							"value" : "Extensible",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "250",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "extensible:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "extensible"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAMultipleOptionDescription.group",
+					"properties" : {
+						"label" : {
+							"value" : "Group",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "105",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "group:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "group"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAMultipleOptionDescription.label",
+					"properties" : {
+						"label" : {
+							"value" : "Label",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "100",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "Value",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "label:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "label"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAMultipleOptionDescription.ordered",
+					"properties" : {
+						"label" : {
+							"value" : "Ordered",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "260",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "ordered:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "ordered"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAMultipleOptionDescription.priority",
+					"properties" : {
+						"required" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Priority",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "priority:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "priority"
+					},
+					"class" : "MANumberDescription"
+				},
+				{
+					"id" : "meta.MAMultipleOptionDescription.readOnly",
+					"properties" : {
+						"label" : {
+							"value" : "Read-only",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "200",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "readOnly:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "readOnly"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAMultipleOptionDescription.required",
+					"properties" : {
+						"label" : {
+							"value" : "Required",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "220",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "required:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "required"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAMultipleOptionDescription.sorted",
+					"properties" : {
+						"label" : {
+							"value" : "Sorted",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "240",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "sorted:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "sorted"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"id" : "meta.MAMultipleOptionDescription.type",
+					"properties" : {
+						"readOnly" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Kind",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "type:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "type"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAMultipleOptionDescription.undefined",
+					"properties" : {
+						"label" : {
+							"value" : "Undefined String",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "140",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefined:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefined"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"reference" : "meta.MAMultipleOptionDescription.undefinedValue.reference",
+					"properties" : {
+						"priority" : {
+							"value" : "150",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"classes" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefinedValue:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefinedValue"
+					},
+					"conditions" : [ ],
+					"class" : "MAToOneRelationDescription",
+					"id" : "meta.MAMultipleOptionDescription.undefinedValue"
+				},
+				{
+					"id" : "meta.MAMultipleOptionDescription.undefinedValue.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "meta.MAMultipleOptionDescription.visible",
+					"properties" : {
+						"label" : {
+							"value" : "Visible",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "210",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : true,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "visible:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "visible"
+					},
+					"class" : "MABooleanDescription"
+				}
+			],
+			"format" : "magritte.graph/3",
+			"objects" : [ ],
+			"root" : "meta.MAMultipleOptionDescription"
+		},
+		"finalReads" : [
+			{
+				"field" : "meta.MAMultipleOptionDescription.type",
+				"value" : {
+					"value" : "Multiple-Option",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.label",
+				"value" : {
+					"value" : "Edited",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.priority",
+				"value" : {
+					"value" : "23",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.sorted",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.extensible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.distinct",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.ordered",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			}
+		],
+		"reads" : [
+			{
+				"field" : "meta.MAMultipleOptionDescription.type",
+				"value" : {
+					"value" : "Multiple-Option",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.label",
+				"value" : {
+					"value" : "Custom",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.comment",
+				"value" : {
+					"value" : "About",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.group",
+				"value" : {
+					"value" : "Group",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.priority",
+				"value" : {
+					"value" : "17",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.required",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.undefined",
+				"value" : {
+					"value" : "N/A",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.sorted",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.extensible",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.distinct",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "meta.MAMultipleOptionDescription.ordered",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			}
+		],
+		"slots" : { },
+		"editValidation" : [ ],
+		"key" : "Value",
+		"properties" : {
+			"group" : {
+				"value" : "Group",
+				"type" : "string"
+			},
+			"required" : {
+				"value" : true,
+				"type" : "boolean"
+			},
+			"undefined" : {
+				"value" : "N/A",
+				"type" : "string"
+			},
+			"comment" : {
+				"value" : "About",
+				"type" : "string"
+			},
+			"priority" : {
+				"value" : "17",
+				"type" : "integer"
+			},
+			"label" : {
+				"value" : "Custom",
+				"type" : "string"
+			}
+		},
+		"sampleValidation" : [ ],
+		"type" : "Multiple-Option",
+		"class" : "MAMultipleOptionDescription",
+		"validation" : [ ]
+	}
+]

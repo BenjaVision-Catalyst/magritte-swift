@@ -1,0 +1,75 @@
+{
+	"mutableCollectionAlias" : [
+		{
+			"hasChanges" : false,
+			"raw" : {
+				"value" : [
+					{
+						"value" : "base",
+						"type" : "string"
+					},
+					{
+						"value" : "outside",
+						"type" : "string"
+					}
+				],
+				"type" : "ordered"
+			},
+			"cache" : {
+				"value" : [
+					{
+						"value" : "base",
+						"type" : "string"
+					},
+					{
+						"value" : "outside",
+						"type" : "string"
+					}
+				],
+				"type" : "ordered"
+			},
+			"memento" : "MACachedMemento"
+		},
+		{
+			"cache" : {
+				"value" : [
+					{
+						"value" : "base",
+						"type" : "string"
+					},
+					{
+						"value" : "outside",
+						"type" : "string"
+					}
+				],
+				"type" : "ordered"
+			},
+			"memento" : "MACheckedMemento",
+			"original" : {
+				"value" : [
+					{
+						"value" : "base",
+						"type" : "string"
+					}
+				],
+				"type" : "ordered"
+			},
+			"hasConflict" : false,
+			"hasModelChangedElsewhere" : true,
+			"hasChanges" : false,
+			"raw" : {
+				"value" : [
+					{
+						"value" : "base",
+						"type" : "string"
+					},
+					{
+						"value" : "outside",
+						"type" : "string"
+					}
+				],
+				"type" : "ordered"
+			}
+		}
+	]
+}

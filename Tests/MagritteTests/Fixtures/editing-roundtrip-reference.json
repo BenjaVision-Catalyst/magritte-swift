@@ -1,0 +1,14 @@
+[
+	{
+		"source" : "/private/tmp/magritte-cpp-editing-native.json",
+		"objects" : 2,
+		"validated" : true,
+		"descriptions" : 13
+	},
+	{
+		"source" : "/private/tmp/magritte-swift-editing-native.json",
+		"objects" : 2,
+		"validated" : true,
+		"descriptions" : 13
+	}
+]

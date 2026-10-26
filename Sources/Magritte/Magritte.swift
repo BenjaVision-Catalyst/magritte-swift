@@ -39,6 +39,7 @@ public struct ValidationError: Equatable {
     public let descriptionID: String, code: String, message: String
 }
 public protocol Model: AnyObject {
+    var usesStoredContainerValues: Bool { get }
     func kindOf(_ name: String) -> Bool
     func readSlot(strategy: String, name: String) throws -> Value
     func writeSlot(strategy: String, name: String, value: Value) throws
@@ -47,6 +48,7 @@ public protocol Model: AnyObject {
     func write(_ value: Value, using description: Description) throws
 }
 public extension Model {
+    var usesStoredContainerValues: Bool { false }
     func kindOf(_ name: String) -> Bool { name == "Object" }
     func readSlot(strategy: String, name: String) throws -> Value { throw MagritteError("Unbound accessor read") }
     func writeSlot(strategy: String, name: String, value: Value) throws { throw MagritteError("Unbound accessor write") }
@@ -94,13 +96,13 @@ public final class Description: Model {
         case "shouldCacheDefault": return .boolean(isRelation && isMultiple)
         case "priority": return .integer(0)
         case "undefined": return .string("")
-        case "label": return .string(key)
+        case "label": return .string(accessor?.name ?? key)
         default: return .undefined
         }
     }
     public func defaultValue() throws -> Value {
         if let f = defaultFunction { return try f() }
-        return property("default")
+        return property(isContainer ? "undefinedValue" : "default")
     }
     public func flag(_ name: String) throws -> Bool {
         guard case .boolean(let b) = property(name) else { throw MagritteError("Expected Boolean flag") }
@@ -120,6 +122,7 @@ public final class Description: Model {
     public func write(_ value: Value, using description: Description) throws { if let a = description.accessor { try a.write(value, to: self) } else { properties[description.key] = value } }
 }
 public final class AdaptiveModel: Model {
+    public var usesStoredContainerValues: Bool { true }
     public func kindOf(_ name: String) -> Bool { ["Object", "MABasicObject", "MAAdaptiveModel"].contains(name) }
     public var id: String
     public var description: Description

@@ -299,10 +299,21 @@ extension DictionaryModel {
 }
 extension Description {
   public func readSlot(strategy: String, name: String) throws -> Value {
+    if strategy == "MASelectorAccessor" {
+      try require(metadataSelector(self, name, writing: false), "Unsupported description getter")
+      if name == "type" { return .string(try descriptionType(self)) }
+      if name == "default" { return try defaultValue() }
+      let value = property(name); return name == "undefined" && value.isNil ? .string("") : value
+    }
     try require(strategy == "MAPropertyAccessor", "Description slot requires property accessor")
     return properties[name] ?? .undefined
   }
   public func writeSlot(strategy: String, name: String, value: Value) throws {
+    if strategy == "MASelectorAccessor" {
+      try require(name.hasSuffix(":"), "Description setter requires a keyword selector")
+      let key = String(name.dropLast()); try require(metadataSelector(self, key, writing: true), "Unsupported description setter")
+      if key == "default" { defaultFunction = nil }; properties[key] = value; return
+    }
     try require(strategy == "MAPropertyAccessor", "Description slot requires property accessor")
     properties[name] = value
   }
@@ -526,7 +537,7 @@ private func writeModel(_ d: Description, _ model: Model, _ graph: Graph?, _ w: 
     if !first { result += "-" }
     first = false
     if try !child.flag("visible") { continue }
-    if child.isContainer && !(model is AdaptiveModel) && child.nativeRead == nil
+    if child.isContainer && !model.usesStoredContainerValues && child.nativeRead == nil
       && (child.accessor == nil || child.accessor?.className == "MAIdentityAccessor")
     {
       result += try writeModel(child, model, graph, w, depth + 1)

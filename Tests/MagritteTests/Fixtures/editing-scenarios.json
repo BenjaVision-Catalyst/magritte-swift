@@ -1,0 +1,363 @@
+[
+  {
+    "name": "ordinary-edit",
+    "steps": [
+      {
+        "action": "write",
+        "field": "name",
+        "value": {
+          "type": "string",
+          "value": "Local"
+        }
+      },
+      {
+        "action": "write",
+        "field": "score",
+        "value": {
+          "type": "integer",
+          "value": "2"
+        }
+      },
+      {
+        "action": "validate"
+      },
+      {
+        "action": "commit"
+      },
+      {
+        "action": "reset"
+      }
+    ]
+  },
+  {
+    "name": "stored-default",
+    "steps": [
+      {
+        "action": "write",
+        "field": "name",
+        "value": {
+          "type": "string",
+          "value": "Default"
+        }
+      },
+      {
+        "action": "commit"
+      }
+    ]
+  },
+  {
+    "name": "external-only",
+    "steps": [
+      {
+        "action": "external",
+        "field": "name",
+        "value": {
+          "type": "string",
+          "value": "Remote"
+        }
+      },
+      {
+        "action": "reset"
+      }
+    ]
+  },
+  {
+    "name": "conflict-validation-resets",
+    "steps": [
+      {
+        "action": "write",
+        "field": "name",
+        "value": {
+          "type": "string",
+          "value": "Local"
+        }
+      },
+      {
+        "action": "external",
+        "field": "name",
+        "value": {
+          "type": "string",
+          "value": "Remote"
+        }
+      },
+      {
+        "action": "validate"
+      },
+      {
+        "action": "commit"
+      }
+    ]
+  },
+  {
+    "name": "disjoint-commit",
+    "steps": [
+      {
+        "action": "write",
+        "field": "name",
+        "value": {
+          "type": "string",
+          "value": "Local"
+        }
+      },
+      {
+        "action": "external",
+        "field": "other",
+        "value": {
+          "type": "string",
+          "value": "Elsewhere"
+        }
+      },
+      {
+        "action": "commit"
+      }
+    ]
+  },
+  {
+    "name": "external-convergence",
+    "steps": [
+      {
+        "action": "write",
+        "field": "name",
+        "value": {
+          "type": "string",
+          "value": "Same"
+        }
+      },
+      {
+        "action": "external",
+        "field": "name",
+        "value": {
+          "type": "string",
+          "value": "Same"
+        }
+      },
+      {
+        "action": "validate"
+      },
+      {
+        "action": "commit"
+      }
+    ]
+  },
+  {
+    "name": "invalid-commit-is-raw",
+    "steps": [
+      {
+        "action": "write",
+        "field": "score",
+        "value": {
+          "type": "string",
+          "value": "invalid"
+        }
+      },
+      {
+        "action": "validate"
+      },
+      {
+        "action": "commit"
+      },
+      {
+        "action": "validate"
+      }
+    ]
+  },
+  {
+    "name": "hidden-and-readonly",
+    "steps": [
+      {
+        "action": "write",
+        "field": "hidden",
+        "value": {
+          "type": "string",
+          "value": "Edit"
+        }
+      },
+      {
+        "action": "write",
+        "field": "locked",
+        "value": {
+          "type": "string",
+          "value": "Edit"
+        }
+      },
+      {
+        "action": "commit"
+      }
+    ]
+  },
+  {
+    "name": "required",
+    "steps": [
+      {
+        "action": "write",
+        "field": "requiredName",
+        "value": {
+          "type": "nil"
+        }
+      },
+      {
+        "action": "validate"
+      },
+      {
+        "action": "reset"
+      }
+    ]
+  },
+  {
+    "name": "missing-defaults",
+    "unset": [
+      "name",
+      "score",
+      "active",
+      "tags"
+    ],
+    "steps": [
+      {
+        "action": "validate"
+      },
+      {
+        "action": "commit"
+      }
+    ]
+  },
+  {
+    "name": "custom-undefined",
+    "steps": [
+      {
+        "action": "write",
+        "field": "status",
+        "value": {
+          "type": "string",
+          "value": "set"
+        }
+      },
+      {
+        "action": "reset"
+      }
+    ]
+  },
+  {
+    "name": "cache-default-policy",
+    "unset": [
+      "name"
+    ],
+    "steps": [
+      {
+        "action": "property",
+        "field": "name",
+        "key": "shouldCacheDefault",
+        "value": {
+          "type": "boolean",
+          "value": true
+        }
+      },
+      {
+        "action": "commit"
+      }
+    ]
+  },
+  {
+    "name": "reference-identity",
+    "steps": [
+      {
+        "action": "externalObject",
+        "field": "name",
+        "value": {
+          "type": "string",
+          "value": "Changed"
+        }
+      },
+      {
+        "action": "validate"
+      },
+      {
+        "action": "commit"
+      }
+    ]
+  },
+  {
+    "name": "collection-replacement",
+    "steps": [
+      {
+        "action": "external",
+        "field": "tags",
+        "value": {
+          "type": "ordered",
+          "value": [
+            {
+              "type": "string",
+              "value": "base"
+            },
+            {
+              "type": "string",
+              "value": "outside"
+            }
+          ]
+        }
+      },
+      {
+        "action": "write",
+        "field": "tags",
+        "value": {
+          "type": "array",
+          "value": [
+            {
+              "type": "string",
+              "value": "local"
+            }
+          ]
+        }
+      },
+      {
+        "action": "validate"
+      },
+      {
+        "action": "reset"
+      }
+    ]
+  },
+  {
+    "name": "added-field",
+    "steps": [
+      {
+        "action": "addField"
+      },
+      {
+        "action": "write",
+        "field": "extra",
+        "value": {
+          "type": "string",
+          "value": "Added"
+        }
+      },
+      {
+        "action": "validate"
+      },
+      {
+        "action": "commit"
+      },
+      {
+        "action": "reset"
+      }
+    ]
+  },
+  {
+    "name": "removed-field",
+    "steps": [
+      {
+        "action": "write",
+        "field": "name",
+        "value": {
+          "type": "string",
+          "value": "Local"
+        }
+      },
+      {
+        "action": "removeField"
+      },
+      {
+        "action": "commit"
+      }
+    ]
+  }
+]

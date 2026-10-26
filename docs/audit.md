@@ -1,6 +1,6 @@
 # Semantic baseline and phased implementation
 
-The scalar, relationship/collection and portable behavior phases are implemented for the documented profiles. This is still not a complete Magritte port; see [relationship evidence](relationships.md) and [portable behavior evidence and boundaries](portable-behavior.md).
+The scalar, relationship/collection, portable behavior and editing phases are implemented for the documented profiles. This is still not a complete Magritte port; see [relationship evidence](relationships.md) and [portable behavior evidence and boundaries](portable-behavior.md) and [editing/self-description evidence](editing.md).
 
 The authoritative upstream is [magritte-metamodel/magritte](https://github.com/magritte-metamodel/magritte), revision **d67f318686b7779aed79416db121e257d1191f2e** (2025-04-29). Paths below resolve against that commit. The target is its headless Magritte model, not an application-specific schema system. The graph representation serializes instances of that description hierarchy; there is no second field-schema model.
 
@@ -47,11 +47,12 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Date/time/duration, URL, class/color/icon/file/directory/block/action/table descriptions | N | unsupported class fails import; see complete inventory |
 | Required/optional, custom undefinedValue | I, R | required checks nil; undefined sentinel skips kind/specific/conditions |
 | Explicit defaults | I, R (property only) | raw read returns nil; defaultValue exposes declared default |
-| shouldCacheDefault metadata | I | upstream to-many default preserved |
-| Lazy defaults/default copying | N | no automatic substitution or cache |
+| shouldCacheDefault | I, R | editing default filtering, including pinned/live difference; see editing.md |
+| Memento default substitution/cache | I, R | straight nil/default and cached sentinel/default cooking; raw models unchanged |
+| General lazy initialization/default copying | N | mutable collection identity and full copy protocol unsupported |
 | Read-only/hidden validation skip | I, R | flags affect interpreter, raw write still writes |
 | MADictionaryAccessor | I, R | native dictionary missing read returns nil |
-| MAPropertyAccessor semantics for common description properties | I, R (label/required) | Description implements Model; bootstrap describes seven common properties |
+| Description property/selector accessors | I, R (selected fields) | retained seven-property bootstrap plus class-specific selector metadata graphs |
 | Local pluggable native accessors | I, X | C++ callbacks / Swift closures; native tests; export fails |
 | Selector/variable/identity/null/chain strategies | I, R (profile) | graph/3 strategies and explicit host bindings; composite/delegator protocols N |
 | Native local scalar conditions | I, X | executed natively; kind errors skip conditions; nil sentinel skips them |
@@ -69,9 +70,9 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Visitor traversal | I (generic graph callback) | bounded composition/reference traversal, cycles terminate; full upstream dispatch hierarchy N |
 | Description/value JSON import/export | I, R | graph/1, graph/2 and graph/3; GT -> both ports -> GT, aliases/cycles/nested objects/collections |
 | MAStringReader/Writer text conversion | I, R (profile) | scalars/options/tokens; writers also containers/relations; other interpreters N |
-| Self-description | I, R (bootstrap subset) | label/comment/group/required/readOnly/visible/priority; self-edit affects validation |
+| Self-description | I, R (selected class-specific profile) | all fourteen supported classes; staged metadata edits govern subsequent model validation |
 | Complete self-description, recursive bootstrap of all descriptions/accessors | N | no completeness claim |
-| Straight/cached/checked mementos, conflicts/merging | N | reference records cached default only; no native memento API |
+| Straight/cached/checked mementos, conflicts/merging | I, R (direct field profile) | 48 scenarios/201 snapshots; raw commit, destructive conflict reset, checked selective push; collection alias gap in editing.md |
 | Native user interfaces, persistence interpreters | N | headless consumers may be added separately |
 | GemStone/platform adapters | N | deferred |
 
@@ -82,7 +83,7 @@ I = implemented; R = executed against the live reference for the stated subset; 
 3. When label is absent the ports return the accessor key as-is. Upstream infers a human-readable camel-case label. Use explicit labels for equivalent presentation today.
 4. Native validation returns a flat collection of structured leaf errors with English generic messages. Upstream may signal nested resumable exceptions. Codes/description identities, not localized messages or nesting, are the tested contract.
 5. The bootstrap's seven common properties are represented by ordinary descriptions and can be read/written/validated by the same Model/validator APIs. It is a seed for full self-description, not a separately maintained schema language.
-6. Native scalar condition and accessor functions and explicit default functions are local behavior. Export rejects every such function, including on hidden nodes. No closure, VM, RPC or expression-language evaluation is introduced. `defaultFunction` is explicitly evaluated by defaultValue; neither raw reads nor validation evaluates it implicitly. Container-local conditions are currently rejected by model validation.
+6. Native scalar condition and accessor functions and explicit default functions are local behavior. Export rejects every such function, including on hidden nodes. No closure, VM, RPC or expression-language evaluation is introduced. `defaultFunction` is explicitly evaluated by defaultValue and by memento default/filter operations; raw models and their ordinary validation do not evaluate it implicitly. Container-local conditions are currently rejected by model validation.
 7. Graph/2 adds the audited relationship/option hierarchy; identity is independent of a description’s label or shape. Imported class names refer to real supported native equivalents, not schema IDs. See relationships.md for phase evidence and interchange.md for remaining boundaries.
 
 8. A finite allowlist of description classes, accessor forms and semantic properties is intentional for this increment. Extending that list requires implementing and testing the semantics. Opaque `metadata:` properties cannot introduce executable behavior.
@@ -92,9 +93,11 @@ I = implemented; R = executed against the live reference for the stated subset; 
 1. **First slice (delivered):** audit and provenance, independent native libraries, scalar/adaptive/accessor core, bootstrap, bounded description/value interchange, shared GT-established Person fixture, runtime evolution, and explicit rejection tests. Install/package and test locally; publish precise gaps.
 2. **References and collections (delivered for the documented profile):** explicit reference graphs, static relationship/options hierarchy, object IDs/cycles, collection kind/equality/required rules, nested containers and bounded operations are implemented and checked against upstream source and GT. Remaining dynamic/reflective and collection-identity facilities are explicitly tracked in relationships.md, not claimed complete.
 3. **Portable behavior (delivered for the documented profile):** finite MACondition objects, broader access strategies, Symbol/Memo/Password/Token descriptions, finite binary64 and MAStringReader/Writer operations. Full numeric/scalar domains remain future work; arbitrary executable behavior continues to fail export.
-4. **Editing and meta-model completeness:** straight/cached/checked mementos, original/cache/default rules, conflict behavior, composition/copy semantics, full self-description and bootstrap round trips. Only then assess a complete headless-core claim against the inventory.
+4. **Editing (delivered for the documented profile), meta-model completeness (pending):** straight/cached/checked mementos, original/cache/default rules, conflict behavior and selected class-specific metadata editing are implemented and checked against GT/upstream. Full composition/copy/collection-identity semantics and recursive self-description remain future work. Only then assess a complete headless-core claim against the inventory.
 5. **Optional interpreters:** native inspectors/presentation tools in separate targets. No networking, deployment or application-specific integration enters these core libraries.
 
 Each phase needs independently reviewed GT results and shared fixtures, not merely agreement between the two ports. Tests in this increment are newly written behavioral tests; upstream test source was not copied.
 
 Phase 0.3 adds Symbol, Memo, Password and Token descriptions and finite binary64, with text conversion and portable condition/accessor forms checked against live GT. Arbitrary integers/rationals/scaled decimals and date/time/color/URL/file/class descriptions remain N. Read portable-behavior.md for the two explicit GT/pinned-source or VM-dependent numeric policies; no complete scalar-domain claim is made.
+
+Phase 0.4 adds the bounded editing and class-specific self-description profiles. The eight shouldWrite matrix differences from installed GT intentionally follow the pinned upstream symmetric rule; mutable collection alias behavior remains unsupported. editing.md records both boundaries and the live evidence.
