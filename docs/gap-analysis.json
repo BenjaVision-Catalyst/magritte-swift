@@ -1,0 +1,994 @@
+{
+  "format": "magritte.gap-analysis/1",
+  "audited_on": "2026-10-27",
+  "target": "Headless Magritte-Model; source-derived semantic audit, not exhaustive method equivalence",
+  "upstream": {
+    "repository": "https://github.com/magritte-metamodel/magritte",
+    "revision": "d67f318686b7779aed79416db121e257d1191f2e",
+    "remote_head_rechecked": true,
+    "class_records": 93,
+    "trait_records": 1,
+    "extension_files": 17,
+    "declared_class_methods": {
+      "instance": 791,
+      "class_side": 191,
+      "total": 982
+    },
+    "package_methods_including_trait_and_extensions": 1056,
+    "description_hierarchy_class_records": 32
+  },
+  "native_baselines": {
+    "cpp": "dca317aed794ec138966a547dcc205d1ed7f2133",
+    "swift": "93588d0abc2ebca9fa31b033aa0330648e4fcea1"
+  },
+  "evidence": {
+    "gt_accessed": false,
+    "platform": "macOS arm64",
+    "cpp_ctest_targets": 25,
+    "swift_tests": 98,
+    "failures": 0,
+    "shared_fixture_payloads_verified_per_port": 126,
+    "sanitizers_rerun": false,
+    "focused_probes_equal_between_ports": true,
+    "probe_sources": {
+      "cpp": "gap-analysis-probes/cpp.cpp",
+      "swift": "gap-analysis-probes/swift.swift"
+    },
+    "observations_in_both_ports": {
+      "container_conditions": {
+        "error": "Container local conditions are not implemented"
+      },
+      "grouping": {
+        "annotated_groupBy_present": false,
+        "graph": {
+          "error": "Unsupported semantic property: groupBy"
+        }
+      },
+      "nil_error_message": {
+        "error": "Nil error text has no String ValidationError representation"
+      },
+      "numbers": {
+        "fraction_text": "(1/2)",
+        "read_own_fraction_text": {
+          "error": "MAReadError: numeric syntax"
+        }
+      },
+      "priority_order": {
+        "after_child_priority_change_without_resort": [
+          "b",
+          "a"
+        ],
+        "before": [
+          "a",
+          "b"
+        ]
+      },
+      "property_announcer": {
+        "error": "Property announcements are outside the stored-Value profile"
+      },
+      "reference_defaults": {
+        "boolean": {
+          "error": "Reference description is unavailable; retain it in the graph"
+        },
+        "single_option": {
+          "error": "Reference description is unavailable; retain it in the graph"
+        }
+      },
+      "registered_subclasses": {
+        "container_query": false,
+        "graph": {
+          "error": "Unsupported description class: GapAuditText"
+        },
+        "metadata": {
+          "error": "Unsupported self-description class"
+        },
+        "multiple_query": false,
+        "numeric_kind": {
+          "type": "class",
+          "value": "Object"
+        },
+        "registered": true,
+        "validation": {
+          "error": "Unsupported description class: GapAuditText"
+        },
+        "visitor_string_dispatch": true
+      }
+    }
+  },
+  "canonical_executable_description_classes": [
+    "MAContainer",
+    "MAPriorityContainer",
+    "MAStringDescription",
+    "MASymbolDescription",
+    "MAMemoDescription",
+    "MAPasswordDescription",
+    "MATokenDescription",
+    "MANumberDescription",
+    "MABooleanDescription",
+    "MAToOneRelationDescription",
+    "MAToManyRelationDescription",
+    "MAToManyScalarRelationDescription",
+    "MASingleOptionDescription",
+    "MAMultipleOptionDescription",
+    "MAClassDescription"
+  ],
+  "priorities": {
+    "P1": "foundational semantics; recommended first",
+    "P2": "remaining core profile work",
+    "P2-deferred": "evidence work blocked only by the current no-GT preference",
+    "P3": "later core families or platform verification",
+    "decision": "optional package scope, not assumed implementation work"
+  },
+  "recommended_sequence": [
+    [
+      "MAG-001"
+    ],
+    [
+      "MAG-002",
+      "MAG-008"
+    ],
+    [
+      "MAG-003"
+    ],
+    [
+      "MAG-004"
+    ],
+    [
+      "MAG-005",
+      "MAG-006",
+      "MAG-007",
+      "MAG-009"
+    ],
+    [
+      "MAG-010",
+      "MAG-011"
+    ],
+    [
+      "MAG-012",
+      "MAG-013",
+      "MAG-014"
+    ]
+  ],
+  "gaps": [
+    {
+      "id": "MAG-001",
+      "title": "Inherited executable behavior for registered description subclasses",
+      "kind": "missing_semantics",
+      "priority": "P1",
+      "status": {
+        "cpp": "partial",
+        "swift": "partial"
+      },
+      "depends_on": [],
+      "upstream_sources": [
+        "source/Magritte-Model/MADescription.class.st",
+        "source/Magritte-Model/MAStringDescription.class.st",
+        "source/Magritte-Model/MANumberDescription.class.st",
+        "source/Magritte-Model/MAContainer.class.st",
+        "source/Magritte-Model/MAToManyRelationDescription.class.st"
+      ],
+      "upstream_protocol": [
+        "inherited kind/defaults/type predicates",
+        "acceptMagritte:",
+        "description discovery and interpreter dispatch"
+      ],
+      "native_sources": {
+        "cpp": [
+          "src/classes.cpp",
+          "src/magritte.cpp",
+          "src/collections.cpp",
+          "src/self_description.cpp",
+          "src/visitor.cpp"
+        ],
+        "swift": [
+          "Sources/Magritte/Classes.swift",
+          "Sources/Magritte/Magritte.swift",
+          "Sources/Magritte/Relationships.swift",
+          "Sources/Magritte/SelfDescription.swift",
+          "Sources/Magritte/Visitor.swift"
+        ]
+      },
+      "acceptance_gate": [
+        "Register no-override subclasses of every implemented description family without editing library class-name lists.",
+        "Verify inherited kind, predicates, defaults, validation, readers/writers, metadata and visitor dispatch.",
+        "Preserve registered class identity through graph export/import when its behavior has an explicit supported binding; fail safely for unknown or unbound behavior.",
+        "Test explicit native overrides and reject serialization of executable closures."
+      ],
+      "scope_notes": [
+        "Runtime class registration and discovery already work; this is not a request to replace that registry again.",
+        "Visitor dispatch and isSortable already walk inheritance; exact-name executable checks elsewhere are the gap.",
+        "Do not equate a registered class identity with implemented behavior or silently execute unknown code."
+      ],
+      "observation_keys": [
+        "registered_subclasses"
+      ]
+    },
+    {
+      "id": "MAG-002",
+      "title": "Default/self references and relation reference protocol",
+      "kind": "missing_semantics",
+      "priority": "P1",
+      "status": {
+        "cpp": "partial",
+        "swift": "partial"
+      },
+      "depends_on": [
+        "MAG-001"
+      ],
+      "upstream_sources": [
+        "source/Magritte-Model/MAReferenceDescription.class.st",
+        "source/Magritte-Model/MABooleanDescription.class.st",
+        "source/Magritte-Model/MARelationDescription.class.st"
+      ],
+      "upstream_protocol": [
+        "MAReferenceDescription class>>defaultReference",
+        "reference",
+        "reference:",
+        "MARelationDescription>>allClasses",
+        "commonClass"
+      ],
+      "native_sources": {
+        "cpp": [
+          "src/references.cpp",
+          "src/collections.cpp",
+          "src/recursive.cpp"
+        ],
+        "swift": [
+          "Sources/Magritte/References.swift",
+          "Sources/Magritte/Relationships.swift",
+          "Sources/Magritte/Recursive.swift"
+        ]
+      },
+      "acceptance_gate": [
+        "Unbound reference descriptions lazily retain the source default; Boolean reference returns the same Boolean description.",
+        "Test display propagation, repeated gets, explicit nil reset, copy, lifetime, generated IDs and graph ownership.",
+        "Implement relation allClasses/commonClass using the actual source rules, including empty classes; distinguish these from registry-wide discovery.",
+        "Resolve the relation reference fallback branch against pinned source and relevant platform extensions before specifying template behavior."
+      ],
+      "scope_notes": [
+        "An explicitly bound reference already propagates display settings.",
+        "The superclass reference getter creates a nonnil String description before the relation getter tests for nil; do not infer an always-active automatic common-template intersection.",
+        "No GT access is authorized for this audit."
+      ],
+      "observation_keys": [
+        "reference_defaults"
+      ]
+    },
+    {
+      "id": "MAG-003",
+      "title": "Container mutation and persistent priority ordering",
+      "kind": "missing_semantics",
+      "priority": "P1",
+      "status": {
+        "cpp": "partial",
+        "swift": "partial"
+      },
+      "depends_on": [
+        "MAG-001"
+      ],
+      "upstream_sources": [
+        "source/Magritte-Model/MAContainer.class.st",
+        "source/Magritte-Model/MAPriorityContainer.class.st"
+      ],
+      "upstream_protocol": [
+        "add:",
+        "addAll:",
+        "remove:",
+        "removeAll",
+        "setChildren:",
+        "moveUp:",
+        "moveDown:",
+        "resort"
+      ],
+      "native_sources": {
+        "cpp": [
+          "src/magritte.cpp",
+          "src/enumeration.cpp",
+          "src/composition.cpp"
+        ],
+        "swift": [
+          "Sources/Magritte/Magritte.swift",
+          "Sources/Magritte/Enumeration.swift",
+          "Sources/Magritte/Composition.swift"
+        ]
+      },
+      "acceptance_gate": [
+        "Add source-shaped mutation operations with missing-element, duplicate/equality and return-value behavior.",
+        "Verify explicit source ordering traces before/after priority mutation, addition, setChildren and resort; reject priority-container moves.",
+        "Keep enumeration/composition behavior and graph round trips consistent with the chosen persistent state."
+      ],
+      "scope_notes": [
+        "Direct children-vector/array mutation exists; it is not the full source collection protocol.",
+        "orderedChildren currently re-sorts a snapshot on every call; upstream uses a stored SortedCollection and explicit resort.",
+        "Shared mutable backing-collection identity is a separate MAG-004 acceptance gate."
+      ],
+      "observation_keys": [
+        "priority_order"
+      ]
+    },
+    {
+      "id": "MAG-004",
+      "title": "Mutable collection identity, aliasing and memento snapshots",
+      "kind": "limited_profile",
+      "priority": "P1",
+      "status": {
+        "cpp": "snapshot_only",
+        "swift": "snapshot_only"
+      },
+      "depends_on": [],
+      "upstream_sources": [
+        "source/Magritte-Model/MACachedMemento.class.st",
+        "source/Magritte-Model/MACheckedMemento.class.st",
+        "source/Magritte-Model/MAContainer.class.st",
+        "source/Magritte-Model/MAReferenceDescription.class.st"
+      ],
+      "upstream_protocol": [
+        "postCopy",
+        "reset",
+        "commit",
+        "children",
+        "collection values shared by described objects"
+      ],
+      "native_sources": {
+        "cpp": [
+          "include/magritte/magritte.hpp",
+          "src/editing.cpp",
+          "src/composition.cpp",
+          "src/magritte.cpp"
+        ],
+        "swift": [
+          "Sources/Magritte/Magritte.swift",
+          "Sources/Magritte/Editing.swift",
+          "Sources/Magritte/Composition.swift"
+        ]
+      },
+      "acceptance_gate": [
+        "Represent shared mutable collections locally and test aliases, in-place mutations, cyclic membership and copy boundaries.",
+        "Replay checked/cached memento live-collection scenarios currently marked unsupported in editing-boundaries fixtures.",
+        "If collection identity is exported, define object-table representation and explicit legacy-format rejection; preserve current immutable/snapshot forms."
+      ],
+      "scope_notes": [
+        "Description nodes and relationship objects already preserve reference identity/cycles.",
+        "Inline collections and strings are Values; copying their elements does not preserve collection-object identity.",
+        "This is a substantial foundation phase; a recursive deep clone is not an adequate substitute."
+      ],
+      "observation_keys": []
+    },
+    {
+      "id": "MAG-005",
+      "title": "Validation protocol and nested error objects",
+      "kind": "missing_semantics",
+      "priority": "P2",
+      "status": {
+        "cpp": "leaf_error_profile",
+        "swift": "leaf_error_profile"
+      },
+      "depends_on": [
+        "MAG-001"
+      ],
+      "upstream_sources": [
+        "source/Magritte-Model/MAValidatorVisitor.class.st",
+        "source/Magritte-Model/MAValidationError.class.st",
+        "source/Magritte-Model/MAMultipleErrors.class.st",
+        "source/Magritte-Model/MADescription.class.st"
+      ],
+      "upstream_protocol": [
+        "visit:",
+        "visitContainer:",
+        "validateConditions:",
+        "tryValidation:ifPass:",
+        "isResumable"
+      ],
+      "native_sources": {
+        "cpp": [
+          "src/magritte.cpp",
+          "src/messages.cpp",
+          "src/editing.cpp",
+          "include/magritte/magritte.hpp"
+        ],
+        "swift": [
+          "Sources/Magritte/Magritte.swift",
+          "Sources/Magritte/Relationships.swift",
+          "Sources/Magritte/Messages.swift",
+          "Sources/Magritte/Editing.swift"
+        ]
+      },
+      "acceptance_gate": [
+        "Preserve nested error ownership/order and source validation continuation/short-circuit behavior in an explicit native result or error protocol.",
+        "Support container conditions with actual model targets and verify visible/read-only/undefined/kind gates.",
+        "Define nil error-message emission from source behavior without converting explicit nil to an arbitrary empty string.",
+        "Retain a flat-leaf compatibility projection and test memento consumers."
+      ],
+      "scope_notes": [
+        "Current errors retain description ID, leaf code and String message; they do not model resumable Smalltalk exceptions.",
+        "A native continuation/result protocol can preserve observable behavior without implementing a VM.",
+        "Pinned upstream and previously inspected GT differ in undefined comparison and error arrangement; source is the target for this audit."
+      ],
+      "observation_keys": [
+        "container_conditions",
+        "nil_error_message"
+      ]
+    },
+    {
+      "id": "MAG-006",
+      "title": "Interpreter selection, streaming and local customization",
+      "kind": "missing_semantics",
+      "priority": "P2",
+      "status": {
+        "cpp": "default_interpreters_only",
+        "swift": "default_interpreters_only"
+      },
+      "depends_on": [
+        "MAG-001",
+        "MAG-005"
+      ],
+      "upstream_sources": [
+        "source/Magritte-Model/MAReader.class.st",
+        "source/Magritte-Model/MAWriter.class.st",
+        "source/Magritte-Model/MAStreamingVisitor.class.st",
+        "source/Magritte-Model/MAStringReader.class.st",
+        "source/Magritte-Model/MAStringWriter.class.st",
+        "source/Magritte-Model/MAMessagingStringWriter.class.st",
+        "source/Magritte-Model/MADescription.class.st"
+      ],
+      "upstream_protocol": [
+        "validator",
+        "stringReader",
+        "stringWriter",
+        "reader/writer instance state",
+        "messageSend:"
+      ],
+      "native_sources": {
+        "cpp": [
+          "src/portable.cpp",
+          "src/magritte.cpp",
+          "src/visitor.cpp"
+        ],
+        "swift": [
+          "Sources/Magritte/Portable.swift",
+          "Sources/Magritte/Magritte.swift",
+          "Sources/Magritte/Visitor.swift"
+        ]
+      },
+      "acceptance_gate": [
+        "Bind selected native interpreter implementations with inherited dispatch and per-call state/error cleanup.",
+        "Test description-selected reader/writer/validator classes and local overrides, rather than only direct standalone visitor calls.",
+        "Specify faithful stream/message writer behavior before expanding portable formats."
+      ],
+      "scope_notes": [
+        "Native Visitor subclassing already works; description-selected interpreter classes currently accept only the default names.",
+        "Arbitrary executable objects/blocks remain local and must not be serialized as runnable code.",
+        "Pinned MAMessagingStringWriter>>messageSend: includes application-specific employee/Halt debugging; investigate rather than port that dependency."
+      ],
+      "observation_keys": []
+    },
+    {
+      "id": "MAG-007",
+      "title": "Property change announcements and the wider property-owner protocol",
+      "kind": "missing_semantics",
+      "priority": "P2",
+      "status": {
+        "cpp": "storage_only",
+        "swift": "storage_only"
+      },
+      "depends_on": [],
+      "upstream_sources": [
+        "source/Magritte-Model/MATPropertyOwner.trait.st",
+        "source/Magritte-Model/MAPropertyChangedAnnouncement.class.st"
+      ],
+      "upstream_protocol": [
+        "propertyAnnounceKey:oldValue:newValue:",
+        "propertyAnnouncerDo:",
+        "whenPropertyChangedSend:to:",
+        "unsubscribe:"
+      ],
+      "native_sources": {
+        "cpp": [
+          "src/properties.cpp",
+          "src/lazy.cpp"
+        ],
+        "swift": [
+          "Sources/Magritte/Properties.swift",
+          "Sources/Magritte/Lazy.swift"
+        ]
+      },
+      "acceptance_gate": [
+        "Add local source-shaped announcements with owner/key/new value and equality-based suppression.",
+        "Verify mutation/notification ordering, nil removal, subscription lifetimes, unsubscribe, reentrancy and failures.",
+        "Preserve explicit failure for exporting active subscriber/announcer state."
+      ],
+      "scope_notes": [
+        "Stored property presence/nil/lazy operations already exist on Description.",
+        "The current profile refuses propertyAnnouncer, even explicit nil; arbitrary object-valued keys/values remain a separate Value-domain boundary.",
+        "Do not add an application/event-framework dependency."
+      ],
+      "observation_keys": [
+        "property_announcer"
+      ]
+    },
+    {
+      "id": "MAG-008",
+      "title": "Single-option groupBy protocol",
+      "kind": "missing_semantics",
+      "priority": "P2",
+      "status": {
+        "cpp": "missing",
+        "swift": "missing"
+      },
+      "depends_on": [
+        "MAG-002"
+      ],
+      "upstream_sources": [
+        "source/Magritte-Model/MASingleOptionDescription.class.st",
+        "source/Magritte-Model/UndefinedObject.extension.st",
+        "source/Magritte-Model/Symbol.extension.st",
+        "source/Magritte-Model/MAAccessor.class.st"
+      ],
+      "upstream_protocol": [
+        "groupBy",
+        "groupBy:",
+        "isGrouped",
+        "descriptionGroupBy",
+        "asAccessor"
+      ],
+      "native_sources": {
+        "cpp": [
+          "src/collections.cpp",
+          "src/self_description.cpp",
+          "src/recursive.cpp"
+        ],
+        "swift": [
+          "Sources/Magritte/Relationships.swift",
+          "Sources/Magritte/SelfDescription.swift",
+          "Sources/Magritte/Recursive.swift"
+        ]
+      },
+      "acceptance_gate": [
+        "Implement local accessor-valued grouping with source asAccessor conversions and absent-vs-explicit-nil behavior.",
+        "Verify nil setter creates a null accessor (isGrouped true), Symbol creates a selector accessor, and an existing accessor retains its identity.",
+        "Reconcile the annotated Symbol description with the accessor-valued getter before claiming metadata round-trip fidelity."
+      ],
+      "scope_notes": [
+        "No core grouping-rendering algorithm is implied.",
+        "The source annotation uses MASymbolDescription while its setter stores an accessor; do not coerce the native getter to Symbol just to satisfy a fabricated schema."
+      ],
+      "observation_keys": [
+        "grouping"
+      ]
+    },
+    {
+      "id": "MAG-009",
+      "title": "Complete self-description for the executable native profile",
+      "kind": "missing_semantics",
+      "priority": "P2",
+      "status": {
+        "cpp": "selected_schemas",
+        "swift": "selected_schemas"
+      },
+      "depends_on": [
+        "MAG-001",
+        "MAG-002",
+        "MAG-008"
+      ],
+      "upstream_sources": [
+        "source/Magritte-Model/MADescription.class.st",
+        "source/Magritte-Model/MAReferenceDescription.class.st",
+        "source/Magritte-Model/MASingleOptionDescription.class.st",
+        "source/Magritte-Model/MACondition.class.st",
+        "source/Magritte-Model/MAMemento.class.st",
+        "source/Magritte-Model/MADescriptionHolder.class.st"
+      ],
+      "upstream_protocol": [
+        "magritteDescription annotations",
+        "annotation inheritance/override suppression",
+        "recursive bootstrap closure"
+      ],
+      "native_sources": {
+        "cpp": [
+          "src/self_description.cpp",
+          "src/reflection.cpp",
+          "src/recursive.cpp",
+          "src/pragma.cpp"
+        ],
+        "swift": [
+          "Sources/Magritte/SelfDescription.swift",
+          "Sources/Magritte/Reflection.swift",
+          "Sources/Magritte/Recursive.swift",
+          "Sources/Magritte/Pragma.swift"
+        ]
+      },
+      "acceptance_gate": [
+        "Inventory annotated selectors and inherited overrides for every runnable native family; classify absent/suppressed/unsupported fields.",
+        "Verify metadata getters, editing, copy and recursive graph closure against those annotations, including grouped options and registered subclasses.",
+        "Keep condition and memento schemas empty where upstream annotations are actually empty; grow schemas only with source evidence."
+      ],
+      "scope_notes": [
+        "Recursive description/accessor/memento sessions and bounded bootstrap already exist.",
+        "An open class/method registry does not automatically supply complete built-in description-object adapters.",
+        "New scalar/model families need corresponding schemas when implemented."
+      ],
+      "observation_keys": [
+        "registered_subclasses.metadata",
+        "grouping.annotated_groupBy_present"
+      ]
+    },
+    {
+      "id": "MAG-010",
+      "title": "Temporal description/value families",
+      "kind": "missing_semantics",
+      "priority": "P2",
+      "status": {
+        "cpp": "missing",
+        "swift": "missing"
+      },
+      "depends_on": [
+        "MAG-001",
+        "MAG-006",
+        "MAG-009"
+      ],
+      "upstream_sources": [
+        "source/Magritte-Model/MADateDescription.class.st",
+        "source/Magritte-Model/MATimeDescription.class.st",
+        "source/Magritte-Model/MADateAndTimeDescription.class.st",
+        "source/Magritte-Model/MADurationDescription.class.st",
+        "source/Magritte-Model/MAStringReader.class.st",
+        "source/Magritte-Model/MAStringWriter.class.st"
+      ],
+      "upstream_protocol": [
+        "kind",
+        "acceptMagritte:",
+        "temporal reader/writer visitors",
+        "magnitude range protocol"
+      ],
+      "native_sources": {
+        "cpp": [
+          "include/magritte/magritte.hpp",
+          "src/portable.cpp",
+          "src/self_description.cpp"
+        ],
+        "swift": [
+          "Sources/Magritte/Magritte.swift",
+          "Sources/Magritte/Portable.swift",
+          "Sources/Magritte/SelfDescription.swift"
+        ]
+      },
+      "acceptance_gate": [
+        "Choose explicit native temporal kinds and source/platform parsing, timezone, range and precision rules.",
+        "Implement validation, reader/writer, metadata, equality/copy and portable tags with backward gates.",
+        "Test calendar boundaries, duration signs and round trips in both ports using source-derived cases."
+      ],
+      "scope_notes": [
+        "Four temporal classes are present upstream but absent from the executable native profile.",
+        "Do not represent every temporal kind as an undocumented String or assume a particular timezone policy."
+      ],
+      "observation_keys": []
+    },
+    {
+      "id": "MAG-011",
+      "title": "Numeric and Unicode/text profile completeness",
+      "kind": "limited_profile",
+      "priority": "P2",
+      "status": {
+        "cpp": "bounded_profile",
+        "swift": "bounded_profile"
+      },
+      "depends_on": [],
+      "upstream_sources": [
+        "source/Magritte-Model/MANumberDescription.class.st",
+        "source/Magritte-Model/MAStringReader.class.st",
+        "source/Magritte-Model/MAStringWriter.class.st",
+        "source/Magritte-Model/MAAccessor.class.st",
+        "source/Magritte-Model/MASortBlock.class.st",
+        "source/Magritte-Model/MAOptionDescription.class.st"
+      ],
+      "upstream_protocol": [
+        "numeric text read/write",
+        "NumberParser integration",
+        "defaultLabelFor:",
+        "case-insensitive option matching/sorting"
+      ],
+      "native_sources": {
+        "cpp": [
+          "src/portable.cpp",
+          "src/fractions.cpp",
+          "src/display.cpp",
+          "src/sorting.cpp"
+        ],
+        "swift": [
+          "Sources/Magritte/Portable.swift",
+          "Sources/Magritte/Fractions.swift",
+          "Sources/Magritte/Display.swift",
+          "Sources/Magritte/Sorting.swift"
+        ]
+      },
+      "acceptance_gate": [
+        "First close or explicitly narrow the writer/reader round-trip contract for supported Fraction values.",
+        "Audit NumberParser and platform numeric dependencies before adding arbitrary integers, scaled decimals or richer syntax.",
+        "Treat Unicode inflection/case-insensitive matching as a separate coherent follow-on with locale/normalization rules and shared test data."
+      ],
+      "scope_notes": [
+        "Int64, finite binary64 and bounded exact Fraction priority arithmetic already work.",
+        "Fraction 1/2 writes as (1/2), but both native number readers reject that output. This probe does not establish the exact upstream NumberParser grammar.",
+        "Exact mixed-number comparison is an explicit precision policy; do not replace it with lossy VM rounding."
+      ],
+      "observation_keys": [
+        "numbers"
+      ]
+    },
+    {
+      "id": "MAG-012",
+      "title": "Remaining domain descriptions and supporting models",
+      "kind": "missing_semantics",
+      "priority": "P3",
+      "status": {
+        "cpp": "missing",
+        "swift": "missing"
+      },
+      "depends_on": [
+        "MAG-001",
+        "MAG-002",
+        "MAG-006",
+        "MAG-009"
+      ],
+      "upstream_sources": [
+        "source/Magritte-Model/MABlockDescription.class.st",
+        "source/Magritte-Model/MAColorDescription.class.st",
+        "source/Magritte-Model/MADirectoryDescription.class.st",
+        "source/Magritte-Model/MAFileDescription.class.st",
+        "source/Magritte-Model/MAIconDescription.class.st",
+        "source/Magritte-Model/MATableDescription.class.st",
+        "source/Magritte-Model/MAUrlDescription.class.st",
+        "source/Magritte-Model/MAFileModel.class.st",
+        "source/Magritte-Model/MAMemoryFileModel.class.st",
+        "source/Magritte-Model/MATableModel.class.st"
+      ],
+      "upstream_protocol": [
+        "domain kind/validation/visitor protocols",
+        "file model contents/metadata",
+        "table rows/columns/cells"
+      ],
+      "native_sources": {
+        "cpp": [
+          "include/magritte/magritte.hpp",
+          "src/portable.cpp"
+        ],
+        "swift": [
+          "Sources/Magritte/Magritte.swift",
+          "Sources/Magritte/Portable.swift"
+        ]
+      },
+      "acceptance_gate": [
+        "Split into source-defined families; specify native host bindings before implementation.",
+        "Implement headless table and in-memory file model semantics separately from filesystem/UI adapters.",
+        "For each family test native behavior, schemas and safe serialization boundaries; document abstract/incomplete core definitions."
+      ],
+      "scope_notes": [
+        "Seven additional description classes beyond the four temporal classes are outside the current executable profile.",
+        "Core class presence does not imply a complete concrete implementation; some kinds/concreteness come from platform packages.",
+        "Blocks are local callables unless a faithful portable representation is justified; no eval, UI or filesystem framework is implied."
+      ],
+      "observation_keys": []
+    },
+    {
+      "id": "MAG-013",
+      "title": "Action descriptions and action pragma discovery",
+      "kind": "missing_semantics",
+      "priority": "P3",
+      "status": {
+        "cpp": "missing",
+        "swift": "missing"
+      },
+      "depends_on": [
+        "MAG-007"
+      ],
+      "upstream_sources": [
+        "source/Magritte-Model/MAActionDescription.class.st",
+        "source/Magritte-Model/MAActionPragmaBuilder.class.st",
+        "source/Magritte-Model/Object.extension.st"
+      ],
+      "upstream_protocol": [
+        "magritteActions",
+        "magritteActionDescription",
+        "magritteActionDescription:",
+        "action",
+        "enableBlock",
+        "isMutator"
+      ],
+      "native_sources": {
+        "cpp": [
+          "include/magritte/magritte.hpp",
+          "src/pragma.cpp"
+        ],
+        "swift": [
+          "Sources/Magritte/Magritte.swift",
+          "Sources/Magritte/Pragma.swift"
+        ]
+      },
+      "acceptance_gate": [
+        "Implement the separate action model, priority/identity, enabled evaluation, invocation/culling and source property notifications.",
+        "Specialize existing method discovery for action pragmas and test inheritance/extensions with headless native targets.",
+        "Keep callbacks/local model state out of portable executable data; add no UI requirement."
+      ],
+      "scope_notes": [
+        "MAActionDescription derives from MAObject, not MADescription.",
+        "Existing pragma infrastructure can be reused, but action behavior is not currently implemented."
+      ],
+      "observation_keys": []
+    },
+    {
+      "id": "MAG-014",
+      "title": "Holders and remaining described-object/accessor utility protocols",
+      "kind": "missing_semantics",
+      "priority": "P3",
+      "status": {
+        "cpp": "partial",
+        "swift": "partial"
+      },
+      "depends_on": [
+        "MAG-008",
+        "MAG-009"
+      ],
+      "upstream_sources": [
+        "source/Magritte-Model/MAValueHolder.class.st",
+        "source/Magritte-Model/MADescriptionHolder.class.st",
+        "source/Magritte-Model/Object.extension.st",
+        "source/Magritte-Model/MAAccessor.class.st",
+        "source/Magritte-Model/MADelegatorAccessor.class.st"
+      ],
+      "upstream_protocol": [
+        "contents",
+        "MADescriptionHolder>>descriptionValue",
+        "maHashUsing:",
+        "maLazyInstVarUsing:",
+        "handlesSelector:",
+        "handleMessage:"
+      ],
+      "native_sources": {
+        "cpp": [
+          "include/magritte/magritte.hpp",
+          "src/model_protocol.cpp",
+          "src/lazy.cpp",
+          "src/portable.cpp"
+        ],
+        "swift": [
+          "Sources/Magritte/Magritte.swift",
+          "Sources/Magritte/ModelProtocol.swift",
+          "Sources/Magritte/Lazy.swift",
+          "Sources/Magritte/Portable.swift"
+        ]
+      },
+      "acceptance_gate": [
+        "Port source-shaped holders and their metadata when needed; distinguish real implementations from application test bindings.",
+        "Audit remaining extensions selector by selector, with local host binding where reflection/message dispatch is required.",
+        "Specify source hash/equality domains before exposing hashes; do not invent portable deterministic hashes or promise general equality/hash consistency."
+      ],
+      "scope_notes": [
+        "initializeMagritte, isSameAs, printing, readToString and generic nil-read fallback are already implemented for documented profiles.",
+        "MAValueHolder/MADescriptionHolder registration tests bind application equivalents; registration alone is not the utility implementation.",
+        "Synchronous thread-local dynamic caches are implemented; Swift async task scopes are a platform decision, not an assumed core requirement.",
+        "The generic MADynamicVariable abstraction beyond the implemented description-cache/described-object scopes also needs a source-shaped native API if exposed."
+      ],
+      "observation_keys": []
+    },
+    {
+      "id": "MAG-015",
+      "title": "Fresh live-reference evidence for later phases",
+      "kind": "evidence",
+      "priority": "P2-deferred",
+      "status": {
+        "cpp": "deferred_by_user",
+        "swift": "deferred_by_user"
+      },
+      "depends_on": [],
+      "upstream_sources": [
+        "source/Magritte-Model/MAValidatorVisitor.class.st",
+        "source/Magritte-Model/MAStringReader.class.st",
+        "source/Magritte-Model/MAPragmaBuilder.class.st"
+      ],
+      "upstream_protocol": [
+        "reference source provenance",
+        "behavioral traces and graph replay"
+      ],
+      "native_sources": {
+        "cpp": [
+          "docs/audit.md",
+          "docs/pragma-discovery.md",
+          "docs/model-read.md"
+        ],
+        "swift": [
+          "docs/audit.md",
+          "docs/pragma-discovery.md",
+          "docs/model-read.md"
+        ]
+      },
+      "acceptance_gate": [
+        "Only after user authorizes GT again, fingerprint relevant live methods and compare source deviations explicitly.",
+        "Replay changed native semantics and cross-port graphs under the workspace CCNativeMcpLease/completion-marker workflow.",
+        "Record source-derived expectations separately from executed reference outcomes."
+      ],
+      "scope_notes": [
+        "No GT tools were used in this audit.",
+        "Phases 0.1-0.16 have historical selected live-reference evidence; 0.17 captured selected sources but deferred fresh behavior/replay; 0.18-0.26 use source/native evidence.",
+        "This is an evidence gap, not proof that implemented behavior is missing."
+      ],
+      "observation_keys": []
+    },
+    {
+      "id": "MAG-016",
+      "title": "Cross-platform and broader runtime verification",
+      "kind": "evidence",
+      "priority": "P3",
+      "status": {
+        "cpp": "macos_arm64_verified",
+        "swift": "macos_arm64_verified"
+      },
+      "depends_on": [],
+      "upstream_sources": [
+        "README.md"
+      ],
+      "upstream_protocol": [
+        "native compiler/platform behavior",
+        "ownership/concurrency"
+      ],
+      "native_sources": {
+        "cpp": [
+          "CMakeLists.txt",
+          "docs/conformance.md"
+        ],
+        "swift": [
+          "Package.swift",
+          "docs/conformance.md"
+        ]
+      },
+      "acceptance_gate": [
+        "Run supported C++ toolchains/OSes and Swift platforms in CI with the shared fixtures.",
+        "Run applicable sanitizers/ownership checks and explicit concurrency/lifetime tests when those guarantees are claimed.",
+        "Maintain installed-consumer/public-API checks for semantic changes."
+      ],
+      "scope_notes": [
+        "This audit executed macOS arm64 standalone suites only, with no fresh sanitizer or leak run.",
+        "No other OS, asynchronous dynamic-scope or concurrent mutable-builder safety claim follows from these results."
+      ],
+      "observation_keys": []
+    },
+    {
+      "id": "MAG-017",
+      "title": "Optional upstream package scope",
+      "kind": "scope_decision",
+      "priority": "decision",
+      "status": {
+        "cpp": "outside_current_core_target",
+        "swift": "outside_current_core_target"
+      },
+      "depends_on": [],
+      "upstream_sources": [
+        "FEATURES.md",
+        "source/Magritte-Merging/package.st",
+        "source/Magritte-Money/package.st",
+        "source/Magritte-Files-Model/package.st"
+      ],
+      "upstream_protocol": [
+        "shouldAutoMergeBlock",
+        "optional money/filesystem/UI/platform extensions"
+      ],
+      "native_sources": {
+        "cpp": [
+          "docs/audit.md"
+        ],
+        "swift": [
+          "docs/audit.md"
+        ]
+      },
+      "acceptance_gate": [
+        "Decide package scope explicitly before assigning feature parity work beyond the headless core.",
+        "Treat Magritte-Merging auto-merge as separate behavior from checked-memento conflict/reset.",
+        "For an approved optional package, audit its source and platform dependencies before scheduling implementation."
+      ],
+      "scope_notes": [
+        "FEATURES.md describes optional Magritte-Merging behavior; it is not a core completion checklist.",
+        "UI/Seaside/GT views, GemStone, filesystem adapters and money packages are separate scope decisions."
+      ],
+      "observation_keys": []
+    }
+  ]
+}

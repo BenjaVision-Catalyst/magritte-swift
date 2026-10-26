@@ -4,6 +4,8 @@ The scalar, relationship/collection, portable behavior, editing, recursive metad
 
 The authoritative upstream is [magritte-metamodel/magritte](https://github.com/magritte-metamodel/magritte), revision **d67f318686b7779aed79416db121e257d1191f2e** (2025-04-29). Paths below resolve against that commit. The target is its headless Magritte model, not an application-specific schema system. The graph representation serializes instances of that description hierarchy; there is no second field-schema model.
 
+For the current prioritized backlog and acceptance gates, see the [27 October 2026 gap analysis](gap-analysis.md) and its [structured ledger](gap-analysis.json). Historical phase notes below are evidence for their stated profiles, not a current completion checklist.
+
 ## Reading and provenance
 
 Reviewed the upstream README, FEATURES, baseline package, model hierarchy and its tests. `upstream-inventory.json` records every class and selector in `source/Magritte-Model` at the pinned revision; this inventory is a source audit, not a coverage claim. Focused semantic references:
@@ -35,8 +37,8 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Feature | State | Evidence / boundary |
 | --- | --- | --- |
 | MAContainer insertion order | I, R | reference containerOrder; graph child identities preserved |
-| MAPriorityContainer ascending order | I, R | reference priorityOrder; ties stable in ports, upstream tie policy not claimed |
-| Container add/remove | I | mutate children; no complete Smalltalk collection protocol |
+| MAPriorityContainer ascending order | I, R (sorted view) | reference priorityOrder; native reads re-sort a snapshot; persistent state/resort gap in MAG-003; upstream tie policy not claimed |
+| Container add/remove | I (raw children only) | source mutation APIs and priority backing-state semantics remain partial; gap-analysis.md, MAG-003 |
 | Container lookup, detection and enumeration | I, R (direct children) | lazy fallbacks, equality membership, short-circuit predicates, indexed/separated/paired iteration and reduction; container-enumeration.md |
 | Nested containers | I, R | identity access for native models; stored child values for adaptive models |
 | Concatenation/union/intersection/select/collect/copy protocol | I, R (profile) | equality-class composition, selective reference copies and shared container children; range/exclusion/empty copies; full collection protocol N |
@@ -94,7 +96,7 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Accessor/condition self-description | I, R (selected profile) | nine accessor classes (pluggable has no annotated fields); three conditions have no annotated fields; actual local accessor identity and memento edits |
 | Memento self-description and finite recursive bootstrap | I, R (profile) | exact represented schema identity; nested editors; 74-node reachable bootstrap and current schema closure; bootstrap.md |
 | Complete hierarchy self-description and arbitrary reflection | N | selected annotations remain explicit; no arbitrary message execution; full class-protocol coverage remains pending |
-| Straight/cached/checked mementos, conflicts/merging | I, R (direct field profile) | 48 scenarios/201 snapshots; raw commit, destructive conflict reset, checked selective push; collection alias gap in editing.md |
+| Straight/cached/checked mementos, conflict handling | I, R (direct field profile) | 48 scenarios/201 snapshots; raw commit, destructive conflict reset, checked selective push; collection alias gap in editing.md |
 | Native user interfaces, persistence interpreters | N | headless consumers may be added separately |
 | GemStone/platform adapters | N | deferred |
 
