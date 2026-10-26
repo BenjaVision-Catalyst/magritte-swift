@@ -25,7 +25,7 @@ final class BootstrapTests: XCTestCase {
     let core = try JSONSerialization.jsonObject(with: Data(contentsOf: coreURL)) as! [[String: Any]]
     let available = Set(core.map { $0["name"] as! String })
 
-    var j = try object(json)
+    var j = withoutHistoricalLabelDefaults(try object(json))
     var descriptions = try rows(j["descriptions"])
     for i in descriptions.indices {
       if let classes = descriptions[i]["classes"] as? [String] {
@@ -163,12 +163,12 @@ final class BootstrapTests: XCTestCase {
     try outer.write(.integer(7), using: minimum)
     XCTAssertTrue(try outer.validate().isEmpty)
     try outer.commit()
-    XCTAssertEqual(e.score.property("min"), .integer(0))
+    XCTAssertEqual(try e.score.property("min"), .integer(0))
     let edit = try object(f["metadataEdit"])
     XCTAssertEqual(try constraints.read(using: minimum), try value(edit["stagedMin"]))
     XCTAssertTrue(try constraints.validate().isEmpty)
     try constraints.commit()
-    XCTAssertEqual(e.score.property("min"), try value(edit["committedMin"]))
+    XCTAssertEqual(try e.score.property("min"), try value(edit["committedMin"]))
     let model = e.model()
     model.values["score"] = .integer(9)
     let appEditor = try CheckedMemento(model: model, description: e.app, graph: session.resolver)

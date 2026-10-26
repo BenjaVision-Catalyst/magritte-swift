@@ -24,7 +24,7 @@ final class RecursiveTests: XCTestCase {
     let core = try JSONSerialization.jsonObject(with: Data(contentsOf: coreURL)) as! [[String: Any]]
     let available = Set(core.map { $0["name"] as! String })
 
-    var j = try object(any)
+    var j = withoutHistoricalLabelDefaults(try object(any))
     var nodes = try array(j["descriptions"])
     for i in nodes.indices {
       if let classes = nodes[i]["classes"] as? [String] {
@@ -104,7 +104,7 @@ final class RecursiveTests: XCTestCase {
         }
       }
       XCTAssertEqual(result.root.className, row["class"] as? String)
-      XCTAssertEqual(result.root.property("label"), .string(try string(row["label"])))
+      XCTAssertEqual(try result.root.property("label"), .string(try string(row["label"])))
       let children = try result.root.orderedChildren()
       let expected = try XCTUnwrap(row["children"] as? [String])
       XCTAssertEqual(children.count, expected.count)
@@ -166,7 +166,7 @@ final class RecursiveTests: XCTestCase {
       using: XCTUnwrap(context.resolver.descriptions[second.id + ".children"]))
     XCTAssertTrue(try structure.validate().isEmpty)
     try structure.commit()
-    XCTAssertEqual(target.property("min"), try value(reference["targetMin"]))
+    XCTAssertEqual(try target.property("min"), try value(reference["targetMin"]))
     XCTAssertEqual(
       try canonical(JSONSerialization.jsonObject(with: try context.schemas().encode())),
       try canonical(XCTUnwrap(reference["finalSchemas"])))
@@ -205,7 +205,7 @@ final class RecursiveTests: XCTestCase {
     XCTAssertFalse(copy.root === option)
     XCTAssertFalse(try copy.root.referenceDescription() === num)
     try copy.root.referenceDescription().properties["min"] = .integer(9)
-    XCTAssertEqual(num.property("min"), .integer(1))
+    XCTAssertEqual(try num.property("min"), .integer(1))
     XCTAssertNotNil(copy.root.accessor)
     copy.root.accessor?.name = "changed"
     XCTAssertEqual(try option.effectiveAccessor.name, "option")
@@ -213,9 +213,9 @@ final class RecursiveTests: XCTestCase {
     XCTAssertEqual(try option.options.count, 2)
     let container = try copyDescription(left, newID: "container.copy")
     container.root.properties["label"] = .string("Copied")
-    XCTAssertEqual(left.property("label"), .string("Left"))
+    XCTAssertEqual(try left.property("label"), .string("Left"))
     left.children[0].properties["label"] = .string("Shared")
-    XCTAssertEqual(container.root.children[0].property("label"), .string("Shared"))
+    XCTAssertEqual(try container.root.children[0].property("label"), .string("Shared"))
     XCTAssertEqual(
       try copyWithout(left, excluding: XCTUnwrap(graph?.descriptions["a"]), newID: "without").root
         .children.map(\.id), ["b"])

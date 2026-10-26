@@ -103,3 +103,5 @@ The 0.5 baseline ran CTest (four targets) and `swift test` (thirty tests); the c
 The 0.7 bootstrap expands a finite reachable description graph in one staged batch and exposes mementos through their exact represented schemas. schemas() now includes current published-schema closure and is throwing in Swift. See bootstrap.md.
 
 Class option/constraint discovery now uses the extensible runtime environment throughout recursive metadata; see registration.md. Earlier fixture class-list projections are reference environments, not production restrictions.
+
+Phase 0.13 implements the current ASCII accessor name/label inference profile and isolates older raw-key metadata projections; see [accessor-inference.md](accessor-inference.md).

@@ -21,7 +21,7 @@ private final class EditingWork {
 }
 private func ignorable(_ value: Value, using d: Description, work: EditingWork) throws -> Bool {
   try work.tick()
-  let undefined = d.property("undefinedValue")
+  let undefined = try d.property("undefinedValue")
   var ignoreDefault = false
   if try !d.flag("shouldCacheDefault") && work.equal(value, d.defaultValue()) {
     ignoreDefault = try work.equal(value, d.defaultValue())

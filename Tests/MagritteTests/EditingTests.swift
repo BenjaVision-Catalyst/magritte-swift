@@ -251,8 +251,10 @@ final class EditingTests: XCTestCase {
       let meta = try descriptionModelFor(target)
       let root = try XCTUnwrap(meta.descriptions[meta.root])
       XCTAssertEqual(
-        try data(JSONSerialization.jsonObject(with: meta.encode())),
-        try data(XCTUnwrap(c["graph"])), "GT metadata graph: \(target.className)")
+        try data(
+          withoutHistoricalLabelDefaults(object(JSONSerialization.jsonObject(with: meta.encode())))),
+        try data(withoutHistoricalLabelDefaults(object(XCTUnwrap(c["graph"])))),
+        "GT metadata graph: \(target.className)")
       for read in try array(c["reads"]) {
         XCTAssertEqual(
           try target.read(using: XCTUnwrap(meta.descriptions[string(read["field"])])),
@@ -266,7 +268,7 @@ final class EditingTests: XCTestCase {
         try editor.write(
           value(edit["value"]), using: XCTUnwrap(meta.descriptions[string(edit["field"])]))
       }
-      XCTAssertEqual(target.property("label"), .string("Custom"))
+      XCTAssertEqual(try target.property("label"), .string("Custom"))
       for read in try array(c["stagedReads"]) {
         XCTAssertEqual(
           try editor.read(using: XCTUnwrap(meta.descriptions[string(read["field"])])),

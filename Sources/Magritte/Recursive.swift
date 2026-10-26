@@ -362,14 +362,7 @@ private final class DescriptionBinding: Model {
       return .collection(kind: "ordered", elements: try target.orderedChildren().map(ref))
     }
     if name == "reference", target.isReference { return try ref(target.referenceDescription()) }
-    if name == "name" {
-      if let value = target.properties["name"] { return value }
-      let a = try target.effectiveAccessor
-      if ["MAIdentityAccessor", "MANullAccessor", "MAPluggableAccessor"].contains(a.className) {
-        return .undefined
-      }
-      return a.className != "MAVariableAccessor" ? .symbol(a.name) : .string(a.name)
-    }
+    if name == "name" { return try target.property("name", limits: s.limits) }
     if name == "optionsTextual", target.isOption {
       var work = 0
       _ = try valueKey(.array(try target.options.values(limits: s.limits))) { depth in

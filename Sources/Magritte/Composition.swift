@@ -129,6 +129,7 @@ public func copyDescription(_ source: Description, newID: String, limits: Limits
     n.labels = d.labels
     n.conditions = d.conditions
     n.portableConditions = d.portableConditions
+    n.defaultNullAccessor = d.defaultNullAccessor
     n.accessor = d.accessor
     if let object = d.accessorObject { n.accessorObject = try AccessorObject.fromAccessor(id: id + ".accessor", object.snapshot(limits: limits), limits: limits); n.accessor = nil }
       n.nativeRead = d.nativeRead

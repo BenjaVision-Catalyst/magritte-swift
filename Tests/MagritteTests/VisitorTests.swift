@@ -9,7 +9,7 @@ private class Probe: Visitor {
   var failAt = ""
   var recurse = false
   func record(_ name: String, _ d: Description) throws -> Bool {
-    guard case .string(let label) = d.property("label") else {
+    guard case .string(let label) = try d.property("label") else {
       throw MagritteError("Missing label")
     }
     events.append([name, label])
@@ -95,7 +95,7 @@ private class Builder: DescriptionBuilder {
   var events: [String] = []
   var fail = false
   override func visitStringDescription(_ d: Description) throws {
-    guard case .string(let label) = d.property("label") else {
+    guard case .string(let label) = try d.property("label") else {
       throw MagritteError("Missing label")
     }
     events.append(label)
@@ -143,7 +143,7 @@ final class VisitorTests: XCTestCase {
   }
   func snapshot(_ d: Description) throws -> [String: Any] {
     let children = try d.isContainer ? d.orderedChildren().map(snapshot) : []
-    guard case .string(let label) = d.property("label") else {
+    guard case .string(let label) = try d.property("label") else {
       throw MagritteError("Missing label")
     }
     return [
@@ -274,7 +274,7 @@ final class VisitorTests: XCTestCase {
     let fail = Builder()
     fail.fail = true
     XCTAssertThrowsError(try fail.buildFrom(input.root, newIDPrefix: "fail"))
-    XCTAssertEqual(a.property("label"), .string("First"))
+    XCTAssertEqual(try a.property("label"), .string("First"))
     fail.fail = false
     XCTAssertEqual(try fail.buildFrom(input.root, newIDPrefix: "recover")?.root.children.count, 4)
     let p = Probe()

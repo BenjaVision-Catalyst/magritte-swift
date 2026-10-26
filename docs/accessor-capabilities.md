@@ -68,3 +68,5 @@ Native-only checks cover binding updates, protocol direction independence, absen
 MACompositeAccessor/conflict objects, a first-class native MAPluggableAccessor, inferred camel-case labels, arbitrary host reflection, mutable collection-object identity, the remaining scalar domains and complete builder/cache/interpreter protocols remain separate missing Magritte semantics. This phase adds no consumer framework, networking or unrelated platform behavior.
 
 Phase 0.12 adds the separate first-class MAPluggableAccessor protocol; see [pluggable-accessors.md](pluggable-accessors.md). The eight-strategy evidence above remains the 0.11 reference profile.
+
+Phase 0.13 implements the current ASCII accessor name/label inference profile and isolates older raw-key metadata projections; see [accessor-inference.md](accessor-inference.md).

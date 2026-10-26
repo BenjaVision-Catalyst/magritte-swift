@@ -29,7 +29,7 @@ final class RegistrationTests: XCTestCase {
   }
   func canonical(_ j: Any) throws -> Data {
     let available = Set(try XCTUnwrap(fixture()["classes"] as? [String]))
-    var graph = try object(j)
+    var graph = withoutHistoricalLabelDefaults(try object(j))
     var nodes = try rows(graph["descriptions"])
     for i in nodes.indices {
       if let names = nodes[i]["classes"] as? [String] {

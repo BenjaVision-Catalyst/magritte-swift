@@ -57,6 +57,17 @@ public struct Accessor {
     self.writeName = writeName
     self.steps = steps
   }
+  public func accessorName(limits: Limits = Limits()) throws -> Value {
+    let w = Work(limits); try checkAccessor(self, w, 0)
+    let result = try inferredName(self, w, 0)
+    _ = try encodeValue(result, limits: limits)
+    return result
+  }
+  public func defaultLabel(for description: Description, limits: Limits = Limits()) throws -> String
+  {
+    let w = Work(limits); try checkAccessor(self, w, 0)
+    return try inferredLabel(self, w, 0)
+  }
   public func check(limits: Limits = Limits()) throws { try checkAccessor(self, Work(limits), 0) }
   public func canRead(_ model: Model, graph: Graph? = nil, limits: Limits = Limits()) throws -> Bool
   {
@@ -409,9 +420,12 @@ extension Description {
   public func readSlot(strategy: String, name: String) throws -> Value {
     if strategy == "MASelectorAccessor" {
       try require(metadataSelector(self, name, writing: false), "Unsupported description getter")
+      if name == "defaultLabel" { return .string(try defaultLabel()) }
+      if name == "hasLabel" { return .boolean(try hasLabel()) }
       if name == "type" { return .string(try descriptionType(self)) }
       if name == "default" { return try defaultValue() }
-      let value = property(name); return name == "undefined" && value.isNil ? .string("") : value
+      let value = try property(name);
+      return name == "undefined" && value.isNil ? .string("") : value
     }
     try require(strategy == "MAPropertyAccessor", "Description slot requires property accessor")
     return properties[name] ?? .undefined
@@ -526,8 +540,65 @@ func floatText(_ n: Double) throws -> String {
   }
   return sign + String(digits.prefix(point)) + "." + String(digits.dropFirst(point))
 }
+private func boundedJoin(_ left: String, _ right: String, _ w: Work, _ depth: Int) throws -> String
+{
+  let a = left.utf8.count, b = right.utf8.count
+  try require(
+    a <= w.limits.bytes && b <= w.limits.bytes && w.limits.bytes - a >= 2
+      && w.limits.bytes - a - 2 >= b, "Accessor text byte limit")
+  try w.tick(depth, a + 2 + b)
+  return left + "::" + right
+}
+private func inferredName(_ a: Accessor, _ w: Work, _ depth: Int) throws -> Value {
+  try w.tick(depth)
+  if ["MAIdentityAccessor", "MANullAccessor", "MAPluggableAccessor"].contains(a.className) {
+    return .undefined
+  }
+  if a.className == "MADelegatorAccessor" { return try inferredName(a.steps[0], w, depth + 1) }
+  if a.className == "MAChainAccessor" {
+    var result = try inferredName(a.steps.last!, w, depth + 1)
+    for head in a.steps.dropLast().reversed() {
+      let name = try inferredName(head, w, depth + 1)
+      let joined = try boundedJoin(portableText(result), portableText(name), w, depth)
+      if case .symbol = result { result = .symbol(joined) } else { result = .string(joined) }
+    }
+    return result
+  }
+  if a.className == "MASelectorAccessor" && a.name.isEmpty { return .undefined }
+  return a.className == "MAVariableAccessor" ? .string(a.name) : .symbol(a.name)
+}
+private func inferredLabel(_ a: Accessor, _ w: Work, _ depth: Int) throws -> String {
+  try w.tick(depth)
+  if ["MAIdentityAccessor", "MANullAccessor", "MAVariableAccessor", "MAPluggableAccessor"].contains(
+    a.className)
+  {
+    return ""
+  }
+  if a.className == "MADelegatorAccessor" { return try inferredLabel(a.steps[0], w, depth + 1) }
+  if a.className == "MAChainAccessor" {
+    var result = try inferredLabel(a.steps[0], w, depth + 1)
+    for step in a.steps.dropFirst() {
+      result = try boundedJoin(result, inferredLabel(step, w, depth + 1), w, depth)
+    }
+    return result
+  }
+  let source = a.className == "MASelectorAccessor" && a.name.isEmpty ? "nil" : a.name
+  var result: [UInt8] = []
+  func upper(_ byte: UInt8) -> Bool { byte >= 65 && byte <= 90 }
+  for byte in source.utf8 {
+    try require(byte < 128, "Non-ASCII inferred labels require an explicit label")
+    if upper(byte), let previous = result.last, !upper(previous) {
+      try w.tick(depth); try require(result.count < w.limits.bytes, "Accessor text byte limit");
+      result.append(32)
+    }
+    try w.tick(depth); try require(result.count < w.limits.bytes, "Accessor text byte limit");
+    result.append(byte)
+  }
+  if let first = result.first, first >= 97 && first <= 122 { result[0] = first - 32 }
+  return String(decoding: result, as: UTF8.self)
+}
 private func propText(_ d: Description, _ name: String) throws -> String {
-  let v = d.property(name)
+  let v = try d.property(name)
   return v.isNil ? "" : try portableText(v)
 }
 private func read(_ d: Description, _ input: String, _ w: Work, _ depth: Int, _ initial: Bool)
@@ -558,7 +629,8 @@ private func read(_ d: Description, _ input: String, _ w: Work, _ depth: Int, _ 
     }
     throw MagritteError("MAReadError: Boolean text")
   case "MANumberDescription":
-    guard case .character(let sep) = d.property("thousandsSeparator"), sep.unicodeScalars.count == 1
+    guard case .character(let sep) = try d.property("thousandsSeparator"),
+      sep.unicodeScalars.count == 1
     else { throw MagritteError("Expected thousands separator") }
     let s = input.components(separatedBy: sep).joined()
     let bytes = Array(s.utf8)

@@ -16,9 +16,15 @@ public extension Description {
             budget.work += text.utf8.count; return text
         }
         if className == "MABooleanDescription" {
-            if case .boolean(let b) = value { guard case .string(let s) = property(b ? "trueString" : "falseString") else { throw MagritteError("Expected Boolean label") }; return try bounded(s) }
-            guard case .string(let s) = property("undefined") else { throw MagritteError("Expected undefined text") }; return try bounded(s)
-        }
+      if case .boolean(let b) = value {
+        guard case .string(let s) = try property(b ? "trueString" : "falseString") else {
+          throw MagritteError("Expected Boolean label")
+        }; return try bounded(s)
+      }
+      guard case .string(let s) = try property("undefined") else {
+        throw MagritteError("Expected undefined text")
+      }; return try bounded(s)
+    }
         try require(isOption, "Option operation requires option description")
         for label in labels {
             try require(portableLabelKey(label.value), "Identity-sensitive option label key is not portable")
@@ -38,8 +44,10 @@ public extension Description {
                 throw MagritteError("Dynamic options do not implement copyWith:")
             }
             var items: [OptionItem] = []
-            if try !isMultiple && !flag("required") { items.append(.value(property("undefinedValue"))) }
-            // Inherited Object>>asArray wraps a copied provider. A singleton is not compared by sorting.
+      if try !isMultiple && !flag("required") {
+        items.append(.value(try property("undefinedValue")))
+      }
+      // Inherited Object>>asArray wraps a copied provider. A singleton is not compared by sorting.
             items.append(.provider(source.copy()))
             _ = try flag("sorted")
             try require(items.count <= limits.items && limits.visits >= 1, "Options item/work limit")
@@ -60,8 +68,8 @@ public extension Description {
             }
             result = ranked.sorted { $0.2 == $1.2 ? $0.0 < $1.0 : $0.2 < $1.2 }.map { $0.1 }
         }
-        if try !isMultiple && !flag("required") { result.insert(property("undefinedValue"), at: 0) }
-        return Options(result)
+    if try !isMultiple && !flag("required") { result.insert(try property("undefinedValue"), at: 0) }
+    return Options(result)
     }
 }
 public extension Graph {
@@ -179,8 +187,8 @@ private func validateField(_ d: Description, _ v: Value, _ graph: Graph?, _ budg
     }
     if !kind { return errors }
     if d.className == "MANumberDescription" {
-        let min = d.property("min"), max = d.property("max")
-        if try (!min.isNil && compareNumbers(v, min) < 0) || (!max.isNil && compareNumbers(v, max) > 0) { error("MARangeError") }
+    let min = try d.property("min"), max = try d.property("max")
+    if try (!min.isNil && compareNumbers(v, min) < 0) || (!max.isNil && compareNumbers(v, max) > 0) { error("MARangeError") }
     }
     for c in d.portableConditions {
         if try !evaluatePredicate(c.predicate, v, limits: budget.limits, work: &budget.work) { errors.append(ValidationError(descriptionID: d.id, code: "MAConditionError", message: c.label)) }

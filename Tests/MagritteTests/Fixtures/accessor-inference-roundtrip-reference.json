@@ -1,0 +1,44 @@
+[
+	{
+		"source" : "/private/tmp/magritte-cpp-inference-native.json",
+		"descriptions" : 2,
+		"objects" : 1,
+		"validated" : true,
+		"reads" : [
+			{
+				"labels" : [
+					"First Name"
+				],
+				"id" : "sample",
+				"text" : "Ada",
+				"values" : {
+					"field" : {
+						"value" : "Ada",
+						"type" : "string"
+					}
+				}
+			}
+		]
+	},
+	{
+		"source" : "/private/tmp/magritte-swift-inference-native.json",
+		"descriptions" : 2,
+		"objects" : 1,
+		"validated" : true,
+		"reads" : [
+			{
+				"labels" : [
+					"First Name"
+				],
+				"id" : "sample",
+				"text" : "Ada",
+				"values" : {
+					"field" : {
+						"value" : "Ada",
+						"type" : "string"
+					}
+				}
+			}
+		]
+	}
+]

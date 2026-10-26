@@ -24,7 +24,7 @@ final class ReflectionTests: XCTestCase {
     let core = try JSONSerialization.jsonObject(with: Data(contentsOf: coreURL)) as! [[String: Any]]
     let available = Set(core.map { $0["name"] as! String })
 
-    var j = try object(any)
+    var j = withoutHistoricalLabelDefaults(try object(any))
     var nodes = try array(j["descriptions"])
     for i in nodes.indices {
       if let classes = nodes[i]["classes"] as? [String] {

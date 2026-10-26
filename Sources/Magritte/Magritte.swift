@@ -79,8 +79,26 @@ open class Description: Model {
     public var portableConditions: [PortableCondition] = []
     public var accessor: Accessor?
     public var accessorObject: AccessorObject?
-    public var effectiveAccessor: Accessor { get throws { if let accessorObject { return try accessorObject.snapshot() }; return accessor ?? Accessor(className: isContainer ? "MAIdentityAccessor" : "MADictionaryAccessor", name: key) } }
-    public func materializeAccessor(limits: Limits = Limits()) throws { if let object = accessorObject { let value = try object.snapshot(limits: limits); accessor = isContainer && value.className == "MAIdentityAccessor" ? nil : value; accessorObject = nil } }
+  var defaultNullAccessor: Accessor?
+  public var effectiveAccessor: Accessor {
+    get throws {
+      if let accessorObject { return try accessorObject.snapshot() };
+      if let accessor { return accessor }
+      if !isContainer && key.isEmpty {
+        if defaultNullAccessor == nil {
+          var a = Accessor(className: "MANullAccessor"), random = SystemRandomNumberGenerator()
+          a.uuid = .array(
+            (0..<16).map { _ in .integer(Int64(UInt8.random(in: 0...255, using: &random))) })
+          defaultNullAccessor = a
+        }
+        return defaultNullAccessor!
+      }
+      return Accessor(
+        className: isContainer ? "MAIdentityAccessor" : "MADictionaryAccessor",
+        name: isContainer ? "" : key)
+    }
+  }
+  public func materializeAccessor(limits: Limits = Limits()) throws { if let object = accessorObject { let value = try object.snapshot(limits: limits); accessor = isContainer && value.className == "MAIdentityAccessor" ? nil : value; accessorObject = nil } }
     public var nativeRead: ((AnyObject) throws -> Value)?
     public var nativeWrite: ((AnyObject, Value) throws -> Void)?
     public var defaultFunction: (() throws -> Value)?
@@ -88,9 +106,11 @@ open class Description: Model {
         self.id = id; self.className = className; self.key = key
     }
     public var isContainer: Bool { className == "MAContainer" || className == "MAPriorityContainer" }
-    public func property(_ name: String) -> Value {
-        if let v = properties[name] { return v }
-        switch name {
+  public func property(_ name: String, limits: Limits = Limits()) throws -> Value {
+    if let v = properties[name] {
+      if name == "label" || name == "name" { _ = try encodeValue(v, limits: limits) }; return v
+    }
+    switch name {
         case "stringReader": return .classValue("MAStringReader")
         case "stringWriter": return .classValue("MAStringWriter")
         case "validator": return .classValue("MAValidatorVisitor")
@@ -106,21 +126,41 @@ open class Description: Model {
         case "shouldCacheDefault": return .boolean(isRelation && isMultiple)
         case "priority": return .integer(0)
         case "undefined": return .string("")
-        case "label": return .string(accessorObject?.value.name ?? accessor?.name ?? key)
-        default: return .undefined
+    case "label":
+      let result = Value.string(try defaultLabel(limits: limits));
+      _ = try encodeValue(result, limits: limits); return result
+    case "name": return try boundedAccessor(limits).accessorName(limits: limits)
+    default: return .undefined
         }
     }
-    public func defaultValue() throws -> Value {
+  private func boundedAccessor(_ limits: Limits) throws -> Accessor {
+    if let accessorObject { return try accessorObject.snapshot(limits: limits) }
+    return try effectiveAccessor
+  }
+  public func defaultLabel(limits: Limits = Limits()) throws -> String {
+    try boundedAccessor(limits).defaultLabel(for: self, limits: limits)
+  }
+  public func hasLabel(limits: Limits = Limits()) throws -> Bool {
+    let label = try property("label", limits: limits)
+    if label.isNil { return false }
+    guard case .string(let text) = label else { throw MagritteError("Expected label text") }
+    return !text.isEmpty
+  }
+  public func defaultValue() throws -> Value {
         if let f = defaultFunction { return try f() }
-        return property(isContainer ? "undefinedValue" : "default")
-    }
+    return try property(isContainer ? "undefinedValue" : "default")
+  }
     public func flag(_ name: String) throws -> Bool {
-        guard case .boolean(let b) = property(name) else { throw MagritteError("Expected Boolean flag") }
-        return b
+    guard case .boolean(let b) = try property(name) else {
+      throw MagritteError("Expected Boolean flag")
+    }
+    return b
     }
     public func priority() throws -> Int64 {
-        guard case .integer(let i) = property("priority") else { throw MagritteError("Expected integer priority") }
-        return i
+    guard case .integer(let i) = try property("priority") else {
+      throw MagritteError("Expected integer priority")
+    }
+    return i
     }
     public func orderedChildren() throws -> [Description] {
         if className != "MAPriorityContainer" { return children }
@@ -128,8 +168,12 @@ open class Description: Model {
         let ranked = try children.enumerated().map { ($0.offset, $0.element, try $0.element.priority()) }
         return ranked.sorted { $0.2 == $1.2 ? $0.0 < $1.0 : $0.2 < $1.2 }.map { $0.1 }
     }
-    public func read(using description: Description) throws -> Value { if description.accessor != nil || description.accessorObject != nil { return try description.effectiveAccessor.read(self) }; return property(description.key) }
-    public func write(_ value: Value, using description: Description) throws { if description.accessor != nil || description.accessorObject != nil { try description.effectiveAccessor.write(value, to: self) } else { properties[description.key] = value } }
+  public func read(using description: Description) throws -> Value {
+    if description.accessor != nil || description.accessorObject != nil {
+      return try description.effectiveAccessor.read(self)
+    }; return try property(description.key)
+  }
+  public func write(_ value: Value, using description: Description) throws { if description.accessor != nil || description.accessorObject != nil { try description.effectiveAccessor.write(value, to: self) } else { properties[description.key] = value } }
 }
 public final class AdaptiveModel: Model {
     public var usesStoredContainerValues: Bool { true }

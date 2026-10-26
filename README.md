@@ -1,6 +1,6 @@
 # Magritte Swift
 
-An independent Swift Package port of [Magritte](https://github.com/magritte-metamodel/magritte). **0.12 adds first-class Magritte pluggable accessors; it is not a complete Magritte implementation.** No C++ dependency, UI, networking or application-framework integration.
+An independent Swift Package port of [Magritte](https://github.com/magritte-metamodel/magritte). **0.13 adds Magritte accessor-derived names and labels; it is not a complete Magritte implementation.** No C++ dependency, UI, networking or application-framework integration.
 
 The headless Magritte library includes ordered/priority containers, a scalar subset, runtime adaptive objects, native accessors, to-one/to-many/scalar relations, static options, typed collections, cyclic references, validation, a self-description bootstrap and bounded graph/value interchange.
 
@@ -64,3 +64,5 @@ The 0.10 phase implements `MADynamicOptions` completion, membership, reader and 
 The 0.11 phase adds `Accessor.canRead`/`canWrite`, explicit host selector/variable discovery, and independent absent read/write selectors. See [accessor-capabilities.md](docs/accessor-capabilities.md) for the exact upstream rules, GT traces, APIs and remaining reflection boundaries.
 
 The 0.12 phase adds local `MAPluggableAccessor` block slots, block-identity equality, shallow copying and chain/memento integration. See [pluggable-accessors.md](docs/pluggable-accessors.md) for APIs, GT evidence, ownership and explicit closure interchange boundaries.
+
+The 0.13 phase implements accessor-derived names/default labels, explicit nil/empty overrides, faithful lazy null defaults and metadata integration. Swift property reads now require `try`. See [accessor-inference.md](docs/accessor-inference.md) for APIs, GT evidence, bounds and the remaining Unicode inflection boundary.

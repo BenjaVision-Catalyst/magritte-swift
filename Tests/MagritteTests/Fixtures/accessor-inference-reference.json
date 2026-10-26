@@ -1,0 +1,2881 @@
+{
+	"editing" : [
+		{
+			"editor" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"hasLabel" : true,
+			"changed" : false,
+			"label" : {
+				"value" : "First Name",
+				"type" : "string"
+			}
+		},
+		{
+			"editor" : {
+				"value" : "",
+				"type" : "string"
+			},
+			"hasLabel" : true,
+			"changed" : true,
+			"label" : {
+				"value" : "First Name",
+				"type" : "string"
+			}
+		},
+		{
+			"editor" : {
+				"value" : "",
+				"type" : "string"
+			},
+			"hasLabel" : false,
+			"changed" : false,
+			"label" : {
+				"value" : "",
+				"type" : "string"
+			}
+		}
+	],
+	"cases" : [
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "firstName"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "First Name",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "firstName",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "firstName",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MADictionaryAccessor-firstName",
+			"label" : {
+				"value" : {
+					"value" : "First Name",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "a"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "a",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "a",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MADictionaryAccessor-a",
+			"label" : {
+				"value" : {
+					"value" : "A",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "A"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "A",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "A",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MADictionaryAccessor-A",
+			"label" : {
+				"value" : {
+					"value" : "A",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "URL"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "URL",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "URL",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "URL",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MADictionaryAccessor-URL",
+			"label" : {
+				"value" : {
+					"value" : "URL",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "XMLParser"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "XMLParser",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "XMLParser",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "XMLParser",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MADictionaryAccessor-XMLParser",
+			"label" : {
+				"value" : {
+					"value" : "XMLParser",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "someURLValue"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "Some URLValue",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "someURLValue",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "someURLValue",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MADictionaryAccessor-someURLValue",
+			"label" : {
+				"value" : {
+					"value" : "Some URLValue",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "getHTTPResponse"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "Get HTTPResponse",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "getHTTPResponse",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "getHTTPResponse",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MADictionaryAccessor-getHTTPResponse",
+			"label" : {
+				"value" : {
+					"value" : "Get HTTPResponse",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "a1B"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A1 B",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "a1B",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "a1B",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MADictionaryAccessor-a1B",
+			"label" : {
+				"value" : {
+					"value" : "A1 B",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "42Foo"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "42 Foo",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "42Foo",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "42Foo",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MADictionaryAccessor-42Foo",
+			"label" : {
+				"value" : {
+					"value" : "42 Foo",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "_Foo"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "_ Foo",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "_Foo",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "_Foo",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MADictionaryAccessor-_Foo",
+			"label" : {
+				"value" : {
+					"value" : "_ Foo",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "a_B"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A_ B",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "a_B",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "a_B",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MADictionaryAccessor-a_B",
+			"label" : {
+				"value" : {
+					"value" : "A_ B",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "a-B"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A- B",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "a-B",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "a-B",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MADictionaryAccessor-a-B",
+			"label" : {
+				"value" : {
+					"value" : "A- B",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "a.B"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A. B",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "a.B",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "a.B",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MADictionaryAccessor-a.B",
+			"label" : {
+				"value" : {
+					"value" : "A. B",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "a:B"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A: B",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "a:B",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "a:B",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MADictionaryAccessor-a:B",
+			"label" : {
+				"value" : {
+					"value" : "A: B",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "a/bC"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A/b C",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "a/bC",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "a/bC",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MADictionaryAccessor-a/bC",
+			"label" : {
+				"value" : {
+					"value" : "A/b C",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "aBBcD"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A BBc D",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "aBBcD",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "aBBcD",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MADictionaryAccessor-aBBcD",
+			"label" : {
+				"value" : {
+					"value" : "A BBc D",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "alreadyCAPS"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "Already CAPS",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "alreadyCAPS",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "alreadyCAPS",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MADictionaryAccessor-alreadyCAPS",
+			"label" : {
+				"value" : {
+					"value" : "Already CAPS",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "label"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "Label",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "label",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "label",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MADictionaryAccessor-label",
+			"label" : {
+				"value" : {
+					"value" : "Label",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAPropertyAccessor",
+				"key" : "firstName"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "First Name",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "firstName",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "firstName",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MAPropertyAccessor-firstName",
+			"label" : {
+				"value" : {
+					"value" : "First Name",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAPropertyAccessor",
+				"key" : "a"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "a",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "a",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MAPropertyAccessor-a",
+			"label" : {
+				"value" : {
+					"value" : "A",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAPropertyAccessor",
+				"key" : "A"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "A",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "A",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MAPropertyAccessor-A",
+			"label" : {
+				"value" : {
+					"value" : "A",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAPropertyAccessor",
+				"key" : "URL"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "URL",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "URL",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "URL",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MAPropertyAccessor-URL",
+			"label" : {
+				"value" : {
+					"value" : "URL",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAPropertyAccessor",
+				"key" : "XMLParser"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "XMLParser",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "XMLParser",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "XMLParser",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MAPropertyAccessor-XMLParser",
+			"label" : {
+				"value" : {
+					"value" : "XMLParser",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAPropertyAccessor",
+				"key" : "someURLValue"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "Some URLValue",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "someURLValue",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "someURLValue",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MAPropertyAccessor-someURLValue",
+			"label" : {
+				"value" : {
+					"value" : "Some URLValue",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAPropertyAccessor",
+				"key" : "getHTTPResponse"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "Get HTTPResponse",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "getHTTPResponse",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "getHTTPResponse",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MAPropertyAccessor-getHTTPResponse",
+			"label" : {
+				"value" : {
+					"value" : "Get HTTPResponse",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAPropertyAccessor",
+				"key" : "a1B"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A1 B",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "a1B",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "a1B",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MAPropertyAccessor-a1B",
+			"label" : {
+				"value" : {
+					"value" : "A1 B",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAPropertyAccessor",
+				"key" : "42Foo"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "42 Foo",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "42Foo",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "42Foo",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MAPropertyAccessor-42Foo",
+			"label" : {
+				"value" : {
+					"value" : "42 Foo",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAPropertyAccessor",
+				"key" : "_Foo"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "_ Foo",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "_Foo",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "_Foo",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MAPropertyAccessor-_Foo",
+			"label" : {
+				"value" : {
+					"value" : "_ Foo",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAPropertyAccessor",
+				"key" : "a_B"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A_ B",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "a_B",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "a_B",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MAPropertyAccessor-a_B",
+			"label" : {
+				"value" : {
+					"value" : "A_ B",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAPropertyAccessor",
+				"key" : "a-B"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A- B",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "a-B",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "a-B",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MAPropertyAccessor-a-B",
+			"label" : {
+				"value" : {
+					"value" : "A- B",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAPropertyAccessor",
+				"key" : "a.B"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A. B",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "a.B",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "a.B",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MAPropertyAccessor-a.B",
+			"label" : {
+				"value" : {
+					"value" : "A. B",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAPropertyAccessor",
+				"key" : "a:B"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A: B",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "a:B",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "a:B",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MAPropertyAccessor-a:B",
+			"label" : {
+				"value" : {
+					"value" : "A: B",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAPropertyAccessor",
+				"key" : "a/bC"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A/b C",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "a/bC",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "a/bC",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MAPropertyAccessor-a/bC",
+			"label" : {
+				"value" : {
+					"value" : "A/b C",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAPropertyAccessor",
+				"key" : "aBBcD"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A BBc D",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "aBBcD",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "aBBcD",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MAPropertyAccessor-aBBcD",
+			"label" : {
+				"value" : {
+					"value" : "A BBc D",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAPropertyAccessor",
+				"key" : "alreadyCAPS"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "Already CAPS",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "alreadyCAPS",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "alreadyCAPS",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MAPropertyAccessor-alreadyCAPS",
+			"label" : {
+				"value" : {
+					"value" : "Already CAPS",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAPropertyAccessor",
+				"key" : "label"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "Label",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "label",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "label",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MAPropertyAccessor-label",
+			"label" : {
+				"value" : {
+					"value" : "Label",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "firstName:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "firstName"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "First Name",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "firstName",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "firstName",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MASelectorAccessor-firstName",
+			"label" : {
+				"value" : {
+					"value" : "First Name",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "a:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "a"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "a",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "a",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MASelectorAccessor-a",
+			"label" : {
+				"value" : {
+					"value" : "A",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "A:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "A"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "A",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "A",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MASelectorAccessor-A",
+			"label" : {
+				"value" : {
+					"value" : "A",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "URL:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "URL"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "URL",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "URL",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "URL",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MASelectorAccessor-URL",
+			"label" : {
+				"value" : {
+					"value" : "URL",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "XMLParser:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "XMLParser"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "XMLParser",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "XMLParser",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "XMLParser",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MASelectorAccessor-XMLParser",
+			"label" : {
+				"value" : {
+					"value" : "XMLParser",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "someURLValue:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "someURLValue"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "Some URLValue",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "someURLValue",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "someURLValue",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MASelectorAccessor-someURLValue",
+			"label" : {
+				"value" : {
+					"value" : "Some URLValue",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "getHTTPResponse:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "getHTTPResponse"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "Get HTTPResponse",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "getHTTPResponse",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "getHTTPResponse",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MASelectorAccessor-getHTTPResponse",
+			"label" : {
+				"value" : {
+					"value" : "Get HTTPResponse",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "a1B:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "a1B"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A1 B",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "a1B",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "a1B",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MASelectorAccessor-a1B",
+			"label" : {
+				"value" : {
+					"value" : "A1 B",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "42Foo:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "42Foo"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "42 Foo",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "42Foo",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "42Foo",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MASelectorAccessor-42Foo",
+			"label" : {
+				"value" : {
+					"value" : "42 Foo",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "_Foo:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "_Foo"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "_ Foo",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "_Foo",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "_Foo",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MASelectorAccessor-_Foo",
+			"label" : {
+				"value" : {
+					"value" : "_ Foo",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "a_B:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "a_B"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A_ B",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "a_B",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "a_B",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MASelectorAccessor-a_B",
+			"label" : {
+				"value" : {
+					"value" : "A_ B",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "a-B:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "a-B"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A- B",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "a-B",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "a-B",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MASelectorAccessor-a-B",
+			"label" : {
+				"value" : {
+					"value" : "A- B",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "a.B:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "a.B"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A. B",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "a.B",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "a.B",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MASelectorAccessor-a.B",
+			"label" : {
+				"value" : {
+					"value" : "A. B",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "a:B:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "a:B"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A: B",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "a:B",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "a:B",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MASelectorAccessor-a:B",
+			"label" : {
+				"value" : {
+					"value" : "A: B",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "a/bC:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "a/bC"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A/b C",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "a/bC",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "a/bC",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MASelectorAccessor-a/bC",
+			"label" : {
+				"value" : {
+					"value" : "A/b C",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "aBBcD:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "aBBcD"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "A BBc D",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "aBBcD",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "aBBcD",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MASelectorAccessor-aBBcD",
+			"label" : {
+				"value" : {
+					"value" : "A BBc D",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "alreadyCAPS:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "alreadyCAPS"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "Already CAPS",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "alreadyCAPS",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "alreadyCAPS",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MASelectorAccessor-alreadyCAPS",
+			"label" : {
+				"value" : {
+					"value" : "Already CAPS",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "label:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "label"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "Label",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "label",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "label",
+					"type" : "symbol"
+				}
+			},
+			"id" : "MASelectorAccessor-label",
+			"label" : {
+				"value" : {
+					"value" : "Label",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"name" : "firstName",
+				"class" : "MAVariableAccessor"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : false,
+			"descriptionName" : {
+				"value" : {
+					"value" : "firstName",
+					"type" : "string"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "firstName",
+					"type" : "string"
+				}
+			},
+			"id" : "MAVariableAccessor",
+			"label" : {
+				"value" : {
+					"value" : "",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAIdentityAccessor"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : false,
+			"descriptionName" : {
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			"name" : {
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			"id" : "MAIdentityAccessor",
+			"label" : {
+				"value" : {
+					"value" : "",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"uuid" : {
+					"type" : "nil"
+				},
+				"class" : "MANullAccessor"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : false,
+			"descriptionName" : {
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			"name" : {
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			"id" : "MANullAccessor",
+			"label" : {
+				"value" : {
+					"value" : "",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAPluggableAccessor"
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : false,
+			"descriptionName" : {
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			"name" : {
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			"id" : "MAPluggableAccessor",
+			"label" : {
+				"value" : {
+					"value" : "",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "",
+				"class" : "MASelectorAccessor",
+				"readSelector" : ""
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "Nil",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			"name" : {
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			"id" : "nil-selector",
+			"label" : {
+				"value" : {
+					"value" : "Nil",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADelegatorAccessor",
+				"next" : {
+					"class" : "MADictionaryAccessor",
+					"key" : "firstName"
+				}
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "First Name",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "firstName",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "firstName",
+					"type" : "symbol"
+				}
+			},
+			"id" : "delegator",
+			"label" : {
+				"value" : {
+					"value" : "First Name",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "accountDetails"
+					},
+					{
+						"writeSelector" : "postalCode:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "postalCode"
+					}
+				]
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "Account Details::Postal Code",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "postalCode::accountDetails",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "postalCode::accountDetails",
+					"type" : "symbol"
+				}
+			},
+			"id" : "chain",
+			"label" : {
+				"value" : {
+					"value" : "Account Details::Postal Code",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "accountDetails"
+					},
+					{
+						"writeSelector" : "postalCode:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "postalCode"
+					},
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "houseNumber"
+					}
+				]
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "Account Details::Postal Code::House Number",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "houseNumber::postalCode::accountDetails",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "houseNumber::postalCode::accountDetails",
+					"type" : "symbol"
+				}
+			},
+			"id" : "chain-three",
+			"label" : {
+				"value" : {
+					"value" : "Account Details::Postal Code::House Number",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"name" : "accountDetails",
+						"class" : "MAVariableAccessor"
+					},
+					{
+						"writeSelector" : "postalCode:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "postalCode"
+					}
+				]
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "::Postal Code",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "postalCode::accountDetails",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "postalCode::accountDetails",
+					"type" : "symbol"
+				}
+			},
+			"id" : "chain-variable-head",
+			"label" : {
+				"value" : {
+					"value" : "::Postal Code",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"writeSelector" : "accountDetails:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "accountDetails"
+					},
+					{
+						"name" : "postalCode",
+						"class" : "MAVariableAccessor"
+					}
+				]
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "Account Details::",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "postalCode::accountDetails",
+					"type" : "string"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "postalCode::accountDetails",
+					"type" : "string"
+				}
+			},
+			"id" : "chain-variable-tail",
+			"label" : {
+				"value" : {
+					"value" : "Account Details::",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "postalCode"
+					}
+				]
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "::Postal Code",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"error" : "Error"
+			},
+			"name" : {
+				"error" : "Error"
+			},
+			"id" : "chain-null-head",
+			"label" : {
+				"value" : {
+					"value" : "::Postal Code",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "postalCode"
+					},
+					{
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					}
+				]
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "Postal Code::",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"error" : "MessageNotUnderstood"
+			},
+			"name" : {
+				"error" : "MessageNotUnderstood"
+			},
+			"id" : "chain-null-tail",
+			"label" : {
+				"value" : {
+					"value" : "Postal Code::",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"class" : "MAChainAccessor",
+						"steps" : [
+							{
+								"name" : "accountDetails",
+								"class" : "MAVariableAccessor"
+							},
+							{
+								"writeSelector" : "postalCode:",
+								"class" : "MASelectorAccessor",
+								"readSelector" : "postalCode"
+							}
+						]
+					},
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "houseNumber"
+					}
+				]
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "::Postal Code::House Number",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "houseNumber::postalCode::accountDetails",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "houseNumber::postalCode::accountDetails",
+					"type" : "symbol"
+				}
+			},
+			"id" : "chain-nested",
+			"label" : {
+				"value" : {
+					"value" : "::Postal Code::House Number",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADelegatorAccessor",
+				"next" : {
+					"class" : "MAChainAccessor",
+					"steps" : [
+						{
+							"writeSelector" : "accountDetails:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "accountDetails"
+						},
+						{
+							"class" : "MADictionaryAccessor",
+							"key" : "postalCode"
+						}
+					]
+				}
+			},
+			"ascii" : true,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "Account Details::Postal Code",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "postalCode::accountDetails",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "postalCode::accountDetails",
+					"type" : "symbol"
+				}
+			},
+			"id" : "delegated-chain",
+			"label" : {
+				"value" : {
+					"value" : "Account Details::Postal Code",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "écoleNom"
+			},
+			"ascii" : false,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "École Nom",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "écoleNom",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "écoleNom",
+					"type" : "symbol"
+				}
+			},
+			"id" : "écoleNom",
+			"label" : {
+				"value" : {
+					"value" : "École Nom",
+					"type" : "string"
+				}
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "名Test"
+			},
+			"ascii" : false,
+			"descriptionLabel" : {
+				"value" : {
+					"value" : "名 Test",
+					"type" : "string"
+				}
+			},
+			"hasLabel" : true,
+			"descriptionName" : {
+				"value" : {
+					"value" : "名Test",
+					"type" : "symbol"
+				}
+			},
+			"name" : {
+				"value" : {
+					"value" : "名Test",
+					"type" : "symbol"
+				}
+			},
+			"id" : "名Test",
+			"label" : {
+				"value" : {
+					"value" : "名 Test",
+					"type" : "string"
+				}
+			}
+		}
+	],
+	"labelOverrides" : [
+		{
+			"metadataDefault" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"defaultLabel" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"input" : {
+				"type" : "nil"
+			},
+			"label" : {
+				"type" : "nil"
+			},
+			"hasLabel" : false
+		},
+		{
+			"metadataDefault" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"defaultLabel" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"input" : {
+				"value" : "",
+				"type" : "string"
+			},
+			"label" : {
+				"value" : "",
+				"type" : "string"
+			},
+			"hasLabel" : false
+		},
+		{
+			"metadataDefault" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"defaultLabel" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"input" : {
+				"value" : "Custom",
+				"type" : "string"
+			},
+			"label" : {
+				"value" : "Custom",
+				"type" : "string"
+			},
+			"hasLabel" : true
+		},
+		{
+			"metadataDefault" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"defaultLabel" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"input" : {
+				"value" : "Étiquette",
+				"type" : "string"
+			},
+			"label" : {
+				"value" : "Étiquette",
+				"type" : "string"
+			},
+			"hasLabel" : true
+		}
+	],
+	"nameOverrides" : [
+		{
+			"name" : {
+				"type" : "nil"
+			},
+			"input" : {
+				"type" : "nil"
+			},
+			"label" : {
+				"value" : "First Name",
+				"type" : "string"
+			}
+		},
+		{
+			"name" : {
+				"value" : "otherName",
+				"type" : "symbol"
+			},
+			"input" : {
+				"value" : "otherName",
+				"type" : "symbol"
+			},
+			"label" : {
+				"value" : "First Name",
+				"type" : "string"
+			}
+		},
+		{
+			"name" : {
+				"value" : "other text",
+				"type" : "string"
+			},
+			"input" : {
+				"value" : "other text",
+				"type" : "string"
+			},
+			"label" : {
+				"value" : "First Name",
+				"type" : "string"
+			}
+		}
+	],
+	"unconfigured" : {
+		"accessorClass" : "MANullAccessor",
+		"distinct" : true,
+		"copyBeforeAccessEqual" : false,
+		"copyAfterAccessEqual" : true,
+		"stable" : true
+	},
+	"classes" : [
+		{
+			"metadataDefault" : {
+				"value" : "",
+				"type" : "string"
+			},
+			"defaultLabel" : {
+				"value" : "",
+				"type" : "string"
+			},
+			"class" : "MAContainer",
+			"label" : {
+				"value" : "",
+				"type" : "string"
+			}
+		},
+		{
+			"metadataDefault" : {
+				"value" : "",
+				"type" : "string"
+			},
+			"defaultLabel" : {
+				"value" : "",
+				"type" : "string"
+			},
+			"class" : "MAPriorityContainer",
+			"label" : {
+				"value" : "",
+				"type" : "string"
+			}
+		},
+		{
+			"metadataDefault" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"defaultLabel" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"class" : "MAStringDescription",
+			"label" : {
+				"value" : "First Name",
+				"type" : "string"
+			}
+		},
+		{
+			"metadataDefault" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"defaultLabel" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"class" : "MASymbolDescription",
+			"label" : {
+				"value" : "First Name",
+				"type" : "string"
+			}
+		},
+		{
+			"metadataDefault" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"defaultLabel" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"class" : "MAMemoDescription",
+			"label" : {
+				"value" : "First Name",
+				"type" : "string"
+			}
+		},
+		{
+			"metadataDefault" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"defaultLabel" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"class" : "MAPasswordDescription",
+			"label" : {
+				"value" : "First Name",
+				"type" : "string"
+			}
+		},
+		{
+			"metadataDefault" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"defaultLabel" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"class" : "MANumberDescription",
+			"label" : {
+				"value" : "First Name",
+				"type" : "string"
+			}
+		},
+		{
+			"metadataDefault" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"defaultLabel" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"class" : "MABooleanDescription",
+			"label" : {
+				"value" : "First Name",
+				"type" : "string"
+			}
+		},
+		{
+			"metadataDefault" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"defaultLabel" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"class" : "MATokenDescription",
+			"label" : {
+				"value" : "First Name",
+				"type" : "string"
+			}
+		},
+		{
+			"metadataDefault" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"defaultLabel" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"class" : "MAToOneRelationDescription",
+			"label" : {
+				"value" : "First Name",
+				"type" : "string"
+			}
+		},
+		{
+			"metadataDefault" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"defaultLabel" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"class" : "MAToManyRelationDescription",
+			"label" : {
+				"value" : "First Name",
+				"type" : "string"
+			}
+		},
+		{
+			"metadataDefault" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"defaultLabel" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"class" : "MAToManyScalarRelationDescription",
+			"label" : {
+				"value" : "First Name",
+				"type" : "string"
+			}
+		},
+		{
+			"metadataDefault" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"defaultLabel" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"class" : "MASingleOptionDescription",
+			"label" : {
+				"value" : "First Name",
+				"type" : "string"
+			}
+		},
+		{
+			"metadataDefault" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"defaultLabel" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"class" : "MAMultipleOptionDescription",
+			"label" : {
+				"value" : "First Name",
+				"type" : "string"
+			}
+		},
+		{
+			"metadataDefault" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"defaultLabel" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"class" : "MAClassDescription",
+			"label" : {
+				"value" : "First Name",
+				"type" : "string"
+			}
+		}
+	],
+	"live" : [
+		{
+			"hasLabel" : true,
+			"defaultLabel" : {
+				"value" : "First Name",
+				"type" : "string"
+			},
+			"name" : {
+				"value" : "firstName",
+				"type" : "symbol"
+			},
+			"label" : {
+				"value" : "First Name",
+				"type" : "string"
+			}
+		},
+		{
+			"hasLabel" : true,
+			"defaultLabel" : {
+				"value" : "Last Name",
+				"type" : "string"
+			},
+			"name" : {
+				"value" : "lastName",
+				"type" : "symbol"
+			},
+			"label" : {
+				"value" : "Last Name",
+				"type" : "string"
+			}
+		},
+		{
+			"hasLabel" : false,
+			"defaultLabel" : {
+				"value" : "Postal Code",
+				"type" : "string"
+			},
+			"name" : {
+				"value" : "postalCode",
+				"type" : "symbol"
+			},
+			"label" : {
+				"value" : "",
+				"type" : "string"
+			}
+		},
+		{
+			"hasLabel" : true,
+			"defaultLabel" : {
+				"value" : "Postal Code",
+				"type" : "string"
+			},
+			"name" : {
+				"value" : "postalCode",
+				"type" : "symbol"
+			},
+			"label" : {
+				"value" : "Postal Code",
+				"type" : "string"
+			}
+		},
+		{
+			"hasLabel" : true,
+			"defaultLabel" : {
+				"value" : "Account Details::Postal Code",
+				"type" : "string"
+			},
+			"name" : {
+				"value" : "postalCode::accountDetails",
+				"type" : "symbol"
+			},
+			"label" : {
+				"value" : "Account Details::Postal Code",
+				"type" : "string"
+			}
+		}
+	]
+}

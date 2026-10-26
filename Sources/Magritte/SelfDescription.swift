@@ -23,6 +23,8 @@ func metadataSelector(_ d: Description, _ name: String, writing: Bool) -> Bool {
   ].contains(name) {
     return true
   }
+  if name == "name" { return true }
+  if ["defaultLabel", "hasLabel"].contains(name) { return !writing }
   if name == "type" { return !writing }
   if name == "default" { return !writing || !d.isContainer }
   if ["min", "max", "thousandsSeparator"].contains(name) && d.className == "MANumberDescription" {
@@ -51,7 +53,7 @@ public func descriptionModelFor(_ target: Description, limits: Limits = Limits()
   graph.descriptions[root.id] = root
   @discardableResult func add(
     _ key: String, _ cls: String, _ label: String, _ priority: Int64, _ defaultValue: Value? = nil
-  ) -> Description {
+  ) throws -> Description {
     let d = Description(id: graph.root + "." + key, className: cls)
     d.accessor = Accessor(className: "MASelectorAccessor", name: key, writeName: key + ":")
     if !label.isEmpty { d.properties["label"] = .string(label) }
@@ -63,40 +65,40 @@ public func descriptionModelFor(_ target: Description, limits: Limits = Limits()
       d.reference = ref
       graph.descriptions[ref.id] = ref
       if d.className == "MATokenDescription" {
-        d.properties["separators"] = d.property("separators")
+        d.properties["separators"] = try d.property("separators")
       }
     }
     root.children.append(d)
     graph.descriptions[d.id] = d
     return d
   }
-  add("type", "MAStringDescription", "Kind", 0).properties["readOnly"] = .boolean(true)
-  let labelDefault = Value.string(target.accessorObject?.value.name ?? target.accessor?.name ?? target.key)
-  add("label", "MAStringDescription", "Label", 100, labelDefault)
-  add("comment", "MAMemoDescription", "Comment", 110, .undefined)
-  add("group", "MAStringDescription", "Group", 105, .undefined)
-  add("priority", "MANumberDescription", "Priority", 130, .integer(0)).properties["required"] =
+  try add("type", "MAStringDescription", "Kind", 0).properties["readOnly"] = .boolean(true)
+  let labelDefault = Value.string(try target.defaultLabel(limits: limits))
+  try add("label", "MAStringDescription", "Label", 100, labelDefault)
+  try add("comment", "MAMemoDescription", "Comment", 110, .undefined)
+  try add("group", "MAStringDescription", "Group", 105, .undefined)
+  try add("priority", "MANumberDescription", "Priority", 130, .integer(0)).properties["required"] =
     .boolean(true)
-  add("readOnly", "MABooleanDescription", "Read-only", 200, .boolean(false))
+  try add("readOnly", "MABooleanDescription", "Read-only", 200, .boolean(false))
   if target.className != "MABooleanDescription" {
-    add("required", "MABooleanDescription", "Required", 220, .boolean(false))
+    try add("required", "MABooleanDescription", "Required", 220, .boolean(false))
   }
-  add("visible", "MABooleanDescription", "Visible", 210, .boolean(true))
-  add("undefined", "MAStringDescription", "Undefined String", 140, .string(""))
-  add("undefinedValue", "MAToOneRelationDescription", "", 150, .undefined)
+  try add("visible", "MABooleanDescription", "Visible", 210, .boolean(true))
+  try add("undefined", "MAStringDescription", "Undefined String", 140, .string(""))
+  try add("undefinedValue", "MAToOneRelationDescription", "", 150, .undefined)
   if !target.isContainer && !target.isOption {
-    add("default", target.className, "Default", 130, .undefined)
+    try add("default", target.className, "Default", 130, .undefined)
   }
   if target.className == "MANumberDescription" {
-    add("min", target.className, "Min", 400)
-    add("max", target.className, "Maximum", 410)
+    try add("min", target.className, "Min", 400)
+    try add("max", target.className, "Maximum", 410)
   }
   if target.className == "MABooleanDescription" {
-    add("trueString", "MAStringDescription", "True String", 400, .string("true"))
-    add("falseString", "MAStringDescription", "False String", 410, .string("false"))
+    try add("trueString", "MAStringDescription", "True String", 400, .string("true"))
+    try add("falseString", "MAStringDescription", "False String", 410, .string("false"))
   }
   if target.className == "MAMemoDescription" {
-    let lines = add("lineCount", "MANumberDescription", "Number of Lines", 400, .integer(3))
+    let lines = try add("lineCount", "MANumberDescription", "Number of Lines", 400, .integer(3))
     lines.properties["min"] = .integer(1)
     lines.portableConditions = [
       PortableCondition(
@@ -104,20 +106,20 @@ public func descriptionModelFor(_ target: Description, limits: Limits = Limits()
     ]
   }
   if target.className == "MATokenDescription" {
-    add("separators", "MAStringDescription", "Separators", 250)
+    try add("separators", "MAStringDescription", "Separators", 250)
   }
   if target.isOption {
-    add("sorted", "MABooleanDescription", "Sorted", 240, .boolean(false))
-    add("extensible", "MABooleanDescription", "Extensible", 250, .boolean(false))
+    try add("sorted", "MABooleanDescription", "Sorted", 240, .boolean(false))
+    try add("extensible", "MABooleanDescription", "Extensible", 250, .boolean(false))
   }
   if target.isRelation && target.isMultiple {
-    add("ordered", "MABooleanDescription", "Ordered", 260, .boolean(false))
-    add("definitive", "MABooleanDescription", "Definitive", 265, .boolean(false))
-    add("sorted", "MABooleanDescription", "Sorted", 240, .boolean(false))
+    try add("ordered", "MABooleanDescription", "Ordered", 260, .boolean(false))
+    try add("definitive", "MABooleanDescription", "Definitive", 265, .boolean(false))
+    try add("sorted", "MABooleanDescription", "Sorted", 240, .boolean(false))
   }
   if target.className == "MAMultipleOptionDescription" {
-    add("distinct", "MABooleanDescription", "Distinct", 250, .boolean(false))
-    add("ordered", "MABooleanDescription", "Ordered", 260, .boolean(false))
+    try add("distinct", "MABooleanDescription", "Distinct", 250, .boolean(false))
+    try add("ordered", "MABooleanDescription", "Ordered", 260, .boolean(false))
   }
   _ = try graph.encode(limits: limits)
   return graph
