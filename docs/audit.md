@@ -1,6 +1,6 @@
 # Semantic baseline and phased implementation
 
-The scalar, relationship/collection, portable behavior, editing, recursive metadata, composition and class/accessor reflection phases are implemented for the documented profiles. This is still not a complete Magritte port; see [relationship evidence](relationships.md) and [portable behavior evidence and boundaries](portable-behavior.md) and [editing/self-description evidence](editing.md) and [recursive composition evidence](composition.md) and [class/accessor reflection evidence](reflection.md).
+The scalar, relationship/collection, portable behavior, editing, recursive metadata, composition and class/accessor reflection and visitor/builder phases are implemented for the documented profiles. This is still not a complete Magritte port; see [relationship evidence](relationships.md) and [portable behavior evidence and boundaries](portable-behavior.md) and [editing/self-description evidence](editing.md) and [recursive composition evidence](composition.md) and [class/accessor reflection evidence](reflection.md).
 
 The authoritative upstream is [magritte-metamodel/magritte](https://github.com/magritte-metamodel/magritte), revision **d67f318686b7779aed79416db121e257d1191f2e** (2025-04-29). Paths below resolve against that commit. The target is its headless Magritte model, not an application-specific schema system. The graph representation serializes instances of that description hierarchy; there is no second field-schema model.
 
@@ -68,7 +68,8 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Dynamic option providers, grouping, arbitrary renderers | N, X (current wire) | class discovery is implemented; other executable sources remain unsupported |
 | Mutable collection-object identity | N, X (current wire) | inline collections are value snapshots; object references retain identity |
 | Array/OrderedCollection/Set/Bag values | I, R | kind/order/multiplicity/equality and relation/option validation; Character bridge for String collections |
-| Visitor traversal | I (generic graph callback) | bounded composition/reference traversal, cycles terminate; full upstream dispatch hierarchy N |
+| Visitor dispatch and base description builder | I, R (represented hierarchy) | 21 dispatch points, superclass fallback, explicit traversal, stateful copy/enrichment; visitors.md |
+| Graph callback traversal | I | bounded composition/reference traversal, cycles terminate; distinct from MAVisitor dispatch |
 | Description/value JSON import/export | I, R | graph/1–4; GT -> both ports -> GT, aliases/cycles/nested objects/collections |
 | MAStringReader/Writer text conversion | I, R (profile) | scalars/options/tokens; writers also containers/relations; other interpreters N |
 | Self-description | I, R (selected class-specific profile) | fifteen supported classes in reflective profile; staged metadata edits govern subsequent model validation |
@@ -114,3 +115,5 @@ Phase 0.6 implements MAClassDescription, finite class values and class-valued re
 Phase 0.7 adds exact memento model-description identity, local editor bindings and finite reachable-description bootstrap. bootstrap.md records the GT state/schema evidence, 12 matching upstream fingerprints and graph/4 round trips. It does not invent cache/model annotation fields.
 
 Phase 0.8 replaces class acceptance lists with runtime registration, typed native lookup and hierarchy discovery. registration.md records the exact GT projections, source evidence, class-valued interchange and boundaries. Existing executable type implementations remain explicit.
+
+Phase 0.9 implements visitor dispatch for the represented description hierarchy and the base `MADescriptionBuilder` protocol. [visitors.md](visitors.md) records the fresh audit, 55 method fingerprints, live behavioral traces and graph/4 round trips. Dynamic option providers, mutable collection identity, accessor capabilities/inferred labels, scalar domains and full builder/cache/interpreter protocols remain separate gaps.

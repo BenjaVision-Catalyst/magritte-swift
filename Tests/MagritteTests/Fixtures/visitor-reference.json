@@ -1,0 +1,936 @@
+{
+	"builders" : [
+		{
+			"case" : "flat",
+			"sameRoot" : false,
+			"modelIsNil" : true,
+			"source" : {
+				"class" : "MAContainer",
+				"key" : "",
+				"priority" : 0,
+				"children" : [
+					{
+						"class" : "MAStringDescription",
+						"key" : "first",
+						"priority" : 20,
+						"children" : [ ],
+						"label" : "First"
+					},
+					{
+						"class" : "MANumberDescription",
+						"key" : "second",
+						"priority" : 10,
+						"children" : [ ],
+						"label" : "Second"
+					},
+					{
+						"class" : "MAStringDescription",
+						"key" : "first",
+						"priority" : 20,
+						"children" : [ ],
+						"label" : "First"
+					},
+					{
+						"class" : "MASingleOptionDescription",
+						"key" : "choice",
+						"priority" : 0,
+						"children" : [ ],
+						"label" : "Option"
+					}
+				],
+				"label" : "Root"
+			},
+			"events" : [
+				"First",
+				"First"
+			],
+			"defaultPriority" : 0,
+			"targetFirst" : "Ada",
+			"sourceAfter" : {
+				"class" : "MAContainer",
+				"key" : "",
+				"priority" : 0,
+				"children" : [
+					{
+						"class" : "MAStringDescription",
+						"key" : "first",
+						"priority" : 20,
+						"children" : [ ],
+						"label" : "First"
+					},
+					{
+						"class" : "MANumberDescription",
+						"key" : "second",
+						"priority" : 10,
+						"children" : [ ],
+						"label" : "Second"
+					},
+					{
+						"class" : "MAStringDescription",
+						"key" : "first",
+						"priority" : 20,
+						"children" : [ ],
+						"label" : "First"
+					},
+					{
+						"class" : "MASingleOptionDescription",
+						"key" : "choice",
+						"priority" : 0,
+						"children" : [ ],
+						"label" : "Option"
+					}
+				],
+				"label" : "Root"
+			},
+			"result" : {
+				"class" : "MAContainer",
+				"key" : "",
+				"priority" : 0,
+				"children" : [
+					{
+						"class" : "MAStringDescription",
+						"key" : "first",
+						"priority" : 20,
+						"children" : [ ],
+						"label" : "Built First"
+					},
+					{
+						"class" : "MANumberDescription",
+						"key" : "second",
+						"priority" : 10,
+						"children" : [ ],
+						"label" : "Second"
+					},
+					{
+						"class" : "MAStringDescription",
+						"key" : "first",
+						"priority" : 20,
+						"children" : [ ],
+						"label" : "Built First"
+					},
+					{
+						"class" : "MASingleOptionDescription",
+						"key" : "choice",
+						"priority" : 0,
+						"children" : [ ],
+						"label" : "Option"
+					}
+				],
+				"label" : "Root"
+			},
+			"sameFirstChild" : false
+		},
+		{
+			"case" : "empty",
+			"sameRoot" : false,
+			"modelIsNil" : true,
+			"source" : {
+				"class" : "MAContainer",
+				"key" : "",
+				"priority" : 0,
+				"children" : [ ],
+				"label" : "Empty"
+			},
+			"events" : [ ],
+			"defaultPriority" : 0,
+			"targetFirst" : "Ada",
+			"sourceAfter" : {
+				"class" : "MAContainer",
+				"key" : "",
+				"priority" : 0,
+				"children" : [ ],
+				"label" : "Empty"
+			},
+			"result" : {
+				"class" : "MAContainer",
+				"key" : "",
+				"priority" : 0,
+				"children" : [ ],
+				"label" : "Empty"
+			},
+			"sameFirstChild" : false
+		},
+		{
+			"case" : "priority",
+			"sameRoot" : false,
+			"modelIsNil" : true,
+			"source" : {
+				"class" : "MAPriorityContainer",
+				"key" : "",
+				"priority" : 0,
+				"children" : [
+					{
+						"class" : "MANumberDescription",
+						"key" : "second",
+						"priority" : 10,
+						"children" : [ ],
+						"label" : "Second"
+					},
+					{
+						"class" : "MAStringDescription",
+						"key" : "first",
+						"priority" : 20,
+						"children" : [ ],
+						"label" : "First"
+					}
+				],
+				"label" : "Priority"
+			},
+			"events" : [
+				"First"
+			],
+			"defaultPriority" : 0,
+			"targetFirst" : "Ada",
+			"sourceAfter" : {
+				"class" : "MAPriorityContainer",
+				"key" : "",
+				"priority" : 0,
+				"children" : [
+					{
+						"class" : "MANumberDescription",
+						"key" : "second",
+						"priority" : 10,
+						"children" : [ ],
+						"label" : "Second"
+					},
+					{
+						"class" : "MAStringDescription",
+						"key" : "first",
+						"priority" : 20,
+						"children" : [ ],
+						"label" : "First"
+					}
+				],
+				"label" : "Priority"
+			},
+			"result" : {
+				"class" : "MAPriorityContainer",
+				"key" : "",
+				"priority" : 0,
+				"children" : [
+					{
+						"class" : "MANumberDescription",
+						"key" : "second",
+						"priority" : 10,
+						"children" : [ ],
+						"label" : "Second"
+					},
+					{
+						"class" : "MAStringDescription",
+						"key" : "first",
+						"priority" : 20,
+						"children" : [ ],
+						"label" : "Built First"
+					}
+				],
+				"label" : "Priority"
+			},
+			"sameFirstChild" : false
+		},
+		{
+			"case" : "nested",
+			"sameRoot" : false,
+			"modelIsNil" : true,
+			"source" : {
+				"class" : "MAContainer",
+				"key" : "",
+				"priority" : 0,
+				"children" : [
+					{
+						"class" : "MANumberDescription",
+						"key" : "second",
+						"priority" : 10,
+						"children" : [ ],
+						"label" : "Second"
+					},
+					{
+						"class" : "MAContainer",
+						"key" : "",
+						"priority" : 0,
+						"children" : [
+							{
+								"class" : "MAStringDescription",
+								"key" : "inner",
+								"priority" : 0,
+								"children" : [ ],
+								"label" : "Inner"
+							}
+						],
+						"label" : "Nested"
+					},
+					{
+						"class" : "MAStringDescription",
+						"key" : "last",
+						"priority" : 0,
+						"children" : [ ],
+						"label" : "Last"
+					}
+				],
+				"label" : "Outer"
+			},
+			"events" : [
+				"Inner",
+				"Last"
+			],
+			"defaultPriority" : 0,
+			"targetFirst" : "Ada",
+			"sourceAfter" : {
+				"class" : "MAContainer",
+				"key" : "",
+				"priority" : 0,
+				"children" : [
+					{
+						"class" : "MANumberDescription",
+						"key" : "second",
+						"priority" : 10,
+						"children" : [ ],
+						"label" : "Second"
+					},
+					{
+						"class" : "MAContainer",
+						"key" : "",
+						"priority" : 0,
+						"children" : [
+							{
+								"class" : "MAStringDescription",
+								"key" : "inner",
+								"priority" : 0,
+								"children" : [ ],
+								"label" : "Inner"
+							}
+						],
+						"label" : "Nested"
+					},
+					{
+						"class" : "MAStringDescription",
+						"key" : "last",
+						"priority" : 0,
+						"children" : [ ],
+						"label" : "Last"
+					}
+				],
+				"label" : "Outer"
+			},
+			"result" : {
+				"class" : "MAContainer",
+				"key" : "",
+				"priority" : 0,
+				"children" : [
+					{
+						"class" : "MAStringDescription",
+						"key" : "inner",
+						"priority" : 0,
+						"children" : [ ],
+						"label" : "Built Inner"
+					},
+					{
+						"class" : "MAStringDescription",
+						"key" : "last",
+						"priority" : 0,
+						"children" : [ ],
+						"label" : "Built Last"
+					}
+				],
+				"label" : "Nested"
+			},
+			"sameFirstChild" : false
+		},
+		{
+			"case" : "scalar",
+			"sameRoot" : true,
+			"modelIsNil" : true,
+			"source" : {
+				"class" : "MAStringDescription",
+				"key" : "scalar",
+				"priority" : 0,
+				"children" : [ ],
+				"label" : "Scalar"
+			},
+			"events" : [
+				"Scalar"
+			],
+			"defaultPriority" : 0,
+			"targetFirst" : "Ada",
+			"sourceAfter" : {
+				"class" : "MAStringDescription",
+				"key" : "scalar",
+				"priority" : 0,
+				"children" : [ ],
+				"label" : "Built Scalar"
+			},
+			"result" : {
+				"class" : "MAStringDescription",
+				"key" : "scalar",
+				"priority" : 0,
+				"children" : [ ],
+				"label" : "Built Scalar"
+			},
+			"sameFirstChild" : false
+		}
+	],
+	"identity" : {
+		"referenceSame" : true,
+		"containerSame" : false,
+		"reuseContainerCount" : 5,
+		"reuseError" : "none",
+		"childrenSame" : false,
+		"duplicateCopySame" : false,
+		"optionsCopySame" : false,
+		"priorityAfter" : 9,
+		"scalarSame" : true,
+		"optionsSame" : true,
+		"modelSame" : true,
+		"referenceCopySame" : false
+	},
+	"builderClass" : {
+		"superclass" : "MAVisitor",
+		"abstract" : false,
+		"name" : "MADescriptionBuilder",
+		"label" : "Description Builder"
+	},
+	"visiting" : {
+		"failureClass" : "MAError",
+		"plainContainer" : [
+			[
+				"visitContainer:",
+				"Root"
+			],
+			[
+				"visitDescription:",
+				"Root"
+			]
+		],
+		"recursiveContainer" : [
+			[
+				"visitContainer:",
+				"Root"
+			],
+			[
+				"visitDescription:",
+				"Root"
+			],
+			[
+				"visitStringDescription:",
+				"First"
+			],
+			[
+				"visitElementDescription:",
+				"First"
+			],
+			[
+				"visitDescription:",
+				"First"
+			],
+			[
+				"visitNumberDescription:",
+				"Second"
+			],
+			[
+				"visitMagnitudeDescription:",
+				"Second"
+			],
+			[
+				"visitElementDescription:",
+				"Second"
+			],
+			[
+				"visitDescription:",
+				"Second"
+			],
+			[
+				"visitStringDescription:",
+				"First"
+			],
+			[
+				"visitElementDescription:",
+				"First"
+			],
+			[
+				"visitDescription:",
+				"First"
+			],
+			[
+				"visitSingleOptionDescription:",
+				"Option"
+			],
+			[
+				"visitOptionDescription:",
+				"Option"
+			],
+			[
+				"visitReferenceDescription:",
+				"Option"
+			],
+			[
+				"visitElementDescription:",
+				"Option"
+			],
+			[
+				"visitDescription:",
+				"Option"
+			]
+		],
+		"stoppedBatch" : [
+			[
+				"visitStringDescription:",
+				"First"
+			],
+			[
+				"visitNumberDescription:",
+				"Second"
+			],
+			[
+				"visitMagnitudeDescription:",
+				"Second"
+			],
+			[
+				"visitElementDescription:",
+				"Second"
+			],
+			[
+				"visitDescription:",
+				"Second"
+			],
+			[
+				"visitStringDescription:",
+				"First"
+			]
+		],
+		"hiddenReadOnly" : [
+			[
+				"visitStringDescription:",
+				"First"
+			],
+			[
+				"visitElementDescription:",
+				"First"
+			],
+			[
+				"visitDescription:",
+				"First"
+			]
+		],
+		"failedBatch" : [
+			[
+				"visitStringDescription:",
+				"First"
+			]
+		]
+	},
+	"policy" : "Executed real visitor and builder objects in live GT. Probe subclasses were compiled through GT MCP and are removed after reference capture. Base visitor dispatch does not filter or traverse. Builder behavior includes upstream state reuse and nested-container replacement. No native integration resources.",
+	"dispatch" : [
+		{
+			"events" : [
+				[
+					"visitDescription:",
+					"MADescription"
+				]
+			],
+			"class" : "MADescription"
+		},
+		{
+			"events" : [
+				[
+					"visitContainer:",
+					"MAContainer"
+				],
+				[
+					"visitDescription:",
+					"MAContainer"
+				]
+			],
+			"class" : "MAContainer"
+		},
+		{
+			"events" : [
+				[
+					"visitPriorityContainer:",
+					"MAPriorityContainer"
+				],
+				[
+					"visitContainer:",
+					"MAPriorityContainer"
+				],
+				[
+					"visitDescription:",
+					"MAPriorityContainer"
+				]
+			],
+			"class" : "MAPriorityContainer"
+		},
+		{
+			"events" : [
+				[
+					"visitElementDescription:",
+					"MAElementDescription"
+				],
+				[
+					"visitDescription:",
+					"MAElementDescription"
+				]
+			],
+			"class" : "MAElementDescription"
+		},
+		{
+			"events" : [
+				[
+					"visitBooleanDescription:",
+					"MABooleanDescription"
+				],
+				[
+					"visitElementDescription:",
+					"MABooleanDescription"
+				],
+				[
+					"visitDescription:",
+					"MABooleanDescription"
+				]
+			],
+			"class" : "MABooleanDescription"
+		},
+		{
+			"events" : [
+				[
+					"visitClassDescription:",
+					"MAClassDescription"
+				],
+				[
+					"visitElementDescription:",
+					"MAClassDescription"
+				],
+				[
+					"visitDescription:",
+					"MAClassDescription"
+				]
+			],
+			"class" : "MAClassDescription"
+		},
+		{
+			"events" : [
+				[
+					"visitStringDescription:",
+					"MAStringDescription"
+				],
+				[
+					"visitElementDescription:",
+					"MAStringDescription"
+				],
+				[
+					"visitDescription:",
+					"MAStringDescription"
+				]
+			],
+			"class" : "MAStringDescription"
+		},
+		{
+			"events" : [
+				[
+					"visitMemoDescription:",
+					"MAMemoDescription"
+				],
+				[
+					"visitStringDescription:",
+					"MAMemoDescription"
+				],
+				[
+					"visitElementDescription:",
+					"MAMemoDescription"
+				],
+				[
+					"visitDescription:",
+					"MAMemoDescription"
+				]
+			],
+			"class" : "MAMemoDescription"
+		},
+		{
+			"events" : [
+				[
+					"visitPasswordDescription:",
+					"MAPasswordDescription"
+				],
+				[
+					"visitStringDescription:",
+					"MAPasswordDescription"
+				],
+				[
+					"visitElementDescription:",
+					"MAPasswordDescription"
+				],
+				[
+					"visitDescription:",
+					"MAPasswordDescription"
+				]
+			],
+			"class" : "MAPasswordDescription"
+		},
+		{
+			"events" : [
+				[
+					"visitSymbolDescription:",
+					"MASymbolDescription"
+				],
+				[
+					"visitStringDescription:",
+					"MASymbolDescription"
+				],
+				[
+					"visitElementDescription:",
+					"MASymbolDescription"
+				],
+				[
+					"visitDescription:",
+					"MASymbolDescription"
+				]
+			],
+			"class" : "MASymbolDescription"
+		},
+		{
+			"events" : [
+				[
+					"visitMagnitudeDescription:",
+					"MAMagnitudeDescription"
+				],
+				[
+					"visitElementDescription:",
+					"MAMagnitudeDescription"
+				],
+				[
+					"visitDescription:",
+					"MAMagnitudeDescription"
+				]
+			],
+			"class" : "MAMagnitudeDescription"
+		},
+		{
+			"events" : [
+				[
+					"visitNumberDescription:",
+					"MANumberDescription"
+				],
+				[
+					"visitMagnitudeDescription:",
+					"MANumberDescription"
+				],
+				[
+					"visitElementDescription:",
+					"MANumberDescription"
+				],
+				[
+					"visitDescription:",
+					"MANumberDescription"
+				]
+			],
+			"class" : "MANumberDescription"
+		},
+		{
+			"events" : [
+				[
+					"visitReferenceDescription:",
+					"MAReferenceDescription"
+				],
+				[
+					"visitElementDescription:",
+					"MAReferenceDescription"
+				],
+				[
+					"visitDescription:",
+					"MAReferenceDescription"
+				]
+			],
+			"class" : "MAReferenceDescription"
+		},
+		{
+			"events" : [
+				[
+					"visitTokenDescription:",
+					"MATokenDescription"
+				],
+				[
+					"visitReferenceDescription:",
+					"MATokenDescription"
+				],
+				[
+					"visitElementDescription:",
+					"MATokenDescription"
+				],
+				[
+					"visitDescription:",
+					"MATokenDescription"
+				]
+			],
+			"class" : "MATokenDescription"
+		},
+		{
+			"events" : [
+				[
+					"visitOptionDescription:",
+					"MAOptionDescription"
+				],
+				[
+					"visitReferenceDescription:",
+					"MAOptionDescription"
+				],
+				[
+					"visitElementDescription:",
+					"MAOptionDescription"
+				],
+				[
+					"visitDescription:",
+					"MAOptionDescription"
+				]
+			],
+			"class" : "MAOptionDescription"
+		},
+		{
+			"events" : [
+				[
+					"visitSingleOptionDescription:",
+					"MASingleOptionDescription"
+				],
+				[
+					"visitOptionDescription:",
+					"MASingleOptionDescription"
+				],
+				[
+					"visitReferenceDescription:",
+					"MASingleOptionDescription"
+				],
+				[
+					"visitElementDescription:",
+					"MASingleOptionDescription"
+				],
+				[
+					"visitDescription:",
+					"MASingleOptionDescription"
+				]
+			],
+			"class" : "MASingleOptionDescription"
+		},
+		{
+			"events" : [
+				[
+					"visitMultipleOptionDescription:",
+					"MAMultipleOptionDescription"
+				],
+				[
+					"visitOptionDescription:",
+					"MAMultipleOptionDescription"
+				],
+				[
+					"visitReferenceDescription:",
+					"MAMultipleOptionDescription"
+				],
+				[
+					"visitElementDescription:",
+					"MAMultipleOptionDescription"
+				],
+				[
+					"visitDescription:",
+					"MAMultipleOptionDescription"
+				]
+			],
+			"class" : "MAMultipleOptionDescription"
+		},
+		{
+			"events" : [
+				[
+					"visitRelationDescription:",
+					"MARelationDescription"
+				],
+				[
+					"visitReferenceDescription:",
+					"MARelationDescription"
+				],
+				[
+					"visitElementDescription:",
+					"MARelationDescription"
+				],
+				[
+					"visitDescription:",
+					"MARelationDescription"
+				]
+			],
+			"class" : "MARelationDescription"
+		},
+		{
+			"events" : [
+				[
+					"visitToOneRelationDescription:",
+					"MAToOneRelationDescription"
+				],
+				[
+					"visitRelationDescription:",
+					"MAToOneRelationDescription"
+				],
+				[
+					"visitReferenceDescription:",
+					"MAToOneRelationDescription"
+				],
+				[
+					"visitElementDescription:",
+					"MAToOneRelationDescription"
+				],
+				[
+					"visitDescription:",
+					"MAToOneRelationDescription"
+				]
+			],
+			"class" : "MAToOneRelationDescription"
+		},
+		{
+			"events" : [
+				[
+					"visitToManyRelationDescription:",
+					"MAToManyRelationDescription"
+				],
+				[
+					"visitRelationDescription:",
+					"MAToManyRelationDescription"
+				],
+				[
+					"visitReferenceDescription:",
+					"MAToManyRelationDescription"
+				],
+				[
+					"visitElementDescription:",
+					"MAToManyRelationDescription"
+				],
+				[
+					"visitDescription:",
+					"MAToManyRelationDescription"
+				]
+			],
+			"class" : "MAToManyRelationDescription"
+		},
+		{
+			"events" : [
+				[
+					"visitToManyScalarRelationDescription:",
+					"MAToManyScalarRelationDescription"
+				],
+				[
+					"visitToManyRelationDescription:",
+					"MAToManyScalarRelationDescription"
+				],
+				[
+					"visitRelationDescription:",
+					"MAToManyScalarRelationDescription"
+				],
+				[
+					"visitReferenceDescription:",
+					"MAToManyScalarRelationDescription"
+				],
+				[
+					"visitElementDescription:",
+					"MAToManyScalarRelationDescription"
+				],
+				[
+					"visitDescription:",
+					"MAToManyScalarRelationDescription"
+				]
+			],
+			"class" : "MAToManyScalarRelationDescription"
+		}
+	]
+}

@@ -1,0 +1,190 @@
+{
+  "probeMethods": [
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "events\n ^ events ifNil: [ events := OrderedCollection new ]",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "stopAt: aSymbol\n stopAt := aSymbol",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "recurse: aBoolean\n recurse := aBoolean",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "failAt: aSymbol\n failAt := aSymbol",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "visitDescription: aDescription\n self events add: { #visitDescription:. aDescription label }.\n failAt = #visitDescription: ifTrue: [ self error: 'visitor failure' ].\n stopAt = #visitDescription: ifTrue: [ ^ self ].\n super visitDescription: aDescription.",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "visitContainer: aDescription\n self events add: { #visitContainer:. aDescription label }.\n failAt = #visitContainer: ifTrue: [ self error: 'visitor failure' ].\n stopAt = #visitContainer: ifTrue: [ ^ self ].\n super visitContainer: aDescription.\n recurse = true ifTrue: [ self visitAll: aDescription children ].",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "visitPriorityContainer: aDescription\n self events add: { #visitPriorityContainer:. aDescription label }.\n failAt = #visitPriorityContainer: ifTrue: [ self error: 'visitor failure' ].\n stopAt = #visitPriorityContainer: ifTrue: [ ^ self ].\n super visitPriorityContainer: aDescription.",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "visitElementDescription: aDescription\n self events add: { #visitElementDescription:. aDescription label }.\n failAt = #visitElementDescription: ifTrue: [ self error: 'visitor failure' ].\n stopAt = #visitElementDescription: ifTrue: [ ^ self ].\n super visitElementDescription: aDescription.",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "visitBooleanDescription: aDescription\n self events add: { #visitBooleanDescription:. aDescription label }.\n failAt = #visitBooleanDescription: ifTrue: [ self error: 'visitor failure' ].\n stopAt = #visitBooleanDescription: ifTrue: [ ^ self ].\n super visitBooleanDescription: aDescription.",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "visitClassDescription: aDescription\n self events add: { #visitClassDescription:. aDescription label }.\n failAt = #visitClassDescription: ifTrue: [ self error: 'visitor failure' ].\n stopAt = #visitClassDescription: ifTrue: [ ^ self ].\n super visitClassDescription: aDescription.",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "visitStringDescription: aDescription\n self events add: { #visitStringDescription:. aDescription label }.\n failAt = #visitStringDescription: ifTrue: [ self error: 'visitor failure' ].\n stopAt = #visitStringDescription: ifTrue: [ ^ self ].\n super visitStringDescription: aDescription.",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "visitMemoDescription: aDescription\n self events add: { #visitMemoDescription:. aDescription label }.\n failAt = #visitMemoDescription: ifTrue: [ self error: 'visitor failure' ].\n stopAt = #visitMemoDescription: ifTrue: [ ^ self ].\n super visitMemoDescription: aDescription.",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "visitPasswordDescription: aDescription\n self events add: { #visitPasswordDescription:. aDescription label }.\n failAt = #visitPasswordDescription: ifTrue: [ self error: 'visitor failure' ].\n stopAt = #visitPasswordDescription: ifTrue: [ ^ self ].\n super visitPasswordDescription: aDescription.",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "visitSymbolDescription: aDescription\n self events add: { #visitSymbolDescription:. aDescription label }.\n failAt = #visitSymbolDescription: ifTrue: [ self error: 'visitor failure' ].\n stopAt = #visitSymbolDescription: ifTrue: [ ^ self ].\n super visitSymbolDescription: aDescription.",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "visitMagnitudeDescription: aDescription\n self events add: { #visitMagnitudeDescription:. aDescription label }.\n failAt = #visitMagnitudeDescription: ifTrue: [ self error: 'visitor failure' ].\n stopAt = #visitMagnitudeDescription: ifTrue: [ ^ self ].\n super visitMagnitudeDescription: aDescription.",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "visitNumberDescription: aDescription\n self events add: { #visitNumberDescription:. aDescription label }.\n failAt = #visitNumberDescription: ifTrue: [ self error: 'visitor failure' ].\n stopAt = #visitNumberDescription: ifTrue: [ ^ self ].\n super visitNumberDescription: aDescription.",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "visitReferenceDescription: aDescription\n self events add: { #visitReferenceDescription:. aDescription label }.\n failAt = #visitReferenceDescription: ifTrue: [ self error: 'visitor failure' ].\n stopAt = #visitReferenceDescription: ifTrue: [ ^ self ].\n super visitReferenceDescription: aDescription.",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "visitTokenDescription: aDescription\n self events add: { #visitTokenDescription:. aDescription label }.\n failAt = #visitTokenDescription: ifTrue: [ self error: 'visitor failure' ].\n stopAt = #visitTokenDescription: ifTrue: [ ^ self ].\n super visitTokenDescription: aDescription.",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "visitOptionDescription: aDescription\n self events add: { #visitOptionDescription:. aDescription label }.\n failAt = #visitOptionDescription: ifTrue: [ self error: 'visitor failure' ].\n stopAt = #visitOptionDescription: ifTrue: [ ^ self ].\n super visitOptionDescription: aDescription.",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "visitSingleOptionDescription: aDescription\n self events add: { #visitSingleOptionDescription:. aDescription label }.\n failAt = #visitSingleOptionDescription: ifTrue: [ self error: 'visitor failure' ].\n stopAt = #visitSingleOptionDescription: ifTrue: [ ^ self ].\n super visitSingleOptionDescription: aDescription.",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "visitMultipleOptionDescription: aDescription\n self events add: { #visitMultipleOptionDescription:. aDescription label }.\n failAt = #visitMultipleOptionDescription: ifTrue: [ self error: 'visitor failure' ].\n stopAt = #visitMultipleOptionDescription: ifTrue: [ ^ self ].\n super visitMultipleOptionDescription: aDescription.",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "visitRelationDescription: aDescription\n self events add: { #visitRelationDescription:. aDescription label }.\n failAt = #visitRelationDescription: ifTrue: [ self error: 'visitor failure' ].\n stopAt = #visitRelationDescription: ifTrue: [ ^ self ].\n super visitRelationDescription: aDescription.",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "visitToOneRelationDescription: aDescription\n self events add: { #visitToOneRelationDescription:. aDescription label }.\n failAt = #visitToOneRelationDescription: ifTrue: [ self error: 'visitor failure' ].\n stopAt = #visitToOneRelationDescription: ifTrue: [ ^ self ].\n super visitToOneRelationDescription: aDescription.",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "visitToManyRelationDescription: aDescription\n self events add: { #visitToManyRelationDescription:. aDescription label }.\n failAt = #visitToManyRelationDescription: ifTrue: [ self error: 'visitor failure' ].\n stopAt = #visitToManyRelationDescription: ifTrue: [ ^ self ].\n super visitToManyRelationDescription: aDescription.",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortVisitorProbe",
+      "sourceCode": "visitToManyScalarRelationDescription: aDescription\n self events add: { #visitToManyScalarRelationDescription:. aDescription label }.\n failAt = #visitToManyScalarRelationDescription: ifTrue: [ self error: 'visitor failure' ].\n stopAt = #visitToManyScalarRelationDescription: ifTrue: [ ^ self ].\n super visitToManyScalarRelationDescription: aDescription.",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortBuilderProbe",
+      "sourceCode": "events\n ^ events ifNil: [ events := OrderedCollection new ]",
+      "protocol": "validation",
+      "classSide": false
+    },
+    {
+      "methodClassName": "MAPortBuilderProbe",
+      "sourceCode": "visitStringDescription: aDescription\n self events add: aDescription label.\n aDescription label: 'Built ', aDescription label.\n super visitStringDescription: aDescription",
+      "protocol": "validation",
+      "classSide": false
+    }
+  ],
+  "evaluation": {
+    "bindings": [],
+    "code": "| base report classes cases d v row a b root nested ref builder result snapshot builders make encode source gate roots error sourceBefore |\nbase := '/opt/git/BenjaVisionPro/catalyst-workspace/Magritte/magritte-cpp/conformance/'.\nreport := [ CCNativeMcpLease forRunningServers during: [\nclasses := #(MADescription MAContainer MAPriorityContainer MAElementDescription MABooleanDescription MAClassDescription MAStringDescription MAMemoDescription MAPasswordDescription MASymbolDescription MAMagnitudeDescription MANumberDescription MAReferenceDescription MATokenDescription MAOptionDescription MASingleOptionDescription MAMultipleOptionDescription MARelationDescription MAToOneRelationDescription MAToManyRelationDescription MAToManyScalarRelationDescription).\ncases := OrderedCollection new.\nclasses do: [ :cls |\n d := (Smalltalk globals at: cls) basicNew initialize label: cls asString; yourself.\n v := MAPortVisitorProbe new.\n v visit: d.\n cases add: (Dictionary newFrom: { 'class' -> cls asString. 'events' -> v events asArray }) ].\na := MAStringDescription new label: 'First'; accessor: (MADictionaryAccessor key: #first); priority: 20; yourself.\nb := MANumberDescription new label: 'Second'; accessor: (MADictionaryAccessor key: #second); priority: 10; yourself.\nref := MAStringDescription new label: 'Reference'; yourself.\nd := MASingleOptionDescription new label: 'Option'; accessor: (MADictionaryAccessor key: #choice); reference: ref; options: #('a' 'b'); yourself.\nroot := MAContainer new label: 'Root'; add: a; add: b; add: a; add: d; yourself.\nv := MAPortVisitorProbe new.\nv visit: root.\nrow := Dictionary newFrom: { 'plainContainer' -> v events asArray }.\nv := MAPortVisitorProbe new recurse: true; yourself.\nv visit: root.\nrow at: 'recursiveContainer' put: v events asArray.\nv := MAPortVisitorProbe new stopAt: #visitStringDescription:; yourself.\nv visitAll: { a. b. a }.\nrow at: 'stoppedBatch' put: v events asArray.\na beHidden; beReadOnly.\nv := MAPortVisitorProbe new.\nv visit: a.\nrow at: 'hiddenReadOnly' put: v events asArray.\na beVisible; beWriteable.\nv := MAPortVisitorProbe new failAt: #visitStringDescription:; yourself.\nerror := [ v visitAll: { a. b }. 'none' ] on: Error do: [ :e | e class name asString ].\nrow at: 'failedBatch' put: v events asArray; at: 'failureClass' put: error.\nencode := [ :node | Dictionary newFrom: { 'class' -> node class name asString. 'label' -> node label. 'key' -> (node accessor name ifNil: [ '' ]) asString. 'priority' -> node priority. 'children' -> (node isContainer ifTrue: [ node children collect: encode ] ifFalse: [ #() ]) asArray } ].\nbuilders := OrderedCollection new.\nmake := [ :name :input |\n builder := MAPortBuilderProbe new.\n sourceBefore := encode value: input.\n result := builder buildFrom: input target: (Dictionary newFrom: { #first -> 'Ada'. #second -> 7 }).\n builders add: (Dictionary newFrom: { 'case' -> name. 'source' -> sourceBefore. 'sourceAfter' -> (encode value: input). 'result' -> (encode value: result). 'events' -> builder events asArray. 'sameRoot' -> (result == input). 'sameFirstChild' -> (input isContainer and: [ input children notEmpty and: [ result isContainer and: [ result children notEmpty and: [ input children first == result children first ] ] ] ]).\n 'defaultPriority' -> builder priority. 'modelIsNil' -> builder model isNil. 'targetFirst' -> (builder target at: #first) }) ].\nmake value: 'flat' value: root.\nmake value: 'empty' value: (MAContainer new label: 'Empty'; yourself).\nmake value: 'priority' value: (MAPriorityContainer new label: 'Priority'; add: a; add: b; yourself).\nnested := MAContainer new label: 'Nested'; add: (MAStringDescription new label: 'Inner'; accessor: (MADictionaryAccessor key: #inner); yourself); yourself.\nmake value: 'nested' value: (MAContainer new label: 'Outer'; add: b; add: nested; add: (MAStringDescription new label: 'Last'; accessor: (MADictionaryAccessor key: #last); yourself); yourself).\nmake value: 'scalar' value: (MAStringDescription new label: 'Scalar'; accessor: (MADictionaryAccessor key: #scalar); yourself).\nbuilder := MADescriptionBuilder new.\nresult := builder buildFrom: d target: nil.\nsnapshot := Dictionary newFrom: { 'scalarSame' -> (result == d). 'referenceSame' -> (result reference == ref). 'optionsSame' -> (result options == d options) }.\nbuilder := MADescriptionBuilder new.\nresult := builder buildFrom: root target: nil.\nsnapshot at: 'containerSame' put: (result == root); at: 'childrenSame' put: (result children == root children); at: 'duplicateCopySame' put: (result children first == result children third); at: 'referenceCopySame' put: (result children last reference == ref); at: 'optionsCopySame' put: (result children last options == d options).\nbuilder priority: 9; model: a.\nsnapshot at: 'priorityAfter' put: builder priority; at: 'modelSame' put: (builder model == a).\nerror := [ builder buildFrom: b target: nil. 'none' ] on: Error do: [ :e | e class name asString ].\nsnapshot at: 'reuseContainerCount' put: builder builtDescription children size; at: 'reuseError' put: error.\nDictionary newFrom: { 'dispatch' -> cases asArray. 'visiting' -> row. 'builders' -> builders asArray. 'identity' -> snapshot. 'builderClass' -> (Dictionary newFrom: { 'name' -> MADescriptionBuilder name asString. 'superclass' -> MADescriptionBuilder superclass name asString. 'abstract' -> MADescriptionBuilder isAbstract. 'label' -> MADescriptionBuilder label }).\n 'policy' -> 'Executed real visitor and builder objects in live GT. Probe subclasses were compiled through GT MCP and are removed after reference capture. Base visitor dispatch does not filter or traverse. Builder behavior includes upstream state reuse and nested-container replacement. No native integration resources.' }\n] ] ensure: [ (base , 'visitor-mcp-gate.json') asFileReference writeStreamDo: [ :s | s truncate; nextPutAll: '{\"complete\":true,\"nativeResources\":false}' ] ].\n(base , 'visitor-reference.json') asFileReference writeStreamDo: [ :s | s truncate; nextPutAll: (NeoJSONWriter toStringPretty: report) ].\n{ (report at: 'dispatch') size. (report at: 'builders') size }\n"
+  },
+  "cleanup": [
+    "MAPortBuilderProbe",
+    "MAPortVisitorProbe"
+  ],
+  "policy": "Create probe classes using GT MCP in Magritte-Port-Validation, compile probeMethods through GT MCP, evaluate inside CCNativeMcpLease, wait outside GT for visitor-mcp-gate.json, then remove the probes through GT MCP. Never file in this JSON.",
+  "probeClasses": [
+    {
+      "targetClassName": "MAPortVisitorProbe",
+      "superclassName": "MAVisitor",
+      "package": "Magritte-Port-Validation",
+      "instanceVariables": "events stopAt recurse failAt"
+    },
+    {
+      "targetClassName": "MAPortBuilderProbe",
+      "superclassName": "MADescriptionBuilder",
+      "package": "Magritte-Port-Validation",
+      "instanceVariables": "events failAt"
+    }
+  ],
+  "cleanupVerified": true
+}

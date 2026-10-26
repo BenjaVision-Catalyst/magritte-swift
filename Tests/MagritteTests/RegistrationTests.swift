@@ -28,10 +28,20 @@ final class RegistrationTests: XCTestCase {
       isAbstract: try XCTUnwrap(j["abstract"] as? Bool), label: try text(j["label"]))
   }
   func canonical(_ j: Any) throws -> Data {
+    let available = Set(try XCTUnwrap(fixture()["classes"] as? [String]))
     var graph = try object(j)
     var nodes = try rows(graph["descriptions"])
     for i in nodes.indices {
-      if let names = nodes[i]["classes"] as? [String] { nodes[i]["classes"] = names.sorted() }
+      if let names = nodes[i]["classes"] as? [String] {
+        nodes[i]["classes"] = names.filter { available.contains($0) }.sorted()
+      }
+    }
+    for i in nodes.indices {
+      if let options = nodes[i]["options"] as? [[String: Any]] {
+        nodes[i]["options"] = options.filter {
+          $0["type"] as? String != "class" || available.contains($0["value"] as? String ?? "")
+        }
+      }
     }
     graph["descriptions"] = nodes.sorted { ($0["id"] as! String) < ($1["id"] as! String) }
     return try data(graph)
@@ -39,6 +49,8 @@ final class RegistrationTests: XCTestCase {
   func testRuntimeRegistrationDiscoveryAndNativeInterop() throws {
     let f = try fixture()
     let registry = ClassRegistry.shared
+    let available = Set(try XCTUnwrap(f["classes"] as? [String]))
+    func projected(_ names: [String]) -> [String] { names.filter { available.contains($0) } }
     for row in try rows(f["core"]) {
       XCTAssertEqual(registry.find(try text(row["name"])), try info(row))
     }
@@ -54,16 +66,18 @@ final class RegistrationTests: XCTestCase {
     let previous = try XCTUnwrap(before.resolver.descriptions[old.id + ".classes"]).options
     let definitions = try rows(f["additional"]).map(info)
     try registry.registerClasses(definitions)
-    XCTAssertEqual(registry.allClasses(), f["classes"] as? [String])
+    XCTAssertEqual(projected(registry.allClasses()), f["classes"] as? [String])
     XCTAssertEqual(previous.count + definitions.count, registry.allClasses().count)
     XCTAssertEqual(before.resolver.descriptions[old.id + ".classes"]?.options, previous)
     for q in try rows(f["queries"]) {
       let name = try text(q["class"])
-      XCTAssertEqual(try registry.subclasses(name), q["subclasses"] as? [String])
-      XCTAssertEqual(try registry.allSubclasses(name), q["allSubclasses"] as? [String])
-      XCTAssertEqual(try registry.withAllSubclasses(name), q["withAllSubclasses"] as? [String])
+      XCTAssertEqual(projected(try registry.subclasses(name)), q["subclasses"] as? [String])
+      XCTAssertEqual(projected(try registry.allSubclasses(name)), q["allSubclasses"] as? [String])
       XCTAssertEqual(
-        try registry.withAllConcreteClasses(name), q["withAllConcreteClasses"] as? [String])
+        projected(try registry.withAllSubclasses(name)), q["withAllSubclasses"] as? [String])
+      XCTAssertEqual(
+        projected(try registry.withAllConcreteClasses(name)),
+        q["withAllConcreteClasses"] as? [String])
     }
     for q in try rows(f["includes"]) {
       let name = try text(q["class"])

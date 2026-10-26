@@ -60,7 +60,8 @@ public struct Condition {
         self.label = label; self.test = test
     }
 }
-public final class Description: Model {
+open class Description: Model {
+    open func acceptMagritte(_ visitor: Visitor) throws { try dispatchMagritte(self, visitor) }
     public var id: String
     public var className: String
     public var key: String

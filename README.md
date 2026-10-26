@@ -1,6 +1,6 @@
 # Magritte Swift
 
-An independent Swift Package port of [Magritte](https://github.com/magritte-metamodel/magritte). **0.8 replaces the fixed class-name registry with runtime native-class registration and discovery; it is not a complete Magritte implementation.** No C++ dependency, UI, networking or application-framework integration.
+An independent Swift Package port of [Magritte](https://github.com/magritte-metamodel/magritte). **0.9 adds Magritte visitor dispatch and base description builders; it is not a complete Magritte implementation.** No C++ dependency, UI, networking or application-framework integration.
 
 The headless Magritte library includes ordered/priority containers, a scalar subset, runtime adaptive objects, native accessors, to-one/to-many/scalar relations, static options, typed collections, cyclic references, validation, a self-description bootstrap and bounded graph/value interchange.
 
@@ -56,3 +56,5 @@ The 0.6 phase adds MAClassDescription, a finite class registry, class-valued int
 The 0.7 phase binds actual mementos through their represented descriptions and bootstraps metadata for a reachable description graph in one bounded batch. See [bootstrap.md](docs/bootstrap.md) for identity, nested editing, the 65-class registry, current schema closure and GT evidence.
 
 The 0.8 class environment supports application class registration, RTTI/metatype lookup, inheritance and subclass discovery. Metadata, validation and codecs use that environment. See [registration.md](docs/registration.md) for native examples, identity/ownership rules and GT evidence.
+
+The 0.9 phase adds `acceptMagritte`, native visitor overrides with inherited fallback, and the stateful `MADescriptionBuilder` copy/enrichment protocol. See [visitors.md](docs/visitors.md) for APIs, the upstream/GT audit, ownership and remaining semantics.

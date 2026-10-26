@@ -76,6 +76,9 @@ public final class ClassRegistry: @unchecked Sendable {
       ClassInfo(
         name: "MADescription", superclass: "MAObject", isAbstract: true, label: "Description"),
       ClassInfo(
+        name: "MADescriptionBuilder", superclass: "MAVisitor", isAbstract: false,
+        label: "Description Builder"),
+      ClassInfo(
         name: "MADictionaryAccessor", superclass: "MAAccessor", isAbstract: false,
         label: "Dictionary Accessor"),
       ClassInfo(

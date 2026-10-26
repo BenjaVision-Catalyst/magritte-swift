@@ -1,0 +1,62 @@
+[
+	{
+		"source" : "/private/tmp/magritte-cpp-visitor-native.json",
+		"descriptions" : 6,
+		"objects" : 1,
+		"validated" : true,
+		"reads" : [
+			{
+				"text" : "Ada-7-Ada-a",
+				"id" : "sample",
+				"values" : {
+					"built.flat.4" : {
+						"value" : "Ada",
+						"type" : "string"
+					},
+					"built.flat.5" : {
+						"value" : "a",
+						"type" : "string"
+					},
+					"built.flat.2" : {
+						"value" : "Ada",
+						"type" : "string"
+					},
+					"built.flat.3" : {
+						"value" : "7",
+						"type" : "integer"
+					}
+				}
+			}
+		]
+	},
+	{
+		"source" : "/private/tmp/magritte-swift-visitor-native.json",
+		"descriptions" : 6,
+		"objects" : 1,
+		"validated" : true,
+		"reads" : [
+			{
+				"text" : "Ada-7-Ada-a",
+				"id" : "sample",
+				"values" : {
+					"built.flat.4" : {
+						"value" : "Ada",
+						"type" : "string"
+					},
+					"built.flat.5" : {
+						"value" : "a",
+						"type" : "string"
+					},
+					"built.flat.2" : {
+						"value" : "Ada",
+						"type" : "string"
+					},
+					"built.flat.3" : {
+						"value" : "7",
+						"type" : "integer"
+					}
+				}
+			}
+		]
+	}
+]

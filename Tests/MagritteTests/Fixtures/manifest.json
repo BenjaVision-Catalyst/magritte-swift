@@ -66,6 +66,11 @@
     "roundtrip-replay.json": "94587d4c4dbebdda51c26cbf4aec02728d1cf6390205cc7aafd3581fcacf4217",
     "self-description-reference.json": "01e45773e6577910320ba145a8f20e814f0c79e0b5917ebd8ebcf2163fd63989",
     "self-description-replay.json": "3c71ea7fcb917a30ccbb8338a02a28316f3efff35eb7b4709e750425cee56f6b",
-    "values.json": "e466d484df56254e55636d258b8cdb176868f686a5c7b7abcefe17daecc66b7f"
+    "values.json": "e466d484df56254e55636d258b8cdb176868f686a5c7b7abcefe17daecc66b7f",
+    "visitor-live-methods.json": "578dbd3b4bb36d4fdc22c2155d8b6ff50e8265bd07ec5472d4a87fee196b85c7",
+    "visitor-reference.json": "0d999bf1551ba1d3af4d7c202d00320139ab1944fde5323f0e46992d595e1751",
+    "visitor-replay.json": "7152c28730dd7363ebc43f2d1d2aad64a0728d99540eaa2a484d8f0d3f8914c3",
+    "visitor-roundtrip-reference.json": "2cc19f66d18f5322e8cb32cf84d7457e191e43840877d8f479b86d3d33d5d3e4",
+    "visitor-roundtrip-replay.json": "11405cbce3f7d47855836ae0f7ab3f678085defc463d1d0b2e2cd2ae15b03217"
   }
 }
