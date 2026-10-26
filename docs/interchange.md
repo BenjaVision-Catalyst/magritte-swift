@@ -148,3 +148,7 @@ Model initialization and described comparison operate on existing descriptions, 
 ## Generic model reads (0.26)
 
 The existing undefinedValue property now supplies generic model nil-read fallback locally. No wire form changes. Codecs preserve absent/stored nil data without executing the read hook; adaptive object-table entries retain their actual-value/absent-nil semantics. Imported descriptions can govern generic adapters using the corrected hook. Raw accessor reads remain distinct. See [model-read.md](model-read.md).
+
+## Registered description subclasses (0.27)
+
+Graph/4 accepts registered, concrete description subclasses whose hierarchy reaches an implemented family. The `class` name remains the actual registered name; inherited behavior controls shape, property applicability and execution. Receivers must register the hierarchy before import; unknown/unimplemented/abstract classes fail without changing the registry. Graph/1–3 reject these subclass identities. Metadata factories use graph/4 for such targets. No new tags, executable class definitions or callback forms are introduced. See [inheritance.md](inheritance.md).

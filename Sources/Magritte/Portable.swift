@@ -683,7 +683,7 @@ private func read(_ d: Description, _ input: String, _ w: Work, _ depth: Int, _ 
   if initial && (input.isEmpty || (!undef.isEmpty && input.utf8.starts(with: undef.utf8))) {
     return .undefined
   }
-  switch d.className {
+  switch try descriptionImplementation(d) {
   case "MASymbolDescription": return .symbol(input)
   case "MAStringDescription", "MAMemoDescription", "MAPasswordDescription": return .string(input)
   case "MABooleanDescription":
@@ -826,16 +826,16 @@ private func write(
   } else if d.isContainer {
     guard let graph else { throw MagritteError("Container writer requires graph resolver") }
     result = try writeModel(d, graph.resolve(value), graph, w, depth + 1)
-  } else if d.className == "MAClassDescription" {
+  } else if descriptionIs(d, "MAClassDescription") {
     guard case .classValue(let name) = value, knownClass(name) else {
       throw MagritteError("Class writer requires a portable Class")
     }; result = try d.displayStringFor(value, graph: graph, limits: w.limits)
-  } else if d.className == "MABooleanDescription" {
+  } else if descriptionIs(d, "MABooleanDescription") {
     guard case .boolean(let b) = value else {
       throw MagritteError("Boolean writer requires Boolean")
     }
     result = try propText(d, b ? "trueString" : "falseString")
-  } else if d.className == "MASingleOptionDescription" {
+  } else if descriptionIs(d, "MASingleOptionDescription") {
     var found = false
     for label in d.labels {
       try w.tick(depth)
@@ -847,17 +847,17 @@ private func write(
       }
     }
     if !found { result = try d.displayStringFor(value, graph: graph, limits: w.limits) }
-  } else if d.className == "MATokenDescription" || d.isMultiple {
+  } else if descriptionIs(d, "MATokenDescription") || d.isMultiple {
     try require(
       value.collectionCount() <= w.limits.visits - w.count, "Writer collection work limit")
     var sep = ", "
-    if try d.className == "MATokenDescription" && value.collectionCount() > 1 {
+    if try descriptionIs(d, "MATokenDescription") && value.collectionCount() > 1 {
       guard let c = try propText(d, "separators").unicodeScalars.first else {
         throw MagritteError("Token writer requires separator")
       }
       sep = String(c)
     }
-    if try d.className == "MAMultipleOptionDescription" && value.collectionCount() == 0 {
+    if try descriptionIs(d, "MAMultipleOptionDescription") && value.collectionCount() == 0 {
       result = try propText(d, "undefined")
     } else {
       var first = true
@@ -878,7 +878,7 @@ private func write(
           if !found { result += try d.displayStringFor(e, graph: graph, limits: w.limits) }
         } else {
           result += try write(
-            d.referenceDescription(), e, graph, w, depth + 1, d.className != "MATokenDescription")
+            d.referenceDescription(), e, graph, w, depth + 1, !descriptionIs(d, "MATokenDescription"))
         }
         try require(result.utf8.count <= w.limits.bytes, "String output byte limit")
       }
@@ -1063,13 +1063,13 @@ func displayString(_ value: Value) throws -> String {
 
 extension Description {
   public func obfuscated(_ value: Value, limits: Limits = Limits()) throws -> String {
-    try require(className == "MAPasswordDescription", "Obfuscation requires password description")
+    try require(descriptionIs(self, "MAPasswordDescription"), "Obfuscation requires password description")
     return String(
       repeating: "*",
       count: try writeString(value, using: self, limits: limits).unicodeScalars.count)
   }
   public func isObfuscated(_ value: Value) throws -> Bool {
-    try require(className == "MAPasswordDescription", "Obfuscation requires password description")
+    try require(descriptionIs(self, "MAPasswordDescription"), "Obfuscation requires password description")
     switch value {
     case .string(let s), .symbol(let s):
       return !s.isEmpty && s.unicodeScalars.allSatisfy { $0 == "*" }

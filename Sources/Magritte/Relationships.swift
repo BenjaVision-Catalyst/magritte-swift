@@ -1,10 +1,12 @@
 import Foundation
 
 public extension Description {
-    var isRelation: Bool { ["MAToOneRelationDescription", "MAToManyRelationDescription", "MAToManyScalarRelationDescription"].contains(className) }
-    var isOption: Bool { ["MASingleOptionDescription", "MAMultipleOptionDescription"].contains(className) }
-    var isReference: Bool { isRelation || isOption || className == "MATokenDescription" }
-    var isMultiple: Bool { ["MAToManyRelationDescription", "MAToManyScalarRelationDescription", "MAMultipleOptionDescription"].contains(className) }
+    var isRelation: Bool { descriptionIs(self, "MARelationDescription") }
+    var isOption: Bool { descriptionIs(self, "MAOptionDescription") }
+    var isReference: Bool { descriptionIs(self, "MAReferenceDescription") }
+    var isMultiple: Bool {
+      descriptionIs(self, "MAToManyRelationDescription") || descriptionIs(self, "MAMultipleOptionDescription")
+    }
   func labelForOption(_ value: Value, limits: Limits = Limits(), graph: Graph? = nil) throws
     -> String
   {
@@ -16,7 +18,7 @@ public extension Description {
         "Option label output limit")
       budget.work += text.utf8.count; return text
         }
-        if className == "MABooleanDescription" {
+        if descriptionIs(self, "MABooleanDescription") {
       if case .boolean(let b) = value {
         guard case .string(let s) = try property(b ? "trueString" : "falseString") else {
           throw MagritteError("Expected Boolean label")
@@ -40,7 +42,7 @@ public extension Description {
   func allOptionsWith(_ current: Value, limits: Limits = Limits(), graph: Graph? = nil) throws
     -> Options
   {
-    if className == "MABooleanDescription" {
+    if descriptionIs(self, "MABooleanDescription") {
       try require(limits.visits >= 2 && limits.items >= 2, "Boolean option item/work limit");
       return [.boolean(false), .boolean(true)]
     }
@@ -226,7 +228,7 @@ private func validateField(_ d: Description, _ v: Value, _ graph: Graph?, _ budg
     if !kind { try error("MAKindError") }
   }
     if !kind { return errors }
-    if d.className == "MANumberDescription" {
+    if descriptionIs(d, "MANumberDescription") {
     let min = try d.property("min"), max = try d.property("max")
     if try (!min.isNil && compareNumbers(v, min) < 0) || (!max.isNil && compareNumbers(v, max) > 0)
     {

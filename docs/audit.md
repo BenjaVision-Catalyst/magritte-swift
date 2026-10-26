@@ -75,6 +75,7 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Reference identity between description nodes | I | shared child instances survive import/export |
 | Relationship object identity, cycles, to-one/to-many/scalar-to-many | I, R | graph/2 explicit references and class constraints; no automatic validation cascade |
 | Static single/multiple options | I, R | membership/extensibility/prepared lists/identity-safe labels |
+| Registered description subclass execution | I (implemented ancestor profile), fresh R deferred | inherited kind/defaults, validation/text, metadata/copy and class-preserving graph/4; inheritance.md |
 | Runtime native class registration and hierarchy discovery | I, R (platform bridge) | typed bindings, inherited constraints, live discovery for new metadata and registered class interchange |
 | Dynamic option providers | I, R (native Value profile), X (wire) | live completion/membership/reader callbacks, provider identity, copy/array-wrapper semantics; dynamic-options.md |
 | Description display selectors/blocks and option-label fallback | I (native Value profile), fresh R deferred | culled display arguments, host message bindings, reference-based sort conversion and selector snapshots; display.md |
@@ -169,3 +170,5 @@ Phase 0.24 implements described-object readToString/printFor/container print and
 Phase 0.25 implements explicit-description/provider model initialization and isSameAs:using: comparison. [model-protocol.md](model-protocol.md) records fourteen Magritte source fingerprints, separately attributed Pharo membership review, 48 initialization/384 comparison cases, timing/failure/default/container/provider/reference/bounds tests and portable models. The generic Object nil-read fallback gap is now explicit. Callable default Values, automatic per-object discovery and model hashing remain separate gaps. GT was not accessed; fresh R remains deferred.
 
 Phase 0.26 implements Object>>readUsing: nil-only undefinedValue fallback in generic native/dictionary/description and reflective model adapters, with a default Model implementation. [model-read.md](model-read.md) records fifteen source fingerprints, 441 adapter/seven memento cases, single-read/error/chain/override/consumer/lifetime/bounds checks and equivalent graphs. Raw accessors and adaptive/memento read overrides are preserved. GT was not accessed; fresh R remains deferred.
+
+Phase 0.27 closes MAG-001 for registered descendants of implemented description families. [inheritance.md](inheritance.md) records inherited execution, source fingerprints, semantic scenarios, class identity, graph/4 gates and explicit local override boundaries. GT was not accessed.

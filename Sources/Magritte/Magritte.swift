@@ -140,7 +140,7 @@ open class Description: Model {
     public init(id: String, className: String = "MAStringDescription", key: String = "") {
         self.id = id; self.className = className; self.key = key
     }
-    public var isContainer: Bool { className == "MAContainer" || className == "MAPriorityContainer" }
+    public var isContainer: Bool { descriptionIs(self, "MAContainer") }
   public func property(_ name: String, limits: Limits = Limits()) throws -> Value {
     if name == "displayBlockOrSymbol", displayBlock != nil {
       throw MagritteError(
@@ -161,15 +161,15 @@ open class Description: Model {
     switch name {
     case "kind":
       var kind = "Object"
-      if className == "MAClassDescription" {
+      if descriptionIs(self, "MAClassDescription") {
         kind = "Class"
-      } else if className == "MASymbolDescription" {
+      } else if descriptionIs(self, "MASymbolDescription") {
         kind = "Symbol"
-      } else if className == "MANumberDescription" {
+      } else if descriptionIs(self, "MANumberDescription") {
         kind = "Number"
-      } else if className == "MABooleanDescription" {
+      } else if descriptionIs(self, "MABooleanDescription") {
         kind = "Boolean"
-      } else if className == "MATokenDescription" {
+      } else if descriptionIs(self, "MATokenDescription") {
         kind = "Array"
       } else if isMultiple {
         kind = "Collection"
@@ -232,7 +232,7 @@ open class Description: Model {
     return i
     }
     public func orderedChildren() throws -> [Description] {
-        if className != "MAPriorityContainer" { return children }
+        if !descriptionIs(self, "MAPriorityContainer") { return children }
         // Stable ties are a documented port policy, not a claim about upstream ties.
     let ranked = try children.enumerated().map {
       ($0.offset, $0.element, try $0.element.priorityValue())
@@ -336,7 +336,7 @@ func require(_ condition: Bool, _ message: String) throws {
     if !condition { throw MagritteError(message) }
 }
 func supported(_ d: Description) throws {
-    try require(["MAContainer", "MAPriorityContainer", "MAStringDescription", "MASymbolDescription", "MAMemoDescription", "MAPasswordDescription", "MATokenDescription", "MANumberDescription", "MABooleanDescription", "MAToOneRelationDescription", "MAToManyRelationDescription", "MAToManyScalarRelationDescription", "MASingleOptionDescription", "MAMultipleOptionDescription", "MAClassDescription"].contains(d.className), "Unsupported description class: \(d.className)")
+    _ = try descriptionImplementation(d)
     for (k, v) in d.properties {
         switch k {
     case "canExpand", "required", "readOnly", "visible", "ordered", "distinct", "definitive",
@@ -344,15 +344,15 @@ func supported(_ d: Description) throws {
       guard case .boolean = v else { throw MagritteError("Expected Boolean property: \(k)") }
     case "separators", "trueString", "falseString":
       try require(
-        (k == "separators" && d.className == "MATokenDescription")
-          || (k != "separators" && d.className == "MABooleanDescription"),
+        (k == "separators" && descriptionIs(d, "MATokenDescription"))
+          || (k != "separators" && descriptionIs(d, "MABooleanDescription")),
         "Text setting does not apply")
       guard case .string = v else { throw MagritteError("Expected text setting") }
         case "thousandsSeparator":
-            try require(d.className == "MANumberDescription", "Separator requires number")
+            try require(descriptionIs(d, "MANumberDescription"), "Separator requires number")
             guard case .character(let c) = v, c.unicodeScalars.count == 1 else { throw MagritteError("Expected separator character") }
         case "lineCount":
-            try require(d.className == "MAMemoDescription", "Line count requires memo")
+            try require(descriptionIs(d, "MAMemoDescription"), "Line count requires memo")
             guard case .integer = v else { throw MagritteError("Expected memo line count") }
     case "maPrintString", "maPrintStringSeparator":
       try require(v.isNil, "Print settings require local callable slots or explicit nil")
@@ -365,7 +365,7 @@ func supported(_ d: Description) throws {
     case "priority":
       try require(isNumber(v), "Expected numeric priority")
     case "min", "max":
-      try require(d.className == "MANumberDescription", "Range requires number description")
+      try require(descriptionIs(d, "MANumberDescription"), "Range requires number description")
       try require(v.isNil || isNumber(v), "Unsupported numeric bound")
       if case .float(let n) = v { try require(n.isFinite, "Non-finite numeric bound") }
         case "label", "comment", "group", "undefined":
@@ -420,7 +420,7 @@ func supported(_ d: Description) throws {
         }
     }
     for k in ["ordered", "distinct", "definitive", "sorted", "extensible"] where d.properties[k] != nil {
-        try require((k == "extensible" && d.isOption) || (k == "distinct" && d.className == "MAMultipleOptionDescription") || (k == "ordered" && d.isMultiple) || (k == "definitive" && d.isRelation && d.isMultiple) || (k == "sorted" && (d.isOption || (d.isRelation && d.isMultiple))), "Property does not apply to this description")
+        try require((k == "extensible" && d.isOption) || (k == "distinct" && descriptionIs(d, "MAMultipleOptionDescription")) || (k == "ordered" && d.isMultiple) || (k == "definitive" && d.isRelation && d.isMultiple) || (k == "sorted" && (d.isOption || (d.isRelation && d.isMultiple))), "Property does not apply to this description")
     }
 }
 public func visit(_ root: Description, limits: Limits = Limits(), _ visitor: (Description) throws -> Void) throws {
@@ -648,10 +648,13 @@ public final class Graph {
         for node in nodes {
             let n = try dictionary(node)
             let d = Description(id: try identity(n["id"]), className: try text(n["class"]))
+            let implementation = try descriptionImplementation(d)
+            try require(format == "magritte.graph/4" || implementation == d.className,
+                        "Registered description subclasses require graph/4")
             var names: Set<String> = d.isContainer ? ["id", "class", "properties", "children"] : ["id", "class", "properties", "accessor"]
             if d.isRelation { names.formUnion(["reference", "classes"]) }
             if d.isOption { names.formUnion(["reference", "options", "labels"]) }
-            if d.className == "MATokenDescription" { names.insert("reference") }
+            if descriptionIs(d, "MATokenDescription") { names.insert("reference") }
             if format >= "magritte.graph/3" { names.insert("conditions") }
       if let raw = n["definingContext"] {
         try require(format == "magritte.graph/4", "Defining context requires graph/4");
@@ -672,7 +675,7 @@ public final class Graph {
         }; d.definingContext = context
       }
       try keys(n, names)
-      try require(format == "magritte.graph/4" || d.className != "MAClassDescription", "Class descriptions require graph/4")
+      try require(format == "magritte.graph/4" || !descriptionIs(d, "MAClassDescription"), "Class descriptions require graph/4")
             try require(format != "magritte.graph/1" || !d.isReference, "Reference descriptions require graph/2")
             guard let props = n["properties"] else { throw MagritteError("Missing properties") }
       for (k, v) in try dictionary(props) {
@@ -695,7 +698,7 @@ public final class Graph {
                     d.portableConditions.append(PortableCondition(label: try text(entry["label"]), predicate: try predicateValue(p, limits)))
                 }
             } else {
-                try require(!["MATokenDescription", "MASymbolDescription", "MAMemoDescription", "MAPasswordDescription"].contains(d.className), "Description requires graph/3")
+                try require(!["MATokenDescription", "MASymbolDescription", "MAMemoDescription", "MAPasswordDescription"].contains(try descriptionImplementation(d)), "Description requires graph/3")
         for k in d.properties.keys {
           try require(
             ![

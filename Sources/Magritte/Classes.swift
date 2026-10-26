@@ -319,3 +319,27 @@ public final class ClassRegistry: @unchecked Sendable {
     }
   }
 }
+
+// Executable implementations are separate from the open runtime class environment.
+private let descriptionImplementations: Set<String> = [
+  "MAContainer", "MAPriorityContainer", "MAStringDescription", "MASymbolDescription",
+  "MAMemoDescription", "MAPasswordDescription", "MATokenDescription", "MANumberDescription",
+  "MABooleanDescription", "MAToOneRelationDescription", "MAToManyRelationDescription",
+  "MAToManyScalarRelationDescription", "MASingleOptionDescription",
+  "MAMultipleOptionDescription", "MAClassDescription",
+]
+func descriptionIs(_ d: Description, _ ancestor: String) -> Bool {
+  ClassRegistry.shared.includesBehavior(d.className, ancestor)
+}
+func descriptionImplementation(_ d: Description) throws -> String {
+  let registry = ClassRegistry.shared
+  guard let original = registry.find(d.className), !original.isAbstract else {
+    throw MagritteError("Unsupported description class: \(d.className)")
+  }
+  var info: ClassInfo? = original
+  while let current = info {
+    if descriptionImplementations.contains(current.name) { return current.name }
+    info = current.superclass.flatMap { registry.find($0) }
+  }
+  throw MagritteError("Unsupported description class: \(d.className)")
+}

@@ -93,7 +93,8 @@
         },
         "visitor_string_dispatch": true
       }
-    }
+    },
+    "status": "historical_0.26_baseline"
   },
   "canonical_executable_description_classes": [
     "MAContainer",
@@ -156,8 +157,8 @@
       "kind": "missing_semantics",
       "priority": "P1",
       "status": {
-        "cpp": "partial",
-        "swift": "partial"
+        "cpp": "implemented_ancestor_profile",
+        "swift": "implemented_ancestor_profile"
       },
       "depends_on": [],
       "upstream_sources": [
@@ -201,7 +202,12 @@
       ],
       "observation_keys": [
         "registered_subclasses"
-      ]
+      ],
+      "resolution": {
+        "phase": "0.27",
+        "documentation": "inheritance.md",
+        "boundary": "Concrete registered descendants of the 15 implemented families; graph/4 with receiver-side registration; local executable overrides remain local."
+      }
     },
     {
       "id": "MAG-002",
@@ -989,6 +995,16 @@
         "UI/Seaside/GT views, GemStone, filesystem adapters and money packages are separate scope decisions."
       ],
       "observation_keys": []
+    }
+  ],
+  "updates": [
+    {
+      "phase": "0.27",
+      "gap": "MAG-001",
+      "status": "implemented_ancestor_profile",
+      "evidence": "inheritance.md",
+      "source_fingerprints": "inheritance-upstream-methods.json (shared fixtures)",
+      "gt_accessed": false
     }
   ]
 }

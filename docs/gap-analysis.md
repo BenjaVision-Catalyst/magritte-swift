@@ -1,10 +1,12 @@
 # Magritte port gap analysis — 27 October 2026
 
-Both ports implement a substantial headless Magritte profile, but they are not yet faithful across the full model protocol. The most consequential remaining gaps are **inherited execution for registered description subclasses, default reference semantics, persistent container state and mutable collection identity**. Adding more class names or small convenience methods will not close those gaps.
+**0.27 update:** MAG-001 is implemented for registered subclasses of the existing executable profile; see [inherited execution](inheritance.md). The next recommended phase is MAG-002, default/self references. Baseline counts and probe observations below remain the original 0.26 audit evidence.
 
-Start with **MAG-001: inherited executable description behavior**. Runtime class registration already works; using a registered description subclass consistently through validation, metadata and interchange does not. Follow it with reference defaults and grouped options, then container mutation/order and collection identity. These phases strengthen the existing metamodel before adding more value domains.
+At that baseline, both ports implemented a substantial headless Magritte profile, but were not yet faithful across the full model protocol. The most consequential remaining gaps were **inherited execution for registered description subclasses, default reference semantics, persistent container state and mutable collection identity**. Adding more class names or small convenience methods will not close those gaps.
 
-This report is the current planning snapshot. Older phase documents retain historical evidence and historical “remaining work” lists; some of those items were completed later. The [structured ledger](gap-analysis.json) contains stable gap IDs, dependencies, source locations, native locations and acceptance gates. No implementation changes are proposed as already completed by this audit.
+The original first recommendation was **MAG-001: inherited executable description behavior**, now completed in 0.27. At 0.26, registration worked while inherited validation, metadata and interchange were incomplete. Follow it with reference defaults and grouped options, then container mutation/order and collection identity. These phases strengthen the existing metamodel before adding more value domains.
+
+This report retains the original planning snapshot with the MAG-001 closure noted above. Older phase documents retain historical evidence and historical “remaining work” lists; some of those items were completed later. The [structured ledger](gap-analysis.json) contains stable gap IDs, dependencies, source locations, native locations and acceptance gates. The original audit made no implementation changes; the 0.27 implementation is documented separately.
 
 ## Scope and evidence
 
@@ -37,7 +39,7 @@ Statuses below apply to **both** ports. “Limited” denotes an intentional cur
 
 | ID | Priority | Gap and current boundary |
 | --- | --- | --- |
-| MAG-001 | P1 | Registered subclasses: discovery works, but kind/predicates, validation, metadata and codecs still use exact implemented class names. |
+| MAG-001 | Done, 0.27 | Inherited execution implemented for registered descendants of supported families; [evidence and boundaries](inheritance.md). |
 | MAG-002 | P1 | References: explicit bindings work; lazy default references, Boolean self-reference and relation `allClasses`/`commonClass` are missing. |
 | MAG-003 | P1 | Containers: raw child mutation and rich enumeration exist; source mutation APIs and stored priority-order behavior are incomplete. |
 | MAG-004 | P1 | Collection identity: inline Values are snapshots; mutable aliases/cycles and associated memento/copy behavior are missing. |
@@ -59,9 +61,9 @@ The ledger supplies source evidence and acceptance gates for every row. Grouped 
 
 ## Findings that determine the next phases
 
-### Registered identity is open; inherited execution is incomplete
+### MAG-001 finding at 0.26 (closed in 0.27)
 
-A newly registered subclass of `MAStringDescription` is discoverable and reaches `visitStringDescription` through inherited visitor dispatch. The same description is rejected by validation and graph export, and its built-in metadata factory fails. A registered Number subclass defaults to Object kind; registered container and to-many subclasses answer false to the relevant predicates. Both ports produced those results.
+At the audited baseline, a newly registered subclass of `MAStringDescription` is discoverable and reaches `visitStringDescription` through inherited visitor dispatch. The same description is rejected by validation and graph export, and its built-in metadata factory fails. A registered Number subclass defaults to Object kind; registered container and to-many subclasses answer false to the relevant predicates. Both ports produced those results.
 
 The native evidence is in C++ `src/magritte.cpp`, `src/collections.cpp`, `src/self_description.cpp` and their Swift counterparts; `src/visitor.cpp` / `Visitor.swift` show the inherited behavior that already works. Upstream methods inherit through its [description hierarchy](https://github.com/magritte-metamodel/magritte/blob/d67f318686b7779aed79416db121e257d1191f2e/source/Magritte-Model/MADescription.class.st).
 
@@ -101,7 +103,7 @@ Some upstream source needs investigation rather than literal copying: `MAMessagi
 
 ## Suggested delivery order and completion gates
 
-1. **Inherited description execution (MAG-001).** Close the registered-subclass inconsistency across the current 15-class profile. No new scalar domains are needed for this phase.
+1. **Completed in 0.27: inherited description execution (MAG-001).** The phase closes the registered-subclass inconsistency across the current 15-class profile. No new scalar domains are needed for this phase.
 2. **Reference and option semantics (MAG-002, then MAG-008).** Add faithful default/self references and grouped-option accessors; verify metadata and ownership rather than adding UI behavior.
 3. **Container mutation/order (MAG-003).** Establish persistent source-shaped state and explicit mutations. Document the still-deferred mutable collection alias boundary.
 4. **Collection identity and mementos (MAG-004).** Handle local identity/copy semantics first; extend interchange only where required and specified.

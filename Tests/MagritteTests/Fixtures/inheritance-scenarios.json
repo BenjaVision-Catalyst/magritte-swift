@@ -1,0 +1,511 @@
+{
+  "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
+  "verification": "Source-derived expectations for inherited native behavior; GT was not accessed. Class labels are explicit native class-side bindings.",
+  "cases": [
+    {
+      "base": "MAContainer",
+      "middle": "InheritedAbstractContainer",
+      "name": "InheritedContainer",
+      "label": "Container",
+      "kind": "Object",
+      "container": true,
+      "relation": false,
+      "option": false,
+      "reference": false,
+      "multiple": false,
+      "sortable": false,
+      "sample": {
+        "type": "nil"
+      },
+      "output": "",
+      "input": null,
+      "properties": {},
+      "metadataFields": [],
+      "invalid": null,
+      "visitor": "visitContainer"
+    },
+    {
+      "base": "MAPriorityContainer",
+      "middle": "InheritedAbstractPriorityContainer",
+      "name": "InheritedPriorityContainer",
+      "label": "Priority Container",
+      "kind": "Object",
+      "container": true,
+      "relation": false,
+      "option": false,
+      "reference": false,
+      "multiple": false,
+      "sortable": false,
+      "sample": {
+        "type": "nil"
+      },
+      "output": "",
+      "input": null,
+      "properties": {},
+      "metadataFields": [],
+      "invalid": null,
+      "visitor": "visitPriorityContainer"
+    },
+    {
+      "base": "MAStringDescription",
+      "middle": "InheritedAbstractStringDescription",
+      "name": "InheritedStringDescription",
+      "label": "String",
+      "kind": "String",
+      "container": false,
+      "relation": false,
+      "option": false,
+      "reference": false,
+      "multiple": false,
+      "sortable": true,
+      "sample": {
+        "type": "string",
+        "value": "Ada"
+      },
+      "output": "Ada",
+      "input": "Ada",
+      "properties": {},
+      "metadataFields": [],
+      "invalid": {
+        "type": "integer",
+        "value": "1"
+      },
+      "visitor": "visitStringDescription"
+    },
+    {
+      "base": "MASymbolDescription",
+      "middle": "InheritedAbstractSymbolDescription",
+      "name": "InheritedSymbolDescription",
+      "label": "Symbol",
+      "kind": "Symbol",
+      "container": false,
+      "relation": false,
+      "option": false,
+      "reference": false,
+      "multiple": false,
+      "sortable": true,
+      "sample": {
+        "type": "symbol",
+        "value": "alpha"
+      },
+      "output": "alpha",
+      "input": "alpha",
+      "properties": {},
+      "metadataFields": [],
+      "invalid": {
+        "type": "string",
+        "value": "alpha"
+      },
+      "visitor": "visitSymbolDescription"
+    },
+    {
+      "base": "MAMemoDescription",
+      "middle": "InheritedAbstractMemoDescription",
+      "name": "InheritedMemoDescription",
+      "label": "Memo",
+      "kind": "String",
+      "container": false,
+      "relation": false,
+      "option": false,
+      "reference": false,
+      "multiple": false,
+      "sortable": true,
+      "sample": {
+        "type": "string",
+        "value": "two lines"
+      },
+      "output": "two lines",
+      "input": "two lines",
+      "properties": {
+        "lineCount": {
+          "type": "integer",
+          "value": "2"
+        }
+      },
+      "metadataFields": [
+        "lineCount"
+      ],
+      "invalid": {
+        "type": "integer",
+        "value": "1"
+      },
+      "visitor": "visitMemoDescription"
+    },
+    {
+      "base": "MAPasswordDescription",
+      "middle": "InheritedAbstractPasswordDescription",
+      "name": "InheritedPasswordDescription",
+      "label": "Password",
+      "kind": "String",
+      "container": false,
+      "relation": false,
+      "option": false,
+      "reference": false,
+      "multiple": false,
+      "sortable": false,
+      "sample": {
+        "type": "string",
+        "value": "secret"
+      },
+      "output": "secret",
+      "input": "secret",
+      "properties": {},
+      "metadataFields": [],
+      "invalid": {
+        "type": "integer",
+        "value": "1"
+      },
+      "visitor": "visitPasswordDescription"
+    },
+    {
+      "base": "MATokenDescription",
+      "middle": "InheritedAbstractTokenDescription",
+      "name": "InheritedTokenDescription",
+      "label": "Token",
+      "kind": "Array",
+      "container": false,
+      "relation": false,
+      "option": false,
+      "reference": true,
+      "multiple": false,
+      "sortable": false,
+      "sample": {
+        "type": "array",
+        "value": [
+          {
+            "type": "string",
+            "value": "a"
+          },
+          {
+            "type": "string",
+            "value": "b"
+          }
+        ]
+      },
+      "output": "a,b",
+      "input": "a,b",
+      "properties": {
+        "separators": {
+          "type": "string",
+          "value": ","
+        }
+      },
+      "metadataFields": [
+        "separators"
+      ],
+      "invalid": {
+        "type": "integer",
+        "value": "1"
+      },
+      "visitor": "visitTokenDescription"
+    },
+    {
+      "base": "MANumberDescription",
+      "middle": "InheritedAbstractNumberDescription",
+      "name": "InheritedNumberDescription",
+      "label": "Number",
+      "kind": "Number",
+      "container": false,
+      "relation": false,
+      "option": false,
+      "reference": false,
+      "multiple": false,
+      "sortable": true,
+      "sample": {
+        "type": "integer",
+        "value": "7"
+      },
+      "output": "7",
+      "input": "7",
+      "properties": {
+        "min": {
+          "type": "integer",
+          "value": "1"
+        },
+        "max": {
+          "type": "integer",
+          "value": "10"
+        },
+        "thousandsSeparator": {
+          "type": "character",
+          "value": ","
+        }
+      },
+      "metadataFields": [
+        "min",
+        "max"
+      ],
+      "invalid": {
+        "type": "string",
+        "value": "seven"
+      },
+      "visitor": "visitNumberDescription"
+    },
+    {
+      "base": "MABooleanDescription",
+      "middle": "InheritedAbstractBooleanDescription",
+      "name": "InheritedBooleanDescription",
+      "label": "Boolean",
+      "kind": "Boolean",
+      "container": false,
+      "relation": false,
+      "option": false,
+      "reference": false,
+      "multiple": false,
+      "sortable": false,
+      "sample": {
+        "type": "boolean",
+        "value": true
+      },
+      "output": "Yep",
+      "input": "yes",
+      "properties": {
+        "trueString": {
+          "type": "string",
+          "value": "Yep"
+        },
+        "falseString": {
+          "type": "string",
+          "value": "Nope"
+        }
+      },
+      "metadataFields": [
+        "trueString",
+        "falseString"
+      ],
+      "invalid": {
+        "type": "string",
+        "value": "yes"
+      },
+      "visitor": "visitBooleanDescription"
+    },
+    {
+      "base": "MAToOneRelationDescription",
+      "middle": "InheritedAbstractToOneRelationDescription",
+      "name": "InheritedToOneRelationDescription",
+      "label": "1:1 Relation",
+      "kind": "Object",
+      "container": false,
+      "relation": true,
+      "option": false,
+      "reference": true,
+      "multiple": false,
+      "sortable": false,
+      "sample": {
+        "type": "string",
+        "value": "Ada"
+      },
+      "output": "Ada",
+      "input": null,
+      "properties": {},
+      "metadataFields": [],
+      "invalid": {
+        "type": "integer",
+        "value": "1"
+      },
+      "visitor": "visitToOneRelationDescription"
+    },
+    {
+      "base": "MAToManyRelationDescription",
+      "middle": "InheritedAbstractToManyRelationDescription",
+      "name": "InheritedToManyRelationDescription",
+      "label": "1:m Relation",
+      "kind": "Collection",
+      "container": false,
+      "relation": true,
+      "option": false,
+      "reference": true,
+      "multiple": true,
+      "sortable": false,
+      "sample": {
+        "type": "array",
+        "value": [
+          {
+            "type": "string",
+            "value": "Ada"
+          }
+        ]
+      },
+      "output": "Ada",
+      "input": null,
+      "properties": {
+        "ordered": {
+          "type": "boolean",
+          "value": true
+        }
+      },
+      "metadataFields": [
+        "ordered",
+        "definitive",
+        "sorted"
+      ],
+      "invalid": {
+        "type": "array",
+        "value": [
+          {
+            "type": "integer",
+            "value": "1"
+          }
+        ]
+      },
+      "visitor": "visitToManyRelationDescription"
+    },
+    {
+      "base": "MAToManyScalarRelationDescription",
+      "middle": "InheritedAbstractToManyScalarRelationDescription",
+      "name": "InheritedToManyScalarRelationDescription",
+      "label": "1:m scalar Relation",
+      "kind": "Collection",
+      "container": false,
+      "relation": true,
+      "option": false,
+      "reference": true,
+      "multiple": true,
+      "sortable": false,
+      "sample": {
+        "type": "array",
+        "value": [
+          {
+            "type": "string",
+            "value": "Ada"
+          }
+        ]
+      },
+      "output": "Ada",
+      "input": null,
+      "properties": {
+        "ordered": {
+          "type": "boolean",
+          "value": true
+        }
+      },
+      "metadataFields": [
+        "ordered",
+        "definitive",
+        "sorted"
+      ],
+      "invalid": {
+        "type": "array",
+        "value": [
+          {
+            "type": "integer",
+            "value": "1"
+          }
+        ]
+      },
+      "visitor": "visitToManyScalarRelationDescription"
+    },
+    {
+      "base": "MASingleOptionDescription",
+      "middle": "InheritedAbstractSingleOptionDescription",
+      "name": "InheritedSingleOptionDescription",
+      "label": "Single-Option",
+      "kind": "Object",
+      "container": false,
+      "relation": false,
+      "option": true,
+      "reference": true,
+      "multiple": false,
+      "sortable": false,
+      "sample": {
+        "type": "symbol",
+        "value": "Ada"
+      },
+      "output": "Name",
+      "input": "Name",
+      "properties": {
+        "sorted": {
+          "type": "boolean",
+          "value": false
+        }
+      },
+      "metadataFields": [
+        "sorted",
+        "extensible"
+      ],
+      "invalid": {
+        "type": "symbol",
+        "value": "outside"
+      },
+      "visitor": "visitSingleOptionDescription"
+    },
+    {
+      "base": "MAMultipleOptionDescription",
+      "middle": "InheritedAbstractMultipleOptionDescription",
+      "name": "InheritedMultipleOptionDescription",
+      "label": "Multiple-Option",
+      "kind": "Collection",
+      "container": false,
+      "relation": false,
+      "option": true,
+      "reference": true,
+      "multiple": true,
+      "sortable": false,
+      "sample": {
+        "type": "array",
+        "value": [
+          {
+            "type": "string",
+            "value": "Ada"
+          },
+          {
+            "type": "string",
+            "value": "Bob"
+          }
+        ]
+      },
+      "output": "Ada, Bob",
+      "input": "Ada, Bob",
+      "properties": {
+        "distinct": {
+          "type": "boolean",
+          "value": true
+        },
+        "ordered": {
+          "type": "boolean",
+          "value": true
+        }
+      },
+      "metadataFields": [
+        "distinct",
+        "ordered"
+      ],
+      "invalid": {
+        "type": "array",
+        "value": [
+          {
+            "type": "string",
+            "value": "outside"
+          }
+        ]
+      },
+      "visitor": "visitMultipleOptionDescription"
+    },
+    {
+      "base": "MAClassDescription",
+      "middle": "InheritedAbstractClassDescription",
+      "name": "InheritedClassDescription",
+      "label": "Class",
+      "kind": "Class",
+      "container": false,
+      "relation": false,
+      "option": false,
+      "reference": false,
+      "multiple": false,
+      "sortable": false,
+      "sample": {
+        "type": "class",
+        "value": "String"
+      },
+      "output": "String",
+      "input": null,
+      "properties": {},
+      "metadataFields": [],
+      "invalid": {
+        "type": "string",
+        "value": "String"
+      },
+      "visitor": "visitClassDescription"
+    }
+  ]
+}

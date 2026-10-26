@@ -1,6 +1,6 @@
 # Magritte Swift
 
-An independent Swift Package port of [Magritte](https://github.com/magritte-metamodel/magritte). **0.26 adds the generic-object nil-read fallback; it is not a complete Magritte implementation.** No C++ dependency, UI, networking or application-framework integration.
+An independent Swift Package port of [Magritte](https://github.com/magritte-metamodel/magritte). **0.27 adds inherited execution for registered description subclasses; it is not a complete Magritte implementation.** No C++ dependency, UI, networking or application-framework integration.
 
 The [current gap analysis](docs/gap-analysis.md) prioritizes missing upstream semantics and records acceptance gates for both ports. Its [structured ledger](docs/gap-analysis.json) distinguishes native limitations, missing behavior and deferred reference evidence.
 
@@ -94,3 +94,5 @@ Described-object printing, nil/separator/read ordering, local formatter hooks an
 Default initialization and nil/default-aware model comparison are documented in [model-protocol.md](docs/model-protocol.md), including provider evaluation, host equality, existing adapter gaps and source-derived evidence. GT was not accessed for this phase.
 
 Generic model reads now substitute `undefinedValue` for nil, with raw-accessor, adaptive-model and memento distinctions documented in [model-read.md](docs/model-read.md). GT was not accessed for this phase.
+
+Registered description subclasses now inherit execution, metadata and graph/4 behavior from implemented ancestors. See [inheritance.md](docs/inheritance.md) for source evidence, class identity, local override boundaries and standalone verification. GT was not accessed.

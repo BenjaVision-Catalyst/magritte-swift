@@ -54,6 +54,8 @@
     "editing-roundtrip-reference.json": "68421203b2da15be5a02e39f5a367d9da546f4fbca2fd0277ed0a129e3af5a5f",
     "editing-roundtrip-replay.json": "6963583ffbbae05375e02038c33cb05ef6a1a022581b392aabec8b6566a6063c",
     "editing-scenarios.json": "0527267c642544b5e4c07ef5faf1829a38289fc66333a0132cd7fda03aec7a45",
+    "inheritance-scenarios.json": "14963b3069e19fb96c6706471cae9172ccd5c25a9d3e97efb4741696aef59203",
+    "inheritance-upstream-methods.json": "ba473e69c8568aa0578f7a58182cf930be4da6fefa591ed76a46fd6da5407b08",
     "invalid-graphs.json": "d0453e85d342beac37d25ecd54e36376488665e5cadee3d9e6d30f2da612af95",
     "lazy-scenarios.json": "491811ea5d9b151a059890bd85b5e9f1cad5e8216c1733b829173a4dacf7eee9",
     "lazy-upstream-methods.json": "14962baf6540c31cfacb532dbff494e8b7575c07c93bbcc3ed4818ec9ad1ac44",

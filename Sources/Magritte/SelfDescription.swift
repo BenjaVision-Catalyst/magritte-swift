@@ -1,20 +1,8 @@
 import Foundation
 
 func descriptionType(_ d: Description) throws -> String {
-  let names = [
-    "MAClassDescription": "Class", "MAContainer": "Container", "MAPriorityContainer": "Priority Container",
-    "MAStringDescription": "String", "MASymbolDescription": "Symbol",
-    "MAMemoDescription": "Memo", "MAPasswordDescription": "Password",
-    "MANumberDescription": "Number", "MABooleanDescription": "Boolean",
-    "MATokenDescription": "Token", "MAToOneRelationDescription": "1:1 Relation",
-    "MAToManyRelationDescription": "1:m Relation",
-    "MAToManyScalarRelationDescription": "1:m scalar Relation",
-    "MASingleOptionDescription": "Single-Option", "MAMultipleOptionDescription": "Multiple-Option",
-  ]
-  guard let name = names[d.className] else {
-    throw MagritteError("Unsupported self-description class")
-  }
-  return name
+  _ = try descriptionImplementation(d)
+  return ClassRegistry.shared.find(d.className)!.label
 }
 func metadataSelector(_ d: Description, _ name: String, writing: Bool) -> Bool {
   if [
@@ -34,27 +22,27 @@ func metadataSelector(_ d: Description, _ name: String, writing: Bool) -> Bool {
   if ["defaultLabel", "hasLabel", "isSortable"].contains(name) { return !writing }
   if name == "type" { return !writing }
   if name == "default" { return !writing || !d.isContainer }
-  if ["min", "max", "thousandsSeparator"].contains(name) && d.className == "MANumberDescription" {
+  if ["min", "max", "thousandsSeparator"].contains(name) && descriptionIs(d, "MANumberDescription") {
     return true
   }
-  if ["trueString", "falseString"].contains(name) && d.className == "MABooleanDescription" {
+  if ["trueString", "falseString"].contains(name) && descriptionIs(d, "MABooleanDescription") {
     return true
   }
-  if name == "lineCount" && d.className == "MAMemoDescription" { return true }
-  if name == "separators" && d.className == "MATokenDescription" { return true }
+  if name == "lineCount" && descriptionIs(d, "MAMemoDescription") { return true }
+  if name == "separators" && descriptionIs(d, "MATokenDescription") { return true }
   if ["sorted", "extensible"].contains(name) && d.isOption { return true }
-  if name == "distinct" && d.className == "MAMultipleOptionDescription" { return true }
+  if name == "distinct" && descriptionIs(d, "MAMultipleOptionDescription") { return true }
   if ["ordered", "definitive", "sorted"].contains(name) && d.isRelation && d.isMultiple {
     return true
   }
-  return name == "ordered" && d.className == "MAMultipleOptionDescription"
+  return name == "ordered" && descriptionIs(d, "MAMultipleOptionDescription")
 }
 /// Expanded class-specific metadata descriptions with actual MASelectorAccessor records.
 /// Retain the returned graph to own the auxiliary reference descriptions.
 public func descriptionModelFor(_ target: Description, limits: Limits = Limits()) throws -> Graph {
   _ = try descriptionType(target)
   let graph = Graph(root: "meta." + target.className)
-  if target.className == "MAClassDescription" { graph.format = "magritte.graph/4" }
+  if try target.className != descriptionImplementation(target) || descriptionIs(target, "MAClassDescription") { graph.format = "magritte.graph/4" }
   let root = Description(id: "meta." + target.className, className: "MAContainer")
   root.properties["label"] = .string(target.className)
   graph.descriptions[root.id] = root
@@ -71,7 +59,7 @@ public func descriptionModelFor(_ target: Description, limits: Limits = Limits()
       ref.accessor = Accessor(className: "MANullAccessor")
       d.reference = ref
       graph.descriptions[ref.id] = ref
-      if d.className == "MATokenDescription" {
+      if descriptionIs(d, "MATokenDescription") {
         d.properties["separators"] = try d.property("separators")
       }
     }
@@ -87,7 +75,7 @@ public func descriptionModelFor(_ target: Description, limits: Limits = Limits()
   try add("priority", "MANumberDescription", "Priority", 130, .integer(0)).properties["required"] =
     .boolean(true)
   try add("readOnly", "MABooleanDescription", "Read-only", 200, .boolean(false))
-  if target.className != "MABooleanDescription" {
+  if !descriptionIs(target, "MABooleanDescription") {
     try add("required", "MABooleanDescription", "Required", 220, .boolean(false))
   }
   try add("visible", "MABooleanDescription", "Visible", 210, .boolean(true))
@@ -96,15 +84,15 @@ public func descriptionModelFor(_ target: Description, limits: Limits = Limits()
   if !target.isContainer && !target.isOption {
     try add("default", target.className, "Default", 130, .undefined)
   }
-  if target.className == "MANumberDescription" {
+  if descriptionIs(target, "MANumberDescription") {
     try add("min", target.className, "Min", 400)
     try add("max", target.className, "Maximum", 410)
   }
-  if target.className == "MABooleanDescription" {
+  if descriptionIs(target, "MABooleanDescription") {
     try add("trueString", "MAStringDescription", "True String", 400, .string("true"))
     try add("falseString", "MAStringDescription", "False String", 410, .string("false"))
   }
-  if target.className == "MAMemoDescription" {
+  if descriptionIs(target, "MAMemoDescription") {
     let lines = try add("lineCount", "MANumberDescription", "Number of Lines", 400, .integer(3))
     lines.properties["min"] = .integer(1)
     lines.portableConditions = [
@@ -112,7 +100,7 @@ public func descriptionModelFor(_ target: Description, limits: Limits = Limits()
         label: "No integer was entered", predicate: Predicate(selector: "isInteger"))
     ]
   }
-  if target.className == "MATokenDescription" {
+  if descriptionIs(target, "MATokenDescription") {
     try add("separators", "MAStringDescription", "Separators", 250)
   }
   if target.isOption {
@@ -124,7 +112,7 @@ public func descriptionModelFor(_ target: Description, limits: Limits = Limits()
     try add("definitive", "MABooleanDescription", "Definitive", 265, .boolean(false))
     try add("sorted", "MABooleanDescription", "Sorted", 240, .boolean(false))
   }
-  if target.className == "MAMultipleOptionDescription" {
+  if descriptionIs(target, "MAMultipleOptionDescription") {
     try add("distinct", "MABooleanDescription", "Distinct", 250, .boolean(false))
     try add("ordered", "MABooleanDescription", "Ordered", 260, .boolean(false))
   }
