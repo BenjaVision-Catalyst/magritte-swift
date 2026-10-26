@@ -1,6 +1,6 @@
 # Magritte Swift
 
-An independent Swift Package port of [Magritte](https://github.com/magritte-metamodel/magritte). **0.16 adds builder composition and description flattening; it is not a complete Magritte implementation.** No C++ dependency, UI, networking or application-framework integration.
+An independent Swift Package port of [Magritte](https://github.com/magritte-metamodel/magritte). **0.17 adds runtime pragma discovery and scoped description caching; it is not a complete Magritte implementation.** No C++ dependency, UI, networking or application-framework integration.
 
 The headless Magritte library includes ordered/priority containers, a scalar subset, runtime adaptive objects, native accessors, to-one/to-many/scalar relations, static options, typed collections, cyclic references, validation, a self-description bootstrap and bounded graph/value interchange.
 
@@ -72,3 +72,5 @@ Container query and enumeration APIs, GT traces and remaining boundaries are doc
 Composite accessors, conflict object semantics and GT verification are documented in [composites.md](docs/composites.md).
 
 Builder composition, flattener extension hooks, exact priorities and GT evidence are documented in [builders.md](docs/builders.md).
+
+Runtime method registration, recursive discovery, defining contexts and the deferred fresh-GT verification are documented in [pragma-discovery.md](docs/pragma-discovery.md).

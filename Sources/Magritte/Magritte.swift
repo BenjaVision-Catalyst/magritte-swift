@@ -72,8 +72,9 @@ open class Description: Model {
     public var id: String
     public var className: String
     public var key: String
-    public var properties: [String: Value] = [:]
-    public var children: [Description] = []
+  public var definingContext: DescriptionContext?
+  public var properties: [String: Value] = [:]
+  public var children: [Description] = []
     public weak var reference: Description?
     public var classes: [String] = []
     public var options: Options = []
@@ -545,8 +546,26 @@ public final class Graph {
             if d.isOption { names.formUnion(["reference", "options", "labels"]) }
             if d.className == "MATokenDescription" { names.insert("reference") }
             if format >= "magritte.graph/3" { names.insert("conditions") }
-            try keys(n, names)
-            try require(format == "magritte.graph/4" || d.className != "MAClassDescription", "Class descriptions require graph/4")
+      if let raw = n["definingContext"] {
+        try require(format == "magritte.graph/4", "Defining context requires graph/4");
+        names.insert("definingContext"); let c = try dictionary(raw);
+        try keys(c, ["modelClass", "methodSelector"]);
+        let cls = try value(c["modelClass"] as Any, limits),
+          selector = try value(c["methodSelector"] as Any, limits)
+        ; let context = DescriptionContext();
+        if !cls.isNil {
+          guard case .classValue(let name) = cls else {
+            throw MagritteError("Context modelClass must be Class or nil")
+          }; context.modelClass = name
+        };
+        if !selector.isNil {
+          guard case .symbol(let name) = selector else {
+            throw MagritteError("Context selector must be Symbol or nil")
+          }; context.methodSelector = name
+        }; d.definingContext = context
+      }
+      try keys(n, names)
+      try require(format == "magritte.graph/4" || d.className != "MAClassDescription", "Class descriptions require graph/4")
             try require(format != "magritte.graph/1" || !d.isReference, "Reference descriptions require graph/2")
             guard let props = n["properties"] else { throw MagritteError("Missing properties") }
             for (k, v) in try dictionary(props) { _ = try identity(k); d.properties[k] = try value(v, limits) }
@@ -698,8 +717,15 @@ public final class Graph {
             var props: [String: Any] = [:]
             for (k, v) in d.properties { props[k] = try wire(v, limits) }
             var n: [String: Any] = ["id": d.id, "class": d.className, "properties": props]
-            if format >= "magritte.graph/3" {
-                n["conditions"] = try d.portableConditions.map { ["label": $0.label, "predicate": try predicateWire($0.predicate, limits)] as [String: Any] }
+      if let c = d.definingContext {
+        try require(format == "magritte.graph/4", "Defining context requires graph/4");
+        n["definingContext"] = [
+          "modelClass": try wire(c.modelClass.map(Value.classValue) ?? .undefined, limits),
+          "methodSelector": try wire(c.methodSelector.map(Value.symbol) ?? .undefined, limits),
+        ]
+      }
+      if format >= "magritte.graph/3" {
+        n["conditions"] = try d.portableConditions.map { ["label": $0.label, "predicate": try predicateWire($0.predicate, limits)] as [String: Any] }
             } else { try require(d.portableConditions.isEmpty, "Conditions require graph/3") }
             if d.isContainer {
                 try require(d.accessor == nil, "Container accessors are implicit identity")

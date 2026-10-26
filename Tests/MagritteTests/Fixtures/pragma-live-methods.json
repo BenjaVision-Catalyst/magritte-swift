@@ -1,0 +1,152 @@
+{
+  "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
+  "capture": "GT method sources read before the user requested avoiding GT; no new behavioral run is claimed.",
+  "methods": [
+    {
+      "classSide": false,
+      "methodClassName": "MAPragmaBuilder",
+      "methodName": "for:",
+      "liveSourceSHA256": "5af531ab8a178043805b17ff3cb60b238c8ad615dd205ae38355b1280692e54d",
+      "upstreamSourceSHA256": "5af531ab8a178043805b17ff3cb60b238c8ad615dd205ae38355b1280692e54d",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAPragmaBuilder",
+      "methodName": "build:cache:",
+      "liveSourceSHA256": "78c31cece4fd9d92ed5e751b8cad9e10e183862b0719e3a083cf01a84a71bcd1",
+      "upstreamSourceSHA256": "78c31cece4fd9d92ed5e751b8cad9e10e183862b0719e3a083cf01a84a71bcd1",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAPragmaBuilder",
+      "methodName": "buildContainer:",
+      "liveSourceSHA256": "f07cd03909ee51af0533ec49de23ba940074d59683ed8d5b962735ece03ce37d",
+      "upstreamSourceSHA256": "f07cd03909ee51af0533ec49de23ba940074d59683ed8d5b962735ece03ce37d",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAPragmaBuilder",
+      "methodName": "buildDescriptions:",
+      "liveSourceSHA256": "37235ca09d54c039f9b8514e18ca50925dd9a5a455a821d24e0fbe4acc952c38",
+      "upstreamSourceSHA256": "37235ca09d54c039f9b8514e18ca50925dd9a5a455a821d24e0fbe4acc952c38",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAPragmaBuilder",
+      "methodName": "description:extendedBy:for:of:",
+      "liveSourceSHA256": "5c1b14f2f1d297b2c6453bc5d01f29c1dde3fa19cde8083f44207ff90eac7d08",
+      "upstreamSourceSHA256": "5c1b14f2f1d297b2c6453bc5d01f29c1dde3fa19cde8083f44207ff90eac7d08",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAPragmaBuilder",
+      "methodName": "descriptionExtensions:",
+      "liveSourceSHA256": "b4241ae4879ad16ab595f5e6c208faa091e6bfc152bb566ff3a37a9504cfd159",
+      "upstreamSourceSHA256": "b4241ae4879ad16ab595f5e6c208faa091e6bfc152bb566ff3a37a9504cfd159",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAPragmaBuilder",
+      "methodName": "uniqueDescriptionSelectors:",
+      "liveSourceSHA256": "b12ab5ef4fc7b7610078fd667f4d4cdff371c3af8437dad52c0ec19d804a09d6",
+      "upstreamSourceSHA256": "b12ab5ef4fc7b7610078fd667f4d4cdff371c3af8437dad52c0ec19d804a09d6",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAPragmaBuilder",
+      "methodName": "setDefiningContextOf:to:in:",
+      "liveSourceSHA256": "f0dd4714cd299305d7dae3813683815b7277096227f6b548f028c607cb43ebf3",
+      "upstreamSourceSHA256": "f0dd4714cd299305d7dae3813683815b7277096227f6b548f028c607cb43ebf3",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "Object",
+      "methodName": "basicMagritteDescription",
+      "liveSourceSHA256": "a517ff1863982cc48c55163b1f61f8c31c9376831825190df6198e1ff479cdc4",
+      "upstreamSourceSHA256": "0f4d50782c1fa3e8fdd2cbd983d11f436ecbbe8da7983f9c33b785c41aed983f",
+      "matchesUpstreamIgnoringWhitespace": false,
+      "difference": "The installed Object method adds <gsCode: nil>; the remaining source matches upstream ignoring whitespace."
+    },
+    {
+      "classSide": false,
+      "methodClassName": "Object",
+      "methodName": "descriptionContainer",
+      "liveSourceSHA256": "332a6767a0de6fc4ed69aa0a4a7c3c16edd702c8d8311121541c8ff49f901bf3",
+      "upstreamSourceSHA256": "76d9811eda73e578836ae217fc4608e15b99fc40424f0291f1b3cb882e724701",
+      "matchesUpstreamIgnoringWhitespace": false,
+      "difference": "The installed Object method adds <gsCode: nil>; the remaining source matches upstream ignoring whitespace."
+    },
+    {
+      "classSide": true,
+      "methodClassName": "MADynamicDescriptionCache",
+      "methodName": "defaultValue",
+      "liveSourceSHA256": "31cae31408905445970db0ec3d50f91e08696cede9359c69eb1f853fd59719d0",
+      "upstreamSourceSHA256": "31cae31408905445970db0ec3d50f91e08696cede9359c69eb1f853fd59719d0",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": true,
+      "methodClassName": "MADynamicVariable",
+      "methodName": "defaultValue",
+      "liveSourceSHA256": "34cffbde861ff8c6f1e49da2a45b824dda87d2a1c7f3191284558ff2878788bd",
+      "upstreamSourceSHA256": "34cffbde861ff8c6f1e49da2a45b824dda87d2a1c7f3191284558ff2878788bd",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": true,
+      "methodClassName": "MADynamicVariable",
+      "methodName": "use:during:",
+      "liveSourceSHA256": "b7e2ab3a23ce9af8b0d05adbb3be75fe14d242296cca7c1cff66c120ab8853cc",
+      "upstreamSourceSHA256": "b7e2ab3a23ce9af8b0d05adbb3be75fe14d242296cca7c1cff66c120ab8853cc",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": true,
+      "methodClassName": "MADynamicVariable",
+      "methodName": "value",
+      "liveSourceSHA256": "f04ad5b2e5fc9016699cd400ac30d418caa2a91cee93252206a61a0af35f4c78",
+      "upstreamSourceSHA256": "f04ad5b2e5fc9016699cd400ac30d418caa2a91cee93252206a61a0af35f4c78",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MADescriptionContext",
+      "methodName": "methodClass",
+      "liveSourceSHA256": "604cc0113c9f9dd7b0313b1a09504817a6d0ea45061d3adeb29d0b696af7b8da",
+      "upstreamSourceSHA256": "604cc0113c9f9dd7b0313b1a09504817a6d0ea45061d3adeb29d0b696af7b8da",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MADescriptionContext",
+      "methodName": "compiledMethod",
+      "liveSourceSHA256": "991a7f34638b8c9bf29652b74f85af766603c72c3165103fe06703fe2ca355ef",
+      "upstreamSourceSHA256": "991a7f34638b8c9bf29652b74f85af766603c72c3165103fe06703fe2ca355ef",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MADescriptionContext",
+      "methodName": "=",
+      "liveSourceSHA256": "2f49fef6aeffe7235bc2a655cd3881ee7ff1e0d54778b4d4768d9fea85c91864",
+      "upstreamSourceSHA256": "2f49fef6aeffe7235bc2a655cd3881ee7ff1e0d54778b4d4768d9fea85c91864",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MADescriptionContext",
+      "methodName": "hash",
+      "liveSourceSHA256": "786efb87557fe82853a30438cbdf0b2ce56a837a2dd5dc76044b058c85d79702",
+      "upstreamSourceSHA256": "786efb87557fe82853a30438cbdf0b2ce56a837a2dd5dc76044b058c85d79702",
+      "matchesUpstreamIgnoringWhitespace": true
+    }
+  ]
+}

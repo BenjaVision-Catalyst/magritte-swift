@@ -60,6 +60,12 @@ public final class ClassRegistry: @unchecked Sendable {
         name: "MAComposedDescriptionBuilder", superclass: "MADescriptionBuilder", isAbstract: false,
         label: "Composed Description Builder"),
       ClassInfo(
+        name: "MAPragmaBuilder", superclass: "MABasicObject", isAbstract: false,
+        label: "Pragma Builder"),
+      ClassInfo(
+        name: "MADescriptionContext", superclass: "MABasicObject", isAbstract: false,
+        label: "Description Context"),
+      ClassInfo(
         name: "MADescriptionFlattener", superclass: "MADescriptionBuilder", isAbstract: false,
         label: "Description Flattener"),
       ClassInfo(

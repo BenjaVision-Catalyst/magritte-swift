@@ -71,6 +71,8 @@
     "portable-roundtrip-replay.json": "12497450f227af9e9fba95371a0f26de3e35b6bb91df7f46a3cda2ef89a55424",
     "portable-upstream.json": "aba9f59e18c6fd705820e3e2f8ceb715361716374ce1809fed641b87f1d900f6",
     "portable-v3.json": "782d978f4bfd5519ff9410e4b7045d0301d0ce8099e0fbb2d323e823c16305c1",
+    "pragma-live-methods.json": "617bb145f3532adf2e1dd2d3c1152053b18bf24fcfa6a9622c6eba0a205e8f70",
+    "pragma-scenarios.json": "abcf128ec8cc9827d916c82831145035fc118f3cd92bca2ef22f2722a2a69062",
     "recursive-live-methods.json": "ad0bbb457f1f5f25d5079d136dc7983c4250d26a43facfcfff8bedcbeff69245",
     "recursive-reference.json": "a08d72c064286abfad9a4b045e4ce5418bda51ed59ddbf5948313db6c9e75d84",
     "recursive-replay.json": "df5edcc9b9283ef397affe6cbc9895f78fa54354e1823d4f7ac486f562d47b28",

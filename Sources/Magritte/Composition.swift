@@ -1,12 +1,13 @@
 import Foundation
 
 public struct DescriptionCopy {
-  public init(root: Description, retained: [Description] = []) {
-    self.root = root; self.retained = retained
+  public init(root: Description, retained: [Description] = [], lifetime: AnyObject? = nil) {
+    self.root = root; self.retained = retained; self.lifetime = lifetime
   }
+  var lifetime: AnyObject?
   public let root: Description
   // Retains copied references and shared children, including their weak targets.
-  var retained: [Description]
+  public internal(set) var retained: [Description]
 }
 private final class CompositionWork {
   let limits: Limits
@@ -137,6 +138,7 @@ public func copyDescription(_ source: Description, newID: String, limits: Limits
       "Recursive reference postCopy is unsupported; copy is not a graph deep clone")
     let n = Description(id: id, className: d.className, key: d.key)
     n.properties = d.properties
+    n.definingContext = d.definingContext
     n.children = d.children
     n.classes = d.classes
     n.options = d.isOption ? d.options.copy() : d.options

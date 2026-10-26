@@ -1,0 +1,268 @@
+{
+  "authority": "Pinned upstream method bodies; expected outcomes are source-derived, not fresh live-GT executions.",
+  "freshGTBehavior": "Deferred at user request to avoid interrupting timing/memory measurements.",
+  "cases": [
+    {
+      "mode": "simple",
+      "modelClass": "MAPragmaProbeBase",
+      "label": "Probe BaseC",
+      "fields": [
+        {
+          "key": "score",
+          "label": "Score",
+          "selector": "descriptionNumber",
+          "methodClass": "MAPragmaProbeBase"
+        },
+        {
+          "key": "name",
+          "label": "NameAZ",
+          "selector": "descriptionName",
+          "methodClass": "MAPragmaProbeBase"
+        }
+      ],
+      "success": true
+    },
+    {
+      "mode": "nil-name",
+      "modelClass": "MAPragmaProbeBase",
+      "label": "Probe BaseC",
+      "fields": [
+        {
+          "key": "score",
+          "label": "Score",
+          "selector": "descriptionNumber",
+          "methodClass": "MAPragmaProbeBase"
+        }
+      ],
+      "success": true
+    },
+    {
+      "mode": "replacement",
+      "modelClass": "MAPragmaProbeBase",
+      "label": "Probe BaseC",
+      "fields": [
+        {
+          "key": "score",
+          "label": "Score",
+          "selector": "descriptionNumber",
+          "methodClass": "MAPragmaProbeBase"
+        },
+        {
+          "key": "name",
+          "label": "NameZ",
+          "selector": "descriptionName",
+          "methodClass": "MAPragmaProbeBase"
+        }
+      ],
+      "success": true
+    },
+    {
+      "mode": "nil-first",
+      "modelClass": "MAPragmaProbeBase",
+      "label": "Probe BaseC",
+      "fields": [
+        {
+          "key": "score",
+          "label": "Score",
+          "selector": "descriptionNumber",
+          "methodClass": "MAPragmaProbeBase"
+        },
+        {
+          "key": "name",
+          "label": "NameZ",
+          "selector": "descriptionName",
+          "methodClass": "MAPragmaProbeBase"
+        }
+      ],
+      "success": true
+    },
+    {
+      "mode": "nil-last",
+      "modelClass": "MAPragmaProbeBase",
+      "label": "Probe BaseC",
+      "fields": [
+        {
+          "key": "score",
+          "label": "Score",
+          "selector": "descriptionNumber",
+          "methodClass": "MAPragmaProbeBase"
+        }
+      ],
+      "success": true
+    },
+    {
+      "mode": "seed",
+      "modelClass": "MAPragmaProbeBase",
+      "label": "Probe BaseC",
+      "fields": [
+        {
+          "key": "seed",
+          "label": "Seed",
+          "selector": null,
+          "methodClass": null
+        },
+        {
+          "key": "score",
+          "label": "Score",
+          "selector": "descriptionNumber",
+          "methodClass": "MAPragmaProbeBase"
+        },
+        {
+          "key": "name",
+          "label": "NameAZ",
+          "selector": "descriptionName",
+          "methodClass": "MAPragmaProbeBase"
+        }
+      ],
+      "success": true
+    },
+    {
+      "mode": "recursive",
+      "modelClass": "MAPragmaProbeBase",
+      "label": "Probe BaseC",
+      "fields": [
+        {
+          "key": "score",
+          "label": "Score",
+          "selector": "descriptionNumber",
+          "methodClass": "MAPragmaProbeBase"
+        },
+        {
+          "key": "name",
+          "label": "NameAZ",
+          "selector": "descriptionName",
+          "methodClass": "MAPragmaProbeBase"
+        },
+        {
+          "key": "self",
+          "label": "Self",
+          "selector": "descriptionSelf",
+          "methodClass": "MAPragmaProbeBase"
+        }
+      ],
+      "success": true
+    },
+    {
+      "mode": "getter-error",
+      "modelClass": "MAPragmaProbeBase",
+      "label": "Probe BaseC",
+      "fields": [],
+      "success": false
+    },
+    {
+      "mode": "extension-error",
+      "modelClass": "MAPragmaProbeBase",
+      "label": "Probe BaseC",
+      "fields": [],
+      "success": false
+    },
+    {
+      "mode": "container-error",
+      "modelClass": "MAPragmaProbeBase",
+      "label": null,
+      "fields": [],
+      "success": false
+    },
+    {
+      "mode": "nil-container",
+      "modelClass": "MAPragmaProbeBase",
+      "label": null,
+      "fields": [],
+      "success": false
+    },
+    {
+      "mode": "scalar-container",
+      "modelClass": "MAPragmaProbeBase",
+      "label": "Probe BaseC",
+      "fields": [],
+      "success": false
+    },
+    {
+      "mode": "tagged",
+      "modelClass": "MAPragmaProbeTagged",
+      "label": "Probe TaggedC",
+      "fields": [
+        {
+          "key": "score",
+          "label": "Score",
+          "selector": "descriptionNumber",
+          "methodClass": "MAPragmaProbeBase"
+        },
+        {
+          "key": "name",
+          "label": "TaggedAZ",
+          "selector": "descriptionName",
+          "methodClass": "MAPragmaProbeTagged"
+        }
+      ],
+      "success": true
+    },
+    {
+      "mode": "plain-override",
+      "modelClass": "MAPragmaProbePlain",
+      "label": "Probe PlainC",
+      "fields": [
+        {
+          "key": "score",
+          "label": "Score",
+          "selector": "descriptionNumber",
+          "methodClass": "MAPragmaProbeBase"
+        },
+        {
+          "key": "name",
+          "label": "PlainAZ",
+          "selector": "descriptionName",
+          "methodClass": "MAPragmaProbePlain"
+        }
+      ],
+      "success": true
+    },
+    {
+      "mode": "duplicate-extension",
+      "modelClass": "MAPragmaProbeDuplicate",
+      "label": "Probe DuplicateC",
+      "fields": [
+        {
+          "key": "score",
+          "label": "Score",
+          "selector": "descriptionNumber",
+          "methodClass": "MAPragmaProbeBase"
+        },
+        {
+          "key": "name",
+          "label": "NameSSZ",
+          "selector": "descriptionName",
+          "methodClass": "MAPragmaProbeBase"
+        }
+      ],
+      "success": true
+    },
+    {
+      "mode": "own-container",
+      "modelClass": "MAPragmaProbeContainer",
+      "label": "OwnC",
+      "fields": [
+        {
+          "key": "name",
+          "label": "NameAZ",
+          "selector": "descriptionName",
+          "methodClass": "MAPragmaProbeBase"
+        },
+        {
+          "key": "score",
+          "label": "Score",
+          "selector": "descriptionNumber",
+          "methodClass": "MAPragmaProbeBase"
+        }
+      ],
+      "success": true
+    },
+    {
+      "mode": "undescribed",
+      "modelClass": "MAPragmaProbeEmpty",
+      "label": "Empty",
+      "fields": [],
+      "success": true
+    }
+  ]
+}
