@@ -1,11 +1,5 @@
 import Foundation
 
-private let concreteDescriptions = [
-  "MAContainer", "MAPriorityContainer", "MAStringDescription", "MASymbolDescription",
-  "MAMemoDescription", "MAPasswordDescription", "MATokenDescription", "MANumberDescription",
-  "MABooleanDescription", "MAToOneRelationDescription", "MAToManyRelationDescription",
-  "MAToManyScalarRelationDescription", "MASingleOptionDescription", "MAMultipleOptionDescription",
-]
 private func expandedMetadata(_ target: Description, _ limits: Limits) throws -> Graph {
   let graph = try descriptionModelFor(target, limits: limits)
   let root = graph.descriptions[graph.root]!
@@ -31,16 +25,16 @@ private func expandedMetadata(_ target: Description, _ limits: Limits) throws ->
     d.properties["label"] = .string("Elements")
     d.properties["ordered"] = .boolean(true)
     d.properties["default"] = .collection(kind: "ordered", elements: [])
-    d.classes = concreteDescriptions.filter { $0 != "MAContainer" && $0 != "MAPriorityContainer" }
+    d.classes = try ClassRegistry.shared.withAllConcreteClasses("MAElementDescription")
   }
   if target.isReference {
     let d = add("reference", "MAToOneRelationDescription", 400)
     d.properties["label"] = .string("Description")
     if target.isRelation {
-      d.classes = ["MAContainer", "MAPriorityContainer"]
+      d.classes = try ClassRegistry.shared.withAllConcreteClasses("MAContainer")
       d.properties["required"] = .boolean(false)
     } else {
-      d.classes = concreteDescriptions
+      d.classes = try ClassRegistry.shared.withAllConcreteClasses("MADescription")
       d.properties["required"] = .boolean(true)
     }
   }
@@ -51,10 +45,9 @@ private func expandedMetadata(_ target: Description, _ limits: Limits) throws ->
   }
   return graph
 }
-private let accessorClasses = [
-  "MADictionaryAccessor", "MAPropertyAccessor", "MASelectorAccessor", "MAVariableAccessor",
-  "MANullAccessor", "MAIdentityAccessor", "MADelegatorAccessor", "MAChainAccessor",
-]
+private func accessorClasses() throws -> [String] {
+  try ClassRegistry.shared.allSubclasses("MAAccessor")
+}
 @discardableResult private func addMetadata(
   _ graph: Graph, _ key: String, _ cls: String, _ priority: Int64? = nil
 ) -> Description {
@@ -80,13 +73,18 @@ private func objectMetadata(_ cls: String) -> Graph {
   return graph
 }
 private func reflectedMetadata(
-  _ target: Description, _ limits: Limits, completeRegistry: Bool = false
+  _ target: Description, _ limits: Limits
 ) throws -> Graph {
   let graph = try expandedMetadata(target, limits)
   graph.format = "magritte.graph/4"
-  for d in graph.descriptions.values where d.isRelation && d.classes.contains("MAStringDescription")
-  { d.classes.append("MAClassDescription") }
-  addMetadata(graph, "accessor", "MAToOneRelationDescription", 10).classes = accessorClasses
+  let registry = ClassRegistry.shared
+  for key in ["children", "reference"] {
+    guard let field = graph.descriptions[graph.root + "." + key] else { continue }
+    field.classes = try registry.withAllConcreteClasses(
+      key == "children"
+        ? "MAElementDescription" : target.isRelation ? "MAContainer" : "MADescription")
+  }
+  addMetadata(graph, "accessor", "MAToOneRelationDescription", 10).classes = try accessorClasses()
   for key in ["stringReader", "stringWriter", "validator"] {
     let cls =
       key == "stringReader"
@@ -98,7 +96,7 @@ private func reflectedMetadata(
       key == "stringReader"
         ? "String Reader" : key == "stringWriter" ? "String Writer" : "Validator")
     d.properties["default"] = .classValue(cls)
-    d.options = [.classValue(cls)]
+    d.options = try registry.withAllSubclasses(cls).map(Value.classValue)
     try d.referenceDescription().className = "MAClassDescription"
   }
   if target.isRelation {
@@ -106,14 +104,11 @@ private func reflectedMetadata(
     d.properties["label"] = .string("Classes")
     d.properties["default"] = .collection(kind: "set", elements: [])
     try d.referenceDescription().className = "MAClassDescription"
-    d.options = portableClasses().filter {
-      completeRegistry
-        || !["MAMemento", "MAStraightMemento", "MACachedMemento", "MACheckedMemento"].contains($0)
-    }.map(Value.classValue)
+    d.options = registry.allClasses().map(Value.classValue)
   }
   return graph
 }
-private func accessorMetadata(_ target: AccessorObject) -> Graph {
+private func accessorMetadata(_ target: AccessorObject) throws -> Graph {
   let cls = target.value.className
   let graph = objectMetadata(cls)
   if ["MADictionaryAccessor", "MAPropertyAccessor"].contains(cls) {
@@ -121,9 +116,10 @@ private func accessorMetadata(_ target: AccessorObject) -> Graph {
   }
   if cls == "MASelectorAccessor" { addMetadata(graph, "selector", "MASymbolDescription") }
   if ["MAChainAccessor", "MADelegatorAccessor"].contains(cls) {
-    addMetadata(graph, "next", "MAToOneRelationDescription", 100).classes = accessorClasses
+    addMetadata(graph, "next", "MAToOneRelationDescription", 100).classes = try accessorClasses()
     if cls == "MAChainAccessor" {
-      addMetadata(graph, "accessor", "MAToOneRelationDescription", 200).classes = accessorClasses
+      addMetadata(graph, "accessor", "MAToOneRelationDescription", 200).classes =
+        try accessorClasses()
     }
   }
   return graph
@@ -249,7 +245,7 @@ private final class RecursiveState {
     var nextGeneration = generation
     var roots: [Description] = []
     for d in targets {
-      let next = try reflectedMetadata(d, limits, completeRegistry: true)
+      let next = try reflectedMetadata(d, limits)
       let old = next.root
       nextGeneration += 1
       let prefix = "bootstrap.\(nextGeneration).\(d.id)"
@@ -482,9 +478,7 @@ private final class AccessorBinding: Model {
     return owner
   }
   func kindOf(_ cls: String) -> Bool {
-    ["Object", "MABasicObject", "MAObject", "MAAccessor", target.value.className].contains(cls)
-      || (cls == "MADictionaryAccessor" && target.value.className == "MAPropertyAccessor")
-      || (cls == "MADelegatorAccessor" && target.value.className == "MAChainAccessor")
+    ClassRegistry.shared.includesBehavior(target.value.className, cls)
   }
   func readSlot(strategy: String, name: String) throws -> Value {
     let s = try state()
@@ -555,7 +549,7 @@ private final class ConditionBinding: Model {
     self.target = target
   }
   func kindOf(_ cls: String) -> Bool {
-    ["Object", "MABasicObject", "MAObject", "MACondition", target.predicate.className].contains(cls)
+    ClassRegistry.shared.includesBehavior(target.predicate.className, cls)
   }
   func read(using description: Description) throws -> Value {
     try require(owner != nil, "Recursive metadata session expired")
@@ -586,7 +580,8 @@ public final class RecursiveDescriptionModel {
   }
   public func describe(_ target: AccessorObject) throws -> Description {
     _ = try state.bind(target)
-    return try state.publish(accessorMetadata(target), targetID: target.id, family: "reflective")
+    return try state.publish(
+      try accessorMetadata(target), targetID: target.id, family: "reflective")
   }
   public func describe(_ target: ConditionObject) throws -> Description {
     _ = try state.bind(target)

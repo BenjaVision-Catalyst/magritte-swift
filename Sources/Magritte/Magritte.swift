@@ -49,7 +49,7 @@ public protocol Model: AnyObject {
 }
 public extension Model {
     var usesStoredContainerValues: Bool { false }
-    func kindOf(_ name: String) -> Bool { name == "Object" }
+    func kindOf(_ name: String) -> Bool { ClassRegistry.shared.includesBehavior("Object", name) }
     func readSlot(strategy: String, name: String) throws -> Value { throw MagritteError("Unbound accessor read") }
     func writeSlot(strategy: String, name: String, value: Value) throws { throw MagritteError("Unbound accessor write") }
 }
@@ -128,7 +128,7 @@ public final class Description: Model {
 }
 public final class AdaptiveModel: Model {
     public var usesStoredContainerValues: Bool { true }
-    public func kindOf(_ name: String) -> Bool { ["Object", "MABasicObject", "MAAdaptiveModel"].contains(name) }
+    public func kindOf(_ name: String) -> Bool { ClassRegistry.shared.includesBehavior("MAAdaptiveModel", name) }
     public var id: String
     public var description: Description
     public var values: [String: Value]
@@ -153,7 +153,14 @@ public final class NativeModel: Model {
     public let object: AnyObject
     public let ancestry: [String]
     public init(_ object: AnyObject, ancestry: [String] = []) { self.object = object; self.ancestry = ancestry }
-    public func kindOf(_ name: String) -> Bool { name == "Object" || ancestry.contains(name) }
+    public convenience init(registered object: AnyObject) throws {
+        guard let name=ClassRegistry.shared.classForNativeType(type(of: object)) else {throw MagritteError("Native type is not registered")}
+        self.init(object,ancestry:[name])
+    }
+    public func kindOf(_ name: String) -> Bool {
+        let registry=ClassRegistry.shared,registered=ancestry.contains{registry.find($0) != nil}
+        return (!registered && registry.includesBehavior("Object",name)) || ancestry.contains{ $0 == name || registry.includesBehavior($0,name) }
+    }
     public func read(using description: Description) throws -> Value {
         if let f = description.nativeRead { return try f(object) }
         return try description.effectiveAccessor.read(self, graph: resolver)
@@ -474,11 +481,11 @@ public final class Graph {
                 d.reference = ref
             }
             if d.isRelation {
-                let kinds: Set<String> = ["Object", "MABasicObject", "MAAdaptiveModel", "UndefinedObject", "String", "Symbol", "Float", "Boolean", "Number", "Integer", "Character", "Collection", "SequenceableCollection", "Array", "OrderedCollection", "Set", "Bag", "MAObject", "MADescription", "MAElementDescription", "MAReferenceDescription", "MARelationDescription", "MAOptionDescription", "MAMagnitudeDescription", "MAContainer", "MAPriorityContainer", "MAStringDescription", "MASymbolDescription", "MAMemoDescription", "MAPasswordDescription", "MATokenDescription", "MANumberDescription", "MABooleanDescription", "MAToOneRelationDescription", "MAToManyRelationDescription", "MAToManyScalarRelationDescription", "MASingleOptionDescription", "MAMultipleOptionDescription"]
+
                 var unique = Set<String>()
                 for c in try list(n["classes"]) {
                     let cls = try identity(c)
-                    try require((format >= "magritte.graph/3" || (cls != "Symbol" && cls != "Float" && (!cls.hasPrefix("MA") || cls == "MABasicObject" || cls == "MAAdaptiveModel"))) && (kinds.contains(cls) || (format == "magritte.graph/4" && knownClass(cls))) && unique.insert(cls).inserted, "Unsupported or duplicate class constraint")
+                    try require((format >= "magritte.graph/3" || (cls != "Symbol" && cls != "Float" && (!cls.hasPrefix("MA") || cls == "MABasicObject" || cls == "MAAdaptiveModel"))) && knownClass(cls) && unique.insert(cls).inserted, "Unsupported or duplicate class constraint")
                     d.classes.append(cls)
                 }
             }

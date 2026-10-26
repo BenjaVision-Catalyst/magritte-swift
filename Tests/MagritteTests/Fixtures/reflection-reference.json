@@ -8271,6 +8271,10 @@
 								"type" : "class"
 							},
 							{
+								"value" : "ArrayedCollection",
+								"type" : "class"
+							},
+							{
 								"value" : "Bag",
 								"type" : "class"
 							},
@@ -8303,6 +8307,14 @@
 								"type" : "class"
 							},
 							{
+								"value" : "GRObject",
+								"type" : "class"
+							},
+							{
+								"value" : "HashedCollection",
+								"type" : "class"
+							},
+							{
 								"value" : "Integer",
 								"type" : "class"
 							},
@@ -8323,7 +8335,15 @@
 								"type" : "class"
 							},
 							{
+								"value" : "MACachedMemento",
+								"type" : "class"
+							},
+							{
 								"value" : "MAChainAccessor",
+								"type" : "class"
+							},
+							{
+								"value" : "MACheckedMemento",
 								"type" : "class"
 							},
 							{
@@ -8364,6 +8384,10 @@
 							},
 							{
 								"value" : "MAMagnitudeDescription",
+								"type" : "class"
+							},
+							{
+								"value" : "MAMemento",
 								"type" : "class"
 							},
 							{
@@ -8431,6 +8455,14 @@
 								"type" : "class"
 							},
 							{
+								"value" : "MAStraightMemento",
+								"type" : "class"
+							},
+							{
+								"value" : "MAStreamingVisitor",
+								"type" : "class"
+							},
+							{
 								"value" : "MAStringDescription",
 								"type" : "class"
 							},
@@ -8479,6 +8511,10 @@
 								"type" : "class"
 							},
 							{
+								"value" : "Magnitude",
+								"type" : "class"
+							},
+							{
 								"value" : "Number",
 								"type" : "class"
 							},
@@ -8488,6 +8524,10 @@
 							},
 							{
 								"value" : "OrderedCollection",
+								"type" : "class"
+							},
+							{
+								"value" : "ProtoObject",
 								"type" : "class"
 							},
 							{
@@ -9268,6 +9308,10 @@
 								"type" : "class"
 							},
 							{
+								"value" : "ArrayedCollection",
+								"type" : "class"
+							},
+							{
 								"value" : "Bag",
 								"type" : "class"
 							},
@@ -9300,6 +9344,14 @@
 								"type" : "class"
 							},
 							{
+								"value" : "GRObject",
+								"type" : "class"
+							},
+							{
+								"value" : "HashedCollection",
+								"type" : "class"
+							},
+							{
 								"value" : "Integer",
 								"type" : "class"
 							},
@@ -9320,7 +9372,15 @@
 								"type" : "class"
 							},
 							{
+								"value" : "MACachedMemento",
+								"type" : "class"
+							},
+							{
 								"value" : "MAChainAccessor",
+								"type" : "class"
+							},
+							{
+								"value" : "MACheckedMemento",
 								"type" : "class"
 							},
 							{
@@ -9361,6 +9421,10 @@
 							},
 							{
 								"value" : "MAMagnitudeDescription",
+								"type" : "class"
+							},
+							{
+								"value" : "MAMemento",
 								"type" : "class"
 							},
 							{
@@ -9428,6 +9492,14 @@
 								"type" : "class"
 							},
 							{
+								"value" : "MAStraightMemento",
+								"type" : "class"
+							},
+							{
+								"value" : "MAStreamingVisitor",
+								"type" : "class"
+							},
+							{
 								"value" : "MAStringDescription",
 								"type" : "class"
 							},
@@ -9476,6 +9548,10 @@
 								"type" : "class"
 							},
 							{
+								"value" : "Magnitude",
+								"type" : "class"
+							},
+							{
 								"value" : "Number",
 								"type" : "class"
 							},
@@ -9485,6 +9561,10 @@
 							},
 							{
 								"value" : "OrderedCollection",
+								"type" : "class"
+							},
+							{
+								"value" : "ProtoObject",
 								"type" : "class"
 							},
 							{
@@ -10358,6 +10438,10 @@
 								"type" : "class"
 							},
 							{
+								"value" : "ArrayedCollection",
+								"type" : "class"
+							},
+							{
 								"value" : "Bag",
 								"type" : "class"
 							},
@@ -10390,6 +10474,14 @@
 								"type" : "class"
 							},
 							{
+								"value" : "GRObject",
+								"type" : "class"
+							},
+							{
+								"value" : "HashedCollection",
+								"type" : "class"
+							},
+							{
 								"value" : "Integer",
 								"type" : "class"
 							},
@@ -10410,7 +10502,15 @@
 								"type" : "class"
 							},
 							{
+								"value" : "MACachedMemento",
+								"type" : "class"
+							},
+							{
 								"value" : "MAChainAccessor",
+								"type" : "class"
+							},
+							{
+								"value" : "MACheckedMemento",
 								"type" : "class"
 							},
 							{
@@ -10451,6 +10551,10 @@
 							},
 							{
 								"value" : "MAMagnitudeDescription",
+								"type" : "class"
+							},
+							{
+								"value" : "MAMemento",
 								"type" : "class"
 							},
 							{
@@ -10518,6 +10622,14 @@
 								"type" : "class"
 							},
 							{
+								"value" : "MAStraightMemento",
+								"type" : "class"
+							},
+							{
+								"value" : "MAStreamingVisitor",
+								"type" : "class"
+							},
+							{
 								"value" : "MAStringDescription",
 								"type" : "class"
 							},
@@ -10566,6 +10678,10 @@
 								"type" : "class"
 							},
 							{
+								"value" : "Magnitude",
+								"type" : "class"
+							},
+							{
 								"value" : "Number",
 								"type" : "class"
 							},
@@ -10575,6 +10691,10 @@
 							},
 							{
 								"value" : "OrderedCollection",
+								"type" : "class"
+							},
+							{
+								"value" : "ProtoObject",
 								"type" : "class"
 							},
 							{
@@ -14917,6 +15037,7 @@
 	"policy" : "Finite class registry and accessor class lists; implemented interpreter options only; as-is label defaults and ordered SortedCollection snapshots. Live accessor identity is local, snapshots explicit. Condition annotation lists are empty upstream and in live GT.",
 	"registry" : [
 		"Array",
+		"ArrayedCollection",
 		"Bag",
 		"Behavior",
 		"Boolean",
@@ -14925,12 +15046,16 @@
 		"ClassDescription",
 		"Collection",
 		"Float",
+		"GRObject",
+		"HashedCollection",
 		"Integer",
 		"MAAccessor",
 		"MAAdaptiveModel",
 		"MABasicObject",
 		"MABooleanDescription",
+		"MACachedMemento",
 		"MAChainAccessor",
+		"MACheckedMemento",
 		"MAClassDescription",
 		"MACondition",
 		"MAConjunctiveCondition",
@@ -14941,6 +15066,7 @@
 		"MAElementDescription",
 		"MAIdentityAccessor",
 		"MAMagnitudeDescription",
+		"MAMemento",
 		"MAMemoDescription",
 		"MAMultipleOptionDescription",
 		"MANegationCondition",
@@ -14957,6 +15083,8 @@
 		"MARelationDescription",
 		"MASelectorAccessor",
 		"MASingleOptionDescription",
+		"MAStraightMemento",
+		"MAStreamingVisitor",
 		"MAStringDescription",
 		"MAStringReader",
 		"MAStringWriter",
@@ -14969,9 +15097,11 @@
 		"MAVariableAccessor",
 		"MAVisitor",
 		"MAWriter",
+		"Magnitude",
 		"Number",
 		"Object",
 		"OrderedCollection",
+		"ProtoObject",
 		"SequenceableCollection",
 		"Set",
 		"String",

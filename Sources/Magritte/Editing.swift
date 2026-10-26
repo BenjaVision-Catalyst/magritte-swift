@@ -68,8 +68,7 @@ public class Memento: Model {
   public weak var graph: Graph?
   public var className: String { "MAMemento" }
   public func kindOf(_ name: String) -> Bool {
-    ["Object", "MABasicObject", "MAObject", "MAMemento", className].contains(name)
-      || (className == "MACheckedMemento" && name == "MACachedMemento")
+    ClassRegistry.shared.includesBehavior(className,name)
   }
   public var usesStoredContainerValues: Bool { true }
   init(wrapping model: Model, description: Description, graph: Graph?, limits: Limits) throws {

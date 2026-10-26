@@ -63,15 +63,22 @@ private func kindOf(_ v: Value, _ kind: String, _ graph: Graph?) throws -> Bool 
         guard let graph else { throw MagritteError("Object reference validation requires a graph resolver") }
         return try graph.resolve(v).kindOf(kind)
     }
-    if kind == "Object" { return true }
-    if ["Class", "ClassDescription", "Behavior"].contains(kind) { if case .classValue = v { return true }; return false }
-    switch (kind, v) {
-    case ("UndefinedObject", .undefined), ("String", .string), ("String", .symbol), ("Symbol", .symbol), ("Float", .float), ("Number", .float), ("Character", .character), ("Boolean", .boolean), ("Number", .integer), ("Integer", .integer): return true
-    case ("Collection", _): return v.isCollection
-    case ("SequenceableCollection", .string), ("SequenceableCollection", .symbol), ("SequenceableCollection", .array), ("SequenceableCollection", .collection("ordered", _)), ("Array", .array): return true
-    case ("Set", .collection("set", _)), ("Bag", .collection("bag", _)), ("OrderedCollection", .collection("ordered", _)): return true
-    default: return false
+    let cls:String
+    switch v {
+    case .undefined: cls="UndefinedObject"
+    case .boolean: cls="Boolean"
+    case .integer: cls="Integer"
+    case .float: cls="Float"
+    case .string: cls="String"
+    case .symbol: cls="Symbol"
+    case .character: cls="Character"
+    case .array: cls="Array"
+    case .collection(let kind,_): cls=kind=="ordered" ? "OrderedCollection" : kind=="set" ? "Set" : "Bag"
+    case .classValue: cls="Class"
+    case .reference: return false
     }
+    return ClassRegistry.shared.includesBehavior(cls,kind)
+
 }
 final class Budget {
     var work = 0

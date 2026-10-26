@@ -1,23 +1,7 @@
 import Foundation
 
-private let portableClassNames = [
-  "Object", "UndefinedObject", "Boolean", "Number", "Integer", "Float", "String", "Symbol",
-  "Character", "Collection", "SequenceableCollection", "Array", "OrderedCollection", "Set", "Bag",
-  "Class", "ClassDescription", "Behavior", "MAMemento", "MAStraightMemento", "MACachedMemento",
-  "MACheckedMemento", "MABasicObject", "MAAdaptiveModel", "MAObject",
-  "MADescription", "MAElementDescription", "MAMagnitudeDescription", "MAReferenceDescription",
-  "MARelationDescription", "MAOptionDescription", "MAContainer", "MAPriorityContainer",
-  "MAStringDescription", "MASymbolDescription", "MAMemoDescription", "MAPasswordDescription",
-  "MATokenDescription", "MANumberDescription", "MABooleanDescription", "MAClassDescription",
-  "MAToOneRelationDescription", "MAToManyRelationDescription", "MAToManyScalarRelationDescription",
-  "MASingleOptionDescription", "MAMultipleOptionDescription", "MAAccessor", "MADictionaryAccessor",
-  "MAPropertyAccessor", "MASelectorAccessor", "MAVariableAccessor", "MANullAccessor",
-  "MAIdentityAccessor", "MADelegatorAccessor", "MAChainAccessor", "MACondition",
-  "MAPluggableCondition", "MAConjunctiveCondition", "MANegationCondition", "MAVisitor", "MAReader",
-  "MAWriter", "MAStringReader", "MAStringWriter", "MAValidatorVisitor",
-].sorted()
-public func portableClasses() -> [String] { portableClassNames }
-func knownClass(_ name: String) -> Bool { portableClasses().contains(name) }
+public func portableClasses() -> [String] { ClassRegistry.shared.allClasses() }
+func knownClass(_ name: String) -> Bool { ClassRegistry.shared.find(name) != nil }
 
 public final class AccessorObject {
   public var id: String

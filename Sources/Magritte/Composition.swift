@@ -272,14 +272,6 @@ public func copyRange(_ d: Description, range: Range<Int>, newID: String, limits
 }
 extension Description {
   public func kindOf(_ name: String) -> Bool {
-    name == "Object" || name == "MABasicObject" || name == "MAObject" || name == "MADescription" || name == className
-      || (name == "MAElementDescription" && !isContainer) || (name == "MAContainer" && isContainer)
-      || (name == "MAReferenceDescription" && isReference)
-      || (name == "MARelationDescription" && isRelation)
-      || (name == "MAOptionDescription" && isOption)
-      || (name == "MAMagnitudeDescription" && className == "MANumberDescription")
-      || (name == "MAToManyRelationDescription" && className == "MAToManyScalarRelationDescription")
-      || (name == "MAStringDescription"
-        && ["MAMemoDescription", "MAPasswordDescription", "MASymbolDescription"].contains(className))
+    ClassRegistry.shared.includesBehavior(className,name)
   }
 }

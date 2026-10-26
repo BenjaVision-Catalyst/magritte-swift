@@ -17,10 +17,26 @@ final class ReflectionTests: XCTestCase {
   }
   func value(_ any: Any?) throws -> Value { try decodeValue(data(XCTUnwrap(any))) }
   func canonical(_ any: Any) throws -> Data {
+    // These GT fixtures describe a selected class environment; other tests may register additional classes.
+    let coreURL = try XCTUnwrap(
+      Bundle.module.url(
+        forResource: "registration-core-classes", withExtension: "json", subdirectory: "Fixtures"))
+    let core = try JSONSerialization.jsonObject(with: Data(contentsOf: coreURL)) as! [[String: Any]]
+    let available = Set(core.map { $0["name"] as! String })
+
     var j = try object(any)
     var nodes = try array(j["descriptions"])
     for i in nodes.indices {
-      if let classes = nodes[i]["classes"] as? [String] { nodes[i]["classes"] = classes.sorted() }
+      if let classes = nodes[i]["classes"] as? [String] {
+        nodes[i]["classes"] = classes.filter { available.contains($0) }.sorted()
+      }
+    }
+    for i in nodes.indices {
+      if let options = nodes[i]["options"] as? [[String: Any]] {
+        nodes[i]["options"] = options.filter {
+          $0["type"] as? String != "class" || available.contains($0["value"] as? String ?? "")
+        }
+      }
     }
     j["descriptions"] = nodes.sorted { ($0["id"] as! String) < ($1["id"] as! String) }
     return try data(j)
@@ -65,10 +81,9 @@ final class ReflectionTests: XCTestCase {
   }
   func testGTClassValuesAndTextConversion() throws {
     let report = try object(fixture("reflection-reference"))
-    XCTAssertEqual(
-      portableClasses().filter {
-        !["MAMemento", "MAStraightMemento", "MACachedMemento", "MACheckedMemento"].contains($0)
-      }, report["registry"] as? [String])
+    for name in try XCTUnwrap(report["registry"] as? [String]) {
+      XCTAssertNotNil(ClassRegistry.shared.find(name))
+    }
     let d = Description(id: "class", className: "MAClassDescription")
     for row in try array(report["classValidation"]) {
       XCTAssertEqual(

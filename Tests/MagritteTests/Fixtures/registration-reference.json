@@ -1,0 +1,4403 @@
+{
+	"includes" : [
+		{
+			"includes" : false,
+			"ancestor" : "Array",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "ArrayedCollection",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Bag",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Behavior",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Boolean",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Character",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Class",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "ClassDescription",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Collection",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Float",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "GRObject",
+			"inherits" : true,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "HashedCollection",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Integer",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAAccessor",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAAdaptiveModel",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "MABasicObject",
+			"inherits" : true,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MABooleanDescription",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MACachedMemento",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAChainAccessor",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MACheckedMemento",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAClassDescription",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MACondition",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAConjunctiveCondition",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAContainer",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MADelegatorAccessor",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MADescription",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MADictionaryAccessor",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAElementDescription",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAIdentityAccessor",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAMagnitudeDescription",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAMemento",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAMemoDescription",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAMultipleOptionDescription",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MANegationCondition",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MANullAccessor",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MANumberDescription",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAObject",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAOptionDescription",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAPasswordDescription",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAPluggableCondition",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAPriorityContainer",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAPropertyAccessor",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAReader",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAReferenceDescription",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MARelationDescription",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MASelectorAccessor",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MASingleOptionDescription",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAStraightMemento",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAStreamingVisitor",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAStringDescription",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAStringReader",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAStringWriter",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MASymbolDescription",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAToManyRelationDescription",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAToManyScalarRelationDescription",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAToOneRelationDescription",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MATokenDescription",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAValidatorVisitor",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAVariableAccessor",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAVisitor",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAWriter",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Magnitude",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Number",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "Object",
+			"inherits" : true,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "OrderedCollection",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "ProtoObject",
+			"inherits" : true,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "SequenceableCollection",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Set",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "String",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Symbol",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "UndefinedObject",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "MAValueHolder",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MADescriptionHolder",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MACompositeAccessor",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAPluggableAccessor",
+			"inherits" : false,
+			"class" : "MAValueHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Array",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "ArrayedCollection",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Bag",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Behavior",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Boolean",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Character",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Class",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "ClassDescription",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Collection",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Float",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "GRObject",
+			"inherits" : true,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "HashedCollection",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Integer",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAAccessor",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAAdaptiveModel",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "MABasicObject",
+			"inherits" : true,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MABooleanDescription",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MACachedMemento",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAChainAccessor",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MACheckedMemento",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAClassDescription",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MACondition",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAConjunctiveCondition",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAContainer",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MADelegatorAccessor",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MADescription",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MADictionaryAccessor",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAElementDescription",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAIdentityAccessor",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAMagnitudeDescription",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAMemento",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAMemoDescription",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAMultipleOptionDescription",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MANegationCondition",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MANullAccessor",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MANumberDescription",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAObject",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAOptionDescription",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAPasswordDescription",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAPluggableCondition",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAPriorityContainer",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAPropertyAccessor",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAReader",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAReferenceDescription",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MARelationDescription",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MASelectorAccessor",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MASingleOptionDescription",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAStraightMemento",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAStreamingVisitor",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAStringDescription",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAStringReader",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAStringWriter",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MASymbolDescription",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAToManyRelationDescription",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAToManyScalarRelationDescription",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAToOneRelationDescription",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MATokenDescription",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAValidatorVisitor",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAVariableAccessor",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAVisitor",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAWriter",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Magnitude",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Number",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "Object",
+			"inherits" : true,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "OrderedCollection",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "ProtoObject",
+			"inherits" : true,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "SequenceableCollection",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Set",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "String",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Symbol",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "UndefinedObject",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "MAValueHolder",
+			"inherits" : true,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "MADescriptionHolder",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MACompositeAccessor",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAPluggableAccessor",
+			"inherits" : false,
+			"class" : "MADescriptionHolder"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Array",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "ArrayedCollection",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Bag",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Behavior",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Boolean",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Character",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Class",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "ClassDescription",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Collection",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Float",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "GRObject",
+			"inherits" : true,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "HashedCollection",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Integer",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "MAAccessor",
+			"inherits" : true,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAAdaptiveModel",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "MABasicObject",
+			"inherits" : true,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MABooleanDescription",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MACachedMemento",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "MAChainAccessor",
+			"inherits" : true,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MACheckedMemento",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAClassDescription",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MACondition",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAConjunctiveCondition",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAContainer",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "MADelegatorAccessor",
+			"inherits" : true,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MADescription",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MADictionaryAccessor",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAElementDescription",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAIdentityAccessor",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAMagnitudeDescription",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAMemento",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAMemoDescription",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAMultipleOptionDescription",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MANegationCondition",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MANullAccessor",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MANumberDescription",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "MAObject",
+			"inherits" : true,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAOptionDescription",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAPasswordDescription",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAPluggableCondition",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAPriorityContainer",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAPropertyAccessor",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAReader",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAReferenceDescription",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MARelationDescription",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MASelectorAccessor",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MASingleOptionDescription",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAStraightMemento",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAStreamingVisitor",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAStringDescription",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAStringReader",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAStringWriter",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MASymbolDescription",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAToManyRelationDescription",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAToManyScalarRelationDescription",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAToOneRelationDescription",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MATokenDescription",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAValidatorVisitor",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAVariableAccessor",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAVisitor",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAWriter",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Magnitude",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Number",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "Object",
+			"inherits" : true,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "OrderedCollection",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "ProtoObject",
+			"inherits" : true,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "SequenceableCollection",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Set",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "String",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Symbol",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "UndefinedObject",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAValueHolder",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MADescriptionHolder",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "MACompositeAccessor",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAPluggableAccessor",
+			"inherits" : false,
+			"class" : "MACompositeAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Array",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "ArrayedCollection",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Bag",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Behavior",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Boolean",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Character",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Class",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "ClassDescription",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Collection",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Float",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "GRObject",
+			"inherits" : true,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "HashedCollection",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Integer",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "MAAccessor",
+			"inherits" : true,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAAdaptiveModel",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "MABasicObject",
+			"inherits" : true,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MABooleanDescription",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MACachedMemento",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAChainAccessor",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MACheckedMemento",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAClassDescription",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MACondition",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAConjunctiveCondition",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAContainer",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MADelegatorAccessor",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MADescription",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MADictionaryAccessor",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAElementDescription",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAIdentityAccessor",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAMagnitudeDescription",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAMemento",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAMemoDescription",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAMultipleOptionDescription",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MANegationCondition",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MANullAccessor",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MANumberDescription",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "MAObject",
+			"inherits" : true,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAOptionDescription",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAPasswordDescription",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAPluggableCondition",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAPriorityContainer",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAPropertyAccessor",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAReader",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAReferenceDescription",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MARelationDescription",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MASelectorAccessor",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MASingleOptionDescription",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAStraightMemento",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAStreamingVisitor",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAStringDescription",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAStringReader",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAStringWriter",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MASymbolDescription",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAToManyRelationDescription",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAToManyScalarRelationDescription",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAToOneRelationDescription",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MATokenDescription",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAValidatorVisitor",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAVariableAccessor",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAVisitor",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAWriter",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Magnitude",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Number",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "Object",
+			"inherits" : true,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "OrderedCollection",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "ProtoObject",
+			"inherits" : true,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "SequenceableCollection",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Set",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "String",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "Symbol",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "UndefinedObject",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MAValueHolder",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MADescriptionHolder",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : false,
+			"ancestor" : "MACompositeAccessor",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		},
+		{
+			"includes" : true,
+			"ancestor" : "MAPluggableAccessor",
+			"inherits" : false,
+			"class" : "MAPluggableAccessor"
+		}
+	],
+	"reads" : [
+		{
+			"value" : "3",
+			"type" : "integer"
+		},
+		{
+			"value" : "9",
+			"type" : "integer"
+		}
+	],
+	"core" : [
+		{
+			"name" : "Array",
+			"label" : "Array",
+			"superclass" : "ArrayedCollection",
+			"abstract" : false
+		},
+		{
+			"name" : "ArrayedCollection",
+			"label" : "Arrayed Collection",
+			"superclass" : "SequenceableCollection",
+			"abstract" : true
+		},
+		{
+			"name" : "Bag",
+			"label" : "Bag",
+			"superclass" : "Collection",
+			"abstract" : false
+		},
+		{
+			"name" : "Behavior",
+			"label" : "Behavior",
+			"superclass" : "Object",
+			"abstract" : false
+		},
+		{
+			"name" : "Boolean",
+			"label" : "Boolean",
+			"superclass" : "Object",
+			"abstract" : false
+		},
+		{
+			"name" : "Character",
+			"label" : "Character",
+			"superclass" : "Magnitude",
+			"abstract" : false
+		},
+		{
+			"name" : "Class",
+			"label" : "Class",
+			"superclass" : "ClassDescription",
+			"abstract" : false
+		},
+		{
+			"name" : "ClassDescription",
+			"label" : "Class Description",
+			"superclass" : "Behavior",
+			"abstract" : true
+		},
+		{
+			"name" : "Collection",
+			"label" : "Collection",
+			"superclass" : "Object",
+			"abstract" : true
+		},
+		{
+			"name" : "Float",
+			"label" : "Float",
+			"superclass" : "Number",
+			"abstract" : true
+		},
+		{
+			"name" : "GRObject",
+			"label" : "Object",
+			"superclass" : "Object",
+			"abstract" : false
+		},
+		{
+			"name" : "HashedCollection",
+			"label" : "Hashed Collection",
+			"superclass" : "Collection",
+			"abstract" : true
+		},
+		{
+			"name" : "Integer",
+			"label" : "Integer",
+			"superclass" : "Number",
+			"abstract" : true
+		},
+		{
+			"name" : "MAAccessor",
+			"label" : "Accessor",
+			"superclass" : "MAObject",
+			"abstract" : true
+		},
+		{
+			"name" : "MAAdaptiveModel",
+			"label" : "Adaptive Model",
+			"superclass" : "MABasicObject",
+			"abstract" : false
+		},
+		{
+			"name" : "MABasicObject",
+			"label" : "Basic Object",
+			"superclass" : "GRObject",
+			"abstract" : false
+		},
+		{
+			"name" : "MABooleanDescription",
+			"label" : "Boolean",
+			"superclass" : "MAElementDescription",
+			"abstract" : false
+		},
+		{
+			"name" : "MACachedMemento",
+			"label" : "Cached Memento",
+			"superclass" : "MAMemento",
+			"abstract" : false
+		},
+		{
+			"name" : "MAChainAccessor",
+			"label" : "Chain Accessor",
+			"superclass" : "MADelegatorAccessor",
+			"abstract" : false
+		},
+		{
+			"name" : "MACheckedMemento",
+			"label" : "Checked Memento",
+			"superclass" : "MACachedMemento",
+			"abstract" : false
+		},
+		{
+			"name" : "MAClassDescription",
+			"label" : "Class",
+			"superclass" : "MAElementDescription",
+			"abstract" : false
+		},
+		{
+			"name" : "MACondition",
+			"label" : "Condition",
+			"superclass" : "MAObject",
+			"abstract" : true
+		},
+		{
+			"name" : "MAConjunctiveCondition",
+			"label" : "Conjunctive Condition",
+			"superclass" : "MACondition",
+			"abstract" : false
+		},
+		{
+			"name" : "MAContainer",
+			"label" : "Container",
+			"superclass" : "MADescription",
+			"abstract" : false
+		},
+		{
+			"name" : "MADelegatorAccessor",
+			"label" : "Delegator Accessor",
+			"superclass" : "MAAccessor",
+			"abstract" : false
+		},
+		{
+			"name" : "MADescription",
+			"label" : "Description",
+			"superclass" : "MAObject",
+			"abstract" : true
+		},
+		{
+			"name" : "MADictionaryAccessor",
+			"label" : "Dictionary Accessor",
+			"superclass" : "MAAccessor",
+			"abstract" : false
+		},
+		{
+			"name" : "MAElementDescription",
+			"label" : "Element Description",
+			"superclass" : "MADescription",
+			"abstract" : true
+		},
+		{
+			"name" : "MAIdentityAccessor",
+			"label" : "Identity Accessor",
+			"superclass" : "MAAccessor",
+			"abstract" : false
+		},
+		{
+			"name" : "MAMagnitudeDescription",
+			"label" : "Magnitude Description",
+			"superclass" : "MAElementDescription",
+			"abstract" : true
+		},
+		{
+			"name" : "MAMemento",
+			"label" : "Memento",
+			"superclass" : "MAObject",
+			"abstract" : true
+		},
+		{
+			"name" : "MAMemoDescription",
+			"label" : "Memo",
+			"superclass" : "MAStringDescription",
+			"abstract" : false
+		},
+		{
+			"name" : "MAMultipleOptionDescription",
+			"label" : "Multiple-Option",
+			"superclass" : "MAOptionDescription",
+			"abstract" : false
+		},
+		{
+			"name" : "MANegationCondition",
+			"label" : "Negation Condition",
+			"superclass" : "MACondition",
+			"abstract" : false
+		},
+		{
+			"name" : "MANullAccessor",
+			"label" : "Null Accessor",
+			"superclass" : "MAAccessor",
+			"abstract" : false
+		},
+		{
+			"name" : "MANumberDescription",
+			"label" : "Number",
+			"superclass" : "MAMagnitudeDescription",
+			"abstract" : false
+		},
+		{
+			"name" : "MAObject",
+			"label" : "Object",
+			"superclass" : "MABasicObject",
+			"abstract" : true
+		},
+		{
+			"name" : "MAOptionDescription",
+			"label" : "Option Description",
+			"superclass" : "MAReferenceDescription",
+			"abstract" : true
+		},
+		{
+			"name" : "MAPasswordDescription",
+			"label" : "Password",
+			"superclass" : "MAStringDescription",
+			"abstract" : false
+		},
+		{
+			"name" : "MAPluggableCondition",
+			"label" : "Pluggable Condition",
+			"superclass" : "MACondition",
+			"abstract" : false
+		},
+		{
+			"name" : "MAPriorityContainer",
+			"label" : "Priority Container",
+			"superclass" : "MAContainer",
+			"abstract" : false
+		},
+		{
+			"name" : "MAPropertyAccessor",
+			"label" : "Property Accessor",
+			"superclass" : "MADictionaryAccessor",
+			"abstract" : false
+		},
+		{
+			"name" : "MAReader",
+			"label" : "Reader",
+			"superclass" : "MAStreamingVisitor",
+			"abstract" : false
+		},
+		{
+			"name" : "MAReferenceDescription",
+			"label" : "Reference Description",
+			"superclass" : "MAElementDescription",
+			"abstract" : true
+		},
+		{
+			"name" : "MARelationDescription",
+			"label" : "Relation Description",
+			"superclass" : "MAReferenceDescription",
+			"abstract" : true
+		},
+		{
+			"name" : "MASelectorAccessor",
+			"label" : "Selector Accessor",
+			"superclass" : "MAAccessor",
+			"abstract" : false
+		},
+		{
+			"name" : "MASingleOptionDescription",
+			"label" : "Single-Option",
+			"superclass" : "MAOptionDescription",
+			"abstract" : false
+		},
+		{
+			"name" : "MAStraightMemento",
+			"label" : "Straight Memento",
+			"superclass" : "MAMemento",
+			"abstract" : false
+		},
+		{
+			"name" : "MAStreamingVisitor",
+			"label" : "Streaming Visitor",
+			"superclass" : "MAVisitor",
+			"abstract" : false
+		},
+		{
+			"name" : "MAStringDescription",
+			"label" : "String",
+			"superclass" : "MAElementDescription",
+			"abstract" : false
+		},
+		{
+			"name" : "MAStringReader",
+			"label" : "String Reader",
+			"superclass" : "MAReader",
+			"abstract" : false
+		},
+		{
+			"name" : "MAStringWriter",
+			"label" : "String Writer",
+			"superclass" : "MAWriter",
+			"abstract" : false
+		},
+		{
+			"name" : "MASymbolDescription",
+			"label" : "Symbol",
+			"superclass" : "MAStringDescription",
+			"abstract" : false
+		},
+		{
+			"name" : "MAToManyRelationDescription",
+			"label" : "1:m Relation",
+			"superclass" : "MARelationDescription",
+			"abstract" : false
+		},
+		{
+			"name" : "MAToManyScalarRelationDescription",
+			"label" : "1:m scalar Relation",
+			"superclass" : "MAToManyRelationDescription",
+			"abstract" : false
+		},
+		{
+			"name" : "MAToOneRelationDescription",
+			"label" : "1:1 Relation",
+			"superclass" : "MARelationDescription",
+			"abstract" : false
+		},
+		{
+			"name" : "MATokenDescription",
+			"label" : "Token",
+			"superclass" : "MAReferenceDescription",
+			"abstract" : false
+		},
+		{
+			"name" : "MAValidatorVisitor",
+			"label" : "Validator Visitor",
+			"superclass" : "MAVisitor",
+			"abstract" : false
+		},
+		{
+			"name" : "MAVariableAccessor",
+			"label" : "Variable Accessor",
+			"superclass" : "MAAccessor",
+			"abstract" : false
+		},
+		{
+			"name" : "MAVisitor",
+			"label" : "Visitor",
+			"superclass" : "MABasicObject",
+			"abstract" : false
+		},
+		{
+			"name" : "MAWriter",
+			"label" : "Writer",
+			"superclass" : "MAStreamingVisitor",
+			"abstract" : false
+		},
+		{
+			"name" : "Magnitude",
+			"label" : "Magnitude",
+			"superclass" : "Object",
+			"abstract" : false
+		},
+		{
+			"name" : "Number",
+			"label" : "Number",
+			"superclass" : "Magnitude",
+			"abstract" : true
+		},
+		{
+			"name" : "Object",
+			"label" : "Object",
+			"superclass" : "ProtoObject",
+			"abstract" : false
+		},
+		{
+			"name" : "OrderedCollection",
+			"label" : "Ordered Collection",
+			"superclass" : "SequenceableCollection",
+			"abstract" : false
+		},
+		{
+			"name" : "ProtoObject",
+			"label" : "Proto Object",
+			"superclass" : null,
+			"abstract" : false
+		},
+		{
+			"name" : "SequenceableCollection",
+			"label" : "Sequenceable Collection",
+			"superclass" : "Collection",
+			"abstract" : true
+		},
+		{
+			"name" : "Set",
+			"label" : "Set",
+			"superclass" : "HashedCollection",
+			"abstract" : false
+		},
+		{
+			"name" : "String",
+			"label" : "String",
+			"superclass" : "ArrayedCollection",
+			"abstract" : false
+		},
+		{
+			"name" : "Symbol",
+			"label" : "Symbol",
+			"superclass" : "String",
+			"abstract" : false
+		},
+		{
+			"name" : "UndefinedObject",
+			"label" : "Undefined Object",
+			"superclass" : "Object",
+			"abstract" : false
+		}
+	],
+	"scalars" : [
+		{
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"class" : "Object",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"class" : "ProtoObject",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"class" : "Magnitude",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"class" : "Collection",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"class" : "ArrayedCollection",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"class" : "SequenceableCollection",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"class" : "Number",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"class" : "String",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"class" : "Class",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "2",
+				"type" : "integer"
+			},
+			"class" : "MAValueHolder",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "4004000000000000",
+				"type" : "float"
+			},
+			"class" : "Object",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "4004000000000000",
+				"type" : "float"
+			},
+			"class" : "ProtoObject",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "4004000000000000",
+				"type" : "float"
+			},
+			"class" : "Magnitude",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "4004000000000000",
+				"type" : "float"
+			},
+			"class" : "Collection",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "4004000000000000",
+				"type" : "float"
+			},
+			"class" : "ArrayedCollection",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "4004000000000000",
+				"type" : "float"
+			},
+			"class" : "SequenceableCollection",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "4004000000000000",
+				"type" : "float"
+			},
+			"class" : "Number",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "4004000000000000",
+				"type" : "float"
+			},
+			"class" : "String",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "4004000000000000",
+				"type" : "float"
+			},
+			"class" : "Class",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "4004000000000000",
+				"type" : "float"
+			},
+			"class" : "MAValueHolder",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "a",
+				"type" : "character"
+			},
+			"class" : "Object",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "a",
+				"type" : "character"
+			},
+			"class" : "ProtoObject",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "a",
+				"type" : "character"
+			},
+			"class" : "Magnitude",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "a",
+				"type" : "character"
+			},
+			"class" : "Collection",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "a",
+				"type" : "character"
+			},
+			"class" : "ArrayedCollection",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "a",
+				"type" : "character"
+			},
+			"class" : "SequenceableCollection",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "a",
+				"type" : "character"
+			},
+			"class" : "Number",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "a",
+				"type" : "character"
+			},
+			"class" : "String",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "a",
+				"type" : "character"
+			},
+			"class" : "Class",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "a",
+				"type" : "character"
+			},
+			"class" : "MAValueHolder",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "hello",
+				"type" : "string"
+			},
+			"class" : "Object",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "hello",
+				"type" : "string"
+			},
+			"class" : "ProtoObject",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "hello",
+				"type" : "string"
+			},
+			"class" : "Magnitude",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "hello",
+				"type" : "string"
+			},
+			"class" : "Collection",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "hello",
+				"type" : "string"
+			},
+			"class" : "ArrayedCollection",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "hello",
+				"type" : "string"
+			},
+			"class" : "SequenceableCollection",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "hello",
+				"type" : "string"
+			},
+			"class" : "Number",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "hello",
+				"type" : "string"
+			},
+			"class" : "String",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "hello",
+				"type" : "string"
+			},
+			"class" : "Class",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "hello",
+				"type" : "string"
+			},
+			"class" : "MAValueHolder",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "hello",
+				"type" : "symbol"
+			},
+			"class" : "Object",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "hello",
+				"type" : "symbol"
+			},
+			"class" : "ProtoObject",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "hello",
+				"type" : "symbol"
+			},
+			"class" : "Magnitude",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "hello",
+				"type" : "symbol"
+			},
+			"class" : "Collection",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "hello",
+				"type" : "symbol"
+			},
+			"class" : "ArrayedCollection",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "hello",
+				"type" : "symbol"
+			},
+			"class" : "SequenceableCollection",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "hello",
+				"type" : "symbol"
+			},
+			"class" : "Number",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "hello",
+				"type" : "symbol"
+			},
+			"class" : "String",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "hello",
+				"type" : "symbol"
+			},
+			"class" : "Class",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "hello",
+				"type" : "symbol"
+			},
+			"class" : "MAValueHolder",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"class" : "Object",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"class" : "ProtoObject",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"class" : "Magnitude",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"class" : "Collection",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"class" : "ArrayedCollection",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"class" : "SequenceableCollection",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"class" : "Number",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"class" : "String",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"class" : "Class",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"class" : "MAValueHolder",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "set"
+			},
+			"class" : "Object",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "set"
+			},
+			"class" : "ProtoObject",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "set"
+			},
+			"class" : "Magnitude",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "set"
+			},
+			"class" : "Collection",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "set"
+			},
+			"class" : "ArrayedCollection",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "set"
+			},
+			"class" : "SequenceableCollection",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "set"
+			},
+			"class" : "Number",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "set"
+			},
+			"class" : "String",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "set"
+			},
+			"class" : "Class",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : [
+					{
+						"value" : "2",
+						"type" : "integer"
+					}
+				],
+				"type" : "set"
+			},
+			"class" : "MAValueHolder",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "String",
+				"type" : "class"
+			},
+			"class" : "Object",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "String",
+				"type" : "class"
+			},
+			"class" : "ProtoObject",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "String",
+				"type" : "class"
+			},
+			"class" : "Magnitude",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "String",
+				"type" : "class"
+			},
+			"class" : "Collection",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "String",
+				"type" : "class"
+			},
+			"class" : "ArrayedCollection",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "String",
+				"type" : "class"
+			},
+			"class" : "SequenceableCollection",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "String",
+				"type" : "class"
+			},
+			"class" : "Number",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "String",
+				"type" : "class"
+			},
+			"class" : "String",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"input" : {
+				"value" : "String",
+				"type" : "class"
+			},
+			"class" : "Class",
+			"errors" : [ ]
+		},
+		{
+			"input" : {
+				"value" : "String",
+				"type" : "class"
+			},
+			"class" : "MAValueHolder",
+			"errors" : [
+				"MAKindError"
+			]
+		}
+	],
+	"classes" : [
+		"Array",
+		"ArrayedCollection",
+		"Bag",
+		"Behavior",
+		"Boolean",
+		"Character",
+		"Class",
+		"ClassDescription",
+		"Collection",
+		"Float",
+		"GRObject",
+		"HashedCollection",
+		"Integer",
+		"MAAccessor",
+		"MAAdaptiveModel",
+		"MABasicObject",
+		"MABooleanDescription",
+		"MACachedMemento",
+		"MAChainAccessor",
+		"MACheckedMemento",
+		"MAClassDescription",
+		"MACompositeAccessor",
+		"MACondition",
+		"MAConjunctiveCondition",
+		"MAContainer",
+		"MADelegatorAccessor",
+		"MADescription",
+		"MADescriptionHolder",
+		"MADictionaryAccessor",
+		"MAElementDescription",
+		"MAIdentityAccessor",
+		"MAMagnitudeDescription",
+		"MAMemento",
+		"MAMemoDescription",
+		"MAMultipleOptionDescription",
+		"MANegationCondition",
+		"MANullAccessor",
+		"MANumberDescription",
+		"MAObject",
+		"MAOptionDescription",
+		"MAPasswordDescription",
+		"MAPluggableAccessor",
+		"MAPluggableCondition",
+		"MAPriorityContainer",
+		"MAPropertyAccessor",
+		"MAReader",
+		"MAReferenceDescription",
+		"MARelationDescription",
+		"MASelectorAccessor",
+		"MASingleOptionDescription",
+		"MAStraightMemento",
+		"MAStreamingVisitor",
+		"MAStringDescription",
+		"MAStringReader",
+		"MAStringWriter",
+		"MASymbolDescription",
+		"MAToManyRelationDescription",
+		"MAToManyScalarRelationDescription",
+		"MAToOneRelationDescription",
+		"MATokenDescription",
+		"MAValidatorVisitor",
+		"MAValueHolder",
+		"MAVariableAccessor",
+		"MAVisitor",
+		"MAWriter",
+		"Magnitude",
+		"Number",
+		"Object",
+		"OrderedCollection",
+		"ProtoObject",
+		"SequenceableCollection",
+		"Set",
+		"String",
+		"Symbol",
+		"UndefinedObject"
+	],
+	"queries" : [
+		{
+			"class" : "MAValueHolder",
+			"subclasses" : [
+				"MADescriptionHolder"
+			],
+			"withAllSubclasses" : [
+				"MADescriptionHolder",
+				"MAValueHolder"
+			],
+			"withAllConcreteClasses" : [
+				"MADescriptionHolder",
+				"MAValueHolder"
+			],
+			"allSubclasses" : [
+				"MADescriptionHolder"
+			]
+		},
+		{
+			"class" : "MAAccessor",
+			"subclasses" : [
+				"MADelegatorAccessor",
+				"MADictionaryAccessor",
+				"MAIdentityAccessor",
+				"MANullAccessor",
+				"MAPluggableAccessor",
+				"MASelectorAccessor",
+				"MAVariableAccessor"
+			],
+			"withAllSubclasses" : [
+				"MAAccessor",
+				"MAChainAccessor",
+				"MACompositeAccessor",
+				"MADelegatorAccessor",
+				"MADictionaryAccessor",
+				"MAIdentityAccessor",
+				"MANullAccessor",
+				"MAPluggableAccessor",
+				"MAPropertyAccessor",
+				"MASelectorAccessor",
+				"MAVariableAccessor"
+			],
+			"withAllConcreteClasses" : [
+				"MAChainAccessor",
+				"MACompositeAccessor",
+				"MADelegatorAccessor",
+				"MADictionaryAccessor",
+				"MAIdentityAccessor",
+				"MANullAccessor",
+				"MAPluggableAccessor",
+				"MAPropertyAccessor",
+				"MASelectorAccessor",
+				"MAVariableAccessor"
+			],
+			"allSubclasses" : [
+				"MAChainAccessor",
+				"MACompositeAccessor",
+				"MADelegatorAccessor",
+				"MADictionaryAccessor",
+				"MAIdentityAccessor",
+				"MANullAccessor",
+				"MAPluggableAccessor",
+				"MAPropertyAccessor",
+				"MASelectorAccessor",
+				"MAVariableAccessor"
+			]
+		},
+		{
+			"class" : "MADescription",
+			"subclasses" : [
+				"MAContainer",
+				"MAElementDescription"
+			],
+			"withAllSubclasses" : [
+				"MABooleanDescription",
+				"MAClassDescription",
+				"MAContainer",
+				"MADescription",
+				"MAElementDescription",
+				"MAMagnitudeDescription",
+				"MAMemoDescription",
+				"MAMultipleOptionDescription",
+				"MANumberDescription",
+				"MAOptionDescription",
+				"MAPasswordDescription",
+				"MAPriorityContainer",
+				"MAReferenceDescription",
+				"MARelationDescription",
+				"MASingleOptionDescription",
+				"MAStringDescription",
+				"MASymbolDescription",
+				"MAToManyRelationDescription",
+				"MAToManyScalarRelationDescription",
+				"MAToOneRelationDescription",
+				"MATokenDescription"
+			],
+			"withAllConcreteClasses" : [
+				"MABooleanDescription",
+				"MAClassDescription",
+				"MAContainer",
+				"MAMemoDescription",
+				"MAMultipleOptionDescription",
+				"MANumberDescription",
+				"MAPasswordDescription",
+				"MAPriorityContainer",
+				"MASingleOptionDescription",
+				"MAStringDescription",
+				"MASymbolDescription",
+				"MAToManyRelationDescription",
+				"MAToManyScalarRelationDescription",
+				"MAToOneRelationDescription",
+				"MATokenDescription"
+			],
+			"allSubclasses" : [
+				"MABooleanDescription",
+				"MAClassDescription",
+				"MAContainer",
+				"MAElementDescription",
+				"MAMagnitudeDescription",
+				"MAMemoDescription",
+				"MAMultipleOptionDescription",
+				"MANumberDescription",
+				"MAOptionDescription",
+				"MAPasswordDescription",
+				"MAPriorityContainer",
+				"MAReferenceDescription",
+				"MARelationDescription",
+				"MASingleOptionDescription",
+				"MAStringDescription",
+				"MASymbolDescription",
+				"MAToManyRelationDescription",
+				"MAToManyScalarRelationDescription",
+				"MAToOneRelationDescription",
+				"MATokenDescription"
+			]
+		},
+		{
+			"class" : "MAContainer",
+			"subclasses" : [
+				"MAPriorityContainer"
+			],
+			"withAllSubclasses" : [
+				"MAContainer",
+				"MAPriorityContainer"
+			],
+			"withAllConcreteClasses" : [
+				"MAContainer",
+				"MAPriorityContainer"
+			],
+			"allSubclasses" : [
+				"MAPriorityContainer"
+			]
+		},
+		{
+			"class" : "MAStringReader",
+			"subclasses" : [ ],
+			"withAllSubclasses" : [
+				"MAStringReader"
+			],
+			"withAllConcreteClasses" : [
+				"MAStringReader"
+			],
+			"allSubclasses" : [ ]
+		}
+	],
+	"additional" : [
+		{
+			"superclass" : "MABasicObject",
+			"abstract" : false,
+			"name" : "MAValueHolder",
+			"label" : "Value Holder"
+		},
+		{
+			"superclass" : "MAValueHolder",
+			"abstract" : false,
+			"name" : "MADescriptionHolder",
+			"label" : "Description Holder"
+		},
+		{
+			"superclass" : "MAChainAccessor",
+			"abstract" : false,
+			"name" : "MACompositeAccessor",
+			"label" : "Composite Accessor"
+		},
+		{
+			"superclass" : "MAAccessor",
+			"abstract" : false,
+			"name" : "MAPluggableAccessor",
+			"label" : "Pluggable Accessor"
+		}
+	],
+	"schema" : {
+		"class" : "MAToOneRelationDescription",
+		"graph" : {
+			"descriptions" : [
+				{
+					"id" : "reflective.1.relation",
+					"properties" : {
+						"label" : {
+							"value" : "MAToOneRelationDescription",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"children" : [
+						"reflective.1.relation.type",
+						"reflective.1.relation.label",
+						"reflective.1.relation.comment",
+						"reflective.1.relation.group",
+						"reflective.1.relation.priority",
+						"reflective.1.relation.readOnly",
+						"reflective.1.relation.required",
+						"reflective.1.relation.visible",
+						"reflective.1.relation.undefined",
+						"reflective.1.relation.undefinedValue",
+						"reflective.1.relation.default",
+						"reflective.1.relation.name",
+						"reflective.1.relation.reference",
+						"reflective.1.relation.accessor",
+						"reflective.1.relation.stringReader",
+						"reflective.1.relation.stringWriter",
+						"reflective.1.relation.validator",
+						"reflective.1.relation.classes"
+					],
+					"class" : "MAContainer"
+				},
+				{
+					"reference" : "reflective.1.relation.accessor.reference",
+					"properties" : {
+						"priority" : {
+							"value" : "10",
+							"type" : "integer"
+						}
+					},
+					"classes" : [
+						"MADelegatorAccessor",
+						"MADictionaryAccessor",
+						"MAIdentityAccessor",
+						"MANullAccessor",
+						"MAPluggableAccessor",
+						"MASelectorAccessor",
+						"MAVariableAccessor",
+						"MAChainAccessor",
+						"MAPropertyAccessor",
+						"MACompositeAccessor"
+					],
+					"accessor" : {
+						"writeSelector" : "accessor:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "accessor"
+					},
+					"conditions" : [ ],
+					"class" : "MAToOneRelationDescription",
+					"id" : "reflective.1.relation.accessor"
+				},
+				{
+					"id" : "reflective.1.relation.accessor.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"reference" : "reflective.1.relation.classes.reference",
+					"labels" : [ ],
+					"properties" : {
+						"label" : {
+							"value" : "Classes",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "400",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : [ ],
+							"type" : "set"
+						}
+					},
+					"accessor" : {
+						"writeSelector" : "classes:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "classes"
+					},
+					"options" : [
+						{
+							"value" : "Array",
+							"type" : "class"
+						},
+						{
+							"value" : "ArrayedCollection",
+							"type" : "class"
+						},
+						{
+							"value" : "Bag",
+							"type" : "class"
+						},
+						{
+							"value" : "Behavior",
+							"type" : "class"
+						},
+						{
+							"value" : "Boolean",
+							"type" : "class"
+						},
+						{
+							"value" : "Character",
+							"type" : "class"
+						},
+						{
+							"value" : "Class",
+							"type" : "class"
+						},
+						{
+							"value" : "ClassDescription",
+							"type" : "class"
+						},
+						{
+							"value" : "Collection",
+							"type" : "class"
+						},
+						{
+							"value" : "Float",
+							"type" : "class"
+						},
+						{
+							"value" : "GRObject",
+							"type" : "class"
+						},
+						{
+							"value" : "HashedCollection",
+							"type" : "class"
+						},
+						{
+							"value" : "Integer",
+							"type" : "class"
+						},
+						{
+							"value" : "MAAccessor",
+							"type" : "class"
+						},
+						{
+							"value" : "MAAdaptiveModel",
+							"type" : "class"
+						},
+						{
+							"value" : "MABasicObject",
+							"type" : "class"
+						},
+						{
+							"value" : "MABooleanDescription",
+							"type" : "class"
+						},
+						{
+							"value" : "MACachedMemento",
+							"type" : "class"
+						},
+						{
+							"value" : "MAChainAccessor",
+							"type" : "class"
+						},
+						{
+							"value" : "MACheckedMemento",
+							"type" : "class"
+						},
+						{
+							"value" : "MAClassDescription",
+							"type" : "class"
+						},
+						{
+							"value" : "MACompositeAccessor",
+							"type" : "class"
+						},
+						{
+							"value" : "MACondition",
+							"type" : "class"
+						},
+						{
+							"value" : "MAConjunctiveCondition",
+							"type" : "class"
+						},
+						{
+							"value" : "MAContainer",
+							"type" : "class"
+						},
+						{
+							"value" : "MADelegatorAccessor",
+							"type" : "class"
+						},
+						{
+							"value" : "MADescription",
+							"type" : "class"
+						},
+						{
+							"value" : "MADescriptionHolder",
+							"type" : "class"
+						},
+						{
+							"value" : "MADictionaryAccessor",
+							"type" : "class"
+						},
+						{
+							"value" : "MAElementDescription",
+							"type" : "class"
+						},
+						{
+							"value" : "MAIdentityAccessor",
+							"type" : "class"
+						},
+						{
+							"value" : "MAMagnitudeDescription",
+							"type" : "class"
+						},
+						{
+							"value" : "MAMemento",
+							"type" : "class"
+						},
+						{
+							"value" : "MAMemoDescription",
+							"type" : "class"
+						},
+						{
+							"value" : "MAMultipleOptionDescription",
+							"type" : "class"
+						},
+						{
+							"value" : "MANegationCondition",
+							"type" : "class"
+						},
+						{
+							"value" : "MANullAccessor",
+							"type" : "class"
+						},
+						{
+							"value" : "MANumberDescription",
+							"type" : "class"
+						},
+						{
+							"value" : "MAObject",
+							"type" : "class"
+						},
+						{
+							"value" : "MAOptionDescription",
+							"type" : "class"
+						},
+						{
+							"value" : "MAPasswordDescription",
+							"type" : "class"
+						},
+						{
+							"value" : "MAPluggableAccessor",
+							"type" : "class"
+						},
+						{
+							"value" : "MAPluggableCondition",
+							"type" : "class"
+						},
+						{
+							"value" : "MAPriorityContainer",
+							"type" : "class"
+						},
+						{
+							"value" : "MAPropertyAccessor",
+							"type" : "class"
+						},
+						{
+							"value" : "MAReader",
+							"type" : "class"
+						},
+						{
+							"value" : "MAReferenceDescription",
+							"type" : "class"
+						},
+						{
+							"value" : "MARelationDescription",
+							"type" : "class"
+						},
+						{
+							"value" : "MASelectorAccessor",
+							"type" : "class"
+						},
+						{
+							"value" : "MASingleOptionDescription",
+							"type" : "class"
+						},
+						{
+							"value" : "MAStraightMemento",
+							"type" : "class"
+						},
+						{
+							"value" : "MAStreamingVisitor",
+							"type" : "class"
+						},
+						{
+							"value" : "MAStringDescription",
+							"type" : "class"
+						},
+						{
+							"value" : "MAStringReader",
+							"type" : "class"
+						},
+						{
+							"value" : "MAStringWriter",
+							"type" : "class"
+						},
+						{
+							"value" : "MASymbolDescription",
+							"type" : "class"
+						},
+						{
+							"value" : "MAToManyRelationDescription",
+							"type" : "class"
+						},
+						{
+							"value" : "MAToManyScalarRelationDescription",
+							"type" : "class"
+						},
+						{
+							"value" : "MAToOneRelationDescription",
+							"type" : "class"
+						},
+						{
+							"value" : "MATokenDescription",
+							"type" : "class"
+						},
+						{
+							"value" : "MAValidatorVisitor",
+							"type" : "class"
+						},
+						{
+							"value" : "MAValueHolder",
+							"type" : "class"
+						},
+						{
+							"value" : "MAVariableAccessor",
+							"type" : "class"
+						},
+						{
+							"value" : "MAVisitor",
+							"type" : "class"
+						},
+						{
+							"value" : "MAWriter",
+							"type" : "class"
+						},
+						{
+							"value" : "Magnitude",
+							"type" : "class"
+						},
+						{
+							"value" : "Number",
+							"type" : "class"
+						},
+						{
+							"value" : "Object",
+							"type" : "class"
+						},
+						{
+							"value" : "OrderedCollection",
+							"type" : "class"
+						},
+						{
+							"value" : "ProtoObject",
+							"type" : "class"
+						},
+						{
+							"value" : "SequenceableCollection",
+							"type" : "class"
+						},
+						{
+							"value" : "Set",
+							"type" : "class"
+						},
+						{
+							"value" : "String",
+							"type" : "class"
+						},
+						{
+							"value" : "Symbol",
+							"type" : "class"
+						},
+						{
+							"value" : "UndefinedObject",
+							"type" : "class"
+						}
+					],
+					"conditions" : [ ],
+					"class" : "MAMultipleOptionDescription",
+					"id" : "reflective.1.relation.classes"
+				},
+				{
+					"id" : "reflective.1.relation.classes.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAClassDescription"
+				},
+				{
+					"id" : "reflective.1.relation.comment",
+					"properties" : {
+						"label" : {
+							"value" : "Comment",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "110",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "comment:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "comment"
+					},
+					"class" : "MAMemoDescription"
+				},
+				{
+					"reference" : "reflective.1.relation.default.reference",
+					"properties" : {
+						"label" : {
+							"value" : "Default",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"classes" : [ ],
+					"accessor" : {
+						"writeSelector" : "default:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "default"
+					},
+					"conditions" : [ ],
+					"class" : "MAToOneRelationDescription",
+					"id" : "reflective.1.relation.default"
+				},
+				{
+					"id" : "reflective.1.relation.default.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "reflective.1.relation.group",
+					"properties" : {
+						"label" : {
+							"value" : "Group",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "105",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "group:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "group"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "reflective.1.relation.label",
+					"properties" : {
+						"label" : {
+							"value" : "Label",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "100",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "relation",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "label:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "label"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "reflective.1.relation.name",
+					"properties" : {
+						"priority" : {
+							"value" : "1",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "name:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "name"
+					},
+					"class" : "MASymbolDescription"
+				},
+				{
+					"id" : "reflective.1.relation.priority",
+					"properties" : {
+						"required" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Priority",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "130",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "priority:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "priority"
+					},
+					"class" : "MANumberDescription"
+				},
+				{
+					"id" : "reflective.1.relation.readOnly",
+					"properties" : {
+						"label" : {
+							"value" : "Read-only",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "200",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "readOnly:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "readOnly"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"reference" : "reflective.1.relation.reference.reference",
+					"properties" : {
+						"required" : {
+							"value" : false,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Description",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "400",
+							"type" : "integer"
+						}
+					},
+					"classes" : [
+						"MAPriorityContainer",
+						"MAContainer"
+					],
+					"accessor" : {
+						"writeSelector" : "reference:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "reference"
+					},
+					"conditions" : [ ],
+					"class" : "MAToOneRelationDescription",
+					"id" : "reflective.1.relation.reference"
+				},
+				{
+					"id" : "reflective.1.relation.reference.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "reflective.1.relation.required",
+					"properties" : {
+						"label" : {
+							"value" : "Required",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "220",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : false,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "required:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "required"
+					},
+					"class" : "MABooleanDescription"
+				},
+				{
+					"reference" : "reflective.1.relation.stringReader.reference",
+					"labels" : [ ],
+					"properties" : {
+						"label" : {
+							"value" : "String Reader",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "300",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "MAStringReader",
+							"type" : "class"
+						}
+					},
+					"accessor" : {
+						"writeSelector" : "stringReader:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "stringReader"
+					},
+					"options" : [
+						{
+							"value" : "MAStringReader",
+							"type" : "class"
+						}
+					],
+					"conditions" : [ ],
+					"class" : "MASingleOptionDescription",
+					"id" : "reflective.1.relation.stringReader"
+				},
+				{
+					"id" : "reflective.1.relation.stringReader.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAClassDescription"
+				},
+				{
+					"reference" : "reflective.1.relation.stringWriter.reference",
+					"labels" : [ ],
+					"properties" : {
+						"label" : {
+							"value" : "String Writer",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "310",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "MAStringWriter",
+							"type" : "class"
+						}
+					},
+					"accessor" : {
+						"writeSelector" : "stringWriter:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "stringWriter"
+					},
+					"options" : [
+						{
+							"value" : "MAStringWriter",
+							"type" : "class"
+						}
+					],
+					"conditions" : [ ],
+					"class" : "MASingleOptionDescription",
+					"id" : "reflective.1.relation.stringWriter"
+				},
+				{
+					"id" : "reflective.1.relation.stringWriter.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAClassDescription"
+				},
+				{
+					"id" : "reflective.1.relation.type",
+					"properties" : {
+						"readOnly" : {
+							"value" : true,
+							"type" : "boolean"
+						},
+						"label" : {
+							"value" : "Kind",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "0",
+							"type" : "integer"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "type:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "type"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"id" : "reflective.1.relation.undefined",
+					"properties" : {
+						"label" : {
+							"value" : "Undefined String",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "140",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "",
+							"type" : "string"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefined:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefined"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"reference" : "reflective.1.relation.undefinedValue.reference",
+					"properties" : {
+						"priority" : {
+							"value" : "150",
+							"type" : "integer"
+						},
+						"default" : {
+							"type" : "nil"
+						}
+					},
+					"classes" : [ ],
+					"accessor" : {
+						"writeSelector" : "undefinedValue:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "undefinedValue"
+					},
+					"conditions" : [ ],
+					"class" : "MAToOneRelationDescription",
+					"id" : "reflective.1.relation.undefinedValue"
+				},
+				{
+					"id" : "reflective.1.relation.undefinedValue.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAStringDescription"
+				},
+				{
+					"reference" : "reflective.1.relation.validator.reference",
+					"labels" : [ ],
+					"properties" : {
+						"label" : {
+							"value" : "Validator",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "250",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : "MAValidatorVisitor",
+							"type" : "class"
+						}
+					},
+					"accessor" : {
+						"writeSelector" : "validator:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "validator"
+					},
+					"options" : [
+						{
+							"value" : "MAValidatorVisitor",
+							"type" : "class"
+						}
+					],
+					"conditions" : [ ],
+					"class" : "MASingleOptionDescription",
+					"id" : "reflective.1.relation.validator"
+				},
+				{
+					"id" : "reflective.1.relation.validator.reference",
+					"properties" : { },
+					"conditions" : [ ],
+					"accessor" : {
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					"class" : "MAClassDescription"
+				},
+				{
+					"id" : "reflective.1.relation.visible",
+					"properties" : {
+						"label" : {
+							"value" : "Visible",
+							"type" : "string"
+						},
+						"priority" : {
+							"value" : "210",
+							"type" : "integer"
+						},
+						"default" : {
+							"value" : true,
+							"type" : "boolean"
+						}
+					},
+					"conditions" : [ ],
+					"accessor" : {
+						"writeSelector" : "visible:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "visible"
+					},
+					"class" : "MABooleanDescription"
+				}
+			],
+			"format" : "magritte.graph/4",
+			"objects" : [ ],
+			"root" : "reflective.1.relation"
+		},
+		"reads" : [
+			{
+				"field" : "reflective.1.relation.type",
+				"value" : {
+					"value" : "1:1 Relation",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "reflective.1.relation.label",
+				"value" : {
+					"value" : "Relation",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "reflective.1.relation.comment",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "reflective.1.relation.group",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "reflective.1.relation.priority",
+				"value" : {
+					"value" : "0",
+					"type" : "integer"
+				}
+			},
+			{
+				"field" : "reflective.1.relation.readOnly",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "reflective.1.relation.required",
+				"value" : {
+					"value" : false,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "reflective.1.relation.visible",
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			{
+				"field" : "reflective.1.relation.undefined",
+				"value" : {
+					"value" : "",
+					"type" : "string"
+				}
+			},
+			{
+				"field" : "reflective.1.relation.undefinedValue",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "reflective.1.relation.default",
+				"value" : {
+					"type" : "nil"
+				}
+			},
+			{
+				"field" : "reflective.1.relation.name",
+				"value" : {
+					"value" : "relation",
+					"type" : "symbol"
+				}
+			},
+			{
+				"field" : "reflective.1.relation.reference",
+				"value" : {
+					"value" : "relation.reference",
+					"type" : "reference"
+				}
+			},
+			{
+				"field" : "reflective.1.relation.accessor",
+				"value" : {
+					"value" : "relation.accessor",
+					"type" : "reference"
+				}
+			},
+			{
+				"field" : "reflective.1.relation.stringReader",
+				"value" : {
+					"value" : "MAStringReader",
+					"type" : "class"
+				}
+			},
+			{
+				"field" : "reflective.1.relation.stringWriter",
+				"value" : {
+					"value" : "MAStringWriter",
+					"type" : "class"
+				}
+			},
+			{
+				"field" : "reflective.1.relation.validator",
+				"value" : {
+					"value" : "MAValidatorVisitor",
+					"type" : "class"
+				}
+			},
+			{
+				"field" : "reflective.1.relation.classes",
+				"value" : {
+					"value" : [
+						{
+							"value" : "MAValueHolder",
+							"type" : "class"
+						}
+					],
+					"type" : "set"
+				}
+			}
+		],
+		"validation" : [ ]
+	},
+	"policy" : "GT class queries and options are projected to the registered native environment. Runtime registration itself is a host-platform bridge; no GT classes or methods are created. Registration declares identity and inheritance, not an implementation of arbitrary class protocols.",
+	"commonClass" : "MAValueHolder",
+	"validation" : [
+		{
+			"class" : "MAValueHolder",
+			"errors" : [ ]
+		},
+		{
+			"class" : "MADescriptionHolder",
+			"errors" : [ ]
+		},
+		{
+			"class" : "Object",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"class" : "SmallInteger",
+			"errors" : [
+				"MAKindError"
+			]
+		},
+		{
+			"class" : "ByteString",
+			"errors" : [
+				"MAKindError"
+			]
+		}
+	]
+}

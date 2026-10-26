@@ -1,0 +1,14 @@
+[
+	{
+		"source" : "/private/tmp/magritte-cpp-registration-native.json",
+		"objects" : 1,
+		"validated" : true,
+		"descriptions" : 33
+	},
+	{
+		"source" : "/private/tmp/magritte-swift-registration-native.json",
+		"objects" : 1,
+		"validated" : true,
+		"descriptions" : 33
+	}
+]

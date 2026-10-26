@@ -1,0 +1,71 @@
+{
+  "captured": "208-10-8",
+  "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
+  "methods": [
+    {
+      "classSide": false,
+      "methodClassName": "MARelationDescription",
+      "methodName": "descriptionClasses",
+      "liveSourceSHA256": "5c8e4fa758a7ece1dfae621042c49d02f061a5c0b9fd37b3ef397cad7499ef40",
+      "upstreamSourceSHA256": "5c8e4fa758a7ece1dfae621042c49d02f061a5c0b9fd37b3ef397cad7499ef40",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MARelationDescription",
+      "methodName": "commonClass",
+      "liveSourceSHA256": "8057c3a16d594c5973b0564eacca2a772e5548bfd381b7a44dadd193fddd9533",
+      "upstreamSourceSHA256": "8057c3a16d594c5973b0564eacca2a772e5548bfd381b7a44dadd193fddd9533",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MADescription",
+      "methodName": "descriptionAccessor",
+      "liveSourceSHA256": "46fe9901726855b0242098032f7c64c7bc2e01ec950ea88d3f762ca416f118a9",
+      "upstreamSourceSHA256": "46fe9901726855b0242098032f7c64c7bc2e01ec950ea88d3f762ca416f118a9",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MADescription",
+      "methodName": "descriptionStringReader",
+      "liveSourceSHA256": "fc005177122448b018900c829ec107ee288deea9f6b2486a1b63309eb33a94b7",
+      "upstreamSourceSHA256": "fc005177122448b018900c829ec107ee288deea9f6b2486a1b63309eb33a94b7",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAReferenceDescription",
+      "methodName": "descriptionReference",
+      "liveSourceSHA256": "d79f6813b0e4590108012ce2a25dedfbc429c2e2a8ed7f46e8bd7a30274b3c11",
+      "upstreamSourceSHA256": "d79f6813b0e4590108012ce2a25dedfbc429c2e2a8ed7f46e8bd7a30274b3c11",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAContainer",
+      "methodName": "descriptionChildren",
+      "liveSourceSHA256": "cae4071ae365cb01193a8a7296f9c39ae9559d4380e24a9643614e6fc8e5f4b0",
+      "upstreamSourceSHA256": "cae4071ae365cb01193a8a7296f9c39ae9559d4380e24a9643614e6fc8e5f4b0",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": true,
+      "methodClassName": "MAObject",
+      "methodName": "withAllConcreteClasses",
+      "liveSourceSHA256": "44c729c2428fc273c72a3aecee6a342f5b6f4860a6f4713bdf32312666b8f45a",
+      "upstreamSourceSHA256": "44c729c2428fc273c72a3aecee6a342f5b6f4860a6f4713bdf32312666b8f45a",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": true,
+      "methodClassName": "MAObject",
+      "methodName": "withAllConcreteClassesDo:",
+      "liveSourceSHA256": "2379ab100ef51602d07b6a6c292e3461c910c6b5806c07c3cc4f7baa95aa0719",
+      "upstreamSourceSHA256": "2379ab100ef51602d07b6a6c292e3461c910c6b5806c07c3cc4f7baa95aa0719",
+      "matchesUpstreamIgnoringWhitespace": true
+    }
+  ],
+  "policy": "All 8 inspected methods match the pinned upstream ignoring whitespace. Metadata now queries the runtime-registered class environment and subclass hierarchy. GT query results are projected to the classes registered natively; native registration is the host-platform bridge. No image source edits. No persistent image source edits."
+}

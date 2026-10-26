@@ -17,10 +17,19 @@ final class RecursiveTests: XCTestCase {
   }
   func value(_ any: Any?) throws -> Value { try decodeValue(data(XCTUnwrap(any))) }
   func canonical(_ any: Any) throws -> Data {
+    // These GT fixtures describe a selected class environment; other tests may register additional classes.
+    let coreURL = try XCTUnwrap(
+      Bundle.module.url(
+        forResource: "registration-core-classes", withExtension: "json", subdirectory: "Fixtures"))
+    let core = try JSONSerialization.jsonObject(with: Data(contentsOf: coreURL)) as! [[String: Any]]
+    let available = Set(core.map { $0["name"] as! String })
+
     var j = try object(any)
     var nodes = try array(j["descriptions"])
     for i in nodes.indices {
-      if let classes = nodes[i]["classes"] as? [String] { nodes[i]["classes"] = classes.sorted() }
+      if let classes = nodes[i]["classes"] as? [String] {
+        nodes[i]["classes"] = classes.filter { available.contains($0) }.sorted()
+      }
     }
     j["descriptions"] = nodes.sorted { ($0["id"] as! String) < ($1["id"] as! String) }
     return try data(j)
