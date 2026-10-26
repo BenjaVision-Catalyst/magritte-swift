@@ -41,6 +41,19 @@ public struct Accessor {
     self.steps = steps
   }
   public func check(limits: Limits = Limits()) throws { try checkAccessor(self, Work(limits), 0) }
+  public func canRead(_ model: Model, graph: Graph? = nil, limits: Limits = Limits()) throws -> Bool
+  {
+    let w = Work(limits)
+    try checkAccessor(self, w, 0)
+    return try accessCan(self, .model(model), graph, w, 0, false)
+  }
+  public func canWrite(_ model: Model, graph: Graph? = nil, limits: Limits = Limits()) throws
+    -> Bool
+  {
+    let w = Work(limits)
+    try checkAccessor(self, w, 0)
+    return try accessCan(self, .model(model), graph, w, 0, true)
+  }
   public func read(_ model: Model, graph: Graph? = nil, limits: Limits = Limits()) throws -> Value {
     let w = Work(limits)
     try checkAccessor(self, w, 0)
@@ -231,7 +244,7 @@ private func checkAccessor(_ a: Accessor, _ w: Work, _ depth: Int) throws {
   try require(
     ["MADictionaryAccessor", "MAPropertyAccessor", "MASelectorAccessor", "MAVariableAccessor"]
       .contains(a.className), "Unsupported accessor")
-  try require(!a.name.isEmpty, "Missing accessor name")
+  try require(a.className == "MASelectorAccessor" || !a.name.isEmpty, "Missing accessor name")
   try w.tick(depth, a.name.utf8.count + a.writeName.utf8.count)
   try require(
     a.className == "MASelectorAccessor" || a.writeName.isEmpty, "Unexpected write selector")
@@ -257,6 +270,7 @@ private func accessRead(_ a: Accessor, _ model: Model, _ graph: Graph?, _ w: Wor
   }
   if a.className == "MADelegatorAccessor" { return try accessRead(a.steps[0], model, graph, w, depth + 1) }
   if a.className != "MAChainAccessor" {
+    try require(a.className != "MASelectorAccessor" || !a.name.isEmpty, "Absent read selector")
     return try model.readSlot(strategy: a.className, name: a.name)
   }
   var target = model
@@ -279,6 +293,8 @@ private func accessWrite(
   }
   if a.className == "MADelegatorAccessor" { try accessWrite(a.steps[0], model, value, graph, w, depth + 1); return }
   if a.className != "MAChainAccessor" {
+    try require(
+      a.className != "MASelectorAccessor" || !a.writeName.isEmpty, "Absent write selector")
     try model.writeSlot(
       strategy: a.className, name: a.className == "MASelectorAccessor" ? a.writeName : a.name,
       value: value)
@@ -292,6 +308,43 @@ private func accessWrite(
   }
   try accessWrite(a.steps.last!, target, value, graph, w, depth + 1)
 }
+// Delay resolution for receiver-independent capabilities, including a nil result.
+private enum CapabilityTarget {
+  case model(Model), value(Value)
+  func resolve(_ graph: Graph?) throws -> Model {
+    switch self {
+    case .model(let model): return model
+    case .value(let value):
+      guard let graph else {
+        throw MagritteError("Chain capability traversal requires graph resolver")
+      }
+      return try graph.resolve(value)
+    }
+  }
+}
+private func accessCan(
+  _ a: Accessor, _ target: CapabilityTarget, _ graph: Graph?, _ w: Work, _ depth: Int,
+  _ writing: Bool
+) throws -> Bool {
+  try w.tick(depth)
+  if ["MADictionaryAccessor", "MAPropertyAccessor"].contains(a.className) { return true }
+  if a.className == "MANullAccessor" { return false }
+  if a.className == "MAIdentityAccessor" { return !writing }
+  if a.className == "MASelectorAccessor" {
+    let selector = writing ? a.writeName : a.name
+    return try !selector.isEmpty && target.resolve(graph).respondsToSelector(selector)
+  }
+  if a.className == "MAVariableAccessor" { return try target.resolve(graph).hasVariable(a.name) }
+  if a.className == "MADelegatorAccessor" {
+    return try accessCan(a.steps[0], target, graph, w, depth + 1, writing)
+  }
+  var current = target
+  for step in a.steps.dropLast() {
+    if try !accessCan(step, current, graph, w, depth + 1, false) { return false }
+    current = .value(try accessRead(step, current.resolve(graph), graph, w, depth + 1))
+  }
+  return try accessCan(a.steps.last!, current, graph, w, depth + 1, writing)
+}
 extension DictionaryModel {
   public func readSlot(strategy: String, name: String) throws -> Value {
     try require(strategy == "MADictionaryAccessor", "Dictionary slot requires dictionary accessor")
@@ -303,6 +356,11 @@ extension DictionaryModel {
   }
 }
 extension Description {
+  public func respondsToSelector(_ selector: String) -> Bool {
+    let writing = selector.hasSuffix(":")
+    return metadataSelector(
+      self, writing ? String(selector.dropLast()) : selector, writing: writing)
+  }
   public func readSlot(strategy: String, name: String) throws -> Value {
     if strategy == "MASelectorAccessor" {
       try require(metadataSelector(self, name, writing: false), "Unsupported description getter")
@@ -328,6 +386,14 @@ extension Description {
   }
 }
 extension NativeModel {
+  public func respondsToSelector(_ selector: String) -> Bool {
+    let key = "MASelectorAccessor:" + selector
+    return readers[key] != nil || writers[key] != nil
+  }
+  public func hasVariable(_ name: String) -> Bool {
+    let key = "MAVariableAccessor:" + name
+    return readers[key] != nil || writers[key] != nil
+  }
   public func readSlot(strategy: String, name: String) throws -> Value {
     try require(
       ["MASelectorAccessor", "MAVariableAccessor", "MAPropertyAccessor"].contains(strategy),
@@ -741,7 +807,8 @@ func accessorValue(_ any: Any, _ limits: Limits, _ depth: Int = 0) throws -> Acc
     a.steps = try list(j["steps"]).map { try accessorValue($0, limits, depth + 1) }
   case "MASelectorAccessor":
     try keys(j, ["class", "readSelector", "writeSelector"])
-    a.name = try identity(j["readSelector"])
+    a.name = try text(j["readSelector"])
+    if !a.name.isEmpty { _ = try identity(j["readSelector"]) }
     a.writeName = try text(j["writeSelector"])
     if !a.writeName.isEmpty { _ = try identity(j["writeSelector"]) }
   case "MADictionaryAccessor", "MAPropertyAccessor":

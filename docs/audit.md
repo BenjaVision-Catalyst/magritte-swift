@@ -55,6 +55,7 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Description property/selector accessors | I, R (selected fields) | retained seven-property bootstrap plus class-specific selector metadata graphs |
 | Local pluggable native accessors | I, X | C++ callbacks / Swift closures; native tests; export fails |
 | Selector/variable/identity/null/chain strategies | I, R (profile) | graph/3 strategies and explicit host bindings; delegator added in graph/4; other composite protocols N |
+| Accessor canRead/canWrite protocol | I, R (eight represented strategies) | host selector/variable discovery, absent slots, short-circuit/error/side-effect traces; accessor-capabilities.md |
 | Native local scalar conditions | I, X | executed natively; kind errors skip conditions; nil sentinel skips them |
 | MACondition selector/receiver, conjunction and negation objects | I, R (finite protocol) | labelled bounded graph/3 data; arbitrary messages/blocks and container conditions X |
 | Structured validation errors | I, R (leaf codes) | description identity, code, message; native validator accumulates leaf errors |
@@ -120,3 +121,5 @@ Phase 0.8 replaces class acceptance lists with runtime registration, typed nativ
 Phase 0.9 implements visitor dispatch for the represented description hierarchy and the base `MADescriptionBuilder` protocol. [visitors.md](visitors.md) records the fresh audit, 55 method fingerprints, live behavioral traces and graph/4 round trips. Dynamic option providers, mutable collection identity, accessor capabilities/inferred labels, scalar domains and full builder/cache/interpreter protocols remain separate gaps.
 
 Phase 0.10 implements native `MADynamicOptions` and explicit Options collection/provider results. [dynamic-options.md](dynamic-options.md) records the audit, 25 matching Magritte source fingerprints, actual kernel wrapping behavior, an explicit GT String prefix projection, callback traces and graph/4 snapshot round trips. Grouping, mutable collection identity, accessor capabilities/inferred labels, scalar domains and full cache/interpreter protocols remain open.
+
+Phase 0.11 implements capability discovery for the eight represented accessors and independent absent selector slots. [accessor-capabilities.md](accessor-capabilities.md) records 54 GT cases, 15 matching source fingerprints and accessor-record round trips. Composite/pluggable accessor objects, inferred labels, arbitrary host reflection and the other documented gaps remain open.

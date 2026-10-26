@@ -3,6 +3,12 @@
   "path": "conformance",
   "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
   "files": {
+    "accessor-capabilities-cpp-roundtrip-reference.json": "e0d23953a4e9b6f24ccabda7c28f570f4fa50412364c2289a2e433c7bcc3dc0b",
+    "accessor-capabilities-live-methods.json": "ce4c2b1df2ea353e38998a62310d9ab50ef405e4d6328878c6a331d42229bc2d",
+    "accessor-capabilities-reference.json": "e0d23953a4e9b6f24ccabda7c28f570f4fa50412364c2289a2e433c7bcc3dc0b",
+    "accessor-capabilities-replay.json": "4a1ef0515ca81b40dc602b1b2db8f196dde027a35b427cc0bceeb417a6459066",
+    "accessor-capabilities-roundtrip-replay.json": "9765ad9b8a6f010f566e3de015f3450e86e4e7d654b91a48f8c2e1e716fc7749",
+    "accessor-capabilities-swift-roundtrip-reference.json": "e0d23953a4e9b6f24ccabda7c28f570f4fa50412364c2289a2e433c7bcc3dc0b",
     "bootstrap-class-registry.json": "c5fe475fc5d80d0164a12292c47ae38c24e9b300765d467ac118b0d66a6eb8ce",
     "bootstrap-live-methods.json": "3009589d1f551ea638c155965af100c2af6c845d2c0b090e3e2f27c454ebf479",
     "bootstrap-reference.json": "f6e6a0c104f88bd96b3b217f95fd73af1674b6e234430c67cbf9de69fc3ff78b",

@@ -321,6 +321,15 @@ private final class DescriptionBinding: Model {
     }
     return binding.target
   }
+  func respondsToSelector(_ selector: String) throws -> Bool {
+    _ = try state()
+    if ["accessor", "accessor:", "name", "name:"].contains(selector) { return true }
+    if ["classes", "classes:"].contains(selector) && target.isRelation { return true }
+    if ["children", "setChildren:"].contains(selector) && target.isContainer { return true }
+    if ["reference", "reference:"].contains(selector) && target.isReference { return true }
+    if ["optionsTextual", "optionsTextual:"].contains(selector) && target.isOption { return true }
+    return target.respondsToSelector(selector)
+  }
   func readSlot(strategy: String, name: String) throws -> Value {
     let s = try state()
     if strategy != "MASelectorAccessor" {
@@ -480,10 +489,29 @@ private final class AccessorBinding: Model {
   func kindOf(_ cls: String) -> Bool {
     ClassRegistry.shared.includesBehavior(target.value.className, cls)
   }
+  func respondsToSelector(_ selector: String) throws -> Bool {
+    _ = try state()
+    let cls = target.value.className
+    if ["key", "key:"].contains(selector)
+      && ["MADictionaryAccessor", "MAPropertyAccessor"].contains(cls)
+    {
+      return true
+    }
+    if ["selector", "selector:"].contains(selector) && cls == "MASelectorAccessor" { return true }
+    if ["next", "next:"].contains(selector)
+      && ["MAChainAccessor", "MADelegatorAccessor"].contains(cls)
+    {
+      return true
+    }
+    return ["accessor", "accessor:"].contains(selector) && cls == "MAChainAccessor"
+  }
   func readSlot(strategy: String, name: String) throws -> Value {
     let s = try state()
     try require(strategy == "MASelectorAccessor", "Accessor metadata requires selector access")
     let cls = target.value.className
+    if name == "selector" && cls == "MASelectorAccessor" && target.value.name.isEmpty {
+      return .undefined
+    }
     if (name == "key" && ["MADictionaryAccessor", "MAPropertyAccessor"].contains(cls))
       || (name == "selector" && cls == "MASelectorAccessor")
     {

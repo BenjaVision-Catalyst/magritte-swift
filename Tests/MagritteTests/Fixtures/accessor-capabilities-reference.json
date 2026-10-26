@@ -1,0 +1,1972 @@
+{
+	"absentSelectorMetadataIsNil" : true,
+	"cases" : [
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "field"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "MADictionaryAccessor-probe",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "field"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "MADictionaryAccessor-plain",
+			"model" : "plain",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADictionaryAccessor",
+				"key" : "field"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "MADictionaryAccessor-dictionary",
+			"model" : "dictionary",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAPropertyAccessor",
+				"key" : "field"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "MAPropertyAccessor-probe",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAPropertyAccessor",
+				"key" : "field"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "MAPropertyAccessor-plain",
+			"model" : "plain",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAPropertyAccessor",
+				"key" : "field"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "MAPropertyAccessor-dictionary",
+			"model" : "dictionary",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAIdentityAccessor"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "MAIdentityAccessor-probe",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAIdentityAccessor"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "MAIdentityAccessor-plain",
+			"model" : "plain",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAIdentityAccessor"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "MAIdentityAccessor-dictionary",
+			"model" : "dictionary",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"uuid" : {
+					"type" : "nil"
+				},
+				"class" : "MANullAccessor"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "MANullAccessor-probe",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"uuid" : {
+					"type" : "nil"
+				},
+				"class" : "MANullAccessor"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "MANullAccessor-plain",
+			"model" : "plain",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"uuid" : {
+					"type" : "nil"
+				},
+				"class" : "MANullAccessor"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "MANullAccessor-dictionary",
+			"model" : "dictionary",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "contents:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "contents"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "selector",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "contents:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "contents"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "selector-plain",
+			"model" : "plain",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "contents"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "getter-only",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "contents"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "getter-only-plain",
+			"model" : "plain",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "contents:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : ""
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "setter-only",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "contents:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : ""
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "setter-only-plain",
+			"model" : "plain",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "",
+				"class" : "MASelectorAccessor",
+				"readSelector" : ""
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "absent-selectors",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "",
+				"class" : "MASelectorAccessor",
+				"readSelector" : ""
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "absent-selectors-plain",
+			"model" : "plain",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "contents:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "missing"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "unknown-getter",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "contents:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "missing"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "unknown-getter-plain",
+			"model" : "plain",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "missing:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "contents"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "unknown-setter",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "missing:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "contents"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "unknown-setter-plain",
+			"model" : "plain",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "contents",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "contents:"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "swapped-arity",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "contents",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "contents:"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "swapped-arity-plain",
+			"model" : "plain",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"name" : "contents",
+				"class" : "MAVariableAccessor"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "variable",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"name" : "contents",
+				"class" : "MAVariableAccessor"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "variable-plain",
+			"model" : "plain",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"name" : "failRead",
+				"class" : "MAVariableAccessor"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "local-variable",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"name" : "failRead",
+				"class" : "MAVariableAccessor"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "local-variable-plain",
+			"model" : "plain",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"name" : "missing",
+				"class" : "MAVariableAccessor"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "missing-variable",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"name" : "missing",
+				"class" : "MAVariableAccessor"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "missing-variable-plain",
+			"model" : "plain",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "label:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "label"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "description-label",
+			"model" : "description",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"writeSelector" : "type:",
+				"class" : "MASelectorAccessor",
+				"readSelector" : "type"
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "description-type",
+			"model" : "description",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADelegatorAccessor",
+				"next" : {
+					"writeSelector" : "contents:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "contents"
+				}
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "delegated",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MADelegatorAccessor",
+				"next" : {
+					"uuid" : {
+						"type" : "nil"
+					},
+					"class" : "MANullAccessor"
+				}
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "delegated-null",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"writeSelector" : "",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "contents"
+					},
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "field"
+					}
+				]
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					1,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "chain",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					1,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "child"
+					},
+					{
+						"writeSelector" : "contents:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "contents"
+					}
+				]
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "chain-terminal-selector",
+			"model" : "dictionary",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"writeSelector" : "",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "contents"
+					},
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "child"
+					},
+					{
+						"writeSelector" : "",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "contents"
+					}
+				]
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					1,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "chain-three",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					1,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"writeSelector" : "contents:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "missing"
+					},
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "field"
+					}
+				]
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "chain-head-missing",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					},
+					{
+						"writeSelector" : "contents:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "contents"
+					}
+				]
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "chain-head-null",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"name" : "contents",
+						"class" : "MAVariableAccessor"
+					},
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "field"
+					}
+				]
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "chain-head-variable",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"writeSelector" : "contents:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "contents"
+					},
+					{
+						"writeSelector" : "",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "missing"
+					},
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "field"
+					}
+				]
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					1,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "chain-intermediate-missing",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					1,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"writeSelector" : "contents:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "contents"
+					},
+					{
+						"class" : "MAIdentityAccessor"
+					}
+				]
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					1,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "chain-terminal-identity",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					1,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"writeSelector" : "contents:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "contents"
+					},
+					{
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					}
+				]
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					1,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "chain-terminal-null",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					1,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"writeSelector" : "contents:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "contents"
+					},
+					{
+						"writeSelector" : "",
+						"class" : "MASelectorAccessor",
+						"readSelector" : ""
+					}
+				]
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					1,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "chain-terminal-empty",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					1,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"writeSelector" : "contents:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "contents"
+					},
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "field"
+					}
+				]
+			},
+			"failRead" : false,
+			"nilContents" : true,
+			"write" : {
+				"reads" : [
+					1,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "chain-nil-dictionary",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					1,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"writeSelector" : "contents:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "contents"
+					},
+					{
+						"class" : "MAIdentityAccessor"
+					}
+				]
+			},
+			"failRead" : false,
+			"nilContents" : true,
+			"write" : {
+				"reads" : [
+					1,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "chain-nil-identity",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					1,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"writeSelector" : "contents:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "contents"
+					},
+					{
+						"uuid" : {
+							"type" : "nil"
+						},
+						"class" : "MANullAccessor"
+					}
+				]
+			},
+			"failRead" : false,
+			"nilContents" : true,
+			"write" : {
+				"reads" : [
+					1,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "chain-nil-null",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					1,
+					0
+				],
+				"value" : false,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"writeSelector" : "contents:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "contents"
+					},
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "field"
+					}
+				]
+			},
+			"failRead" : true,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					1,
+					0
+				],
+				"writes" : [
+					0,
+					0
+				],
+				"error" : "MAError"
+			},
+			"name" : "chain-failing-read",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					1,
+					0
+				],
+				"writes" : [
+					0,
+					0
+				],
+				"error" : "MAError"
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "field"
+					},
+					{
+						"writeSelector" : "contents:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "contents"
+					}
+				]
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					0,
+					0
+				],
+				"writes" : [
+					0,
+					0
+				],
+				"error" : "MessageNotUnderstood"
+			},
+			"name" : "chain-wrong-model-read",
+			"model" : "plain",
+			"read" : {
+				"reads" : [
+					0,
+					0
+				],
+				"writes" : [
+					0,
+					0
+				],
+				"error" : "MessageNotUnderstood"
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"class" : "MAChainAccessor",
+						"steps" : [
+							{
+								"writeSelector" : "",
+								"class" : "MASelectorAccessor",
+								"readSelector" : "contents"
+							},
+							{
+								"class" : "MADictionaryAccessor",
+								"key" : "child"
+							}
+						]
+					},
+					{
+						"writeSelector" : "contents:",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "contents"
+					}
+				]
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					2,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "chain-nested-head",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					2,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"writeSelector" : "",
+						"class" : "MASelectorAccessor",
+						"readSelector" : "contents"
+					},
+					{
+						"class" : "MADelegatorAccessor",
+						"next" : {
+							"class" : "MADictionaryAccessor",
+							"key" : "field"
+						}
+					}
+				]
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					1,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "chain-terminal-delegator",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					1,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		},
+		{
+			"accessor" : {
+				"class" : "MAChainAccessor",
+				"steps" : [
+					{
+						"class" : "MADelegatorAccessor",
+						"next" : {
+							"writeSelector" : "",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "contents"
+						}
+					},
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "field"
+					}
+				]
+			},
+			"failRead" : false,
+			"nilContents" : false,
+			"write" : {
+				"reads" : [
+					1,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			},
+			"name" : "chain-head-delegator",
+			"model" : "probe",
+			"read" : {
+				"reads" : [
+					1,
+					0
+				],
+				"value" : true,
+				"writes" : [
+					0,
+					0
+				]
+			}
+		}
+	],
+	"upstreamRevision" : "d67f318686b7779aed79416db121e257d1191f2e"
+}

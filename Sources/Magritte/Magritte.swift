@@ -41,7 +41,9 @@ public struct ValidationError: Equatable {
 public protocol Model: AnyObject {
     var usesStoredContainerValues: Bool { get }
     func kindOf(_ name: String) -> Bool
-    func readSlot(strategy: String, name: String) throws -> Value
+  func respondsToSelector(_ selector: String) throws -> Bool
+  func hasVariable(_ name: String) throws -> Bool
+  func readSlot(strategy: String, name: String) throws -> Value
     func writeSlot(strategy: String, name: String, value: Value) throws
     func read(using description: Description) throws -> Value
     // Raw Magritte model access: validation and UI flags belong to interpreters.
@@ -50,7 +52,9 @@ public protocol Model: AnyObject {
 public extension Model {
     var usesStoredContainerValues: Bool { false }
     func kindOf(_ name: String) -> Bool { ClassRegistry.shared.includesBehavior("Object", name) }
-    func readSlot(strategy: String, name: String) throws -> Value { throw MagritteError("Unbound accessor read") }
+  func respondsToSelector(_ selector: String) throws -> Bool { false }
+  func hasVariable(_ name: String) throws -> Bool { false }
+  func readSlot(strategy: String, name: String) throws -> Value { throw MagritteError("Unbound accessor read") }
     func writeSlot(strategy: String, name: String, value: Value) throws { throw MagritteError("Unbound accessor write") }
 }
 public struct Condition {
