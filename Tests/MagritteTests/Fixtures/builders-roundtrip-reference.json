@@ -1,0 +1,84 @@
+[
+	{
+		"descriptions" : 4,
+		"validated" : true,
+		"reads" : [
+			{
+				"values" : {
+					"name" : {
+						"value" : "Ada",
+						"type" : "string"
+					},
+					"flat.2" : {
+						"value" : "P",
+						"type" : "string"
+					},
+					"flat.4" : {
+						"value" : "S",
+						"type" : "string"
+					}
+				},
+				"text" : "P-Ada-S",
+				"priorities" : [
+					{
+						"value" : "0",
+						"type" : "integer"
+					},
+					{
+						"value" : {
+							"denominator" : "100",
+							"numerator" : "10001"
+						},
+						"type" : "fraction"
+					},
+					{
+						"value" : "200",
+						"type" : "integer"
+					}
+				]
+			}
+		],
+		"port" : "cpp"
+	},
+	{
+		"descriptions" : 4,
+		"validated" : true,
+		"reads" : [
+			{
+				"values" : {
+					"name" : {
+						"value" : "Ada",
+						"type" : "string"
+					},
+					"flat.2" : {
+						"value" : "P",
+						"type" : "string"
+					},
+					"flat.4" : {
+						"value" : "S",
+						"type" : "string"
+					}
+				},
+				"text" : "P-Ada-S",
+				"priorities" : [
+					{
+						"value" : "0",
+						"type" : "integer"
+					},
+					{
+						"value" : {
+							"denominator" : "100",
+							"numerator" : "10001"
+						},
+						"type" : "fraction"
+					},
+					{
+						"value" : "200",
+						"type" : "integer"
+					}
+				]
+			}
+		],
+		"port" : "swift"
+	}
+]

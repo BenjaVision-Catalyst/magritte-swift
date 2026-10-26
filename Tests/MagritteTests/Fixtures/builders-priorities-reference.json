@@ -1,0 +1,2071 @@
+{
+	"comparisons" : [
+		{
+			"left" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"equal" : true,
+			"right" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "100",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "3fb999999999999a",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "3fe0000000000000",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "bfb999999999999a",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "bfe0000000000000",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "01a56e1fc2f8f359",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "7e37e43c8800759c",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "fe37e43c8800759c",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "-10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "-10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "-10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "-10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "-10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "100",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "-10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "-10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "3fb999999999999a",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "-10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "3fe0000000000000",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "-10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "bfb999999999999a",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "-10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "bfe0000000000000",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "-10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "01a56e1fc2f8f359",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "-10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "7e37e43c8800759c",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "-10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "fe37e43c8800759c",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "-1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "-1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "-1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "-1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "-1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "100",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "-1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "-1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "3fb999999999999a",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "-1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "3fe0000000000000",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "-1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "bfb999999999999a",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "-1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "bfe0000000000000",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "-1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "01a56e1fc2f8f359",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "-1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "7e37e43c8800759c",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "-1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "fe37e43c8800759c",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"equal" : true,
+			"right" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "100",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "3fb999999999999a",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "3fe0000000000000",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "bfb999999999999a",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "bfe0000000000000",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "01a56e1fc2f8f359",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "7e37e43c8800759c",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "fe37e43c8800759c",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "100",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "3fb999999999999a",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "3fe0000000000000",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "bfb999999999999a",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "bfe0000000000000",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "01a56e1fc2f8f359",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "7e37e43c8800759c",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "fe37e43c8800759c",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "10",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "10",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "10",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "10",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "10",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "100",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "10",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "10",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "3fb999999999999a",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "10",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "3fe0000000000000",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "10",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "bfb999999999999a",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "10",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "bfe0000000000000",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "10",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "01a56e1fc2f8f359",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "10",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "7e37e43c8800759c",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "10",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "fe37e43c8800759c",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "2",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "2",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "2",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "2",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "2",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "100",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "2",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "2",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "3fb999999999999a",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "2",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : true,
+			"right" : {
+				"value" : "3fe0000000000000",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "2",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "bfb999999999999a",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "2",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "bfe0000000000000",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "2",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "01a56e1fc2f8f359",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "2",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "7e37e43c8800759c",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "2",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "fe37e43c8800759c",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "100",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "3fb999999999999a",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "3fe0000000000000",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "bfb999999999999a",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "bfe0000000000000",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "01a56e1fc2f8f359",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "7e37e43c8800759c",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "10001"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "fe37e43c8800759c",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "100",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"equal" : true,
+			"right" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "3fb999999999999a",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "3fe0000000000000",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "bfb999999999999a",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "bfe0000000000000",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "01a56e1fc2f8f359",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "7e37e43c8800759c",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "fe37e43c8800759c",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "9223372036854775807",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "-9223372036854775808",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "9223372036854775807",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "-1",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "9223372036854775807",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "9223372036854775807",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "1",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "9223372036854775807",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "100",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "9223372036854775807",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "9223372036854775807",
+				"type" : "integer"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "9223372036854775807",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "3fb999999999999a",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "9223372036854775807",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "3fe0000000000000",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "9223372036854775807",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "bfb999999999999a",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "9223372036854775807",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "bfe0000000000000",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "9223372036854775807",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "01a56e1fc2f8f359",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "9223372036854775807",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "7e37e43c8800759c",
+				"type" : "float"
+			},
+			"greater" : false,
+			"less" : true
+		},
+		{
+			"left" : {
+				"value" : {
+					"denominator" : "9223372036854775807",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"equal" : false,
+			"right" : {
+				"value" : "fe37e43c8800759c",
+				"type" : "float"
+			},
+			"greater" : true,
+			"less" : false
+		}
+	],
+	"arithmetic" : [
+		{
+			"parent" : {
+				"value" : "100",
+				"type" : "integer"
+			},
+			"result" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "10001"
+				},
+				"type" : "fraction"
+			},
+			"child" : {
+				"value" : "10",
+				"type" : "integer"
+			}
+		},
+		{
+			"parent" : {
+				"value" : "100",
+				"type" : "integer"
+			},
+			"result" : {
+				"value" : {
+					"denominator" : "50",
+					"numerator" : "5001"
+				},
+				"type" : "fraction"
+			},
+			"child" : {
+				"value" : "20",
+				"type" : "integer"
+			}
+		},
+		{
+			"parent" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "10001"
+				},
+				"type" : "fraction"
+			},
+			"result" : {
+				"value" : {
+					"denominator" : "25",
+					"numerator" : "2501"
+				},
+				"type" : "fraction"
+			},
+			"child" : {
+				"value" : "30",
+				"type" : "integer"
+			}
+		},
+		{
+			"parent" : {
+				"value" : "-100",
+				"type" : "integer"
+			},
+			"result" : {
+				"value" : {
+					"denominator" : "100",
+					"numerator" : "-10001"
+				},
+				"type" : "fraction"
+			},
+			"child" : {
+				"value" : "-10",
+				"type" : "integer"
+			}
+		},
+		{
+			"parent" : {
+				"value" : "0",
+				"type" : "integer"
+			},
+			"result" : {
+				"value" : {
+					"denominator" : "1000",
+					"numerator" : "1"
+				},
+				"type" : "fraction"
+			},
+			"child" : {
+				"value" : "1",
+				"type" : "integer"
+			}
+		},
+		{
+			"parent" : {
+				"value" : "100",
+				"type" : "integer"
+			},
+			"result" : {
+				"value" : "100",
+				"type" : "integer"
+			},
+			"child" : {
+				"value" : "0",
+				"type" : "integer"
+			}
+		}
+	]
+}

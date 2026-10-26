@@ -55,6 +55,13 @@ public final class ClassRegistry: @unchecked Sendable {
       ClassInfo(
         name: "MACachedMemento", superclass: "MAMemento", isAbstract: false, label: "Cached Memento"
       ),
+      ClassInfo(name: "Fraction", superclass: "Number", isAbstract: false, label: "Fraction"),
+      ClassInfo(
+        name: "MAComposedDescriptionBuilder", superclass: "MADescriptionBuilder", isAbstract: false,
+        label: "Composed Description Builder"),
+      ClassInfo(
+        name: "MADescriptionFlattener", superclass: "MADescriptionBuilder", isAbstract: false,
+        label: "Description Flattener"),
       ClassInfo(
         name: "MACompositeAccessor", superclass: "MAChainAccessor", isAbstract: false,
         label: "Composite Accessor"),

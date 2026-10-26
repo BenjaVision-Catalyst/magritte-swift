@@ -3,6 +3,7 @@ import CoreFoundation
 
 public indirect enum Value: Equatable {
     case undefined, boolean(Bool), integer(Int64), string(String), array([Value])
+  case fraction(numerator: Int64, denominator: Int64)
   case conflict(CompositeConflict)
   case reference(String), character(String), collection(kind: String, elements: [Value]), symbol(
     String), float(Double), classValue(String)
@@ -144,8 +145,9 @@ open class Description: Model {
         case "visible": return .boolean(true)
         case "required", "readOnly", "ordered", "distinct", "definitive", "sorted", "extensible": return .boolean(false)
         case "shouldCacheDefault": return .boolean(isRelation && isMultiple)
-        case "priority": return .integer(0)
-        case "undefined": return .string("")
+    case "descriptionBuilders": return .array([])
+    case "priority": return .integer(0)
+    case "undefined": return .string("")
     case "label":
       let result = Value.string(try defaultLabel(limits: limits));
       try checkLocalValue(result, limits: limits); return result
@@ -185,9 +187,13 @@ open class Description: Model {
     public func orderedChildren() throws -> [Description] {
         if className != "MAPriorityContainer" { return children }
         // Stable ties are a documented port policy, not a claim about upstream ties.
-        let ranked = try children.enumerated().map { ($0.offset, $0.element, try $0.element.priority()) }
-        return ranked.sorted { $0.2 == $1.2 ? $0.0 < $1.0 : $0.2 < $1.2 }.map { $0.1 }
+    let ranked = try children.enumerated().map {
+      ($0.offset, $0.element, try $0.element.priorityValue())
     }
+    return try ranked.sorted {
+      let c = try compareNumbers($0.2, $1.2); return c == 0 ? $0.0 < $1.0 : c < 0
+    }.map { $0.1 }
+  }
   public func read(using description: Description) throws -> Value {
     if description.accessor != nil || description.accessorObject != nil {
       return try description.effectiveAccessor.read(self)
@@ -246,11 +252,15 @@ func supported(_ d: Description) throws {
     try require(["MAContainer", "MAPriorityContainer", "MAStringDescription", "MASymbolDescription", "MAMemoDescription", "MAPasswordDescription", "MATokenDescription", "MANumberDescription", "MABooleanDescription", "MAToOneRelationDescription", "MAToManyRelationDescription", "MAToManyScalarRelationDescription", "MASingleOptionDescription", "MAMultipleOptionDescription", "MAClassDescription"].contains(d.className), "Unsupported description class: \(d.className)")
     for (k, v) in d.properties {
         switch k {
-        case "required", "readOnly", "visible", "ordered", "distinct", "definitive", "sorted", "extensible", "shouldCacheDefault":
-            guard case .boolean = v else { throw MagritteError("Expected Boolean property: \(k)") }
-        case "separators", "trueString", "falseString":
-            try require((k == "separators" && d.className == "MATokenDescription") || (k != "separators" && d.className == "MABooleanDescription"), "Text setting does not apply")
-            guard case .string = v else { throw MagritteError("Expected text setting") }
+    case "canExpand", "required", "readOnly", "visible", "ordered", "distinct", "definitive",
+      "sorted", "extensible", "shouldCacheDefault":
+      guard case .boolean = v else { throw MagritteError("Expected Boolean property: \(k)") }
+    case "separators", "trueString", "falseString":
+      try require(
+        (k == "separators" && d.className == "MATokenDescription")
+          || (k != "separators" && d.className == "MABooleanDescription"),
+        "Text setting does not apply")
+      guard case .string = v else { throw MagritteError("Expected text setting") }
         case "thousandsSeparator":
             try require(d.className == "MANumberDescription", "Separator requires number")
             guard case .character(let c) = v, c.unicodeScalars.count == 1 else { throw MagritteError("Expected separator character") }
@@ -258,16 +268,27 @@ func supported(_ d: Description) throws {
             try require(d.className == "MAMemoDescription", "Line count requires memo")
             guard case .integer = v else { throw MagritteError("Expected memo line count") }
         case "priority":
-            guard case .integer = v else { throw MagritteError("Expected integer priority") }
-        case "min", "max":
-            try require(d.className == "MANumberDescription", "Range requires number description")
-            try require(v.isNil || isNumber(v), "Unsupported numeric bound")
-            if case .float(let n) = v { try require(n.isFinite, "Non-finite numeric bound") }
+      try require(isNumber(v), "Expected numeric priority")
+    case "min", "max":
+      try require(d.className == "MANumberDescription", "Range requires number description")
+      try require(v.isNil || isNumber(v), "Unsupported numeric bound")
+      if case .float(let n) = v { try require(n.isFinite, "Non-finite numeric bound") }
         case "label", "comment", "group", "undefined":
             if !v.isNil, case .string = v {} else if !v.isNil { throw MagritteError("Expected text property: \(k)") }
         case "stringReader", "stringWriter", "validator":
             let expected = k == "stringReader" ? "MAStringReader" : k == "stringWriter" ? "MAStringWriter" : "MAValidatorVisitor"
             try require(v == .classValue(expected), "Unsupported interpreter class override")
+    case "descriptionBuilder":
+      if !v.isNil {
+        guard case .classValue = v else { throw MagritteError("Builder must be Class or nil") }
+      }
+    case "descriptionBuilders":
+      guard d.isContainer, case .array(let entries) = v else {
+        throw MagritteError("Builders require container Array")
+      };
+      for e in entries {
+        guard case .classValue = e else { throw MagritteError("Builder entry must be Class") }
+      }
     case "kind":
       if !v.isNil {
         guard case .classValue(let name) = v, knownClass(name) else {
@@ -413,10 +434,16 @@ func value(_ any: Any, _ limits: Limits, _ depth: Int = 0) throws -> Value {
     try keys(d, ["type", "value"])
     guard let v = d["value"] else { throw MagritteError("Missing value") }
     switch type {
-    case "string": return .string(try text(v))
-    case "class":
-        let name = try identity(v); try require(knownClass(name), "Unknown portable class"); return .classValue(name)
-    case "symbol": return .symbol(try text(v))
+  case "fraction":
+    let f = try dictionary(v); try keys(f, ["numerator", "denominator"]);
+    guard let n = Int64(try text(f["numerator"])), let d = Int64(try text(f["denominator"])),
+      String(n) == (f["numerator"] as? String), String(d) == (f["denominator"] as? String)
+    else { throw MagritteError("Noncanonical fraction") }; return try Value.rational(n, d)
+  case "string": return .string(try text(v))
+  case "class":
+    let name = try identity(v); try require(knownClass(name), "Unknown portable class");
+    return .classValue(name)
+  case "symbol": return .symbol(try text(v))
     case "float": return .float(try floatFromBits(text(v)))
     case "reference": return .reference(try identity(v))
     case "character":
@@ -452,6 +479,9 @@ func wire(_ v: Value, _ limits: Limits, _ depth: Int = 0) throws -> [String: Any
     case .integer(let i): return ["type": "integer", "value": String(i)]
     case .string(let s): return ["type": "string", "value": s]
     case .symbol(let s): return ["type": "symbol", "value": s]
+  case .fraction:
+    let f = try fractionOf(v);
+    return ["type": "fraction", "value": ["numerator": String(f.0), "denominator": String(f.1)]]
   case .conflict:
     throw MagritteError("Composite conflicts are local objects and cannot be exported")
   case .classValue(let name):
@@ -494,7 +524,7 @@ public final class Graph {
             func legacy(_ node: Any) throws {
                 if let object = node as? [String: Any] {
           try require(
-            (object["type"] as? String) != "class"
+            !["class", "fraction"].contains((object["type"] as? String) ?? "")
               && !["MADelegatorAccessor", "MACompositeAccessor"].contains(
                 (object["class"] as? String) ?? ""),
             "Class values and delegators require graph/4")

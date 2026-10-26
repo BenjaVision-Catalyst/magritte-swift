@@ -1,0 +1,136 @@
+{
+  "createClassesAndTraits": {
+    "classes": [
+      {
+        "targetClassName": "MACodexPhase16Model",
+        "superclassName": "Object",
+        "package": "Magritte-Codex-Phase16-Probes",
+        "instanceVariables": "schema values"
+      },
+      {
+        "targetClassName": "MACodexPhase16Step",
+        "superclassName": "Object",
+        "package": "Magritte-Codex-Phase16-Probes",
+        "instanceVariables": "tag events replacement fail"
+      },
+      {
+        "targetClassName": "MACodexPhase16String",
+        "superclassName": "MAStringDescription",
+        "package": "Magritte-Codex-Phase16-Probes",
+        "instanceVariables": ""
+      },
+      {
+        "targetClassName": "MACodexPhase16Relation",
+        "superclassName": "MAToOneRelationDescription",
+        "package": "Magritte-Codex-Phase16-Probes",
+        "instanceVariables": ""
+      }
+    ],
+    "traits": []
+  },
+  "compileMethods": {
+    "methods": [
+      {
+        "methodClassName": "MACodexPhase16Model",
+        "classSide": false,
+        "sourceCode": "schema: s values: v\n schema := s. values := v",
+        "protocol": "codex-phase16-probe"
+      },
+      {
+        "methodClassName": "MACodexPhase16Model",
+        "classSide": false,
+        "sourceCode": "magritteDescription\n ^ schema",
+        "protocol": "codex-phase16-probe"
+      },
+      {
+        "methodClassName": "MACodexPhase16Model",
+        "classSide": false,
+        "sourceCode": "at: key ifAbsent: block\n (values at: #_events ifAbsent: [ nil ]) ifNotNil: [ :e | e add: (values at: #_tag), ':', key asString ].\n ^ values at: key ifAbsent: block",
+        "protocol": "codex-phase16-probe"
+      },
+      {
+        "methodClassName": "MACodexPhase16Model",
+        "classSide": false,
+        "sourceCode": "at: key put: v\n ^ values at: key put: v",
+        "protocol": "codex-phase16-probe"
+      },
+      {
+        "methodClassName": "MACodexPhase16Step",
+        "classSide": false,
+        "sourceCode": "tag: t events: e replacement: r fail: f\n tag := t. events := e. replacement := r. fail := f",
+        "protocol": "codex-phase16-probe"
+      },
+      {
+        "methodClassName": "MACodexPhase16Step",
+        "classSide": false,
+        "sourceCode": "buildFrom: d target: t model: m\n events add: { tag. d label. t. m }. fail ifTrue: [ self error: 'step failure' ]. d label: d label, tag. ^ replacement ifNil: [ d ]",
+        "protocol": "codex-phase16-probe"
+      },
+      {
+        "methodClassName": "MACodexPhase16String",
+        "classSide": false,
+        "sourceCode": "tabDisplay\n ^ self propertyAt: #probeTab ifAbsent: [ false ]",
+        "protocol": "codex-phase16-probe"
+      },
+      {
+        "methodClassName": "MACodexPhase16String",
+        "classSide": false,
+        "sourceCode": "groupExpandOnLabel\n ^ self propertyAt: #probeGroup ifAbsent: [ false ]",
+        "protocol": "codex-phase16-probe"
+      },
+      {
+        "methodClassName": "MACodexPhase16String",
+        "classSide": false,
+        "sourceCode": "addToAccessor: head\n self accessor: (MAChainAccessor on: self accessor accessor: head)",
+        "protocol": "codex-phase16-probe"
+      },
+      {
+        "methodClassName": "MACodexPhase16Relation",
+        "classSide": false,
+        "sourceCode": "tabDisplay\n ^ self propertyAt: #probeTab ifAbsent: [ false ]",
+        "protocol": "codex-phase16-probe"
+      },
+      {
+        "methodClassName": "MACodexPhase16Relation",
+        "classSide": false,
+        "sourceCode": "groupExpandOnLabel\n ^ self propertyAt: #probeGroup ifAbsent: [ false ]",
+        "protocol": "codex-phase16-probe"
+      },
+      {
+        "methodClassName": "MACodexPhase16Relation",
+        "classSide": false,
+        "sourceCode": "addToAccessor: head\n self accessor: (MAChainAccessor on: self accessor accessor: head)",
+        "protocol": "codex-phase16-probe"
+      }
+    ]
+  },
+  "removeClass": [
+    {
+      "className": "MACodexPhase16Relation"
+    },
+    {
+      "className": "MACodexPhase16String"
+    },
+    {
+      "className": "MACodexPhase16Step"
+    },
+    {
+      "className": "MACodexPhase16Model"
+    }
+  ],
+  "purpose": "Temporary native host protocol probes; not additions to upstream Magritte",
+  "cleanupVerified": {
+    "classesAbsent": [
+      "MACodexPhase16Relation",
+      "MACodexPhase16String",
+      "MACodexPhase16Step",
+      "MACodexPhase16Model"
+    ],
+    "upstreamHooksStillAbsent": [
+      "tabDisplay",
+      "groupExpandOnLabel",
+      "addToAccessor:"
+    ],
+    "verification": "GT MCP returned #(false false false false) and #(false false false) after removal"
+  }
+}

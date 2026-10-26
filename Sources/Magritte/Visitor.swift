@@ -163,13 +163,16 @@ open class DescriptionBuilder: Visitor {
   public var target: Model?
   public var model: Model?
   public var priority: Int64 = 0
-  public private(set) var builtDescription: Description?
+  public var environment = BuilderEnvironment()
+  public var targetValue: Value?
+  public internal(set) var builtDescription: Description?
   private var owners: [ObjectIdentifier: Description] = [:]
   private var identities: [String: ObjectIdentifier] = [:]
-  private var retained: [Description] = []
-  private var prefix = ""
+  var retained: [Description] = []
+  var prefix = ""
   private var serial = 0
-  private func remember(_ source: Description) throws {
+  func remember(_ source: Description, refresh: Bool = false) throws {
+    var scanned = Set<ObjectIdentifier>()
     var pending = [(source, 0)]
     var work = 0
     while let (d, depth) = pending.popLast() {
@@ -177,14 +180,15 @@ open class DescriptionBuilder: Visitor {
       try require(
         work <= limits.visits && depth <= limits.depth, "Builder ownership work/depth limit")
       let key = ObjectIdentifier(d)
-      if owners[key] != nil { continue }
+      if !scanned.insert(key).inserted { continue }
+      if owners[key] != nil && !refresh { continue }
       try require(identities[d.id] == nil || identities[d.id] == key, "Builder identity collision")
       try require(
-        owners.count < limits.nodes && d.children.count <= limits.items,
+        (owners[key] != nil || owners.count < limits.nodes) && d.children.count <= limits.items,
         "Builder retained node/item limit")
+      if owners[key] == nil { retained.append(d) }
       owners[key] = d
       identities[d.id] = key
-      retained.append(d)
       pending += d.children.map { ($0, depth + 1) }
       if d.isReference { pending.append((try d.referenceDescription(), depth + 1)) }
     }
@@ -197,9 +201,12 @@ open class DescriptionBuilder: Visitor {
     for d in copied.retained { try remember(d) }
     return copied.root
   }
-  public func setBuiltDescription(_ description: Description?) throws {
-    if let description { try remember(description) }
+  open func setBuiltDescription(_ description: Description?) throws {
+    if let description { try remember(description, refresh: true) }
     builtDescription = description
+  }
+  func setBuiltDescriptionRaw(_ description: Description?) throws {
+    if let description { try remember(description, refresh: true) }; builtDescription = description
   }
   /// New identities use newIDPrefix.N. A visitor which suppresses every field can return nil.
   public func buildFrom(_ source: Description, newIDPrefix: String, target: Model? = nil) throws
@@ -211,6 +218,7 @@ open class DescriptionBuilder: Visitor {
     try remember(source)
     prefix = newIDPrefix
     self.target = target
+    self.targetValue = nil
     // Like upstream, a second buildFrom does not reset the accumulated result.
     try visit(source)
     guard let root = builtDescription else { return nil }
@@ -220,7 +228,7 @@ open class DescriptionBuilder: Visitor {
     try require(
       owners[ObjectIdentifier(description)] != nil,
       "Use buildFrom or setBuiltDescription to retain builder inputs")
-    try setBuiltDescription(copyForBuild(description))
+    try setBuiltDescriptionRaw(copyForBuild(description))
     builtDescription!.children.removeAll()
     let children = try description.orderedChildren()
     try require(children.count <= limits.items, "Builder item limit")

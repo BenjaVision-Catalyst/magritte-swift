@@ -100,7 +100,8 @@ private func kindOf(_ v: Value, _ kind: String, _ graph: Graph?) throws -> Bool 
     case .character: cls="Character"
     case .array: cls="Array"
     case .collection(let kind,_): cls=kind=="ordered" ? "OrderedCollection" : kind=="set" ? "Set" : "Bag"
-    case .classValue: cls="Class"
+  case .fraction: cls = "Fraction"
+  case .classValue: cls = "Class"
   case .conflict: return false
   case .reference: return false
   }
@@ -231,6 +232,9 @@ func valueKey(_ value: Value, tick: (Int) throws -> Void, depth: Int = 0) throws
         return s.utf8.map { String(format: "%02x", $0) }.joined()
     }
     switch value {
+  case .fraction:
+    let f = try fractionOf(value);
+    return f.1 == 1 ? "2:" + String(f.0) : "12:" + String(f.0) + "/" + String(f.1)
   case .conflict: return "11:MACompositeConflict"
   case .undefined: return "0:"
   case .boolean(let b): return b ? "1:1" : "1:0"
@@ -240,10 +244,11 @@ func valueKey(_ value: Value, tick: (Int) throws -> Void, depth: Int = 0) throws
     case .float(let n):
         try require(n.isFinite, "Non-finite float")
         if let i = Int64(exactly: n) { return "2:" + String(i) }
-        return "9:" + (try floatBits(n))
-    case .string(let s): return "3:" + wrap(try hex(s))
-    case .reference(let id): return "5:" + wrap(try hex(id))
-    case .character(let c): return "6:" + wrap(try hex(c))
+    if let f = try floatFraction(n) { return "12:" + String(f.0) + "/" + String(f.1) }
+    return "9:" + (try floatBits(n))
+  case .string(let s): return "3:" + wrap(try hex(s))
+  case .reference(let id): return "5:" + wrap(try hex(id))
+  case .character(let c): return "6:" + wrap(try hex(c))
     case .array(let a):
         return "4:" + (try a.map { wrap(try valueKey($0, tick: tick, depth: depth + 1)) }).joined()
     case .collection(let kind, let a):

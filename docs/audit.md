@@ -43,7 +43,8 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | MAStringDescription | I, R | required empty string remains valid; exact UTF-8 content; no normalization |
 | MABooleanDescription | I, R | false is present; fixed options, aliases and configurable true/false text |
 | MANumberDescription | I, R (Int64/binary64) | inclusive bounds; finite floats; documented exact mixed-order policy |
-| Fractions, arbitrary precision integers, scaled decimals, full NumberParser grammar | N | explicit rejection; MANumberDescription remains partial |
+| Bounded exact Fractions | I, R | Int64 numerator/positive denominator, exact priority arithmetic/order and graph/4; builders.md |
+| Arbitrary precision integers, scaled decimals, full NumberParser grammar | N | explicit rejection; MANumberDescription remains partial |
 | Symbol, Memo, Password and Token descriptions | I, R | graph/3 scalar kinds, masking and token text conversion |
 | Date/time/duration, URL, color/icon/file/directory/block/action/table descriptions | N | unsupported class fails import; see complete inventory |
 | Required/optional, custom undefinedValue | I, R | required checks nil; undefined sentinel skips kind/specific/conditions |
@@ -74,6 +75,7 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Mutable collection-object identity | N, X (current wire) | inline collections are value snapshots; object references retain identity |
 | Array/OrderedCollection/Set/Bag values | I, R | kind/order/multiplicity/equality and relation/option validation; Character bridge for String collections |
 | Visitor dispatch and base description builder | I, R (represented hierarchy) | 21 dispatch points, superclass fallback, explicit traversal, stateful copy/enrichment; visitors.md |
+| Builder composition / MADescriptionFlattener | I, R (native model profile) | ordered pipelines, target/model context, shared expansion and exact priorities; missing upstream hooks require explicit bindings; builders.md |
 | Graph callback traversal | I | bounded composition/reference traversal, cycles terminate; distinct from MAVisitor dispatch |
 | Description/value JSON import/export | I, R | graph/1–4; GT -> both ports -> GT, aliases/cycles/nested objects/collections |
 | MAStringReader/Writer text conversion | I, R (profile) | scalars/options/tokens; writers also containers/relations; other interpreters N |
@@ -134,3 +136,5 @@ Phase 0.13 replaces raw-key label fallback with the audited accessor name/defaul
 Phase 0.14 implements direct MAContainer lookup and enumeration in both ports. [container-enumeration.md](container-enumeration.md) records thirteen matching live/upstream method fingerprints, four complete GT observation cases, native bounds/identity/error tests and typed zero-based APIs. Full backing-collection mutation and other documented gaps remain open.
 
 Phase 0.15 implements MACompositeAccessor and local MACompositeConflict objects, plus the declared description kinds required by via:using:. [composites.md](composites.md) records 35 matching live/upstream fingerprints, 25 composite trace scenarios, conflict/kind/copy/annotation/editing evidence and eight GT accessor round-trip cases. Local conflicts are rejected by interchange; the existing Value equality/reflection boundaries remain explicit.
+
+Phase 0.16 implements builder composition and description flattening with explicit host description/hook bindings and bounded exact Fraction priorities. [builders.md](builders.md) records the missing upstream selectors, 18 matching source fingerprints, 19/24/9 behavioral case groups, 130 numeric comparisons, probe cleanup and flattened graph round trips. Pragma/cache orchestration and arbitrary reflection remain separate gaps.

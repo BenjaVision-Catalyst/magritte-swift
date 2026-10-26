@@ -1,0 +1,2613 @@
+{
+	"missingHooks" : [
+		"tabDisplay",
+		"groupExpandOnLabel",
+		"addToAccessor:"
+	],
+	"flattening" : [
+		{
+			"missingGroup" : false,
+			"emptySchema" : false,
+			"sharedLeaf" : true,
+			"missingTab" : false,
+			"explicit" : true,
+			"group" : null,
+			"values" : [
+				{
+					"value" : {
+						"value" : "P",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"value" : "Ada",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"value" : "S",
+						"type" : "string"
+					}
+				}
+			],
+			"recursive" : false,
+			"collectionTarget" : false,
+			"emptyTarget" : false,
+			"groupLabel" : false,
+			"missingAdd" : false,
+			"nilValue" : false,
+			"leaf" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : {
+						"denominator" : "100",
+						"numerator" : "10001"
+					},
+					"type" : "fraction"
+				},
+				"name" : "name::child",
+				"label" : {
+					"value" : "name",
+					"type" : "string"
+				}
+			},
+			"visible" : true,
+			"outcome" : {
+				"success" : true
+			},
+			"fields" : [
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "0",
+						"type" : "integer"
+					},
+					"name" : "prefix",
+					"label" : {
+						"value" : "prefix",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : {
+							"denominator" : "100",
+							"numerator" : "10001"
+						},
+						"type" : "fraction"
+					},
+					"name" : "name::child",
+					"label" : {
+						"value" : "name",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "200",
+						"type" : "integer"
+					},
+					"name" : "suffix",
+					"label" : {
+						"value" : "suffix",
+						"type" : "string"
+					}
+				}
+			],
+			"id" : "flat",
+			"tab" : false,
+			"primitiveDrop" : false,
+			"trace" : [
+				"root:child",
+				"child:name"
+			],
+			"sourceParent" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "100",
+					"type" : "integer"
+				},
+				"name" : "child",
+				"label" : {
+					"value" : "Child",
+					"type" : "string"
+				}
+			},
+			"readOnly" : false
+		},
+		{
+			"missingGroup" : false,
+			"emptySchema" : false,
+			"sharedLeaf" : true,
+			"missingTab" : false,
+			"explicit" : true,
+			"group" : null,
+			"values" : [
+				{
+					"value" : {
+						"value" : "P",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"value" : "Ada",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"value" : "S",
+						"type" : "string"
+					}
+				}
+			],
+			"recursive" : false,
+			"collectionTarget" : false,
+			"emptyTarget" : false,
+			"groupLabel" : true,
+			"missingAdd" : false,
+			"nilValue" : false,
+			"leaf" : {
+				"group" : {
+					"value" : "Child",
+					"type" : "string"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : {
+						"denominator" : "100",
+						"numerator" : "10001"
+					},
+					"type" : "fraction"
+				},
+				"name" : "name::child",
+				"label" : {
+					"value" : "name",
+					"type" : "string"
+				}
+			},
+			"visible" : true,
+			"outcome" : {
+				"success" : true
+			},
+			"fields" : [
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "0",
+						"type" : "integer"
+					},
+					"name" : "prefix",
+					"label" : {
+						"value" : "prefix",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"value" : "Child",
+						"type" : "string"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : {
+							"denominator" : "100",
+							"numerator" : "10001"
+						},
+						"type" : "fraction"
+					},
+					"name" : "name::child",
+					"label" : {
+						"value" : "name",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "200",
+						"type" : "integer"
+					},
+					"name" : "suffix",
+					"label" : {
+						"value" : "suffix",
+						"type" : "string"
+					}
+				}
+			],
+			"id" : "label-group",
+			"tab" : false,
+			"primitiveDrop" : false,
+			"trace" : [
+				"root:child",
+				"child:name"
+			],
+			"sourceParent" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "100",
+					"type" : "integer"
+				},
+				"name" : "child",
+				"label" : {
+					"value" : "Child",
+					"type" : "string"
+				}
+			},
+			"readOnly" : false
+		},
+		{
+			"missingGroup" : false,
+			"emptySchema" : false,
+			"sharedLeaf" : false,
+			"missingTab" : false,
+			"explicit" : true,
+			"group" : null,
+			"values" : [
+				{
+					"value" : {
+						"value" : "P",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				{
+					"value" : {
+						"value" : "S",
+						"type" : "string"
+					}
+				}
+			],
+			"recursive" : false,
+			"collectionTarget" : false,
+			"emptyTarget" : false,
+			"groupLabel" : false,
+			"missingAdd" : false,
+			"nilValue" : true,
+			"leaf" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "10",
+					"type" : "integer"
+				},
+				"name" : "name",
+				"label" : {
+					"value" : "name",
+					"type" : "string"
+				}
+			},
+			"visible" : true,
+			"outcome" : {
+				"success" : true
+			},
+			"fields" : [
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "0",
+						"type" : "integer"
+					},
+					"name" : "prefix",
+					"label" : {
+						"value" : "prefix",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "100",
+						"type" : "integer"
+					},
+					"name" : "child",
+					"label" : {
+						"value" : "Child",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "200",
+						"type" : "integer"
+					},
+					"name" : "suffix",
+					"label" : {
+						"value" : "suffix",
+						"type" : "string"
+					}
+				}
+			],
+			"id" : "nil-value",
+			"tab" : false,
+			"primitiveDrop" : false,
+			"trace" : [
+				"root:child"
+			],
+			"sourceParent" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "100",
+					"type" : "integer"
+				},
+				"name" : "child",
+				"label" : {
+					"value" : "Child",
+					"type" : "string"
+				}
+			},
+			"readOnly" : false
+		},
+		{
+			"missingGroup" : false,
+			"emptySchema" : false,
+			"sharedLeaf" : true,
+			"missingTab" : false,
+			"explicit" : true,
+			"group" : null,
+			"values" : [
+				{
+					"value" : {
+						"value" : "P",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"value" : "Ada",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"value" : "S",
+						"type" : "string"
+					}
+				}
+			],
+			"recursive" : false,
+			"collectionTarget" : true,
+			"emptyTarget" : false,
+			"groupLabel" : false,
+			"missingAdd" : false,
+			"nilValue" : false,
+			"leaf" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : {
+						"denominator" : "100",
+						"numerator" : "10001"
+					},
+					"type" : "fraction"
+				},
+				"name" : "name::child",
+				"label" : {
+					"value" : "name",
+					"type" : "string"
+				}
+			},
+			"visible" : true,
+			"outcome" : {
+				"success" : true
+			},
+			"fields" : [
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "0",
+						"type" : "integer"
+					},
+					"name" : "prefix",
+					"label" : {
+						"value" : "prefix",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : {
+							"denominator" : "100",
+							"numerator" : "10001"
+						},
+						"type" : "fraction"
+					},
+					"name" : "name::child",
+					"label" : {
+						"value" : "name",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "200",
+						"type" : "integer"
+					},
+					"name" : "suffix",
+					"label" : {
+						"value" : "suffix",
+						"type" : "string"
+					}
+				}
+			],
+			"id" : "collection-target",
+			"tab" : false,
+			"primitiveDrop" : false,
+			"trace" : [
+				"root:child",
+				"child:name"
+			],
+			"sourceParent" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "100",
+					"type" : "integer"
+				},
+				"name" : "child",
+				"label" : {
+					"value" : "Child",
+					"type" : "string"
+				}
+			},
+			"readOnly" : false
+		},
+		{
+			"missingGroup" : false,
+			"emptySchema" : false,
+			"sharedLeaf" : false,
+			"missingTab" : false,
+			"explicit" : true,
+			"group" : null,
+			"values" : [
+				{
+					"value" : {
+						"value" : "P",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"type" : "model"
+					}
+				},
+				{
+					"value" : {
+						"value" : "S",
+						"type" : "string"
+					}
+				}
+			],
+			"recursive" : false,
+			"collectionTarget" : true,
+			"emptyTarget" : true,
+			"groupLabel" : false,
+			"missingAdd" : false,
+			"nilValue" : false,
+			"leaf" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "10",
+					"type" : "integer"
+				},
+				"name" : "name",
+				"label" : {
+					"value" : "name",
+					"type" : "string"
+				}
+			},
+			"visible" : true,
+			"outcome" : {
+				"success" : true
+			},
+			"fields" : [
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "0",
+						"type" : "integer"
+					},
+					"name" : "prefix",
+					"label" : {
+						"value" : "prefix",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "100",
+						"type" : "integer"
+					},
+					"name" : "child",
+					"label" : {
+						"value" : "Child",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "200",
+						"type" : "integer"
+					},
+					"name" : "suffix",
+					"label" : {
+						"value" : "suffix",
+						"type" : "string"
+					}
+				}
+			],
+			"id" : "empty-target",
+			"tab" : false,
+			"primitiveDrop" : false,
+			"trace" : [ ],
+			"sourceParent" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "100",
+					"type" : "integer"
+				},
+				"name" : "child",
+				"label" : {
+					"value" : "Child",
+					"type" : "string"
+				}
+			},
+			"readOnly" : false
+		},
+		{
+			"missingGroup" : false,
+			"emptySchema" : false,
+			"sharedLeaf" : false,
+			"missingTab" : false,
+			"explicit" : false,
+			"group" : null,
+			"values" : [
+				{
+					"value" : {
+						"value" : "P",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"type" : "model"
+					}
+				},
+				{
+					"value" : {
+						"value" : "S",
+						"type" : "string"
+					}
+				}
+			],
+			"recursive" : false,
+			"collectionTarget" : false,
+			"emptyTarget" : false,
+			"groupLabel" : false,
+			"missingAdd" : false,
+			"nilValue" : false,
+			"leaf" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "10",
+					"type" : "integer"
+				},
+				"name" : "name",
+				"label" : {
+					"value" : "name",
+					"type" : "string"
+				}
+			},
+			"visible" : true,
+			"outcome" : {
+				"success" : true
+			},
+			"fields" : [
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "0",
+						"type" : "integer"
+					},
+					"name" : "prefix",
+					"label" : {
+						"value" : "prefix",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "100",
+						"type" : "integer"
+					},
+					"name" : "child",
+					"label" : {
+						"value" : "Child",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "200",
+						"type" : "integer"
+					},
+					"name" : "suffix",
+					"label" : {
+						"value" : "suffix",
+						"type" : "string"
+					}
+				}
+			],
+			"id" : "disabled",
+			"tab" : false,
+			"primitiveDrop" : false,
+			"trace" : [ ],
+			"sourceParent" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "100",
+					"type" : "integer"
+				},
+				"name" : "child",
+				"label" : {
+					"value" : "Child",
+					"type" : "string"
+				}
+			},
+			"readOnly" : false
+		},
+		{
+			"missingGroup" : false,
+			"emptySchema" : false,
+			"sharedLeaf" : false,
+			"missingTab" : false,
+			"explicit" : null,
+			"group" : null,
+			"values" : [
+				{
+					"value" : {
+						"value" : "P",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"type" : "model"
+					}
+				},
+				{
+					"value" : {
+						"value" : "S",
+						"type" : "string"
+					}
+				}
+			],
+			"recursive" : false,
+			"collectionTarget" : false,
+			"emptyTarget" : false,
+			"groupLabel" : false,
+			"missingAdd" : false,
+			"nilValue" : false,
+			"leaf" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "10",
+					"type" : "integer"
+				},
+				"name" : "name",
+				"label" : {
+					"value" : "name",
+					"type" : "string"
+				}
+			},
+			"visible" : false,
+			"outcome" : {
+				"success" : true
+			},
+			"fields" : [
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "0",
+						"type" : "integer"
+					},
+					"name" : "prefix",
+					"label" : {
+						"value" : "prefix",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "100",
+						"type" : "integer"
+					},
+					"name" : "child",
+					"label" : {
+						"value" : "Child",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "200",
+						"type" : "integer"
+					},
+					"name" : "suffix",
+					"label" : {
+						"value" : "suffix",
+						"type" : "string"
+					}
+				}
+			],
+			"id" : "hidden",
+			"tab" : false,
+			"primitiveDrop" : false,
+			"trace" : [ ],
+			"sourceParent" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "100",
+					"type" : "integer"
+				},
+				"name" : "child",
+				"label" : {
+					"value" : "Child",
+					"type" : "string"
+				}
+			},
+			"readOnly" : false
+		},
+		{
+			"missingGroup" : false,
+			"emptySchema" : false,
+			"sharedLeaf" : false,
+			"missingTab" : false,
+			"explicit" : null,
+			"group" : null,
+			"values" : [
+				{
+					"value" : {
+						"value" : "P",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"type" : "model"
+					}
+				},
+				{
+					"value" : {
+						"value" : "S",
+						"type" : "string"
+					}
+				}
+			],
+			"recursive" : false,
+			"collectionTarget" : false,
+			"emptyTarget" : false,
+			"groupLabel" : false,
+			"missingAdd" : false,
+			"nilValue" : false,
+			"leaf" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "10",
+					"type" : "integer"
+				},
+				"name" : "name",
+				"label" : {
+					"value" : "name",
+					"type" : "string"
+				}
+			},
+			"visible" : true,
+			"outcome" : {
+				"success" : true
+			},
+			"fields" : [
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "0",
+						"type" : "integer"
+					},
+					"name" : "prefix",
+					"label" : {
+						"value" : "prefix",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "100",
+						"type" : "integer"
+					},
+					"name" : "child",
+					"label" : {
+						"value" : "Child",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "200",
+						"type" : "integer"
+					},
+					"name" : "suffix",
+					"label" : {
+						"value" : "suffix",
+						"type" : "string"
+					}
+				}
+			],
+			"id" : "readonly",
+			"tab" : false,
+			"primitiveDrop" : false,
+			"trace" : [ ],
+			"sourceParent" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "100",
+					"type" : "integer"
+				},
+				"name" : "child",
+				"label" : {
+					"value" : "Child",
+					"type" : "string"
+				}
+			},
+			"readOnly" : true
+		},
+		{
+			"missingGroup" : false,
+			"emptySchema" : false,
+			"sharedLeaf" : false,
+			"missingTab" : false,
+			"explicit" : null,
+			"group" : "Existing",
+			"values" : [
+				{
+					"value" : {
+						"value" : "P",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"type" : "model"
+					}
+				},
+				{
+					"value" : {
+						"value" : "S",
+						"type" : "string"
+					}
+				}
+			],
+			"recursive" : false,
+			"collectionTarget" : false,
+			"emptyTarget" : false,
+			"groupLabel" : false,
+			"missingAdd" : false,
+			"nilValue" : false,
+			"leaf" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "10",
+					"type" : "integer"
+				},
+				"name" : "name",
+				"label" : {
+					"value" : "name",
+					"type" : "string"
+				}
+			},
+			"visible" : true,
+			"outcome" : {
+				"success" : true
+			},
+			"fields" : [
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "0",
+						"type" : "integer"
+					},
+					"name" : "prefix",
+					"label" : {
+						"value" : "prefix",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"value" : "Existing",
+						"type" : "string"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "100",
+						"type" : "integer"
+					},
+					"name" : "child",
+					"label" : {
+						"value" : "Child",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "200",
+						"type" : "integer"
+					},
+					"name" : "suffix",
+					"label" : {
+						"value" : "suffix",
+						"type" : "string"
+					}
+				}
+			],
+			"id" : "grouped",
+			"tab" : false,
+			"primitiveDrop" : false,
+			"trace" : [ ],
+			"sourceParent" : {
+				"group" : {
+					"value" : "Existing",
+					"type" : "string"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "100",
+					"type" : "integer"
+				},
+				"name" : "child",
+				"label" : {
+					"value" : "Child",
+					"type" : "string"
+				}
+			},
+			"readOnly" : false
+		},
+		{
+			"missingGroup" : false,
+			"emptySchema" : false,
+			"sharedLeaf" : false,
+			"missingTab" : false,
+			"explicit" : null,
+			"group" : null,
+			"values" : [
+				{
+					"value" : {
+						"value" : "P",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"type" : "model"
+					}
+				},
+				{
+					"value" : {
+						"value" : "S",
+						"type" : "string"
+					}
+				}
+			],
+			"recursive" : false,
+			"collectionTarget" : false,
+			"emptyTarget" : false,
+			"groupLabel" : false,
+			"missingAdd" : false,
+			"nilValue" : false,
+			"leaf" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "10",
+					"type" : "integer"
+				},
+				"name" : "name",
+				"label" : {
+					"value" : "name",
+					"type" : "string"
+				}
+			},
+			"visible" : true,
+			"outcome" : {
+				"success" : true
+			},
+			"fields" : [
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "0",
+						"type" : "integer"
+					},
+					"name" : "prefix",
+					"label" : {
+						"value" : "prefix",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "100",
+						"type" : "integer"
+					},
+					"name" : "child",
+					"label" : {
+						"value" : "Child",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "200",
+						"type" : "integer"
+					},
+					"name" : "suffix",
+					"label" : {
+						"value" : "suffix",
+						"type" : "string"
+					}
+				}
+			],
+			"id" : "tabbed",
+			"tab" : true,
+			"primitiveDrop" : false,
+			"trace" : [ ],
+			"sourceParent" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "100",
+					"type" : "integer"
+				},
+				"name" : "child",
+				"label" : {
+					"value" : "Child",
+					"type" : "string"
+				}
+			},
+			"readOnly" : false
+		},
+		{
+			"missingGroup" : false,
+			"emptySchema" : false,
+			"sharedLeaf" : false,
+			"missingTab" : true,
+			"explicit" : null,
+			"group" : null,
+			"values" : [
+				{
+					"value" : {
+						"value" : "P",
+						"type" : "string"
+					}
+				}
+			],
+			"recursive" : false,
+			"collectionTarget" : false,
+			"emptyTarget" : false,
+			"groupLabel" : false,
+			"missingAdd" : false,
+			"nilValue" : false,
+			"leaf" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "10",
+					"type" : "integer"
+				},
+				"name" : "name",
+				"label" : {
+					"value" : "name",
+					"type" : "string"
+				}
+			},
+			"visible" : true,
+			"outcome" : {
+				"error" : "MessageNotUnderstood",
+				"message" : "Message not understood: MAToOneRelationDescription >> #tabDisplay"
+			},
+			"fields" : [
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "0",
+						"type" : "integer"
+					},
+					"name" : "prefix",
+					"label" : {
+						"value" : "prefix",
+						"type" : "string"
+					}
+				}
+			],
+			"id" : "missing-tab",
+			"tab" : false,
+			"primitiveDrop" : false,
+			"trace" : [ ],
+			"sourceParent" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "100",
+					"type" : "integer"
+				},
+				"name" : "child",
+				"label" : {
+					"value" : "Child",
+					"type" : "string"
+				}
+			},
+			"readOnly" : false
+		},
+		{
+			"missingGroup" : false,
+			"emptySchema" : false,
+			"sharedLeaf" : false,
+			"missingTab" : true,
+			"explicit" : null,
+			"group" : "Existing",
+			"values" : [
+				{
+					"value" : {
+						"value" : "P",
+						"type" : "string"
+					}
+				}
+			],
+			"recursive" : false,
+			"collectionTarget" : false,
+			"emptyTarget" : false,
+			"groupLabel" : false,
+			"missingAdd" : false,
+			"nilValue" : false,
+			"leaf" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "10",
+					"type" : "integer"
+				},
+				"name" : "name",
+				"label" : {
+					"value" : "name",
+					"type" : "string"
+				}
+			},
+			"visible" : true,
+			"outcome" : {
+				"error" : "MessageNotUnderstood",
+				"message" : "Message not understood: MAToOneRelationDescription >> #tabDisplay"
+			},
+			"fields" : [
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "0",
+						"type" : "integer"
+					},
+					"name" : "prefix",
+					"label" : {
+						"value" : "prefix",
+						"type" : "string"
+					}
+				}
+			],
+			"id" : "grouped-missing-tab",
+			"tab" : false,
+			"primitiveDrop" : false,
+			"trace" : [ ],
+			"sourceParent" : {
+				"group" : {
+					"value" : "Existing",
+					"type" : "string"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "100",
+					"type" : "integer"
+				},
+				"name" : "child",
+				"label" : {
+					"value" : "Child",
+					"type" : "string"
+				}
+			},
+			"readOnly" : false
+		},
+		{
+			"missingGroup" : false,
+			"emptySchema" : false,
+			"sharedLeaf" : false,
+			"missingTab" : false,
+			"explicit" : true,
+			"group" : null,
+			"values" : [
+				{
+					"value" : {
+						"value" : "P",
+						"type" : "string"
+					}
+				}
+			],
+			"recursive" : false,
+			"collectionTarget" : false,
+			"emptyTarget" : false,
+			"groupLabel" : false,
+			"missingAdd" : true,
+			"nilValue" : false,
+			"leaf" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "10",
+					"type" : "integer"
+				},
+				"name" : "name",
+				"label" : {
+					"value" : "name",
+					"type" : "string"
+				}
+			},
+			"visible" : true,
+			"outcome" : {
+				"error" : "MessageNotUnderstood",
+				"message" : "Message not understood: MAStringDescription >> #addToAccessor:"
+			},
+			"fields" : [
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "0",
+						"type" : "integer"
+					},
+					"name" : "prefix",
+					"label" : {
+						"value" : "prefix",
+						"type" : "string"
+					}
+				}
+			],
+			"id" : "missing-add",
+			"tab" : false,
+			"primitiveDrop" : false,
+			"trace" : [
+				"root:child",
+				"child:name"
+			],
+			"sourceParent" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "100",
+					"type" : "integer"
+				},
+				"name" : "child",
+				"label" : {
+					"value" : "Child",
+					"type" : "string"
+				}
+			},
+			"readOnly" : false
+		},
+		{
+			"missingGroup" : true,
+			"emptySchema" : false,
+			"sharedLeaf" : false,
+			"missingTab" : false,
+			"explicit" : true,
+			"group" : null,
+			"values" : [
+				{
+					"value" : {
+						"value" : "P",
+						"type" : "string"
+					}
+				}
+			],
+			"recursive" : false,
+			"collectionTarget" : false,
+			"emptyTarget" : false,
+			"groupLabel" : false,
+			"missingAdd" : false,
+			"nilValue" : false,
+			"leaf" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : {
+						"denominator" : "100",
+						"numerator" : "10001"
+					},
+					"type" : "fraction"
+				},
+				"name" : "name::child",
+				"label" : {
+					"value" : "name",
+					"type" : "string"
+				}
+			},
+			"visible" : true,
+			"outcome" : {
+				"error" : "MessageNotUnderstood",
+				"message" : "Message not understood: MAToOneRelationDescription >> #groupExpandOnLabel"
+			},
+			"fields" : [
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "0",
+						"type" : "integer"
+					},
+					"name" : "prefix",
+					"label" : {
+						"value" : "prefix",
+						"type" : "string"
+					}
+				}
+			],
+			"id" : "missing-group",
+			"tab" : false,
+			"primitiveDrop" : false,
+			"trace" : [
+				"root:child",
+				"child:name"
+			],
+			"sourceParent" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "100",
+					"type" : "integer"
+				},
+				"name" : "child",
+				"label" : {
+					"value" : "Child",
+					"type" : "string"
+				}
+			},
+			"readOnly" : false
+		},
+		{
+			"missingGroup" : false,
+			"emptySchema" : false,
+			"sharedLeaf" : true,
+			"missingTab" : false,
+			"explicit" : true,
+			"group" : null,
+			"values" : [
+				{
+					"value" : {
+						"value" : "P",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"value" : "Ada",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"value" : "Paris",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"value" : "S",
+						"type" : "string"
+					}
+				}
+			],
+			"recursive" : true,
+			"collectionTarget" : false,
+			"emptyTarget" : false,
+			"groupLabel" : false,
+			"missingAdd" : false,
+			"nilValue" : false,
+			"leaf" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : {
+						"denominator" : "100",
+						"numerator" : "10001"
+					},
+					"type" : "fraction"
+				},
+				"name" : "name::child",
+				"label" : {
+					"value" : "name",
+					"type" : "string"
+				}
+			},
+			"visible" : true,
+			"outcome" : {
+				"success" : true
+			},
+			"fields" : [
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "0",
+						"type" : "integer"
+					},
+					"name" : "prefix",
+					"label" : {
+						"value" : "prefix",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : {
+							"denominator" : "100",
+							"numerator" : "10001"
+						},
+						"type" : "fraction"
+					},
+					"name" : "name::child",
+					"label" : {
+						"value" : "name",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : {
+							"denominator" : "20",
+							"numerator" : "2001"
+						},
+						"type" : "fraction"
+					},
+					"name" : "city::nested::child",
+					"label" : {
+						"value" : "city",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "200",
+						"type" : "integer"
+					},
+					"name" : "suffix",
+					"label" : {
+						"value" : "suffix",
+						"type" : "string"
+					}
+				}
+			],
+			"id" : "recursive",
+			"tab" : false,
+			"primitiveDrop" : false,
+			"trace" : [
+				"root:child",
+				"child:name",
+				"child:nested",
+				"nested:city"
+			],
+			"sourceParent" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "100",
+					"type" : "integer"
+				},
+				"name" : "child",
+				"label" : {
+					"value" : "Child",
+					"type" : "string"
+				}
+			},
+			"readOnly" : false
+		},
+		{
+			"missingGroup" : false,
+			"emptySchema" : false,
+			"sharedLeaf" : true,
+			"missingTab" : false,
+			"explicit" : true,
+			"group" : null,
+			"values" : [
+				{
+					"value" : {
+						"value" : "P",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"value" : "Ada",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"value" : "Paris",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"value" : "S",
+						"type" : "string"
+					}
+				}
+			],
+			"recursive" : true,
+			"collectionTarget" : false,
+			"emptyTarget" : false,
+			"groupLabel" : true,
+			"missingAdd" : false,
+			"nilValue" : false,
+			"leaf" : {
+				"group" : {
+					"value" : "Child",
+					"type" : "string"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : {
+						"denominator" : "100",
+						"numerator" : "10001"
+					},
+					"type" : "fraction"
+				},
+				"name" : "name::child",
+				"label" : {
+					"value" : "name",
+					"type" : "string"
+				}
+			},
+			"visible" : true,
+			"outcome" : {
+				"success" : true
+			},
+			"fields" : [
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "0",
+						"type" : "integer"
+					},
+					"name" : "prefix",
+					"label" : {
+						"value" : "prefix",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"value" : "Child",
+						"type" : "string"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : {
+							"denominator" : "100",
+							"numerator" : "10001"
+						},
+						"type" : "fraction"
+					},
+					"name" : "name::child",
+					"label" : {
+						"value" : "name",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"value" : "Nested",
+						"type" : "string"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : {
+							"denominator" : "20",
+							"numerator" : "2001"
+						},
+						"type" : "fraction"
+					},
+					"name" : "city::nested::child",
+					"label" : {
+						"value" : "city",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "200",
+						"type" : "integer"
+					},
+					"name" : "suffix",
+					"label" : {
+						"value" : "suffix",
+						"type" : "string"
+					}
+				}
+			],
+			"id" : "recursive-group",
+			"tab" : false,
+			"primitiveDrop" : false,
+			"trace" : [
+				"root:child",
+				"child:name",
+				"child:nested",
+				"nested:city"
+			],
+			"sourceParent" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "100",
+					"type" : "integer"
+				},
+				"name" : "child",
+				"label" : {
+					"value" : "Child",
+					"type" : "string"
+				}
+			},
+			"readOnly" : false
+		},
+		{
+			"missingGroup" : false,
+			"emptySchema" : false,
+			"sharedLeaf" : false,
+			"missingTab" : false,
+			"explicit" : true,
+			"group" : null,
+			"values" : [
+				{
+					"value" : {
+						"value" : "P",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"value" : "S",
+						"type" : "string"
+					}
+				}
+			],
+			"recursive" : false,
+			"collectionTarget" : false,
+			"emptyTarget" : false,
+			"groupLabel" : false,
+			"missingAdd" : false,
+			"nilValue" : false,
+			"leaf" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : {
+						"denominator" : "100",
+						"numerator" : "10001"
+					},
+					"type" : "fraction"
+				},
+				"name" : "name::child",
+				"label" : {
+					"value" : "name",
+					"type" : "string"
+				}
+			},
+			"visible" : true,
+			"outcome" : {
+				"success" : true
+			},
+			"fields" : [
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "0",
+						"type" : "integer"
+					},
+					"name" : "prefix",
+					"label" : {
+						"value" : "prefix",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "200",
+						"type" : "integer"
+					},
+					"name" : "suffix",
+					"label" : {
+						"value" : "suffix",
+						"type" : "string"
+					}
+				}
+			],
+			"id" : "primitive-drop",
+			"tab" : false,
+			"primitiveDrop" : true,
+			"trace" : [
+				"root:child",
+				"child:name"
+			],
+			"sourceParent" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "100",
+					"type" : "integer"
+				},
+				"name" : "child",
+				"label" : {
+					"value" : "Child",
+					"type" : "string"
+				}
+			},
+			"readOnly" : false
+		},
+		{
+			"missingGroup" : false,
+			"emptySchema" : true,
+			"sharedLeaf" : false,
+			"missingTab" : false,
+			"explicit" : true,
+			"group" : null,
+			"values" : [
+				{
+					"value" : {
+						"value" : "P",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"value" : "S",
+						"type" : "string"
+					}
+				}
+			],
+			"recursive" : false,
+			"collectionTarget" : false,
+			"emptyTarget" : false,
+			"groupLabel" : false,
+			"missingAdd" : false,
+			"nilValue" : false,
+			"leaf" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "10",
+					"type" : "integer"
+				},
+				"name" : "name",
+				"label" : {
+					"value" : "name",
+					"type" : "string"
+				}
+			},
+			"visible" : true,
+			"outcome" : {
+				"success" : true
+			},
+			"fields" : [
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "0",
+						"type" : "integer"
+					},
+					"name" : "prefix",
+					"label" : {
+						"value" : "prefix",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "200",
+						"type" : "integer"
+					},
+					"name" : "suffix",
+					"label" : {
+						"value" : "suffix",
+						"type" : "string"
+					}
+				}
+			],
+			"id" : "empty-schema",
+			"tab" : false,
+			"primitiveDrop" : false,
+			"trace" : [
+				"root:child"
+			],
+			"sourceParent" : {
+				"group" : {
+					"type" : "nil"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "100",
+					"type" : "integer"
+				},
+				"name" : "child",
+				"label" : {
+					"value" : "Child",
+					"type" : "string"
+				}
+			},
+			"readOnly" : false
+		},
+		{
+			"missingGroup" : false,
+			"emptySchema" : false,
+			"sharedLeaf" : true,
+			"missingTab" : false,
+			"explicit" : true,
+			"group" : "Existing",
+			"values" : [
+				{
+					"value" : {
+						"value" : "P",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"value" : "Ada",
+						"type" : "string"
+					}
+				},
+				{
+					"value" : {
+						"value" : "S",
+						"type" : "string"
+					}
+				}
+			],
+			"recursive" : false,
+			"collectionTarget" : false,
+			"emptyTarget" : false,
+			"groupLabel" : false,
+			"missingAdd" : false,
+			"nilValue" : false,
+			"leaf" : {
+				"group" : {
+					"value" : "Existing",
+					"type" : "string"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : {
+						"denominator" : "100",
+						"numerator" : "10001"
+					},
+					"type" : "fraction"
+				},
+				"name" : "name::child",
+				"label" : {
+					"value" : "name",
+					"type" : "string"
+				}
+			},
+			"visible" : true,
+			"outcome" : {
+				"success" : true
+			},
+			"fields" : [
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "0",
+						"type" : "integer"
+					},
+					"name" : "prefix",
+					"label" : {
+						"value" : "prefix",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"value" : "Existing",
+						"type" : "string"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : {
+							"denominator" : "100",
+							"numerator" : "10001"
+						},
+						"type" : "fraction"
+					},
+					"name" : "name::child",
+					"label" : {
+						"value" : "name",
+						"type" : "string"
+					}
+				},
+				{
+					"group" : {
+						"type" : "nil"
+					},
+					"container" : false,
+					"priority" : {
+						"value" : "200",
+						"type" : "integer"
+					},
+					"name" : "suffix",
+					"label" : {
+						"value" : "suffix",
+						"type" : "string"
+					}
+				}
+			],
+			"id" : "existing-group",
+			"tab" : false,
+			"primitiveDrop" : false,
+			"trace" : [
+				"root:child",
+				"child:name"
+			],
+			"sourceParent" : {
+				"group" : {
+					"value" : "Existing",
+					"type" : "string"
+				},
+				"container" : false,
+				"priority" : {
+					"value" : "100",
+					"type" : "integer"
+				},
+				"name" : "child",
+				"label" : {
+					"value" : "Child",
+					"type" : "string"
+				}
+			},
+			"readOnly" : false
+		}
+	],
+	"canExpand" : [
+		{
+			"readOnly" : true,
+			"group" : null,
+			"result" : false,
+			"visible" : true,
+			"tab" : true
+		},
+		{
+			"readOnly" : true,
+			"group" : "",
+			"result" : false,
+			"visible" : true,
+			"tab" : true
+		},
+		{
+			"readOnly" : true,
+			"group" : "G",
+			"result" : false,
+			"visible" : true,
+			"tab" : true
+		},
+		{
+			"readOnly" : true,
+			"group" : null,
+			"result" : false,
+			"visible" : true,
+			"tab" : false
+		},
+		{
+			"readOnly" : true,
+			"group" : "",
+			"result" : false,
+			"visible" : true,
+			"tab" : false
+		},
+		{
+			"readOnly" : true,
+			"group" : "G",
+			"result" : false,
+			"visible" : true,
+			"tab" : false
+		},
+		{
+			"readOnly" : false,
+			"group" : null,
+			"result" : false,
+			"visible" : true,
+			"tab" : true
+		},
+		{
+			"readOnly" : false,
+			"group" : "",
+			"result" : false,
+			"visible" : true,
+			"tab" : true
+		},
+		{
+			"readOnly" : false,
+			"group" : "G",
+			"result" : false,
+			"visible" : true,
+			"tab" : true
+		},
+		{
+			"readOnly" : false,
+			"group" : null,
+			"result" : true,
+			"visible" : true,
+			"tab" : false
+		},
+		{
+			"readOnly" : false,
+			"group" : "",
+			"result" : false,
+			"visible" : true,
+			"tab" : false
+		},
+		{
+			"readOnly" : false,
+			"group" : "G",
+			"result" : false,
+			"visible" : true,
+			"tab" : false
+		},
+		{
+			"readOnly" : true,
+			"group" : null,
+			"result" : false,
+			"visible" : false,
+			"tab" : true
+		},
+		{
+			"readOnly" : true,
+			"group" : "",
+			"result" : false,
+			"visible" : false,
+			"tab" : true
+		},
+		{
+			"readOnly" : true,
+			"group" : "G",
+			"result" : false,
+			"visible" : false,
+			"tab" : true
+		},
+		{
+			"readOnly" : true,
+			"group" : null,
+			"result" : false,
+			"visible" : false,
+			"tab" : false
+		},
+		{
+			"readOnly" : true,
+			"group" : "",
+			"result" : false,
+			"visible" : false,
+			"tab" : false
+		},
+		{
+			"readOnly" : true,
+			"group" : "G",
+			"result" : false,
+			"visible" : false,
+			"tab" : false
+		},
+		{
+			"readOnly" : false,
+			"group" : null,
+			"result" : false,
+			"visible" : false,
+			"tab" : true
+		},
+		{
+			"readOnly" : false,
+			"group" : "",
+			"result" : false,
+			"visible" : false,
+			"tab" : true
+		},
+		{
+			"readOnly" : false,
+			"group" : "G",
+			"result" : false,
+			"visible" : false,
+			"tab" : true
+		},
+		{
+			"readOnly" : false,
+			"group" : null,
+			"result" : false,
+			"visible" : false,
+			"tab" : false
+		},
+		{
+			"readOnly" : false,
+			"group" : "",
+			"result" : false,
+			"visible" : false,
+			"tab" : false
+		},
+		{
+			"readOnly" : false,
+			"group" : "G",
+			"result" : false,
+			"visible" : false,
+			"tab" : false
+		}
+	],
+	"composition" : [
+		{
+			"replacement" : false,
+			"resultLabel" : {
+				"value" : "SourceAB",
+				"type" : "string"
+			},
+			"sourceLabel" : "SourceAB",
+			"events" : [
+				[
+					"A",
+					"Source",
+					"root",
+					true
+				],
+				[
+					"B",
+					"SourceA",
+					"root",
+					true
+				]
+			],
+			"mode" : "container",
+			"success" : true,
+			"sameSource" : true
+		},
+		{
+			"replacement" : false,
+			"resultLabel" : {
+				"value" : "Source",
+				"type" : "string"
+			},
+			"sourceLabel" : "Source",
+			"events" : [ ],
+			"mode" : "empty",
+			"success" : true,
+			"sameSource" : true
+		},
+		{
+			"replacement" : true,
+			"resultLabel" : {
+				"value" : "ReplacementB",
+				"type" : "string"
+			},
+			"sourceLabel" : "SourceA",
+			"events" : [
+				[
+					"A",
+					"Source",
+					"root",
+					true
+				],
+				[
+					"B",
+					"Replacement",
+					"root",
+					true
+				]
+			],
+			"mode" : "replace",
+			"success" : true,
+			"sameSource" : false
+		},
+		{
+			"replacement" : false,
+			"resultLabel" : {
+				"value" : "SourceA",
+				"type" : "string"
+			},
+			"sourceLabel" : "SourceA",
+			"events" : [
+				[
+					"A",
+					"Source",
+					"root",
+					true
+				],
+				[
+					"B",
+					"SourceA",
+					"root",
+					true
+				]
+			],
+			"mode" : "failure",
+			"success" : false,
+			"sameSource" : true
+		},
+		{
+			"replacement" : false,
+			"resultLabel" : {
+				"value" : "SourceAB",
+				"type" : "string"
+			},
+			"sourceLabel" : "SourceAB",
+			"events" : [
+				[
+					"A",
+					"Source",
+					"root",
+					true
+				],
+				[
+					"B",
+					"SourceA",
+					"root",
+					true
+				]
+			],
+			"mode" : "scalar",
+			"success" : true,
+			"sameSource" : true
+		},
+		{
+			"replacement" : false,
+			"resultLabel" : {
+				"value" : "SourceAB",
+				"type" : "string"
+			},
+			"sourceLabel" : "SourceAB",
+			"events" : [
+				[
+					"A",
+					"Reference",
+					"child",
+					true
+				],
+				[
+					"B",
+					"ReferenceA",
+					"child",
+					true
+				],
+				[
+					"A",
+					"Source",
+					"root",
+					true
+				],
+				[
+					"B",
+					"SourceA",
+					"root",
+					true
+				]
+			],
+			"mode" : "relation",
+			"success" : true,
+			"sameReference" : true,
+			"referenceLabel" : "ReferenceAB",
+			"sameSource" : true
+		},
+		{
+			"replacement" : false,
+			"resultLabel" : {
+				"value" : "SourceAB",
+				"type" : "string"
+			},
+			"sourceLabel" : "SourceAB",
+			"events" : [
+				[
+					"A",
+					"Source",
+					"root",
+					true
+				],
+				[
+					"B",
+					"SourceA",
+					"root",
+					true
+				]
+			],
+			"mode" : "nil-relation",
+			"success" : true,
+			"sameReference" : true,
+			"referenceLabel" : "Reference",
+			"sameSource" : true
+		},
+		{
+			"replacement" : false,
+			"resultLabel" : {
+				"value" : "SourceAB",
+				"type" : "string"
+			},
+			"sourceLabel" : "SourceAB",
+			"events" : [
+				[
+					"A",
+					"Reference",
+					"collection",
+					true
+				],
+				[
+					"B",
+					"ReferenceA",
+					"collection",
+					true
+				],
+				[
+					"A",
+					"Source",
+					"root",
+					true
+				],
+				[
+					"B",
+					"SourceA",
+					"root",
+					true
+				]
+			],
+			"mode" : "many-relation",
+			"success" : true,
+			"sameReference" : true,
+			"referenceLabel" : "ReferenceAB",
+			"sameSource" : true
+		},
+		{
+			"replacement" : false,
+			"resultLabel" : {
+				"value" : "Source",
+				"type" : "string"
+			},
+			"sourceLabel" : "Source",
+			"events" : [ ],
+			"mode" : "class-step",
+			"success" : true,
+			"sameSource" : false
+		}
+	]
+}

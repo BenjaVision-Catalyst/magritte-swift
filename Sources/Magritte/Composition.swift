@@ -1,6 +1,9 @@
 import Foundation
 
 public struct DescriptionCopy {
+  public init(root: Description, retained: [Description] = []) {
+    self.root = root; self.retained = retained
+  }
   public let root: Description
   // Retains copied references and shared children, including their weak targets.
   var retained: [Description]

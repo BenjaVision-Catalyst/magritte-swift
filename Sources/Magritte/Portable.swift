@@ -513,11 +513,13 @@ extension NativeModel {
 }
 func isNumber(_ v: Value) -> Bool {
   switch v {
-  case .integer, .float: return true
+  case .integer, .float, .fraction: return true
   default: return false
   }
 }
 func compareNumbers(_ a: Value, _ b: Value) throws -> Int {
+  if case .fraction = a { return try compareFractions(a, b) }
+  if case .fraction = b { return try compareFractions(a, b) }
   switch (a, b) {
   case (.integer(let x), .integer(let y)): return x < y ? -1 : x > y ? 1 : 0
   case (.float, .integer): return try -compareNumbers(b, a)
@@ -854,6 +856,7 @@ private func write(
     case .string(let s), .symbol(let s), .character(let s): result = s
     case .integer(let i): result = String(i)
     case .float(let n): result = try floatText(n)
+    case .fraction: result = try displayString(value)
     case .conflict(let c): result = c.string
     case .classValue(let name): try require(knownClass(name), "Unknown portable class"); result = name
     case .boolean(let b): result = b ? "true" : "false"
@@ -1021,6 +1024,7 @@ public func encodeAccessor(_ a: Accessor, limits: Limits = Limits()) throws -> D
 
 func displayString(_ value: Value) throws -> String {
   switch value {
+  case .fraction: let f = try fractionOf(value); return "(\(f.0)/\(f.1))"
   case .conflict(let c): return c.string
   case .undefined: return "nil"
   case .string(let s), .symbol(let s), .character(let s): return s
