@@ -1,0 +1,294 @@
+{
+	"cases" : [
+		{
+			"includesEqual" : true,
+			"any" : {
+				"fallbackCalls" : 0,
+				"result" : true,
+				"trace" : [
+					"a"
+				]
+			},
+			"pairSizeTrace" : [ ],
+			"callbackTrace" : [
+				"a",
+				"b"
+			],
+			"detect" : {
+				"fallbackCalls" : 0,
+				"result" : "a",
+				"trace" : [
+					"a"
+				]
+			},
+			"class" : "MAContainer",
+			"atError" : true,
+			"absentFallbackCalls" : 1,
+			"none" : {
+				"fallbackCalls" : 0,
+				"result" : false,
+				"trace" : [
+					"a"
+				]
+			},
+			"all" : {
+				"fallbackCalls" : 0,
+				"result" : false,
+				"trace" : [
+					"a",
+					"b"
+				]
+			},
+			"absent" : "fallback",
+			"callbackError" : true,
+			"pairSizeError" : true,
+			"separated" : [
+				"a",
+				"separator",
+				"b",
+				"separator",
+				"c"
+			],
+			"paired" : [
+				[
+					"a",
+					1
+				],
+				[
+					"b",
+					2
+				],
+				[
+					"c",
+					3
+				]
+			],
+			"each" : [
+				"a",
+				"b",
+				"c"
+			],
+			"indexed" : [
+				[
+					0,
+					"a"
+				],
+				[
+					1,
+					"b"
+				],
+				[
+					2,
+					"c"
+				]
+			],
+			"detectError" : true,
+			"missing" : {
+				"fallbackCalls" : 1,
+				"result" : "fallback",
+				"trace" : [
+					"a",
+					"b",
+					"c"
+				]
+			},
+			"includesOther" : false,
+			"firstFallbackCalls" : 0,
+			"empty" : false,
+			"first" : "a",
+			"fold" : "start:a:b:c"
+		},
+		{
+			"includesEqual" : false,
+			"any" : {
+				"fallbackCalls" : 0,
+				"result" : false,
+				"trace" : [ ]
+			},
+			"pairSizeTrace" : [ ],
+			"callbackTrace" : [ ],
+			"detect" : {
+				"fallbackCalls" : 1,
+				"result" : "fallback",
+				"trace" : [ ]
+			},
+			"class" : "MAContainer",
+			"atError" : true,
+			"absentFallbackCalls" : 1,
+			"none" : {
+				"fallbackCalls" : 0,
+				"result" : true,
+				"trace" : [ ]
+			},
+			"all" : {
+				"fallbackCalls" : 0,
+				"result" : true,
+				"trace" : [ ]
+			},
+			"absent" : "fallback",
+			"callbackError" : false,
+			"pairSizeError" : true,
+			"separated" : [ ],
+			"paired" : [ ],
+			"each" : [ ],
+			"indexed" : [ ],
+			"detectError" : true,
+			"missing" : {
+				"fallbackCalls" : 1,
+				"result" : "fallback",
+				"trace" : [ ]
+			},
+			"includesOther" : false,
+			"firstFallbackCalls" : 1,
+			"empty" : true,
+			"first" : "fallback",
+			"fold" : "start"
+		},
+		{
+			"includesEqual" : true,
+			"any" : {
+				"fallbackCalls" : 0,
+				"result" : true,
+				"trace" : [
+					"b",
+					"c"
+				]
+			},
+			"pairSizeTrace" : [ ],
+			"callbackTrace" : [
+				"b"
+			],
+			"detect" : {
+				"fallbackCalls" : 0,
+				"result" : "c",
+				"trace" : [
+					"b",
+					"c"
+				]
+			},
+			"class" : "MAPriorityContainer",
+			"atError" : true,
+			"absentFallbackCalls" : 1,
+			"none" : {
+				"fallbackCalls" : 0,
+				"result" : false,
+				"trace" : [
+					"b",
+					"c"
+				]
+			},
+			"all" : {
+				"fallbackCalls" : 0,
+				"result" : false,
+				"trace" : [
+					"b"
+				]
+			},
+			"absent" : "fallback",
+			"callbackError" : true,
+			"pairSizeError" : true,
+			"separated" : [
+				"b",
+				"separator",
+				"c",
+				"separator",
+				"a"
+			],
+			"paired" : [
+				[
+					"b",
+					1
+				],
+				[
+					"c",
+					2
+				],
+				[
+					"a",
+					3
+				]
+			],
+			"each" : [
+				"b",
+				"c",
+				"a"
+			],
+			"indexed" : [
+				[
+					0,
+					"b"
+				],
+				[
+					1,
+					"c"
+				],
+				[
+					2,
+					"a"
+				]
+			],
+			"detectError" : true,
+			"missing" : {
+				"fallbackCalls" : 1,
+				"result" : "fallback",
+				"trace" : [
+					"b",
+					"c",
+					"a"
+				]
+			},
+			"includesOther" : false,
+			"firstFallbackCalls" : 0,
+			"empty" : false,
+			"first" : "b",
+			"fold" : "start:b:c:a"
+		},
+		{
+			"includesEqual" : false,
+			"any" : {
+				"fallbackCalls" : 0,
+				"result" : false,
+				"trace" : [ ]
+			},
+			"pairSizeTrace" : [ ],
+			"callbackTrace" : [ ],
+			"detect" : {
+				"fallbackCalls" : 1,
+				"result" : "fallback",
+				"trace" : [ ]
+			},
+			"class" : "MAPriorityContainer",
+			"atError" : true,
+			"absentFallbackCalls" : 1,
+			"none" : {
+				"fallbackCalls" : 0,
+				"result" : true,
+				"trace" : [ ]
+			},
+			"all" : {
+				"fallbackCalls" : 0,
+				"result" : true,
+				"trace" : [ ]
+			},
+			"absent" : "fallback",
+			"callbackError" : false,
+			"pairSizeError" : true,
+			"separated" : [ ],
+			"paired" : [ ],
+			"each" : [ ],
+			"indexed" : [ ],
+			"detectError" : true,
+			"missing" : {
+				"fallbackCalls" : 1,
+				"result" : "fallback",
+				"trace" : [ ]
+			},
+			"includesOther" : false,
+			"firstFallbackCalls" : 1,
+			"empty" : true,
+			"first" : "fallback",
+			"fold" : "start"
+		}
+	],
+	"upstreamRevision" : "d67f318686b7779aed79416db121e257d1191f2e"
+}

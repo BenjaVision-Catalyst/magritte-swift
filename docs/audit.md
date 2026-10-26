@@ -37,6 +37,7 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | MAContainer insertion order | I, R | reference containerOrder; graph child identities preserved |
 | MAPriorityContainer ascending order | I, R | reference priorityOrder; ties stable in ports, upstream tie policy not claimed |
 | Container add/remove | I | mutate children; no complete Smalltalk collection protocol |
+| Container lookup, detection and enumeration | I, R (direct children) | lazy fallbacks, equality membership, short-circuit predicates, indexed/separated/paired iteration and reduction; container-enumeration.md |
 | Nested containers | I, R | identity access for native models; stored child values for adaptive models |
 | Concatenation/union/intersection/select/collect/copy protocol | I, R (profile) | equality-class composition, selective reference copies and shared container children; range/exclusion/empty copies; full collection protocol N |
 | MAStringDescription | I, R | required empty string remains valid; exact UTF-8 content; no normalization |
@@ -128,3 +129,5 @@ Phase 0.11 implements capability discovery for the eight represented accessors a
 Phase 0.12 implements first-class local MAPluggableAccessor behavior, identity-bearing block slots, accessor equality and shallow-copy/composition/editing semantics. [pluggable-accessors.md](pluggable-accessors.md) records 17 matching source fingerprints, actual GT traces and portable graph round trips after explicit accessor replacement. Composite conflicts, inferred labels, arbitrary host reflection, mutable collection identity and the remaining scalar/cache/interpreter protocols remain pending.
 
 Phase 0.13 replaces raw-key label fallback with the audited accessor name/default-label protocol and faithful lazy null defaults. [accessor-inference.md](accessor-inference.md) records 70 GT cases, fifteen class defaults, twenty matching Magritte source fingerprints plus one kernel method, unprojected metadata tests and graph round trips. Composite conflicts, full Unicode inflection, mutable collection identity and the remaining scalar/reflection/cache/interpreter protocols remain pending.
+
+Phase 0.14 implements direct MAContainer lookup and enumeration in both ports. [container-enumeration.md](container-enumeration.md) records thirteen matching live/upstream method fingerprints, four complete GT observation cases, native bounds/identity/error tests and typed zero-based APIs. Full backing-collection mutation and other documented gaps remain open.

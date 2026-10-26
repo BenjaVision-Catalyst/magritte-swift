@@ -100,6 +100,15 @@ public func accessorEqual(_ a: Accessor, _ b: Accessor, limits: Limits = Limits(
 public func descriptionEqual(_ a: Description, _ b: Description, limits: Limits = Limits()) throws
   -> Bool
 { try CompositionWork(limits).equal(a, b) }
+public func includesDescription(
+  _ container: Description, _ sought: Description, limits: Limits = Limits()
+) throws -> Bool {
+  let work = CompositionWork(limits)
+  for child in try enumerationChildren(container, limits: limits) {
+    if try work.equal(child, sought) { return true }
+  }
+  return false
+}
 /// Follows Magritte postCopy, not a graph deep clone. The new root ID is explicit.
 public func copyDescription(_ source: Description, newID: String, limits: Limits = Limits()) throws
   -> DescriptionCopy
