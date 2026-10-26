@@ -18,7 +18,9 @@ private final class CompositionWork {
     try a.check(limits: limits)
     try b.check(limits: limits)
     if a.className != b.className { return false }
-    if a.className == "MAChainAccessor" || a.className == "MADelegatorAccessor" {
+    if a.className == "MAChainAccessor" || a.className == "MACompositeAccessor"
+      || a.className == "MADelegatorAccessor"
+    {
       if a.steps.count != b.steps.count { return false }
       for (x, y) in zip(a.steps, b.steps) { if try !accessor(x, y, depth + 1) { return false } }
       return true

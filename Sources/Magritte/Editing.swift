@@ -196,7 +196,7 @@ public class CachedMemento: Memento {
   }
   public override func write(_ value: Value, using d: Description) throws {
     try checkIdentities()
-    _ = try encodeValue(value, limits: limits)
+    try checkLocalValue(value, limits: limits)
     let work = EditingWork(limits)
     for (id, entry) in entries where id != d.id { _ = try work.key(entry.value) }
     _ = try work.key(value)

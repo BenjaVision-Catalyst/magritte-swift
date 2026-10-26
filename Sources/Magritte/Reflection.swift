@@ -27,7 +27,7 @@ public final class AccessorObject {
       let object = AccessorObject(id: id, value: leaf)
       if a.className == "MADelegatorAccessor" {
         object.next = try build(id + ".next", a.steps[0], depth + 1)
-      } else if a.className == "MAChainAccessor" {
+      } else if ["MAChainAccessor", "MACompositeAccessor"].contains(a.className) {
         object.accessor = try build(id + ".accessor", a.steps[0], depth + 1)
         var tail = a.steps.count == 2 ? a.steps[1] : a
         if a.steps.count > 2 { tail.steps = Array(a.steps.dropFirst()) }
@@ -49,13 +49,15 @@ public final class AccessorObject {
       try require(active.insert(ObjectIdentifier(object)).inserted, "Accessor object cycle")
       var a = object.value
       try require(a.steps.isEmpty, "Object accessor uses slots, not inline steps")
-      if a.className == "MAChainAccessor" {
+      if ["MAChainAccessor", "MACompositeAccessor"].contains(a.className) {
         guard let accessor = object.accessor, let next = object.next else {
           throw MagritteError("Chain requires accessor and next")
         }
         a.steps = [try make(accessor, depth + 1)]
         let tail = try make(next, depth + 1)
-        a.steps += tail.className == "MAChainAccessor" ? tail.steps : [tail]
+        a.steps +=
+          a.className == "MAChainAccessor" && tail.className == "MAChainAccessor"
+          ? tail.steps : [tail]
       } else if a.className == "MADelegatorAccessor" {
         guard object.accessor == nil, let next = object.next else {
           throw MagritteError("Delegator requires only next")

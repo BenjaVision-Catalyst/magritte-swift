@@ -82,9 +82,12 @@ public extension Graph {
     }
 }
 private func kindOf(_ v: Value, _ kind: String, _ graph: Graph?) throws -> Bool {
-    if case .reference = v {
-        guard let graph else { throw MagritteError("Object reference validation requires a graph resolver") }
-        return try graph.resolve(v).kindOf(kind)
+  if case .conflict(let c) = v { return c.kindOf(kind) }
+  if case .reference = v {
+    guard let graph else {
+      throw MagritteError("Object reference validation requires a graph resolver")
+    }
+    return try graph.resolve(v).kindOf(kind)
     }
     let cls:String
     switch v {
@@ -98,9 +101,10 @@ private func kindOf(_ v: Value, _ kind: String, _ graph: Graph?) throws -> Bool 
     case .array: cls="Array"
     case .collection(let kind,_): cls=kind=="ordered" ? "OrderedCollection" : kind=="set" ? "Set" : "Bag"
     case .classValue: cls="Class"
-    case .reference: return false
-    }
-    return ClassRegistry.shared.includesBehavior(cls,kind)
+  case .conflict: return false
+  case .reference: return false
+  }
+  return ClassRegistry.shared.includesBehavior(cls,kind)
 
 }
 final class Budget {
@@ -149,8 +153,14 @@ private func validateField(_ d: Description, _ v: Value, _ graph: Graph?, _ budg
         return errors + nested
     }
     var kind = true
-    if d.isRelation {
-        func check(_ e: Value) throws {
+  if (d.isRelation || d.isOption) && d.properties["kind"] != nil {
+    guard case .classValue(let expected) = try d.property("kind") else {
+      throw MagritteError("Description kind is nil")
+    }
+    if try !kindOf(v, expected, graph) { error("MAKindError"); return errors }
+  }
+  if d.isRelation {
+    func check(_ e: Value) throws {
             try budget.tick(depth)
             var accepted = false
             for cls in d.classes { try budget.tick(depth); if try kindOf(e, cls, graph) { accepted = true } }
@@ -182,9 +192,12 @@ private func validateField(_ d: Description, _ v: Value, _ graph: Graph?, _ budg
             }
         } else { try check(v) }
     } else {
-        kind = try kindOf(v, d.className == "MAClassDescription" ? "Class" : d.className == "MASymbolDescription" ? "Symbol" : d.className == "MATokenDescription" ? "Array" : d.className == "MANumberDescription" ? "Number" : d.className == "MABooleanDescription" ? "Boolean" : "String", graph)
-        if !kind { error("MAKindError") }
+    guard case .classValue(let expected) = try d.property("kind") else {
+      throw MagritteError("Description kind is nil")
     }
+    kind = try kindOf(v, expected, graph)
+    if !kind { error("MAKindError") }
+  }
     if !kind { return errors }
     if d.className == "MANumberDescription" {
     let min = try d.property("min"), max = try d.property("max")
@@ -218,9 +231,10 @@ func valueKey(_ value: Value, tick: (Int) throws -> Void, depth: Int = 0) throws
         return s.utf8.map { String(format: "%02x", $0) }.joined()
     }
     switch value {
-    case .undefined: return "0:"
-    case .boolean(let b): return b ? "1:1" : "1:0"
-    case .integer(let i): return "2:" + String(i)
+  case .conflict: return "11:MACompositeConflict"
+  case .undefined: return "0:"
+  case .boolean(let b): return b ? "1:1" : "1:0"
+  case .integer(let i): return "2:" + String(i)
     case .classValue(let name): try require(knownClass(name), "Unknown portable class"); return "10:" + wrap(try hex(name))
     case .symbol(let s): return "3:" + wrap(try hex(s))
     case .float(let n):

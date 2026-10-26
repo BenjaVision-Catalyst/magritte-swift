@@ -115,9 +115,9 @@ private func accessorMetadata(_ target: AccessorObject) throws -> Graph {
     addMetadata(graph, "key", "MASymbolDescription").properties["required"] = .boolean(true)
   }
   if cls == "MASelectorAccessor" { addMetadata(graph, "selector", "MASymbolDescription") }
-  if ["MAChainAccessor", "MADelegatorAccessor"].contains(cls) {
+  if ["MAChainAccessor", "MACompositeAccessor", "MADelegatorAccessor"].contains(cls) {
     addMetadata(graph, "next", "MAToOneRelationDescription", 100).classes = try accessorClasses()
-    if cls == "MAChainAccessor" {
+    if ["MAChainAccessor", "MACompositeAccessor"].contains(cls) {
       addMetadata(graph, "accessor", "MAToOneRelationDescription", 200).classes =
         try accessorClasses()
     }
@@ -494,11 +494,12 @@ private final class AccessorBinding: Model {
     }
     if ["selector", "selector:"].contains(selector) && cls == "MASelectorAccessor" { return true }
     if ["next", "next:"].contains(selector)
-      && ["MAChainAccessor", "MADelegatorAccessor"].contains(cls)
+      && ["MAChainAccessor", "MACompositeAccessor", "MADelegatorAccessor"].contains(cls)
     {
       return true
     }
-    return ["accessor", "accessor:"].contains(selector) && cls == "MAChainAccessor"
+    return ["accessor", "accessor:"].contains(selector)
+      && ["MAChainAccessor", "MACompositeAccessor"].contains(cls)
   }
   func readSlot(strategy: String, name: String) throws -> Value {
     let s = try state()
@@ -539,8 +540,9 @@ private final class AccessorBinding: Model {
     guard case .reference(let id) = value, let node = s.accessors[id] else {
       throw MagritteError("Accessor slot requires a bound accessor")
     }
-    if (name == "next:" && ["MAChainAccessor", "MADelegatorAccessor"].contains(cls))
-      || (name == "accessor:" && cls == "MAChainAccessor")
+    if (name == "next:"
+      && ["MAChainAccessor", "MACompositeAccessor", "MADelegatorAccessor"].contains(cls))
+      || (name == "accessor:" && ["MAChainAccessor", "MACompositeAccessor"].contains(cls))
     {
       let previous = name == "next:" ? target.next : target.accessor
       if name == "next:" { target.next = node } else { target.accessor = node }

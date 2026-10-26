@@ -1,0 +1,292 @@
+[
+	{
+		"accessors" : [
+			{
+				"kind" : {
+					"value" : "String",
+					"type" : "class"
+				},
+				"class" : "MACompositeAccessor",
+				"steps" : [
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "people"
+					},
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "name"
+					}
+				]
+			},
+			{
+				"kind" : {
+					"type" : "nil"
+				},
+				"class" : "MACompositeAccessor",
+				"steps" : [
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "people"
+					},
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "name"
+					}
+				]
+			},
+			{
+				"kind" : {
+					"type" : "nil"
+				},
+				"class" : "MACompositeAccessor",
+				"steps" : [
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "people"
+					},
+					{
+						"class" : "MAChainAccessor",
+						"steps" : [
+							{
+								"class" : "MADictionaryAccessor",
+								"key" : "nested"
+							},
+							{
+								"class" : "MADictionaryAccessor",
+								"key" : "name"
+							}
+						]
+					}
+				]
+			},
+			{
+				"class" : "MADelegatorAccessor",
+				"next" : {
+					"kind" : {
+						"value" : "String",
+						"type" : "class"
+					},
+					"class" : "MACompositeAccessor",
+					"steps" : [
+						{
+							"class" : "MADictionaryAccessor",
+							"key" : "people"
+						},
+						{
+							"class" : "MADictionaryAccessor",
+							"key" : "name"
+						}
+					]
+				}
+			}
+		],
+		"cases" : [
+			{
+				"canWrite" : true,
+				"before" : {
+					"string" : "(Multiple values)",
+					"kind" : "String",
+					"type" : "conflict"
+				},
+				"after" : {
+					"value" : "all",
+					"type" : "string"
+				},
+				"canRead" : true,
+				"name" : "name::people",
+				"label" : "People::Name"
+			},
+			{
+				"canWrite" : true,
+				"before" : {
+					"string" : "(Multiple values)",
+					"kind" : null,
+					"type" : "conflict"
+				},
+				"after" : {
+					"value" : "all",
+					"type" : "string"
+				},
+				"canRead" : true,
+				"name" : "name::people",
+				"label" : "People::Name"
+			},
+			{
+				"canWrite" : true,
+				"before" : {
+					"string" : "(Multiple values)",
+					"kind" : null,
+					"type" : "conflict"
+				},
+				"after" : {
+					"value" : "all",
+					"type" : "string"
+				},
+				"canRead" : true,
+				"name" : "name::nested::people",
+				"label" : "People::Nested::Name"
+			},
+			{
+				"canWrite" : true,
+				"before" : {
+					"string" : "(Multiple values)",
+					"kind" : "String",
+					"type" : "conflict"
+				},
+				"after" : {
+					"value" : "all",
+					"type" : "string"
+				},
+				"canRead" : true,
+				"name" : "name::people",
+				"label" : "People::Name"
+			}
+		],
+		"port" : "cpp"
+	},
+	{
+		"accessors" : [
+			{
+				"kind" : {
+					"value" : "String",
+					"type" : "class"
+				},
+				"class" : "MACompositeAccessor",
+				"steps" : [
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "people"
+					},
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "name"
+					}
+				]
+			},
+			{
+				"kind" : {
+					"type" : "nil"
+				},
+				"class" : "MACompositeAccessor",
+				"steps" : [
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "people"
+					},
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "name"
+					}
+				]
+			},
+			{
+				"kind" : {
+					"type" : "nil"
+				},
+				"class" : "MACompositeAccessor",
+				"steps" : [
+					{
+						"class" : "MADictionaryAccessor",
+						"key" : "people"
+					},
+					{
+						"class" : "MAChainAccessor",
+						"steps" : [
+							{
+								"class" : "MADictionaryAccessor",
+								"key" : "nested"
+							},
+							{
+								"class" : "MADictionaryAccessor",
+								"key" : "name"
+							}
+						]
+					}
+				]
+			},
+			{
+				"class" : "MADelegatorAccessor",
+				"next" : {
+					"kind" : {
+						"value" : "String",
+						"type" : "class"
+					},
+					"class" : "MACompositeAccessor",
+					"steps" : [
+						{
+							"class" : "MADictionaryAccessor",
+							"key" : "people"
+						},
+						{
+							"class" : "MADictionaryAccessor",
+							"key" : "name"
+						}
+					]
+				}
+			}
+		],
+		"cases" : [
+			{
+				"canWrite" : true,
+				"before" : {
+					"string" : "(Multiple values)",
+					"kind" : "String",
+					"type" : "conflict"
+				},
+				"after" : {
+					"value" : "all",
+					"type" : "string"
+				},
+				"canRead" : true,
+				"name" : "name::people",
+				"label" : "People::Name"
+			},
+			{
+				"canWrite" : true,
+				"before" : {
+					"string" : "(Multiple values)",
+					"kind" : null,
+					"type" : "conflict"
+				},
+				"after" : {
+					"value" : "all",
+					"type" : "string"
+				},
+				"canRead" : true,
+				"name" : "name::people",
+				"label" : "People::Name"
+			},
+			{
+				"canWrite" : true,
+				"before" : {
+					"string" : "(Multiple values)",
+					"kind" : null,
+					"type" : "conflict"
+				},
+				"after" : {
+					"value" : "all",
+					"type" : "string"
+				},
+				"canRead" : true,
+				"name" : "name::nested::people",
+				"label" : "People::Nested::Name"
+			},
+			{
+				"canWrite" : true,
+				"before" : {
+					"string" : "(Multiple values)",
+					"kind" : "String",
+					"type" : "conflict"
+				},
+				"after" : {
+					"value" : "all",
+					"type" : "string"
+				},
+				"canRead" : true,
+				"name" : "name::people",
+				"label" : "People::Name"
+			}
+		],
+		"port" : "swift"
+	}
+]

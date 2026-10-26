@@ -1,0 +1,2594 @@
+{
+	"cases" : [
+		{
+			"canRead" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"value" : "changed",
+				"type" : "string"
+			},
+			"kind" : "String",
+			"after" : [
+				{
+					"value" : "changed",
+					"type" : "string"
+				},
+				{
+					"value" : "changed",
+					"type" : "string"
+				}
+			],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "same",
+			"read" : {
+				"outcome" : {
+					"value" : {
+						"value" : "a",
+						"type" : "string"
+					}
+				},
+				"trace" : [
+					"head",
+					"read:0",
+					"read:1"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : true,
+			"write" : {
+				"outcome" : {
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				"trace" : [
+					"head",
+					"write:0",
+					"write:1"
+				]
+			},
+			"values" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "a",
+					"type" : "string"
+				}
+			],
+			"collection" : "array",
+			"headResult" : "collection",
+			"order" : [
+				0,
+				1
+			],
+			"writeFailure" : -1,
+			"nextWrite" : true
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"value" : "changed",
+				"type" : "string"
+			},
+			"kind" : "String",
+			"after" : [
+				{
+					"value" : "changed",
+					"type" : "string"
+				},
+				{
+					"value" : "changed",
+					"type" : "string"
+				},
+				{
+					"value" : "changed",
+					"type" : "string"
+				}
+			],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "different",
+			"read" : {
+				"outcome" : {
+					"value" : {
+						"string" : "(Multiple values)",
+						"kind" : "String",
+						"type" : "conflict"
+					}
+				},
+				"trace" : [
+					"head",
+					"read:0",
+					"read:1",
+					"read:2"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : true,
+			"write" : {
+				"outcome" : {
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				"trace" : [
+					"head",
+					"write:0",
+					"write:1",
+					"write:2"
+				]
+			},
+			"values" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				},
+				{
+					"value" : "a",
+					"type" : "string"
+				}
+			],
+			"collection" : "array",
+			"headResult" : "collection",
+			"order" : [
+				0,
+				1,
+				2
+			],
+			"writeFailure" : -1,
+			"nextWrite" : true
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"value" : "changed",
+				"type" : "string"
+			},
+			"kind" : "String",
+			"after" : [
+				{
+					"value" : "changed",
+					"type" : "string"
+				},
+				{
+					"value" : "changed",
+					"type" : "string"
+				}
+			],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "nil",
+			"read" : {
+				"outcome" : {
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				"trace" : [
+					"head",
+					"read:0",
+					"read:1"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : true,
+			"write" : {
+				"outcome" : {
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				"trace" : [
+					"head",
+					"write:0",
+					"write:1"
+				]
+			},
+			"values" : [
+				{
+					"type" : "nil"
+				},
+				{
+					"type" : "nil"
+				}
+			],
+			"collection" : "array",
+			"headResult" : "collection",
+			"order" : [
+				0,
+				1
+			],
+			"writeFailure" : -1,
+			"nextWrite" : true
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"value" : "changed",
+				"type" : "string"
+			},
+			"kind" : "String",
+			"after" : [
+				{
+					"value" : "changed",
+					"type" : "string"
+				},
+				{
+					"value" : "changed",
+					"type" : "string"
+				}
+			],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "nil-mixed",
+			"read" : {
+				"outcome" : {
+					"value" : {
+						"string" : "(Multiple values)",
+						"kind" : "String",
+						"type" : "conflict"
+					}
+				},
+				"trace" : [
+					"head",
+					"read:0",
+					"read:1"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : true,
+			"write" : {
+				"outcome" : {
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				"trace" : [
+					"head",
+					"write:0",
+					"write:1"
+				]
+			},
+			"values" : [
+				{
+					"type" : "nil"
+				},
+				{
+					"value" : "a",
+					"type" : "string"
+				}
+			],
+			"collection" : "array",
+			"headResult" : "collection",
+			"order" : [
+				0,
+				1
+			],
+			"writeFailure" : -1,
+			"nextWrite" : true
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"value" : "changed",
+				"type" : "string"
+			},
+			"kind" : "String",
+			"after" : [ ],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "empty",
+			"read" : {
+				"outcome" : {
+					"error" : "SubscriptOutOfBounds"
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : true,
+			"write" : {
+				"outcome" : {
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"values" : [ ],
+			"collection" : "array",
+			"headResult" : "collection",
+			"order" : [ ],
+			"writeFailure" : -1,
+			"nextWrite" : true
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"value" : "changed",
+				"type" : "string"
+			},
+			"kind" : "String",
+			"after" : [
+				{
+					"value" : "changed",
+					"type" : "string"
+				}
+			],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "single",
+			"read" : {
+				"outcome" : {
+					"value" : {
+						"value" : "a",
+						"type" : "string"
+					}
+				},
+				"trace" : [
+					"head",
+					"read:0"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : true,
+			"write" : {
+				"outcome" : {
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				"trace" : [
+					"head",
+					"write:0"
+				]
+			},
+			"values" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				}
+			],
+			"collection" : "array",
+			"headResult" : "collection",
+			"order" : [
+				0
+			],
+			"writeFailure" : -1,
+			"nextWrite" : true
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"value" : "changed",
+				"type" : "string"
+			},
+			"kind" : "String",
+			"after" : [
+				{
+					"value" : "changed",
+					"type" : "string"
+				},
+				{
+					"value" : "changed",
+					"type" : "string"
+				},
+				{
+					"value" : "changed",
+					"type" : "string"
+				}
+			],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "ordered",
+			"read" : {
+				"outcome" : {
+					"value" : {
+						"string" : "(Multiple values)",
+						"kind" : "String",
+						"type" : "conflict"
+					}
+				},
+				"trace" : [
+					"head",
+					"read:0",
+					"read:1",
+					"read:2"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : true,
+			"write" : {
+				"outcome" : {
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				"trace" : [
+					"head",
+					"write:0",
+					"write:1",
+					"write:2"
+				]
+			},
+			"values" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				},
+				{
+					"value" : "a",
+					"type" : "string"
+				}
+			],
+			"collection" : "ordered",
+			"headResult" : "collection",
+			"order" : [
+				0,
+				1,
+				2
+			],
+			"writeFailure" : -1,
+			"nextWrite" : true
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"value" : "changed",
+				"type" : "string"
+			},
+			"kind" : "String",
+			"after" : [
+				{
+					"value" : "changed",
+					"type" : "string"
+				},
+				{
+					"value" : "changed",
+					"type" : "string"
+				},
+				{
+					"value" : "changed",
+					"type" : "string"
+				}
+			],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "set",
+			"read" : {
+				"outcome" : {
+					"value" : {
+						"string" : "(Multiple values)",
+						"kind" : "String",
+						"type" : "conflict"
+					}
+				},
+				"trace" : [
+					"head",
+					"read:1",
+					"read:0",
+					"read:2"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : true,
+			"write" : {
+				"outcome" : {
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				"trace" : [
+					"head",
+					"write:1",
+					"write:0",
+					"write:2"
+				]
+			},
+			"values" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				},
+				{
+					"value" : "a",
+					"type" : "string"
+				}
+			],
+			"collection" : "set",
+			"headResult" : "collection",
+			"order" : [
+				1,
+				0,
+				2
+			],
+			"writeFailure" : -1,
+			"nextWrite" : true
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"value" : "changed",
+				"type" : "string"
+			},
+			"kind" : "String",
+			"after" : [
+				{
+					"value" : "changed",
+					"type" : "string"
+				},
+				{
+					"value" : "changed",
+					"type" : "string"
+				},
+				{
+					"value" : "changed",
+					"type" : "string"
+				}
+			],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "bag",
+			"read" : {
+				"outcome" : {
+					"value" : {
+						"string" : "(Multiple values)",
+						"kind" : "String",
+						"type" : "conflict"
+					}
+				},
+				"trace" : [
+					"head",
+					"read:0",
+					"read:1",
+					"read:2"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : true,
+			"write" : {
+				"outcome" : {
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				"trace" : [
+					"head",
+					"write:0",
+					"write:1",
+					"write:2"
+				]
+			},
+			"values" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				},
+				{
+					"value" : "a",
+					"type" : "string"
+				}
+			],
+			"collection" : "bag",
+			"headResult" : "collection",
+			"order" : [
+				0,
+				1,
+				2
+			],
+			"writeFailure" : -1,
+			"nextWrite" : true
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"value" : "changed",
+				"type" : "string"
+			},
+			"kind" : null,
+			"after" : [
+				{
+					"value" : "changed",
+					"type" : "string"
+				},
+				{
+					"value" : "changed",
+					"type" : "string"
+				}
+			],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "untyped",
+			"read" : {
+				"outcome" : {
+					"value" : {
+						"string" : "(Multiple values)",
+						"kind" : null,
+						"type" : "conflict"
+					}
+				},
+				"trace" : [
+					"head",
+					"read:0",
+					"read:1"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : true,
+			"write" : {
+				"outcome" : {
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				"trace" : [
+					"head",
+					"write:0",
+					"write:1"
+				]
+			},
+			"values" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				}
+			],
+			"collection" : "array",
+			"headResult" : "collection",
+			"order" : [
+				0,
+				1
+			],
+			"writeFailure" : -1,
+			"nextWrite" : true
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"value" : "changed",
+				"type" : "string"
+			},
+			"kind" : "Number",
+			"after" : [
+				{
+					"value" : "changed",
+					"type" : "string"
+				},
+				{
+					"value" : "changed",
+					"type" : "string"
+				}
+			],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "number",
+			"read" : {
+				"outcome" : {
+					"value" : {
+						"string" : "(Multiple values)",
+						"kind" : "Number",
+						"type" : "conflict"
+					}
+				},
+				"trace" : [
+					"head",
+					"read:0",
+					"read:1"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : true,
+			"write" : {
+				"outcome" : {
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				"trace" : [
+					"head",
+					"write:0",
+					"write:1"
+				]
+			},
+			"values" : [
+				{
+					"value" : "1",
+					"type" : "integer"
+				},
+				{
+					"value" : "2",
+					"type" : "integer"
+				}
+			],
+			"collection" : "array",
+			"headResult" : "collection",
+			"order" : [
+				0,
+				1
+			],
+			"writeFailure" : -1,
+			"nextWrite" : true
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"value" : {
+						"value" : false,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [ ]
+			},
+			"writeValue" : {
+				"value" : "changed",
+				"type" : "string"
+			},
+			"kind" : "String",
+			"after" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				}
+			],
+			"readFailure" : -1,
+			"headWrite" : true,
+			"id" : "no-head-reader",
+			"read" : {
+				"outcome" : {
+					"error" : "MessageNotUnderstood"
+				},
+				"trace" : [ ]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"value" : {
+						"value" : false,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [ ]
+			},
+			"headRead" : false,
+			"nextRead" : true,
+			"write" : {
+				"outcome" : {
+					"error" : "MessageNotUnderstood"
+				},
+				"trace" : [ ]
+			},
+			"values" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				}
+			],
+			"collection" : "array",
+			"headResult" : "collection",
+			"order" : [
+				0,
+				1
+			],
+			"writeFailure" : -1,
+			"nextWrite" : true
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"value" : {
+						"value" : false,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"value" : "changed",
+				"type" : "string"
+			},
+			"kind" : "String",
+			"after" : [
+				{
+					"value" : "changed",
+					"type" : "string"
+				},
+				{
+					"value" : "changed",
+					"type" : "string"
+				}
+			],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "no-next-reader",
+			"read" : {
+				"outcome" : {
+					"error" : "MessageNotUnderstood"
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : false,
+			"write" : {
+				"outcome" : {
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				"trace" : [
+					"head",
+					"write:0",
+					"write:1"
+				]
+			},
+			"values" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				}
+			],
+			"collection" : "array",
+			"headResult" : "collection",
+			"order" : [
+				0,
+				1
+			],
+			"writeFailure" : -1,
+			"nextWrite" : true
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"value" : "changed",
+				"type" : "string"
+			},
+			"kind" : "String",
+			"after" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				}
+			],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "no-next-writer",
+			"read" : {
+				"outcome" : {
+					"value" : {
+						"string" : "(Multiple values)",
+						"kind" : "String",
+						"type" : "conflict"
+					}
+				},
+				"trace" : [
+					"head",
+					"read:0",
+					"read:1"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"value" : {
+						"value" : false,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : true,
+			"write" : {
+				"outcome" : {
+					"error" : "MessageNotUnderstood"
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"values" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				}
+			],
+			"collection" : "array",
+			"headResult" : "collection",
+			"order" : [
+				0,
+				1
+			],
+			"writeFailure" : -1,
+			"nextWrite" : false
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"value" : {
+						"value" : false,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"value" : "changed",
+				"type" : "string"
+			},
+			"kind" : "String",
+			"after" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				}
+			],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "no-next-blocks",
+			"read" : {
+				"outcome" : {
+					"error" : "MessageNotUnderstood"
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"value" : {
+						"value" : false,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : false,
+			"write" : {
+				"outcome" : {
+					"error" : "MessageNotUnderstood"
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"values" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				}
+			],
+			"collection" : "array",
+			"headResult" : "collection",
+			"order" : [
+				0,
+				1
+			],
+			"writeFailure" : -1,
+			"nextWrite" : false
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"value" : "changed",
+				"type" : "string"
+			},
+			"kind" : "String",
+			"after" : [ ],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "empty-next-blocks",
+			"read" : {
+				"outcome" : {
+					"error" : "SubscriptOutOfBounds"
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : false,
+			"write" : {
+				"outcome" : {
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"values" : [ ],
+			"collection" : "array",
+			"headResult" : "collection",
+			"order" : [ ],
+			"writeFailure" : -1,
+			"nextWrite" : false
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"value" : "changed",
+				"type" : "string"
+			},
+			"kind" : "String",
+			"after" : [
+				{
+					"value" : "changed",
+					"type" : "string"
+				},
+				{
+					"value" : "changed",
+					"type" : "string"
+				},
+				{
+					"value" : "changed",
+					"type" : "string"
+				}
+			],
+			"readFailure" : 2,
+			"headWrite" : false,
+			"id" : "late-read-error",
+			"read" : {
+				"outcome" : {
+					"error" : "Error"
+				},
+				"trace" : [
+					"head",
+					"read:0",
+					"read:1",
+					"read:2"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : true,
+			"write" : {
+				"outcome" : {
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				"trace" : [
+					"head",
+					"write:0",
+					"write:1",
+					"write:2"
+				]
+			},
+			"values" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				},
+				{
+					"value" : "c",
+					"type" : "string"
+				}
+			],
+			"collection" : "array",
+			"headResult" : "collection",
+			"order" : [
+				0,
+				1,
+				2
+			],
+			"writeFailure" : -1,
+			"nextWrite" : true
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"value" : "changed",
+				"type" : "string"
+			},
+			"kind" : "String",
+			"after" : [
+				{
+					"value" : "changed",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				},
+				{
+					"value" : "c",
+					"type" : "string"
+				}
+			],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "partial-write",
+			"read" : {
+				"outcome" : {
+					"value" : {
+						"string" : "(Multiple values)",
+						"kind" : "String",
+						"type" : "conflict"
+					}
+				},
+				"trace" : [
+					"head",
+					"read:0",
+					"read:1",
+					"read:2"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : true,
+			"write" : {
+				"outcome" : {
+					"error" : "Error"
+				},
+				"trace" : [
+					"head",
+					"write:0",
+					"write:1"
+				]
+			},
+			"values" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				},
+				{
+					"value" : "c",
+					"type" : "string"
+				}
+			],
+			"collection" : "array",
+			"headResult" : "collection",
+			"order" : [
+				0,
+				1,
+				2
+			],
+			"writeFailure" : 1,
+			"nextWrite" : true
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"error" : "MessageNotUnderstood"
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"value" : "changed",
+				"type" : "string"
+			},
+			"kind" : "String",
+			"after" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				}
+			],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "head-nil",
+			"read" : {
+				"outcome" : {
+					"error" : "MessageNotUnderstood"
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"error" : "MessageNotUnderstood"
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : true,
+			"write" : {
+				"outcome" : {
+					"error" : "MessageNotUnderstood"
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"values" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				}
+			],
+			"collection" : "array",
+			"headResult" : "nil",
+			"order" : [
+				0,
+				1
+			],
+			"writeFailure" : -1,
+			"nextWrite" : true
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"error" : "MessageNotUnderstood"
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"value" : "changed",
+				"type" : "string"
+			},
+			"kind" : "String",
+			"after" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				}
+			],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "head-scalar",
+			"read" : {
+				"outcome" : {
+					"error" : "MessageNotUnderstood"
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"error" : "MessageNotUnderstood"
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : true,
+			"write" : {
+				"outcome" : {
+					"error" : "MessageNotUnderstood"
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"values" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				}
+			],
+			"collection" : "array",
+			"headResult" : "scalar",
+			"order" : [
+				0,
+				1
+			],
+			"writeFailure" : -1,
+			"nextWrite" : true
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"error" : "Error"
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"value" : "changed",
+				"type" : "string"
+			},
+			"kind" : "String",
+			"after" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				}
+			],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "head-error",
+			"read" : {
+				"outcome" : {
+					"error" : "Error"
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"error" : "Error"
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : true,
+			"write" : {
+				"outcome" : {
+					"error" : "Error"
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"values" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				}
+			],
+			"collection" : "array",
+			"headResult" : "error",
+			"order" : [
+				0,
+				1
+			],
+			"writeFailure" : -1,
+			"nextWrite" : true
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"string" : "custom",
+				"kind" : "Number",
+				"type" : "conflict"
+			},
+			"kind" : "String",
+			"after" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				}
+			],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "write-conflict",
+			"read" : {
+				"outcome" : {
+					"value" : {
+						"string" : "(Multiple values)",
+						"kind" : "String",
+						"type" : "conflict"
+					}
+				},
+				"trace" : [
+					"head",
+					"read:0",
+					"read:1"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : true,
+			"write" : {
+				"outcome" : {
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"values" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				}
+			],
+			"collection" : "array",
+			"headResult" : "collection",
+			"order" : [
+				0,
+				1
+			],
+			"writeFailure" : -1,
+			"nextWrite" : true
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"string" : null,
+				"kind" : null,
+				"type" : "conflict"
+			},
+			"kind" : "String",
+			"after" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				}
+			],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "write-conflict-no-writer",
+			"read" : {
+				"outcome" : {
+					"value" : {
+						"string" : "(Multiple values)",
+						"kind" : "String",
+						"type" : "conflict"
+					}
+				},
+				"trace" : [
+					"head",
+					"read:0",
+					"read:1"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"value" : {
+						"value" : false,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : true,
+			"write" : {
+				"outcome" : {
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"values" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				}
+			],
+			"collection" : "array",
+			"headResult" : "collection",
+			"order" : [
+				0,
+				1
+			],
+			"writeFailure" : -1,
+			"nextWrite" : false
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"error" : "Error"
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"string" : null,
+				"kind" : "String",
+				"type" : "conflict"
+			},
+			"kind" : "String",
+			"after" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				}
+			],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "write-conflict-head-error",
+			"read" : {
+				"outcome" : {
+					"error" : "Error"
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"error" : "Error"
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : true,
+			"write" : {
+				"outcome" : {
+					"error" : "Error"
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"values" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				}
+			],
+			"collection" : "array",
+			"headResult" : "error",
+			"order" : [
+				0
+			],
+			"writeFailure" : -1,
+			"nextWrite" : true
+		},
+		{
+			"canRead" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"writeValue" : {
+				"type" : "nil"
+			},
+			"kind" : "String",
+			"after" : [
+				{
+					"type" : "nil"
+				},
+				{
+					"type" : "nil"
+				}
+			],
+			"readFailure" : -1,
+			"headWrite" : false,
+			"id" : "write-nil",
+			"read" : {
+				"outcome" : {
+					"value" : {
+						"string" : "(Multiple values)",
+						"kind" : "String",
+						"type" : "conflict"
+					}
+				},
+				"trace" : [
+					"head",
+					"read:0",
+					"read:1"
+				]
+			},
+			"canWrite" : {
+				"outcome" : {
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"trace" : [
+					"head"
+				]
+			},
+			"headRead" : true,
+			"nextRead" : true,
+			"write" : {
+				"outcome" : {
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				"trace" : [
+					"head",
+					"write:0",
+					"write:1"
+				]
+			},
+			"values" : [
+				{
+					"value" : "a",
+					"type" : "string"
+				},
+				{
+					"value" : "b",
+					"type" : "string"
+				}
+			],
+			"collection" : "array",
+			"headResult" : "collection",
+			"order" : [
+				0,
+				1
+			],
+			"writeFailure" : -1,
+			"nextWrite" : true
+		}
+	],
+	"editing" : [
+		{
+			"cached" : {
+				"string" : "(Multiple values)",
+				"kind" : "String",
+				"type" : "conflict"
+			},
+			"changed" : false,
+			"values" : [
+				"a",
+				"b"
+			]
+		},
+		{
+			"cached" : {
+				"string" : "(Multiple values)",
+				"kind" : "String",
+				"type" : "conflict"
+			},
+			"changed" : false,
+			"values" : [
+				"a",
+				"b"
+			]
+		},
+		{
+			"cached" : {
+				"value" : "all",
+				"type" : "string"
+			},
+			"changed" : true,
+			"values" : [
+				"a",
+				"b"
+			]
+		},
+		{
+			"cached" : {
+				"value" : "all",
+				"type" : "string"
+			},
+			"changed" : false,
+			"values" : [
+				"all",
+				"all"
+			]
+		}
+	],
+	"conflicts" : [
+		{
+			"isNil" : false,
+			"emptyString" : "",
+			"isInteger" : false,
+			"copyEqual" : true,
+			"kinds" : [
+				true,
+				true,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"print" : "(Multiple values)",
+			"metadataSize" : 0,
+			"kind" : null,
+			"isEmptyMessage" : {
+				"error" : "MessageNotUnderstood"
+			},
+			"booleanWriter" : {
+				"error" : "NonBooleanReceiver"
+			},
+			"numberValidation" : {
+				"error" : "MAMultipleErrors"
+			},
+			"numberRangeValidation" : {
+				"error" : "MAMultipleErrors"
+			},
+			"hashEqual" : true,
+			"copyIdentity" : false,
+			"equal" : true,
+			"stringValidation" : {
+				"error" : "MAMultipleErrors"
+			},
+			"resetString" : "(Multiple values)",
+			"stringWriter" : {
+				"value" : {
+					"value" : "(Multiple values)",
+					"type" : "string"
+				}
+			},
+			"numberWriter" : {
+				"value" : {
+					"value" : "(Multiple values)",
+					"type" : "string"
+				}
+			},
+			"isCollection" : false,
+			"unknownMessage" : {
+				"error" : "MessageNotUnderstood"
+			}
+		},
+		{
+			"isNil" : false,
+			"emptyString" : "",
+			"isInteger" : false,
+			"copyEqual" : true,
+			"kinds" : [
+				true,
+				true,
+				true,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"print" : "(Multiple values)",
+			"metadataSize" : 0,
+			"kind" : "String",
+			"isEmptyMessage" : {
+				"value" : {
+					"value" : "(Multiple values)",
+					"type" : "string"
+				}
+			},
+			"booleanWriter" : {
+				"error" : "NonBooleanReceiver"
+			},
+			"numberValidation" : {
+				"error" : "MAMultipleErrors"
+			},
+			"numberRangeValidation" : {
+				"error" : "MAMultipleErrors"
+			},
+			"hashEqual" : true,
+			"copyIdentity" : false,
+			"equal" : true,
+			"stringValidation" : {
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			"resetString" : "(Multiple values)",
+			"stringWriter" : {
+				"value" : {
+					"value" : "(Multiple values)",
+					"type" : "string"
+				}
+			},
+			"numberWriter" : {
+				"value" : {
+					"value" : "(Multiple values)",
+					"type" : "string"
+				}
+			},
+			"isCollection" : false,
+			"unknownMessage" : {
+				"error" : "MessageNotUnderstood"
+			}
+		},
+		{
+			"isNil" : false,
+			"emptyString" : "",
+			"isInteger" : false,
+			"copyEqual" : true,
+			"kinds" : [
+				true,
+				true,
+				false,
+				false,
+				false,
+				true,
+				false,
+				false
+			],
+			"print" : "(Multiple values)",
+			"metadataSize" : 0,
+			"kind" : "Number",
+			"isEmptyMessage" : {
+				"error" : "MessageNotUnderstood"
+			},
+			"booleanWriter" : {
+				"error" : "NonBooleanReceiver"
+			},
+			"numberValidation" : {
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			"numberRangeValidation" : {
+				"error" : "MessageNotUnderstood"
+			},
+			"hashEqual" : true,
+			"copyIdentity" : false,
+			"equal" : true,
+			"stringValidation" : {
+				"error" : "MAMultipleErrors"
+			},
+			"resetString" : "(Multiple values)",
+			"stringWriter" : {
+				"value" : {
+					"value" : "(Multiple values)",
+					"type" : "string"
+				}
+			},
+			"numberWriter" : {
+				"value" : {
+					"value" : "(Multiple values)",
+					"type" : "string"
+				}
+			},
+			"isCollection" : false,
+			"unknownMessage" : {
+				"error" : "MessageNotUnderstood"
+			}
+		},
+		{
+			"isNil" : false,
+			"emptyString" : "",
+			"isInteger" : false,
+			"copyEqual" : true,
+			"kinds" : [
+				true,
+				true,
+				false,
+				false,
+				false,
+				false,
+				true,
+				false
+			],
+			"print" : "(Multiple values)",
+			"metadataSize" : 0,
+			"kind" : "Integer",
+			"isEmptyMessage" : {
+				"error" : "MessageNotUnderstood"
+			},
+			"booleanWriter" : {
+				"error" : "NonBooleanReceiver"
+			},
+			"numberValidation" : {
+				"error" : "MAMultipleErrors"
+			},
+			"numberRangeValidation" : {
+				"error" : "MAMultipleErrors"
+			},
+			"hashEqual" : true,
+			"copyIdentity" : false,
+			"equal" : true,
+			"stringValidation" : {
+				"error" : "MAMultipleErrors"
+			},
+			"resetString" : "(Multiple values)",
+			"stringWriter" : {
+				"value" : {
+					"value" : "(Multiple values)",
+					"type" : "string"
+				}
+			},
+			"numberWriter" : {
+				"value" : {
+					"value" : "(Multiple values)",
+					"type" : "string"
+				}
+			},
+			"isCollection" : false,
+			"unknownMessage" : {
+				"error" : "MessageNotUnderstood"
+			}
+		},
+		{
+			"isNil" : false,
+			"emptyString" : "",
+			"isInteger" : false,
+			"copyEqual" : true,
+			"kinds" : [
+				true,
+				true,
+				false,
+				false,
+				false,
+				false,
+				false,
+				true
+			],
+			"print" : "(Multiple values)",
+			"metadataSize" : 0,
+			"kind" : "Boolean",
+			"isEmptyMessage" : {
+				"error" : "MessageNotUnderstood"
+			},
+			"booleanWriter" : {
+				"error" : "NonBooleanReceiver"
+			},
+			"numberValidation" : {
+				"error" : "MAMultipleErrors"
+			},
+			"numberRangeValidation" : {
+				"error" : "MAMultipleErrors"
+			},
+			"hashEqual" : true,
+			"copyIdentity" : false,
+			"equal" : true,
+			"stringValidation" : {
+				"error" : "MAMultipleErrors"
+			},
+			"resetString" : "(Multiple values)",
+			"stringWriter" : {
+				"value" : {
+					"value" : "(Multiple values)",
+					"type" : "string"
+				}
+			},
+			"numberWriter" : {
+				"value" : {
+					"value" : "(Multiple values)",
+					"type" : "string"
+				}
+			},
+			"isCollection" : false,
+			"unknownMessage" : {
+				"error" : "MessageNotUnderstood"
+			}
+		},
+		{
+			"isNil" : false,
+			"emptyString" : "",
+			"isInteger" : false,
+			"copyEqual" : true,
+			"kinds" : [
+				true,
+				true,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"print" : "(Multiple values)",
+			"metadataSize" : 0,
+			"kind" : "MACompositeConflict",
+			"isEmptyMessage" : {
+				"error" : "MessageNotUnderstood"
+			},
+			"booleanWriter" : {
+				"error" : "NonBooleanReceiver"
+			},
+			"numberValidation" : {
+				"error" : "MAMultipleErrors"
+			},
+			"numberRangeValidation" : {
+				"error" : "MAMultipleErrors"
+			},
+			"hashEqual" : true,
+			"copyIdentity" : false,
+			"equal" : true,
+			"stringValidation" : {
+				"error" : "MAMultipleErrors"
+			},
+			"resetString" : "(Multiple values)",
+			"stringWriter" : {
+				"value" : {
+					"value" : "(Multiple values)",
+					"type" : "string"
+				}
+			},
+			"numberWriter" : {
+				"value" : {
+					"value" : "(Multiple values)",
+					"type" : "string"
+				}
+			},
+			"isCollection" : false,
+			"unknownMessage" : {
+				"error" : "MessageNotUnderstood"
+			}
+		}
+	],
+	"declaredKinds" : [
+		{
+			"validation" : {
+				"error" : "MAMultipleErrors"
+			},
+			"kind" : null,
+			"compositeKind" : null
+		},
+		{
+			"validation" : {
+				"error" : "MAMultipleErrors"
+			},
+			"kind" : "String",
+			"compositeKind" : "String"
+		},
+		{
+			"validation" : {
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			"kind" : "Number",
+			"compositeKind" : "Number"
+		},
+		{
+			"validation" : {
+				"value" : {
+					"value" : true,
+					"type" : "boolean"
+				}
+			},
+			"kind" : "Integer",
+			"compositeKind" : "Integer"
+		}
+	],
+	"labels" : [
+		{
+			"name" : "name::people",
+			"kind" : "String",
+			"label" : "People::Name",
+			"schema" : [
+				"next",
+				"accessor"
+			],
+			"kindIgnoredByEquality" : true,
+			"nextCopied" : true,
+			"headCopied" : true,
+			"input" : null
+		},
+		{
+			"name" : "name::people",
+			"kind" : "String",
+			"label" : "",
+			"schema" : [
+				"next",
+				"accessor"
+			],
+			"kindIgnoredByEquality" : true,
+			"nextCopied" : true,
+			"headCopied" : true,
+			"input" : ""
+		},
+		{
+			"name" : "name::people",
+			"kind" : "String",
+			"label" : "People::Explicit",
+			"schema" : [
+				"next",
+				"accessor"
+			],
+			"kindIgnoredByEquality" : true,
+			"nextCopied" : true,
+			"headCopied" : true,
+			"input" : "Explicit"
+		}
+	],
+	"defaultKinds" : [
+		{
+			"kind" : "Object",
+			"class" : "MAContainer"
+		},
+		{
+			"kind" : "Object",
+			"class" : "MAPriorityContainer"
+		},
+		{
+			"kind" : "String",
+			"class" : "MAStringDescription"
+		},
+		{
+			"kind" : "Symbol",
+			"class" : "MASymbolDescription"
+		},
+		{
+			"kind" : "String",
+			"class" : "MAMemoDescription"
+		},
+		{
+			"kind" : "String",
+			"class" : "MAPasswordDescription"
+		},
+		{
+			"kind" : "Number",
+			"class" : "MANumberDescription"
+		},
+		{
+			"kind" : "Boolean",
+			"class" : "MABooleanDescription"
+		},
+		{
+			"kind" : "Array",
+			"class" : "MATokenDescription"
+		},
+		{
+			"kind" : "Object",
+			"class" : "MAToOneRelationDescription"
+		},
+		{
+			"kind" : "Collection",
+			"class" : "MAToManyRelationDescription"
+		},
+		{
+			"kind" : "Collection",
+			"class" : "MAToManyScalarRelationDescription"
+		},
+		{
+			"kind" : "Object",
+			"class" : "MASingleOptionDescription"
+		},
+		{
+			"kind" : "Collection",
+			"class" : "MAMultipleOptionDescription"
+		},
+		{
+			"kind" : "Class",
+			"class" : "MAClassDescription"
+		}
+	]
+}

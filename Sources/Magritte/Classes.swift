@@ -56,6 +56,12 @@ public final class ClassRegistry: @unchecked Sendable {
         name: "MACachedMemento", superclass: "MAMemento", isAbstract: false, label: "Cached Memento"
       ),
       ClassInfo(
+        name: "MACompositeAccessor", superclass: "MAChainAccessor", isAbstract: false,
+        label: "Composite Accessor"),
+      ClassInfo(
+        name: "MACompositeConflict", superclass: "Object", isAbstract: false,
+        label: "MACompositeConflict"),
+      ClassInfo(
         name: "MAChainAccessor", superclass: "MADelegatorAccessor", isAbstract: false,
         label: "Chain Accessor"),
       ClassInfo(

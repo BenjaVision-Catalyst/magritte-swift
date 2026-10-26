@@ -11,20 +11,20 @@ public final class DynamicOptions {
     _ = try encodeValue(.string(query), limits: limits)
     guard let block else { throw MagritteError("Dynamic options completion block is missing") }
     let result = try block(query)
-    _ = try encodeValue(result, limits: limits)
+    try checkLocalValue(result, limits: limits)
     return result
   }
   public func includes(_ value: Value, limits: Limits = Limits()) throws -> Bool {
-    _ = try encodeValue(value, limits: limits)
+    try checkLocalValue(value, limits: limits)
     guard let includesBlock else {
       throw MagritteError("Dynamic options includes block is missing")
     }
     return try includesBlock(value)
   }
   public func detect(_ value: Value, limits: Limits = Limits()) throws -> Value {
-    _ = try encodeValue(value, limits: limits)
+    try checkLocalValue(value, limits: limits)
     let result = try reader?(value) ?? value
-    _ = try encodeValue(result, limits: limits)
+    try checkLocalValue(result, limits: limits)
     return result
   }
   public func copy() -> DynamicOptions {
@@ -106,7 +106,7 @@ public enum Options: Equatable, ExpressibleByArrayLiteral {
       return try displayString(value).utf8.starts(with: query.utf8)
     }
     let value = Value.array(result)
-    _ = try encodeValue(value, limits: limits)
+    try checkLocalValue(value, limits: limits)
     return value
   }
   public static func == (lhs: Options, rhs: Options) -> Bool {

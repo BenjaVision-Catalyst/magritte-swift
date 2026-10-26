@@ -46,6 +46,7 @@ public struct Accessor {
     return result
   }
   public var className: String, name: String, writeName: String
+  public var kind: String?
   public var uuid: Value = .undefined
   public var steps: [Accessor]
   public init(
@@ -243,6 +244,8 @@ private func predicate(_ p: Predicate, _ input: Value, _ w: Work, _ depth: Int) 
 }
 private func checkAccessor(_ a: Accessor, _ w: Work, _ depth: Int) throws {
   try w.tick(depth)
+  try require(a.className == "MACompositeAccessor" || a.kind == nil, "Unexpected accessor kind")
+  if let kind = a.kind { try require(knownClass(kind), "Unknown composite kind") }
   try require(
     a.className == "MAPluggableAccessor" || (a.readBlock == nil && a.writeBlock == nil),
     "Blocks require a pluggable accessor")
@@ -267,7 +270,10 @@ private func checkAccessor(_ a: Accessor, _ w: Work, _ depth: Int) throws {
   if a.className == "MADelegatorAccessor" {
     try require(a.steps.count == 1 && a.name.isEmpty && a.writeName.isEmpty, "Invalid delegator accessor"); try checkAccessor(a.steps[0], w, depth + 1); return
   }
-  if a.className == "MAChainAccessor" {
+  if a.className == "MAChainAccessor" || a.className == "MACompositeAccessor" {
+    try require(
+      a.className != "MACompositeAccessor" || a.steps.count == 2,
+      "Composite requires exactly head and next")
     try require(
       a.steps.count >= 2 && a.name.isEmpty && a.writeName.isEmpty, "Invalid chain accessor")
     for step in a.steps { try checkAccessor(step, w, depth + 1) }
@@ -295,8 +301,23 @@ private func accessRead(_ a: Accessor, _ model: Model, _ graph: Graph?, _ w: Wor
       throw MagritteError("Pluggable accessor read block is missing")
     }
     let result = try block(model)
-    _ = try encodeValue(result, limits: w.limits)
+    try checkLocalValue(result, limits: w.limits)
     return result
+  }
+  if a.className == "MACompositeAccessor" {
+    let elements = try accessRead(a.steps[0], model, graph, w, depth + 1)
+    try require(elements.collectionCount() <= w.limits.items, "Composite item limit")
+    var values: [Value] = []
+    for e in try elements.elements() {
+      try w.tick(depth);
+      guard let graph else { throw MagritteError("Composite traversal requires graph resolver") }
+      values.append(try accessRead(a.steps[1], graph.resolve(e), graph, w, depth + 1))
+    }
+    var keys = Set<String>(); for v in values { keys.insert(try w.key(v)) }
+    if keys.count > 1 { return .conflict(CompositeConflict(kind: a.kind)) }
+    guard let first = values.first else {
+      throw MagritteError("Composite read of empty collection")
+    }; return first
   }
   if a.className == "MANullAccessor" { throw MagritteError("MAReadError: null accessor") }
   if a.className == "MAIdentityAccessor" {
@@ -334,12 +355,21 @@ private func accessWrite(
 ) throws {
   try w.tick(depth)
   if a.className == "MAPluggableAccessor" {
-    _ = try encodeValue(value, limits: w.limits)
+    try checkLocalValue(value, limits: w.limits)
     guard let block = a.writeBlock else {
       throw MagritteError("Pluggable accessor write block is missing")
     }
     try block(model, value)
     return
+  }
+  if a.className == "MACompositeAccessor" {
+    let elements = try accessRead(a.steps[0], model, graph, w, depth + 1)
+    try require(elements.collectionCount() <= w.limits.items, "Composite item limit")
+    for e in try elements.elements() {
+      try w.tick(depth); if value.conflict != nil { continue }
+      guard let graph else { throw MagritteError("Composite traversal requires graph resolver") }
+      try accessWrite(a.steps[1], graph.resolve(e), value, graph, w, depth + 1)
+    }; return
   }
   if a.className == "MANullAccessor" || a.className == "MAIdentityAccessor" {
     throw MagritteError("MAWriteError: read-only accessor")
@@ -393,6 +423,15 @@ private func accessCan(
   if a.className == "MAVariableAccessor" { return try target.resolve(graph).hasVariable(a.name) }
   if a.className == "MADelegatorAccessor" {
     return try accessCan(a.steps[0], target, graph, w, depth + 1, writing)
+  }
+  if a.className == "MACompositeAccessor" {
+    if try !accessCan(a.steps[0], target, graph, w, depth + 1, false) { return false }
+    let elements = try accessRead(a.steps[0], target.resolve(graph), graph, w, depth + 1)
+    try require(elements.collectionCount() <= w.limits.items, "Composite item limit")
+    for e in try elements.elements() {
+      try w.tick(depth);
+      if try !accessCan(a.steps[1], .value(e), graph, w, depth + 1, writing) { return false }
+    }; return true
   }
   var current = target
   for step in a.steps.dropLast() {
@@ -555,7 +594,7 @@ private func inferredName(_ a: Accessor, _ w: Work, _ depth: Int) throws -> Valu
     return .undefined
   }
   if a.className == "MADelegatorAccessor" { return try inferredName(a.steps[0], w, depth + 1) }
-  if a.className == "MAChainAccessor" {
+  if a.className == "MAChainAccessor" || a.className == "MACompositeAccessor" {
     var result = try inferredName(a.steps.last!, w, depth + 1)
     for head in a.steps.dropLast().reversed() {
       let name = try inferredName(head, w, depth + 1)
@@ -575,7 +614,7 @@ private func inferredLabel(_ a: Accessor, _ w: Work, _ depth: Int) throws -> Str
     return ""
   }
   if a.className == "MADelegatorAccessor" { return try inferredLabel(a.steps[0], w, depth + 1) }
-  if a.className == "MAChainAccessor" {
+  if a.className == "MAChainAccessor" || a.className == "MACompositeAccessor" {
     var result = try inferredLabel(a.steps[0], w, depth + 1)
     for step in a.steps.dropFirst() {
       result = try boundedJoin(result, inferredLabel(step, w, depth + 1), w, depth)
@@ -750,6 +789,8 @@ private func write(
   } else if d.isContainer {
     guard let graph else { throw MagritteError("Container writer requires graph resolver") }
     result = try writeModel(d, graph.resolve(value), graph, w, depth + 1)
+  } else if let c = value.conflict, d.className != "MABooleanDescription", !d.isReference {
+    result = c.string
   } else if d.className == "MAClassDescription" {
     guard case .classValue(let name) = value, knownClass(name) else { throw MagritteError("Class writer requires a portable Class") }; result = name
   } else if d.className == "MABooleanDescription" {
@@ -813,6 +854,7 @@ private func write(
     case .string(let s), .symbol(let s), .character(let s): result = s
     case .integer(let i): result = String(i)
     case .float(let n): result = try floatText(n)
+    case .conflict(let c): result = c.string
     case .classValue(let name): try require(knownClass(name), "Unknown portable class"); result = name
     case .boolean(let b): result = b ? "true" : "false"
     default: throw MagritteError("Unsupported display string")
@@ -901,6 +943,9 @@ func accessorWire(_ a: Accessor, _ limits: Limits, _ depth: Int = 0) throws -> [
   switch a.className {
   case "MANullAccessor": j["uuid"] = try wire(a.uuid, limits)
   case "MADelegatorAccessor": j["next"] = try accessorWire(a.steps[0], limits, depth + 1)
+  case "MACompositeAccessor":
+    j["kind"] = try wire(a.kind.map(Value.classValue) ?? .undefined, limits);
+    j["steps"] = try a.steps.map { try accessorWire($0, limits, depth + 1) }
   case "MAChainAccessor": j["steps"] = try a.steps.map { try accessorWire($0, limits, depth + 1) }
   case "MASelectorAccessor":
     j["readSelector"] = a.name
@@ -923,6 +968,15 @@ func accessorValue(_ any: Any, _ limits: Limits, _ depth: Int = 0) throws -> Acc
     a.uuid = try value(v, limits)
   case "MADelegatorAccessor":
     try keys(j, ["class", "next"]); a.steps = [try accessorValue(j["next"] as Any, limits, depth + 1)]
+  case "MACompositeAccessor":
+    try keys(j, ["class", "steps", "kind"])
+    let type = try value(j["kind"] as Any, limits)
+    if !type.isNil {
+      guard case .classValue(let name) = type else {
+        throw MagritteError("Composite kind must be Class or nil")
+      }; a.kind = name
+    }
+    a.steps = try list(j["steps"]).map { try accessorValue($0, limits, depth + 1) }
   case "MAChainAccessor":
     try keys(j, ["class", "steps"])
     a.steps = try list(j["steps"]).map { try accessorValue($0, limits, depth + 1) }
@@ -967,6 +1021,7 @@ public func encodeAccessor(_ a: Accessor, limits: Limits = Limits()) throws -> D
 
 func displayString(_ value: Value) throws -> String {
   switch value {
+  case .conflict(let c): return c.string
   case .undefined: return "nil"
   case .string(let s), .symbol(let s), .character(let s): return s
   case .integer(let i): return String(i)

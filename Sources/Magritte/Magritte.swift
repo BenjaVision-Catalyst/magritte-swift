@@ -3,9 +3,11 @@ import CoreFoundation
 
 public indirect enum Value: Equatable {
     case undefined, boolean(Bool), integer(Int64), string(String), array([Value])
-    case reference(String), character(String), collection(kind: String, elements: [Value]), symbol(String), float(Double), classValue(String)
-    public var isNil: Bool { if case .undefined = self { return true }; return false }
-    public static func == (lhs: Value, rhs: Value) -> Bool {
+  case conflict(CompositeConflict)
+  case reference(String), character(String), collection(kind: String, elements: [Value]), symbol(
+    String), float(Double), classValue(String)
+  public var isNil: Bool { if case .undefined = self { return true }; return false }
+  public static func == (lhs: Value, rhs: Value) -> Bool {
         do { return try valueKey(lhs, tick: { _ in }) == valueKey(rhs, tick: { _ in }) }
         catch { return false }
     }
@@ -111,8 +113,26 @@ open class Description: Model {
       if name == "label" || name == "name" { _ = try encodeValue(v, limits: limits) }; return v
     }
     switch name {
-        case "stringReader": return .classValue("MAStringReader")
-        case "stringWriter": return .classValue("MAStringWriter")
+    case "kind":
+      var kind = "Object"
+      if className == "MAClassDescription" {
+        kind = "Class"
+      } else if className == "MASymbolDescription" {
+        kind = "Symbol"
+      } else if className == "MANumberDescription" {
+        kind = "Number"
+      } else if className == "MABooleanDescription" {
+        kind = "Boolean"
+      } else if className == "MATokenDescription" {
+        kind = "Array"
+      } else if isMultiple {
+        kind = "Collection"
+      } else if ClassRegistry.shared.includesBehavior(className, "MAStringDescription") {
+        kind = "String"
+      }
+      return .classValue(kind)
+    case "stringReader": return .classValue("MAStringReader")
+    case "stringWriter": return .classValue("MAStringWriter")
         case "validator": return .classValue("MAValidatorVisitor")
         case "separators": return .string(" ,;\r\n\t")
         case "thousandsSeparator": return .character(",")
@@ -128,7 +148,7 @@ open class Description: Model {
         case "undefined": return .string("")
     case "label":
       let result = Value.string(try defaultLabel(limits: limits));
-      _ = try encodeValue(result, limits: limits); return result
+      try checkLocalValue(result, limits: limits); return result
     case "name": return try boundedAccessor(limits).accessorName(limits: limits)
     default: return .undefined
         }
@@ -248,8 +268,14 @@ func supported(_ d: Description) throws {
         case "stringReader", "stringWriter", "validator":
             let expected = k == "stringReader" ? "MAStringReader" : k == "stringWriter" ? "MAStringWriter" : "MAValidatorVisitor"
             try require(v == .classValue(expected), "Unsupported interpreter class override")
-        case "name":
-            switch v { case .undefined, .string, .symbol: break; default: throw MagritteError("Expected description name") }
+    case "kind":
+      if !v.isNil {
+        guard case .classValue(let name) = v, knownClass(name) else {
+          throw MagritteError("Description kind must be Class or nil")
+        }
+      }
+    case "name":
+      switch v { case .undefined, .string, .symbol: break; default: throw MagritteError("Expected description name") }
         case "default", "undefinedValue": break
         default: try require(k.hasPrefix("metadata:"), "Unsupported semantic property: \(k)")
         }
@@ -426,9 +452,13 @@ func wire(_ v: Value, _ limits: Limits, _ depth: Int = 0) throws -> [String: Any
     case .integer(let i): return ["type": "integer", "value": String(i)]
     case .string(let s): return ["type": "string", "value": s]
     case .symbol(let s): return ["type": "symbol", "value": s]
-    case .classValue(let name): try require(knownClass(name), "Unknown portable class"); return ["type": "class", "value": name]
-    case .float(let n): return ["type": "float", "value": try floatBits(n)]
-    case .reference(let id): return ["type": "reference", "value": try identity(id)]
+  case .conflict:
+    throw MagritteError("Composite conflicts are local objects and cannot be exported")
+  case .classValue(let name):
+    try require(knownClass(name), "Unknown portable class");
+    return ["type": "class", "value": name]
+  case .float(let n): return ["type": "float", "value": try floatBits(n)]
+  case .reference(let id): return ["type": "reference", "value": try identity(id)]
     case .character(let s):
         try require(s.unicodeScalars.count == 1, "Character requires one Unicode scalar")
         return ["type": "character", "value": s]
@@ -463,10 +493,16 @@ public final class Graph {
         if format != "magritte.graph/4" {
             func legacy(_ node: Any) throws {
                 if let object = node as? [String: Any] {
-                    try require((object["type"] as? String) != "class" && (object["class"] as? String) != "MADelegatorAccessor", "Class values and delegators require graph/4")
-                    for value in object.values { try legacy(value) }
-                } else if let array = node as? [Any] { for value in array { try legacy(value) } }
-            }; try legacy(j)
+          try require(
+            (object["type"] as? String) != "class"
+              && !["MADelegatorAccessor", "MACompositeAccessor"].contains(
+                (object["class"] as? String) ?? ""),
+            "Class values and delegators require graph/4")
+          for value in object.values { try legacy(value) }
+        } else if let array = node as? [Any] {
+          for value in array { try legacy(value) }
+        }
+      }; try legacy(j)
         }
         let g = Graph(root: try identity(j["root"])); g.format = format
         let nodes = try list(j["descriptions"])

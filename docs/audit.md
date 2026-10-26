@@ -56,7 +56,8 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Accessor-derived names and labels | I, R (ASCII inflection profile) | exact name kinds, chain ordering, nil/empty overrides and default metadata; Unicode inflection N; accessor-inference.md |
 | Description property/selector accessors | I, R (selected fields) | retained seven-property bootstrap plus class-specific selector metadata graphs |
 | Local pluggable native accessors | I, R (first-class accessor profile), X (wire) | independent block slots, identity equality/copy, chains/mementos and empty annotated schema; pluggable-accessors.md; direct Description callbacks remain separate |
-| Selector/variable/identity/null/chain strategies | I, R (profile) | graph/3 strategies and explicit host bindings; delegator added in graph/4; other composite protocols N |
+| Selector/variable/identity/null/chain strategies | I, R (profile) | graph/3 strategies and explicit host bindings; delegator and composite configurations in graph/4 |
+| MACompositeAccessor / MACompositeConflict | I, R (native Value profile) | binary traversal, capabilities, species equality, copy/kind/label semantics and memento editing; local conflict objects, explicit host message lookup; composites.md |
 | Accessor canRead/canWrite protocol | I, R (nine represented strategies) | host selector/variable discovery, absent slots, short-circuit/error/side-effect traces; accessor-capabilities.md |
 | Native local scalar conditions | I, X | executed natively; kind errors skip conditions; nil sentinel skips them |
 | MACondition selector/receiver, conjunction and negation objects | I, R (finite protocol) | labelled bounded graph/3 data; arbitrary messages/blocks and container conditions X |
@@ -131,3 +132,5 @@ Phase 0.12 implements first-class local MAPluggableAccessor behavior, identity-b
 Phase 0.13 replaces raw-key label fallback with the audited accessor name/default-label protocol and faithful lazy null defaults. [accessor-inference.md](accessor-inference.md) records 70 GT cases, fifteen class defaults, twenty matching Magritte source fingerprints plus one kernel method, unprojected metadata tests and graph round trips. Composite conflicts, full Unicode inflection, mutable collection identity and the remaining scalar/reflection/cache/interpreter protocols remain pending.
 
 Phase 0.14 implements direct MAContainer lookup and enumeration in both ports. [container-enumeration.md](container-enumeration.md) records thirteen matching live/upstream method fingerprints, four complete GT observation cases, native bounds/identity/error tests and typed zero-based APIs. Full backing-collection mutation and other documented gaps remain open.
+
+Phase 0.15 implements MACompositeAccessor and local MACompositeConflict objects, plus the declared description kinds required by via:using:. [composites.md](composites.md) records 35 matching live/upstream fingerprints, 25 composite trace scenarios, conflict/kind/copy/annotation/editing evidence and eight GT accessor round-trip cases. Local conflicts are rejected by interchange; the existing Value equality/reflection boundaries remain explicit.
