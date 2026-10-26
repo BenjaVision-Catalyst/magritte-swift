@@ -69,7 +69,7 @@ open class Description: Model {
     public var children: [Description] = []
     public weak var reference: Description?
     public var classes: [String] = []
-    public var options: [Value] = []
+    public var options: Options = []
     public var labels: [(value: Value, label: String)] = []
     public var conditions: [Condition] = []
     public var portableConditions: [PortableCondition] = []
@@ -211,7 +211,11 @@ func supported(_ d: Description) throws {
     if d.isReference { _ = try d.referenceDescription() }
     else { try require(d.reference == nil, "Reference slot requires a reference description") }
     try require(d.isRelation || d.classes.isEmpty, "Classes require a relation")
-    try require(d.isOption || (d.options.isEmpty && d.labels.isEmpty), "Options require an option description")
+    if !d.isOption {
+        guard case .collection(let options) = d.options, options.isEmpty, d.labels.isEmpty else {
+            throw MagritteError("Options require an option description")
+        }
+    }
     for k in ["ordered", "distinct", "definitive", "sorted", "extensible"] where d.properties[k] != nil {
         try require((k == "extensible" && d.isOption) || (k == "distinct" && d.className == "MAMultipleOptionDescription") || (k == "ordered" && d.isMultiple) || (k == "definitive" && d.isRelation && d.isMultiple) || (k == "sorted" && (d.isOption || (d.isRelation && d.isMultiple))), "Property does not apply to this description")
     }
@@ -491,7 +495,7 @@ public final class Graph {
                 }
             }
             if d.isOption {
-                for option in try list(n["options"]) { d.options.append(try value(option, limits)) }
+                d.options = Options(try list(n["options"]).map { try value($0, limits) })
                 var labelKeys = Set<String>(), labelWork = 0
                 for label in try list(n["labels"]) {
                     let entry = try dictionary(label); try keys(entry, ["value", "label"])
@@ -560,7 +564,7 @@ public final class Graph {
         }
         for d in g.descriptions.values {
             for v in d.properties.values { try references(v, 0) }
-            for v in d.options { try references(v, 0) }
+            for v in try d.options.values(limits: limits) { try references(v, 0) }
             for label in d.labels { try references(label.value, 0) }
         }
         for o in g.objects.values { for v in o.values.values { try references(v, 0) } }
@@ -574,6 +578,7 @@ public final class Graph {
         for id in descriptions.keys.sorted() {
             guard let d = descriptions[id] else { throw MagritteError("Missing description") }
             try require(id == d.id, "Inconsistent description identity"); try supported(d); try checkPortableDescription(d, limits: limits, work: &portableWork)
+            try require(!d.options.isDynamic, "Local dynamic option providers are not portable; replace with explicit static options before export")
             try require(d.accessorObject == nil, "Live accessor identity is local; materialize an explicit snapshot before export")
             try require(d.conditions.isEmpty && d.nativeRead == nil && d.nativeWrite == nil && d.defaultFunction == nil, "Local executable behavior is not portable")
             var props: [String: Any] = [:]
@@ -594,7 +599,7 @@ public final class Graph {
             }
             if d.isRelation { n["classes"] = d.classes }
             if d.isOption {
-                n["options"] = try d.options.map { try wire($0, limits) }
+                n["options"] = try d.options.values(limits: limits).map { try wire($0, limits) }
                 n["labels"] = try d.labels.map { ["value": try wire($0.value, limits), "label": $0.label] as [String: Any] }
             }
             nodes.append(n)

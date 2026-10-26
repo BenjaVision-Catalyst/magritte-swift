@@ -26,15 +26,30 @@ public extension Description {
         }
         return try bounded(displayString(value))
     }
-    func allOptions(limits: Limits = Limits()) throws -> [Value] { try allOptionsWith(.undefined, limits: limits) }
-    func allOptionsWith(_ current: Value, limits: Limits = Limits()) throws -> [Value] {
+    func allOptions(limits: Limits = Limits()) throws -> Options {
+        if isOption, case .dynamic = options { return options }
+        return try allOptionsWith(.undefined, limits: limits)
+    }
+    func allOptionsWith(_ current: Value, limits: Limits = Limits()) throws -> Options {
         if className == "MABooleanDescription" { try require(limits.visits >= 2 && limits.items >= 2, "Boolean option item/work limit"); return [.boolean(false), .boolean(true)] }
+        try require(isOption, "Option operation requires option description")
+        if case .dynamic(let source) = options {
+            if try flag("extensible") && !current.isNil && !source.includes(current, limits: limits) {
+                throw MagritteError("Dynamic options do not implement copyWith:")
+            }
+            var items: [OptionItem] = []
+            if try !isMultiple && !flag("required") { items.append(.value(property("undefinedValue"))) }
+            // Inherited Object>>asArray wraps a copied provider. A singleton is not compared by sorting.
+            items.append(.provider(source.copy()))
+            _ = try flag("sorted")
+            try require(items.count <= limits.items && limits.visits >= 1, "Options item/work limit")
+            return .collection(items)
+        }
         let budget = Budget(limits)
         var contains = false
         let key = try valueKey(current, tick: budget.tick)
-        for option in options { if try valueKey(option, tick: budget.tick) == key { contains = true } }
-        try require(isOption, "Option operation requires option description")
-        var result = options
+        for option in try options.values(limits: limits) { if try valueKey(option, tick: budget.tick) == key { contains = true } }
+        var result = try options.values(limits: limits)
         if try flag("extensible") && !current.isNil && !contains { result.append(current) }
         if try flag("sorted") {
             let ref = try referenceDescription()
@@ -46,7 +61,7 @@ public extension Description {
             result = ranked.sorted { $0.2 == $1.2 ? $0.0 < $1.0 : $0.2 < $1.2 }.map { $0.1 }
         }
         if try !isMultiple && !flag("required") { result.insert(property("undefinedValue"), at: 0) }
-        return result
+        return Options(result)
     }
 }
 public extension Graph {
@@ -143,7 +158,9 @@ private func validateField(_ d: Description, _ v: Value, _ graph: Graph?, _ budg
     } else if d.isOption {
         func check(_ e: Value) throws {
             var member = false
-            for option in d.options { try budget.tick(depth); if try valueKey(e, tick: budget.tick) == valueKey(option, tick: budget.tick) { member = true; break } }
+            if case .dynamic(let source) = d.options { try budget.tick(depth); member = try source.includes(e, limits: budget.limits) }
+            else { for option in try d.options.values(limits: budget.limits) { try budget.tick(depth); if try valueKey(e, tick: budget.tick) == valueKey(option, tick: budget.tick) { member = true; break } }
+            }
             if member { return }
             if try !d.flag("extensible") { error("MAKindError"); kind = false; return }
             let nested = try validateField(d.referenceDescription(), e, graph, budget, depth + 1)

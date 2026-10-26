@@ -1,0 +1,72 @@
+[
+	{
+		"source" : "/private/tmp/magritte-cpp-options-native.json",
+		"descriptions" : 5,
+		"objects" : 1,
+		"validated" : true,
+		"reads" : [
+			{
+				"text" : "42-42, member-MADynamicOptions",
+				"id" : "sample",
+				"values" : {
+					"choice" : {
+						"value" : "42",
+						"type" : "integer"
+					},
+					"kind" : {
+						"value" : "MADynamicOptions",
+						"type" : "class"
+					},
+					"many" : {
+						"value" : [
+							{
+								"value" : "42",
+								"type" : "integer"
+							},
+							{
+								"value" : "member",
+								"type" : "string"
+							}
+						],
+						"type" : "array"
+					}
+				}
+			}
+		]
+	},
+	{
+		"source" : "/private/tmp/magritte-swift-options-native.json",
+		"descriptions" : 5,
+		"objects" : 1,
+		"validated" : true,
+		"reads" : [
+			{
+				"text" : "42-42, member-MADynamicOptions",
+				"id" : "sample",
+				"values" : {
+					"choice" : {
+						"value" : "42",
+						"type" : "integer"
+					},
+					"kind" : {
+						"value" : "MADynamicOptions",
+						"type" : "class"
+					},
+					"many" : {
+						"value" : [
+							{
+								"value" : "42",
+								"type" : "integer"
+							},
+							{
+								"value" : "member",
+								"type" : "string"
+							}
+						],
+						"type" : "array"
+					}
+				}
+			}
+		]
+	}
+]

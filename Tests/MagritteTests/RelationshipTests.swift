@@ -26,8 +26,8 @@ final class RelationshipTests: XCTestCase {
         }
         for c in try XCTUnwrap(reference["optionCases"] as? [[String: Any]]) {
             let d = try XCTUnwrap(g.descriptions[c["description"] as? String ?? ""])
-            XCTAssertEqual(try Value.array(d.allOptions()), try value(XCTUnwrap(c["allOptions"])))
-            XCTAssertEqual(try Value.array(d.allOptionsWith(value(XCTUnwrap(c["current"])))), try value(XCTUnwrap(c["withCurrent"])))
+            XCTAssertEqual(try Value.array(d.allOptions().values()), try value(XCTUnwrap(c["allOptions"])))
+            XCTAssertEqual(try Value.array(d.allOptionsWith(value(XCTUnwrap(c["current"]))).values()), try value(XCTUnwrap(c["withCurrent"])))
         }
         for c in try XCTUnwrap(reference["labels"] as? [[String: Any]]) {
             let d = try XCTUnwrap(g.descriptions[c["description"] as? String ?? ""])

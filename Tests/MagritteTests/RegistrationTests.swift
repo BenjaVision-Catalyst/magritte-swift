@@ -67,7 +67,7 @@ final class RegistrationTests: XCTestCase {
     let definitions = try rows(f["additional"]).map(info)
     try registry.registerClasses(definitions)
     XCTAssertEqual(projected(registry.allClasses()), f["classes"] as? [String])
-    XCTAssertEqual(previous.count + definitions.count, registry.allClasses().count)
+    XCTAssertEqual(try previous.count + definitions.count, registry.allClasses().count)
     XCTAssertEqual(before.resolver.descriptions[old.id + ".classes"]?.options, previous)
     for q in try rows(f["queries"]) {
       let name = try text(q["class"])

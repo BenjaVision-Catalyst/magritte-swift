@@ -209,8 +209,8 @@ final class RecursiveTests: XCTestCase {
     XCTAssertNotNil(copy.root.accessor)
     copy.root.accessor?.name = "changed"
     XCTAssertEqual(try option.effectiveAccessor.name, "option")
-    copy.root.options.append(.integer(3))
-    XCTAssertEqual(option.options.count, 2)
+    try copy.root.options.append(.integer(3))
+    XCTAssertEqual(try option.options.count, 2)
     let container = try copyDescription(left, newID: "container.copy")
     container.root.properties["label"] = .string("Copied")
     XCTAssertEqual(left.property("label"), .string("Left"))
@@ -279,7 +279,7 @@ final class RecursiveTests: XCTestCase {
       do { try binding.write(.string(string(row["text"])), using: field) } catch { failed = true }
       XCTAssertEqual(failed, row["error"] as? Bool)
       let expected = try XCTUnwrap(row["options"] as? [Any]).map { try value($0) }
-      XCTAssertEqual(option.options, expected)
+      XCTAssertEqual(try option.options.values(), expected)
       XCTAssertEqual(try binding.read(using: field), .string(try string(row["rendered"])))
       if failed { XCTAssertEqual(option.options, previous) }
     }

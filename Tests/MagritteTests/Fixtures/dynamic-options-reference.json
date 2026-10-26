@@ -1,0 +1,3064 @@
+{
+	"readers" : [
+		{
+			"case" : "identity",
+			"input" : {
+				"value" : "alpine",
+				"type" : "string"
+			},
+			"value" : {
+				"value" : "alpine",
+				"type" : "string"
+			}
+		},
+		{
+			"case" : "reader",
+			"input" : {
+				"value" : "alpine",
+				"type" : "string"
+			},
+			"value" : {
+				"value" : "ALPINE",
+				"type" : "string"
+			}
+		},
+		{
+			"case" : "descriptionCopy",
+			"input" : {
+				"value" : "alpine",
+				"type" : "string"
+			},
+			"value" : {
+				"value" : "ALPINE",
+				"type" : "string"
+			}
+		},
+		{
+			"case" : "sourceChanged",
+			"input" : {
+				"value" : "alpine",
+				"type" : "string"
+			},
+			"value" : {
+				"value" : "new-alpine",
+				"type" : "string"
+			}
+		}
+	],
+	"textual" : {
+		"providerReplaced" : true,
+		"readError" : "MessageNotUnderstood",
+		"after" : {
+			"value" : [
+				{
+					"value" : "first",
+					"type" : "string"
+				},
+				{
+					"value" : "second",
+					"type" : "string"
+				}
+			],
+			"type" : "array"
+		}
+	},
+	"allOptionsWith" : [
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : false,
+			"required" : false,
+			"result" : [
+				"nil",
+				"copy"
+			],
+			"current" : "nil",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : false,
+			"required" : false,
+			"result" : [
+				"nil",
+				"copy"
+			],
+			"current" : "known",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : false,
+			"required" : false,
+			"result" : [
+				"nil",
+				"copy"
+			],
+			"current" : "new",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : false,
+			"required" : true,
+			"result" : [
+				"copy"
+			],
+			"current" : "nil",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : false,
+			"required" : true,
+			"result" : [
+				"copy"
+			],
+			"current" : "known",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : false,
+			"required" : true,
+			"result" : [
+				"copy"
+			],
+			"current" : "new",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : true,
+			"required" : false,
+			"result" : [
+				"nil",
+				"copy"
+			],
+			"current" : "nil",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : true,
+			"required" : false,
+			"result" : [
+				"nil",
+				"copy"
+			],
+			"current" : "known",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : true,
+			"required" : false,
+			"result" : [
+				"nil",
+				"copy"
+			],
+			"current" : "new",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : true,
+			"required" : true,
+			"result" : [
+				"copy"
+			],
+			"current" : "nil",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : true,
+			"required" : true,
+			"result" : [
+				"copy"
+			],
+			"current" : "known",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : true,
+			"required" : true,
+			"result" : [
+				"copy"
+			],
+			"current" : "new",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : false,
+			"required" : false,
+			"result" : [
+				"nil",
+				"copy"
+			],
+			"current" : "nil",
+			"calls" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : false,
+			"required" : false,
+			"result" : [
+				"nil",
+				"copy"
+			],
+			"current" : "known",
+			"calls" : [
+				"known"
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : false,
+			"required" : false,
+			"result" : [
+				"MessageNotUnderstood",
+				"copyWith:"
+			],
+			"current" : "new",
+			"calls" : [
+				"new"
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : false,
+			"required" : true,
+			"result" : [
+				"copy"
+			],
+			"current" : "nil",
+			"calls" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : false,
+			"required" : true,
+			"result" : [
+				"copy"
+			],
+			"current" : "known",
+			"calls" : [
+				"known"
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : false,
+			"required" : true,
+			"result" : [
+				"MessageNotUnderstood",
+				"copyWith:"
+			],
+			"current" : "new",
+			"calls" : [
+				"new"
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : true,
+			"required" : false,
+			"result" : [
+				"nil",
+				"copy"
+			],
+			"current" : "nil",
+			"calls" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : true,
+			"required" : false,
+			"result" : [
+				"nil",
+				"copy"
+			],
+			"current" : "known",
+			"calls" : [
+				"known"
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : true,
+			"required" : false,
+			"result" : [
+				"MessageNotUnderstood",
+				"copyWith:"
+			],
+			"current" : "new",
+			"calls" : [
+				"new"
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : true,
+			"required" : true,
+			"result" : [
+				"copy"
+			],
+			"current" : "nil",
+			"calls" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : true,
+			"required" : true,
+			"result" : [
+				"copy"
+			],
+			"current" : "known",
+			"calls" : [
+				"known"
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : true,
+			"required" : true,
+			"result" : [
+				"MessageNotUnderstood",
+				"copyWith:"
+			],
+			"current" : "new",
+			"calls" : [
+				"new"
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : false,
+			"required" : false,
+			"result" : [
+				"copy"
+			],
+			"current" : "nil",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : false,
+			"required" : false,
+			"result" : [
+				"copy"
+			],
+			"current" : "known",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : false,
+			"required" : false,
+			"result" : [
+				"copy"
+			],
+			"current" : "new",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : false,
+			"required" : true,
+			"result" : [
+				"copy"
+			],
+			"current" : "nil",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : false,
+			"required" : true,
+			"result" : [
+				"copy"
+			],
+			"current" : "known",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : false,
+			"required" : true,
+			"result" : [
+				"copy"
+			],
+			"current" : "new",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : true,
+			"required" : false,
+			"result" : [
+				"copy"
+			],
+			"current" : "nil",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : true,
+			"required" : false,
+			"result" : [
+				"copy"
+			],
+			"current" : "known",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : true,
+			"required" : false,
+			"result" : [
+				"copy"
+			],
+			"current" : "new",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : true,
+			"required" : true,
+			"result" : [
+				"copy"
+			],
+			"current" : "nil",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : true,
+			"required" : true,
+			"result" : [
+				"copy"
+			],
+			"current" : "known",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : true,
+			"required" : true,
+			"result" : [
+				"copy"
+			],
+			"current" : "new",
+			"calls" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : false,
+			"required" : false,
+			"result" : [
+				"copy"
+			],
+			"current" : "nil",
+			"calls" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : false,
+			"required" : false,
+			"result" : [
+				"copy"
+			],
+			"current" : "known",
+			"calls" : [
+				"known"
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : false,
+			"required" : false,
+			"result" : [
+				"MessageNotUnderstood",
+				"copyWith:"
+			],
+			"current" : "new",
+			"calls" : [
+				"new"
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : false,
+			"required" : true,
+			"result" : [
+				"copy"
+			],
+			"current" : "nil",
+			"calls" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : false,
+			"required" : true,
+			"result" : [
+				"copy"
+			],
+			"current" : "known",
+			"calls" : [
+				"known"
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : false,
+			"required" : true,
+			"result" : [
+				"MessageNotUnderstood",
+				"copyWith:"
+			],
+			"current" : "new",
+			"calls" : [
+				"new"
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : true,
+			"required" : false,
+			"result" : [
+				"copy"
+			],
+			"current" : "nil",
+			"calls" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : true,
+			"required" : false,
+			"result" : [
+				"copy"
+			],
+			"current" : "known",
+			"calls" : [
+				"known"
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : true,
+			"required" : false,
+			"result" : [
+				"MessageNotUnderstood",
+				"copyWith:"
+			],
+			"current" : "new",
+			"calls" : [
+				"new"
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : true,
+			"required" : true,
+			"result" : [
+				"copy"
+			],
+			"current" : "nil",
+			"calls" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : true,
+			"required" : true,
+			"result" : [
+				"copy"
+			],
+			"current" : "known",
+			"calls" : [
+				"known"
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : true,
+			"required" : true,
+			"result" : [
+				"MessageNotUnderstood",
+				"copyWith:"
+			],
+			"current" : "new",
+			"calls" : [
+				"new"
+			],
+			"extensible" : true
+		}
+	],
+	"queries" : [
+		{
+			"query" : "al",
+			"value" : {
+				"value" : [
+					{
+						"value" : "alpha",
+						"type" : "string"
+					},
+					{
+						"value" : "alpine",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"query" : "Al",
+			"value" : {
+				"value" : [
+					{
+						"value" : "Alpha",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"query" : "",
+			"value" : {
+				"value" : [
+					{
+						"value" : "alpha",
+						"type" : "string"
+					},
+					{
+						"value" : "alpine",
+						"type" : "string"
+					},
+					{
+						"value" : "beta",
+						"type" : "string"
+					},
+					{
+						"value" : "Alpha",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			}
+		},
+		{
+			"query" : "z",
+			"value" : {
+				"value" : [ ],
+				"type" : "array"
+			}
+		},
+		{
+			"query" : "al",
+			"value" : {
+				"value" : [
+					{
+						"value" : "alpha",
+						"type" : "string"
+					},
+					{
+						"value" : "alpine",
+						"type" : "string"
+					},
+					{
+						"value" : "altar",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			}
+		}
+	],
+	"identity" : {
+		"copySame" : false,
+		"completionBlockShared" : true,
+		"membershipBlockShared" : true,
+		"rawSame" : true,
+		"sourceCopySame" : false,
+		"readerSlotIndependent" : true,
+		"allOptionsSame" : true,
+		"copyReferenceSame" : false
+	},
+	"policy" : "Real MADynamicOptions objects, callbacks and description copies in live GT. No enumeration by allOptions, validation or copying. Kernel Object>>asArray wraps a copied provider for allOptionsWith; copyWith: is unsupported. Values and errors are projected to the existing portable value and flattened validation profiles. Live Collection>>maSelectMatching: calls an unavailable startsWith: selector; its source-directed prefix behavior is checked using actual String>>beginsWith: and the live failure remains recorded.",
+	"staticMatching" : [
+		{
+			"query" : "al",
+			"value" : {
+				"value" : [
+					{
+						"value" : "alpha",
+						"type" : "string"
+					},
+					{
+						"value" : "alpine",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			},
+			"liveError" : "MessageNotUnderstood"
+		},
+		{
+			"query" : "Al",
+			"value" : {
+				"value" : [
+					{
+						"value" : "Alpha",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			},
+			"liveError" : "MessageNotUnderstood"
+		},
+		{
+			"query" : "",
+			"value" : {
+				"value" : [
+					{
+						"value" : "alpha",
+						"type" : "string"
+					},
+					{
+						"value" : "alpine",
+						"type" : "string"
+					},
+					{
+						"value" : "beta",
+						"type" : "string"
+					},
+					{
+						"value" : "Alpha",
+						"type" : "string"
+					}
+				],
+				"type" : "array"
+			},
+			"liveError" : "MessageNotUnderstood"
+		}
+	],
+	"class" : {
+		"superclass" : "Object",
+		"abstract" : false,
+		"name" : "MADynamicOptions",
+		"label" : "Dynamic Options"
+	},
+	"allOptions" : [
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : false,
+			"required" : false,
+			"same" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : true,
+			"required" : false,
+			"same" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : false,
+			"required" : false,
+			"same" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : true,
+			"required" : false,
+			"same" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : false,
+			"required" : true,
+			"same" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : true,
+			"required" : true,
+			"same" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : false,
+			"required" : true,
+			"same" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"sorted" : true,
+			"required" : true,
+			"same" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : false,
+			"required" : false,
+			"same" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : true,
+			"required" : false,
+			"same" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : false,
+			"required" : false,
+			"same" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : true,
+			"required" : false,
+			"same" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : false,
+			"required" : true,
+			"same" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : true,
+			"required" : true,
+			"same" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : false,
+			"required" : true,
+			"same" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"sorted" : true,
+			"required" : true,
+			"same" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"extensible" : true
+		}
+	],
+	"validation" : [
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "member",
+					"type" : "string"
+				}
+			],
+			"input" : {
+				"value" : "member",
+				"type" : "string"
+			},
+			"errors" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "42",
+					"type" : "integer"
+				}
+			],
+			"input" : {
+				"value" : "42",
+				"type" : "integer"
+			},
+			"errors" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "15",
+					"type" : "integer"
+				}
+			],
+			"input" : {
+				"value" : "15",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "5",
+					"type" : "integer"
+				}
+			],
+			"input" : {
+				"value" : "5",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "other",
+					"type" : "string"
+				}
+			],
+			"input" : {
+				"value" : "other",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : [
+						{
+							"value" : "member",
+							"type" : "string"
+						},
+						{
+							"value" : "42",
+							"type" : "integer"
+						}
+					],
+					"type" : "array"
+				}
+			],
+			"input" : {
+				"value" : [
+					{
+						"value" : "member",
+						"type" : "string"
+					},
+					{
+						"value" : "42",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : [
+						{
+							"value" : "other",
+							"type" : "string"
+						},
+						{
+							"value" : "5",
+							"type" : "integer"
+						}
+					],
+					"type" : "array"
+				}
+			],
+			"input" : {
+				"value" : [
+					{
+						"value" : "other",
+						"type" : "string"
+					},
+					{
+						"value" : "5",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : [ ],
+					"type" : "array"
+				}
+			],
+			"input" : {
+				"value" : [ ],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "AB",
+					"type" : "string"
+				}
+			],
+			"input" : {
+				"value" : "AB",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "member",
+					"type" : "string"
+				}
+			],
+			"input" : {
+				"value" : "member",
+				"type" : "string"
+			},
+			"errors" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "42",
+					"type" : "integer"
+				}
+			],
+			"input" : {
+				"value" : "42",
+				"type" : "integer"
+			},
+			"errors" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "15",
+					"type" : "integer"
+				}
+			],
+			"input" : {
+				"value" : "15",
+				"type" : "integer"
+			},
+			"errors" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "5",
+					"type" : "integer"
+				}
+			],
+			"input" : {
+				"value" : "5",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"class" : "MARangeError",
+					"description" : "Reference"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "other",
+					"type" : "string"
+				}
+			],
+			"input" : {
+				"value" : "other",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : [
+						{
+							"value" : "member",
+							"type" : "string"
+						},
+						{
+							"value" : "42",
+							"type" : "integer"
+						}
+					],
+					"type" : "array"
+				}
+			],
+			"input" : {
+				"value" : [
+					{
+						"value" : "member",
+						"type" : "string"
+					},
+					{
+						"value" : "42",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : [
+						{
+							"value" : "other",
+							"type" : "string"
+						},
+						{
+							"value" : "5",
+							"type" : "integer"
+						}
+					],
+					"type" : "array"
+				}
+			],
+			"input" : {
+				"value" : [
+					{
+						"value" : "other",
+						"type" : "string"
+					},
+					{
+						"value" : "5",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : [ ],
+					"type" : "array"
+				}
+			],
+			"input" : {
+				"value" : [ ],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "AB",
+					"type" : "string"
+				}
+			],
+			"input" : {
+				"value" : "AB",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [
+				{
+					"class" : "MARequiredError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "member",
+					"type" : "string"
+				}
+			],
+			"input" : {
+				"value" : "member",
+				"type" : "string"
+			},
+			"errors" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "42",
+					"type" : "integer"
+				}
+			],
+			"input" : {
+				"value" : "42",
+				"type" : "integer"
+			},
+			"errors" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "15",
+					"type" : "integer"
+				}
+			],
+			"input" : {
+				"value" : "15",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "5",
+					"type" : "integer"
+				}
+			],
+			"input" : {
+				"value" : "5",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "other",
+					"type" : "string"
+				}
+			],
+			"input" : {
+				"value" : "other",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : [
+						{
+							"value" : "member",
+							"type" : "string"
+						},
+						{
+							"value" : "42",
+							"type" : "integer"
+						}
+					],
+					"type" : "array"
+				}
+			],
+			"input" : {
+				"value" : [
+					{
+						"value" : "member",
+						"type" : "string"
+					},
+					{
+						"value" : "42",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : [
+						{
+							"value" : "other",
+							"type" : "string"
+						},
+						{
+							"value" : "5",
+							"type" : "integer"
+						}
+					],
+					"type" : "array"
+				}
+			],
+			"input" : {
+				"value" : [
+					{
+						"value" : "other",
+						"type" : "string"
+					},
+					{
+						"value" : "5",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : [ ],
+					"type" : "array"
+				}
+			],
+			"input" : {
+				"value" : [ ],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "AB",
+					"type" : "string"
+				}
+			],
+			"input" : {
+				"value" : "AB",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [
+				{
+					"class" : "MARequiredError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "member",
+					"type" : "string"
+				}
+			],
+			"input" : {
+				"value" : "member",
+				"type" : "string"
+			},
+			"errors" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "42",
+					"type" : "integer"
+				}
+			],
+			"input" : {
+				"value" : "42",
+				"type" : "integer"
+			},
+			"errors" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "15",
+					"type" : "integer"
+				}
+			],
+			"input" : {
+				"value" : "15",
+				"type" : "integer"
+			},
+			"errors" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "5",
+					"type" : "integer"
+				}
+			],
+			"input" : {
+				"value" : "5",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"class" : "MARangeError",
+					"description" : "Reference"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "other",
+					"type" : "string"
+				}
+			],
+			"input" : {
+				"value" : "other",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : [
+						{
+							"value" : "member",
+							"type" : "string"
+						},
+						{
+							"value" : "42",
+							"type" : "integer"
+						}
+					],
+					"type" : "array"
+				}
+			],
+			"input" : {
+				"value" : [
+					{
+						"value" : "member",
+						"type" : "string"
+					},
+					{
+						"value" : "42",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : [
+						{
+							"value" : "other",
+							"type" : "string"
+						},
+						{
+							"value" : "5",
+							"type" : "integer"
+						}
+					],
+					"type" : "array"
+				}
+			],
+			"input" : {
+				"value" : [
+					{
+						"value" : "other",
+						"type" : "string"
+					},
+					{
+						"value" : "5",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : [ ],
+					"type" : "array"
+				}
+			],
+			"input" : {
+				"value" : [ ],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MASingleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "AB",
+					"type" : "string"
+				}
+			],
+			"input" : {
+				"value" : "AB",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "m",
+					"type" : "character"
+				},
+				{
+					"value" : "e",
+					"type" : "character"
+				},
+				{
+					"value" : "m",
+					"type" : "character"
+				},
+				{
+					"value" : "b",
+					"type" : "character"
+				},
+				{
+					"value" : "e",
+					"type" : "character"
+				},
+				{
+					"value" : "r",
+					"type" : "character"
+				}
+			],
+			"input" : {
+				"value" : "member",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"value" : "42",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"value" : "15",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"value" : "5",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "o",
+					"type" : "character"
+				},
+				{
+					"value" : "t",
+					"type" : "character"
+				},
+				{
+					"value" : "h",
+					"type" : "character"
+				},
+				{
+					"value" : "e",
+					"type" : "character"
+				},
+				{
+					"value" : "r",
+					"type" : "character"
+				}
+			],
+			"input" : {
+				"value" : "other",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "member",
+					"type" : "string"
+				},
+				{
+					"value" : "42",
+					"type" : "integer"
+				}
+			],
+			"input" : {
+				"value" : [
+					{
+						"value" : "member",
+						"type" : "string"
+					},
+					{
+						"value" : "42",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "other",
+					"type" : "string"
+				},
+				{
+					"value" : "5",
+					"type" : "integer"
+				}
+			],
+			"input" : {
+				"value" : [
+					{
+						"value" : "other",
+						"type" : "string"
+					},
+					{
+						"value" : "5",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"value" : [ ],
+				"type" : "array"
+			},
+			"errors" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "A",
+					"type" : "character"
+				},
+				{
+					"value" : "B",
+					"type" : "character"
+				}
+			],
+			"input" : {
+				"value" : "AB",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "m",
+					"type" : "character"
+				},
+				{
+					"value" : "e",
+					"type" : "character"
+				},
+				{
+					"value" : "m",
+					"type" : "character"
+				},
+				{
+					"value" : "b",
+					"type" : "character"
+				},
+				{
+					"value" : "e",
+					"type" : "character"
+				},
+				{
+					"value" : "r",
+					"type" : "character"
+				}
+			],
+			"input" : {
+				"value" : "member",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"value" : "42",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"value" : "15",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"value" : "5",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "o",
+					"type" : "character"
+				},
+				{
+					"value" : "t",
+					"type" : "character"
+				},
+				{
+					"value" : "h",
+					"type" : "character"
+				},
+				{
+					"value" : "e",
+					"type" : "character"
+				},
+				{
+					"value" : "r",
+					"type" : "character"
+				}
+			],
+			"input" : {
+				"value" : "other",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "member",
+					"type" : "string"
+				},
+				{
+					"value" : "42",
+					"type" : "integer"
+				}
+			],
+			"input" : {
+				"value" : [
+					{
+						"value" : "member",
+						"type" : "string"
+					},
+					{
+						"value" : "42",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "other",
+					"type" : "string"
+				},
+				{
+					"value" : "5",
+					"type" : "integer"
+				}
+			],
+			"input" : {
+				"value" : [
+					{
+						"value" : "other",
+						"type" : "string"
+					},
+					{
+						"value" : "5",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				},
+				{
+					"class" : "MARangeError",
+					"description" : "Reference"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"value" : [ ],
+				"type" : "array"
+			},
+			"errors" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : false,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "A",
+					"type" : "character"
+				},
+				{
+					"value" : "B",
+					"type" : "character"
+				}
+			],
+			"input" : {
+				"value" : "AB",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [
+				{
+					"class" : "MARequiredError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "m",
+					"type" : "character"
+				},
+				{
+					"value" : "e",
+					"type" : "character"
+				},
+				{
+					"value" : "m",
+					"type" : "character"
+				},
+				{
+					"value" : "b",
+					"type" : "character"
+				},
+				{
+					"value" : "e",
+					"type" : "character"
+				},
+				{
+					"value" : "r",
+					"type" : "character"
+				}
+			],
+			"input" : {
+				"value" : "member",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"value" : "42",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"value" : "15",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"value" : "5",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "o",
+					"type" : "character"
+				},
+				{
+					"value" : "t",
+					"type" : "character"
+				},
+				{
+					"value" : "h",
+					"type" : "character"
+				},
+				{
+					"value" : "e",
+					"type" : "character"
+				},
+				{
+					"value" : "r",
+					"type" : "character"
+				}
+			],
+			"input" : {
+				"value" : "other",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "member",
+					"type" : "string"
+				},
+				{
+					"value" : "42",
+					"type" : "integer"
+				}
+			],
+			"input" : {
+				"value" : [
+					{
+						"value" : "member",
+						"type" : "string"
+					},
+					{
+						"value" : "42",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [ ],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "other",
+					"type" : "string"
+				},
+				{
+					"value" : "5",
+					"type" : "integer"
+				}
+			],
+			"input" : {
+				"value" : [
+					{
+						"value" : "other",
+						"type" : "string"
+					},
+					{
+						"value" : "5",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"value" : [ ],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"class" : "MARequiredError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "A",
+					"type" : "character"
+				},
+				{
+					"value" : "B",
+					"type" : "character"
+				}
+			],
+			"input" : {
+				"value" : "AB",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : false
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"type" : "nil"
+			},
+			"errors" : [
+				{
+					"class" : "MARequiredError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "m",
+					"type" : "character"
+				},
+				{
+					"value" : "e",
+					"type" : "character"
+				},
+				{
+					"value" : "m",
+					"type" : "character"
+				},
+				{
+					"value" : "b",
+					"type" : "character"
+				},
+				{
+					"value" : "e",
+					"type" : "character"
+				},
+				{
+					"value" : "r",
+					"type" : "character"
+				}
+			],
+			"input" : {
+				"value" : "member",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"value" : "42",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"value" : "15",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"value" : "5",
+				"type" : "integer"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "o",
+					"type" : "character"
+				},
+				{
+					"value" : "t",
+					"type" : "character"
+				},
+				{
+					"value" : "h",
+					"type" : "character"
+				},
+				{
+					"value" : "e",
+					"type" : "character"
+				},
+				{
+					"value" : "r",
+					"type" : "character"
+				}
+			],
+			"input" : {
+				"value" : "other",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "member",
+					"type" : "string"
+				},
+				{
+					"value" : "42",
+					"type" : "integer"
+				}
+			],
+			"input" : {
+				"value" : [
+					{
+						"value" : "member",
+						"type" : "string"
+					},
+					{
+						"value" : "42",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [ ],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "other",
+					"type" : "string"
+				},
+				{
+					"value" : "5",
+					"type" : "integer"
+				}
+			],
+			"input" : {
+				"value" : [
+					{
+						"value" : "other",
+						"type" : "string"
+					},
+					{
+						"value" : "5",
+						"type" : "integer"
+					}
+				],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				},
+				{
+					"class" : "MARangeError",
+					"description" : "Reference"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [ ],
+			"input" : {
+				"value" : [ ],
+				"type" : "array"
+			},
+			"errors" : [
+				{
+					"class" : "MARequiredError",
+					"description" : "Choice"
+				}
+			],
+			"extensible" : true
+		},
+		{
+			"class" : "MAMultipleOptionDescription",
+			"required" : true,
+			"queries" : [ ],
+			"includes" : [
+				{
+					"value" : "A",
+					"type" : "character"
+				},
+				{
+					"value" : "B",
+					"type" : "character"
+				}
+			],
+			"input" : {
+				"value" : "AB",
+				"type" : "string"
+			},
+			"errors" : [
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				},
+				{
+					"class" : "MAKindError",
+					"description" : "Reference"
+				}
+			],
+			"extensible" : true
+		}
+	]
+}

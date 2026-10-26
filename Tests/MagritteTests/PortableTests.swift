@@ -218,7 +218,7 @@ final class PortableTests: XCTestCase {
       XCTAssertEqual(try password.isObfuscated(v), c["isObfuscated"] as? Bool)
     }
     let boolean = try XCTUnwrap(g.descriptions["boolean"])
-    XCTAssertEqual(try Value.array(boolean.allOptions()), try value(edges["booleanOptions"]))
+    XCTAssertEqual(try Value.array(boolean.allOptions().values()), try value(edges["booleanOptions"]))
     for c in try cases(edges, "booleanLabels") {
       XCTAssertEqual(try boolean.labelForOption(value(c["input"])), c["label"] as? String)
     }

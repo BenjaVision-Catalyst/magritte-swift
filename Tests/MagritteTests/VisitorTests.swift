@@ -239,9 +239,9 @@ final class VisitorTests: XCTestCase {
         let original = source.root.children.last!
         let copied = result.root.children.last!
         XCTAssertFalse(original.reference === copied.reference)
-        copied.options.append(.string("c"))
-        XCTAssertEqual(original.options.count, 2)
-        copied.options.removeLast()
+        try copied.options.append(.string("c"))
+        XCTAssertEqual(try original.options.count, 2)
+        try copied.options.removeLast()
         builder.model = target
         builder.priority = 9
         let reused = try XCTUnwrap(builder.buildFrom(b, newIDPrefix: "reused"))
@@ -314,7 +314,7 @@ final class VisitorTests: XCTestCase {
     let metadata = RecursiveDescriptionModel()
     let schema = try metadata.describeReflective(relation)
     XCTAssertTrue(
-      try XCTUnwrap(metadata.resolver.descriptions[schema.id + ".classes"]).options.contains(
+      try XCTUnwrap(metadata.resolver.descriptions[schema.id + ".classes"]).options.values().contains(
         classValue))
     var small = Limits()
     small.visits = 2

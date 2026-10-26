@@ -81,6 +81,7 @@ public final class ClassRegistry: @unchecked Sendable {
       ClassInfo(
         name: "MADictionaryAccessor", superclass: "MAAccessor", isAbstract: false,
         label: "Dictionary Accessor"),
+      ClassInfo(name: "MADynamicOptions", superclass: "Object", isAbstract: false, label: "Dynamic Options"),
       ClassInfo(
         name: "MAElementDescription", superclass: "MADescription", isAbstract: true,
         label: "Element Description"),

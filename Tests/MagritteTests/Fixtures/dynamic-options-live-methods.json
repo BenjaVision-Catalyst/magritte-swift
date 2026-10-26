@@ -1,0 +1,216 @@
+{
+  "captured": "2026-10-26",
+  "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
+  "methods": [
+    {
+      "classSide": false,
+      "methodClassName": "MADynamicOptions",
+      "methodName": "block",
+      "liveSourceSHA256": "30d172fdc435c6d916df321bd53a696a6cebf9f4602a44f3d9151a87afb5c8e9",
+      "upstreamSourceSHA256": "30d172fdc435c6d916df321bd53a696a6cebf9f4602a44f3d9151a87afb5c8e9",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MADynamicOptions",
+      "methodName": "block:",
+      "liveSourceSHA256": "0d0e9cd4bc17fe0a4612285fc5e4a7bf8ff785ec7e21496eab6cfd66c5877820",
+      "upstreamSourceSHA256": "0d0e9cd4bc17fe0a4612285fc5e4a7bf8ff785ec7e21496eab6cfd66c5877820",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MADynamicOptions",
+      "methodName": "reader",
+      "liveSourceSHA256": "3d8d3266ebdc09deda5da66995ca67c6e42bfaf3d01bae3cf47b7cd1b513096a",
+      "upstreamSourceSHA256": "3d8d3266ebdc09deda5da66995ca67c6e42bfaf3d01bae3cf47b7cd1b513096a",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MADynamicOptions",
+      "methodName": "reader:",
+      "liveSourceSHA256": "538b7bf64de6bc76962e0df650898dda2cef8a50cca6332542ac081a5e1c9bff",
+      "upstreamSourceSHA256": "538b7bf64de6bc76962e0df650898dda2cef8a50cca6332542ac081a5e1c9bff",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MADynamicOptions",
+      "methodName": "includes:",
+      "liveSourceSHA256": "7272a00915a6c5b6829f5240b61b6dacf79bb3b16a7d4ec10a2a68a121db4e2c",
+      "upstreamSourceSHA256": "7272a00915a6c5b6829f5240b61b6dacf79bb3b16a7d4ec10a2a68a121db4e2c",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MADynamicOptions",
+      "methodName": "includesBlock",
+      "liveSourceSHA256": "273f0b0c71b6cad4b47b19c5a0bd3d9bb350cd56de82284f55fe6cf9a48c6671",
+      "upstreamSourceSHA256": "273f0b0c71b6cad4b47b19c5a0bd3d9bb350cd56de82284f55fe6cf9a48c6671",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MADynamicOptions",
+      "methodName": "includesBlock:",
+      "liveSourceSHA256": "84ba7f738343893f74236f1f720bbaec1590e9088adb4d16862e2b475a99c40a",
+      "upstreamSourceSHA256": "84ba7f738343893f74236f1f720bbaec1590e9088adb4d16862e2b475a99c40a",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MADynamicOptions",
+      "methodName": "detect:",
+      "liveSourceSHA256": "583d81d080690818c0779c37eb22a35f8e224a9abc74b5e251dd4be7d9048a25",
+      "upstreamSourceSHA256": "583d81d080690818c0779c37eb22a35f8e224a9abc74b5e251dd4be7d9048a25",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MADynamicOptions",
+      "methodName": "maAllOptionsFor:",
+      "liveSourceSHA256": "64c730cdb5dbfa90f361a03b3ef2089fd79e5dc7f0eca3811bc3171671e1f274",
+      "upstreamSourceSHA256": "64c730cdb5dbfa90f361a03b3ef2089fd79e5dc7f0eca3811bc3171671e1f274",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MADynamicOptions",
+      "methodName": "maSelectMatching:",
+      "liveSourceSHA256": "7421c4010f6d9ea794cfc81069321432b38e38ab79c47eb7918a48efcb7898e4",
+      "upstreamSourceSHA256": "7421c4010f6d9ea794cfc81069321432b38e38ab79c47eb7918a48efcb7898e4",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAOptionDescription",
+      "methodName": "allOptions",
+      "liveSourceSHA256": "b17d19cc1fc26b32003fca87379b37b3d3f02cf758816beb7e98bc2bdbc0a1fa",
+      "upstreamSourceSHA256": "b17d19cc1fc26b32003fca87379b37b3d3f02cf758816beb7e98bc2bdbc0a1fa",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAOptionDescription",
+      "methodName": "allOptionsWith:",
+      "liveSourceSHA256": "be249a46a36059f0db63bcda4f3b42a47d787e70e1c93a937e467f6f9b56fa41",
+      "upstreamSourceSHA256": "be249a46a36059f0db63bcda4f3b42a47d787e70e1c93a937e467f6f9b56fa41",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAOptionDescription",
+      "methodName": "shouldNotInclude:",
+      "liveSourceSHA256": "dce91037d32efdd0aeb576c6a482bbbc67e28139e43ba3cef76ec584bbade6ab",
+      "upstreamSourceSHA256": "dce91037d32efdd0aeb576c6a482bbbc67e28139e43ba3cef76ec584bbade6ab",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAOptionDescription",
+      "methodName": "validateOptionKind:",
+      "liveSourceSHA256": "6827b488d4177ed2c3aa3f9c8d5d91b60c7181c2351c444cf05a81b4cd47df84",
+      "upstreamSourceSHA256": "6827b488d4177ed2c3aa3f9c8d5d91b60c7181c2351c444cf05a81b4cd47df84",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAOptionDescription",
+      "methodName": "postCopy",
+      "liveSourceSHA256": "30f63a13be225c40a4f165b7937f3f6edf2f8c664e45c11497dd98f5e33eeafb",
+      "upstreamSourceSHA256": "30f63a13be225c40a4f165b7937f3f6edf2f8c664e45c11497dd98f5e33eeafb",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAOptionDescription",
+      "methodName": "optionsTextual",
+      "liveSourceSHA256": "6bc3f7e900cd81c0a600073a0f2813180bc54c84b67ea0cb22af24d6cc1fc5c4",
+      "upstreamSourceSHA256": "6bc3f7e900cd81c0a600073a0f2813180bc54c84b67ea0cb22af24d6cc1fc5c4",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAOptionDescription",
+      "methodName": "optionsTextual:",
+      "liveSourceSHA256": "6fbe0ab2a763ea4ad741202d73500a1edd0f654d03b3af3204ea7655ea97920d",
+      "upstreamSourceSHA256": "6fbe0ab2a763ea4ad741202d73500a1edd0f654d03b3af3204ea7655ea97920d",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAOptionDescription",
+      "methodName": "prepareOptions:",
+      "liveSourceSHA256": "65fbe1a272bfe996caa082dc05738b09f4098553dde774e84edd6c492a51a985",
+      "upstreamSourceSHA256": "65fbe1a272bfe996caa082dc05738b09f4098553dde774e84edd6c492a51a985",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "Collection",
+      "methodName": "maAllOptionsFor:",
+      "liveSourceSHA256": "77b4086c6140186303a229040b23a9c04c516332cc40cebbd14e27c03e8dca46",
+      "upstreamSourceSHA256": "77b4086c6140186303a229040b23a9c04c516332cc40cebbd14e27c03e8dca46",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "Collection",
+      "methodName": "maSelectMatching:",
+      "liveSourceSHA256": "8facfd314608864d3679d2416d6d40540c4dce2ad7c2abce1125a381e21389c4",
+      "upstreamSourceSHA256": "8facfd314608864d3679d2416d6d40540c4dce2ad7c2abce1125a381e21389c4",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MASingleOptionDescription",
+      "methodName": "prepareOptions:",
+      "liveSourceSHA256": "d98700404d443a4a4494ce738dd0ecd60a87e7e7c3184031d426b09338531e10",
+      "upstreamSourceSHA256": "d98700404d443a4a4494ce738dd0ecd60a87e7e7c3184031d426b09338531e10",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAMultipleOptionDescription",
+      "methodName": "validateKind:",
+      "liveSourceSHA256": "29c414f418d24e25fa6821534b5c338b3d074eeda279739bbb6868ecf8a65053",
+      "upstreamSourceSHA256": "29c414f418d24e25fa6821534b5c338b3d074eeda279739bbb6868ecf8a65053",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": true,
+      "methodClassName": "MADynamicOptions",
+      "methodName": "block:",
+      "liveSourceSHA256": "922d9e716d133234faf5c6104c36531b4ca4376b5c20d54a6abddea823596cac",
+      "upstreamSourceSHA256": "922d9e716d133234faf5c6104c36531b4ca4376b5c20d54a6abddea823596cac",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAStringReader",
+      "methodName": "visitSingleOptionDescription:",
+      "liveSourceSHA256": "df3796c9ead7915ebfbef92ae0eceaac05d1bff9f7ab6ab259629723ddfd55c9",
+      "upstreamSourceSHA256": "df3796c9ead7915ebfbef92ae0eceaac05d1bff9f7ab6ab259629723ddfd55c9",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAStringWriter",
+      "methodName": "visitSingleOptionDescription:",
+      "liveSourceSHA256": "66bd6235754869e1f6fc12dc7e42a089115a5b545f995482b8713e64ded5221a",
+      "upstreamSourceSHA256": "66bd6235754869e1f6fc12dc7e42a089115a5b545f995482b8713e64ded5221a",
+      "matchesUpstreamIgnoringWhitespace": true
+    }
+  ],
+  "kernelMethods": [
+    {
+      "classSide": false,
+      "methodClassName": "Object",
+      "methodName": "asArray",
+      "liveSourceSHA256": "322106b813d04594837860250030b6e033b47889905e29771fca4dd25b4128ee",
+      "policy": "Installed Pharo kernel Object>>asArray returns Array with: self; outside pinned Magritte sources."
+    }
+  ],
+  "policy": "All 25 inspected Magritte methods match pinned upstream ignoring whitespace. Live Collection>>maSelectMatching: sends unavailable String>>startsWith:, so direct live failure and the source-directed beginsWith: projection are recorded separately. Kernel asArray supplies singleton provider wrapping, not eager completion. No image source edits."
+}

@@ -119,7 +119,7 @@ public func copyDescription(_ source: Description, newID: String, limits: Limits
     n.properties = d.properties
     n.children = d.children
     n.classes = d.classes
-    n.options = d.options
+    n.options = d.isOption ? d.options.copy() : d.options
     n.labels = d.labels
     n.conditions = d.conditions
     n.portableConditions = d.portableConditions

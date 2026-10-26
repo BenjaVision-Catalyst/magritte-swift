@@ -96,7 +96,7 @@ private func reflectedMetadata(
       key == "stringReader"
         ? "String Reader" : key == "stringWriter" ? "String Writer" : "Validator")
     d.properties["default"] = .classValue(cls)
-    d.options = try registry.withAllSubclasses(cls).map(Value.classValue)
+    d.options = Options(try registry.withAllSubclasses(cls).map(Value.classValue))
     try d.referenceDescription().className = "MAClassDescription"
   }
   if target.isRelation {
@@ -104,7 +104,7 @@ private func reflectedMetadata(
     d.properties["label"] = .string("Classes")
     d.properties["default"] = .collection(kind: "set", elements: [])
     try d.referenceDescription().className = "MAClassDescription"
-    d.options = registry.allClasses().map(Value.classValue)
+    d.options = Options(registry.allClasses().map(Value.classValue))
   }
   return graph
 }
@@ -361,13 +361,13 @@ private final class DescriptionBinding: Model {
     }
     if name == "optionsTextual", target.isOption {
       var work = 0
-      _ = try valueKey(.array(target.options)) { depth in
+      _ = try valueKey(.array(try target.options.values(limits: s.limits))) { depth in
         work += 1
         try require(
           work <= s.limits.visits && depth <= s.limits.depth, "Options rendering work/depth limit")
       }
       return .string(
-        try target.options.map {
+        try target.options.values(limits: s.limits).map {
           try writeString(
             $0, using: target.referenceDescription(), graph: s.graph, limits: s.limits)
         }.joined(separator: "\r"))
@@ -449,7 +449,7 @@ private final class DescriptionBinding: Model {
           start += 1
         }
       }
-      target.options = values
+      target.options = Options(values)
       return
     }
     try target.writeSlot(strategy: strategy, name: name, value: value)

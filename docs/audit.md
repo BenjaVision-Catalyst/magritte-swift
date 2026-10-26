@@ -65,7 +65,8 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Relationship object identity, cycles, to-one/to-many/scalar-to-many | I, R | graph/2 explicit references and class constraints; no automatic validation cascade |
 | Static single/multiple options | I, R | membership/extensibility/prepared lists/identity-safe labels |
 | Runtime native class registration and hierarchy discovery | I, R (platform bridge) | typed bindings, inherited constraints, live discovery for new metadata and registered class interchange |
-| Dynamic option providers, grouping, arbitrary renderers | N, X (current wire) | class discovery is implemented; other executable sources remain unsupported |
+| Dynamic option providers | I, R (native Value profile), X (wire) | live completion/membership/reader callbacks, provider identity, copy/array-wrapper semantics; dynamic-options.md |
+| Option grouping and arbitrary renderers | N, X (current wire) | separate executable/presentation protocols remain unsupported |
 | Mutable collection-object identity | N, X (current wire) | inline collections are value snapshots; object references retain identity |
 | Array/OrderedCollection/Set/Bag values | I, R | kind/order/multiplicity/equality and relation/option validation; Character bridge for String collections |
 | Visitor dispatch and base description builder | I, R (represented hierarchy) | 21 dispatch points, superclass fallback, explicit traversal, stateful copy/enrichment; visitors.md |
@@ -117,3 +118,5 @@ Phase 0.7 adds exact memento model-description identity, local editor bindings a
 Phase 0.8 replaces class acceptance lists with runtime registration, typed native lookup and hierarchy discovery. registration.md records the exact GT projections, source evidence, class-valued interchange and boundaries. Existing executable type implementations remain explicit.
 
 Phase 0.9 implements visitor dispatch for the represented description hierarchy and the base `MADescriptionBuilder` protocol. [visitors.md](visitors.md) records the fresh audit, 55 method fingerprints, live behavioral traces and graph/4 round trips. Dynamic option providers, mutable collection identity, accessor capabilities/inferred labels, scalar domains and full builder/cache/interpreter protocols remain separate gaps.
+
+Phase 0.10 implements native `MADynamicOptions` and explicit Options collection/provider results. [dynamic-options.md](dynamic-options.md) records the audit, 25 matching Magritte source fingerprints, actual kernel wrapping behavior, an explicit GT String prefix projection, callback traces and graph/4 snapshot round trips. Grouping, mutable collection identity, accessor capabilities/inferred labels, scalar domains and full cache/interpreter protocols remain open.
