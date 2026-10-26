@@ -144,6 +144,10 @@ open class Description: Model {
       throw MagritteError(
         "Display block is local; inspect displayBlock rather than a Value snapshot")
     }
+    if name == "requiredErrorMessage" { return try requiredErrorMessage(limits: limits) }
+    if name == "kindErrorMessage" { return try kindErrorMessage(limits: limits) }
+    if name == "conflictErrorMessage" { return try conflictErrorMessage(limits: limits) }
+    if name == "rangeErrorMessage" { return try rangeErrorMessage(limits: limits) }
     if let v = properties[name] {
       if name == "label" || name == "name" { _ = try encodeValue(v, limits: limits) }; return v
     }
@@ -362,6 +366,14 @@ func supported(_ d: Description) throws {
         guard case .classValue(let name) = v, knownClass(name) else {
           throw MagritteError("Description kind must be Class or nil")
         }
+      }
+    case "requiredErrorMessage", "kindErrorMessage", "conflictErrorMessage", "rangeErrorMessage":
+      try require(
+        k != "rangeErrorMessage"
+          || ClassRegistry.shared.includesBehavior(d.className, "MAMagnitudeDescription"),
+        "Range message requires a magnitude description")
+      if !v.isNil {
+        guard case .string = v else { throw MagritteError("Error message must be String or nil") }
       }
     case "initialAnswer":
       try require(!d.isContainer, "Initial answer requires an element description")
@@ -660,6 +672,8 @@ public final class Graph {
             ![
               "separators", "thousandsSeparator", "lineCount", "trueString", "falseString",
               "trueStrings", "falseStrings", "displayBlockOrSymbol", "initialAnswer",
+              "requiredErrorMessage", "kindErrorMessage", "rangeErrorMessage",
+              "conflictErrorMessage",
             ].contains(k), "Property requires graph/3")
         }
       }

@@ -132,3 +132,7 @@ The new property API changes no wire forms. Supported explicit presence/nil rema
 ## Initial answers (0.22)
 
 Graph/3–4 accepts `initialAnswer` on element descriptions as any supported Value. Absence falls back to the declared default; an explicit nil remains nil. Graph/1–2 and containers reject this property. No new tag/version or annotated metadata field is added. Lazy initialization remains an explicit local operation rather than a raw-read/codec side effect. Callable defaults are not new wire Values. See [lazy.md](lazy.md).
+
+## Description error messages (0.23)
+
+Graph/3–4 accepts `requiredErrorMessage`, `kindErrorMessage`, and `conflictErrorMessage` as String or nil properties on descriptions. `rangeErrorMessage` has that same value profile on the supported magnitude description (Number). Stored nil remains distinct from absence; generated defaults are not stored. Graph/1–2 rejects these properties even when nil. Native String-valued leaf errors cannot emit nil; that case fails explicitly. No graph version, Value tag, executable message object or annotated metadata field is added. See [messages.md](messages.md).

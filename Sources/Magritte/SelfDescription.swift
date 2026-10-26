@@ -23,6 +23,12 @@ func metadataSelector(_ d: Description, _ name: String, writing: Bool) -> Bool {
   ].contains(name) {
     return true
   }
+  if ["requiredErrorMessage", "kindErrorMessage", "conflictErrorMessage"].contains(name) {
+    return true
+  }
+  if name == "rangeErrorMessage" {
+    return ClassRegistry.shared.includesBehavior(d.className, "MAMagnitudeDescription")
+  }
   if name == "initialAnswer" { return !d.isContainer }
   if name == "name" { return true }
   if ["defaultLabel", "hasLabel", "isSortable"].contains(name) { return !writing }

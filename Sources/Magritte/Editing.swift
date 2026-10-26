@@ -284,7 +284,7 @@ public final class CheckedMemento: CachedMemento {
     return [
       ValidationError(
         descriptionID: description.id, code: "MAConflictError",
-        message: "Model changed while editing; memento reset")
+        message: try validationMessage(description, "MAConflictError", limits))
     ]
   }
 }

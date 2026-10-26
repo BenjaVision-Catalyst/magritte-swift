@@ -58,6 +58,8 @@
     "lazy-scenarios.json": "491811ea5d9b151a059890bd85b5e9f1cad5e8216c1733b829173a4dacf7eee9",
     "lazy-upstream-methods.json": "14962baf6540c31cfacb532dbff494e8b7575c07c93bbcc3ed4818ec9ad1ac44",
     "live-methods.json": "c538d290f1456deedf892b3ba69a0464c8ba690dead6e26cbb49aedc51888d39",
+    "messages-scenarios.json": "f60af4ca6cd9b0f7cd1c49b3c599cf693e2a3402e7d4b4a17bbc14a0109ffa1d",
+    "messages-upstream-methods.json": "3720df8c193a7b4379a8585f44c64506cf86b35a1daa2d6b075a6c387a22cc62",
     "person-v1.json": "87541466c2f6d8e01828a31dfb3e3a31e11bc7eb3cafbe06bdd032716c7e0179",
     "person-v2.json": "376c9ad1ba766ce2bc944c44b85d736bc47d46a5ca29324530479cfc3cfed5d1",
     "pluggable-accessors-live-methods.json": "95fe2a65cc7abe814e093f99f45517b344b58ec01b0b6c1d313a3e169eb98a92",

@@ -1,0 +1,1389 @@
+{
+  "authority": "Source-derived expectations from pinned Magritte; GT not accessed. Stored nil is checked by native boundary tests, not assigned an invented String exception message.",
+  "getters": [
+    {
+      "className": "MAStringDescription",
+      "key": "requiredErrorMessage",
+      "properties": {},
+      "result": {
+        "type": "string",
+        "value": "Input is required but no input given"
+      }
+    },
+    {
+      "className": "MAStringDescription",
+      "key": "requiredErrorMessage",
+      "properties": {
+        "requiredErrorMessage": {
+          "type": "string",
+          "value": "custom"
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": "custom"
+      }
+    },
+    {
+      "className": "MAStringDescription",
+      "key": "requiredErrorMessage",
+      "properties": {
+        "requiredErrorMessage": {
+          "type": "string",
+          "value": ""
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "className": "MAStringDescription",
+      "key": "requiredErrorMessage",
+      "properties": {
+        "requiredErrorMessage": {
+          "type": "string",
+          "value": "é\u0000🙂"
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": "é\u0000🙂"
+      }
+    },
+    {
+      "className": "MAStringDescription",
+      "key": "requiredErrorMessage",
+      "properties": {
+        "requiredErrorMessage": {
+          "type": "nil"
+        }
+      },
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "className": "MAStringDescription",
+      "key": "kindErrorMessage",
+      "properties": {},
+      "result": {
+        "type": "string",
+        "value": "Invalid input given"
+      }
+    },
+    {
+      "className": "MAStringDescription",
+      "key": "kindErrorMessage",
+      "properties": {
+        "kindErrorMessage": {
+          "type": "string",
+          "value": "custom"
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": "custom"
+      }
+    },
+    {
+      "className": "MAStringDescription",
+      "key": "kindErrorMessage",
+      "properties": {
+        "kindErrorMessage": {
+          "type": "string",
+          "value": ""
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "className": "MAStringDescription",
+      "key": "kindErrorMessage",
+      "properties": {
+        "kindErrorMessage": {
+          "type": "string",
+          "value": "é\u0000🙂"
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": "é\u0000🙂"
+      }
+    },
+    {
+      "className": "MAStringDescription",
+      "key": "kindErrorMessage",
+      "properties": {
+        "kindErrorMessage": {
+          "type": "nil"
+        }
+      },
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "className": "MAStringDescription",
+      "key": "conflictErrorMessage",
+      "properties": {},
+      "result": {
+        "type": "string",
+        "value": "Input is conflicting with concurrent modification"
+      }
+    },
+    {
+      "className": "MAStringDescription",
+      "key": "conflictErrorMessage",
+      "properties": {
+        "conflictErrorMessage": {
+          "type": "string",
+          "value": "custom"
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": "custom"
+      }
+    },
+    {
+      "className": "MAStringDescription",
+      "key": "conflictErrorMessage",
+      "properties": {
+        "conflictErrorMessage": {
+          "type": "string",
+          "value": ""
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "className": "MAStringDescription",
+      "key": "conflictErrorMessage",
+      "properties": {
+        "conflictErrorMessage": {
+          "type": "string",
+          "value": "é\u0000🙂"
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": "é\u0000🙂"
+      }
+    },
+    {
+      "className": "MAStringDescription",
+      "key": "conflictErrorMessage",
+      "properties": {
+        "conflictErrorMessage": {
+          "type": "nil"
+        }
+      },
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "className": "MANumberDescription",
+      "key": "rangeErrorMessage",
+      "properties": {},
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "className": "MANumberDescription",
+      "key": "rangeErrorMessage",
+      "properties": {
+        "rangeErrorMessage": {
+          "type": "string",
+          "value": "custom"
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": "custom"
+      }
+    },
+    {
+      "className": "MANumberDescription",
+      "key": "rangeErrorMessage",
+      "properties": {
+        "rangeErrorMessage": {
+          "type": "string",
+          "value": ""
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "className": "MANumberDescription",
+      "key": "rangeErrorMessage",
+      "properties": {
+        "rangeErrorMessage": {
+          "type": "string",
+          "value": "é\u0000🙂"
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": "é\u0000🙂"
+      }
+    },
+    {
+      "className": "MANumberDescription",
+      "key": "rangeErrorMessage",
+      "properties": {
+        "rangeErrorMessage": {
+          "type": "nil"
+        }
+      },
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "className": "MANumberDescription",
+      "key": "rangeErrorMessage",
+      "properties": {
+        "min": {
+          "type": "integer",
+          "value": "2"
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": "Input must be above or equeal to 2"
+      }
+    },
+    {
+      "className": "MANumberDescription",
+      "key": "rangeErrorMessage",
+      "properties": {
+        "min": {
+          "type": "integer",
+          "value": "2"
+        },
+        "rangeErrorMessage": {
+          "type": "string",
+          "value": "custom"
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": "custom"
+      }
+    },
+    {
+      "className": "MANumberDescription",
+      "key": "rangeErrorMessage",
+      "properties": {
+        "min": {
+          "type": "integer",
+          "value": "2"
+        },
+        "rangeErrorMessage": {
+          "type": "string",
+          "value": ""
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "className": "MANumberDescription",
+      "key": "rangeErrorMessage",
+      "properties": {
+        "min": {
+          "type": "integer",
+          "value": "2"
+        },
+        "rangeErrorMessage": {
+          "type": "string",
+          "value": "é\u0000🙂"
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": "é\u0000🙂"
+      }
+    },
+    {
+      "className": "MANumberDescription",
+      "key": "rangeErrorMessage",
+      "properties": {
+        "min": {
+          "type": "integer",
+          "value": "2"
+        },
+        "rangeErrorMessage": {
+          "type": "nil"
+        }
+      },
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "className": "MANumberDescription",
+      "key": "rangeErrorMessage",
+      "properties": {
+        "max": {
+          "type": "integer",
+          "value": "8"
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": "Input must be below or equal to 8"
+      }
+    },
+    {
+      "className": "MANumberDescription",
+      "key": "rangeErrorMessage",
+      "properties": {
+        "max": {
+          "type": "integer",
+          "value": "8"
+        },
+        "rangeErrorMessage": {
+          "type": "string",
+          "value": "custom"
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": "custom"
+      }
+    },
+    {
+      "className": "MANumberDescription",
+      "key": "rangeErrorMessage",
+      "properties": {
+        "max": {
+          "type": "integer",
+          "value": "8"
+        },
+        "rangeErrorMessage": {
+          "type": "string",
+          "value": ""
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "className": "MANumberDescription",
+      "key": "rangeErrorMessage",
+      "properties": {
+        "max": {
+          "type": "integer",
+          "value": "8"
+        },
+        "rangeErrorMessage": {
+          "type": "string",
+          "value": "é\u0000🙂"
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": "é\u0000🙂"
+      }
+    },
+    {
+      "className": "MANumberDescription",
+      "key": "rangeErrorMessage",
+      "properties": {
+        "max": {
+          "type": "integer",
+          "value": "8"
+        },
+        "rangeErrorMessage": {
+          "type": "nil"
+        }
+      },
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "className": "MANumberDescription",
+      "key": "rangeErrorMessage",
+      "properties": {
+        "min": {
+          "type": "integer",
+          "value": "2"
+        },
+        "max": {
+          "type": "integer",
+          "value": "8"
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": "Input must be between 2 and 8"
+      }
+    },
+    {
+      "className": "MANumberDescription",
+      "key": "rangeErrorMessage",
+      "properties": {
+        "min": {
+          "type": "integer",
+          "value": "2"
+        },
+        "max": {
+          "type": "integer",
+          "value": "8"
+        },
+        "rangeErrorMessage": {
+          "type": "string",
+          "value": "custom"
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": "custom"
+      }
+    },
+    {
+      "className": "MANumberDescription",
+      "key": "rangeErrorMessage",
+      "properties": {
+        "min": {
+          "type": "integer",
+          "value": "2"
+        },
+        "max": {
+          "type": "integer",
+          "value": "8"
+        },
+        "rangeErrorMessage": {
+          "type": "string",
+          "value": ""
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "className": "MANumberDescription",
+      "key": "rangeErrorMessage",
+      "properties": {
+        "min": {
+          "type": "integer",
+          "value": "2"
+        },
+        "max": {
+          "type": "integer",
+          "value": "8"
+        },
+        "rangeErrorMessage": {
+          "type": "string",
+          "value": "é\u0000🙂"
+        }
+      },
+      "result": {
+        "type": "string",
+        "value": "é\u0000🙂"
+      }
+    },
+    {
+      "className": "MANumberDescription",
+      "key": "rangeErrorMessage",
+      "properties": {
+        "min": {
+          "type": "integer",
+          "value": "2"
+        },
+        "max": {
+          "type": "integer",
+          "value": "8"
+        },
+        "rangeErrorMessage": {
+          "type": "nil"
+        }
+      },
+      "result": {
+        "type": "nil"
+      }
+    }
+  ],
+  "validations": [
+    {
+      "className": "MAStringDescription",
+      "properties": {
+        "required": {
+          "type": "boolean",
+          "value": true
+        }
+      },
+      "value": {
+        "type": "nil"
+      },
+      "errors": [
+        {
+          "code": "MARequiredError",
+          "message": "Input is required but no input given"
+        }
+      ]
+    },
+    {
+      "className": "MAStringDescription",
+      "properties": {
+        "required": {
+          "type": "boolean",
+          "value": true
+        },
+        "requiredErrorMessage": {
+          "type": "string",
+          "value": "custom"
+        }
+      },
+      "value": {
+        "type": "nil"
+      },
+      "errors": [
+        {
+          "code": "MARequiredError",
+          "message": "custom"
+        }
+      ]
+    },
+    {
+      "className": "MAStringDescription",
+      "properties": {
+        "required": {
+          "type": "boolean",
+          "value": true
+        },
+        "requiredErrorMessage": {
+          "type": "string",
+          "value": ""
+        }
+      },
+      "value": {
+        "type": "nil"
+      },
+      "errors": [
+        {
+          "code": "MARequiredError",
+          "message": ""
+        }
+      ]
+    },
+    {
+      "className": "MAStringDescription",
+      "properties": {
+        "required": {
+          "type": "boolean",
+          "value": true
+        },
+        "requiredErrorMessage": {
+          "type": "string",
+          "value": "é\u0000🙂"
+        }
+      },
+      "value": {
+        "type": "nil"
+      },
+      "errors": [
+        {
+          "code": "MARequiredError",
+          "message": "é\u0000🙂"
+        }
+      ]
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "properties": {
+        "required": {
+          "type": "boolean",
+          "value": true
+        }
+      },
+      "value": {
+        "type": "array",
+        "value": []
+      },
+      "errors": [
+        {
+          "code": "MARequiredError",
+          "message": "Input is required but no input given"
+        }
+      ]
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "properties": {
+        "required": {
+          "type": "boolean",
+          "value": true
+        },
+        "requiredErrorMessage": {
+          "type": "string",
+          "value": "custom"
+        }
+      },
+      "value": {
+        "type": "array",
+        "value": []
+      },
+      "errors": [
+        {
+          "code": "MARequiredError",
+          "message": "custom"
+        }
+      ]
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "properties": {
+        "required": {
+          "type": "boolean",
+          "value": true
+        },
+        "requiredErrorMessage": {
+          "type": "string",
+          "value": ""
+        }
+      },
+      "value": {
+        "type": "array",
+        "value": []
+      },
+      "errors": [
+        {
+          "code": "MARequiredError",
+          "message": ""
+        }
+      ]
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "properties": {
+        "required": {
+          "type": "boolean",
+          "value": true
+        },
+        "requiredErrorMessage": {
+          "type": "string",
+          "value": "é\u0000🙂"
+        }
+      },
+      "value": {
+        "type": "array",
+        "value": []
+      },
+      "errors": [
+        {
+          "code": "MARequiredError",
+          "message": "é\u0000🙂"
+        }
+      ]
+    },
+    {
+      "className": "MAStringDescription",
+      "properties": {},
+      "value": {
+        "type": "integer",
+        "value": "42"
+      },
+      "errors": [
+        {
+          "code": "MAKindError",
+          "message": "Invalid input given"
+        }
+      ]
+    },
+    {
+      "className": "MAStringDescription",
+      "properties": {
+        "kindErrorMessage": {
+          "type": "string",
+          "value": "custom"
+        }
+      },
+      "value": {
+        "type": "integer",
+        "value": "42"
+      },
+      "errors": [
+        {
+          "code": "MAKindError",
+          "message": "custom"
+        }
+      ]
+    },
+    {
+      "className": "MAStringDescription",
+      "properties": {
+        "kindErrorMessage": {
+          "type": "string",
+          "value": ""
+        }
+      },
+      "value": {
+        "type": "integer",
+        "value": "42"
+      },
+      "errors": [
+        {
+          "code": "MAKindError",
+          "message": ""
+        }
+      ]
+    },
+    {
+      "className": "MAStringDescription",
+      "properties": {
+        "kindErrorMessage": {
+          "type": "string",
+          "value": "é\u0000🙂"
+        }
+      },
+      "value": {
+        "type": "integer",
+        "value": "42"
+      },
+      "errors": [
+        {
+          "code": "MAKindError",
+          "message": "é\u0000🙂"
+        }
+      ]
+    },
+    {
+      "className": "MANumberDescription",
+      "properties": {},
+      "value": {
+        "type": "boolean",
+        "value": false
+      },
+      "errors": [
+        {
+          "code": "MAKindError",
+          "message": "Invalid input given"
+        }
+      ]
+    },
+    {
+      "className": "MANumberDescription",
+      "properties": {
+        "kindErrorMessage": {
+          "type": "string",
+          "value": "custom"
+        }
+      },
+      "value": {
+        "type": "boolean",
+        "value": false
+      },
+      "errors": [
+        {
+          "code": "MAKindError",
+          "message": "custom"
+        }
+      ]
+    },
+    {
+      "className": "MANumberDescription",
+      "properties": {
+        "kindErrorMessage": {
+          "type": "string",
+          "value": ""
+        }
+      },
+      "value": {
+        "type": "boolean",
+        "value": false
+      },
+      "errors": [
+        {
+          "code": "MAKindError",
+          "message": ""
+        }
+      ]
+    },
+    {
+      "className": "MANumberDescription",
+      "properties": {
+        "kindErrorMessage": {
+          "type": "string",
+          "value": "é\u0000🙂"
+        }
+      },
+      "value": {
+        "type": "boolean",
+        "value": false
+      },
+      "errors": [
+        {
+          "code": "MAKindError",
+          "message": "é\u0000🙂"
+        }
+      ]
+    },
+    {
+      "className": "MABooleanDescription",
+      "properties": {},
+      "value": {
+        "type": "string",
+        "value": "true"
+      },
+      "errors": [
+        {
+          "code": "MAKindError",
+          "message": "Invalid input given"
+        }
+      ]
+    },
+    {
+      "className": "MABooleanDescription",
+      "properties": {
+        "kindErrorMessage": {
+          "type": "string",
+          "value": "custom"
+        }
+      },
+      "value": {
+        "type": "string",
+        "value": "true"
+      },
+      "errors": [
+        {
+          "code": "MAKindError",
+          "message": "custom"
+        }
+      ]
+    },
+    {
+      "className": "MABooleanDescription",
+      "properties": {
+        "kindErrorMessage": {
+          "type": "string",
+          "value": ""
+        }
+      },
+      "value": {
+        "type": "string",
+        "value": "true"
+      },
+      "errors": [
+        {
+          "code": "MAKindError",
+          "message": ""
+        }
+      ]
+    },
+    {
+      "className": "MABooleanDescription",
+      "properties": {
+        "kindErrorMessage": {
+          "type": "string",
+          "value": "é\u0000🙂"
+        }
+      },
+      "value": {
+        "type": "string",
+        "value": "true"
+      },
+      "errors": [
+        {
+          "code": "MAKindError",
+          "message": "é\u0000🙂"
+        }
+      ]
+    },
+    {
+      "className": "MASingleOptionDescription",
+      "properties": {},
+      "value": {
+        "type": "string",
+        "value": "missing"
+      },
+      "errors": [
+        {
+          "code": "MAKindError",
+          "message": "Invalid input given"
+        }
+      ]
+    },
+    {
+      "className": "MASingleOptionDescription",
+      "properties": {
+        "kindErrorMessage": {
+          "type": "string",
+          "value": "custom"
+        }
+      },
+      "value": {
+        "type": "string",
+        "value": "missing"
+      },
+      "errors": [
+        {
+          "code": "MAKindError",
+          "message": "custom"
+        }
+      ]
+    },
+    {
+      "className": "MASingleOptionDescription",
+      "properties": {
+        "kindErrorMessage": {
+          "type": "string",
+          "value": ""
+        }
+      },
+      "value": {
+        "type": "string",
+        "value": "missing"
+      },
+      "errors": [
+        {
+          "code": "MAKindError",
+          "message": ""
+        }
+      ]
+    },
+    {
+      "className": "MASingleOptionDescription",
+      "properties": {
+        "kindErrorMessage": {
+          "type": "string",
+          "value": "é\u0000🙂"
+        }
+      },
+      "value": {
+        "type": "string",
+        "value": "missing"
+      },
+      "errors": [
+        {
+          "code": "MAKindError",
+          "message": "é\u0000🙂"
+        }
+      ]
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "properties": {},
+      "value": {
+        "type": "array",
+        "value": [
+          {
+            "type": "integer",
+            "value": "1"
+          },
+          {
+            "type": "boolean",
+            "value": false
+          }
+        ]
+      },
+      "errors": [
+        {
+          "code": "MAKindError",
+          "message": "Invalid input given"
+        },
+        {
+          "code": "MAKindError",
+          "message": "Invalid input given"
+        }
+      ]
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "properties": {
+        "kindErrorMessage": {
+          "type": "string",
+          "value": "custom"
+        }
+      },
+      "value": {
+        "type": "array",
+        "value": [
+          {
+            "type": "integer",
+            "value": "1"
+          },
+          {
+            "type": "boolean",
+            "value": false
+          }
+        ]
+      },
+      "errors": [
+        {
+          "code": "MAKindError",
+          "message": "custom"
+        },
+        {
+          "code": "MAKindError",
+          "message": "custom"
+        }
+      ]
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "properties": {
+        "kindErrorMessage": {
+          "type": "string",
+          "value": ""
+        }
+      },
+      "value": {
+        "type": "array",
+        "value": [
+          {
+            "type": "integer",
+            "value": "1"
+          },
+          {
+            "type": "boolean",
+            "value": false
+          }
+        ]
+      },
+      "errors": [
+        {
+          "code": "MAKindError",
+          "message": ""
+        },
+        {
+          "code": "MAKindError",
+          "message": ""
+        }
+      ]
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "properties": {
+        "kindErrorMessage": {
+          "type": "string",
+          "value": "é\u0000🙂"
+        }
+      },
+      "value": {
+        "type": "array",
+        "value": [
+          {
+            "type": "integer",
+            "value": "1"
+          },
+          {
+            "type": "boolean",
+            "value": false
+          }
+        ]
+      },
+      "errors": [
+        {
+          "code": "MAKindError",
+          "message": "é\u0000🙂"
+        },
+        {
+          "code": "MAKindError",
+          "message": "é\u0000🙂"
+        }
+      ]
+    },
+    {
+      "className": "MANumberDescription",
+      "properties": {
+        "min": {
+          "type": "integer",
+          "value": "2"
+        }
+      },
+      "value": {
+        "type": "integer",
+        "value": "1"
+      },
+      "errors": [
+        {
+          "code": "MARangeError",
+          "message": "Input must be above or equeal to 2"
+        }
+      ]
+    },
+    {
+      "className": "MANumberDescription",
+      "properties": {
+        "min": {
+          "type": "integer",
+          "value": "2"
+        },
+        "rangeErrorMessage": {
+          "type": "string",
+          "value": "custom"
+        }
+      },
+      "value": {
+        "type": "integer",
+        "value": "1"
+      },
+      "errors": [
+        {
+          "code": "MARangeError",
+          "message": "custom"
+        }
+      ]
+    },
+    {
+      "className": "MANumberDescription",
+      "properties": {
+        "min": {
+          "type": "integer",
+          "value": "2"
+        },
+        "rangeErrorMessage": {
+          "type": "string",
+          "value": ""
+        }
+      },
+      "value": {
+        "type": "integer",
+        "value": "1"
+      },
+      "errors": [
+        {
+          "code": "MARangeError",
+          "message": ""
+        }
+      ]
+    },
+    {
+      "className": "MANumberDescription",
+      "properties": {
+        "min": {
+          "type": "integer",
+          "value": "2"
+        },
+        "rangeErrorMessage": {
+          "type": "string",
+          "value": "é\u0000🙂"
+        }
+      },
+      "value": {
+        "type": "integer",
+        "value": "1"
+      },
+      "errors": [
+        {
+          "code": "MARangeError",
+          "message": "é\u0000🙂"
+        }
+      ]
+    },
+    {
+      "className": "MANumberDescription",
+      "properties": {
+        "max": {
+          "type": "integer",
+          "value": "8"
+        }
+      },
+      "value": {
+        "type": "integer",
+        "value": "9"
+      },
+      "errors": [
+        {
+          "code": "MARangeError",
+          "message": "Input must be below or equal to 8"
+        }
+      ]
+    },
+    {
+      "className": "MANumberDescription",
+      "properties": {
+        "max": {
+          "type": "integer",
+          "value": "8"
+        },
+        "rangeErrorMessage": {
+          "type": "string",
+          "value": "custom"
+        }
+      },
+      "value": {
+        "type": "integer",
+        "value": "9"
+      },
+      "errors": [
+        {
+          "code": "MARangeError",
+          "message": "custom"
+        }
+      ]
+    },
+    {
+      "className": "MANumberDescription",
+      "properties": {
+        "max": {
+          "type": "integer",
+          "value": "8"
+        },
+        "rangeErrorMessage": {
+          "type": "string",
+          "value": ""
+        }
+      },
+      "value": {
+        "type": "integer",
+        "value": "9"
+      },
+      "errors": [
+        {
+          "code": "MARangeError",
+          "message": ""
+        }
+      ]
+    },
+    {
+      "className": "MANumberDescription",
+      "properties": {
+        "max": {
+          "type": "integer",
+          "value": "8"
+        },
+        "rangeErrorMessage": {
+          "type": "string",
+          "value": "é\u0000🙂"
+        }
+      },
+      "value": {
+        "type": "integer",
+        "value": "9"
+      },
+      "errors": [
+        {
+          "code": "MARangeError",
+          "message": "é\u0000🙂"
+        }
+      ]
+    },
+    {
+      "className": "MANumberDescription",
+      "properties": {
+        "min": {
+          "type": "integer",
+          "value": "2"
+        },
+        "max": {
+          "type": "integer",
+          "value": "8"
+        }
+      },
+      "value": {
+        "type": "integer",
+        "value": "9"
+      },
+      "errors": [
+        {
+          "code": "MARangeError",
+          "message": "Input must be between 2 and 8"
+        }
+      ]
+    },
+    {
+      "className": "MANumberDescription",
+      "properties": {
+        "min": {
+          "type": "integer",
+          "value": "2"
+        },
+        "max": {
+          "type": "integer",
+          "value": "8"
+        },
+        "rangeErrorMessage": {
+          "type": "string",
+          "value": "custom"
+        }
+      },
+      "value": {
+        "type": "integer",
+        "value": "9"
+      },
+      "errors": [
+        {
+          "code": "MARangeError",
+          "message": "custom"
+        }
+      ]
+    },
+    {
+      "className": "MANumberDescription",
+      "properties": {
+        "min": {
+          "type": "integer",
+          "value": "2"
+        },
+        "max": {
+          "type": "integer",
+          "value": "8"
+        },
+        "rangeErrorMessage": {
+          "type": "string",
+          "value": ""
+        }
+      },
+      "value": {
+        "type": "integer",
+        "value": "9"
+      },
+      "errors": [
+        {
+          "code": "MARangeError",
+          "message": ""
+        }
+      ]
+    },
+    {
+      "className": "MANumberDescription",
+      "properties": {
+        "min": {
+          "type": "integer",
+          "value": "2"
+        },
+        "max": {
+          "type": "integer",
+          "value": "8"
+        },
+        "rangeErrorMessage": {
+          "type": "string",
+          "value": "é\u0000🙂"
+        }
+      },
+      "value": {
+        "type": "integer",
+        "value": "9"
+      },
+      "errors": [
+        {
+          "code": "MARangeError",
+          "message": "é\u0000🙂"
+        }
+      ]
+    }
+  ]
+}

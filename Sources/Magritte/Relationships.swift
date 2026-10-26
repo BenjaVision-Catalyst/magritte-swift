@@ -161,9 +161,17 @@ private func validateField(_ d: Description, _ v: Value, _ graph: Graph?, _ budg
     if try !d.flag("visible") || d.flag("readOnly") { return [] }
     try checkReferences(v, graph, budget, depth)
     var errors: [ValidationError] = []
-    func error(_ code: String) { errors.append(ValidationError(descriptionID: d.id, code: code, message: "Value does not satisfy description")) }
-    if try d.flag("required") && (v.isNil || (d.isMultiple && v.isCollection && v.collectionCount() == 0)) { error("MARequiredError") }
-    if try valueKey(v, tick: budget.tick) == valueKey(d.property("undefinedValue"), tick: budget.tick) { return errors }
+  func error(_ code: String) throws {
+    errors.append(
+      ValidationError(
+        descriptionID: d.id, code: code, message: try validationMessage(d, code, budget.limits)))
+  }
+  if try d.flag("required")
+    && (v.isNil || (d.isMultiple && v.isCollection && v.collectionCount() == 0))
+  {
+    try error("MARequiredError")
+  }
+  if try valueKey(v, tick: budget.tick) == valueKey(d.property("undefinedValue"), tick: budget.tick) { return errors }
     if d.isContainer {
         guard let graph else { throw MagritteError("Container value validation requires a graph resolver") }
         let nested = try validateModel(d, graph.resolve(v), graph, budget, depth + 1)
@@ -174,18 +182,19 @@ private func validateField(_ d: Description, _ v: Value, _ graph: Graph?, _ budg
     guard case .classValue(let expected) = try d.property("kind") else {
       throw MagritteError("Description kind is nil")
     }
-    if try !kindOf(v, expected, graph) { error("MAKindError"); return errors }
+    if try !kindOf(v, expected, graph) { try error("MAKindError"); return errors }
   }
   if d.isRelation {
     func check(_ e: Value) throws {
             try budget.tick(depth)
             var accepted = false
             for cls in d.classes { try budget.tick(depth); if try kindOf(e, cls, graph) { accepted = true } }
-            if !accepted { error("MAKindError"); kind = false }
-        }
+      if !accepted { try error("MAKindError"); kind = false }
+    }
         if d.isMultiple {
-            if !v.isCollection { error("MAKindError"); kind = false }
-            else {
+      if !v.isCollection {
+        try error("MAKindError"); kind = false
+      } else {
                 try require(v.collectionCount() <= budget.limits.visits - budget.work, "Collection work limit")
                 for e in try v.elements() { try check(e) }
             }
@@ -197,13 +206,14 @@ private func validateField(_ d: Description, _ v: Value, _ graph: Graph?, _ budg
             else { for option in try d.options.values(limits: budget.limits) { try budget.tick(depth); if try valueKey(e, tick: budget.tick) == valueKey(option, tick: budget.tick) { member = true; break } }
             }
             if member { return }
-            if try !d.flag("extensible") { error("MAKindError"); kind = false; return }
-            let nested = try validateField(d.referenceDescription(), e, graph, budget, depth + 1)
+      if try !d.flag("extensible") { try error("MAKindError"); kind = false; return }
+      let nested = try validateField(d.referenceDescription(), e, graph, budget, depth + 1)
             if !nested.isEmpty { kind = false }; errors += nested
         }
         if d.isMultiple {
-            if !v.isCollection { error("MAKindError"); kind = false }
-            else {
+      if !v.isCollection {
+        try error("MAKindError"); kind = false
+      } else {
                 try require(v.collectionCount() <= budget.limits.visits - budget.work, "Collection work limit")
                 for e in try v.elements() { try check(e) }
             }
@@ -213,13 +223,16 @@ private func validateField(_ d: Description, _ v: Value, _ graph: Graph?, _ budg
       throw MagritteError("Description kind is nil")
     }
     kind = try kindOf(v, expected, graph)
-    if !kind { error("MAKindError") }
+    if !kind { try error("MAKindError") }
   }
     if !kind { return errors }
     if d.className == "MANumberDescription" {
     let min = try d.property("min"), max = try d.property("max")
-    if try (!min.isNil && compareNumbers(v, min) < 0) || (!max.isNil && compareNumbers(v, max) > 0) { error("MARangeError") }
+    if try (!min.isNil && compareNumbers(v, min) < 0) || (!max.isNil && compareNumbers(v, max) > 0)
+    {
+      try error("MARangeError")
     }
+  }
     for c in d.portableConditions {
         if try !evaluatePredicate(c.predicate, v, limits: budget.limits, work: &budget.work) { errors.append(ValidationError(descriptionID: d.id, code: "MAConditionError", message: c.label)) }
     }

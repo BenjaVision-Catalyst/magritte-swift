@@ -505,6 +505,10 @@ extension Description {
         try require(value == .classValue(expected), "Unsupported interpreter class")
       }
       if key == "undefined" { try setUndefined(value); return }
+      if key == "requiredErrorMessage" { try setRequiredErrorMessage(value); return }
+      if key == "kindErrorMessage" { try setKindErrorMessage(value); return }
+      if key == "conflictErrorMessage" { try setConflictErrorMessage(value); return }
+      if key == "rangeErrorMessage" { try setRangeErrorMessage(value); return }
       if key == "initialAnswer" { try setInitialAnswer(value); return }
       if key == "default" { defaultFunction = nil }; properties[key] = value; return
     }
