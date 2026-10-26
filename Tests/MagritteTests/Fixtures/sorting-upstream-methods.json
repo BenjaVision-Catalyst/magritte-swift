@@ -1,0 +1,104 @@
+{
+  "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
+  "verification": "Upstream source only; GT was not accessed.",
+  "methods": [
+    {
+      "className": "MASortBlock",
+      "classSide": true,
+      "selector": "accessor:selector:",
+      "sourceSHA256": "ecddd5207d9c406e363d29e49ca45be3e79f47d9682cbbe1fe8918b2b25c6b05",
+      "path": "source/Magritte-Model/MASortBlock.class.st"
+    },
+    {
+      "className": "MASortBlock",
+      "classSide": true,
+      "selector": "selector:",
+      "sourceSHA256": "8b7bef649a3b70f91df2df06e63eba76323aa257b7285a1e6eacc4f70c1b7273",
+      "path": "source/Magritte-Model/MASortBlock.class.st"
+    },
+    {
+      "className": "MASortBlock",
+      "classSide": false,
+      "selector": "fixTemps",
+      "sourceSHA256": "490e7231afcf0c58bc951d07414e5e36d81e4fc144dafad1ae9e1854bbfb14ec",
+      "path": "source/Magritte-Model/MASortBlock.class.st"
+    },
+    {
+      "className": "MASortBlock",
+      "classSide": false,
+      "selector": "initializeAccessor:selector:",
+      "sourceSHA256": "2c9baafc3561a9a26f6d446f80af6abca21119d1946d3f859372a25d62aff381",
+      "path": "source/Magritte-Model/MASortBlock.class.st"
+    },
+    {
+      "className": "MASortBlock",
+      "classSide": false,
+      "selector": "value:value:",
+      "sourceSHA256": "1fb3476bbdfc1a6b2004c70a2734dc1d9371a032a79b266e822bf6616d5b3fc3",
+      "path": "source/Magritte-Model/MASortBlock.class.st"
+    },
+    {
+      "className": "MADescription",
+      "classSide": false,
+      "selector": "isSortable",
+      "sourceSHA256": "36ca7f6b9f38e152fde9e2fc054820f68fbf2d6e5dc70615518710ea7bbbc6f0",
+      "path": "source/Magritte-Model/MADescription.class.st"
+    },
+    {
+      "className": "MAStringDescription",
+      "classSide": false,
+      "selector": "isSortable",
+      "sourceSHA256": "ac735080db78bf07dd01a30446a5dce500234c6d6bb732a817af545678c7e1f4",
+      "path": "source/Magritte-Model/MAStringDescription.class.st"
+    },
+    {
+      "className": "MAPasswordDescription",
+      "classSide": false,
+      "selector": "isSortable",
+      "sourceSHA256": "caa3e2a2aebd4baa2d1e29ae1ffd27392e92abee03c0a4d08906bdcec67fad0b",
+      "path": "source/Magritte-Model/MAPasswordDescription.class.st"
+    },
+    {
+      "className": "MAMagnitudeDescription",
+      "classSide": false,
+      "selector": "isSortable",
+      "sourceSHA256": "ac735080db78bf07dd01a30446a5dce500234c6d6bb732a817af545678c7e1f4",
+      "path": "source/Magritte-Model/MAMagnitudeDescription.class.st"
+    },
+    {
+      "className": "MAIdentityAccessor",
+      "classSide": false,
+      "selector": "read:",
+      "sourceSHA256": "a377b25d1a8a35fdb6cfb718d86b89871f39ef80150315fb2cba28f394953057",
+      "path": "source/Magritte-Model/MAIdentityAccessor.class.st"
+    },
+    {
+      "className": "MAChainAccessor",
+      "classSide": false,
+      "selector": "read:",
+      "sourceSHA256": "ad155e0d5f2b1825e1b2a74367b65679d5ffc4c8cf5c3deb3497a2ccc155b179",
+      "path": "source/Magritte-Model/MAChainAccessor.class.st"
+    },
+    {
+      "className": "MADelegatorAccessor",
+      "classSide": false,
+      "selector": "read:",
+      "sourceSHA256": "1b33f1b83b2d9dcbf35ccf9f33846c85d3250e88f36daad591ccbdecc256f4db",
+      "path": "source/Magritte-Model/MADelegatorAccessor.class.st"
+    },
+    {
+      "className": "MAAccessor",
+      "classSide": false,
+      "selector": "asAccessor",
+      "sourceSHA256": "22961bb81e585f8138c658a04423e3663a876c0bcdedf20b1f19ba4ffdb6858a",
+      "path": "source/Magritte-Model/MAAccessor.class.st"
+    },
+    {
+      "className": "Symbol",
+      "classSide": false,
+      "selector": "asAccessor",
+      "sourceSHA256": "0e94222d7214ad4fdb4880cf0d5a4d60c1c9a0044ccf0283a6357fd33feb7739",
+      "path": "source/Magritte-Model/Symbol.extension.st"
+    }
+  ]
+}

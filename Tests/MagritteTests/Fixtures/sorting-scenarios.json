@@ -1,0 +1,1099 @@
+{
+  "authority": "Pinned upstream MASortBlock algorithm and existing native scalar protocol; source-derived expectations, no GT execution.",
+  "comparisons": [
+    {
+      "left": {
+        "type": "integer",
+        "value": "1"
+      },
+      "right": {
+        "type": "integer",
+        "value": "2"
+      },
+      "selector": "=",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "integer",
+        "value": "1"
+      },
+      "right": {
+        "type": "integer",
+        "value": "2"
+      },
+      "selector": "~=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "integer",
+        "value": "1"
+      },
+      "right": {
+        "type": "integer",
+        "value": "2"
+      },
+      "selector": "<",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "integer",
+        "value": "1"
+      },
+      "right": {
+        "type": "integer",
+        "value": "2"
+      },
+      "selector": "<=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "integer",
+        "value": "1"
+      },
+      "right": {
+        "type": "integer",
+        "value": "2"
+      },
+      "selector": ">",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "integer",
+        "value": "1"
+      },
+      "right": {
+        "type": "integer",
+        "value": "2"
+      },
+      "selector": ">=",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "integer",
+        "value": "7"
+      },
+      "right": {
+        "type": "integer",
+        "value": "7"
+      },
+      "selector": "=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "integer",
+        "value": "7"
+      },
+      "right": {
+        "type": "integer",
+        "value": "7"
+      },
+      "selector": "~=",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "integer",
+        "value": "7"
+      },
+      "right": {
+        "type": "integer",
+        "value": "7"
+      },
+      "selector": "<",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "integer",
+        "value": "7"
+      },
+      "right": {
+        "type": "integer",
+        "value": "7"
+      },
+      "selector": "<=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "integer",
+        "value": "7"
+      },
+      "right": {
+        "type": "integer",
+        "value": "7"
+      },
+      "selector": ">",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "integer",
+        "value": "7"
+      },
+      "right": {
+        "type": "integer",
+        "value": "7"
+      },
+      "selector": ">=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "integer",
+        "value": "-5"
+      },
+      "right": {
+        "type": "integer",
+        "value": "-10"
+      },
+      "selector": "=",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "integer",
+        "value": "-5"
+      },
+      "right": {
+        "type": "integer",
+        "value": "-10"
+      },
+      "selector": "~=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "integer",
+        "value": "-5"
+      },
+      "right": {
+        "type": "integer",
+        "value": "-10"
+      },
+      "selector": "<",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "integer",
+        "value": "-5"
+      },
+      "right": {
+        "type": "integer",
+        "value": "-10"
+      },
+      "selector": "<=",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "integer",
+        "value": "-5"
+      },
+      "right": {
+        "type": "integer",
+        "value": "-10"
+      },
+      "selector": ">",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "integer",
+        "value": "-5"
+      },
+      "right": {
+        "type": "integer",
+        "value": "-10"
+      },
+      "selector": ">=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "string",
+        "value": "Ada"
+      },
+      "right": {
+        "type": "string",
+        "value": "Bob"
+      },
+      "selector": "=",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "string",
+        "value": "Ada"
+      },
+      "right": {
+        "type": "string",
+        "value": "Bob"
+      },
+      "selector": "~=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "string",
+        "value": "Ada"
+      },
+      "right": {
+        "type": "string",
+        "value": "Bob"
+      },
+      "selector": "<",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "string",
+        "value": "Ada"
+      },
+      "right": {
+        "type": "string",
+        "value": "Bob"
+      },
+      "selector": "<=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "string",
+        "value": "Ada"
+      },
+      "right": {
+        "type": "string",
+        "value": "Bob"
+      },
+      "selector": ">",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "string",
+        "value": "Ada"
+      },
+      "right": {
+        "type": "string",
+        "value": "Bob"
+      },
+      "selector": ">=",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "string",
+        "value": "a"
+      },
+      "right": {
+        "type": "string",
+        "value": "A"
+      },
+      "selector": "=",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "string",
+        "value": "a"
+      },
+      "right": {
+        "type": "string",
+        "value": "A"
+      },
+      "selector": "~=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "string",
+        "value": "a"
+      },
+      "right": {
+        "type": "string",
+        "value": "A"
+      },
+      "selector": "<",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "string",
+        "value": "a"
+      },
+      "right": {
+        "type": "string",
+        "value": "A"
+      },
+      "selector": "<=",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "string",
+        "value": "a"
+      },
+      "right": {
+        "type": "string",
+        "value": "A"
+      },
+      "selector": ">",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "string",
+        "value": "a"
+      },
+      "right": {
+        "type": "string",
+        "value": "A"
+      },
+      "selector": ">=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "symbol",
+        "value": "ready"
+      },
+      "right": {
+        "type": "string",
+        "value": "ready"
+      },
+      "selector": "=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "symbol",
+        "value": "ready"
+      },
+      "right": {
+        "type": "string",
+        "value": "ready"
+      },
+      "selector": "~=",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "symbol",
+        "value": "ready"
+      },
+      "right": {
+        "type": "string",
+        "value": "ready"
+      },
+      "selector": "<",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "symbol",
+        "value": "ready"
+      },
+      "right": {
+        "type": "string",
+        "value": "ready"
+      },
+      "selector": "<=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "symbol",
+        "value": "ready"
+      },
+      "right": {
+        "type": "string",
+        "value": "ready"
+      },
+      "selector": ">",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "symbol",
+        "value": "ready"
+      },
+      "right": {
+        "type": "string",
+        "value": "ready"
+      },
+      "selector": ">=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "string",
+        "value": "é"
+      },
+      "right": {
+        "type": "string",
+        "value": "é"
+      },
+      "selector": "=",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "string",
+        "value": "é"
+      },
+      "right": {
+        "type": "string",
+        "value": "é"
+      },
+      "selector": "~=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "string",
+        "value": "é"
+      },
+      "right": {
+        "type": "string",
+        "value": "é"
+      },
+      "selector": "<",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "string",
+        "value": "é"
+      },
+      "right": {
+        "type": "string",
+        "value": "é"
+      },
+      "selector": "<=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "string",
+        "value": "é"
+      },
+      "right": {
+        "type": "string",
+        "value": "é"
+      },
+      "selector": ">",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "string",
+        "value": "é"
+      },
+      "right": {
+        "type": "string",
+        "value": "é"
+      },
+      "selector": ">=",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "character",
+        "value": "😀"
+      },
+      "right": {
+        "type": "character",
+        "value": "é"
+      },
+      "selector": "=",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "character",
+        "value": "😀"
+      },
+      "right": {
+        "type": "character",
+        "value": "é"
+      },
+      "selector": "~=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "character",
+        "value": "😀"
+      },
+      "right": {
+        "type": "character",
+        "value": "é"
+      },
+      "selector": "<",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "character",
+        "value": "😀"
+      },
+      "right": {
+        "type": "character",
+        "value": "é"
+      },
+      "selector": "<=",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "character",
+        "value": "😀"
+      },
+      "right": {
+        "type": "character",
+        "value": "é"
+      },
+      "selector": ">",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "character",
+        "value": "😀"
+      },
+      "right": {
+        "type": "character",
+        "value": "é"
+      },
+      "selector": ">=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "float",
+        "value": "3ff8000000000000"
+      },
+      "right": {
+        "type": "integer",
+        "value": "2"
+      },
+      "selector": "=",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "float",
+        "value": "3ff8000000000000"
+      },
+      "right": {
+        "type": "integer",
+        "value": "2"
+      },
+      "selector": "~=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "float",
+        "value": "3ff8000000000000"
+      },
+      "right": {
+        "type": "integer",
+        "value": "2"
+      },
+      "selector": "<",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "float",
+        "value": "3ff8000000000000"
+      },
+      "right": {
+        "type": "integer",
+        "value": "2"
+      },
+      "selector": "<=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "float",
+        "value": "3ff8000000000000"
+      },
+      "right": {
+        "type": "integer",
+        "value": "2"
+      },
+      "selector": ">",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "float",
+        "value": "3ff8000000000000"
+      },
+      "right": {
+        "type": "integer",
+        "value": "2"
+      },
+      "selector": ">=",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "fraction",
+        "value": {
+          "numerator": "1",
+          "denominator": "2"
+        }
+      },
+      "right": {
+        "type": "float",
+        "value": "3fe0000000000000"
+      },
+      "selector": "=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "fraction",
+        "value": {
+          "numerator": "1",
+          "denominator": "2"
+        }
+      },
+      "right": {
+        "type": "float",
+        "value": "3fe0000000000000"
+      },
+      "selector": "~=",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "fraction",
+        "value": {
+          "numerator": "1",
+          "denominator": "2"
+        }
+      },
+      "right": {
+        "type": "float",
+        "value": "3fe0000000000000"
+      },
+      "selector": "<",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "fraction",
+        "value": {
+          "numerator": "1",
+          "denominator": "2"
+        }
+      },
+      "right": {
+        "type": "float",
+        "value": "3fe0000000000000"
+      },
+      "selector": "<=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "fraction",
+        "value": {
+          "numerator": "1",
+          "denominator": "2"
+        }
+      },
+      "right": {
+        "type": "float",
+        "value": "3fe0000000000000"
+      },
+      "selector": ">",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "fraction",
+        "value": {
+          "numerator": "1",
+          "denominator": "2"
+        }
+      },
+      "right": {
+        "type": "float",
+        "value": "3fe0000000000000"
+      },
+      "selector": ">=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "nil"
+      },
+      "selector": "=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "boolean",
+        "value": true
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "selector": "~=",
+      "result": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "left": {
+        "type": "integer",
+        "value": "1"
+      },
+      "right": {
+        "type": "string",
+        "value": "1"
+      },
+      "selector": "=",
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "left": {
+        "type": "nil"
+      },
+      "right": {
+        "type": "integer",
+        "value": "3"
+      },
+      "selector": "<=",
+      "result": null
+    },
+    {
+      "left": {
+        "type": "boolean",
+        "value": true
+      },
+      "right": {
+        "type": "boolean",
+        "value": false
+      },
+      "selector": "<",
+      "result": null
+    },
+    {
+      "left": {
+        "type": "integer",
+        "value": "1"
+      },
+      "right": {
+        "type": "string",
+        "value": "1"
+      },
+      "selector": "<=",
+      "result": null
+    },
+    {
+      "left": {
+        "type": "integer",
+        "value": "1"
+      },
+      "right": {
+        "type": "integer",
+        "value": "2"
+      },
+      "selector": "yourself",
+      "result": null
+    },
+    {
+      "left": {
+        "type": "integer",
+        "value": "1"
+      },
+      "right": {
+        "type": "integer",
+        "value": "2"
+      },
+      "selector": "unbound:",
+      "result": null
+    },
+    {
+      "left": {
+        "type": "integer",
+        "value": "1"
+      },
+      "right": {
+        "type": "integer",
+        "value": "2"
+      },
+      "selector": "one:two:",
+      "result": null
+    }
+  ],
+  "sortability": [
+    {
+      "className": "MAContainer",
+      "result": false
+    },
+    {
+      "className": "MAPriorityContainer",
+      "result": false
+    },
+    {
+      "className": "MAStringDescription",
+      "result": true
+    },
+    {
+      "className": "MAMemoDescription",
+      "result": true
+    },
+    {
+      "className": "MASymbolDescription",
+      "result": true
+    },
+    {
+      "className": "MAPasswordDescription",
+      "result": false
+    },
+    {
+      "className": "MANumberDescription",
+      "result": true
+    },
+    {
+      "className": "MABooleanDescription",
+      "result": false
+    },
+    {
+      "className": "MAClassDescription",
+      "result": false
+    },
+    {
+      "className": "MATokenDescription",
+      "result": false
+    },
+    {
+      "className": "MAToOneRelationDescription",
+      "result": false
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "result": false
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "result": false
+    },
+    {
+      "className": "MASingleOptionDescription",
+      "result": false
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "result": false
+    }
+  ]
+}

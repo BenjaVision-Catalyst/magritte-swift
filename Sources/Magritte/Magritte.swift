@@ -42,6 +42,7 @@ public struct ValidationError: Equatable {
     public let descriptionID: String, code: String, message: String
 }
 public protocol Model: AnyObject {
+  func binaryMessage(_ selector: String, argument: Value, graph: Graph?) throws -> Value
   func displayMessage(_ selector: String, argument: Description?) throws -> Value
   var usesStoredContainerValues: Bool { get }
   func kindOf(_ name: String) -> Bool
@@ -54,6 +55,22 @@ public protocol Model: AnyObject {
     func write(_ value: Value, using description: Description) throws
 }
 public extension Model {
+  func binaryMessage(_ selector: String, argument: Value, graph: Graph? = nil) throws -> Value {
+    if selector == "~=" {
+      let result = try binaryMessage("=", argument: argument, graph: graph);
+      guard case .boolean(let equal) = result else {
+        throw MagritteError("Equality result does not understand not")
+      }; return .boolean(!equal)
+    }
+    if selector == "=" {
+      var equal = false;
+      if case .reference = argument {
+        guard let graph else { throw MagritteError("Binary argument requires graph resolver") };
+        equal = try graph.resolve(argument) === self
+      }; return .boolean(equal)
+    }
+    throw MagritteError("Unbound binary message: " + selector)
+  }
   func displayMessage(_ selector: String, argument: Description? = nil) throws -> Value {
     try require(argument == nil, "Unbound display message with description argument");
     return try readSlot(strategy: "MASelectorAccessor", name: selector)
@@ -79,6 +96,12 @@ open class Description: Model {
     public var key: String
   public var definingContext: DescriptionContext?
   public var displayBlock: DisplayBlock?
+  open var isSortable: Bool {
+    let registry = ClassRegistry.shared
+    if registry.includesBehavior(className, "MAPasswordDescription") { return false }
+    return registry.includesBehavior(className, "MAStringDescription")
+      || registry.includesBehavior(className, "MAMagnitudeDescription")
+  }
   public var properties: [String: Value] = [:]
   public var children: [Description] = []
     public weak var reference: Description?
@@ -233,6 +256,26 @@ public final class DictionaryModel: Model {
     public func write(_ value: Value, using description: Description) throws { try description.effectiveAccessor.write(value, to: self, graph: resolver) }
 }
 public final class NativeModel: Model {
+  public var binaryReaders: [String: (AnyObject, Value, Graph?) throws -> Value] = [:]
+  public func binaryMessage(_ selector: String, argument: Value, graph: Graph? = nil) throws
+    -> Value
+  {
+    if let callback = binaryReaders[selector] { return try callback(object, argument, graph) }
+    if selector == "~=" {
+      let result = try binaryMessage("=", argument: argument, graph: graph);
+      guard case .boolean(let equal) = result else {
+        throw MagritteError("Equality result does not understand not")
+      }; return .boolean(!equal)
+    }
+    if selector == "=" {
+      var equal = false;
+      if case .reference = argument {
+        guard let graph else { throw MagritteError("Binary argument requires graph resolver") };
+        equal = (try graph.resolve(argument) as? NativeModel)?.object === object
+      }; return .boolean(equal)
+    }
+    throw MagritteError("Unbound binary message: " + selector)
+  }
   public var displayReaders: [String: (AnyObject, Description?) throws -> Value] = [:]
   public func displayMessage(_ selector: String, argument: Description? = nil) throws -> Value {
     if let f = displayReaders[selector] { return try f(object, argument) }

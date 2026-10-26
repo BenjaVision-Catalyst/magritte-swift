@@ -116,3 +116,7 @@ Graph/4 optionally accepts `definingContext` on any description node, with exact
 ## Display configuration (0.18)
 
 Graph/3–4 accepts `displayBlockOrSymbol` as a Symbol or explicit nil property. Absence means `#greaseString`; nil remains distinct and fails if invoked. Legacy graph/1–2 rejects this property. Selectors are data naming explicitly supported scalar or host-bound methods; import neither installs methods nor executes them. Native display blocks reject export on every node, including hidden nodes. Replacing a block with a selector explicitly materializes a portable configuration. See [display.md](display.md).
+
+## Local accessor-based comparison (0.19)
+
+MASortBlock is a registered class identity, with local accessor/message execution and no new Value or graph form. A Class value may name the registered class, but does not instantiate or serialize a sort block. Existing accessor and description snapshots retain their wire meanings. `isSortable` is a query rather than a stored semantic property. See [sorting.md](sorting.md).

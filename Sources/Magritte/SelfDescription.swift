@@ -24,7 +24,7 @@ func metadataSelector(_ d: Description, _ name: String, writing: Bool) -> Bool {
     return true
   }
   if name == "name" { return true }
-  if ["defaultLabel", "hasLabel"].contains(name) { return !writing }
+  if ["defaultLabel", "hasLabel", "isSortable"].contains(name) { return !writing }
   if name == "type" { return !writing }
   if name == "default" { return !writing || !d.isContainer }
   if ["min", "max", "thousandsSeparator"].contains(name) && d.className == "MANumberDescription" {

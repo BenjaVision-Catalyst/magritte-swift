@@ -83,6 +83,14 @@ public struct Accessor {
     try checkAccessor(self, w, 0)
     return try accessCan(self, .model(model), graph, w, 0, true)
   }
+  public func readValue(_ value: Value, graph: Graph? = nil, limits: Limits = Limits()) throws
+    -> Value
+  {
+    let work = Work(limits); try checkAccessor(self, work, 0);
+    try checkLocalValue(value, limits: limits)
+    let result = try accessReadValue(self, value, graph, work, 0);
+    try checkLocalValue(result, limits: limits); return result
+  }
   public func read(_ model: Model, graph: Graph? = nil, limits: Limits = Limits()) throws -> Value {
     let w = Work(limits)
     try checkAccessor(self, w, 0)
@@ -350,6 +358,23 @@ private func accessRead(_ a: Accessor, _ model: Model, _ graph: Graph?, _ w: Wor
   }
   return result
 }
+private func accessReadValue(
+  _ accessor: Accessor, _ value: Value, _ graph: Graph?, _ work: Work, _ depth: Int
+) throws -> Value {
+  try work.tick(depth)
+  if accessor.className == "MAIdentityAccessor" { return value }
+  if accessor.className == "MADelegatorAccessor" {
+    return try accessReadValue(accessor.steps[0], value, graph, work, depth + 1)
+  }
+  if accessor.className == "MAChainAccessor" {
+    var result = value;
+    for step in accessor.steps {
+      result = try accessReadValue(step, result, graph, work, depth + 1)
+    }; return result
+  }
+  guard let graph else { throw MagritteError("Value accessor requires graph resolver") }
+  return try accessRead(accessor, graph.resolve(value), graph, work, depth + 1)
+}
 private func accessWrite(
   _ a: Accessor, _ model: Model, _ value: Value, _ graph: Graph?, _ w: Work, _ depth: Int
 ) throws {
@@ -460,6 +485,7 @@ extension Description {
     if strategy == "MASelectorAccessor" {
       try require(metadataSelector(self, name, writing: false), "Unsupported description getter")
       if name == "defaultLabel" { return .string(try defaultLabel()) }
+      if name == "isSortable" { return .boolean(isSortable) }
       if name == "hasLabel" { return .boolean(try hasLabel()) }
       if name == "type" { return .string(try descriptionType(self)) }
       if name == "default" { return try defaultValue() }

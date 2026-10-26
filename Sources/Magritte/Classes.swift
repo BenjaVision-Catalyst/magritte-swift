@@ -59,6 +59,7 @@ public final class ClassRegistry: @unchecked Sendable {
       ClassInfo(
         name: "MAComposedDescriptionBuilder", superclass: "MADescriptionBuilder", isAbstract: false,
         label: "Composed Description Builder"),
+      ClassInfo(name: "MASortBlock", superclass: "MABasicObject", label: "Sort Block"),
       ClassInfo(
         name: "MAPragmaBuilder", superclass: "MABasicObject", isAbstract: false,
         label: "Pragma Builder"),
