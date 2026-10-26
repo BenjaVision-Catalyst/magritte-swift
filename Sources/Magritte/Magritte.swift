@@ -94,6 +94,7 @@ open class Description: Model {
     public var id: String
     public var className: String
     public var key: String
+  open func descriptionContainer() throws -> Description { try makeDescriptionContainer(self) }
   public var definingContext: DescriptionContext?
   public var displayBlock: DisplayBlock?
   public var printStringBlock: PrintValueBlock?
@@ -106,7 +107,14 @@ open class Description: Model {
   }
   public var properties: [String: Value] = [:]
   public var children: [Description] = []
-    public weak var reference: Description?
+    var defaultReference: Description?
+    var referenceWasBound = false
+    public weak var reference: Description? {
+      didSet {
+        referenceWasBound = reference != nil
+        if reference !== defaultReference { defaultReference = nil }
+      }
+    }
     public var classes: [String] = []
     public var options: Options = []
     public var labels: [(value: Value, label: String)] = []
@@ -409,7 +417,7 @@ func supported(_ d: Description) throws {
     try require(!d.isContainer || d.portableConditions.isEmpty, "Portable container conditions require a model message protocol")
     try require(d.isContainer || d.children.isEmpty, "Scalar cannot contain children")
   if d.isReference {
-    _ = try referenceTarget(d)
+    _ = try storedReference(d)
   } else {
     try require(d.reference == nil, "Reference slot requires a reference description")
   }
@@ -443,7 +451,7 @@ public func visit(_ root: Description, limits: Limits = Limits(), _ visitor: (De
         try require(seen.count <= limits.nodes, "Description node limit")
         try composition(d, 0); try visitor(d)
         for c in try d.orderedChildren() { try walk(c, depth + 1) }
-    if d.isReference { try walk(referenceTarget(d), depth + 1) }
+    if d.isReference, let ref = try storedReference(d) { try walk(ref, depth + 1) }
   }
   try walk(root, 0)
 }
@@ -739,8 +747,12 @@ public final class Graph {
             let n = try dictionary(node)
             guard let d = g.descriptions[try text(n["id"])] else { throw MagritteError("Missing description") }
             if d.isReference {
-                guard let ref = g.descriptions[try identity(n["reference"])] else { throw MagritteError("Dangling reference description") }
-                d.reference = ref
+                if n["reference"] is NSNull {
+                  try require(format == "magritte.graph/4", "Nil references require graph/4")
+                } else {
+                  guard let ref = g.descriptions[try identity(n["reference"])] else { throw MagritteError("Dangling reference description") }
+                  try d.setReference(ref)
+                }
             }
             if d.isRelation {
 
@@ -862,9 +874,13 @@ public final class Graph {
                 n["children"] = d.children.map(\.id)
             } else { n["accessor"] = try accessorWire(d.effectiveAccessor, limits) }
             if d.isReference {
-        let ref = try referenceTarget(d)
-        try require(descriptions[ref.id] === ref, "Unregistered reference description")
-        n["reference"] = ref.id
+        if let ref = try storedReference(d) {
+          try require(descriptions[ref.id] === ref, "Unregistered reference description")
+          n["reference"] = ref.id
+        } else {
+          try require(format == "magritte.graph/4", "Nil references require graph/4")
+          n["reference"] = NSNull()
+        }
             }
             if d.isRelation { n["classes"] = d.classes }
             if d.isOption {

@@ -215,7 +215,7 @@ public final class DynamicDescriptionCache {
       }
       try require(d.children.count <= limits.items, "Discovery item limit")
       pending += d.children.map { ($0, depth + 1) }
-      if d.isReference { pending.append((try referenceTarget(d), depth + 1)) }
+      if d.isReference, let ref = try storedReference(d) { pending.append((ref, depth + 1)) }
     }
   }
   fileprivate func result(_ root: Description?) -> DescriptionCopy? {

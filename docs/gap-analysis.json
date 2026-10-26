@@ -215,8 +215,8 @@
       "kind": "missing_semantics",
       "priority": "P1",
       "status": {
-        "cpp": "partial",
-        "swift": "partial"
+        "cpp": "implemented_native_ownership_profile",
+        "swift": "implemented_native_ownership_profile"
       },
       "depends_on": [
         "MAG-001"
@@ -258,7 +258,12 @@
       ],
       "observation_keys": [
         "reference_defaults"
-      ]
+      ],
+      "resolution": {
+        "phase": "0.28",
+        "documentation": "default-references.md",
+        "boundary": "Generated defaults owned locally; explicit edges retain Graph/caller ownership; nil storage requires graph/4; ASCII class-label comparison; normal relation getter returns superclass String default."
+      }
     },
     {
       "id": "MAG-003",
@@ -1004,6 +1009,14 @@
       "status": "implemented_ancestor_profile",
       "evidence": "inheritance.md",
       "source_fingerprints": "inheritance-upstream-methods.json (shared fixtures)",
+      "gt_accessed": false
+    },
+    {
+      "phase": "0.28",
+      "gap": "MAG-002",
+      "status": "implemented_native_ownership_profile",
+      "evidence": "default-references.md",
+      "source_fingerprints": "default-reference-upstream-methods.json (shared fixtures)",
       "gt_accessed": false
     }
   ]

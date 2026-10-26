@@ -1,0 +1,184 @@
+{
+  "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
+  "verification": "Source-derived; GT was not accessed. Empty commonClass is a fresh descriptionContainer, not a Class/nil. The relation reference nil fallback is not reached by the default superclass getter.",
+  "cases": [
+    {
+      "className": "MATokenDescription",
+      "base": "MATokenDescription",
+      "self": false
+    },
+    {
+      "className": "MASingleOptionDescription",
+      "base": "MASingleOptionDescription",
+      "self": false
+    },
+    {
+      "className": "MAMultipleOptionDescription",
+      "base": "MAMultipleOptionDescription",
+      "self": false
+    },
+    {
+      "className": "MAToOneRelationDescription",
+      "base": "MAToOneRelationDescription",
+      "self": false
+    },
+    {
+      "className": "MAToManyRelationDescription",
+      "base": "MAToManyRelationDescription",
+      "self": false
+    },
+    {
+      "className": "MAToManyScalarRelationDescription",
+      "base": "MAToManyScalarRelationDescription",
+      "self": false
+    },
+    {
+      "className": "MABooleanDescription",
+      "base": "MABooleanDescription",
+      "self": true
+    },
+    {
+      "className": "DefaultChildTokenDescription",
+      "base": "MATokenDescription",
+      "self": false
+    },
+    {
+      "className": "DefaultChildSingleOptionDescription",
+      "base": "MASingleOptionDescription",
+      "self": false
+    },
+    {
+      "className": "DefaultChildMultipleOptionDescription",
+      "base": "MAMultipleOptionDescription",
+      "self": false
+    },
+    {
+      "className": "DefaultChildToOneRelationDescription",
+      "base": "MAToOneRelationDescription",
+      "self": false
+    },
+    {
+      "className": "DefaultChildToManyRelationDescription",
+      "base": "MAToManyRelationDescription",
+      "self": false
+    },
+    {
+      "className": "DefaultChildToManyScalarRelationDescription",
+      "base": "MAToManyScalarRelationDescription",
+      "self": false
+    },
+    {
+      "className": "DefaultChildBooleanDescription",
+      "base": "MABooleanDescription",
+      "self": true
+    }
+  ],
+  "classes": [
+    {
+      "name": "RefRoot",
+      "superclass": "Object",
+      "label": "root"
+    },
+    {
+      "name": "RefLeft",
+      "superclass": "RefRoot",
+      "label": "zebra"
+    },
+    {
+      "name": "RefRight",
+      "superclass": "RefRoot",
+      "label": "ALPHA"
+    },
+    {
+      "name": "RefLeaf",
+      "superclass": "RefLeft",
+      "label": "beta"
+    }
+  ],
+  "relations": [
+    {
+      "classes": [],
+      "ordered": [],
+      "common": null
+    },
+    {
+      "classes": [
+        "RefLeft"
+      ],
+      "ordered": [
+        "RefLeft"
+      ],
+      "common": "RefLeft"
+    },
+    {
+      "classes": [
+        "RefLeaf",
+        "RefLeft"
+      ],
+      "ordered": [
+        "RefLeaf",
+        "RefLeft"
+      ],
+      "common": "RefLeft"
+    },
+    {
+      "classes": [
+        "RefLeaf",
+        "RefRight"
+      ],
+      "ordered": [
+        "RefRight",
+        "RefLeaf"
+      ],
+      "common": "RefRoot"
+    },
+    {
+      "classes": [
+        "RefRight",
+        "RefLeaf",
+        "RefRoot",
+        "RefLeft"
+      ],
+      "ordered": [
+        "RefRight",
+        "RefLeaf",
+        "RefRoot",
+        "RefLeft"
+      ],
+      "common": "RefRoot"
+    },
+    {
+      "classes": [
+        "RefLeft",
+        "RefLeft"
+      ],
+      "ordered": [
+        "RefLeft",
+        "RefLeft"
+      ],
+      "common": "RefLeft"
+    },
+    {
+      "classes": [
+        "RefLeaf",
+        "String"
+      ],
+      "ordered": [
+        "RefLeaf",
+        "String"
+      ],
+      "common": "Object"
+    },
+    {
+      "classes": [
+        "ProtoObject",
+        "RefLeaf"
+      ],
+      "ordered": [
+        "RefLeaf",
+        "ProtoObject"
+      ],
+      "common": "ProtoObject"
+    }
+  ]
+}

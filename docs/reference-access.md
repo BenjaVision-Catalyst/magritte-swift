@@ -1,5 +1,7 @@
 # Reference getter and option setter behavior (0.20)
 
+**0.28 update:** lazy allocation, Boolean self-reference and relation helpers are now implemented; see [default-references.md](default-references.md). The explicit-reference evidence below remains the historical 0.20 profile.
+
 Both ports now implement the display side effect of `MAReferenceDescription>>reference` and the reference update performed by `MAOptionDescription>>undefined:` for explicitly bound reference graphs. This corrects a gap exposed by the earlier display phase: an independently configured child formatter does not survive reading the parent's reference. The parent supplies the current display setting each time the getter is sent.
 
 ## Upstream audit and evidence

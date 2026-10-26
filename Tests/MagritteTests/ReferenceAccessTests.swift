@@ -170,8 +170,8 @@ final class ReferenceAccessTests: XCTestCase {
     owner.reference = reference
     XCTAssertThrowsError(try owner.setUndefined(.boolean(true)))
     owner.reference = nil
-    XCTAssertThrowsError(try owner.referenceDescription())
-    XCTAssertThrowsError(try owner.setUndefined(.string("saved")))
+    XCTAssertEqual(try owner.referenceDescription().className, "MAStringDescription")
+    try owner.setUndefined(.string("saved"))
     XCTAssertEqual(try owner.property("undefined"), .string("saved"))
   }
 }

@@ -150,7 +150,7 @@ private final class RecursiveState {
           && accessors[d.id] == nil && conditions[d.id] == nil, "Reflection identity collision")
       pending[d.id] = d
       for c in d.children { try walk(c) }
-      if d.isReference { try walk(referenceTarget(d)) }
+      if d.isReference, let ref = try storedReference(d) { try walk(ref) }
     }
     try walk(target)
     let added = pending.keys.filter { graph.descriptions[$0] == nil }.count
@@ -327,6 +327,8 @@ private final class DescriptionBinding: Model {
     if ["classes", "classes:"].contains(selector) && target.isRelation { return true }
     if ["children", "setChildren:"].contains(selector) && target.isContainer { return true }
     if ["reference", "reference:"].contains(selector) && target.isReference { return true }
+    if selector == "reference" && descriptionIs(target, "MABooleanDescription") { return true }
+    if ["allClasses", "commonClass"].contains(selector) && target.isRelation { return true }
     if ["optionsTextual", "optionsTextual:"].contains(selector) && target.isOption { return true }
     return target.respondsToSelector(selector)
   }
@@ -361,7 +363,14 @@ private final class DescriptionBinding: Model {
     if name == "children", target.isContainer {
       return .collection(kind: "ordered", elements: try target.orderedChildren().map(ref))
     }
-    if name == "reference", target.isReference { return try ref(target.referenceDescription()) }
+    if name == "reference", target.isReference || descriptionIs(target, "MABooleanDescription") { return try ref(target.referenceDescription()) }
+    if name == "allClasses", target.isRelation { return .array(try target.allClasses(limits: s.limits).map { .classValue($0) }) }
+    if name == "commonClass", target.isRelation {
+      switch try target.commonClass(limits: s.limits) {
+      case .classValue(let name): return .classValue(name)
+      case .container(let container): return try ref(container)
+      }
+    }
     if name == "name" { return try target.property("name", limits: s.limits) }
     if name == "optionsTextual", target.isOption {
       var work = 0
@@ -420,7 +429,7 @@ private final class DescriptionBinding: Model {
       return
     }
     if name == "reference:", target.isReference {
-      target.reference = try description(value)
+      try target.setReference(value.isNil ? nil : description(value))
       return
     }
     if name == "name:" {
@@ -649,7 +658,7 @@ public final class RecursiveDescriptionModel {
       result.descriptions[d.id] = d
       try require(result.descriptions.count <= state.limits.nodes, "Schema node limit")
       for c in try d.orderedChildren() { try include(c, depth + 1) }
-      if d.isReference { try include(referenceTarget(d), depth + 1) }
+      if d.isReference, let ref = try storedReference(d) { try include(ref, depth + 1) }
     }
     for id in state.metaIDs.sorted() { try include(state.graph.descriptions[id]!, 0) }
     for id in state.modelSchemaIDs.sorted() { try include(state.graph.descriptions[id]!, 0) }

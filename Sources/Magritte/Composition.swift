@@ -81,7 +81,7 @@ private func retainDescriptions(_ source: Description, _ limits: Limits) throws 
     if !seen.insert(ObjectIdentifier(d)).inserted { return }
     result.append(d)
     for child in d.children { try walk(child) }
-    if d.isReference { try walk(referenceTarget(d)) }
+    if d.isReference, let ref = try storedReference(d) { try walk(ref) }
   }
   try walk(source)
   return result
@@ -155,8 +155,10 @@ public func copyDescription(_ source: Description, newID: String, limits: Limits
     n.printStringBlock = d.printStringBlock
     n.printSeparatorBlock = d.printSeparatorBlock
     retained.append(n)
-    if d.isReference {
-      n.reference = try clone(referenceTarget(d), id + ".reference", depth + 1)
+    if d.isReference, let ref = try storedReference(d) {
+      let copied = try clone(ref, id + ".reference", depth + 1)
+      try n.setReference(copied)
+      if d.defaultReference === ref { n.defaultReference = copied }
     }
     active.remove(ObjectIdentifier(d))
     return n

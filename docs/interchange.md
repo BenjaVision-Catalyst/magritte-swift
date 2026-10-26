@@ -152,3 +152,7 @@ The existing undefinedValue property now supplies generic model nil-read fallbac
 ## Registered description subclasses (0.27)
 
 Graph/4 accepts registered, concrete description subclasses whose hierarchy reaches an implemented family. The `class` name remains the actual registered name; inherited behavior controls shape, property applicability and execution. Receivers must register the hierarchy before import; unknown/unimplemented/abstract classes fail without changing the registry. Graph/1–3 reject these subclass identities. Metadata factories use graph/4 for such targets. No new tags, executable class definitions or callback forms are introduced. See [inheritance.md](inheritance.md).
+
+## Lazy reference storage (0.28)
+
+Graph/4 permits JSON null in the required `reference` field of reference-description nodes, preserving uninitialized/reset storage. Graph/1–3 reject null references. Import/export never executes the getter or allocates a default. Once a default has been materialized, its actual ID and registered node are required as for other edges. Boolean self-reference is derived behavior, with no stored/wire self edge. Explicit weak-edge expiry and unregistered/aliased targets still fail. See [default-references.md](default-references.md) for ownership, copy and metadata reset behavior.

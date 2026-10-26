@@ -72,6 +72,7 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Common and relation/option metadata | I, R (selected properties) | ordered/distinct/definitive/sorted/extensible retained; no invented coercion/uniqueness rules |
 | Stored property dictionary protocol | I (Value profile without announcer), fresh R deferred | strict/lazy/conditional access, nil removal and MAPropertyAccessor; properties.md; unknown semantic wire fields still reject |
 | Property announcements | N | subscribers and announcers remain unsupported |
+| Default/self references and relation helpers | I (native ownership/ASCII profile), fresh R deferred | lazy owned String defaults, Boolean self, nil reset, label-sorted choices/commonClass and nullable graph/4; default-references.md |
 | Reference identity between description nodes | I | shared child instances survive import/export |
 | Relationship object identity, cycles, to-one/to-many/scalar-to-many | I, R | graph/2 explicit references and class constraints; no automatic validation cascade |
 | Static single/multiple options | I, R | membership/extensibility/prepared lists/identity-safe labels |
@@ -172,3 +173,5 @@ Phase 0.25 implements explicit-description/provider model initialization and isS
 Phase 0.26 implements Object>>readUsing: nil-only undefinedValue fallback in generic native/dictionary/description and reflective model adapters, with a default Model implementation. [model-read.md](model-read.md) records fifteen source fingerprints, 441 adapter/seven memento cases, single-read/error/chain/override/consumer/lifetime/bounds checks and equivalent graphs. Raw accessors and adaptive/memento read overrides are preserved. GT was not accessed; fresh R remains deferred.
 
 Phase 0.27 closes MAG-001 for registered descendants of implemented description families. [inheritance.md](inheritance.md) records inherited execution, source fingerprints, semantic scenarios, class identity, graph/4 gates and explicit local override boundaries. GT was not accessed.
+
+Phase 0.28 closes MAG-002 for the native ownership profile. [default-references.md](default-references.md) records lazy defaults, Boolean self-reference, relation helper results, source fallback analysis, copy/lifetime and nullable graph/4 semantics. GT was not accessed.

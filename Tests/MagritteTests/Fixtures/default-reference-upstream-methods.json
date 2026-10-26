@@ -1,0 +1,167 @@
+{
+  "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
+  "verification": "Upstream source only; GT was not accessed.",
+  "methods": [
+    {
+      "className": "MAReferenceDescription",
+      "classSide": true,
+      "selector": "defaultReference",
+      "path": "source/Magritte-Model/MAReferenceDescription.class.st",
+      "sourceSHA256": "332375334b8c021702a2fa1de08958b39cc89c1a0b4928ce3bc77801d5378e53"
+    },
+    {
+      "className": "MAReferenceDescription",
+      "classSide": false,
+      "selector": "descriptionReference",
+      "path": "source/Magritte-Model/MAReferenceDescription.class.st",
+      "sourceSHA256": "3a361b9dc7d5e620e10a562d27e0ddeb28d026de8a174e1a57d9b0070192efa0"
+    },
+    {
+      "className": "MAReferenceDescription",
+      "classSide": false,
+      "selector": "postCopy",
+      "path": "source/Magritte-Model/MAReferenceDescription.class.st",
+      "sourceSHA256": "618bb4f844e62f4bd22a5bb53a485abbd79f0ba5b7cf4d26fa18f2f4e6f63e39"
+    },
+    {
+      "className": "MAReferenceDescription",
+      "classSide": false,
+      "selector": "reference",
+      "path": "source/Magritte-Model/MAReferenceDescription.class.st",
+      "sourceSHA256": "cf6bfa7257e1e87a4b4f85c2677bf44d363794fdf366b30a8aaa45eac3d46f4c"
+    },
+    {
+      "className": "MAReferenceDescription",
+      "classSide": false,
+      "selector": "reference:",
+      "path": "source/Magritte-Model/MAReferenceDescription.class.st",
+      "sourceSHA256": "7aecbb7cd84ef85ad255920d7fe205167910327700c316495b8dcf9625e27e2e"
+    },
+    {
+      "className": "MARelationDescription",
+      "classSide": true,
+      "selector": "defaultClasses",
+      "path": "source/Magritte-Model/MARelationDescription.class.st",
+      "sourceSHA256": "b6cda04ca1e3f509c0d18e73c4820a935e7a64f5c6d9ec2ff4a07b992d15b51e"
+    },
+    {
+      "className": "MARelationDescription",
+      "classSide": false,
+      "selector": "allClasses",
+      "path": "source/Magritte-Model/MARelationDescription.class.st",
+      "sourceSHA256": "ea75f62fcd27c70ab6110f97d1c5f3123a8f0de489373865491681025722fb9a"
+    },
+    {
+      "className": "MARelationDescription",
+      "classSide": false,
+      "selector": "classes",
+      "path": "source/Magritte-Model/MARelationDescription.class.st",
+      "sourceSHA256": "3505307bc7070906d1fc5a54eec262d102a94be50664e7f09aa7699be6623e38"
+    },
+    {
+      "className": "MARelationDescription",
+      "classSide": false,
+      "selector": "classes:",
+      "path": "source/Magritte-Model/MARelationDescription.class.st",
+      "sourceSHA256": "84271ec33857d929f89524da4eb89fcc0fe0e5f5e3173678962cc1460fc1096e"
+    },
+    {
+      "className": "MARelationDescription",
+      "classSide": false,
+      "selector": "commonClass",
+      "path": "source/Magritte-Model/MARelationDescription.class.st",
+      "sourceSHA256": "5940adf49fbc406b5d32f488433293298b53cc6a0523d3adf9363b2bf60c0bc3"
+    },
+    {
+      "className": "MARelationDescription",
+      "classSide": false,
+      "selector": "descriptionReference",
+      "path": "source/Magritte-Model/MARelationDescription.class.st",
+      "sourceSHA256": "f8798ca0b4cc03618da681aefae64ab033549b41541a9bbe610aafa22ea77733"
+    },
+    {
+      "className": "MARelationDescription",
+      "classSide": false,
+      "selector": "postCopy",
+      "path": "source/Magritte-Model/MARelationDescription.class.st",
+      "sourceSHA256": "83d198595950871b27bd7ad981c8fcf41131738b6e5f8a7f16685d53ed48b331"
+    },
+    {
+      "className": "MARelationDescription",
+      "classSide": false,
+      "selector": "reference",
+      "path": "source/Magritte-Model/MARelationDescription.class.st",
+      "sourceSHA256": "2f860f1a3b83c2fce7a929077a35e8299820cb58e23610a7542174e23b1a914f"
+    },
+    {
+      "className": "MABooleanDescription",
+      "classSide": false,
+      "selector": "allOptions",
+      "path": "source/Magritte-Model/MABooleanDescription.class.st",
+      "sourceSHA256": "12e75e36a02a9a5f6af41b852e7ae6db18408677c1ba8355d9936bcf466d4c75"
+    },
+    {
+      "className": "MABooleanDescription",
+      "classSide": false,
+      "selector": "labelForOption:",
+      "path": "source/Magritte-Model/MABooleanDescription.class.st",
+      "sourceSHA256": "42f3069c61316c1332f44dcf9e8466df4a82bc514251adcb8599f5f0891cdcd8"
+    },
+    {
+      "className": "MABooleanDescription",
+      "classSide": false,
+      "selector": "reference",
+      "path": "source/Magritte-Model/MABooleanDescription.class.st",
+      "sourceSHA256": "c7a7d41566d5d541614094634b7bed27776931a34984865e119d7b33d986b0d9"
+    },
+    {
+      "className": "MAOptionDescription",
+      "classSide": false,
+      "selector": "postCopy",
+      "path": "source/Magritte-Model/MAOptionDescription.class.st",
+      "sourceSHA256": "d32b7a77bfe6c571846ba91a23300d49ef88ae71b869c9aefdfae03a28f2e2ae"
+    },
+    {
+      "className": "MAOptionDescription",
+      "classSide": false,
+      "selector": "prepareOptions:",
+      "path": "source/Magritte-Model/MAOptionDescription.class.st",
+      "sourceSHA256": "72a01bb1a4de78a84035d8f331c364b2160131942b94c78d509eefd231afd39a"
+    },
+    {
+      "className": "MAOptionDescription",
+      "classSide": false,
+      "selector": "undefined:",
+      "path": "source/Magritte-Model/MAOptionDescription.class.st",
+      "sourceSHA256": "fdf347f1855d856deb7ff5826324d7959605735a6b36e0da9b19a4cbd16843df"
+    },
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "magritteTemplate",
+      "path": "source/Magritte-Model/MAContainer.class.st",
+      "sourceSHA256": "1f4ba7729f266835e3e6600f6f6dfdbdef862c9cb79c59d4e7841f46fe628a1c"
+    },
+    {
+      "className": "Object",
+      "classSide": false,
+      "selector": "descriptionContainer",
+      "path": "source/Magritte-Model/Object.extension.st",
+      "sourceSHA256": "d1125ed7131d92bbd92b49336ea25bf499cadca1ef66fa372c208047edee767c"
+    },
+    {
+      "className": "Object",
+      "classSide": true,
+      "selector": "magritteTemplate",
+      "path": "source/Magritte-Model/Object.extension.st",
+      "sourceSHA256": "8e20622bdfbe15c2956028c46ec92b65f7e1389f981eeaadc5a9ea8597a114cc"
+    },
+    {
+      "className": "MAReferenceDescriptionTest",
+      "classSide": false,
+      "selector": "testCopyReference",
+      "path": "source/Magritte-Tests-Model/MAReferenceDescriptionTest.class.st",
+      "sourceSHA256": "288ee7d2962c9d1d706336c939e4441b4dccf585d1d3b7d3d37bcd7a0f59ef72"
+    }
+  ]
+}
