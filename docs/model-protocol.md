@@ -71,9 +71,9 @@ Nil/default membership compares the stored default as the left equality receiver
 
 ## Model hooks and remaining gaps
 
-These functions honor each supplied Model's read/write behavior, including custom adapters and mementos. They do not reinterpret an adapter's returned nil or sentinel. The audit found that pinned Object>>readUsing: replaces an accessor's nil with undefinedValue, while the current generic native adapters retain their established raw-nil policy. That generic-object fallback remains a separately recorded gap. Upstream MAAdaptiveModel overrides readUsing: to return actual values/absent nil; the native adaptive model retains that behavior.
+These functions honor each supplied Model's read/write behavior, including custom adapters and mementos. They do not reinterpret an adapter's returned nil or sentinel. Phase 0.26 closes the generic-object gap found by this audit: generic reads now replace an accessor's nil with undefinedValue. Upstream MAAdaptiveModel overrides readUsing: to return actual values/absent nil; the native adaptive model retains that behavior. See [model-read.md](model-read.md) for the distinction and its effects on consumers.
 
-Implicit per-object description discovery, the complete generic Object adapter fallback, maHash/maHashUsing, raw callable defaults, mutable collection-object identity and arbitrary Smalltalk scalar/collection equality remain unsupported. No platform-specific or application-framework behavior is imported from GT.
+Implicit per-object description discovery, maHash/maHashUsing, raw callable defaults, mutable collection-object identity and arbitrary Smalltalk scalar/collection equality remain unsupported. No platform-specific or application-framework behavior is imported from GT.
 
 The functions use the existing bounded direct-child snapshot; structurally mutating the container during an operation remains outside the enumeration profile. Default/Value comparison work shares a budget across fields; existing accessor and local Value checks retain their own limits. Native callbacks/providers are not preempted. Callers synchronize model, metadata and captured state.
 

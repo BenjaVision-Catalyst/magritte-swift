@@ -62,6 +62,8 @@
     "messages-upstream-methods.json": "3720df8c193a7b4379a8585f44c64506cf86b35a1daa2d6b075a6c387a22cc62",
     "model-protocol-scenarios.json": "613829de2c8aca396ee2f82409942c3e13cf12966bc27e75e7c283aaa1a08d2b",
     "model-protocol-upstream-methods.json": "4cc25b7fe2cd4ffdce75c9b40518b3a5d12d236d68fc1bf14061224602834a80",
+    "model-read-scenarios.json": "21e8d0e0ac88e8e2aa1ffc95b916a99753d342c907a4edd51b02d7d5dd156b5a",
+    "model-read-upstream-methods.json": "c63ecd39d7b87e630e2955ccda9e1370ee04a50ce0eb1dcd2e54f49533913cea",
     "person-v1.json": "87541466c2f6d8e01828a31dfb3e3a31e11bc7eb3cafbe06bdd032716c7e0179",
     "person-v2.json": "376c9ad1ba766ce2bc944c44b85d736bc47d46a5ca29324530479cfc3cfed5d1",
     "pluggable-accessors-live-methods.json": "95fe2a65cc7abe814e093f99f45517b344b58ec01b0b6c1d313a3e169eb98a92",

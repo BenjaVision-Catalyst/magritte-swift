@@ -1,0 +1,111 @@
+{
+  "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
+  "verification": "Upstream source only; GT was not accessed.",
+  "methods": [
+    {
+      "className": "Object",
+      "classSide": false,
+      "selector": "readUsing:",
+      "sourceSHA256": "4d9f6c8a7aa5309d28ed8eaee85e2c1963c6b1861c8e69a10f4153b23a22effd",
+      "path": "source/Magritte-Model/Object.extension.st"
+    },
+    {
+      "className": "Object",
+      "classSide": false,
+      "selector": "write:using:",
+      "sourceSHA256": "6354df2b421be94aa6ad4b7705ea357e4414b6bbd7d65be3f357f8c36548511e",
+      "path": "source/Magritte-Model/Object.extension.st"
+    },
+    {
+      "className": "MADescription",
+      "classSide": false,
+      "selector": "read:",
+      "sourceSHA256": "d09fc85b9b84026562a19618b2178153d0c4170089de43fdf845ffeb33fcc953",
+      "path": "source/Magritte-Model/MADescription.class.st"
+    },
+    {
+      "className": "MADescription",
+      "classSide": false,
+      "selector": "undefinedValue",
+      "sourceSHA256": "39d391230995d7e29876a81b70993102292dc1240b1a80077879e6920e16a230",
+      "path": "source/Magritte-Model/MADescription.class.st"
+    },
+    {
+      "className": "MADescription",
+      "classSide": false,
+      "selector": "undefinedValue:",
+      "sourceSHA256": "0199d49b3634f06ad6bdfd3dd3dd709f0bc3d10979ebf8a323e93d436ab29315",
+      "path": "source/Magritte-Model/MADescription.class.st"
+    },
+    {
+      "className": "MAAdaptiveModel",
+      "classSide": false,
+      "selector": "readUsing:",
+      "sourceSHA256": "38b40d15180329e6f89b8384fa74152746d5bb0507dfd49248c11360f35ae5bd",
+      "path": "source/Magritte-Model/MAAdaptiveModel.class.st"
+    },
+    {
+      "className": "MAStraightMemento",
+      "classSide": false,
+      "selector": "readUsing:",
+      "sourceSHA256": "01105990138e4269457cd7a1d54b88a61c3cc51c7b42e0bb50023034429a6dfb",
+      "path": "source/Magritte-Model/MAStraightMemento.class.st"
+    },
+    {
+      "className": "MACachedMemento",
+      "classSide": false,
+      "selector": "readUsing:",
+      "sourceSHA256": "8bc968c8d008b633d7eb7808ac10a3f006de2a153d4b3c0f3ebb94a48ff07dbd",
+      "path": "source/Magritte-Model/MACachedMemento.class.st"
+    },
+    {
+      "className": "MAMemento",
+      "classSide": false,
+      "selector": "cookRawPull:",
+      "sourceSHA256": "4175a63c83265fccba3f937db3bae828ed405be675b8aff2167578610769e6a9",
+      "path": "source/Magritte-Model/MAMemento.class.st"
+    },
+    {
+      "className": "MADictionaryAccessor",
+      "classSide": false,
+      "selector": "read:",
+      "sourceSHA256": "a427fda0b65477d93ead57fddf19d5023a5b7a0b2060fb8acd4f696e788f7572",
+      "path": "source/Magritte-Model/MADictionaryAccessor.class.st"
+    },
+    {
+      "className": "MAPropertyAccessor",
+      "classSide": false,
+      "selector": "read:",
+      "sourceSHA256": "f1d91f437d7a244e3c95e44b8ba0e3e81e82397e2e0a4aec1980829f00b637d8",
+      "path": "source/Magritte-Model/MAPropertyAccessor.class.st"
+    },
+    {
+      "className": "MASelectorAccessor",
+      "classSide": false,
+      "selector": "read:",
+      "sourceSHA256": "ba01288933342c4d0736e2aeed5c6776f6fbac0f71fb4797eefea8f73ea7a7c8",
+      "path": "source/Magritte-Model/MASelectorAccessor.class.st"
+    },
+    {
+      "className": "MAChainAccessor",
+      "classSide": false,
+      "selector": "read:",
+      "sourceSHA256": "ad155e0d5f2b1825e1b2a74367b65679d5ffc4c8cf5c3deb3497a2ccc155b179",
+      "path": "source/Magritte-Model/MAChainAccessor.class.st"
+    },
+    {
+      "className": "MAPluggableAccessor",
+      "classSide": false,
+      "selector": "read:",
+      "sourceSHA256": "0fa46d7151011a2d97d4a9dbb9132220f1f6370a28f01e470f6c7f21cbb6ebd5",
+      "path": "source/Magritte-Model/MAPluggableAccessor.class.st"
+    },
+    {
+      "className": "MAValidatorVisitor",
+      "classSide": false,
+      "selector": "validate:using:",
+      "sourceSHA256": "558e7352f6865d6f4eeec7eeb34d9b1162cafea246a5aeab389095768eef3d0f",
+      "path": "source/Magritte-Model/MAValidatorVisitor.class.st"
+    }
+  ]
+}

@@ -1,0 +1,6682 @@
+{
+  "authority": "Pinned Object>>readUsing: source-derived nil-only undefinedValue fallback. Adaptive and memento expectations follow their upstream overrides. GT was not accessed.",
+  "cases": [
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "string",
+        "value": "fallback"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "reference",
+        "value": "sentinel"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "generic",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "string",
+        "value": "fallback"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "reference",
+        "value": "sentinel"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "dictionary",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "string",
+        "value": "fallback"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "reference",
+        "value": "sentinel"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-direct",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "string",
+        "value": "fallback"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "reference",
+        "value": "sentinel"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-selector",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "string",
+        "value": "fallback"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "reference",
+        "value": "sentinel"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-variable",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "string",
+        "value": "fallback"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "reference",
+        "value": "sentinel"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "native-property",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "string",
+        "value": "fallback"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "reference",
+        "value": "sentinel"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "description-direct",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "string",
+        "value": "fallback"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "reference",
+        "value": "sentinel"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "description-property",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "nil"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "string",
+        "value": "fallback"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "nil"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "reference",
+        "value": "sentinel"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "boolean",
+        "value": false
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "boolean",
+        "value": false
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "integer",
+        "value": "0"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "integer",
+        "value": "0"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "string",
+        "value": ""
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "array",
+        "value": []
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "symbol",
+        "value": "unset"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    },
+    {
+      "adapter": "description-selector",
+      "current": {
+        "type": "reference",
+        "value": "object"
+      },
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "result": {
+        "type": "reference",
+        "value": "object"
+      }
+    }
+  ],
+  "editing": [
+    {
+      "undefinedValue": {
+        "type": "nil"
+      },
+      "generic": {
+        "type": "nil"
+      },
+      "adaptive": {
+        "type": "nil"
+      },
+      "straightGeneric": {
+        "type": "string",
+        "value": "default"
+      },
+      "straightAdaptive": {
+        "type": "string",
+        "value": "default"
+      },
+      "cachedGeneric": {
+        "type": "string",
+        "value": "default"
+      },
+      "cachedAdaptive": {
+        "type": "string",
+        "value": "default"
+      }
+    },
+    {
+      "undefinedValue": {
+        "type": "boolean",
+        "value": false
+      },
+      "generic": {
+        "type": "boolean",
+        "value": false
+      },
+      "adaptive": {
+        "type": "nil"
+      },
+      "straightGeneric": {
+        "type": "boolean",
+        "value": false
+      },
+      "straightAdaptive": {
+        "type": "string",
+        "value": "default"
+      },
+      "cachedGeneric": {
+        "type": "string",
+        "value": "default"
+      },
+      "cachedAdaptive": {
+        "type": "nil"
+      }
+    },
+    {
+      "undefinedValue": {
+        "type": "integer",
+        "value": "0"
+      },
+      "generic": {
+        "type": "integer",
+        "value": "0"
+      },
+      "adaptive": {
+        "type": "nil"
+      },
+      "straightGeneric": {
+        "type": "integer",
+        "value": "0"
+      },
+      "straightAdaptive": {
+        "type": "string",
+        "value": "default"
+      },
+      "cachedGeneric": {
+        "type": "string",
+        "value": "default"
+      },
+      "cachedAdaptive": {
+        "type": "nil"
+      }
+    },
+    {
+      "undefinedValue": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "generic": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "adaptive": {
+        "type": "nil"
+      },
+      "straightGeneric": {
+        "type": "string",
+        "value": "fallback"
+      },
+      "straightAdaptive": {
+        "type": "string",
+        "value": "default"
+      },
+      "cachedGeneric": {
+        "type": "string",
+        "value": "default"
+      },
+      "cachedAdaptive": {
+        "type": "nil"
+      }
+    },
+    {
+      "undefinedValue": {
+        "type": "array",
+        "value": []
+      },
+      "generic": {
+        "type": "array",
+        "value": []
+      },
+      "adaptive": {
+        "type": "nil"
+      },
+      "straightGeneric": {
+        "type": "array",
+        "value": []
+      },
+      "straightAdaptive": {
+        "type": "string",
+        "value": "default"
+      },
+      "cachedGeneric": {
+        "type": "string",
+        "value": "default"
+      },
+      "cachedAdaptive": {
+        "type": "nil"
+      }
+    },
+    {
+      "undefinedValue": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "generic": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "adaptive": {
+        "type": "nil"
+      },
+      "straightGeneric": {
+        "type": "symbol",
+        "value": "unset"
+      },
+      "straightAdaptive": {
+        "type": "string",
+        "value": "default"
+      },
+      "cachedGeneric": {
+        "type": "string",
+        "value": "default"
+      },
+      "cachedAdaptive": {
+        "type": "nil"
+      }
+    },
+    {
+      "undefinedValue": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "generic": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "adaptive": {
+        "type": "nil"
+      },
+      "straightGeneric": {
+        "type": "reference",
+        "value": "sentinel"
+      },
+      "straightAdaptive": {
+        "type": "string",
+        "value": "default"
+      },
+      "cachedGeneric": {
+        "type": "string",
+        "value": "default"
+      },
+      "cachedAdaptive": {
+        "type": "nil"
+      }
+    }
+  ]
+}

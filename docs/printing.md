@@ -97,3 +97,5 @@ python3 tools/compare-graphs.py /tmp/printing-cpp.json /tmp/printing-swift.json
 ```
 
 All checks use standalone code and saved fixtures, with no GT connection.
+
+Phase 0.26 corrects generic model reads to expose undefinedValue for accessor nil. Printing therefore sees a non-nil configured sentinel when that hook supplies one; raw accessors and adaptive overrides retain their nil behavior. See [model-read.md](model-read.md).

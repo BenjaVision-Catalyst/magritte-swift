@@ -49,13 +49,13 @@ I = implemented; R = executed against the live reference for the stated subset; 
 | Date/time/duration, URL, color/icon/file/directory/block/action/table descriptions | N | unsupported class fails import; see complete inventory |
 | Required/optional, custom undefinedValue | I, R | required checks nil; undefined sentinel skips kind/specific/conditions |
 | Model default initialization / isSameAs | I (explicit description/provider and native Value profile), fresh R deferred | raw default writes, right-readability gating, nil/default equivalence and host equality; model-protocol.md |
-| Generic Object readUsing nil fallback | N (generic native adapters) | pinned Object replaces nil with undefinedValue; native generic adapters retain raw nil; AdaptiveModel has its own absent-nil protocol |
-| Explicit defaults | I, R (property only) | raw read returns nil; defaultValue exposes declared default |
+| Generic Object readUsing nil fallback | I (native/metadata adapter profile), fresh R deferred | one accessor read then current undefinedValue only for nil; raw accessors and adaptive/memento overrides retain their contracts; model-read.md |
+| Explicit defaults | I, R (property only) | defaultValue exposes declared default; generic model nil reads use undefinedValue, not default; raw accessors/adaptive reads retain nil |
 | shouldCacheDefault | I, R | editing default filtering, including pinned/live difference; see editing.md |
 | Memento default substitution/cache | I, R | straight nil/default and cached sentinel/default cooking; raw models unchanged |
 | Lazy default initialization | I (Value profile), fresh R deferred | nil-only substitution, conditional raw write and selector-backed property bridge; lazy.md; mutable collection identity/default copying remain unsupported |
 | Read-only/hidden validation skip | I, R | flags affect interpreter, raw write still writes |
-| MADictionaryAccessor | I, R | native dictionary missing read returns nil |
+| MADictionaryAccessor | I, R | raw missing-key accessor read returns nil; DictionaryModel.readUsing applies the generic fallback |
 | Accessor-derived names and labels | I, R (ASCII inflection profile) | exact name kinds, chain ordering, nil/empty overrides and default metadata; Unicode inflection N; accessor-inference.md |
 | Description property/selector accessors | I, R (selected fields) | retained seven-property bootstrap plus class-specific selector metadata graphs |
 | Local pluggable native accessors | I, R (first-class accessor profile), X (wire) | independent block slots, identity equality/copy, chains/mementos and empty annotated schema; pluggable-accessors.md; direct Description callbacks remain separate |
@@ -165,3 +165,5 @@ Phase 0.23 implements description-specific required/kind/range/conflict messages
 Phase 0.24 implements described-object readToString/printFor/container print and local maPrintString/maPrintStringSeparator hooks. [printing.md](printing.md) records sixteen source fingerprints, 54 container/five element cases, callback/read/separator timing, partial failures, shallow copy identity, codec rejection and native output bounds. Ordinary writers are unchanged. GT was not accessed; fresh R remains deferred.
 
 Phase 0.25 implements explicit-description/provider model initialization and isSameAs:using: comparison. [model-protocol.md](model-protocol.md) records fourteen Magritte source fingerprints, separately attributed Pharo membership review, 48 initialization/384 comparison cases, timing/failure/default/container/provider/reference/bounds tests and portable models. The generic Object nil-read fallback gap is now explicit. Callable default Values, automatic per-object discovery and model hashing remain separate gaps. GT was not accessed; fresh R remains deferred.
+
+Phase 0.26 implements Object>>readUsing: nil-only undefinedValue fallback in generic native/dictionary/description and reflective model adapters, with a default Model implementation. [model-read.md](model-read.md) records fifteen source fingerprints, 441 adapter/seven memento cases, single-read/error/chain/override/consumer/lifetime/bounds checks and equivalent graphs. Raw accessors and adaptive/memento read overrides are preserved. GT was not accessed; fresh R remains deferred.

@@ -460,7 +460,8 @@ private final class DescriptionBinding: Model {
   }
   func read(using description: Description) throws -> Value {
     let s = try state()
-    let value = try description.effectiveAccessor.read(self, graph: s.graph, limits: s.limits)
+    let value = try undefinedIfNil(
+      description, description.effectiveAccessor.read(self, graph: s.graph, limits: s.limits))
     _ = try encodeValue(value, limits: s.limits)
     return value
   }
@@ -556,7 +557,8 @@ private final class AccessorBinding: Model {
   }
   func read(using description: Description) throws -> Value {
     let s = try state()
-    let value = try description.effectiveAccessor.read(self, graph: s.graph, limits: s.limits)
+    let value = try undefinedIfNil(
+      description, description.effectiveAccessor.read(self, graph: s.graph, limits: s.limits))
     _ = try encodeValue(value, limits: s.limits)
     return value
   }
@@ -577,8 +579,11 @@ private final class ConditionBinding: Model {
     ClassRegistry.shared.includesBehavior(target.predicate.className, cls)
   }
   func read(using description: Description) throws -> Value {
-    try require(owner != nil, "Recursive metadata session expired")
-    throw MagritteError("Upstream condition objects have no annotated fields")
+    guard let s = owner else { throw MagritteError("Recursive metadata session expired") }
+    let value = try undefinedIfNil(
+      description, description.effectiveAccessor.read(self, graph: s.graph, limits: s.limits))
+    _ = try encodeValue(value, limits: s.limits)
+    return value
   }
   func write(_ value: Value, using description: Description) throws {
     try require(owner != nil, "Recursive metadata session expired")

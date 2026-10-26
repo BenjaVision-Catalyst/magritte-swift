@@ -242,9 +242,13 @@ open class Description: Model {
     }.map { $0.1 }
   }
   public func read(using description: Description) throws -> Value {
+    let value: Value
     if description.accessor != nil || description.accessorObject != nil {
-      return try description.effectiveAccessor.read(self)
-    }; return try property(description.key)
+      value = try description.effectiveAccessor.read(self)
+    } else {
+      value = try property(description.key)
+    }
+    return try undefinedIfNil(description, value)
   }
   public func write(_ value: Value, using description: Description) throws { if description.accessor != nil || description.accessorObject != nil { try description.effectiveAccessor.write(value, to: self) } else { properties[description.key] = value } }
 }
@@ -264,8 +268,13 @@ public final class DictionaryModel: Model {
     public weak var resolver: Graph?
     public var values: [String: Value]
     public init(_ values: [String: Value] = [:]) { self.values = values }
-    public func read(using description: Description) throws -> Value { try description.effectiveAccessor.read(self, graph: resolver) }
-    public func write(_ value: Value, using description: Description) throws { try description.effectiveAccessor.write(value, to: self, graph: resolver) }
+  public func read(using description: Description) throws -> Value {
+    let value = try description.effectiveAccessor.read(self, graph: resolver)
+    return try undefinedIfNil(description, value)
+  }
+  public func write(_ value: Value, using description: Description) throws {
+    try description.effectiveAccessor.write(value, to: self, graph: resolver)
+  }
 }
 public final class NativeModel: Model {
   public var binaryReaders: [String: (AnyObject, Value, Graph?) throws -> Value] = [:]
@@ -310,10 +319,15 @@ public final class NativeModel: Model {
         return (!registered && registry.includesBehavior("Object",name)) || ancestry.contains{ $0 == name || registry.includesBehavior($0,name) }
     }
     public func read(using description: Description) throws -> Value {
-        if let f = description.nativeRead { return try f(object) }
-        return try description.effectiveAccessor.read(self, graph: resolver)
+    let value: Value
+    if let f = description.nativeRead {
+      value = try f(object)
+    } else {
+      value = try description.effectiveAccessor.read(self, graph: resolver)
     }
-    public func write(_ value: Value, using description: Description) throws {
+    return try undefinedIfNil(description, value)
+  }
+  public func write(_ value: Value, using description: Description) throws {
         if let f = description.nativeWrite { try f(object, value) }
         else { try description.effectiveAccessor.write(value, to: self, graph: resolver) }
     }

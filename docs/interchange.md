@@ -144,3 +144,7 @@ The described-object printing protocol adds no wire forms. `maPrintString` and `
 ## Local model protocols (0.25)
 
 Model initialization and described comparison operate on existing descriptions, defaults, accessors and model Values. They add no wire representation or semantic property. Local description providers and host equality implementations are not serialized. Ordinary imported graphs can be initialized and compared using the supplied native Model hooks and existing Value equality profile. See [model-protocol.md](model-protocol.md) for raw-default and adapter boundaries.
+
+## Generic model reads (0.26)
+
+The existing undefinedValue property now supplies generic model nil-read fallback locally. No wire form changes. Codecs preserve absent/stored nil data without executing the read hook; adaptive object-table entries retain their actual-value/absent-nil semantics. Imported descriptions can govern generic adapters using the corrected hook. Raw accessor reads remain distinct. See [model-read.md](model-read.md).
