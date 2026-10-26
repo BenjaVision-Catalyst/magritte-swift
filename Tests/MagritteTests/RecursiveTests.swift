@@ -159,10 +159,10 @@ final class RecursiveTests: XCTestCase {
     try structure.commit()
     XCTAssertEqual(target.property("min"), try value(reference["targetMin"]))
     XCTAssertEqual(
-      try canonical(JSONSerialization.jsonObject(with: context.schemas().encode())),
+      try canonical(JSONSerialization.jsonObject(with: try context.schemas().encode())),
       try canonical(XCTUnwrap(reference["finalSchemas"])))
     XCTAssertThrowsError(try context.resolver.encode())
-    let schemas = context.schemas()
+    let schemas = try context.schemas()
     if let path = ProcessInfo.processInfo.environment["MAGRITTE_RECURSIVE_EXPORT"] {
       try schemas.encode().write(to: URL(fileURLWithPath: path))
     }

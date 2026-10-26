@@ -66,6 +66,11 @@ extension Description {
 public class Memento: Model {
   public let model: Model, description: Description, limits: Limits
   public weak var graph: Graph?
+  public var className: String { "MAMemento" }
+  public func kindOf(_ name: String) -> Bool {
+    ["Object", "MABasicObject", "MAObject", "MAMemento", className].contains(name)
+      || (className == "MACheckedMemento" && name == "MACachedMemento")
+  }
   public var usesStoredContainerValues: Bool { true }
   init(wrapping model: Model, description: Description, graph: Graph?, limits: Limits) throws {
     self.model = model
@@ -108,6 +113,7 @@ public class Memento: Model {
   }
 }
 public final class StraightMemento: Memento {
+  public override var className: String { "MAStraightMemento" }
   public init(
     model: Model, description: Description, graph: Graph? = nil, limits: Limits = Limits()
   ) throws {
@@ -128,6 +134,7 @@ public final class StraightMemento: Memento {
   public override func commit() throws {}
 }
 public class CachedMemento: Memento {
+  public override var className: String { "MACachedMemento" }
   struct Entry {
     let description: Description
     var value: Value
@@ -243,6 +250,7 @@ public class CachedMemento: Memento {
   }
 }
 public final class CheckedMemento: CachedMemento {
+  public override var className: String { "MACheckedMemento" }
   public private(set) var original: [String: Value] = [:]
   public init(
     model: Model, description: Description, graph: Graph? = nil, limits: Limits = Limits()

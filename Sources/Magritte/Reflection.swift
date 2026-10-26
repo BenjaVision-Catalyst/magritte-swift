@@ -3,7 +3,8 @@ import Foundation
 private let portableClassNames = [
   "Object", "UndefinedObject", "Boolean", "Number", "Integer", "Float", "String", "Symbol",
   "Character", "Collection", "SequenceableCollection", "Array", "OrderedCollection", "Set", "Bag",
-  "Class", "ClassDescription", "Behavior", "MABasicObject", "MAAdaptiveModel", "MAObject",
+  "Class", "ClassDescription", "Behavior", "MAMemento", "MAStraightMemento", "MACachedMemento",
+  "MACheckedMemento", "MABasicObject", "MAAdaptiveModel", "MAObject",
   "MADescription", "MAElementDescription", "MAMagnitudeDescription", "MAReferenceDescription",
   "MARelationDescription", "MAOptionDescription", "MAContainer", "MAPriorityContainer",
   "MAStringDescription", "MASymbolDescription", "MAMemoDescription", "MAPasswordDescription",

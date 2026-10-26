@@ -3,6 +3,12 @@
   "path": "conformance",
   "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
   "files": {
+    "bootstrap-class-registry.json": "58e44e54fe59df511f2bfeb255d6cf2e0a1bfbeb9c8023c284638c8b664e7ea2",
+    "bootstrap-live-methods.json": "3009589d1f551ea638c155965af100c2af6c845d2c0b090e3e2f27c454ebf479",
+    "bootstrap-reference.json": "0f61cebac1c8dd3c588e6490c3da8cf7f75c30489524e9afe99c2c05158197e0",
+    "bootstrap-replay.json": "2b4154d0c4f79e71b40d9efe447a1f438ccc893fd39ecfcbf78b5db6782a9389",
+    "bootstrap-roundtrip-reference.json": "fb9415d9f56f61a338e200d5abf6effe2b24de47c5678547b0851eb8eaa87952",
+    "bootstrap-roundtrip-replay.json": "8c67173973128dc50c79abe8dd18b57498e6674b9df14cec89d5c764729b8e57",
     "class-registry.json": "102133cb79c70372787143ad65b7c3e55564929e278399312789e0a0a770a555",
     "composition-reference.json": "2eee528056bdd0f8db644831253f67ac146b7c7403a82f9df0ab9f36be56b609",
     "composition-replay.json": "252db5b5443593ee69b0923d6ff7ce69f958ec2550e362b158e9d9dfe9fbe6ea",

@@ -1,0 +1,103 @@
+{
+  "captured": "2012-10-12",
+  "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
+  "methods": [
+    {
+      "classSide": false,
+      "methodClassName": "MAMemento",
+      "methodName": "magritteDescription",
+      "liveSourceSHA256": "2672cb6804319f36af6ffedd7c94d34c98c68093f88dfabac78681901e72c855",
+      "upstreamSourceSHA256": "2672cb6804319f36af6ffedd7c94d34c98c68093f88dfabac78681901e72c855",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAMemento",
+      "methodName": "model",
+      "liveSourceSHA256": "cbde5bc765b555dbcd5e7bf361744ee783f17090625efa59bd2fbd4290a73ac3",
+      "upstreamSourceSHA256": "cbde5bc765b555dbcd5e7bf361744ee783f17090625efa59bd2fbd4290a73ac3",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": true,
+      "methodClassName": "MAMemento",
+      "methodName": "model:description:",
+      "liveSourceSHA256": "fe64c5ac24615722b90b09f1fbaaf6aca05cacaefcb68fa21b963e9e62372c87",
+      "upstreamSourceSHA256": "fe64c5ac24615722b90b09f1fbaaf6aca05cacaefcb68fa21b963e9e62372c87",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAMemento",
+      "methodName": "setDescription:",
+      "liveSourceSHA256": "136fb5a32f0e014dced12506b6472f8e446c9f5d7001bd73445f11bcf54d20e5",
+      "upstreamSourceSHA256": "136fb5a32f0e014dced12506b6472f8e446c9f5d7001bd73445f11bcf54d20e5",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAMemento",
+      "methodName": "setModel:",
+      "liveSourceSHA256": "73cd4631d9c8c928ac4cde662225cfe8f244c9656f7bc9d631131b332148d970",
+      "upstreamSourceSHA256": "73cd4631d9c8c928ac4cde662225cfe8f244c9656f7bc9d631131b332148d970",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAMemento",
+      "methodName": "validate",
+      "liveSourceSHA256": "999450cf836078e324107690d34cc4ce29b2f63f3cb5050cfb9b512beb4349ef",
+      "upstreamSourceSHA256": "999450cf836078e324107690d34cc4ce29b2f63f3cb5050cfb9b512beb4349ef",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAStraightMemento",
+      "methodName": "readUsing:",
+      "liveSourceSHA256": "01105990138e4269457cd7a1d54b88a61c3cc51c7b42e0bb50023034429a6dfb",
+      "upstreamSourceSHA256": "01105990138e4269457cd7a1d54b88a61c3cc51c7b42e0bb50023034429a6dfb",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MAStraightMemento",
+      "methodName": "write:using:",
+      "liveSourceSHA256": "c6325e507db83bcad6cec8e445da0a326cc3eb05e545734a0eb009a4964177be",
+      "upstreamSourceSHA256": "c6325e507db83bcad6cec8e445da0a326cc3eb05e545734a0eb009a4964177be",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MACachedMemento",
+      "methodName": "readUsing:",
+      "liveSourceSHA256": "8bc968c8d008b633d7eb7808ac10a3f006de2a153d4b3c0f3ebb94a48ff07dbd",
+      "upstreamSourceSHA256": "8bc968c8d008b633d7eb7808ac10a3f006de2a153d4b3c0f3ebb94a48ff07dbd",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MACachedMemento",
+      "methodName": "hasChanges",
+      "liveSourceSHA256": "704cfef8ecfa8d0074ca3a22c7b46ca7474bbb7a49cb33008d9c1edeff8bae6c",
+      "upstreamSourceSHA256": "704cfef8ecfa8d0074ca3a22c7b46ca7474bbb7a49cb33008d9c1edeff8bae6c",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MACheckedMemento",
+      "methodName": "hasConflict",
+      "liveSourceSHA256": "a75692b28bf2d141493588cfd25bd0339d5f38057b2324536578c07b131e3cd4",
+      "upstreamSourceSHA256": "a75692b28bf2d141493588cfd25bd0339d5f38057b2324536578c07b131e3cd4",
+      "matchesUpstreamIgnoringWhitespace": true
+    },
+    {
+      "classSide": false,
+      "methodClassName": "MACheckedMemento",
+      "methodName": "validate",
+      "liveSourceSHA256": "5ca0942a0f9ea5d5ff18f4367005a665538104c0b0168d1605202a745cee5972",
+      "upstreamSourceSHA256": "5ca0942a0f9ea5d5ff18f4367005a665538104c0b0168d1605202a745cee5972",
+      "matchesUpstreamIgnoringWhitespace": true
+    }
+  ],
+  "policy": "All 12 inspected methods match the pinned upstream ignoring whitespace. Mementos expose their represented description by identity, with no annotated cache/model fields. Bootstrap traversal is a bounded native convenience over selected upstream metadata schemas; it is not an upstream factory selector. No persistent image source edits."
+}

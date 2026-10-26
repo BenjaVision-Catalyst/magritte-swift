@@ -1,0 +1,14 @@
+[
+	{
+		"source" : "/private/tmp/magritte-cpp-bootstrap-native.json",
+		"objects" : 1,
+		"validated" : true,
+		"descriptions" : 78
+	},
+	{
+		"source" : "/private/tmp/magritte-swift-bootstrap-native.json",
+		"objects" : 1,
+		"validated" : true,
+		"descriptions" : 78
+	}
+]

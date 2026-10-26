@@ -1,0 +1,4746 @@
+{
+	"metadataEdit" : {
+		"stagedMin" : {
+			"value" : "7",
+			"type" : "integer"
+		},
+		"committedMin" : {
+			"value" : "7",
+			"type" : "integer"
+		},
+		"sameDescription" : true
+	},
+	"registry" : [
+		"Array",
+		"Bag",
+		"Behavior",
+		"Boolean",
+		"Character",
+		"Class",
+		"ClassDescription",
+		"Collection",
+		"Float",
+		"Integer",
+		"MAAccessor",
+		"MAAdaptiveModel",
+		"MABasicObject",
+		"MABooleanDescription",
+		"MACachedMemento",
+		"MAChainAccessor",
+		"MACheckedMemento",
+		"MAClassDescription",
+		"MACondition",
+		"MAConjunctiveCondition",
+		"MAContainer",
+		"MADelegatorAccessor",
+		"MADescription",
+		"MADictionaryAccessor",
+		"MAElementDescription",
+		"MAIdentityAccessor",
+		"MAMagnitudeDescription",
+		"MAMemento",
+		"MAMemoDescription",
+		"MAMultipleOptionDescription",
+		"MANegationCondition",
+		"MANullAccessor",
+		"MANumberDescription",
+		"MAObject",
+		"MAOptionDescription",
+		"MAPasswordDescription",
+		"MAPluggableCondition",
+		"MAPriorityContainer",
+		"MAPropertyAccessor",
+		"MAReader",
+		"MAReferenceDescription",
+		"MARelationDescription",
+		"MASelectorAccessor",
+		"MASingleOptionDescription",
+		"MAStraightMemento",
+		"MAStringDescription",
+		"MAStringReader",
+		"MAStringWriter",
+		"MASymbolDescription",
+		"MAToManyRelationDescription",
+		"MAToManyScalarRelationDescription",
+		"MAToOneRelationDescription",
+		"MATokenDescription",
+		"MAValidatorVisitor",
+		"MAVariableAccessor",
+		"MAVisitor",
+		"MAWriter",
+		"Number",
+		"Object",
+		"OrderedCollection",
+		"SequenceableCollection",
+		"Set",
+		"String",
+		"Symbol",
+		"UndefinedObject"
+	],
+	"schemas" : [
+		{
+			"class" : "MAContainer",
+			"graph" : {
+				"descriptions" : [
+					{
+						"id" : "bootstrap.1.app",
+						"properties" : {
+							"label" : {
+								"value" : "MAContainer",
+								"type" : "string"
+							}
+						},
+						"conditions" : [ ],
+						"children" : [
+							"bootstrap.1.app.type",
+							"bootstrap.1.app.label",
+							"bootstrap.1.app.comment",
+							"bootstrap.1.app.group",
+							"bootstrap.1.app.priority",
+							"bootstrap.1.app.readOnly",
+							"bootstrap.1.app.required",
+							"bootstrap.1.app.visible",
+							"bootstrap.1.app.undefined",
+							"bootstrap.1.app.undefinedValue",
+							"bootstrap.1.app.name",
+							"bootstrap.1.app.children",
+							"bootstrap.1.app.accessor",
+							"bootstrap.1.app.stringReader",
+							"bootstrap.1.app.stringWriter",
+							"bootstrap.1.app.validator"
+						],
+						"class" : "MAContainer"
+					},
+					{
+						"reference" : "bootstrap.1.app.accessor.reference",
+						"properties" : {
+							"priority" : {
+								"value" : "10",
+								"type" : "integer"
+							}
+						},
+						"classes" : [
+							"MADelegatorAccessor",
+							"MADictionaryAccessor",
+							"MAIdentityAccessor",
+							"MANullAccessor",
+							"MASelectorAccessor",
+							"MAVariableAccessor",
+							"MAChainAccessor",
+							"MAPropertyAccessor"
+						],
+						"accessor" : {
+							"writeSelector" : "accessor:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "accessor"
+						},
+						"conditions" : [ ],
+						"class" : "MAToOneRelationDescription",
+						"id" : "bootstrap.1.app.accessor"
+					},
+					{
+						"id" : "bootstrap.1.app.accessor.reference",
+						"properties" : { },
+						"conditions" : [ ],
+						"accessor" : {
+							"uuid" : {
+								"type" : "nil"
+							},
+							"class" : "MANullAccessor"
+						},
+						"class" : "MAStringDescription"
+					},
+					{
+						"reference" : "bootstrap.1.app.children.reference",
+						"properties" : {
+							"ordered" : {
+								"value" : true,
+								"type" : "boolean"
+							},
+							"label" : {
+								"value" : "Elements",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "400",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : [ ],
+								"type" : "ordered"
+							}
+						},
+						"classes" : [
+							"MABooleanDescription",
+							"MAClassDescription",
+							"MAStringDescription",
+							"MANumberDescription",
+							"MATokenDescription",
+							"MAMemoDescription",
+							"MAPasswordDescription",
+							"MASymbolDescription",
+							"MAMultipleOptionDescription",
+							"MASingleOptionDescription",
+							"MAToManyRelationDescription",
+							"MAToOneRelationDescription",
+							"MAToManyScalarRelationDescription"
+						],
+						"accessor" : {
+							"writeSelector" : "setChildren:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "children"
+						},
+						"conditions" : [ ],
+						"class" : "MAToManyRelationDescription",
+						"id" : "bootstrap.1.app.children"
+					},
+					{
+						"id" : "bootstrap.1.app.children.reference",
+						"properties" : { },
+						"conditions" : [ ],
+						"accessor" : {
+							"uuid" : {
+								"type" : "nil"
+							},
+							"class" : "MANullAccessor"
+						},
+						"class" : "MAStringDescription"
+					},
+					{
+						"id" : "bootstrap.1.app.comment",
+						"properties" : {
+							"label" : {
+								"value" : "Comment",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "110",
+								"type" : "integer"
+							},
+							"default" : {
+								"type" : "nil"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "comment:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "comment"
+						},
+						"class" : "MAMemoDescription"
+					},
+					{
+						"id" : "bootstrap.1.app.group",
+						"properties" : {
+							"label" : {
+								"value" : "Group",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "105",
+								"type" : "integer"
+							},
+							"default" : {
+								"type" : "nil"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "group:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "group"
+						},
+						"class" : "MAStringDescription"
+					},
+					{
+						"id" : "bootstrap.1.app.label",
+						"properties" : {
+							"label" : {
+								"value" : "Label",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "100",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : "",
+								"type" : "string"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "label:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "label"
+						},
+						"class" : "MAStringDescription"
+					},
+					{
+						"id" : "bootstrap.1.app.name",
+						"properties" : {
+							"priority" : {
+								"value" : "1",
+								"type" : "integer"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "name:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "name"
+						},
+						"class" : "MASymbolDescription"
+					},
+					{
+						"id" : "bootstrap.1.app.priority",
+						"properties" : {
+							"required" : {
+								"value" : true,
+								"type" : "boolean"
+							},
+							"label" : {
+								"value" : "Priority",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "130",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : "0",
+								"type" : "integer"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "priority:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "priority"
+						},
+						"class" : "MANumberDescription"
+					},
+					{
+						"id" : "bootstrap.1.app.readOnly",
+						"properties" : {
+							"label" : {
+								"value" : "Read-only",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "200",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : false,
+								"type" : "boolean"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "readOnly:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "readOnly"
+						},
+						"class" : "MABooleanDescription"
+					},
+					{
+						"id" : "bootstrap.1.app.required",
+						"properties" : {
+							"label" : {
+								"value" : "Required",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "220",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : false,
+								"type" : "boolean"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "required:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "required"
+						},
+						"class" : "MABooleanDescription"
+					},
+					{
+						"reference" : "bootstrap.1.app.stringReader.reference",
+						"labels" : [ ],
+						"properties" : {
+							"label" : {
+								"value" : "String Reader",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "300",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : "MAStringReader",
+								"type" : "class"
+							}
+						},
+						"accessor" : {
+							"writeSelector" : "stringReader:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "stringReader"
+						},
+						"options" : [
+							{
+								"value" : "MAStringReader",
+								"type" : "class"
+							}
+						],
+						"conditions" : [ ],
+						"class" : "MASingleOptionDescription",
+						"id" : "bootstrap.1.app.stringReader"
+					},
+					{
+						"id" : "bootstrap.1.app.stringReader.reference",
+						"properties" : { },
+						"conditions" : [ ],
+						"accessor" : {
+							"uuid" : {
+								"type" : "nil"
+							},
+							"class" : "MANullAccessor"
+						},
+						"class" : "MAClassDescription"
+					},
+					{
+						"reference" : "bootstrap.1.app.stringWriter.reference",
+						"labels" : [ ],
+						"properties" : {
+							"label" : {
+								"value" : "String Writer",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "310",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : "MAStringWriter",
+								"type" : "class"
+							}
+						},
+						"accessor" : {
+							"writeSelector" : "stringWriter:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "stringWriter"
+						},
+						"options" : [
+							{
+								"value" : "MAStringWriter",
+								"type" : "class"
+							}
+						],
+						"conditions" : [ ],
+						"class" : "MASingleOptionDescription",
+						"id" : "bootstrap.1.app.stringWriter"
+					},
+					{
+						"id" : "bootstrap.1.app.stringWriter.reference",
+						"properties" : { },
+						"conditions" : [ ],
+						"accessor" : {
+							"uuid" : {
+								"type" : "nil"
+							},
+							"class" : "MANullAccessor"
+						},
+						"class" : "MAClassDescription"
+					},
+					{
+						"id" : "bootstrap.1.app.type",
+						"properties" : {
+							"readOnly" : {
+								"value" : true,
+								"type" : "boolean"
+							},
+							"label" : {
+								"value" : "Kind",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "0",
+								"type" : "integer"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "type:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "type"
+						},
+						"class" : "MAStringDescription"
+					},
+					{
+						"id" : "bootstrap.1.app.undefined",
+						"properties" : {
+							"label" : {
+								"value" : "Undefined String",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "140",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : "",
+								"type" : "string"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "undefined:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "undefined"
+						},
+						"class" : "MAStringDescription"
+					},
+					{
+						"reference" : "bootstrap.1.app.undefinedValue.reference",
+						"properties" : {
+							"priority" : {
+								"value" : "150",
+								"type" : "integer"
+							},
+							"default" : {
+								"type" : "nil"
+							}
+						},
+						"classes" : [ ],
+						"accessor" : {
+							"writeSelector" : "undefinedValue:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "undefinedValue"
+						},
+						"conditions" : [ ],
+						"class" : "MAToOneRelationDescription",
+						"id" : "bootstrap.1.app.undefinedValue"
+					},
+					{
+						"id" : "bootstrap.1.app.undefinedValue.reference",
+						"properties" : { },
+						"conditions" : [ ],
+						"accessor" : {
+							"uuid" : {
+								"type" : "nil"
+							},
+							"class" : "MANullAccessor"
+						},
+						"class" : "MAStringDescription"
+					},
+					{
+						"reference" : "bootstrap.1.app.validator.reference",
+						"labels" : [ ],
+						"properties" : {
+							"label" : {
+								"value" : "Validator",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "250",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : "MAValidatorVisitor",
+								"type" : "class"
+							}
+						},
+						"accessor" : {
+							"writeSelector" : "validator:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "validator"
+						},
+						"options" : [
+							{
+								"value" : "MAValidatorVisitor",
+								"type" : "class"
+							}
+						],
+						"conditions" : [ ],
+						"class" : "MASingleOptionDescription",
+						"id" : "bootstrap.1.app.validator"
+					},
+					{
+						"id" : "bootstrap.1.app.validator.reference",
+						"properties" : { },
+						"conditions" : [ ],
+						"accessor" : {
+							"uuid" : {
+								"type" : "nil"
+							},
+							"class" : "MANullAccessor"
+						},
+						"class" : "MAClassDescription"
+					},
+					{
+						"id" : "bootstrap.1.app.visible",
+						"properties" : {
+							"label" : {
+								"value" : "Visible",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "210",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : true,
+								"type" : "boolean"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "visible:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "visible"
+						},
+						"class" : "MABooleanDescription"
+					}
+				],
+				"format" : "magritte.graph/4",
+				"objects" : [ ],
+				"root" : "bootstrap.1.app"
+			},
+			"reads" : [
+				{
+					"field" : "bootstrap.1.app.type",
+					"value" : {
+						"value" : "Container",
+						"type" : "string"
+					}
+				},
+				{
+					"field" : "bootstrap.1.app.label",
+					"value" : {
+						"value" : "App",
+						"type" : "string"
+					}
+				},
+				{
+					"field" : "bootstrap.1.app.comment",
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				{
+					"field" : "bootstrap.1.app.group",
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				{
+					"field" : "bootstrap.1.app.priority",
+					"value" : {
+						"value" : "0",
+						"type" : "integer"
+					}
+				},
+				{
+					"field" : "bootstrap.1.app.readOnly",
+					"value" : {
+						"value" : false,
+						"type" : "boolean"
+					}
+				},
+				{
+					"field" : "bootstrap.1.app.required",
+					"value" : {
+						"value" : false,
+						"type" : "boolean"
+					}
+				},
+				{
+					"field" : "bootstrap.1.app.visible",
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				{
+					"field" : "bootstrap.1.app.undefined",
+					"value" : {
+						"value" : "",
+						"type" : "string"
+					}
+				},
+				{
+					"field" : "bootstrap.1.app.undefinedValue",
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				{
+					"field" : "bootstrap.1.app.name",
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				{
+					"field" : "bootstrap.1.app.children",
+					"value" : {
+						"value" : [
+							{
+								"value" : "score",
+								"type" : "reference"
+							},
+							{
+								"value" : "link",
+								"type" : "reference"
+							}
+						],
+						"type" : "ordered"
+					}
+				},
+				{
+					"field" : "bootstrap.1.app.accessor",
+					"value" : {
+						"value" : "app.accessor",
+						"type" : "reference"
+					}
+				},
+				{
+					"field" : "bootstrap.1.app.stringReader",
+					"value" : {
+						"value" : "MAStringReader",
+						"type" : "class"
+					}
+				},
+				{
+					"field" : "bootstrap.1.app.stringWriter",
+					"value" : {
+						"value" : "MAStringWriter",
+						"type" : "class"
+					}
+				},
+				{
+					"field" : "bootstrap.1.app.validator",
+					"value" : {
+						"value" : "MAValidatorVisitor",
+						"type" : "class"
+					}
+				}
+			],
+			"validation" : [ ]
+		},
+		{
+			"class" : "MANumberDescription",
+			"graph" : {
+				"descriptions" : [
+					{
+						"id" : "bootstrap.2.score",
+						"properties" : {
+							"label" : {
+								"value" : "MANumberDescription",
+								"type" : "string"
+							}
+						},
+						"conditions" : [ ],
+						"children" : [
+							"bootstrap.2.score.type",
+							"bootstrap.2.score.label",
+							"bootstrap.2.score.comment",
+							"bootstrap.2.score.group",
+							"bootstrap.2.score.priority",
+							"bootstrap.2.score.readOnly",
+							"bootstrap.2.score.required",
+							"bootstrap.2.score.visible",
+							"bootstrap.2.score.undefined",
+							"bootstrap.2.score.undefinedValue",
+							"bootstrap.2.score.default",
+							"bootstrap.2.score.min",
+							"bootstrap.2.score.max",
+							"bootstrap.2.score.name",
+							"bootstrap.2.score.accessor",
+							"bootstrap.2.score.stringReader",
+							"bootstrap.2.score.stringWriter",
+							"bootstrap.2.score.validator"
+						],
+						"class" : "MAContainer"
+					},
+					{
+						"reference" : "bootstrap.2.score.accessor.reference",
+						"properties" : {
+							"priority" : {
+								"value" : "10",
+								"type" : "integer"
+							}
+						},
+						"classes" : [
+							"MADelegatorAccessor",
+							"MADictionaryAccessor",
+							"MAIdentityAccessor",
+							"MANullAccessor",
+							"MASelectorAccessor",
+							"MAVariableAccessor",
+							"MAChainAccessor",
+							"MAPropertyAccessor"
+						],
+						"accessor" : {
+							"writeSelector" : "accessor:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "accessor"
+						},
+						"conditions" : [ ],
+						"class" : "MAToOneRelationDescription",
+						"id" : "bootstrap.2.score.accessor"
+					},
+					{
+						"id" : "bootstrap.2.score.accessor.reference",
+						"properties" : { },
+						"conditions" : [ ],
+						"accessor" : {
+							"uuid" : {
+								"type" : "nil"
+							},
+							"class" : "MANullAccessor"
+						},
+						"class" : "MAStringDescription"
+					},
+					{
+						"id" : "bootstrap.2.score.comment",
+						"properties" : {
+							"label" : {
+								"value" : "Comment",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "110",
+								"type" : "integer"
+							},
+							"default" : {
+								"type" : "nil"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "comment:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "comment"
+						},
+						"class" : "MAMemoDescription"
+					},
+					{
+						"id" : "bootstrap.2.score.default",
+						"properties" : {
+							"label" : {
+								"value" : "Default",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "130",
+								"type" : "integer"
+							},
+							"default" : {
+								"type" : "nil"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "default:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "default"
+						},
+						"class" : "MANumberDescription"
+					},
+					{
+						"id" : "bootstrap.2.score.group",
+						"properties" : {
+							"label" : {
+								"value" : "Group",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "105",
+								"type" : "integer"
+							},
+							"default" : {
+								"type" : "nil"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "group:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "group"
+						},
+						"class" : "MAStringDescription"
+					},
+					{
+						"id" : "bootstrap.2.score.label",
+						"properties" : {
+							"label" : {
+								"value" : "Label",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "100",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : "score",
+								"type" : "string"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "label:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "label"
+						},
+						"class" : "MAStringDescription"
+					},
+					{
+						"id" : "bootstrap.2.score.max",
+						"properties" : {
+							"label" : {
+								"value" : "Maximum",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "410",
+								"type" : "integer"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "max:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "max"
+						},
+						"class" : "MANumberDescription"
+					},
+					{
+						"id" : "bootstrap.2.score.min",
+						"properties" : {
+							"label" : {
+								"value" : "Min",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "400",
+								"type" : "integer"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "min:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "min"
+						},
+						"class" : "MANumberDescription"
+					},
+					{
+						"id" : "bootstrap.2.score.name",
+						"properties" : {
+							"priority" : {
+								"value" : "1",
+								"type" : "integer"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "name:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "name"
+						},
+						"class" : "MASymbolDescription"
+					},
+					{
+						"id" : "bootstrap.2.score.priority",
+						"properties" : {
+							"required" : {
+								"value" : true,
+								"type" : "boolean"
+							},
+							"label" : {
+								"value" : "Priority",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "130",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : "0",
+								"type" : "integer"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "priority:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "priority"
+						},
+						"class" : "MANumberDescription"
+					},
+					{
+						"id" : "bootstrap.2.score.readOnly",
+						"properties" : {
+							"label" : {
+								"value" : "Read-only",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "200",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : false,
+								"type" : "boolean"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "readOnly:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "readOnly"
+						},
+						"class" : "MABooleanDescription"
+					},
+					{
+						"id" : "bootstrap.2.score.required",
+						"properties" : {
+							"label" : {
+								"value" : "Required",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "220",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : false,
+								"type" : "boolean"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "required:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "required"
+						},
+						"class" : "MABooleanDescription"
+					},
+					{
+						"reference" : "bootstrap.2.score.stringReader.reference",
+						"labels" : [ ],
+						"properties" : {
+							"label" : {
+								"value" : "String Reader",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "300",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : "MAStringReader",
+								"type" : "class"
+							}
+						},
+						"accessor" : {
+							"writeSelector" : "stringReader:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "stringReader"
+						},
+						"options" : [
+							{
+								"value" : "MAStringReader",
+								"type" : "class"
+							}
+						],
+						"conditions" : [ ],
+						"class" : "MASingleOptionDescription",
+						"id" : "bootstrap.2.score.stringReader"
+					},
+					{
+						"id" : "bootstrap.2.score.stringReader.reference",
+						"properties" : { },
+						"conditions" : [ ],
+						"accessor" : {
+							"uuid" : {
+								"type" : "nil"
+							},
+							"class" : "MANullAccessor"
+						},
+						"class" : "MAClassDescription"
+					},
+					{
+						"reference" : "bootstrap.2.score.stringWriter.reference",
+						"labels" : [ ],
+						"properties" : {
+							"label" : {
+								"value" : "String Writer",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "310",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : "MAStringWriter",
+								"type" : "class"
+							}
+						},
+						"accessor" : {
+							"writeSelector" : "stringWriter:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "stringWriter"
+						},
+						"options" : [
+							{
+								"value" : "MAStringWriter",
+								"type" : "class"
+							}
+						],
+						"conditions" : [ ],
+						"class" : "MASingleOptionDescription",
+						"id" : "bootstrap.2.score.stringWriter"
+					},
+					{
+						"id" : "bootstrap.2.score.stringWriter.reference",
+						"properties" : { },
+						"conditions" : [ ],
+						"accessor" : {
+							"uuid" : {
+								"type" : "nil"
+							},
+							"class" : "MANullAccessor"
+						},
+						"class" : "MAClassDescription"
+					},
+					{
+						"id" : "bootstrap.2.score.type",
+						"properties" : {
+							"readOnly" : {
+								"value" : true,
+								"type" : "boolean"
+							},
+							"label" : {
+								"value" : "Kind",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "0",
+								"type" : "integer"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "type:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "type"
+						},
+						"class" : "MAStringDescription"
+					},
+					{
+						"id" : "bootstrap.2.score.undefined",
+						"properties" : {
+							"label" : {
+								"value" : "Undefined String",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "140",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : "",
+								"type" : "string"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "undefined:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "undefined"
+						},
+						"class" : "MAStringDescription"
+					},
+					{
+						"reference" : "bootstrap.2.score.undefinedValue.reference",
+						"properties" : {
+							"priority" : {
+								"value" : "150",
+								"type" : "integer"
+							},
+							"default" : {
+								"type" : "nil"
+							}
+						},
+						"classes" : [ ],
+						"accessor" : {
+							"writeSelector" : "undefinedValue:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "undefinedValue"
+						},
+						"conditions" : [ ],
+						"class" : "MAToOneRelationDescription",
+						"id" : "bootstrap.2.score.undefinedValue"
+					},
+					{
+						"id" : "bootstrap.2.score.undefinedValue.reference",
+						"properties" : { },
+						"conditions" : [ ],
+						"accessor" : {
+							"uuid" : {
+								"type" : "nil"
+							},
+							"class" : "MANullAccessor"
+						},
+						"class" : "MAStringDescription"
+					},
+					{
+						"reference" : "bootstrap.2.score.validator.reference",
+						"labels" : [ ],
+						"properties" : {
+							"label" : {
+								"value" : "Validator",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "250",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : "MAValidatorVisitor",
+								"type" : "class"
+							}
+						},
+						"accessor" : {
+							"writeSelector" : "validator:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "validator"
+						},
+						"options" : [
+							{
+								"value" : "MAValidatorVisitor",
+								"type" : "class"
+							}
+						],
+						"conditions" : [ ],
+						"class" : "MASingleOptionDescription",
+						"id" : "bootstrap.2.score.validator"
+					},
+					{
+						"id" : "bootstrap.2.score.validator.reference",
+						"properties" : { },
+						"conditions" : [ ],
+						"accessor" : {
+							"uuid" : {
+								"type" : "nil"
+							},
+							"class" : "MANullAccessor"
+						},
+						"class" : "MAClassDescription"
+					},
+					{
+						"id" : "bootstrap.2.score.visible",
+						"properties" : {
+							"label" : {
+								"value" : "Visible",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "210",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : true,
+								"type" : "boolean"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "visible:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "visible"
+						},
+						"class" : "MABooleanDescription"
+					}
+				],
+				"format" : "magritte.graph/4",
+				"objects" : [ ],
+				"root" : "bootstrap.2.score"
+			},
+			"reads" : [
+				{
+					"field" : "bootstrap.2.score.type",
+					"value" : {
+						"value" : "Number",
+						"type" : "string"
+					}
+				},
+				{
+					"field" : "bootstrap.2.score.label",
+					"value" : {
+						"value" : "score",
+						"type" : "string"
+					}
+				},
+				{
+					"field" : "bootstrap.2.score.comment",
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				{
+					"field" : "bootstrap.2.score.group",
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				{
+					"field" : "bootstrap.2.score.priority",
+					"value" : {
+						"value" : "0",
+						"type" : "integer"
+					}
+				},
+				{
+					"field" : "bootstrap.2.score.readOnly",
+					"value" : {
+						"value" : false,
+						"type" : "boolean"
+					}
+				},
+				{
+					"field" : "bootstrap.2.score.required",
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				{
+					"field" : "bootstrap.2.score.visible",
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				{
+					"field" : "bootstrap.2.score.undefined",
+					"value" : {
+						"value" : "",
+						"type" : "string"
+					}
+				},
+				{
+					"field" : "bootstrap.2.score.undefinedValue",
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				{
+					"field" : "bootstrap.2.score.default",
+					"value" : {
+						"value" : "2",
+						"type" : "integer"
+					}
+				},
+				{
+					"field" : "bootstrap.2.score.min",
+					"value" : {
+						"value" : "0",
+						"type" : "integer"
+					}
+				},
+				{
+					"field" : "bootstrap.2.score.max",
+					"value" : {
+						"value" : "10",
+						"type" : "integer"
+					}
+				},
+				{
+					"field" : "bootstrap.2.score.name",
+					"value" : {
+						"value" : "score",
+						"type" : "symbol"
+					}
+				},
+				{
+					"field" : "bootstrap.2.score.accessor",
+					"value" : {
+						"value" : "score.accessor",
+						"type" : "reference"
+					}
+				},
+				{
+					"field" : "bootstrap.2.score.stringReader",
+					"value" : {
+						"value" : "MAStringReader",
+						"type" : "class"
+					}
+				},
+				{
+					"field" : "bootstrap.2.score.stringWriter",
+					"value" : {
+						"value" : "MAStringWriter",
+						"type" : "class"
+					}
+				},
+				{
+					"field" : "bootstrap.2.score.validator",
+					"value" : {
+						"value" : "MAValidatorVisitor",
+						"type" : "class"
+					}
+				}
+			],
+			"validation" : [ ]
+		},
+		{
+			"class" : "MAToOneRelationDescription",
+			"graph" : {
+				"descriptions" : [
+					{
+						"id" : "bootstrap.3.link",
+						"properties" : {
+							"label" : {
+								"value" : "MAToOneRelationDescription",
+								"type" : "string"
+							}
+						},
+						"conditions" : [ ],
+						"children" : [
+							"bootstrap.3.link.type",
+							"bootstrap.3.link.label",
+							"bootstrap.3.link.comment",
+							"bootstrap.3.link.group",
+							"bootstrap.3.link.priority",
+							"bootstrap.3.link.readOnly",
+							"bootstrap.3.link.required",
+							"bootstrap.3.link.visible",
+							"bootstrap.3.link.undefined",
+							"bootstrap.3.link.undefinedValue",
+							"bootstrap.3.link.default",
+							"bootstrap.3.link.name",
+							"bootstrap.3.link.reference",
+							"bootstrap.3.link.accessor",
+							"bootstrap.3.link.stringReader",
+							"bootstrap.3.link.stringWriter",
+							"bootstrap.3.link.validator",
+							"bootstrap.3.link.classes"
+						],
+						"class" : "MAContainer"
+					},
+					{
+						"reference" : "bootstrap.3.link.accessor.reference",
+						"properties" : {
+							"priority" : {
+								"value" : "10",
+								"type" : "integer"
+							}
+						},
+						"classes" : [
+							"MADelegatorAccessor",
+							"MADictionaryAccessor",
+							"MAIdentityAccessor",
+							"MANullAccessor",
+							"MASelectorAccessor",
+							"MAVariableAccessor",
+							"MAChainAccessor",
+							"MAPropertyAccessor"
+						],
+						"accessor" : {
+							"writeSelector" : "accessor:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "accessor"
+						},
+						"conditions" : [ ],
+						"class" : "MAToOneRelationDescription",
+						"id" : "bootstrap.3.link.accessor"
+					},
+					{
+						"id" : "bootstrap.3.link.accessor.reference",
+						"properties" : { },
+						"conditions" : [ ],
+						"accessor" : {
+							"uuid" : {
+								"type" : "nil"
+							},
+							"class" : "MANullAccessor"
+						},
+						"class" : "MAStringDescription"
+					},
+					{
+						"reference" : "bootstrap.3.link.classes.reference",
+						"labels" : [ ],
+						"properties" : {
+							"label" : {
+								"value" : "Classes",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "400",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : [ ],
+								"type" : "set"
+							}
+						},
+						"accessor" : {
+							"writeSelector" : "classes:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "classes"
+						},
+						"options" : [
+							{
+								"value" : "Array",
+								"type" : "class"
+							},
+							{
+								"value" : "Bag",
+								"type" : "class"
+							},
+							{
+								"value" : "Behavior",
+								"type" : "class"
+							},
+							{
+								"value" : "Boolean",
+								"type" : "class"
+							},
+							{
+								"value" : "Character",
+								"type" : "class"
+							},
+							{
+								"value" : "Class",
+								"type" : "class"
+							},
+							{
+								"value" : "ClassDescription",
+								"type" : "class"
+							},
+							{
+								"value" : "Collection",
+								"type" : "class"
+							},
+							{
+								"value" : "Float",
+								"type" : "class"
+							},
+							{
+								"value" : "Integer",
+								"type" : "class"
+							},
+							{
+								"value" : "MAAccessor",
+								"type" : "class"
+							},
+							{
+								"value" : "MAAdaptiveModel",
+								"type" : "class"
+							},
+							{
+								"value" : "MABasicObject",
+								"type" : "class"
+							},
+							{
+								"value" : "MABooleanDescription",
+								"type" : "class"
+							},
+							{
+								"value" : "MACachedMemento",
+								"type" : "class"
+							},
+							{
+								"value" : "MAChainAccessor",
+								"type" : "class"
+							},
+							{
+								"value" : "MACheckedMemento",
+								"type" : "class"
+							},
+							{
+								"value" : "MAClassDescription",
+								"type" : "class"
+							},
+							{
+								"value" : "MACondition",
+								"type" : "class"
+							},
+							{
+								"value" : "MAConjunctiveCondition",
+								"type" : "class"
+							},
+							{
+								"value" : "MAContainer",
+								"type" : "class"
+							},
+							{
+								"value" : "MADelegatorAccessor",
+								"type" : "class"
+							},
+							{
+								"value" : "MADescription",
+								"type" : "class"
+							},
+							{
+								"value" : "MADictionaryAccessor",
+								"type" : "class"
+							},
+							{
+								"value" : "MAElementDescription",
+								"type" : "class"
+							},
+							{
+								"value" : "MAIdentityAccessor",
+								"type" : "class"
+							},
+							{
+								"value" : "MAMagnitudeDescription",
+								"type" : "class"
+							},
+							{
+								"value" : "MAMemento",
+								"type" : "class"
+							},
+							{
+								"value" : "MAMemoDescription",
+								"type" : "class"
+							},
+							{
+								"value" : "MAMultipleOptionDescription",
+								"type" : "class"
+							},
+							{
+								"value" : "MANegationCondition",
+								"type" : "class"
+							},
+							{
+								"value" : "MANullAccessor",
+								"type" : "class"
+							},
+							{
+								"value" : "MANumberDescription",
+								"type" : "class"
+							},
+							{
+								"value" : "MAObject",
+								"type" : "class"
+							},
+							{
+								"value" : "MAOptionDescription",
+								"type" : "class"
+							},
+							{
+								"value" : "MAPasswordDescription",
+								"type" : "class"
+							},
+							{
+								"value" : "MAPluggableCondition",
+								"type" : "class"
+							},
+							{
+								"value" : "MAPriorityContainer",
+								"type" : "class"
+							},
+							{
+								"value" : "MAPropertyAccessor",
+								"type" : "class"
+							},
+							{
+								"value" : "MAReader",
+								"type" : "class"
+							},
+							{
+								"value" : "MAReferenceDescription",
+								"type" : "class"
+							},
+							{
+								"value" : "MARelationDescription",
+								"type" : "class"
+							},
+							{
+								"value" : "MASelectorAccessor",
+								"type" : "class"
+							},
+							{
+								"value" : "MASingleOptionDescription",
+								"type" : "class"
+							},
+							{
+								"value" : "MAStraightMemento",
+								"type" : "class"
+							},
+							{
+								"value" : "MAStringDescription",
+								"type" : "class"
+							},
+							{
+								"value" : "MAStringReader",
+								"type" : "class"
+							},
+							{
+								"value" : "MAStringWriter",
+								"type" : "class"
+							},
+							{
+								"value" : "MASymbolDescription",
+								"type" : "class"
+							},
+							{
+								"value" : "MAToManyRelationDescription",
+								"type" : "class"
+							},
+							{
+								"value" : "MAToManyScalarRelationDescription",
+								"type" : "class"
+							},
+							{
+								"value" : "MAToOneRelationDescription",
+								"type" : "class"
+							},
+							{
+								"value" : "MATokenDescription",
+								"type" : "class"
+							},
+							{
+								"value" : "MAValidatorVisitor",
+								"type" : "class"
+							},
+							{
+								"value" : "MAVariableAccessor",
+								"type" : "class"
+							},
+							{
+								"value" : "MAVisitor",
+								"type" : "class"
+							},
+							{
+								"value" : "MAWriter",
+								"type" : "class"
+							},
+							{
+								"value" : "Number",
+								"type" : "class"
+							},
+							{
+								"value" : "Object",
+								"type" : "class"
+							},
+							{
+								"value" : "OrderedCollection",
+								"type" : "class"
+							},
+							{
+								"value" : "SequenceableCollection",
+								"type" : "class"
+							},
+							{
+								"value" : "Set",
+								"type" : "class"
+							},
+							{
+								"value" : "String",
+								"type" : "class"
+							},
+							{
+								"value" : "Symbol",
+								"type" : "class"
+							},
+							{
+								"value" : "UndefinedObject",
+								"type" : "class"
+							}
+						],
+						"conditions" : [ ],
+						"class" : "MAMultipleOptionDescription",
+						"id" : "bootstrap.3.link.classes"
+					},
+					{
+						"id" : "bootstrap.3.link.classes.reference",
+						"properties" : { },
+						"conditions" : [ ],
+						"accessor" : {
+							"uuid" : {
+								"type" : "nil"
+							},
+							"class" : "MANullAccessor"
+						},
+						"class" : "MAClassDescription"
+					},
+					{
+						"id" : "bootstrap.3.link.comment",
+						"properties" : {
+							"label" : {
+								"value" : "Comment",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "110",
+								"type" : "integer"
+							},
+							"default" : {
+								"type" : "nil"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "comment:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "comment"
+						},
+						"class" : "MAMemoDescription"
+					},
+					{
+						"reference" : "bootstrap.3.link.default.reference",
+						"properties" : {
+							"label" : {
+								"value" : "Default",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "130",
+								"type" : "integer"
+							},
+							"default" : {
+								"type" : "nil"
+							}
+						},
+						"classes" : [ ],
+						"accessor" : {
+							"writeSelector" : "default:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "default"
+						},
+						"conditions" : [ ],
+						"class" : "MAToOneRelationDescription",
+						"id" : "bootstrap.3.link.default"
+					},
+					{
+						"id" : "bootstrap.3.link.default.reference",
+						"properties" : { },
+						"conditions" : [ ],
+						"accessor" : {
+							"uuid" : {
+								"type" : "nil"
+							},
+							"class" : "MANullAccessor"
+						},
+						"class" : "MAStringDescription"
+					},
+					{
+						"id" : "bootstrap.3.link.group",
+						"properties" : {
+							"label" : {
+								"value" : "Group",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "105",
+								"type" : "integer"
+							},
+							"default" : {
+								"type" : "nil"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "group:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "group"
+						},
+						"class" : "MAStringDescription"
+					},
+					{
+						"id" : "bootstrap.3.link.label",
+						"properties" : {
+							"label" : {
+								"value" : "Label",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "100",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : "link",
+								"type" : "string"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "label:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "label"
+						},
+						"class" : "MAStringDescription"
+					},
+					{
+						"id" : "bootstrap.3.link.name",
+						"properties" : {
+							"priority" : {
+								"value" : "1",
+								"type" : "integer"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "name:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "name"
+						},
+						"class" : "MASymbolDescription"
+					},
+					{
+						"id" : "bootstrap.3.link.priority",
+						"properties" : {
+							"required" : {
+								"value" : true,
+								"type" : "boolean"
+							},
+							"label" : {
+								"value" : "Priority",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "130",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : "0",
+								"type" : "integer"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "priority:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "priority"
+						},
+						"class" : "MANumberDescription"
+					},
+					{
+						"id" : "bootstrap.3.link.readOnly",
+						"properties" : {
+							"label" : {
+								"value" : "Read-only",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "200",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : false,
+								"type" : "boolean"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "readOnly:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "readOnly"
+						},
+						"class" : "MABooleanDescription"
+					},
+					{
+						"reference" : "bootstrap.3.link.reference.reference",
+						"properties" : {
+							"required" : {
+								"value" : false,
+								"type" : "boolean"
+							},
+							"label" : {
+								"value" : "Description",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "400",
+								"type" : "integer"
+							}
+						},
+						"classes" : [
+							"MAPriorityContainer",
+							"MAContainer"
+						],
+						"accessor" : {
+							"writeSelector" : "reference:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "reference"
+						},
+						"conditions" : [ ],
+						"class" : "MAToOneRelationDescription",
+						"id" : "bootstrap.3.link.reference"
+					},
+					{
+						"id" : "bootstrap.3.link.reference.reference",
+						"properties" : { },
+						"conditions" : [ ],
+						"accessor" : {
+							"uuid" : {
+								"type" : "nil"
+							},
+							"class" : "MANullAccessor"
+						},
+						"class" : "MAStringDescription"
+					},
+					{
+						"id" : "bootstrap.3.link.required",
+						"properties" : {
+							"label" : {
+								"value" : "Required",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "220",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : false,
+								"type" : "boolean"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "required:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "required"
+						},
+						"class" : "MABooleanDescription"
+					},
+					{
+						"reference" : "bootstrap.3.link.stringReader.reference",
+						"labels" : [ ],
+						"properties" : {
+							"label" : {
+								"value" : "String Reader",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "300",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : "MAStringReader",
+								"type" : "class"
+							}
+						},
+						"accessor" : {
+							"writeSelector" : "stringReader:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "stringReader"
+						},
+						"options" : [
+							{
+								"value" : "MAStringReader",
+								"type" : "class"
+							}
+						],
+						"conditions" : [ ],
+						"class" : "MASingleOptionDescription",
+						"id" : "bootstrap.3.link.stringReader"
+					},
+					{
+						"id" : "bootstrap.3.link.stringReader.reference",
+						"properties" : { },
+						"conditions" : [ ],
+						"accessor" : {
+							"uuid" : {
+								"type" : "nil"
+							},
+							"class" : "MANullAccessor"
+						},
+						"class" : "MAClassDescription"
+					},
+					{
+						"reference" : "bootstrap.3.link.stringWriter.reference",
+						"labels" : [ ],
+						"properties" : {
+							"label" : {
+								"value" : "String Writer",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "310",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : "MAStringWriter",
+								"type" : "class"
+							}
+						},
+						"accessor" : {
+							"writeSelector" : "stringWriter:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "stringWriter"
+						},
+						"options" : [
+							{
+								"value" : "MAStringWriter",
+								"type" : "class"
+							}
+						],
+						"conditions" : [ ],
+						"class" : "MASingleOptionDescription",
+						"id" : "bootstrap.3.link.stringWriter"
+					},
+					{
+						"id" : "bootstrap.3.link.stringWriter.reference",
+						"properties" : { },
+						"conditions" : [ ],
+						"accessor" : {
+							"uuid" : {
+								"type" : "nil"
+							},
+							"class" : "MANullAccessor"
+						},
+						"class" : "MAClassDescription"
+					},
+					{
+						"id" : "bootstrap.3.link.type",
+						"properties" : {
+							"readOnly" : {
+								"value" : true,
+								"type" : "boolean"
+							},
+							"label" : {
+								"value" : "Kind",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "0",
+								"type" : "integer"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "type:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "type"
+						},
+						"class" : "MAStringDescription"
+					},
+					{
+						"id" : "bootstrap.3.link.undefined",
+						"properties" : {
+							"label" : {
+								"value" : "Undefined String",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "140",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : "",
+								"type" : "string"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "undefined:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "undefined"
+						},
+						"class" : "MAStringDescription"
+					},
+					{
+						"reference" : "bootstrap.3.link.undefinedValue.reference",
+						"properties" : {
+							"priority" : {
+								"value" : "150",
+								"type" : "integer"
+							},
+							"default" : {
+								"type" : "nil"
+							}
+						},
+						"classes" : [ ],
+						"accessor" : {
+							"writeSelector" : "undefinedValue:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "undefinedValue"
+						},
+						"conditions" : [ ],
+						"class" : "MAToOneRelationDescription",
+						"id" : "bootstrap.3.link.undefinedValue"
+					},
+					{
+						"id" : "bootstrap.3.link.undefinedValue.reference",
+						"properties" : { },
+						"conditions" : [ ],
+						"accessor" : {
+							"uuid" : {
+								"type" : "nil"
+							},
+							"class" : "MANullAccessor"
+						},
+						"class" : "MAStringDescription"
+					},
+					{
+						"reference" : "bootstrap.3.link.validator.reference",
+						"labels" : [ ],
+						"properties" : {
+							"label" : {
+								"value" : "Validator",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "250",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : "MAValidatorVisitor",
+								"type" : "class"
+							}
+						},
+						"accessor" : {
+							"writeSelector" : "validator:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "validator"
+						},
+						"options" : [
+							{
+								"value" : "MAValidatorVisitor",
+								"type" : "class"
+							}
+						],
+						"conditions" : [ ],
+						"class" : "MASingleOptionDescription",
+						"id" : "bootstrap.3.link.validator"
+					},
+					{
+						"id" : "bootstrap.3.link.validator.reference",
+						"properties" : { },
+						"conditions" : [ ],
+						"accessor" : {
+							"uuid" : {
+								"type" : "nil"
+							},
+							"class" : "MANullAccessor"
+						},
+						"class" : "MAClassDescription"
+					},
+					{
+						"id" : "bootstrap.3.link.visible",
+						"properties" : {
+							"label" : {
+								"value" : "Visible",
+								"type" : "string"
+							},
+							"priority" : {
+								"value" : "210",
+								"type" : "integer"
+							},
+							"default" : {
+								"value" : true,
+								"type" : "boolean"
+							}
+						},
+						"conditions" : [ ],
+						"accessor" : {
+							"writeSelector" : "visible:",
+							"class" : "MASelectorAccessor",
+							"readSelector" : "visible"
+						},
+						"class" : "MABooleanDescription"
+					}
+				],
+				"format" : "magritte.graph/4",
+				"objects" : [ ],
+				"root" : "bootstrap.3.link"
+			},
+			"reads" : [
+				{
+					"field" : "bootstrap.3.link.type",
+					"value" : {
+						"value" : "1:1 Relation",
+						"type" : "string"
+					}
+				},
+				{
+					"field" : "bootstrap.3.link.label",
+					"value" : {
+						"value" : "link",
+						"type" : "string"
+					}
+				},
+				{
+					"field" : "bootstrap.3.link.comment",
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				{
+					"field" : "bootstrap.3.link.group",
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				{
+					"field" : "bootstrap.3.link.priority",
+					"value" : {
+						"value" : "0",
+						"type" : "integer"
+					}
+				},
+				{
+					"field" : "bootstrap.3.link.readOnly",
+					"value" : {
+						"value" : false,
+						"type" : "boolean"
+					}
+				},
+				{
+					"field" : "bootstrap.3.link.required",
+					"value" : {
+						"value" : false,
+						"type" : "boolean"
+					}
+				},
+				{
+					"field" : "bootstrap.3.link.visible",
+					"value" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				{
+					"field" : "bootstrap.3.link.undefined",
+					"value" : {
+						"value" : "",
+						"type" : "string"
+					}
+				},
+				{
+					"field" : "bootstrap.3.link.undefinedValue",
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				{
+					"field" : "bootstrap.3.link.default",
+					"value" : {
+						"type" : "nil"
+					}
+				},
+				{
+					"field" : "bootstrap.3.link.name",
+					"value" : {
+						"value" : "link",
+						"type" : "symbol"
+					}
+				},
+				{
+					"field" : "bootstrap.3.link.reference",
+					"value" : {
+						"value" : "app",
+						"type" : "reference"
+					}
+				},
+				{
+					"field" : "bootstrap.3.link.accessor",
+					"value" : {
+						"value" : "link.accessor",
+						"type" : "reference"
+					}
+				},
+				{
+					"field" : "bootstrap.3.link.stringReader",
+					"value" : {
+						"value" : "MAStringReader",
+						"type" : "class"
+					}
+				},
+				{
+					"field" : "bootstrap.3.link.stringWriter",
+					"value" : {
+						"value" : "MAStringWriter",
+						"type" : "class"
+					}
+				},
+				{
+					"field" : "bootstrap.3.link.validator",
+					"value" : {
+						"value" : "MAValidatorVisitor",
+						"type" : "class"
+					}
+				},
+				{
+					"field" : "bootstrap.3.link.classes",
+					"value" : {
+						"value" : [
+							{
+								"value" : "MAMemento",
+								"type" : "class"
+							}
+						],
+						"type" : "set"
+					}
+				}
+			],
+			"validation" : [ ]
+		}
+	],
+	"classValues" : [
+		{
+			"value" : "MAMemento",
+			"type" : "class"
+		},
+		{
+			"value" : "MAStraightMemento",
+			"type" : "class"
+		},
+		{
+			"value" : "MACachedMemento",
+			"type" : "class"
+		},
+		{
+			"value" : "MACheckedMemento",
+			"type" : "class"
+		}
+	],
+	"policy" : "Finite supported annotation, class-list, interpreter, as-is label and SortedCollection snapshot projections. Memento self-description is the supplied model description by identity; caches are local, not invented annotation fields.",
+	"bootstrap" : {
+		"descriptions" : [
+			{
+				"id" : "bootstrap.1.app",
+				"properties" : {
+					"label" : {
+						"value" : "MAContainer",
+						"type" : "string"
+					}
+				},
+				"conditions" : [ ],
+				"children" : [
+					"bootstrap.1.app.type",
+					"bootstrap.1.app.label",
+					"bootstrap.1.app.comment",
+					"bootstrap.1.app.group",
+					"bootstrap.1.app.priority",
+					"bootstrap.1.app.readOnly",
+					"bootstrap.1.app.required",
+					"bootstrap.1.app.visible",
+					"bootstrap.1.app.undefined",
+					"bootstrap.1.app.undefinedValue",
+					"bootstrap.1.app.name",
+					"bootstrap.1.app.children",
+					"bootstrap.1.app.accessor",
+					"bootstrap.1.app.stringReader",
+					"bootstrap.1.app.stringWriter",
+					"bootstrap.1.app.validator"
+				],
+				"class" : "MAContainer"
+			},
+			{
+				"reference" : "bootstrap.1.app.accessor.reference",
+				"properties" : {
+					"priority" : {
+						"value" : "10",
+						"type" : "integer"
+					}
+				},
+				"classes" : [
+					"MADelegatorAccessor",
+					"MADictionaryAccessor",
+					"MAIdentityAccessor",
+					"MANullAccessor",
+					"MASelectorAccessor",
+					"MAVariableAccessor",
+					"MAChainAccessor",
+					"MAPropertyAccessor"
+				],
+				"accessor" : {
+					"writeSelector" : "accessor:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "accessor"
+				},
+				"conditions" : [ ],
+				"class" : "MAToOneRelationDescription",
+				"id" : "bootstrap.1.app.accessor"
+			},
+			{
+				"id" : "bootstrap.1.app.accessor.reference",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"uuid" : {
+						"type" : "nil"
+					},
+					"class" : "MANullAccessor"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"reference" : "bootstrap.1.app.children.reference",
+				"properties" : {
+					"ordered" : {
+						"value" : true,
+						"type" : "boolean"
+					},
+					"label" : {
+						"value" : "Elements",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "400",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : [ ],
+						"type" : "ordered"
+					}
+				},
+				"classes" : [
+					"MABooleanDescription",
+					"MAClassDescription",
+					"MAStringDescription",
+					"MANumberDescription",
+					"MATokenDescription",
+					"MAMemoDescription",
+					"MAPasswordDescription",
+					"MASymbolDescription",
+					"MAMultipleOptionDescription",
+					"MASingleOptionDescription",
+					"MAToManyRelationDescription",
+					"MAToOneRelationDescription",
+					"MAToManyScalarRelationDescription"
+				],
+				"accessor" : {
+					"writeSelector" : "setChildren:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "children"
+				},
+				"conditions" : [ ],
+				"class" : "MAToManyRelationDescription",
+				"id" : "bootstrap.1.app.children"
+			},
+			{
+				"id" : "bootstrap.1.app.children.reference",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"uuid" : {
+						"type" : "nil"
+					},
+					"class" : "MANullAccessor"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "bootstrap.1.app.comment",
+				"properties" : {
+					"label" : {
+						"value" : "Comment",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "110",
+						"type" : "integer"
+					},
+					"default" : {
+						"type" : "nil"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "comment:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "comment"
+				},
+				"class" : "MAMemoDescription"
+			},
+			{
+				"id" : "bootstrap.1.app.group",
+				"properties" : {
+					"label" : {
+						"value" : "Group",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "105",
+						"type" : "integer"
+					},
+					"default" : {
+						"type" : "nil"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "group:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "group"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "bootstrap.1.app.label",
+				"properties" : {
+					"label" : {
+						"value" : "Label",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "100",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : "",
+						"type" : "string"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "label:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "label"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "bootstrap.1.app.name",
+				"properties" : {
+					"priority" : {
+						"value" : "1",
+						"type" : "integer"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "name:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "name"
+				},
+				"class" : "MASymbolDescription"
+			},
+			{
+				"id" : "bootstrap.1.app.priority",
+				"properties" : {
+					"required" : {
+						"value" : true,
+						"type" : "boolean"
+					},
+					"label" : {
+						"value" : "Priority",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "130",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : "0",
+						"type" : "integer"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "priority:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "priority"
+				},
+				"class" : "MANumberDescription"
+			},
+			{
+				"id" : "bootstrap.1.app.readOnly",
+				"properties" : {
+					"label" : {
+						"value" : "Read-only",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "200",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : false,
+						"type" : "boolean"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "readOnly:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "readOnly"
+				},
+				"class" : "MABooleanDescription"
+			},
+			{
+				"id" : "bootstrap.1.app.required",
+				"properties" : {
+					"label" : {
+						"value" : "Required",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "220",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : false,
+						"type" : "boolean"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "required:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "required"
+				},
+				"class" : "MABooleanDescription"
+			},
+			{
+				"reference" : "bootstrap.1.app.stringReader.reference",
+				"labels" : [ ],
+				"properties" : {
+					"label" : {
+						"value" : "String Reader",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "300",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : "MAStringReader",
+						"type" : "class"
+					}
+				},
+				"accessor" : {
+					"writeSelector" : "stringReader:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "stringReader"
+				},
+				"options" : [
+					{
+						"value" : "MAStringReader",
+						"type" : "class"
+					}
+				],
+				"conditions" : [ ],
+				"class" : "MASingleOptionDescription",
+				"id" : "bootstrap.1.app.stringReader"
+			},
+			{
+				"id" : "bootstrap.1.app.stringReader.reference",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"uuid" : {
+						"type" : "nil"
+					},
+					"class" : "MANullAccessor"
+				},
+				"class" : "MAClassDescription"
+			},
+			{
+				"reference" : "bootstrap.1.app.stringWriter.reference",
+				"labels" : [ ],
+				"properties" : {
+					"label" : {
+						"value" : "String Writer",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "310",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : "MAStringWriter",
+						"type" : "class"
+					}
+				},
+				"accessor" : {
+					"writeSelector" : "stringWriter:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "stringWriter"
+				},
+				"options" : [
+					{
+						"value" : "MAStringWriter",
+						"type" : "class"
+					}
+				],
+				"conditions" : [ ],
+				"class" : "MASingleOptionDescription",
+				"id" : "bootstrap.1.app.stringWriter"
+			},
+			{
+				"id" : "bootstrap.1.app.stringWriter.reference",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"uuid" : {
+						"type" : "nil"
+					},
+					"class" : "MANullAccessor"
+				},
+				"class" : "MAClassDescription"
+			},
+			{
+				"id" : "bootstrap.1.app.type",
+				"properties" : {
+					"readOnly" : {
+						"value" : true,
+						"type" : "boolean"
+					},
+					"label" : {
+						"value" : "Kind",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "0",
+						"type" : "integer"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "type:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "type"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "bootstrap.1.app.undefined",
+				"properties" : {
+					"label" : {
+						"value" : "Undefined String",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "140",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : "",
+						"type" : "string"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "undefined:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "undefined"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"reference" : "bootstrap.1.app.undefinedValue.reference",
+				"properties" : {
+					"priority" : {
+						"value" : "150",
+						"type" : "integer"
+					},
+					"default" : {
+						"type" : "nil"
+					}
+				},
+				"classes" : [ ],
+				"accessor" : {
+					"writeSelector" : "undefinedValue:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "undefinedValue"
+				},
+				"conditions" : [ ],
+				"class" : "MAToOneRelationDescription",
+				"id" : "bootstrap.1.app.undefinedValue"
+			},
+			{
+				"id" : "bootstrap.1.app.undefinedValue.reference",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"uuid" : {
+						"type" : "nil"
+					},
+					"class" : "MANullAccessor"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"reference" : "bootstrap.1.app.validator.reference",
+				"labels" : [ ],
+				"properties" : {
+					"label" : {
+						"value" : "Validator",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "250",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : "MAValidatorVisitor",
+						"type" : "class"
+					}
+				},
+				"accessor" : {
+					"writeSelector" : "validator:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "validator"
+				},
+				"options" : [
+					{
+						"value" : "MAValidatorVisitor",
+						"type" : "class"
+					}
+				],
+				"conditions" : [ ],
+				"class" : "MASingleOptionDescription",
+				"id" : "bootstrap.1.app.validator"
+			},
+			{
+				"id" : "bootstrap.1.app.validator.reference",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"uuid" : {
+						"type" : "nil"
+					},
+					"class" : "MANullAccessor"
+				},
+				"class" : "MAClassDescription"
+			},
+			{
+				"id" : "bootstrap.1.app.visible",
+				"properties" : {
+					"label" : {
+						"value" : "Visible",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "210",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "visible:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "visible"
+				},
+				"class" : "MABooleanDescription"
+			},
+			{
+				"id" : "bootstrap.2.score",
+				"properties" : {
+					"label" : {
+						"value" : "MANumberDescription",
+						"type" : "string"
+					}
+				},
+				"conditions" : [ ],
+				"children" : [
+					"bootstrap.2.score.type",
+					"bootstrap.2.score.label",
+					"bootstrap.2.score.comment",
+					"bootstrap.2.score.group",
+					"bootstrap.2.score.priority",
+					"bootstrap.2.score.readOnly",
+					"bootstrap.2.score.required",
+					"bootstrap.2.score.visible",
+					"bootstrap.2.score.undefined",
+					"bootstrap.2.score.undefinedValue",
+					"bootstrap.2.score.default",
+					"bootstrap.2.score.min",
+					"bootstrap.2.score.max",
+					"bootstrap.2.score.name",
+					"bootstrap.2.score.accessor",
+					"bootstrap.2.score.stringReader",
+					"bootstrap.2.score.stringWriter",
+					"bootstrap.2.score.validator"
+				],
+				"class" : "MAContainer"
+			},
+			{
+				"reference" : "bootstrap.2.score.accessor.reference",
+				"properties" : {
+					"priority" : {
+						"value" : "10",
+						"type" : "integer"
+					}
+				},
+				"classes" : [
+					"MADelegatorAccessor",
+					"MADictionaryAccessor",
+					"MAIdentityAccessor",
+					"MANullAccessor",
+					"MASelectorAccessor",
+					"MAVariableAccessor",
+					"MAChainAccessor",
+					"MAPropertyAccessor"
+				],
+				"accessor" : {
+					"writeSelector" : "accessor:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "accessor"
+				},
+				"conditions" : [ ],
+				"class" : "MAToOneRelationDescription",
+				"id" : "bootstrap.2.score.accessor"
+			},
+			{
+				"id" : "bootstrap.2.score.accessor.reference",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"uuid" : {
+						"type" : "nil"
+					},
+					"class" : "MANullAccessor"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "bootstrap.2.score.comment",
+				"properties" : {
+					"label" : {
+						"value" : "Comment",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "110",
+						"type" : "integer"
+					},
+					"default" : {
+						"type" : "nil"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "comment:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "comment"
+				},
+				"class" : "MAMemoDescription"
+			},
+			{
+				"id" : "bootstrap.2.score.default",
+				"properties" : {
+					"label" : {
+						"value" : "Default",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "130",
+						"type" : "integer"
+					},
+					"default" : {
+						"type" : "nil"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "default:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "default"
+				},
+				"class" : "MANumberDescription"
+			},
+			{
+				"id" : "bootstrap.2.score.group",
+				"properties" : {
+					"label" : {
+						"value" : "Group",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "105",
+						"type" : "integer"
+					},
+					"default" : {
+						"type" : "nil"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "group:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "group"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "bootstrap.2.score.label",
+				"properties" : {
+					"label" : {
+						"value" : "Label",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "100",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : "score",
+						"type" : "string"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "label:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "label"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "bootstrap.2.score.max",
+				"properties" : {
+					"label" : {
+						"value" : "Maximum",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "410",
+						"type" : "integer"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "max:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "max"
+				},
+				"class" : "MANumberDescription"
+			},
+			{
+				"id" : "bootstrap.2.score.min",
+				"properties" : {
+					"label" : {
+						"value" : "Min",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "400",
+						"type" : "integer"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "min:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "min"
+				},
+				"class" : "MANumberDescription"
+			},
+			{
+				"id" : "bootstrap.2.score.name",
+				"properties" : {
+					"priority" : {
+						"value" : "1",
+						"type" : "integer"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "name:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "name"
+				},
+				"class" : "MASymbolDescription"
+			},
+			{
+				"id" : "bootstrap.2.score.priority",
+				"properties" : {
+					"required" : {
+						"value" : true,
+						"type" : "boolean"
+					},
+					"label" : {
+						"value" : "Priority",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "130",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : "0",
+						"type" : "integer"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "priority:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "priority"
+				},
+				"class" : "MANumberDescription"
+			},
+			{
+				"id" : "bootstrap.2.score.readOnly",
+				"properties" : {
+					"label" : {
+						"value" : "Read-only",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "200",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : false,
+						"type" : "boolean"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "readOnly:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "readOnly"
+				},
+				"class" : "MABooleanDescription"
+			},
+			{
+				"id" : "bootstrap.2.score.required",
+				"properties" : {
+					"label" : {
+						"value" : "Required",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "220",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : false,
+						"type" : "boolean"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "required:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "required"
+				},
+				"class" : "MABooleanDescription"
+			},
+			{
+				"reference" : "bootstrap.2.score.stringReader.reference",
+				"labels" : [ ],
+				"properties" : {
+					"label" : {
+						"value" : "String Reader",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "300",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : "MAStringReader",
+						"type" : "class"
+					}
+				},
+				"accessor" : {
+					"writeSelector" : "stringReader:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "stringReader"
+				},
+				"options" : [
+					{
+						"value" : "MAStringReader",
+						"type" : "class"
+					}
+				],
+				"conditions" : [ ],
+				"class" : "MASingleOptionDescription",
+				"id" : "bootstrap.2.score.stringReader"
+			},
+			{
+				"id" : "bootstrap.2.score.stringReader.reference",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"uuid" : {
+						"type" : "nil"
+					},
+					"class" : "MANullAccessor"
+				},
+				"class" : "MAClassDescription"
+			},
+			{
+				"reference" : "bootstrap.2.score.stringWriter.reference",
+				"labels" : [ ],
+				"properties" : {
+					"label" : {
+						"value" : "String Writer",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "310",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : "MAStringWriter",
+						"type" : "class"
+					}
+				},
+				"accessor" : {
+					"writeSelector" : "stringWriter:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "stringWriter"
+				},
+				"options" : [
+					{
+						"value" : "MAStringWriter",
+						"type" : "class"
+					}
+				],
+				"conditions" : [ ],
+				"class" : "MASingleOptionDescription",
+				"id" : "bootstrap.2.score.stringWriter"
+			},
+			{
+				"id" : "bootstrap.2.score.stringWriter.reference",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"uuid" : {
+						"type" : "nil"
+					},
+					"class" : "MANullAccessor"
+				},
+				"class" : "MAClassDescription"
+			},
+			{
+				"id" : "bootstrap.2.score.type",
+				"properties" : {
+					"readOnly" : {
+						"value" : true,
+						"type" : "boolean"
+					},
+					"label" : {
+						"value" : "Kind",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "0",
+						"type" : "integer"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "type:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "type"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "bootstrap.2.score.undefined",
+				"properties" : {
+					"label" : {
+						"value" : "Undefined String",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "140",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : "",
+						"type" : "string"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "undefined:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "undefined"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"reference" : "bootstrap.2.score.undefinedValue.reference",
+				"properties" : {
+					"priority" : {
+						"value" : "150",
+						"type" : "integer"
+					},
+					"default" : {
+						"type" : "nil"
+					}
+				},
+				"classes" : [ ],
+				"accessor" : {
+					"writeSelector" : "undefinedValue:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "undefinedValue"
+				},
+				"conditions" : [ ],
+				"class" : "MAToOneRelationDescription",
+				"id" : "bootstrap.2.score.undefinedValue"
+			},
+			{
+				"id" : "bootstrap.2.score.undefinedValue.reference",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"uuid" : {
+						"type" : "nil"
+					},
+					"class" : "MANullAccessor"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"reference" : "bootstrap.2.score.validator.reference",
+				"labels" : [ ],
+				"properties" : {
+					"label" : {
+						"value" : "Validator",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "250",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : "MAValidatorVisitor",
+						"type" : "class"
+					}
+				},
+				"accessor" : {
+					"writeSelector" : "validator:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "validator"
+				},
+				"options" : [
+					{
+						"value" : "MAValidatorVisitor",
+						"type" : "class"
+					}
+				],
+				"conditions" : [ ],
+				"class" : "MASingleOptionDescription",
+				"id" : "bootstrap.2.score.validator"
+			},
+			{
+				"id" : "bootstrap.2.score.validator.reference",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"uuid" : {
+						"type" : "nil"
+					},
+					"class" : "MANullAccessor"
+				},
+				"class" : "MAClassDescription"
+			},
+			{
+				"id" : "bootstrap.2.score.visible",
+				"properties" : {
+					"label" : {
+						"value" : "Visible",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "210",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "visible:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "visible"
+				},
+				"class" : "MABooleanDescription"
+			},
+			{
+				"id" : "bootstrap.3.link",
+				"properties" : {
+					"label" : {
+						"value" : "MAToOneRelationDescription",
+						"type" : "string"
+					}
+				},
+				"conditions" : [ ],
+				"children" : [
+					"bootstrap.3.link.type",
+					"bootstrap.3.link.label",
+					"bootstrap.3.link.comment",
+					"bootstrap.3.link.group",
+					"bootstrap.3.link.priority",
+					"bootstrap.3.link.readOnly",
+					"bootstrap.3.link.required",
+					"bootstrap.3.link.visible",
+					"bootstrap.3.link.undefined",
+					"bootstrap.3.link.undefinedValue",
+					"bootstrap.3.link.default",
+					"bootstrap.3.link.name",
+					"bootstrap.3.link.reference",
+					"bootstrap.3.link.accessor",
+					"bootstrap.3.link.stringReader",
+					"bootstrap.3.link.stringWriter",
+					"bootstrap.3.link.validator",
+					"bootstrap.3.link.classes"
+				],
+				"class" : "MAContainer"
+			},
+			{
+				"reference" : "bootstrap.3.link.accessor.reference",
+				"properties" : {
+					"priority" : {
+						"value" : "10",
+						"type" : "integer"
+					}
+				},
+				"classes" : [
+					"MADelegatorAccessor",
+					"MADictionaryAccessor",
+					"MAIdentityAccessor",
+					"MANullAccessor",
+					"MASelectorAccessor",
+					"MAVariableAccessor",
+					"MAChainAccessor",
+					"MAPropertyAccessor"
+				],
+				"accessor" : {
+					"writeSelector" : "accessor:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "accessor"
+				},
+				"conditions" : [ ],
+				"class" : "MAToOneRelationDescription",
+				"id" : "bootstrap.3.link.accessor"
+			},
+			{
+				"id" : "bootstrap.3.link.accessor.reference",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"uuid" : {
+						"type" : "nil"
+					},
+					"class" : "MANullAccessor"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"reference" : "bootstrap.3.link.classes.reference",
+				"labels" : [ ],
+				"properties" : {
+					"label" : {
+						"value" : "Classes",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "400",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : [ ],
+						"type" : "set"
+					}
+				},
+				"accessor" : {
+					"writeSelector" : "classes:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "classes"
+				},
+				"options" : [
+					{
+						"value" : "Array",
+						"type" : "class"
+					},
+					{
+						"value" : "Bag",
+						"type" : "class"
+					},
+					{
+						"value" : "Behavior",
+						"type" : "class"
+					},
+					{
+						"value" : "Boolean",
+						"type" : "class"
+					},
+					{
+						"value" : "Character",
+						"type" : "class"
+					},
+					{
+						"value" : "Class",
+						"type" : "class"
+					},
+					{
+						"value" : "ClassDescription",
+						"type" : "class"
+					},
+					{
+						"value" : "Collection",
+						"type" : "class"
+					},
+					{
+						"value" : "Float",
+						"type" : "class"
+					},
+					{
+						"value" : "Integer",
+						"type" : "class"
+					},
+					{
+						"value" : "MAAccessor",
+						"type" : "class"
+					},
+					{
+						"value" : "MAAdaptiveModel",
+						"type" : "class"
+					},
+					{
+						"value" : "MABasicObject",
+						"type" : "class"
+					},
+					{
+						"value" : "MABooleanDescription",
+						"type" : "class"
+					},
+					{
+						"value" : "MACachedMemento",
+						"type" : "class"
+					},
+					{
+						"value" : "MAChainAccessor",
+						"type" : "class"
+					},
+					{
+						"value" : "MACheckedMemento",
+						"type" : "class"
+					},
+					{
+						"value" : "MAClassDescription",
+						"type" : "class"
+					},
+					{
+						"value" : "MACondition",
+						"type" : "class"
+					},
+					{
+						"value" : "MAConjunctiveCondition",
+						"type" : "class"
+					},
+					{
+						"value" : "MAContainer",
+						"type" : "class"
+					},
+					{
+						"value" : "MADelegatorAccessor",
+						"type" : "class"
+					},
+					{
+						"value" : "MADescription",
+						"type" : "class"
+					},
+					{
+						"value" : "MADictionaryAccessor",
+						"type" : "class"
+					},
+					{
+						"value" : "MAElementDescription",
+						"type" : "class"
+					},
+					{
+						"value" : "MAIdentityAccessor",
+						"type" : "class"
+					},
+					{
+						"value" : "MAMagnitudeDescription",
+						"type" : "class"
+					},
+					{
+						"value" : "MAMemento",
+						"type" : "class"
+					},
+					{
+						"value" : "MAMemoDescription",
+						"type" : "class"
+					},
+					{
+						"value" : "MAMultipleOptionDescription",
+						"type" : "class"
+					},
+					{
+						"value" : "MANegationCondition",
+						"type" : "class"
+					},
+					{
+						"value" : "MANullAccessor",
+						"type" : "class"
+					},
+					{
+						"value" : "MANumberDescription",
+						"type" : "class"
+					},
+					{
+						"value" : "MAObject",
+						"type" : "class"
+					},
+					{
+						"value" : "MAOptionDescription",
+						"type" : "class"
+					},
+					{
+						"value" : "MAPasswordDescription",
+						"type" : "class"
+					},
+					{
+						"value" : "MAPluggableCondition",
+						"type" : "class"
+					},
+					{
+						"value" : "MAPriorityContainer",
+						"type" : "class"
+					},
+					{
+						"value" : "MAPropertyAccessor",
+						"type" : "class"
+					},
+					{
+						"value" : "MAReader",
+						"type" : "class"
+					},
+					{
+						"value" : "MAReferenceDescription",
+						"type" : "class"
+					},
+					{
+						"value" : "MARelationDescription",
+						"type" : "class"
+					},
+					{
+						"value" : "MASelectorAccessor",
+						"type" : "class"
+					},
+					{
+						"value" : "MASingleOptionDescription",
+						"type" : "class"
+					},
+					{
+						"value" : "MAStraightMemento",
+						"type" : "class"
+					},
+					{
+						"value" : "MAStringDescription",
+						"type" : "class"
+					},
+					{
+						"value" : "MAStringReader",
+						"type" : "class"
+					},
+					{
+						"value" : "MAStringWriter",
+						"type" : "class"
+					},
+					{
+						"value" : "MASymbolDescription",
+						"type" : "class"
+					},
+					{
+						"value" : "MAToManyRelationDescription",
+						"type" : "class"
+					},
+					{
+						"value" : "MAToManyScalarRelationDescription",
+						"type" : "class"
+					},
+					{
+						"value" : "MAToOneRelationDescription",
+						"type" : "class"
+					},
+					{
+						"value" : "MATokenDescription",
+						"type" : "class"
+					},
+					{
+						"value" : "MAValidatorVisitor",
+						"type" : "class"
+					},
+					{
+						"value" : "MAVariableAccessor",
+						"type" : "class"
+					},
+					{
+						"value" : "MAVisitor",
+						"type" : "class"
+					},
+					{
+						"value" : "MAWriter",
+						"type" : "class"
+					},
+					{
+						"value" : "Number",
+						"type" : "class"
+					},
+					{
+						"value" : "Object",
+						"type" : "class"
+					},
+					{
+						"value" : "OrderedCollection",
+						"type" : "class"
+					},
+					{
+						"value" : "SequenceableCollection",
+						"type" : "class"
+					},
+					{
+						"value" : "Set",
+						"type" : "class"
+					},
+					{
+						"value" : "String",
+						"type" : "class"
+					},
+					{
+						"value" : "Symbol",
+						"type" : "class"
+					},
+					{
+						"value" : "UndefinedObject",
+						"type" : "class"
+					}
+				],
+				"conditions" : [ ],
+				"class" : "MAMultipleOptionDescription",
+				"id" : "bootstrap.3.link.classes"
+			},
+			{
+				"id" : "bootstrap.3.link.classes.reference",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"uuid" : {
+						"type" : "nil"
+					},
+					"class" : "MANullAccessor"
+				},
+				"class" : "MAClassDescription"
+			},
+			{
+				"id" : "bootstrap.3.link.comment",
+				"properties" : {
+					"label" : {
+						"value" : "Comment",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "110",
+						"type" : "integer"
+					},
+					"default" : {
+						"type" : "nil"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "comment:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "comment"
+				},
+				"class" : "MAMemoDescription"
+			},
+			{
+				"reference" : "bootstrap.3.link.default.reference",
+				"properties" : {
+					"label" : {
+						"value" : "Default",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "130",
+						"type" : "integer"
+					},
+					"default" : {
+						"type" : "nil"
+					}
+				},
+				"classes" : [ ],
+				"accessor" : {
+					"writeSelector" : "default:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "default"
+				},
+				"conditions" : [ ],
+				"class" : "MAToOneRelationDescription",
+				"id" : "bootstrap.3.link.default"
+			},
+			{
+				"id" : "bootstrap.3.link.default.reference",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"uuid" : {
+						"type" : "nil"
+					},
+					"class" : "MANullAccessor"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "bootstrap.3.link.group",
+				"properties" : {
+					"label" : {
+						"value" : "Group",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "105",
+						"type" : "integer"
+					},
+					"default" : {
+						"type" : "nil"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "group:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "group"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "bootstrap.3.link.label",
+				"properties" : {
+					"label" : {
+						"value" : "Label",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "100",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : "link",
+						"type" : "string"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "label:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "label"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "bootstrap.3.link.name",
+				"properties" : {
+					"priority" : {
+						"value" : "1",
+						"type" : "integer"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "name:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "name"
+				},
+				"class" : "MASymbolDescription"
+			},
+			{
+				"id" : "bootstrap.3.link.priority",
+				"properties" : {
+					"required" : {
+						"value" : true,
+						"type" : "boolean"
+					},
+					"label" : {
+						"value" : "Priority",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "130",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : "0",
+						"type" : "integer"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "priority:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "priority"
+				},
+				"class" : "MANumberDescription"
+			},
+			{
+				"id" : "bootstrap.3.link.readOnly",
+				"properties" : {
+					"label" : {
+						"value" : "Read-only",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "200",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : false,
+						"type" : "boolean"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "readOnly:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "readOnly"
+				},
+				"class" : "MABooleanDescription"
+			},
+			{
+				"reference" : "bootstrap.3.link.reference.reference",
+				"properties" : {
+					"required" : {
+						"value" : false,
+						"type" : "boolean"
+					},
+					"label" : {
+						"value" : "Description",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "400",
+						"type" : "integer"
+					}
+				},
+				"classes" : [
+					"MAPriorityContainer",
+					"MAContainer"
+				],
+				"accessor" : {
+					"writeSelector" : "reference:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "reference"
+				},
+				"conditions" : [ ],
+				"class" : "MAToOneRelationDescription",
+				"id" : "bootstrap.3.link.reference"
+			},
+			{
+				"id" : "bootstrap.3.link.reference.reference",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"uuid" : {
+						"type" : "nil"
+					},
+					"class" : "MANullAccessor"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "bootstrap.3.link.required",
+				"properties" : {
+					"label" : {
+						"value" : "Required",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "220",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : false,
+						"type" : "boolean"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "required:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "required"
+				},
+				"class" : "MABooleanDescription"
+			},
+			{
+				"reference" : "bootstrap.3.link.stringReader.reference",
+				"labels" : [ ],
+				"properties" : {
+					"label" : {
+						"value" : "String Reader",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "300",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : "MAStringReader",
+						"type" : "class"
+					}
+				},
+				"accessor" : {
+					"writeSelector" : "stringReader:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "stringReader"
+				},
+				"options" : [
+					{
+						"value" : "MAStringReader",
+						"type" : "class"
+					}
+				],
+				"conditions" : [ ],
+				"class" : "MASingleOptionDescription",
+				"id" : "bootstrap.3.link.stringReader"
+			},
+			{
+				"id" : "bootstrap.3.link.stringReader.reference",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"uuid" : {
+						"type" : "nil"
+					},
+					"class" : "MANullAccessor"
+				},
+				"class" : "MAClassDescription"
+			},
+			{
+				"reference" : "bootstrap.3.link.stringWriter.reference",
+				"labels" : [ ],
+				"properties" : {
+					"label" : {
+						"value" : "String Writer",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "310",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : "MAStringWriter",
+						"type" : "class"
+					}
+				},
+				"accessor" : {
+					"writeSelector" : "stringWriter:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "stringWriter"
+				},
+				"options" : [
+					{
+						"value" : "MAStringWriter",
+						"type" : "class"
+					}
+				],
+				"conditions" : [ ],
+				"class" : "MASingleOptionDescription",
+				"id" : "bootstrap.3.link.stringWriter"
+			},
+			{
+				"id" : "bootstrap.3.link.stringWriter.reference",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"uuid" : {
+						"type" : "nil"
+					},
+					"class" : "MANullAccessor"
+				},
+				"class" : "MAClassDescription"
+			},
+			{
+				"id" : "bootstrap.3.link.type",
+				"properties" : {
+					"readOnly" : {
+						"value" : true,
+						"type" : "boolean"
+					},
+					"label" : {
+						"value" : "Kind",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "0",
+						"type" : "integer"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "type:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "type"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"id" : "bootstrap.3.link.undefined",
+				"properties" : {
+					"label" : {
+						"value" : "Undefined String",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "140",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : "",
+						"type" : "string"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "undefined:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "undefined"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"reference" : "bootstrap.3.link.undefinedValue.reference",
+				"properties" : {
+					"priority" : {
+						"value" : "150",
+						"type" : "integer"
+					},
+					"default" : {
+						"type" : "nil"
+					}
+				},
+				"classes" : [ ],
+				"accessor" : {
+					"writeSelector" : "undefinedValue:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "undefinedValue"
+				},
+				"conditions" : [ ],
+				"class" : "MAToOneRelationDescription",
+				"id" : "bootstrap.3.link.undefinedValue"
+			},
+			{
+				"id" : "bootstrap.3.link.undefinedValue.reference",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"uuid" : {
+						"type" : "nil"
+					},
+					"class" : "MANullAccessor"
+				},
+				"class" : "MAStringDescription"
+			},
+			{
+				"reference" : "bootstrap.3.link.validator.reference",
+				"labels" : [ ],
+				"properties" : {
+					"label" : {
+						"value" : "Validator",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "250",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : "MAValidatorVisitor",
+						"type" : "class"
+					}
+				},
+				"accessor" : {
+					"writeSelector" : "validator:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "validator"
+				},
+				"options" : [
+					{
+						"value" : "MAValidatorVisitor",
+						"type" : "class"
+					}
+				],
+				"conditions" : [ ],
+				"class" : "MASingleOptionDescription",
+				"id" : "bootstrap.3.link.validator"
+			},
+			{
+				"id" : "bootstrap.3.link.validator.reference",
+				"properties" : { },
+				"conditions" : [ ],
+				"accessor" : {
+					"uuid" : {
+						"type" : "nil"
+					},
+					"class" : "MANullAccessor"
+				},
+				"class" : "MAClassDescription"
+			},
+			{
+				"id" : "bootstrap.3.link.visible",
+				"properties" : {
+					"label" : {
+						"value" : "Visible",
+						"type" : "string"
+					},
+					"priority" : {
+						"value" : "210",
+						"type" : "integer"
+					},
+					"default" : {
+						"value" : true,
+						"type" : "boolean"
+					}
+				},
+				"conditions" : [ ],
+				"accessor" : {
+					"writeSelector" : "visible:",
+					"class" : "MASelectorAccessor",
+					"readSelector" : "visible"
+				},
+				"class" : "MABooleanDescription"
+			}
+		],
+		"format" : "magritte.graph/4",
+		"objects" : [ ],
+		"root" : "bootstrap.1.app"
+	},
+	"mementos" : [
+		{
+			"class" : "MAStraightMemento",
+			"annotations" : [ ],
+			"snapshots" : [
+				{
+					"value" : {
+						"value" : "3",
+						"type" : "integer"
+					},
+					"sameModel" : true,
+					"phase" : "initial",
+					"model" : {
+						"value" : "3",
+						"type" : "integer"
+					},
+					"sameDescription" : true
+				},
+				{
+					"value" : {
+						"value" : "5",
+						"type" : "integer"
+					},
+					"sameModel" : true,
+					"phase" : "inner-write",
+					"model" : {
+						"value" : "5",
+						"type" : "integer"
+					},
+					"sameDescription" : true
+				},
+				{
+					"value" : {
+						"value" : "8",
+						"type" : "integer"
+					},
+					"sameModel" : true,
+					"phase" : "outer-commit",
+					"model" : {
+						"value" : "8",
+						"type" : "integer"
+					},
+					"sameDescription" : true
+				},
+				{
+					"value" : {
+						"value" : "8",
+						"type" : "integer"
+					},
+					"sameModel" : true,
+					"phase" : "inner-commit",
+					"model" : {
+						"value" : "8",
+						"type" : "integer"
+					},
+					"sameDescription" : true
+				},
+				{
+					"value" : {
+						"value" : "6",
+						"type" : "integer"
+					},
+					"sameModel" : true,
+					"phase" : "external-write",
+					"model" : {
+						"value" : "6",
+						"type" : "integer"
+					},
+					"sameDescription" : true
+				},
+				{
+					"value" : {
+						"value" : "6",
+						"type" : "integer"
+					},
+					"sameModel" : true,
+					"phase" : "validate",
+					"model" : {
+						"value" : "6",
+						"type" : "integer"
+					},
+					"sameDescription" : true
+				},
+				{
+					"value" : {
+						"value" : "6",
+						"type" : "integer"
+					},
+					"sameModel" : true,
+					"phase" : "reset",
+					"model" : {
+						"value" : "6",
+						"type" : "integer"
+					},
+					"sameDescription" : true
+				}
+			],
+			"kinds" : [
+				{
+					"class" : "Object",
+					"result" : true
+				},
+				{
+					"class" : "MABasicObject",
+					"result" : true
+				},
+				{
+					"class" : "MAObject",
+					"result" : true
+				},
+				{
+					"class" : "MAMemento",
+					"result" : true
+				},
+				{
+					"class" : "MAStraightMemento",
+					"result" : true
+				},
+				{
+					"class" : "MACachedMemento",
+					"result" : false
+				},
+				{
+					"class" : "MACheckedMemento",
+					"result" : false
+				},
+				{
+					"class" : "MAAdaptiveModel",
+					"result" : false
+				}
+			],
+			"validation" : [ ]
+		},
+		{
+			"class" : "MACachedMemento",
+			"annotations" : [ ],
+			"snapshots" : [
+				{
+					"value" : {
+						"value" : "3",
+						"type" : "integer"
+					},
+					"sameModel" : true,
+					"changes" : false,
+					"phase" : "initial",
+					"model" : {
+						"value" : "3",
+						"type" : "integer"
+					},
+					"sameDescription" : true
+				},
+				{
+					"value" : {
+						"value" : "5",
+						"type" : "integer"
+					},
+					"sameModel" : true,
+					"changes" : true,
+					"phase" : "inner-write",
+					"model" : {
+						"value" : "3",
+						"type" : "integer"
+					},
+					"sameDescription" : true
+				},
+				{
+					"value" : {
+						"value" : "8",
+						"type" : "integer"
+					},
+					"sameModel" : true,
+					"changes" : true,
+					"phase" : "outer-commit",
+					"model" : {
+						"value" : "3",
+						"type" : "integer"
+					},
+					"sameDescription" : true
+				},
+				{
+					"value" : {
+						"value" : "8",
+						"type" : "integer"
+					},
+					"sameModel" : true,
+					"changes" : false,
+					"phase" : "inner-commit",
+					"model" : {
+						"value" : "8",
+						"type" : "integer"
+					},
+					"sameDescription" : true
+				},
+				{
+					"value" : {
+						"value" : "8",
+						"type" : "integer"
+					},
+					"sameModel" : true,
+					"changes" : true,
+					"phase" : "external-write",
+					"model" : {
+						"value" : "6",
+						"type" : "integer"
+					},
+					"sameDescription" : true
+				},
+				{
+					"value" : {
+						"value" : "8",
+						"type" : "integer"
+					},
+					"sameModel" : true,
+					"changes" : true,
+					"phase" : "validate",
+					"model" : {
+						"value" : "6",
+						"type" : "integer"
+					},
+					"sameDescription" : true
+				},
+				{
+					"value" : {
+						"value" : "6",
+						"type" : "integer"
+					},
+					"sameModel" : true,
+					"changes" : false,
+					"phase" : "reset",
+					"model" : {
+						"value" : "6",
+						"type" : "integer"
+					},
+					"sameDescription" : true
+				}
+			],
+			"kinds" : [
+				{
+					"class" : "Object",
+					"result" : true
+				},
+				{
+					"class" : "MABasicObject",
+					"result" : true
+				},
+				{
+					"class" : "MAObject",
+					"result" : true
+				},
+				{
+					"class" : "MAMemento",
+					"result" : true
+				},
+				{
+					"class" : "MAStraightMemento",
+					"result" : false
+				},
+				{
+					"class" : "MACachedMemento",
+					"result" : true
+				},
+				{
+					"class" : "MACheckedMemento",
+					"result" : false
+				},
+				{
+					"class" : "MAAdaptiveModel",
+					"result" : false
+				}
+			],
+			"validation" : [ ]
+		},
+		{
+			"class" : "MACheckedMemento",
+			"annotations" : [ ],
+			"snapshots" : [
+				{
+					"value" : {
+						"value" : "3",
+						"type" : "integer"
+					},
+					"elsewhere" : false,
+					"sameModel" : true,
+					"changes" : false,
+					"conflict" : false,
+					"phase" : "initial",
+					"model" : {
+						"value" : "3",
+						"type" : "integer"
+					},
+					"sameDescription" : true
+				},
+				{
+					"value" : {
+						"value" : "5",
+						"type" : "integer"
+					},
+					"elsewhere" : false,
+					"sameModel" : true,
+					"changes" : true,
+					"conflict" : false,
+					"phase" : "inner-write",
+					"model" : {
+						"value" : "3",
+						"type" : "integer"
+					},
+					"sameDescription" : true
+				},
+				{
+					"value" : {
+						"value" : "8",
+						"type" : "integer"
+					},
+					"elsewhere" : false,
+					"sameModel" : true,
+					"changes" : true,
+					"conflict" : false,
+					"phase" : "outer-commit",
+					"model" : {
+						"value" : "3",
+						"type" : "integer"
+					},
+					"sameDescription" : true
+				},
+				{
+					"value" : {
+						"value" : "8",
+						"type" : "integer"
+					},
+					"elsewhere" : false,
+					"sameModel" : true,
+					"changes" : false,
+					"conflict" : false,
+					"phase" : "inner-commit",
+					"model" : {
+						"value" : "8",
+						"type" : "integer"
+					},
+					"sameDescription" : true
+				},
+				{
+					"value" : {
+						"value" : "8",
+						"type" : "integer"
+					},
+					"elsewhere" : true,
+					"sameModel" : true,
+					"changes" : true,
+					"conflict" : true,
+					"phase" : "external-write",
+					"model" : {
+						"value" : "6",
+						"type" : "integer"
+					},
+					"sameDescription" : true
+				},
+				{
+					"value" : {
+						"value" : "6",
+						"type" : "integer"
+					},
+					"elsewhere" : false,
+					"sameModel" : true,
+					"changes" : false,
+					"conflict" : false,
+					"phase" : "validate",
+					"model" : {
+						"value" : "6",
+						"type" : "integer"
+					},
+					"sameDescription" : true
+				},
+				{
+					"value" : {
+						"value" : "6",
+						"type" : "integer"
+					},
+					"elsewhere" : false,
+					"sameModel" : true,
+					"changes" : false,
+					"conflict" : false,
+					"phase" : "reset",
+					"model" : {
+						"value" : "6",
+						"type" : "integer"
+					},
+					"sameDescription" : true
+				}
+			],
+			"kinds" : [
+				{
+					"class" : "Object",
+					"result" : true
+				},
+				{
+					"class" : "MABasicObject",
+					"result" : true
+				},
+				{
+					"class" : "MAObject",
+					"result" : true
+				},
+				{
+					"class" : "MAMemento",
+					"result" : true
+				},
+				{
+					"class" : "MAStraightMemento",
+					"result" : false
+				},
+				{
+					"class" : "MACachedMemento",
+					"result" : true
+				},
+				{
+					"class" : "MACheckedMemento",
+					"result" : true
+				},
+				{
+					"class" : "MAAdaptiveModel",
+					"result" : false
+				}
+			],
+			"validation" : [
+				"MAConflictError"
+			]
+		}
+	]
+}
