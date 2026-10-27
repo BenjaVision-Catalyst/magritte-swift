@@ -1,6 +1,6 @@
 # Magritte Swift
 
-An independent Swift Package port of [Magritte](https://github.com/magritte-metamodel/magritte). **0.30 adds native mutable collection identity, aliases and memento copy semantics; it is not a complete Magritte implementation.** No C++ dependency, UI, networking or application-framework integration.
+An independent Swift Package port of [Magritte](https://github.com/magritte-metamodel/magritte). **0.31 adds the validation protocol and nested error objects; it is not a complete Magritte implementation.** No C++ dependency, UI, networking or application-framework integration.
 
 The [current gap analysis](docs/gap-analysis.md) prioritizes missing upstream semantics and records acceptance gates for both ports. Its [structured ledger](docs/gap-analysis.json) distinguishes native limitations, missing behavior and deferred reference evidence.
 
@@ -102,3 +102,5 @@ Lazy default/self references, relation class helpers, ownership and nil graph/4 
 Container mutation, native vectors/arrays, explicit priority resort and stored-order graph adaptation are documented in [container-mutation.md](docs/container-mutation.md). GT was not accessed.
 
 Mutable collection ownership, shallow-copy boundaries and graph identity tables are documented in [mutable collections](docs/mutable-collections.md).
+
+Source validation order, native results, model conditions and error ownership are documented in [validation](docs/validation.md).

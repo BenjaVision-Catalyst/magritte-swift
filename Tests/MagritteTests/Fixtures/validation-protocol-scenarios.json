@@ -1,0 +1,2603 @@
+{
+  "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
+  "verification": "Independent source-derived expectations; no GT run. Original historical fixtures remain byte-unchanged.",
+  "registrations": [
+    {
+      "name": "ValidationNumber",
+      "superclass": "MANumberDescription"
+    },
+    {
+      "name": "ValidationContainer",
+      "superclass": "MAContainer"
+    }
+  ],
+  "cases": [
+    {
+      "name": "one-error-still-has-two-wrapper-levels",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              }
+            },
+            "conditions": [],
+            "children": [
+              "text"
+            ]
+          },
+          {
+            "id": "text",
+            "class": "MAStringDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Text"
+              }
+            },
+            "conditions": [],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "text"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {
+              "text": {
+                "type": "boolean",
+                "value": true
+              }
+            }
+          }
+        ]
+      },
+      "entry": {
+        "object": "model"
+      },
+      "expected": {
+        "error": {
+          "class": "MAMultipleErrors",
+          "description": "root",
+          "signalText": "Root",
+          "collection": [
+            {
+              "class": "MAMultipleErrors",
+              "description": "text",
+              "signalText": "Text",
+              "collection": [
+                {
+                  "class": "MAKindError",
+                  "description": "text",
+                  "signalText": "Invalid input given",
+                  "collection": [],
+                  "isResumable": true
+                }
+              ],
+              "isResumable": true
+            }
+          ],
+          "isResumable": true
+        },
+        "flat": [
+          {
+            "description": "text",
+            "code": "MAKindError",
+            "message": "Invalid input given"
+          }
+        ],
+        "print": "Text: Invalid input given"
+      }
+    },
+    {
+      "name": "required-nil-then-undefined-return",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              }
+            },
+            "conditions": [],
+            "children": [
+              "text"
+            ]
+          },
+          {
+            "id": "text",
+            "class": "MAStringDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Text"
+              },
+              "required": {
+                "type": "boolean",
+                "value": true
+              }
+            },
+            "conditions": [],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "text"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {
+              "text": {
+                "type": "nil"
+              }
+            }
+          }
+        ]
+      },
+      "entry": {
+        "object": "model"
+      },
+      "expected": {
+        "error": {
+          "class": "MAMultipleErrors",
+          "description": "root",
+          "signalText": "Root",
+          "collection": [
+            {
+              "class": "MAMultipleErrors",
+              "description": "text",
+              "signalText": "Text",
+              "collection": [
+                {
+                  "class": "MARequiredError",
+                  "description": "text",
+                  "signalText": "Input is required but no input given",
+                  "collection": [],
+                  "isResumable": true
+                }
+              ],
+              "isResumable": true
+            }
+          ],
+          "isResumable": true
+        },
+        "flat": [
+          {
+            "description": "text",
+            "code": "MARequiredError",
+            "message": "Input is required but no input given"
+          }
+        ],
+        "print": "Text: Input is required but no input given"
+      }
+    },
+    {
+      "name": "required-resumes-kind-failure-skips-condition",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              }
+            },
+            "conditions": [],
+            "children": [
+              "text"
+            ]
+          },
+          {
+            "id": "text",
+            "class": "MAStringDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Text"
+              },
+              "required": {
+                "type": "boolean",
+                "value": true
+              },
+              "undefinedValue": {
+                "type": "string",
+                "value": "null"
+              }
+            },
+            "conditions": [
+              {
+                "label": "condition",
+                "predicate": {
+                  "class": "MAPluggableCondition",
+                  "selector": "notNil",
+                  "receiver": {
+                    "type": "nil"
+                  },
+                  "arguments": [],
+                  "index": 0
+                }
+              }
+            ],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "text"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {
+              "text": {
+                "type": "nil"
+              }
+            }
+          }
+        ]
+      },
+      "entry": {
+        "object": "model"
+      },
+      "expected": {
+        "error": {
+          "class": "MAMultipleErrors",
+          "description": "root",
+          "signalText": "Root",
+          "collection": [
+            {
+              "class": "MAMultipleErrors",
+              "description": "text",
+              "signalText": "Text",
+              "collection": [
+                {
+                  "class": "MARequiredError",
+                  "description": "text",
+                  "signalText": "Input is required but no input given",
+                  "collection": [],
+                  "isResumable": true
+                },
+                {
+                  "class": "MAKindError",
+                  "description": "text",
+                  "signalText": "Invalid input given",
+                  "collection": [],
+                  "isResumable": true
+                }
+              ],
+              "isResumable": true
+            }
+          ],
+          "isResumable": true
+        },
+        "flat": [
+          {
+            "description": "text",
+            "code": "MARequiredError",
+            "message": "Input is required but no input given"
+          },
+          {
+            "description": "text",
+            "code": "MAKindError",
+            "message": "Invalid input given"
+          }
+        ],
+        "print": "Text: Input is required but no input given\rText: Invalid input given"
+      }
+    },
+    {
+      "name": "specific-failure-resumes-conditions",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              }
+            },
+            "conditions": [],
+            "children": [
+              "number"
+            ]
+          },
+          {
+            "id": "number",
+            "class": "MANumberDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Number"
+              },
+              "min": {
+                "type": "integer",
+                "value": "7"
+              },
+              "rangeErrorMessage": {
+                "type": "string",
+                "value": "range"
+              }
+            },
+            "conditions": [
+              {
+                "label": "negative",
+                "predicate": {
+                  "class": "MAPluggableCondition",
+                  "selector": "negative",
+                  "receiver": {
+                    "type": "nil"
+                  },
+                  "arguments": [],
+                  "index": 0
+                }
+              }
+            ],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "number"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {
+              "number": {
+                "type": "integer",
+                "value": "3"
+              }
+            }
+          }
+        ]
+      },
+      "entry": {
+        "object": "model"
+      },
+      "expected": {
+        "error": {
+          "class": "MAMultipleErrors",
+          "description": "root",
+          "signalText": "Root",
+          "collection": [
+            {
+              "class": "MAMultipleErrors",
+              "description": "number",
+              "signalText": "Number",
+              "collection": [
+                {
+                  "class": "MARangeError",
+                  "description": "number",
+                  "signalText": "range",
+                  "collection": [],
+                  "isResumable": true
+                },
+                {
+                  "class": "MAConditionError",
+                  "description": "number",
+                  "signalText": "negative",
+                  "collection": [],
+                  "isResumable": true
+                }
+              ],
+              "isResumable": true
+            }
+          ],
+          "isResumable": true
+        },
+        "flat": [
+          {
+            "description": "number",
+            "code": "MARangeError",
+            "message": "range"
+          },
+          {
+            "description": "number",
+            "code": "MAConditionError",
+            "message": "negative"
+          }
+        ],
+        "print": "Number: range\rNumber: negative"
+      }
+    },
+    {
+      "name": "registered-family-inherits-protocol",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              }
+            },
+            "conditions": [],
+            "children": [
+              "number"
+            ]
+          },
+          {
+            "id": "number",
+            "class": "ValidationNumber",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Number"
+              },
+              "min": {
+                "type": "integer",
+                "value": "7"
+              },
+              "rangeErrorMessage": {
+                "type": "string",
+                "value": "range"
+              }
+            },
+            "conditions": [
+              {
+                "label": "negative",
+                "predicate": {
+                  "class": "MAPluggableCondition",
+                  "selector": "negative",
+                  "receiver": {
+                    "type": "nil"
+                  },
+                  "arguments": [],
+                  "index": 0
+                }
+              }
+            ],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "number"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {
+              "number": {
+                "type": "integer",
+                "value": "3"
+              }
+            }
+          }
+        ]
+      },
+      "entry": {
+        "object": "model"
+      },
+      "expected": {
+        "error": {
+          "class": "MAMultipleErrors",
+          "description": "root",
+          "signalText": "Root",
+          "collection": [
+            {
+              "class": "MAMultipleErrors",
+              "description": "number",
+              "signalText": "Number",
+              "collection": [
+                {
+                  "class": "MARangeError",
+                  "description": "number",
+                  "signalText": "range",
+                  "collection": [],
+                  "isResumable": true
+                },
+                {
+                  "class": "MAConditionError",
+                  "description": "number",
+                  "signalText": "negative",
+                  "collection": [],
+                  "isResumable": true
+                }
+              ],
+              "isResumable": true
+            }
+          ],
+          "isResumable": true
+        },
+        "flat": [
+          {
+            "description": "number",
+            "code": "MARangeError",
+            "message": "range"
+          },
+          {
+            "description": "number",
+            "code": "MAConditionError",
+            "message": "negative"
+          }
+        ],
+        "print": "Number: range\rNumber: negative"
+      }
+    },
+    {
+      "name": "nil-signal-preserved-computed-message-empty",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              }
+            },
+            "conditions": [],
+            "children": [
+              "text"
+            ]
+          },
+          {
+            "id": "text",
+            "class": "MAStringDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Text"
+              },
+              "kindErrorMessage": {
+                "type": "nil"
+              }
+            },
+            "conditions": [],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "text"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {
+              "text": {
+                "type": "boolean",
+                "value": true
+              }
+            }
+          }
+        ]
+      },
+      "entry": {
+        "object": "model"
+      },
+      "expected": {
+        "error": {
+          "class": "MAMultipleErrors",
+          "description": "root",
+          "signalText": "Root",
+          "collection": [
+            {
+              "class": "MAMultipleErrors",
+              "description": "text",
+              "signalText": "Text",
+              "collection": [
+                {
+                  "class": "MAKindError",
+                  "description": "text",
+                  "signalText": null,
+                  "collection": [],
+                  "isResumable": true
+                }
+              ],
+              "isResumable": true
+            }
+          ],
+          "isResumable": true
+        },
+        "flat": [
+          {
+            "description": "text",
+            "code": "MAKindError",
+            "message": ""
+          }
+        ],
+        "print": "Text: "
+      }
+    },
+    {
+      "name": "nil-tag-label-omits-print-prefix",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              }
+            },
+            "conditions": [],
+            "children": [
+              "text"
+            ]
+          },
+          {
+            "id": "text",
+            "class": "MAStringDescription",
+            "properties": {
+              "label": {
+                "type": "nil"
+              },
+              "kindErrorMessage": {
+                "type": "nil"
+              }
+            },
+            "conditions": [],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "text"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {
+              "text": {
+                "type": "boolean",
+                "value": true
+              }
+            }
+          }
+        ]
+      },
+      "entry": {
+        "object": "model"
+      },
+      "expected": {
+        "error": {
+          "class": "MAMultipleErrors",
+          "description": "root",
+          "signalText": "Root",
+          "collection": [
+            {
+              "class": "MAMultipleErrors",
+              "description": "text",
+              "signalText": null,
+              "collection": [
+                {
+                  "class": "MAKindError",
+                  "description": "text",
+                  "signalText": null,
+                  "collection": [],
+                  "isResumable": true
+                }
+              ],
+              "isResumable": true
+            }
+          ],
+          "isResumable": true
+        },
+        "flat": [
+          {
+            "description": "text",
+            "code": "MAKindError",
+            "message": ""
+          }
+        ],
+        "print": ""
+      }
+    },
+    {
+      "name": "undefined-value-precedes-kind",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              }
+            },
+            "conditions": [],
+            "children": [
+              "flag"
+            ]
+          },
+          {
+            "id": "flag",
+            "class": "MABooleanDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Flag"
+              },
+              "undefinedValue": {
+                "type": "string",
+                "value": "null"
+              }
+            },
+            "conditions": [
+              {
+                "label": "not evaluated",
+                "predicate": {
+                  "class": "MAPluggableCondition",
+                  "selector": "isNil",
+                  "receiver": {
+                    "type": "nil"
+                  },
+                  "arguments": [],
+                  "index": 0
+                }
+              }
+            ],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "flag"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {
+              "flag": {
+                "type": "string",
+                "value": "null"
+              }
+            }
+          }
+        ]
+      },
+      "entry": {
+        "object": "model"
+      },
+      "expected": {
+        "error": null,
+        "flat": [],
+        "print": ""
+      }
+    },
+    {
+      "name": "required-empty-does-not-prevent-conditions",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              }
+            },
+            "conditions": [],
+            "children": [
+              "many"
+            ]
+          },
+          {
+            "id": "many",
+            "class": "MAToManyRelationDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Many"
+              },
+              "required": {
+                "type": "boolean",
+                "value": true
+              }
+            },
+            "conditions": [
+              {
+                "label": "nonempty",
+                "predicate": {
+                  "class": "MAPluggableCondition",
+                  "selector": "notEmpty",
+                  "receiver": {
+                    "type": "nil"
+                  },
+                  "arguments": [],
+                  "index": 0
+                }
+              }
+            ],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "many"
+            },
+            "reference": null,
+            "classes": [
+              "String"
+            ]
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {
+              "many": {
+                "type": "ordered",
+                "value": []
+              }
+            }
+          }
+        ]
+      },
+      "entry": {
+        "object": "model"
+      },
+      "expected": {
+        "error": {
+          "class": "MAMultipleErrors",
+          "description": "root",
+          "signalText": "Root",
+          "collection": [
+            {
+              "class": "MAMultipleErrors",
+              "description": "many",
+              "signalText": "Many",
+              "collection": [
+                {
+                  "class": "MARequiredError",
+                  "description": "many",
+                  "signalText": "Input is required but no input given",
+                  "collection": [],
+                  "isResumable": true
+                },
+                {
+                  "class": "MAConditionError",
+                  "description": "many",
+                  "signalText": "nonempty",
+                  "collection": [],
+                  "isResumable": true
+                }
+              ],
+              "isResumable": true
+            }
+          ],
+          "isResumable": true
+        },
+        "flat": [
+          {
+            "description": "many",
+            "code": "MARequiredError",
+            "message": "Input is required but no input given"
+          },
+          {
+            "description": "many",
+            "code": "MAConditionError",
+            "message": "nonempty"
+          }
+        ],
+        "print": "Many: Input is required but no input given\rMany: nonempty"
+      }
+    },
+    {
+      "name": "outer-collection-kind-short-circuits-members",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              }
+            },
+            "conditions": [],
+            "children": [
+              "many"
+            ]
+          },
+          {
+            "id": "many",
+            "class": "MAToManyRelationDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Many"
+              }
+            },
+            "conditions": [
+              {
+                "label": "not evaluated",
+                "predicate": {
+                  "class": "MAPluggableCondition",
+                  "selector": "isNil",
+                  "receiver": {
+                    "type": "nil"
+                  },
+                  "arguments": [],
+                  "index": 0
+                }
+              }
+            ],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "many"
+            },
+            "reference": null,
+            "classes": [
+              "String"
+            ]
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {
+              "many": {
+                "type": "integer",
+                "value": "2"
+              }
+            }
+          }
+        ]
+      },
+      "entry": {
+        "object": "model"
+      },
+      "expected": {
+        "error": {
+          "class": "MAMultipleErrors",
+          "description": "root",
+          "signalText": "Root",
+          "collection": [
+            {
+              "class": "MAMultipleErrors",
+              "description": "many",
+              "signalText": "Many",
+              "collection": [
+                {
+                  "class": "MAKindError",
+                  "description": "many",
+                  "signalText": "Invalid input given",
+                  "collection": [],
+                  "isResumable": true
+                }
+              ],
+              "isResumable": true
+            }
+          ],
+          "isResumable": true
+        },
+        "flat": [
+          {
+            "description": "many",
+            "code": "MAKindError",
+            "message": "Invalid input given"
+          }
+        ],
+        "print": "Many: Invalid input given"
+      }
+    },
+    {
+      "name": "member-validation-resumes-every-element",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              }
+            },
+            "conditions": [],
+            "children": [
+              "many"
+            ]
+          },
+          {
+            "id": "many",
+            "class": "MAToManyRelationDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Many"
+              }
+            },
+            "conditions": [],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "many"
+            },
+            "reference": null,
+            "classes": [
+              "String"
+            ]
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {
+              "many": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "integer",
+                    "value": "1"
+                  },
+                  {
+                    "type": "boolean",
+                    "value": false
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "entry": {
+        "object": "model"
+      },
+      "expected": {
+        "error": {
+          "class": "MAMultipleErrors",
+          "description": "root",
+          "signalText": "Root",
+          "collection": [
+            {
+              "class": "MAMultipleErrors",
+              "description": "many",
+              "signalText": "Many",
+              "collection": [
+                {
+                  "class": "MAKindError",
+                  "description": "many",
+                  "signalText": "Invalid input given",
+                  "collection": [],
+                  "isResumable": true
+                },
+                {
+                  "class": "MAKindError",
+                  "description": "many",
+                  "signalText": "Invalid input given",
+                  "collection": [],
+                  "isResumable": true
+                }
+              ],
+              "isResumable": true
+            }
+          ],
+          "isResumable": true
+        },
+        "flat": [
+          {
+            "description": "many",
+            "code": "MAKindError",
+            "message": "Invalid input given"
+          },
+          {
+            "description": "many",
+            "code": "MAKindError",
+            "message": "Invalid input given"
+          }
+        ],
+        "print": "Many: Invalid input given\rMany: Invalid input given"
+      }
+    },
+    {
+      "name": "to-one-super-kind-resumes-class-check",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              }
+            },
+            "conditions": [],
+            "children": [
+              "one"
+            ]
+          },
+          {
+            "id": "one",
+            "class": "MAToOneRelationDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "One"
+              },
+              "kind": {
+                "type": "class",
+                "value": "Boolean"
+              }
+            },
+            "conditions": [
+              {
+                "label": "not evaluated",
+                "predicate": {
+                  "class": "MAPluggableCondition",
+                  "selector": "notNil",
+                  "receiver": {
+                    "type": "nil"
+                  },
+                  "arguments": [],
+                  "index": 0
+                }
+              }
+            ],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "one"
+            },
+            "reference": null,
+            "classes": [
+              "Integer"
+            ]
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {
+              "one": {
+                "type": "string",
+                "value": "bad"
+              }
+            }
+          }
+        ]
+      },
+      "entry": {
+        "object": "model"
+      },
+      "expected": {
+        "error": {
+          "class": "MAMultipleErrors",
+          "description": "root",
+          "signalText": "Root",
+          "collection": [
+            {
+              "class": "MAMultipleErrors",
+              "description": "one",
+              "signalText": "One",
+              "collection": [
+                {
+                  "class": "MAKindError",
+                  "description": "one",
+                  "signalText": "Invalid input given",
+                  "collection": [],
+                  "isResumable": true
+                },
+                {
+                  "class": "MAKindError",
+                  "description": "one",
+                  "signalText": "Invalid input given",
+                  "collection": [],
+                  "isResumable": true
+                }
+              ],
+              "isResumable": true
+            }
+          ],
+          "isResumable": true
+        },
+        "flat": [
+          {
+            "description": "one",
+            "code": "MAKindError",
+            "message": "Invalid input given"
+          },
+          {
+            "description": "one",
+            "code": "MAKindError",
+            "message": "Invalid input given"
+          }
+        ],
+        "print": "One: Invalid input given\rOne: Invalid input given"
+      }
+    },
+    {
+      "name": "single-option-super-kind-resumes-membership",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              }
+            },
+            "conditions": [],
+            "children": [
+              "option"
+            ]
+          },
+          {
+            "id": "option",
+            "class": "MASingleOptionDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Option"
+              },
+              "kind": {
+                "type": "class",
+                "value": "Boolean"
+              }
+            },
+            "conditions": [],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "option"
+            },
+            "reference": null,
+            "options": [],
+            "labels": []
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {
+              "option": {
+                "type": "string",
+                "value": "bad"
+              }
+            }
+          }
+        ]
+      },
+      "entry": {
+        "object": "model"
+      },
+      "expected": {
+        "error": {
+          "class": "MAMultipleErrors",
+          "description": "root",
+          "signalText": "Root",
+          "collection": [
+            {
+              "class": "MAMultipleErrors",
+              "description": "option",
+              "signalText": "Option",
+              "collection": [
+                {
+                  "class": "MAKindError",
+                  "description": "option",
+                  "signalText": "Invalid input given",
+                  "collection": [],
+                  "isResumable": true
+                },
+                {
+                  "class": "MAKindError",
+                  "description": "option",
+                  "signalText": "Invalid input given",
+                  "collection": [],
+                  "isResumable": true
+                }
+              ],
+              "isResumable": true
+            }
+          ],
+          "isResumable": true
+        },
+        "flat": [
+          {
+            "description": "option",
+            "code": "MAKindError",
+            "message": "Invalid input given"
+          },
+          {
+            "description": "option",
+            "code": "MAKindError",
+            "message": "Invalid input given"
+          }
+        ],
+        "print": "Option: Invalid input given\rOption: Invalid input given"
+      }
+    },
+    {
+      "name": "extensible-option-retains-reference-wrapper",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              }
+            },
+            "conditions": [],
+            "children": [
+              "option"
+            ]
+          },
+          {
+            "id": "option",
+            "class": "MASingleOptionDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Option"
+              },
+              "extensible": {
+                "type": "boolean",
+                "value": true
+              }
+            },
+            "conditions": [],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "option"
+            },
+            "reference": "reference",
+            "options": [],
+            "labels": []
+          },
+          {
+            "id": "reference",
+            "class": "MANumberDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Reference"
+              },
+              "min": {
+                "type": "integer",
+                "value": "7"
+              },
+              "rangeErrorMessage": {
+                "type": "string",
+                "value": "range"
+              }
+            },
+            "conditions": [
+              {
+                "label": "negative",
+                "predicate": {
+                  "class": "MAPluggableCondition",
+                  "selector": "negative",
+                  "receiver": {
+                    "type": "nil"
+                  },
+                  "arguments": [],
+                  "index": 0
+                }
+              }
+            ],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "reference"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {
+              "option": {
+                "type": "integer",
+                "value": "3"
+              }
+            }
+          }
+        ]
+      },
+      "entry": {
+        "object": "model"
+      },
+      "expected": {
+        "error": {
+          "class": "MAMultipleErrors",
+          "description": "root",
+          "signalText": "Root",
+          "collection": [
+            {
+              "class": "MAMultipleErrors",
+              "description": "option",
+              "signalText": "Option",
+              "collection": [
+                {
+                  "class": "MAMultipleErrors",
+                  "description": "reference",
+                  "signalText": "Reference",
+                  "collection": [
+                    {
+                      "class": "MARangeError",
+                      "description": "reference",
+                      "signalText": "range",
+                      "collection": [],
+                      "isResumable": true
+                    },
+                    {
+                      "class": "MAConditionError",
+                      "description": "reference",
+                      "signalText": "negative",
+                      "collection": [],
+                      "isResumable": true
+                    }
+                  ],
+                  "isResumable": true
+                }
+              ],
+              "isResumable": true
+            }
+          ],
+          "isResumable": true
+        },
+        "flat": [
+          {
+            "description": "reference",
+            "code": "MARangeError",
+            "message": "range"
+          },
+          {
+            "description": "reference",
+            "code": "MAConditionError",
+            "message": "negative"
+          }
+        ],
+        "print": "Reference: range\rReference: negative"
+      }
+    },
+    {
+      "name": "multiple-options-retain-each-reference-wrapper",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              }
+            },
+            "conditions": [],
+            "children": [
+              "option"
+            ]
+          },
+          {
+            "id": "option",
+            "class": "MAMultipleOptionDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Option"
+              },
+              "extensible": {
+                "type": "boolean",
+                "value": true
+              }
+            },
+            "conditions": [],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "option"
+            },
+            "reference": "reference",
+            "options": [],
+            "labels": []
+          },
+          {
+            "id": "reference",
+            "class": "MANumberDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Reference"
+              },
+              "min": {
+                "type": "integer",
+                "value": "7"
+              },
+              "rangeErrorMessage": {
+                "type": "string",
+                "value": "range"
+              }
+            },
+            "conditions": [],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "reference"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {
+              "option": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "integer",
+                    "value": "3"
+                  },
+                  {
+                    "type": "string",
+                    "value": "bad"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "entry": {
+        "object": "model"
+      },
+      "expected": {
+        "error": {
+          "class": "MAMultipleErrors",
+          "description": "root",
+          "signalText": "Root",
+          "collection": [
+            {
+              "class": "MAMultipleErrors",
+              "description": "option",
+              "signalText": "Option",
+              "collection": [
+                {
+                  "class": "MAMultipleErrors",
+                  "description": "reference",
+                  "signalText": "Reference",
+                  "collection": [
+                    {
+                      "class": "MARangeError",
+                      "description": "reference",
+                      "signalText": "range",
+                      "collection": [],
+                      "isResumable": true
+                    }
+                  ],
+                  "isResumable": true
+                },
+                {
+                  "class": "MAMultipleErrors",
+                  "description": "reference",
+                  "signalText": "Reference",
+                  "collection": [
+                    {
+                      "class": "MAKindError",
+                      "description": "reference",
+                      "signalText": "Invalid input given",
+                      "collection": [],
+                      "isResumable": true
+                    }
+                  ],
+                  "isResumable": true
+                }
+              ],
+              "isResumable": true
+            }
+          ],
+          "isResumable": true
+        },
+        "flat": [
+          {
+            "description": "reference",
+            "code": "MARangeError",
+            "message": "range"
+          },
+          {
+            "description": "reference",
+            "code": "MAKindError",
+            "message": "Invalid input given"
+          }
+        ],
+        "print": "Reference: range\rReference: Invalid input given"
+      }
+    },
+    {
+      "name": "container-conditions-before-nested-children",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              }
+            },
+            "conditions": [
+              {
+                "label": "root condition",
+                "predicate": {
+                  "class": "MAPluggableCondition",
+                  "selector": "isNil",
+                  "receiver": {
+                    "type": "nil"
+                  },
+                  "arguments": [],
+                  "index": 0
+                }
+              }
+            ],
+            "children": [
+              "nested",
+              "flag"
+            ]
+          },
+          {
+            "id": "nested",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Nested"
+              }
+            },
+            "conditions": [],
+            "children": [
+              "number"
+            ]
+          },
+          {
+            "id": "number",
+            "class": "MANumberDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Number"
+              },
+              "min": {
+                "type": "integer",
+                "value": "7"
+              },
+              "rangeErrorMessage": {
+                "type": "string",
+                "value": "range"
+              }
+            },
+            "conditions": [
+              {
+                "label": "negative",
+                "predicate": {
+                  "class": "MAPluggableCondition",
+                  "selector": "negative",
+                  "receiver": {
+                    "type": "nil"
+                  },
+                  "arguments": [],
+                  "index": 0
+                }
+              }
+            ],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "number"
+            }
+          },
+          {
+            "id": "flag",
+            "class": "MABooleanDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Flag"
+              }
+            },
+            "conditions": [],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "flag"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {
+              "nested": {
+                "type": "reference",
+                "value": "nestedModel"
+              },
+              "flag": {
+                "type": "string",
+                "value": "bad"
+              }
+            }
+          },
+          {
+            "id": "nestedModel",
+            "description": "nested",
+            "values": {
+              "number": {
+                "type": "integer",
+                "value": "3"
+              }
+            }
+          }
+        ]
+      },
+      "entry": {
+        "object": "model"
+      },
+      "expected": {
+        "error": {
+          "class": "MAMultipleErrors",
+          "description": "root",
+          "signalText": "Root",
+          "collection": [
+            {
+              "class": "MAConditionError",
+              "description": "root",
+              "signalText": "root condition",
+              "collection": [],
+              "isResumable": true
+            },
+            {
+              "class": "MAMultipleErrors",
+              "description": "nested",
+              "signalText": "Nested",
+              "collection": [
+                {
+                  "class": "MAMultipleErrors",
+                  "description": "number",
+                  "signalText": "Number",
+                  "collection": [
+                    {
+                      "class": "MARangeError",
+                      "description": "number",
+                      "signalText": "range",
+                      "collection": [],
+                      "isResumable": true
+                    },
+                    {
+                      "class": "MAConditionError",
+                      "description": "number",
+                      "signalText": "negative",
+                      "collection": [],
+                      "isResumable": true
+                    }
+                  ],
+                  "isResumable": true
+                }
+              ],
+              "isResumable": true
+            },
+            {
+              "class": "MAMultipleErrors",
+              "description": "flag",
+              "signalText": "Flag",
+              "collection": [
+                {
+                  "class": "MAKindError",
+                  "description": "flag",
+                  "signalText": "Invalid input given",
+                  "collection": [],
+                  "isResumable": true
+                }
+              ],
+              "isResumable": true
+            }
+          ],
+          "isResumable": true
+        },
+        "flat": [
+          {
+            "description": "root",
+            "code": "MAConditionError",
+            "message": "root condition"
+          },
+          {
+            "description": "number",
+            "code": "MARangeError",
+            "message": "range"
+          },
+          {
+            "description": "number",
+            "code": "MAConditionError",
+            "message": "negative"
+          },
+          {
+            "description": "flag",
+            "code": "MAKindError",
+            "message": "Invalid input given"
+          }
+        ],
+        "print": "Root: root condition\rNumber: range\rNumber: negative\rFlag: Invalid input given"
+      }
+    },
+    {
+      "name": "container-kind-fails-but-children-still-visit",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "ValidationContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              },
+              "kind": {
+                "type": "class",
+                "value": "String"
+              }
+            },
+            "conditions": [
+              {
+                "label": "not evaluated",
+                "predicate": {
+                  "class": "MAPluggableCondition",
+                  "selector": "isNil",
+                  "receiver": {
+                    "type": "nil"
+                  },
+                  "arguments": [],
+                  "index": 0
+                }
+              }
+            ],
+            "children": [
+              "text"
+            ]
+          },
+          {
+            "id": "text",
+            "class": "MAStringDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Text"
+              }
+            },
+            "conditions": [],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "text"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {
+              "text": {
+                "type": "boolean",
+                "value": true
+              }
+            }
+          }
+        ]
+      },
+      "entry": {
+        "object": "model"
+      },
+      "expected": {
+        "error": {
+          "class": "MAMultipleErrors",
+          "description": "root",
+          "signalText": "Root",
+          "collection": [
+            {
+              "class": "MAKindError",
+              "description": "root",
+              "signalText": "Invalid input given",
+              "collection": [],
+              "isResumable": true
+            },
+            {
+              "class": "MAMultipleErrors",
+              "description": "text",
+              "signalText": "Text",
+              "collection": [
+                {
+                  "class": "MAKindError",
+                  "description": "text",
+                  "signalText": "Invalid input given",
+                  "collection": [],
+                  "isResumable": true
+                }
+              ],
+              "isResumable": true
+            }
+          ],
+          "isResumable": true
+        },
+        "flat": [
+          {
+            "description": "root",
+            "code": "MAKindError",
+            "message": "Invalid input given"
+          },
+          {
+            "description": "text",
+            "code": "MAKindError",
+            "message": "Invalid input given"
+          }
+        ],
+        "print": "Root: Invalid input given\rText: Invalid input given"
+      }
+    },
+    {
+      "name": "read-only-container-skips-whole-visit",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              },
+              "readOnly": {
+                "type": "boolean",
+                "value": true
+              }
+            },
+            "conditions": [
+              {
+                "label": "not evaluated",
+                "predicate": {
+                  "class": "MAPluggableCondition",
+                  "selector": "isNil",
+                  "receiver": {
+                    "type": "nil"
+                  },
+                  "arguments": [],
+                  "index": 0
+                }
+              }
+            ],
+            "children": [
+              "text"
+            ]
+          },
+          {
+            "id": "text",
+            "class": "MAStringDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Text"
+              },
+              "required": {
+                "type": "boolean",
+                "value": true
+              }
+            },
+            "conditions": [],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "text"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {
+              "text": {
+                "type": "nil"
+              }
+            }
+          }
+        ]
+      },
+      "entry": {
+        "object": "model"
+      },
+      "expected": {
+        "error": null,
+        "flat": [],
+        "print": ""
+      }
+    },
+    {
+      "name": "nil-container-label-preserved-in-group",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "nil"
+              }
+            },
+            "conditions": [
+              {
+                "label": "condition",
+                "predicate": {
+                  "class": "MAPluggableCondition",
+                  "selector": "isNil",
+                  "receiver": {
+                    "type": "nil"
+                  },
+                  "arguments": [],
+                  "index": 0
+                }
+              }
+            ],
+            "children": []
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {}
+          }
+        ]
+      },
+      "entry": {
+        "object": "model"
+      },
+      "expected": {
+        "error": {
+          "class": "MAMultipleErrors",
+          "description": "root",
+          "signalText": null,
+          "collection": [
+            {
+              "class": "MAConditionError",
+              "description": "root",
+              "signalText": "condition",
+              "collection": [],
+              "isResumable": true
+            }
+          ],
+          "isResumable": true
+        },
+        "flat": [
+          {
+            "description": "root",
+            "code": "MAConditionError",
+            "message": "condition"
+          }
+        ],
+        "print": "condition"
+      }
+    },
+    {
+      "name": "nil-container-has-no-child-visits",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              },
+              "required": {
+                "type": "boolean",
+                "value": true
+              }
+            },
+            "conditions": [],
+            "children": [
+              "text"
+            ]
+          },
+          {
+            "id": "text",
+            "class": "MAStringDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Text"
+              },
+              "required": {
+                "type": "boolean",
+                "value": true
+              }
+            },
+            "conditions": [],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "text"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {}
+          }
+        ]
+      },
+      "entry": {
+        "description": "root",
+        "value": {
+          "type": "nil"
+        }
+      },
+      "expected": {
+        "error": {
+          "class": "MAMultipleErrors",
+          "description": "root",
+          "signalText": "Root",
+          "collection": [
+            {
+              "class": "MARequiredError",
+              "description": "root",
+              "signalText": "Input is required but no input given",
+              "collection": [],
+              "isResumable": true
+            }
+          ],
+          "isResumable": true
+        },
+        "flat": [
+          {
+            "description": "root",
+            "code": "MARequiredError",
+            "message": "Input is required but no input given"
+          }
+        ],
+        "print": "Root: Input is required but no input given"
+      }
+    },
+    {
+      "name": "nil-container-nondefault-sentinel-runs-conditions",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              },
+              "required": {
+                "type": "boolean",
+                "value": true
+              },
+              "undefinedValue": {
+                "type": "string",
+                "value": "sentinel"
+              }
+            },
+            "conditions": [
+              {
+                "label": "condition",
+                "predicate": {
+                  "class": "MAPluggableCondition",
+                  "selector": "notNil",
+                  "receiver": {
+                    "type": "nil"
+                  },
+                  "arguments": [],
+                  "index": 0
+                }
+              }
+            ],
+            "children": [
+              "text"
+            ]
+          },
+          {
+            "id": "text",
+            "class": "MAStringDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Text"
+              },
+              "required": {
+                "type": "boolean",
+                "value": true
+              }
+            },
+            "conditions": [],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "text"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {}
+          }
+        ]
+      },
+      "entry": {
+        "description": "root",
+        "value": {
+          "type": "nil"
+        }
+      },
+      "expected": {
+        "error": {
+          "class": "MAMultipleErrors",
+          "description": "root",
+          "signalText": "Root",
+          "collection": [
+            {
+              "class": "MARequiredError",
+              "description": "root",
+              "signalText": "Input is required but no input given",
+              "collection": [],
+              "isResumable": true
+            },
+            {
+              "class": "MAConditionError",
+              "description": "root",
+              "signalText": "condition",
+              "collection": [],
+              "isResumable": true
+            }
+          ],
+          "isResumable": true
+        },
+        "flat": [
+          {
+            "description": "root",
+            "code": "MARequiredError",
+            "message": "Input is required but no input given"
+          },
+          {
+            "description": "root",
+            "code": "MAConditionError",
+            "message": "condition"
+          }
+        ],
+        "print": "Root: Input is required but no input given\rRoot: condition"
+      }
+    },
+    {
+      "name": "nil-required-message",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              }
+            },
+            "conditions": [],
+            "children": [
+              "text"
+            ]
+          },
+          {
+            "id": "text",
+            "class": "MAStringDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Text"
+              },
+              "required": {
+                "type": "boolean",
+                "value": true
+              },
+              "requiredErrorMessage": {
+                "type": "nil"
+              }
+            },
+            "conditions": [],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "text"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {
+              "text": {
+                "type": "nil"
+              }
+            }
+          }
+        ]
+      },
+      "entry": {
+        "object": "model"
+      },
+      "expected": {
+        "error": {
+          "class": "MAMultipleErrors",
+          "description": "root",
+          "signalText": "Root",
+          "collection": [
+            {
+              "class": "MAMultipleErrors",
+              "description": "text",
+              "signalText": "Text",
+              "collection": [
+                {
+                  "class": "MARequiredError",
+                  "description": "text",
+                  "signalText": null,
+                  "collection": [],
+                  "isResumable": true
+                }
+              ],
+              "isResumable": true
+            }
+          ],
+          "isResumable": true
+        },
+        "flat": [
+          {
+            "description": "text",
+            "code": "MARequiredError",
+            "message": ""
+          }
+        ],
+        "print": "Text: "
+      }
+    },
+    {
+      "name": "nil-range-message",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              }
+            },
+            "conditions": [],
+            "children": [
+              "number"
+            ]
+          },
+          {
+            "id": "number",
+            "class": "MANumberDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Number"
+              },
+              "min": {
+                "type": "integer",
+                "value": "7"
+              },
+              "rangeErrorMessage": {
+                "type": "nil"
+              }
+            },
+            "conditions": [],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "number"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {
+              "number": {
+                "type": "integer",
+                "value": "3"
+              }
+            }
+          }
+        ]
+      },
+      "entry": {
+        "object": "model"
+      },
+      "expected": {
+        "error": {
+          "class": "MAMultipleErrors",
+          "description": "root",
+          "signalText": "Root",
+          "collection": [
+            {
+              "class": "MAMultipleErrors",
+              "description": "number",
+              "signalText": "Number",
+              "collection": [
+                {
+                  "class": "MARangeError",
+                  "description": "number",
+                  "signalText": null,
+                  "collection": [],
+                  "isResumable": true
+                }
+              ],
+              "isResumable": true
+            }
+          ],
+          "isResumable": true
+        },
+        "flat": [
+          {
+            "description": "number",
+            "code": "MARangeError",
+            "message": ""
+          }
+        ],
+        "print": "Number: "
+      }
+    },
+    {
+      "name": "empty-label-still-prints-separator",
+      "graph": {
+        "format": "magritte.graph/4",
+        "root": "root",
+        "descriptions": [
+          {
+            "id": "root",
+            "class": "MAContainer",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": "Root"
+              }
+            },
+            "conditions": [],
+            "children": [
+              "text"
+            ]
+          },
+          {
+            "id": "text",
+            "class": "MAStringDescription",
+            "properties": {
+              "label": {
+                "type": "string",
+                "value": ""
+              }
+            },
+            "conditions": [],
+            "accessor": {
+              "class": "MADictionaryAccessor",
+              "key": "text"
+            }
+          }
+        ],
+        "objects": [
+          {
+            "id": "model",
+            "description": "root",
+            "values": {
+              "text": {
+                "type": "boolean",
+                "value": true
+              }
+            }
+          }
+        ]
+      },
+      "entry": {
+        "object": "model"
+      },
+      "expected": {
+        "error": {
+          "class": "MAMultipleErrors",
+          "description": "root",
+          "signalText": "Root",
+          "collection": [
+            {
+              "class": "MAMultipleErrors",
+              "description": "text",
+              "signalText": "",
+              "collection": [
+                {
+                  "class": "MAKindError",
+                  "description": "text",
+                  "signalText": "Invalid input given",
+                  "collection": [],
+                  "isResumable": true
+                }
+              ],
+              "isResumable": true
+            }
+          ],
+          "isResumable": true
+        },
+        "flat": [
+          {
+            "description": "text",
+            "code": "MAKindError",
+            "message": "Invalid input given"
+          }
+        ],
+        "print": ": Invalid input given"
+      }
+    }
+  ]
+}

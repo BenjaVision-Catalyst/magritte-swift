@@ -383,8 +383,8 @@
       "kind": "missing_semantics",
       "priority": "P2",
       "status": {
-        "cpp": "leaf_error_profile",
-        "swift": "leaf_error_profile"
+        "cpp": "implemented_native_result_protocol",
+        "swift": "implemented_native_result_protocol"
       },
       "depends_on": [
         "MAG-001"
@@ -407,13 +407,15 @@
           "src/magritte.cpp",
           "src/messages.cpp",
           "src/editing.cpp",
-          "include/magritte/magritte.hpp"
+          "include/magritte/magritte.hpp",
+          "src/validation.cpp"
         ],
         "swift": [
           "Sources/Magritte/Magritte.swift",
           "Sources/Magritte/Relationships.swift",
           "Sources/Magritte/Messages.swift",
-          "Sources/Magritte/Editing.swift"
+          "Sources/Magritte/Editing.swift",
+          "Sources/Magritte/Validation.swift"
         ]
       },
       "acceptance_gate": [
@@ -423,14 +425,19 @@
         "Retain a flat-leaf compatibility projection and test memento consumers."
       ],
       "scope_notes": [
-        "Current errors retain description ID, leaf code and String message; they do not model resumable Smalltalk exceptions.",
-        "A native continuation/result protocol can preserve observable behavior without implementing a VM.",
-        "Pinned upstream and previously inspected GT differ in undefined comparison and error arrangement; source is the target for this audit."
+        "Error tags retain actual native descriptions; stack C++ tags remain borrowed.",
+        "Explicit context continuation preserves source control flow without resuming native exception frames.",
+        "Historical GT data is unchanged; the source-profile advances and supporting kernel nil-text semantics are documented."
       ],
       "observation_keys": [
         "container_conditions",
         "nil_error_message"
-      ]
+      ],
+      "implementation": {
+        "phase": "0.31",
+        "documentation": "docs/validation.md",
+        "boundary": "Default source validator with native result/continuation and nested errors; actual model callbacks; nil signal preservation/computed message projection; custom interpreter selection remains MAG-006."
+      }
     },
     {
       "id": "MAG-006",
@@ -1045,6 +1052,14 @@
       "status": "implemented_native_ownership_profile",
       "evidence": "mutable-collections.md",
       "source_fingerprints": "mutable-collection-upstream-methods.json (shared fixtures)",
+      "gt_accessed": false
+    },
+    {
+      "phase": "0.31",
+      "gap": "MAG-005",
+      "status": "implemented_native_result_protocol",
+      "evidence": "validation.md",
+      "source_fingerprints": "validation-protocol-upstream-methods.json (shared fixtures)",
       "gt_accessed": false
     }
   ]

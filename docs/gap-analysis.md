@@ -1,6 +1,6 @@
 # Magritte port gap analysis — 27 October 2026
 
-**0.27 update:** MAG-001 is implemented for registered subclasses of the existing executable profile; see [inherited execution](inheritance.md). MAG-002 is also implemented in 0.28; see [default/self references](default-references.md). MAG-003 is implemented in 0.29 over native vectors/arrays; see [container mutation](container-mutation.md). MAG-004 is implemented in 0.30 within the native ownership profile; see [mutable collections](mutable-collections.md). Baseline counts and probe observations below remain the original 0.26 audit evidence.
+**0.27 update:** MAG-001 is implemented for registered subclasses of the existing executable profile; see [inherited execution](inheritance.md). MAG-002 is also implemented in 0.28; see [default/self references](default-references.md). MAG-003 is implemented in 0.29 over native vectors/arrays; see [container mutation](container-mutation.md). MAG-004 is implemented in 0.30 within the native ownership profile; see [mutable collections](mutable-collections.md). MAG-005 is implemented in 0.31; see [validation](validation.md). Baseline counts and probe observations below remain the original 0.26 audit evidence.
 
 At that baseline, both ports implemented a substantial headless Magritte profile, but were not yet faithful across the full model protocol. The most consequential remaining gaps were **inherited execution for registered description subclasses, default reference semantics, persistent container state and mutable collection identity**. Adding more class names or small convenience methods will not close those gaps.
 
@@ -43,7 +43,7 @@ Statuses below apply to **both** ports. “Limited” denotes an intentional cur
 | MAG-002 | Done, 0.28 | Default/self references, relation helpers and nullable graph/4 storage implemented; [evidence and ownership](default-references.md). |
 | MAG-003 | Done, 0.29 | Native source-shaped mutations, persistent priority state and graph adaptation implemented; [evidence and boundaries](container-mutation.md). |
 | MAG-004 | P1 | Implemented in 0.30: native collection identity, aliases/cycles, shallow copies, memento originals and shared child backing; see the documented ownership/hash-key limits. |
-| MAG-005 | P2 | Validation: flat String leaf errors; no source-shaped nested error/continuation protocol, container conditions or nil-message emission. |
+| MAG-005 | P2 | Implemented in 0.31: native nested errors and continuation, actual-model container conditions, nil signals and flat compatibility projection. |
 | MAG-006 | P2 | Interpreters: default reader/writer/validator classes only; wider local selection, stateful streaming and message writers are incomplete. |
 | MAG-007 | P2 | Properties: stored operations exist; announcements/subscriptions and wider object-valued property-owner behavior do not. |
 | MAG-008 | P2 | Options: accessor-valued `groupBy`/`isGrouped` and its metadata are absent. |
@@ -91,7 +91,7 @@ The 0.26 audit found only inline snapshots. Phase 0.30 adds explicit mutable col
 
 ## Important follow-on boundaries
 
-Validation currently accumulates leaf errors with String messages. It refuses container conditions and fails when explicit nil error text must be emitted. Upstream has resumable errors and nested `MAMultipleErrors`. Preserve the observable nesting and continuation behavior through a native result/error protocol; implementing a Smalltalk VM is not required. Description-selected custom interpreters also need local behavior bindings: subclassing the existing standalone Visitor does not automatically make that visitor the description's validator or string writer.
+Phase 0.31 implements the default source validator with native nested error objects, explicit continuation, container conditions and nil-message emission; see [validation](validation.md). Flat leaves remain a projection. Description-selected custom interpreters also need local behavior bindings: subclassing the existing standalone Visitor does not automatically make that visitor the description's validator or string writer.
 
 The grouping gap has a subtle nil rule. Upstream `groupBy:` applies `asAccessor`; setting nil creates a **MANullAccessor**, so `isGrouped` is true. An absent/raw nil property is different. Its annotated `descriptionGroupBy` uses MASymbolDescription although the getter returns an accessor. Resolve that mismatch with source evidence rather than changing the getter to fit a guessed schema. No grouping UI algorithm is implied.
 
@@ -107,7 +107,7 @@ Some upstream source needs investigation rather than literal copying: `MAMessagi
 2. **Reference semantics completed in 0.28 (MAG-002); grouped options remain MAG-008.** Default/self references and relation helper behavior are implemented; grouping remains a separate accessor/metadata phase.
 3. **Completed in 0.29: container mutation/order (MAG-003).** Native vector/array state and source-shaped mutations are implemented. Mutable backing aliases are implemented in 0.30 (MAG-004).
 4. **Completed in 0.30: collection identity and mementos (MAG-004).** Native storage, aliases/cycles, shallow copy boundaries and graph/4 identity tables are covered.
-5. **Validation, interpreter selection, announcements and schema closure (MAG-005–007 and MAG-009).** Deliver as separate coherent changes using the ledger's dependencies. Reuse the implemented visitor, property and method-registration layers.
+5. **Completed in 0.31: validation (MAG-005).** Interpreter selection, announcements and schema closure (MAG-006–007 and MAG-009) remain separate coherent changes using the ledger's dependencies. Reuse the implemented visitor, property and method-registration layers.
 6. **Expand value/model families (MAG-010–014).** Temporal values and numeric round-trip closure are useful early candidates; then select source-defined table/file, action or utility families. Keep Unicode and arbitrary-precision work separately testable.
 
 For each phase: pin the relevant upstream methods/tests, author focused semantic traces, run the shared fixtures plus relevant native suites, and check copy/lifetime/metadata/interchange boundaries. Push tested component commits before updating workspace pointers. Add fresh GT evidence only after the user lifts the current restriction, and then follow the workspace lease/completion-marker workflow. Estimates should follow a concrete design for collection ownership and inherited execution; class counts are not a sizing model.

@@ -67,7 +67,7 @@ extension Description {
     return try putMessage(self, "rangeErrorMessage", v, limits)
   }
 }
-func validationMessage(_ d: Description, _ code: String, _ limits: Limits) throws -> String {
+func validationMessage(_ d: Description, _ code: String, _ limits: Limits) throws -> String? {
   let value: Value
   switch code {
   case "MARequiredError": value = try d.requiredErrorMessage(limits: limits)
@@ -76,8 +76,7 @@ func validationMessage(_ d: Description, _ code: String, _ limits: Limits) throw
   case "MARangeError": value = try d.rangeErrorMessage(limits: limits)
   default: throw MagritteError("Unsupported description error message")
   }
-  guard case .string(let s) = value else {
-    throw MagritteError("Nil error text has no String ValidationError representation")
-  }
+  if value.isNil{return nil}
+  guard case .string(let s)=value else{throw MagritteError("Error message must be String or nil")}
   return s
 }

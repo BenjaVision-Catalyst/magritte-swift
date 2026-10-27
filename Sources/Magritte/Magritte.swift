@@ -89,11 +89,11 @@ public extension Model {
     func writeSlot(strategy: String, name: String, value: Value) throws { throw MagritteError("Unbound accessor write") }
 }
 public struct Condition {
-    public var label: String
-    public var test: (Value) throws -> Bool
-    public init(label: String, test: @escaping (Value) throws -> Bool) {
-        self.label = label; self.test = test
-    }
+    public var label: String?
+    public var test: ((Value) throws -> Bool)?
+    public var modelTest: ((Model) throws -> Bool)?
+    public init(label: String?, test: @escaping (Value) throws -> Bool) {self.label=label;self.test=test;modelTest=nil}
+    public init(label: String?, modelTest: @escaping (Model) throws -> Bool) {self.label=label;self.modelTest=modelTest;test=nil}
 }
 open class Description: Model {
     open func acceptMagritte(_ visitor: Visitor) throws { try dispatchMagritte(self, visitor) }
@@ -417,7 +417,6 @@ func supported(_ d: Description) throws {
         default: try require(k.hasPrefix("metadata:"), "Unsupported semantic property: \(k)")
         }
     }
-    try require(!d.isContainer || d.portableConditions.isEmpty, "Portable container conditions require a model message protocol")
     try require(d.isContainer || d.children.isEmpty, "Scalar cannot contain children")
   if d.isReference {
     _ = try storedReference(d)

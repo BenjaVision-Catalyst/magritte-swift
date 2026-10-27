@@ -60,7 +60,7 @@ Checked-memento conflict validation resets the memento before obtaining the repr
 
 ## Supported message profile and interchange
 
-Message settings support String and explicit nil data. Other object kinds are rejected by the checked setter/getter and codec profile. Native ValidationError.message remains a String. If an actual failure requires emitting a stored nil message, validation explicitly throws because the Smalltalk exception's nil-message/default-text protocol is not yet represented by that API. It does not substitute a generic message or treat nil as absence. Storing/getting/copying/serializing nil is supported, and validation which does not emit that error is unaffected. Full nested/resumable exception trees and custom validator/interpreter instances remain separate gaps.
+Phase 0.31 emits explicit nil as optional signalText on native validation issues, while the verified Pharo messageText protocol computes an empty String. Flat ValidationError.message projects that computed text. Nested groups, tag identity, continuation and printing are documented in [validation](validation.md). Custom interpreter selection remains MAG-006.
 
 Graph/3–4 accepts `requiredErrorMessage`, `kindErrorMessage` and `conflictErrorMessage` on descriptions, and `rangeErrorMessage` on the supported magnitude description. Values are String or nil, preserving presence. Graph/1–2 rejects these fields, including nil. Copying retains independent property dictionaries. No new graph version, Value tag, callable message representation or event mechanism is introduced. Unsupported semantic fields continue to fail export/import.
 

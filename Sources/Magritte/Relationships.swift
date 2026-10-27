@@ -99,7 +99,7 @@ public extension Graph {
         throw MagritteError("Dangling object reference: \(id)")
     }
 }
-private func kindOf(_ v: Value, _ kind: String, _ graph: Graph?) throws -> Bool {
+func validationKindOf(_ v: Value, _ kind: String, _ graph: Graph?) throws -> Bool {
   if case .conflict(let c) = v { return c.kindOf(kind) }
   if case .reference = v {
     guard let graph else {
@@ -141,133 +141,8 @@ final class Budget {
         work += 1; try require(work <= limits.visits && depth <= limits.depth, "Validation work/depth limit")
     }
 }
-private func validateModel(_ d: Description, _ model: Model, _ graph: Graph?, _ budget: Budget, _ depth: Int) throws -> [ValidationError] {
-    try budget.tick(depth); try supported(d); try checkPortableDescription(d, limits: budget.limits, work: &budget.work)
-    if try !d.flag("visible") || d.flag("readOnly") { return [] }
-    if !d.isContainer { return try validateField(d, model.read(using: d), graph, budget, depth + 1) }
-    try require(d.conditions.isEmpty, "Container local conditions are not implemented")
-    var errors: [ValidationError] = []
-    for c in try d.orderedChildren() {
-        if try c.isContainer && (model.usesStoredContainerValues || c.nativeRead != nil || ((c.accessor != nil || c.accessorObject != nil) && c.effectiveAccessor.className != "MAIdentityAccessor")) {
-            errors += try validateField(c, model.read(using: c), graph, budget, depth + 1)
-        } else { errors += try validateModel(c, model, graph, budget, depth + 1) }
-    }
-    return errors
-}
-private func checkReferences(_ v: Value, _ graph: Graph?, _ budget: Budget, _ depth: Int) throws {
-    try budget.tick(depth)
-    switch v {
-  case .mutableCollection(let ref):
-    if !budget.collections.insert(try ref.identity()).inserted { return }
-    try checkReferences(ref.snapshot(), graph, budget, depth)
-  case .reference:
-        guard let graph else { throw MagritteError("Object references require a graph resolver") }; _ = try graph.resolve(v)
-    case .array(let a), .collection(_, let a):
-        try require(a.count <= budget.limits.visits - budget.work, "Collection work limit")
-        for e in a { try checkReferences(e, graph, budget, depth + 1) }
-    default: break
-    }
-}
-private func validateField(_ d: Description, _ v: Value, _ graph: Graph?, _ budget: Budget, _ depth: Int) throws -> [ValidationError] {
-    try budget.tick(depth); try supported(d); try checkPortableDescription(d, limits: budget.limits, work: &budget.work)
-    if try !d.flag("visible") || d.flag("readOnly") { return [] }
-    try checkReferences(v, graph, budget, depth)
-    var errors: [ValidationError] = []
-  func error(_ code: String) throws {
-    errors.append(
-      ValidationError(
-        descriptionID: d.id, code: code, message: try validationMessage(d, code, budget.limits)))
-  }
-  if try d.flag("required")
-    && (v.isNil || (d.isMultiple && v.isCollection && v.collectionCount() == 0))
-  {
-    try error("MARequiredError")
-  }
-  if try equalRuntimeValues(v, d.property("undefinedValue"), budget.limits, &budget.work) {
-    return errors
-  }
-  if d.isContainer {
-        guard let graph else { throw MagritteError("Container value validation requires a graph resolver") }
-        let nested = try validateModel(d, graph.resolve(v), graph, budget, depth + 1)
-        return errors + nested
-    }
-    var kind = true
-  if (d.isRelation || d.isOption) && d.properties["kind"] != nil {
-    guard case .classValue(let expected) = try d.property("kind") else {
-      throw MagritteError("Description kind is nil")
-    }
-    if try !kindOf(v, expected, graph) { try error("MAKindError"); return errors }
-  }
-  if d.isRelation {
-    func check(_ e: Value) throws {
-            try budget.tick(depth)
-            var accepted = false
-            for cls in d.classes { try budget.tick(depth); if try kindOf(e, cls, graph) { accepted = true } }
-      if !accepted { try error("MAKindError"); kind = false }
-    }
-        if d.isMultiple {
-      if !v.isCollection {
-        try error("MAKindError"); kind = false
-      } else {
-                try require(v.collectionCount() <= budget.limits.visits - budget.work, "Collection work limit")
-                for e in try v.elements() { try check(e) }
-            }
-        } else { try check(v) }
-    } else if d.isOption {
-        func check(_ e: Value) throws {
-            var member = false
-            if case .dynamic(let source) = d.options { try budget.tick(depth); member = try source.includes(e, limits: budget.limits) }
-      else {
-        for option in try d.options.values(limits: budget.limits) {
-          try budget.tick(depth);
-          if try equalRuntimeValues(e, option, budget.limits, &budget.work) { member = true; break }
-        }
-      }
-            if member { return }
-      if try !d.flag("extensible") { try error("MAKindError"); kind = false; return }
-      let nested = try validateField(d.referenceDescription(), e, graph, budget, depth + 1)
-            if !nested.isEmpty { kind = false }; errors += nested
-        }
-        if d.isMultiple {
-      if !v.isCollection {
-        try error("MAKindError"); kind = false
-      } else {
-                try require(v.collectionCount() <= budget.limits.visits - budget.work, "Collection work limit")
-                for e in try v.elements() { try check(e) }
-            }
-        } else { try check(v) }
-    } else {
-    guard case .classValue(let expected) = try d.property("kind") else {
-      throw MagritteError("Description kind is nil")
-    }
-    kind = try kindOf(v, expected, graph)
-    if !kind { try error("MAKindError") }
-  }
-    if !kind { return errors }
-    if descriptionIs(d, "MANumberDescription") {
-    let min = try d.property("min"), max = try d.property("max")
-    if try (!min.isNil && compareNumbers(v, min) < 0) || (!max.isNil && compareNumbers(v, max) > 0)
-    {
-      try error("MARangeError")
-    }
-  }
-    for c in d.portableConditions {
-        if try !evaluatePredicate(c.predicate, v, limits: budget.limits, work: &budget.work) { errors.append(ValidationError(descriptionID: d.id, code: "MAConditionError", message: c.label)) }
-    }
-    for c in d.conditions {
-        try budget.tick(depth)
-        if try !c.test(v) { errors.append(ValidationError(descriptionID: d.id, code: "MAConditionError", message: c.label)) }
-    }
-    return errors
-}
-public func validateValue(_ value: Value, using d: Description, graph: Graph? = nil, limits: Limits = Limits()) throws -> [ValidationError] {
-    try validateField(d, value, graph, Budget(limits), 0)
-}
-public func validate(_ model: Model, using root: Description, limits: Limits = Limits(), graph: Graph? = nil) throws -> [ValidationError] {
-    let budget = Budget(limits)
-    try visit(root, limits: limits) { try supported($0); try checkPortableDescription($0, limits: limits, work: &budget.work) }
-    return try validateModel(root, model, graph, budget, 0)
-}
+public func validateValue(_ value:Value,using d:Description,graph:Graph?=nil,limits:Limits=Limits())throws->[ValidationError]{try validateValueDetailed(value,using:d,graph:graph,limits:limits).flatErrors(limits:limits)}
+public func validate(_ model:Model,using d:Description,limits:Limits=Limits(),graph:Graph?=nil)throws->[ValidationError]{try validateDetailed(model,using:d,limits:limits,graph:graph).flatErrors(limits:limits)}
 
 // Length-delimited semantic keys avoid quadratic unordered-collection matching.
 // Reference identity and collection kind remain part of the key.

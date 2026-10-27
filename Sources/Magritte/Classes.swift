@@ -24,7 +24,18 @@ public final class ClassRegistry: @unchecked Sendable {
     names: [String: ObjectIdentifier] = [:]
   private init() {
     try! registerClasses([
-      ClassInfo(name: "Array", superclass: "ArrayedCollection", isAbstract: false, label: "Array"),
+      ClassInfo(name:"Exception",superclass:"Object"),
+ClassInfo(name:"Error",superclass:"Exception"),
+ClassInfo(name:"GRError",superclass:"Error"),
+ClassInfo(name:"MAError",superclass:"GRError"),
+ClassInfo(name:"MAValidationError",superclass:"MAError"),
+ClassInfo(name:"MAMultipleErrors",superclass:"MAValidationError"),
+ClassInfo(name:"MARequiredError",superclass:"MAValidationError"),
+ClassInfo(name:"MAKindError",superclass:"MAValidationError"),
+ClassInfo(name:"MARangeError",superclass:"MAValidationError"),
+ClassInfo(name:"MAConditionError",superclass:"MAValidationError"),
+ClassInfo(name:"MAConflictError",superclass:"MAValidationError"),
+ClassInfo(name: "Array", superclass: "ArrayedCollection", isAbstract: false, label: "Array"),
       ClassInfo(
         name: "ArrayedCollection", superclass: "SequenceableCollection", isAbstract: true,
         label: "Arrayed Collection"),

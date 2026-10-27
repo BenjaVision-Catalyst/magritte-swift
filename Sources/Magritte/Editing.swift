@@ -104,9 +104,8 @@ public class Memento: Model {
   public func reset() throws { throw MagritteError("Abstract memento reset") }
   /// Commit does not validate and does not provide a transaction.
   public func commit() throws { throw MagritteError("Abstract memento commit") }
-  public func validate() throws -> [ValidationError] {
-    try Magritte.validate(self, using: description, limits: limits, graph: graph)
-  }
+  public func validateDetailed() throws -> ValidationResult {try Magritte.validateDetailed(self,using:description,limits:limits,graph:graph)}
+  public func validate() throws -> [ValidationError] {try validateDetailed().flatErrors(limits:limits)}
 }
 public final class StraightMemento: Memento {
   public override var className: String { "MAStraightMemento" }
@@ -281,13 +280,10 @@ public final class CheckedMemento: CachedMemento {
       actual.value, over: previous, using: entry.description, limits: limits, work: &work)
       && super.shouldPush(entry, current: current, work: &work)
   }
-  public override func validate() throws -> [ValidationError] {
-    if try !hasConflict() { return try super.validate() }
+  public override func validateDetailed() throws -> ValidationResult {
+    if try !hasConflict(){return try super.validateDetailed()}
     try reset()
-    return [
-      ValidationError(
-        descriptionID: description.id, code: "MAConflictError",
-        message: try validationMessage(description, "MAConflictError", limits))
-    ]
+    return ValidationResult(error:try ValidationIssue(tag:description,code:"MAConflictError",signalText:validationMessage(description,"MAConflictError",limits)))
   }
+  public override func validate() throws -> [ValidationError] {try validateDetailed().flatErrors(limits:limits)}
 }

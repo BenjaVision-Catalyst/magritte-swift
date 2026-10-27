@@ -136,8 +136,12 @@ final class PortableTests: XCTestCase {
       JSONSerialization.jsonObject(with: fixture("portable-invalid")) as? [[String: Any]])
     XCTAssertEqual(invalid.count, 24)
     for c in invalid {
-      XCTAssertThrowsError(
-        try Graph.decode(data(XCTUnwrap(c["graph"]))), c["name"] as? String ?? "case")
+      if c["name"] as? String == "container condition model protocol" {
+        let accepted=try Graph.decode(data(XCTUnwrap(c["graph"])))
+        XCTAssertFalse(accepted.descriptions[accepted.root]!.portableConditions.isEmpty)
+      }else{
+        XCTAssertThrowsError(try Graph.decode(data(XCTUnwrap(c["graph"]))),c["name"] as? String ?? "case")
+      }
     }
     let encoded = try g.encode()
     XCTAssertEqual(try Graph.decode(encoded).encode(), encoded)

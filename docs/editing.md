@@ -83,3 +83,5 @@ Both native tests also edit a Number description and then its active model throu
 Generate round-trip inputs with `magritte-editing-tests /private/tmp/magritte-cpp-editing-native.json` and `MAGRITTE_EDITING_EXPORT=/private/tmp/magritte-swift-editing-native.json swift test`. Run replay requests through GT MCP under the lease/marker workflow in conformance.md. Pure reference runs allocate no native Runtime resources and leave persistent Smalltalk source untouched.
 
 Phase 0.26 corrects generic Object readUsing nil fallback before the memento sees an underlying result. A generic non-nil undefined sentinel survives a straight read but is cooked to default by cached/checked pulls; adaptive absent nil retains the earlier rules. Memento read overrides themselves are unchanged, including staged nil. See [model-read.md](model-read.md).
+
+Phase 0.31 adds `validateDetailed` to mementos, preserving nested visit errors and direct checked-conflict emission, including nil signal text. Existing `validate` projects flat leaves. Container model conditions receive the actual editor. See [validation](validation.md).
