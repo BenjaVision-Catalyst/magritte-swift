@@ -120,6 +120,9 @@ private final class Work {
   func key(_ value: Value) throws -> String { try valueKey(value, tick: { try self.tick($0) }) }
 }
 private func portableText(_ value: Value) throws -> String {
+  if case .mutableCollection(let ref) = value, try ref.kind() == "string" {
+    return try portableText(ref.snapshot())
+  }
   switch value {
   case .string(let s), .symbol(let s): return s
   default: throw MagritteError("Expected text")
@@ -179,7 +182,7 @@ func evaluatePredicate(_ p: Predicate, _ input: Value, limits: Limits, work: ino
 {
   let w = Work(limits, work)
   try checkPredicate(p, w, 0)
-  _ = try w.key(input)
+  try checkRuntimeValue(input, limits, &w.count)
   let result = try predicate(p, input, w, 0)
   work = w.count
   return result
@@ -196,7 +199,9 @@ private func predicate(_ p: Predicate, _ input: Value, _ w: Work, _ depth: Int) 
   let r = p.index == 0 ? input : p.receiver
   var args = p.arguments
   if p.index > 0 { args[p.index - 1] = input }
-  func equal(_ a: Value, _ b: Value) throws -> Bool { try w.key(a) == w.key(b) }
+  func equal(_ a: Value, _ b: Value) throws -> Bool {
+    try equalRuntimeValues(a, b, w.limits, &w.count)
+  }
   let s = p.selector
   if s == "isNil" { return r.isNil }
   if s == "notNil" { return !r.isNil }
@@ -819,6 +824,9 @@ private func writeModel(_ d: Description, _ model: Model, _ graph: Graph?, _ w: 
 private func write(
   _ d: Description, _ value: Value, _ graph: Graph?, _ w: Work, _ depth: Int, _ initial: Bool
 ) throws -> String {
+  if case .mutableCollection(let ref) = value, try ref.kind() == "string" {
+    return try write(d, ref.snapshot(), graph, w, depth + 1, initial)
+  }
   try w.tick(depth)
   var result = ""
   if initial && value.isNil {
@@ -1048,6 +1056,9 @@ public func encodeAccessor(_ a: Accessor, limits: Limits = Limits()) throws -> D
 }
 
 func displayString(_ value: Value) throws -> String {
+  if case .mutableCollection(let ref) = value, try ref.kind() == "string" {
+    return try displayString(ref.snapshot())
+  }
   switch value {
   case .fraction: let f = try fractionOf(value); return "(\(f.0)/\(f.1))"
   case .conflict(let c): return c.string

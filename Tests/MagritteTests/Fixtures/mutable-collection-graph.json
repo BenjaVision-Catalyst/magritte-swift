@@ -1,0 +1,94 @@
+{
+  "format": "magritte.graph/4",
+  "root": "root",
+  "descriptions": [
+    {
+      "id": "a",
+      "class": "MAToManyScalarRelationDescription",
+      "properties": {},
+      "accessor": {
+        "class": "MADictionaryAccessor",
+        "key": "a"
+      },
+      "reference": null,
+      "classes": [],
+      "conditions": []
+    },
+    {
+      "id": "b",
+      "class": "MAToManyScalarRelationDescription",
+      "properties": {},
+      "accessor": {
+        "class": "MADictionaryAccessor",
+        "key": "b"
+      },
+      "reference": null,
+      "classes": [],
+      "conditions": []
+    },
+    {
+      "id": "peer",
+      "class": "MAContainer",
+      "properties": {},
+      "children": [
+        "a",
+        "b"
+      ],
+      "childrenCollection": "children.peer",
+      "conditions": []
+    },
+    {
+      "id": "root",
+      "class": "MAContainer",
+      "properties": {},
+      "children": [
+        "a",
+        "b"
+      ],
+      "childrenCollection": "children.peer",
+      "conditions": []
+    }
+  ],
+  "objects": [
+    {
+      "id": "model",
+      "description": "root",
+      "values": {
+        "a": {
+          "type": "collectionReference",
+          "value": "live"
+        },
+        "b": {
+          "type": "collectionReference",
+          "value": "live"
+        }
+      }
+    }
+  ],
+  "collections": [
+    {
+      "id": "live",
+      "kind": "ordered",
+      "elements": [
+        {
+          "type": "string",
+          "value": "wire"
+        },
+        {
+          "type": "collectionReference",
+          "value": "live"
+        }
+      ]
+    }
+  ],
+  "childCollections": [
+    {
+      "id": "children.peer",
+      "kind": "ordered",
+      "children": [
+        "a",
+        "b"
+      ]
+    }
+  ]
+}

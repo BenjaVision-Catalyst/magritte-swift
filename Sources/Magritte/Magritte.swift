@@ -2,29 +2,35 @@ import Foundation
 import CoreFoundation
 
 public indirect enum Value: Equatable {
-    case undefined, boolean(Bool), integer(Int64), string(String), array([Value])
+  case mutableCollection(CollectionReference)
+  case undefined, boolean(Bool), integer(Int64), string(String), array([Value])
   case fraction(numerator: Int64, denominator: Int64)
   case conflict(CompositeConflict)
   case reference(String), character(String), collection(kind: String, elements: [Value]), symbol(
     String), float(Double), classValue(String)
   public var isNil: Bool { if case .undefined = self { return true }; return false }
   public static func == (lhs: Value, rhs: Value) -> Bool {
-        do { return try valueKey(lhs, tick: { _ in }) == valueKey(rhs, tick: { _ in }) }
-        catch { return false }
+    var limits=Limits();limits.bytes=Int.max;limits.depth=Int.max;limits.nodes=Int.max;limits.items=Int.max;limits.visits=Int.max
+    do { return try valuesEqual(lhs, rhs,limits:limits) } catch { return false }
     }
     public var isCollection: Bool {
-        switch self { case .string, .symbol, .array, .collection: return true; default: return false }
+    switch self {
+    case .mutableCollection, .string, .symbol, .array, .collection: return true;
+    default: return false
     }
+  }
     public func collectionCount() throws -> Int {
         switch self {
-        case .array(let a), .collection(_, let a): return a.count
+    case .mutableCollection(let r): return try r.snapshot().collectionCount()
+    case .array(let a), .collection(_, let a): return a.count
         case .string(let s), .symbol(let s): return s.unicodeScalars.count
         default: throw MagritteError("Value is not a collection")
         }
     }
     public func elements() throws -> [Value] {
         switch self {
-        case .array(let a), .collection(_, let a): return a
+    case .mutableCollection(let r): return try r.snapshot().elements()
+    case .array(let a), .collection(_, let a): return a
         case .string(let s), .symbol(let s): return s.unicodeScalars.map { .character(String($0)) }
         default: throw MagritteError("Value is not a collection")
         }
@@ -106,8 +112,12 @@ open class Description: Model {
       || registry.includesBehavior(className, "MAMagnitudeDescription")
   }
   public var properties: [String: Value] = [:]
-  public var children: [Description] = []
-    var defaultReference: Description?
+  public var childCollection = DescriptionChildren()
+  public var children: [Description] {
+    get { childCollection.values }
+    set { childCollection.values = newValue }
+  }
+  var defaultReference: Description?
     var referenceWasBound = false
     public weak var reference: Description? {
       didSet {
@@ -536,8 +546,10 @@ func identity(_ any: Any?) throws -> String {
 func list(_ any: Any?) throws -> [Any] {
     guard let a = any as? [Any] else { throw MagritteError("Expected array") }; return a
 }
-func value(_ any: Any, _ limits: Limits, _ depth: Int = 0) throws -> Value {
-    try require(depth <= limits.depth, "Value depth limit")
+func value(_ any: Any, _ limits: Limits, _ depth: Int = 0, _ store: CollectionStore? = nil) throws
+  -> Value
+{
+  try require(depth <= limits.depth, "Value depth limit")
     let d = try dictionary(any), type = try text(d["type"])
     if type == "nil" { try keys(d, ["type"]); return .undefined }
     try keys(d, ["type", "value"])
@@ -548,6 +560,9 @@ func value(_ any: Any, _ limits: Limits, _ depth: Int = 0) throws -> Value {
     guard let n = Int64(try text(f["numerator"])), let d = Int64(try text(f["denominator"])),
       String(n) == (f["numerator"] as? String), String(d) == (f["denominator"] as? String)
     else { throw MagritteError("Noncanonical fraction") }; return try Value.rational(n, d)
+  case "collectionReference":
+    guard let store else { throw MagritteError("Collection references require graph/4 context") };
+    return try store.at(identity(v))
   case "string": return .string(try text(v))
   case "class":
     let name = try identity(v); try require(knownClass(name), "Unknown portable class");
@@ -566,8 +581,8 @@ func value(_ any: Any, _ limits: Limits, _ depth: Int = 0) throws -> Value {
         return .integer(i)
     case "array", "ordered", "set", "bag":
         let a = try list(v); try require(a.count <= limits.items, "Value item limit")
-        let elements = try a.map { try value($0, limits, depth + 1) }
-        if type == "set" {
+    let elements = try a.map { try value($0, limits, depth + 1, store) }
+    if type == "set" {
             var work = 0, keys = Set<String>()
             for e in elements {
                 let key = try valueKey(e) { depth in
@@ -580,10 +595,26 @@ func value(_ any: Any, _ limits: Limits, _ depth: Int = 0) throws -> Value {
     default: throw MagritteError("Unsupported value type: \(type)")
     }
 }
-func wire(_ v: Value, _ limits: Limits, _ depth: Int = 0) throws -> [String: Any] {
-    try require(depth <= limits.depth, "Value depth limit")
+final class CollectionWireContext {
+  var pending: [String: Value] = [:]
+  var identities: [ObjectIdentifier: String] = [:]
+}
+func wire(_ v: Value, _ limits: Limits, _ depth: Int = 0, _ context: CollectionWireContext? = nil)
+  throws -> [String: Any]
+{
+  try require(depth <= limits.depth, "Value depth limit")
     switch v {
-    case .undefined: return ["type": "nil"]
+  case .mutableCollection(let ref):
+    guard let context else {
+      throw MagritteError("Mutable collection values require a graph/4 identity context")
+    }
+    let ptr = try ref.identity()
+    if let id = context.identities[ptr] { return ["type": "collectionReference", "value": id] }
+    var id = ref.id, suffix = 0
+    while context.pending[id] != nil { suffix += 1; id = ref.id + ".\(suffix)" }
+    context.identities[ptr] = id; context.pending[id] = v
+    return ["type": "collectionReference", "value": id]
+  case .undefined: return ["type": "nil"]
     case .boolean(let b): return ["type": "boolean", "value": b]
     case .integer(let i): return ["type": "integer", "value": String(i)]
     case .string(let s): return ["type": "string", "value": s]
@@ -603,12 +634,12 @@ func wire(_ v: Value, _ limits: Limits, _ depth: Int = 0) throws -> [String: Any
         return ["type": "character", "value": s]
     case .array(let a):
         try require(a.count <= limits.items, "Value item limit")
-        return ["type": "array", "value": try a.map { try wire($0, limits, depth + 1) }]
-    case .collection(let kind, let a):
+    return ["type": "array", "value": try a.map { try wire($0, limits, depth + 1, context) }]
+  case .collection(let kind, let a):
         try require(["ordered", "set", "bag"].contains(kind), "Unsupported collection kind")
         try require(a.count <= limits.items, "Value item limit")
-        return ["type": kind, "value": try a.map { try wire($0, limits, depth + 1) }]
-    }
+    return ["type": kind, "value": try a.map { try wire($0, limits, depth + 1, context) }]
+  }
 }
 public func decodeValue(_ data: Data, limits: Limits = Limits()) throws -> Value { try value(parse(data, limits), limits) }
 public func encodeValue(_ v: Value, limits: Limits = Limits()) throws -> Data {
@@ -621,13 +652,25 @@ public final class Graph {
     public var root: String
     public var descriptions: [String: Description]
     public var objects: [String: AdaptiveModel]
-    public init(root: String, descriptions: [String: Description] = [:], objects: [String: AdaptiveModel] = [:]) {
+  public var collections = CollectionStore()
+  public init(root: String, descriptions: [String: Description] = [:], objects: [String: AdaptiveModel] = [:]) {
         self.root = root; self.descriptions = descriptions; self.objects = objects
     }
     public static func decode(_ data: Data, limits: Limits = Limits()) throws -> Graph {
         let j = try dictionary(parse(data, limits))
-        try keys(j, ["format", "root", "descriptions", "objects"])
-        let format = try text(j["format"])
+    var header = j; header.removeValue(forKey: "collections");
+    header.removeValue(forKey: "childCollections")
+    try keys(header, ["format", "root", "descriptions", "objects"])
+    if j["childCollections"] != nil {
+      try require(
+        (j["format"] as? String) == "magritte.graph/4", "Child collection identity requires graph/4"
+      )
+    }
+    if j["collections"] != nil {
+      try require(
+        (j["format"] as? String) == "magritte.graph/4", "Mutable collections require graph/4")
+    }
+    let format = try text(j["format"])
         try require(["magritte.graph/1", "magritte.graph/2", "magritte.graph/3", "magritte.graph/4"].contains(format), "Unsupported format")
         if format != "magritte.graph/4" {
             func legacy(_ node: Any) throws {
@@ -644,7 +687,27 @@ public final class Graph {
       }; try legacy(j)
         }
         let g = Graph(root: try identity(j["root"])); g.format = format
-        let nodes = try list(j["descriptions"])
+    if let raw = j["collections"] {
+      let records = try list(raw)
+      try require(records.count <= limits.nodes, "Collection table limit")
+      for record in records {
+        let n = try dictionary(record); try keys(n, ["id", "kind", "elements"])
+        let kind = try text(n["kind"]), elements = try list(n["elements"])
+        try require(elements.count <= limits.items, "Collection element limit")
+        let placeholders: [Value] =
+          kind == "array"
+          ? Array(repeating: .undefined, count: elements.count)
+          : kind == "string" ? Array(repeating: .character(" "), count: elements.count) : []
+        _ = try g.collections.create(
+          kind: kind, id: identity(n["id"]), elements: placeholders, limits: limits)
+      }
+      for record in records {
+        let n = try dictionary(record), elements = try list(n["elements"])
+        try g.collections.at(identity(n["id"])).mutableCollection().setElements(
+          elements.map { try value($0, limits, 0, g.collections) }, limits: limits)
+      }
+    }
+    let nodes = try list(j["descriptions"])
         try require(nodes.count <= limits.nodes, "Description node limit")
         for node in nodes {
             let n = try dictionary(node)
@@ -660,6 +723,12 @@ public final class Graph {
       if let order = n["childrenOrder"] {
         try require(format == "magritte.graph/4" && descriptionIs(d, "MAPriorityContainer") && (order as? String) == "stored", "Stored children order requires a graph/4 priority container")
         names.insert("childrenOrder")
+      }
+      if n["childrenCollection"] != nil {
+        try require(
+          format == "magritte.graph/4" && d.isContainer,
+          "Child collection identity requires graph/4 container");
+        names.insert("childrenCollection")
       }
       if let raw = n["definingContext"] {
         try require(format == "magritte.graph/4", "Defining context requires graph/4");
@@ -688,7 +757,7 @@ public final class Graph {
         try require(
           k != "maPrintString" && k != "maPrintStringSeparator",
           "Print settings are local callable state")
-        d.properties[k] = try value(v, limits)
+        d.properties[k] = try value(v, limits, 0, g.collections)
       }
       if !d.isContainer {
         guard let accessor = n["accessor"] else { throw MagritteError("Missing accessor") }
@@ -761,13 +830,13 @@ public final class Graph {
                 }
             }
             if d.isOption {
-                d.options = Options(try list(n["options"]).map { try value($0, limits) })
-                var labelKeys = Set<String>(), labelWork = 0
+        d.options = Options(try list(n["options"]).map { try value($0, limits, 0, g.collections) })
+        var labelKeys = Set<String>(), labelWork = 0
                 for label in try list(n["labels"]) {
                     let entry = try dictionary(label); try keys(entry, ["value", "label"])
                     guard let v = entry["value"] else { throw MagritteError("Missing label value") }
-                    let keyValue = try value(v, limits)
-                    try require(portableLabelKey(keyValue), "Identity-sensitive option label key is not portable")
+          let keyValue = try value(v, limits, 0, g.collections)
+          try require(portableLabelKey(keyValue), "Identity-sensitive option label key is not portable")
                     let key = try valueKey(keyValue) { depth in
                         labelWork += 1; try require(labelWork <= limits.visits && depth <= limits.depth, "Label comparison work limit")
                     }
@@ -792,8 +861,50 @@ public final class Graph {
                 d.children.append(c)
             }
             if n["childrenOrder"] == nil { try d.setChildren(d.children, limits: limits) }
+      else if descriptionIs(d, "MAPriorityContainer") {
+        d.childCollection = DescriptionChildren(d.children, kind: "sorted")
+      }
+    }
+    var childCollections: [String: DescriptionChildren] = [:]
+    if let raw = j["childCollections"] {
+      let rows = try list(raw);
+      try require(rows.count <= limits.nodes, "Child collection table limit")
+      for row in rows {
+        let n = try dictionary(row); try keys(n, ["id", "kind", "children"]);
+        let id = try identity(n["id"]), kind = try text(n["kind"])
+        try require(
+          ["ordered", "sorted", "array"].contains(kind), "Unsupported child collection kind")
+        let values = try list(n["children"]);
+        try require(values.count <= limits.items, "Child collection item limit")
+        let children = try values.map { value -> Description in
+          guard let d = g.descriptions[try identity(value)] else {
+            throw MagritteError("Dangling child identity")
+          }; return d
         }
-        guard let root = g.descriptions[g.root], root.isContainer else { throw MagritteError("Root must identify a container") }
+        try require(childCollections[id] == nil, "Duplicate child collection identity");
+        childCollections[id] = DescriptionChildren(children, kind: kind)
+      }
+    }
+    var usedChildren = Set<String>()
+    for row in try list(j["descriptions"]) {
+      let n = try dictionary(row);
+      if let raw = n["childrenCollection"] {
+        let id = try identity(raw);
+        guard let storage = childCollections[id] else {
+          throw MagritteError("Dangling child collection identity")
+        }
+        let d = g.descriptions[try identity(n["id"])]!
+        try require(
+          d.children.map(ObjectIdentifier.init) == storage.values.map(ObjectIdentifier.init),
+          "Child collection snapshot mismatch")
+        try require(
+          !descriptionIs(d, "MAPriorityContainer") || storage.kind == "sorted",
+          "Priority children require sorted storage")
+        d.childCollection = storage; usedChildren.insert(id)
+      }
+    }
+    try require(usedChildren.count == childCollections.count, "Unreferenced child collection")
+    guard let root = g.descriptions[g.root], root.isContainer else { throw MagritteError("Root must identify a container") }
         var checked = Set<ObjectIdentifier>(), graphWork = 0
         for d in g.descriptions.values where !checked.contains(ObjectIdentifier(d)) {
             try visit(d, limits: limits) { node in
@@ -812,14 +923,20 @@ public final class Graph {
             let fields = Set(d.children.map(\.id))
             for (k, v) in try dictionary(values) {
                 try require(fields.contains(k), "Value is not described by the object container")
-                m.values[k] = try value(v, limits)
-            }
+        m.values[k] = try value(v, limits, 0, g.collections)
+      }
             try require(g.objects[id] == nil, "Duplicate object identity"); g.objects[id] = m
         }
-        func references(_ v: Value, _ depth: Int) throws {
+    var referencedCollections = Set<ObjectIdentifier>()
+    func references(_ v: Value, _ depth: Int) throws {
             graphWork += 1; try require(depth <= limits.depth && graphWork <= limits.visits, "Value reference traversal limit")
             switch v {
-            case .reference:
+      case .mutableCollection(let ref):
+        try require(format == "magritte.graph/4", "Mutable collections require graph/4")
+        if referencedCollections.insert(try ref.identity()).inserted {
+          try references(ref.snapshot(), depth)
+        }
+      case .reference:
                 try require(format != "magritte.graph/1", "Object references require graph/2"); _ = try g.resolve(v)
             case .classValue: try require(format == "magritte.graph/4", "Class values require graph/4")
             case .symbol, .float: try require(format >= "magritte.graph/3", "Symbol/Float requires graph/3")
@@ -837,12 +954,38 @@ public final class Graph {
             for label in d.labels { try references(label.value, 0) }
         }
         for o in g.objects.values { for v in o.values.values { try references(v, 0) } }
-        return g
+    if let raw = j["collections"] {
+      for n in try list(raw) { try references(g.collections.at(identity(dictionary(n)["id"])), 0) }
+    }
+    return g
     }
     public func encode(limits: Limits = Limits()) throws -> Data {
         try require(descriptions.count <= limits.nodes && objects.count <= limits.nodes, "Graph node limit")
         try require(nativeObjects.isEmpty, "Local native object bindings are not portable")
-        var nodes: [[String: Any]] = [], models: [[String: Any]] = []
+    let collectionContext = CollectionWireContext()
+    var childGroups: [ObjectIdentifier: Int] = [:]
+    for d in descriptions.values where d.isContainer {
+      childGroups[ObjectIdentifier(d.childCollection), default: 0] += 1
+    }
+    var childIDs: [ObjectIdentifier: String] = [:], childRows: [[String: Any]] = []
+    for key in descriptions.keys.sorted() {
+      let d = descriptions[key]!; if !d.isContainer { continue }
+      let ptr = ObjectIdentifier(d.childCollection),
+        kind = descriptionIs(d, "MAPriorityContainer") ? "sorted" : d.childCollection.kind
+      try require(
+        ["ordered", "sorted", "array"].contains(d.childCollection.kind),
+        "Unsupported child collection kind")
+      let needed =
+        childGroups[ptr, default: 0] > 1 || kind == "array"
+        || (kind == "sorted" && !descriptionIs(d, "MAPriorityContainer"))
+      if needed && childIDs[ptr] == nil {
+        try require(format == "magritte.graph/4", "Shared child collections require graph/4");
+        let id = "children." + key; childIDs[ptr] = id
+        childRows.append(["id": id, "kind": kind, "children": d.children.map(\.id)])
+      }
+    }
+
+    var nodes: [[String: Any]] = [], models: [[String: Any]] = []
         var portableWork = 0
         for id in descriptions.keys.sorted() {
             guard let d = descriptions[id] else { throw MagritteError("Missing description") }
@@ -856,7 +999,9 @@ public final class Graph {
           && d.properties["maPrintStringSeparator"] == nil,
         "Local executable behavior is not portable")
       var props: [String: Any] = [:]
-      for (k, v) in d.properties { props[k] = try wire(v, limits) }
+      for k in d.properties.keys.sorted() {
+        props[k] = try wire(d.properties[k]!, limits, 0, collectionContext)
+      }
       var n: [String: Any] = ["id": d.id, "class": d.className, "properties": props]
       if let c = d.definingContext {
         try require(format == "magritte.graph/4", "Defining context requires graph/4");
@@ -877,7 +1022,8 @@ public final class Graph {
                     for i in 1..<d.children.count { try require(compareNumbers(d.children[i-1].priorityValue(), d.children[i].priorityValue()) <= 0, "Stale priority order requires graph/4") }
                   }
                 }
-                n["children"] = d.children.map(\.id)
+        if let id = childIDs[ObjectIdentifier(d.childCollection)] { n["childrenCollection"] = id }
+        n["children"] = d.children.map(\.id)
             } else { n["accessor"] = try accessorWire(d.effectiveAccessor, limits) }
             if d.isReference {
         if let ref = try storedReference(d) {
@@ -890,8 +1036,10 @@ public final class Graph {
             }
             if d.isRelation { n["classes"] = d.classes }
             if d.isOption {
-                n["options"] = try d.options.values(limits: limits).map { try wire($0, limits) }
-                n["labels"] = try d.labels.map { ["value": try wire($0.value, limits), "label": $0.label] as [String: Any] }
+        n["options"] = try d.options.values(limits: limits).map {
+          try wire($0, limits, 0, collectionContext)
+        }
+        n["labels"] = try d.labels.map { ["value": try wire($0.value, limits), "label": $0.label] as [String: Any] }
             }
             nodes.append(n)
         }
@@ -899,11 +1047,32 @@ public final class Graph {
             guard let m = objects[id] else { throw MagritteError("Missing object") }
             try require(id == m.id && descriptions[m.description.id] === m.description, "Unregistered object description")
             var values: [String: Any] = [:]
-            for (k, v) in m.values { values[k] = try wire(v, limits) }
-            models.append(["id": id, "description": m.description.id, "values": values])
+      for k in m.values.keys.sorted() {
+        values[k] = try wire(m.values[k]!, limits, 0, collectionContext)
+      }
+      models.append(["id": id, "description": m.description.id, "values": values])
         }
-        let data = try JSONSerialization.data(withJSONObject: ["format": format, "root": root, "descriptions": nodes, "objects": models], options: [.sortedKeys, .prettyPrinted])
-        _ = try Graph.decode(data, limits: limits)
+    var j: [String: Any] = [
+      "format": format, "root": root, "descriptions": nodes, "objects": models,
+    ]
+    if !childRows.isEmpty { j["childCollections"] = childRows }
+    if !collectionContext.pending.isEmpty {
+      try require(format == "magritte.graph/4", "Mutable collections require graph/4")
+      var rows: [String: [String: Any]] = [:]
+      while rows.count < collectionContext.pending.count {
+        try require(collectionContext.pending.count <= limits.nodes, "Collection node limit")
+        let id = collectionContext.pending.keys.sorted().first { rows[$0] == nil }!
+        let ref = try collectionContext.pending[id]!.mutableCollection()
+        let elements = try ref.snapshot().elements().map {
+          try wire($0, limits, 0, collectionContext)
+        }
+        rows[id] = ["id": id, "kind": try ref.kind(), "elements": elements]
+      }
+      j["collections"] = rows.keys.sorted().map { rows[$0]! }
+    }
+    let data = try JSONSerialization.data(
+      withJSONObject: j, options: [.sortedKeys, .prettyPrinted])
+    _ = try Graph.decode(data, limits: limits)
         return data
     }
 }

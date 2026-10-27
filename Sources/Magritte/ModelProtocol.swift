@@ -4,7 +4,7 @@ private final class ModelWork {
   let budget: Budget
   init(_ limits: Limits) { budget = Budget(limits) }
   func value(_ value: Value) throws {
-    _ = try valueKey(value, tick: budget.tick)
+    try checkRuntimeValue(value,budget.limits,&budget.work)
     try checkLocalValue(value, limits: budget.limits)
   }
   func equal(_ left: Value, _ right: Value, _ graph: Graph?) throws -> Bool {
@@ -20,7 +20,7 @@ private final class ModelWork {
       }
       return b
     }
-    return try valueKey(left, tick: budget.tick) == valueKey(right, tick: budget.tick)
+    return try equalRuntimeValues(left,right,budget.limits,&budget.work)
   }
 }
 private func declaredModelDefault(_ d: Description, _ work: ModelWork) throws -> Value {

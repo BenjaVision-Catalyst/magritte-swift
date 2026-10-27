@@ -127,13 +127,29 @@ private func sortedChildren(_ children: [Description], _ limits: Limits) throws 
 extension Description {
   @discardableResult public func setChildren(_ next: [Description], limits: Limits = Limits()) throws -> Self {
     try containerWork(self, next.count, limits)
-    children = try descriptionIs(self, "MAPriorityContainer") ? sortedChildren(next, limits) : next
+    childCollection =
+      try descriptionIs(self, "MAPriorityContainer")
+      ? DescriptionChildren(sortedChildren(next, limits), kind: "sorted")
+      : DescriptionChildren(next)
     return self
+  }
+  @discardableResult public func setChildren(_ next: DescriptionChildren, limits: Limits = Limits())
+    throws -> Self
+  {
+    if descriptionIs(self, "MAPriorityContainer") {
+      return try setChildren(next.values, limits: limits)
+    }
+    try containerWork(self, next.values.count, limits)
+    try require(
+      ["ordered", "sorted", "array"].contains(next.kind), "Unsupported child collection kind")
+    childCollection = next; return self
   }
   @discardableResult public func add(_ child: Description, limits: Limits = Limits()) throws -> Self {
     try containerWork(self, children.count + 1, limits)
-    if !descriptionIs(self, "MAPriorityContainer") { children.append(child) }
-    else {
+    try require(childCollection.kind != "array", "Array children have fixed size")
+    if childCollection.kind != "sorted" && !descriptionIs(self, "MAPriorityContainer") {
+      children.append(child)
+    } else {
       var low = 0, high = children.count, work = children.count
       while low < high {
         work += 1
@@ -149,7 +165,11 @@ extension Description {
   @discardableResult public func addAll(_ incoming: [Description], limits: Limits = Limits()) throws -> Self {
     try require(incoming.count <= limits.items && children.count <= limits.items - incoming.count, "Container mutation item/work limit")
     try containerWork(self, children.count + incoming.count, limits)
-    if descriptionIs(self, "MAPriorityContainer") && incoming.count > children.count / 3 {
+    try require(
+      childCollection.kind != "array" || incoming.isEmpty, "Array children have fixed size")
+    if (childCollection.kind == "sorted" || descriptionIs(self, "MAPriorityContainer"))
+      && incoming.count > children.count / 3
+    {
       children.append(contentsOf: incoming)
       children = try sortedChildren(children, limits)
     } else { for child in incoming { try add(child, limits: limits) } }
@@ -157,6 +177,7 @@ extension Description {
   }
   @discardableResult public func remove(_ sought: Description, limits: Limits = Limits()) throws -> Self {
     try containerWork(self, children.count, limits)
+    try require(childCollection.kind != "array", "Array children have fixed size")
     if let i = try firstEqualChild(children, sought, limits) { children.remove(at: i); return self }
     throw MagritteError("Container child not found")
   }

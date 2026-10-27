@@ -53,11 +53,13 @@ public final class SortBlock {
       return result
     }
     let budget = Budget(limits)
-    let aKey = try valueKey(left, tick: budget.tick)
-    let bKey = try valueKey(right, tick: budget.tick)
     if selector == "=" || selector == "~=" {
-      return .boolean(selector == "=" ? aKey == bKey : aKey != bKey)
+      let equal=try equalRuntimeValues(left,right,limits,&budget.work)
+      return .boolean(selector == "=" ? equal:!equal)
     }
+    if case .mutableCollection(let ref)=left,try ref.kind()=="string" {return try send(ref.snapshot(),right,graph,limits)}
+    if case .mutableCollection(let ref)=right,try ref.kind()=="string" {return try send(left,ref.snapshot(),graph,limits)}
+    _ = try valueKey(left,tick:budget.tick);_ = try valueKey(right,tick:budget.tick)
     try require(
       ["<", "<=", ">", ">="].contains(selector), "Unbound scalar binary selector: " + selector)
     let comparison: Int

@@ -160,3 +160,7 @@ Graph/4 permits JSON null in the required `reference` field of reference-descrip
 ## Persistent container sequences (0.29)
 
 Graph/4 priority nodes emit `childrenOrder: "stored"`, preserving the exact child sequence through import, including stale priorities. The marker is allowed only on priority containers and only with that value. Unmarked priority nodes retain construction-form import through setChildren. Exporting stale priority order to graph/1–3 fails; source state is never silently resorted on export. Graph/4 also permits duplicate child IDs, representing repeated references to one description node; older formats reject duplicates. Native array/vector identity is not serialized. See [container-mutation.md](container-mutation.md).
+
+## Mutable collection identity (0.30)
+
+Graph/4 has optional collection and child-backing identity tables with forward/cyclic collection references. Legacy formats reject these features. See [mutable collections](mutable-collections.md) for complete records, ownership, validation and compatibility rules.

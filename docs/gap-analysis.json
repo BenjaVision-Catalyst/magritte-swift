@@ -328,8 +328,8 @@
       "kind": "limited_profile",
       "priority": "P1",
       "status": {
-        "cpp": "snapshot_only",
-        "swift": "snapshot_only"
+        "cpp": "implemented_native_ownership_profile",
+        "swift": "implemented_native_ownership_profile"
       },
       "depends_on": [],
       "upstream_sources": [
@@ -350,12 +350,14 @@
           "include/magritte/magritte.hpp",
           "src/editing.cpp",
           "src/composition.cpp",
-          "src/magritte.cpp"
+          "src/magritte.cpp",
+          "src/mutable_collections.cpp"
         ],
         "swift": [
           "Sources/Magritte/Magritte.swift",
           "Sources/Magritte/Editing.swift",
-          "Sources/Magritte/Composition.swift"
+          "Sources/Magritte/Composition.swift",
+          "Sources/Magritte/MutableCollections.swift"
         ]
       },
       "acceptance_gate": [
@@ -364,11 +366,16 @@
         "If collection identity is exported, define object-table representation and explicit legacy-format rejection; preserve current immutable/snapshot forms."
       ],
       "scope_notes": [
-        "Description nodes and relationship objects already preserve reference identity/cycles.",
-        "Inline collections and strings are Values; copying their elements does not preserve collection-object identity.",
-        "This is a substantial foundation phase; a recursive deep clone is not an adequate substitute."
+        "Snapshot forms remain supported beside explicit native mutable handles.",
+        "Ordered/Array cycles use scoped native ownership; related nodes share a store.",
+        "Deep/full copy and arbitrary hashed mutable members are outside this profile."
       ],
-      "observation_keys": []
+      "observation_keys": [],
+      "implementation": {
+        "phase": "0.30",
+        "documentation": "docs/mutable-collections.md",
+        "boundary": "Native scoped collection ownership; cache aliases, selective shallow checked originals; shared children; graph/4 identity tables. Stable hashed members only; no deep copy or tracing GC."
+      }
     },
     {
       "id": "MAG-005",
@@ -1030,6 +1037,14 @@
       "status": "implemented_native_array_profile",
       "evidence": "container-mutation.md",
       "source_fingerprints": "container-mutation-upstream-methods.json (shared fixtures)",
+      "gt_accessed": false
+    },
+    {
+      "phase": "0.30",
+      "gap": "MAG-004",
+      "status": "implemented_native_ownership_profile",
+      "evidence": "mutable-collections.md",
+      "source_fingerprints": "mutable-collection-upstream-methods.json (shared fixtures)",
       "gt_accessed": false
     }
   ]

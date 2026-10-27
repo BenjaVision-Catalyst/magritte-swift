@@ -1,0 +1,37 @@
+{
+  "provenance": "Independent source-derived expectations for MACheckedMemento>>reset; values are mutable OrderedCollections. Nested originals retain aliases.",
+  "cases": [
+    {
+      "class": "MAToManyRelationDescription",
+      "copyOriginal": true
+    },
+    {
+      "class": "MAToManyScalarRelationDescription",
+      "copyOriginal": true
+    },
+    {
+      "class": "MAToOneRelationDescription",
+      "copyOriginal": false
+    },
+    {
+      "class": "MAStringDescription",
+      "copyOriginal": false
+    },
+    {
+      "class": "MAMultipleOptionDescription",
+      "copyOriginal": true
+    },
+    {
+      "class": "MASingleOptionDescription",
+      "copyOriginal": false
+    },
+    {
+      "class": "MATokenDescription",
+      "copyOriginal": false
+    },
+    {
+      "class": "MABooleanDescription",
+      "copyOriginal": false
+    }
+  ]
+}

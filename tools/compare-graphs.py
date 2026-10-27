@@ -16,6 +16,11 @@ def canonical(value):
             result['labels'].sort(key=lambda v: key(v['value']))
         if 'classes' in result:
             result['classes'].sort()
+        for table in ('collections', 'childCollections'):
+            if table in result:
+                result[table].sort(key=lambda v: v['id'])
+        if result.get('kind') in ('set', 'bag') and 'elements' in result:
+            result['elements'].sort(key=key)
         if 'descriptions' in result:
             result['descriptions'].sort(key=lambda v: v['id'])
             result['objects'].sort(key=lambda v: v['id'])

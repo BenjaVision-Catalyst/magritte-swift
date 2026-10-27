@@ -25,11 +25,10 @@ extension Description {
     throws -> String
   {
     let budget = Budget(limits)
-    _ = try valueKey(value, tick: budget.tick)
     // Validate local Value shape without charging JSON envelope bytes as display text.
     var validation = limits
     validation.bytes = Int.max
-    try checkLocalValue(value, limits: validation)
+    try checkRuntimeValue(value,validation,&budget.work)
     let result: String
     if let block = displayBlock {
       result = try block.operation(value, self)
@@ -50,6 +49,8 @@ extension Description {
         result = text
       } else if arity == 0 && ["greaseString", "asString"].contains(selector) {
         result = try displayString(value)
+      } else if selector == "yourself",case .mutableCollection(let ref)=value,try ref.kind()=="string" {
+        result=try displayString(ref.snapshot())
       } else if selector == "yourself", case .string(let text) = value {
         result = text
       } else if selector == "label", case .classValue(let name) = value,

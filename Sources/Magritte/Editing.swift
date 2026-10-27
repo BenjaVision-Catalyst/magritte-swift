@@ -11,13 +11,10 @@ private final class EditingWork {
     count += 1
     try require(count <= limits.visits, "Editing work limit")
   }
-  func key(_ v: Value) throws -> String {
-    try valueKey(v) { depth in
-      try self.tick()
-      try require(depth <= self.limits.depth, "Editing depth limit")
-    }
+  func check(_ v: Value) throws {
+    try checkRuntimeValue(v, limits, &count)
   }
-  func equal(_ a: Value, _ b: Value) throws -> Bool { try key(a) == key(b) }
+  func equal(_ a: Value, _ b: Value) throws -> Bool { try equalRuntimeValues(a, b, limits, &count) }
 }
 private func ignorable(_ value: Value, using d: Description, work: EditingWork) throws -> Bool {
   try work.tick()
@@ -121,7 +118,7 @@ public final class StraightMemento: Memento {
   public override func read(using d: Description) throws -> Value {
     let raw = try model.read(using: d)
     let value = try raw.isNil ? d.defaultValue() : raw
-    _ = try EditingWork(limits).key(value)
+    try EditingWork(limits).check(value)
     return value
   }
   public override func write(_ value: Value, using d: Description) throws {
@@ -158,7 +155,7 @@ public class CachedMemento: Memento {
     for d in try fields() {
       try work.tick()
       let value = try model.read(using: d)
-      _ = try work.key(value)
+      try work.check(value)
       result[d.id] = value
     }
     return result
@@ -198,8 +195,8 @@ public class CachedMemento: Memento {
     try checkIdentities()
     try checkLocalValue(value, limits: limits)
     let work = EditingWork(limits)
-    for (id, entry) in entries where id != d.id { _ = try work.key(entry.value) }
-    _ = try work.key(value)
+    for (id, entry) in entries where id != d.id { try work.check(entry.value) }
+    try work.check(value)
     if var entry = entries[d.id] {
       try require(entry.description === d, "Cached description identity mismatch")
       entry.value = value
@@ -220,7 +217,7 @@ public class CachedMemento: Memento {
       try work.tick()
       var value = try model.read(using: d)
       if try work.equal(value, d.property("undefinedValue")) { value = try d.defaultValue() }
-      _ = try work.key(value)
+      try work.check(value)
       next[d.id] = Entry(description: d, value: value)
       nextOrder.append(d.id)
     }
@@ -260,7 +257,13 @@ public final class CheckedMemento: CachedMemento {
   }
   public override func reset() throws {
     try super.reset()
-    original = try pullRaw()
+    var next = try pullRaw()
+    for d in try fields() {
+      if let value = next[d.id], value.isCollection && d.isReference && d.isMultiple {
+        next[d.id] = try value.shallowCopy(limits:limits)
+      }
+    }
+    original=next
   }
   public func hasModelChangedElsewhere() throws -> Bool {
     try checkIdentities()

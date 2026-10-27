@@ -11,7 +11,7 @@ public extension Description {
     -> String
   {
     let budget = Budget(limits)
-    let key = try valueKey(value, tick: budget.tick)
+    try checkRuntimeValue(value,limits,&budget.work)
     func bounded(_ text: String) throws -> String {
       try require(
         text.utf8.count <= limits.bytes && text.utf8.count <= limits.visits - budget.work,
@@ -31,7 +31,7 @@ public extension Description {
         try require(isOption, "Option operation requires option description")
         for label in labels {
             try require(portableLabelKey(label.value), "Identity-sensitive option label key is not portable")
-            if try sameLabelType(label.value, value) && valueKey(label.value, tick: budget.tick) == key { return try bounded(label.label) }
+            if try sameLabelType(label.value, value) && equalRuntimeValues(label.value,value,limits,&budget.work) { return try bounded(label.label) }
         }
     return try bounded(displayStringFor(value, graph: graph, limits: limits))
   }
@@ -63,8 +63,8 @@ public extension Description {
         }
         let budget = Budget(limits)
         var contains = false
-        let key = try valueKey(current, tick: budget.tick)
-        for option in try options.values(limits: limits) { if try valueKey(option, tick: budget.tick) == key { contains = true } }
+        try checkRuntimeValue(current,limits,&budget.work)
+        for option in try options.values(limits: limits) { if try equalRuntimeValues(option,current,limits,&budget.work) { contains = true } }
         var result = try options.values(limits: limits)
         if try flag("extensible") && !current.isNil && !contains { result.append(current) }
         if try flag("sorted") {
@@ -109,7 +109,13 @@ private func kindOf(_ v: Value, _ kind: String, _ graph: Graph?) throws -> Bool 
     }
     let cls:String
     switch v {
-    case .undefined: cls="UndefinedObject"
+  case .mutableCollection(let ref):
+    let k = try ref.kind();
+    cls =
+      k == "array"
+      ? "Array"
+      : k == "ordered" ? "OrderedCollection" : k == "set" ? "Set" : k == "bag" ? "Bag" : "String"
+  case .undefined: cls="UndefinedObject"
     case .boolean: cls="Boolean"
     case .integer: cls="Integer"
     case .float: cls="Float"
@@ -128,7 +134,8 @@ private func kindOf(_ v: Value, _ kind: String, _ graph: Graph?) throws -> Bool 
 }
 final class Budget {
     var work = 0
-    let limits: Limits
+  var collections = Set<ObjectIdentifier>()
+  let limits: Limits
     init(_ limits: Limits) { self.limits = limits }
     func tick(_ depth: Int) throws {
         work += 1; try require(work <= limits.visits && depth <= limits.depth, "Validation work/depth limit")
@@ -150,7 +157,10 @@ private func validateModel(_ d: Description, _ model: Model, _ graph: Graph?, _ 
 private func checkReferences(_ v: Value, _ graph: Graph?, _ budget: Budget, _ depth: Int) throws {
     try budget.tick(depth)
     switch v {
-    case .reference:
+  case .mutableCollection(let ref):
+    if !budget.collections.insert(try ref.identity()).inserted { return }
+    try checkReferences(ref.snapshot(), graph, budget, depth)
+  case .reference:
         guard let graph else { throw MagritteError("Object references require a graph resolver") }; _ = try graph.resolve(v)
     case .array(let a), .collection(_, let a):
         try require(a.count <= budget.limits.visits - budget.work, "Collection work limit")
@@ -173,8 +183,10 @@ private func validateField(_ d: Description, _ v: Value, _ graph: Graph?, _ budg
   {
     try error("MARequiredError")
   }
-  if try valueKey(v, tick: budget.tick) == valueKey(d.property("undefinedValue"), tick: budget.tick) { return errors }
-    if d.isContainer {
+  if try equalRuntimeValues(v, d.property("undefinedValue"), budget.limits, &budget.work) {
+    return errors
+  }
+  if d.isContainer {
         guard let graph else { throw MagritteError("Container value validation requires a graph resolver") }
         let nested = try validateModel(d, graph.resolve(v), graph, budget, depth + 1)
         return errors + nested
@@ -205,8 +217,12 @@ private func validateField(_ d: Description, _ v: Value, _ graph: Graph?, _ budg
         func check(_ e: Value) throws {
             var member = false
             if case .dynamic(let source) = d.options { try budget.tick(depth); member = try source.includes(e, limits: budget.limits) }
-            else { for option in try d.options.values(limits: budget.limits) { try budget.tick(depth); if try valueKey(e, tick: budget.tick) == valueKey(option, tick: budget.tick) { member = true; break } }
-            }
+      else {
+        for option in try d.options.values(limits: budget.limits) {
+          try budget.tick(depth);
+          if try equalRuntimeValues(e, option, budget.limits, &budget.work) { member = true; break }
+        }
+      }
             if member { return }
       if try !d.flag("extensible") { try error("MAKindError"); kind = false; return }
       let nested = try validateField(d.referenceDescription(), e, graph, budget, depth + 1)
@@ -263,6 +279,8 @@ func valueKey(_ value: Value, tick: (Int) throws -> Void, depth: Int = 0) throws
         return s.utf8.map { String(format: "%02x", $0) }.joined()
     }
     switch value {
+  case .mutableCollection(let ref):
+    return try valueKey(ref.snapshot(), tick: tick, depth: depth + 1)
   case .fraction:
     let f = try fractionOf(value);
     return f.1 == 1 ? "2:" + String(f.0) : "12:" + String(f.0) + "/" + String(f.1)

@@ -56,6 +56,9 @@ private final class CompositionWork {
       return false
     }
     if !a.isContainer { return true }
+    let leftKind = descriptionIs(a, "MAPriorityContainer") ? "sorted" : a.childCollection.kind
+    let rightKind = descriptionIs(b, "MAPriorityContainer") ? "sorted" : b.childCollection.kind
+    if leftKind != rightKind { return false }
     let x = try a.orderedChildren()
     let y = try b.orderedChildren()
     if x.count != y.count { return false }
@@ -69,10 +72,7 @@ private func retainDescriptions(_ source: Description, _ limits: Limits) throws 
     try supported($0)
     try checkPortableDescription($0, limits: limits, work: &work)
     for value in $0.properties.values {
-      _ = try valueKey(value) { depth in
-        work += 1
-        try require(work <= limits.visits && depth <= limits.depth, "Copy value work/depth limit")
-      }
+      try checkRuntimeValue(value, limits, &work)
     }
   }
   var seen = Set<ObjectIdentifier>()
@@ -139,7 +139,7 @@ public func copyDescription(_ source: Description, newID: String, limits: Limits
     let n = Description(id: id, className: d.className, key: d.key)
     n.properties = d.properties
     n.definingContext = d.definingContext
-    if n.isContainer { try n.setChildren(d.children, limits: limits) }
+    if n.isContainer { try n.setChildren(d.childCollection.shallowCopy(), limits: limits) }
     n.classes = d.classes
     n.options = d.isOption ? d.options.copy() : d.options
     n.labels = d.labels

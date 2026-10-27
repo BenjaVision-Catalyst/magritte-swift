@@ -1,6 +1,6 @@
 # Container mutation and persistent priority order (0.29)
 
-Both ports implement MAG-003 over native child storage. Container mutations now follow Magritte's identity/equality and receiver-return rules; priority order is stored state and reads no longer sort. Explicit setChildren/resort, copy, builders and metadata edits use the appropriate mutation protocol. MAG-004 still covers mutable backing-collection identity and aliases.
+Both ports implement MAG-003 over native child storage. Container mutations now follow Magritte's identity/equality and receiver-return rules; priority order is stored state and reads no longer sort. Explicit setChildren/resort, copy, builders and metadata edits use the appropriate mutation protocol. Phase 0.30 (MAG-004) adds mutable backing identity and aliases; see [mutable collections](mutable-collections.md).
 
 ## Native platform implementation
 
@@ -9,7 +9,7 @@ Both ports implement MAG-003 over native child storage. Container mutations now 
 | C++17 | `std::vector<std::shared_ptr<Description>>`, native pointer identity, bounded binary insertion and `std::stable_sort`; mutations return `Description&`. |
 | Swift | `[Description]`, ARC object identity and native array sorting/mutation; fluent methods return `Self` with `@discardableResult`. |
 
-Child objects retain their actual native identity. Child sequences are native value snapshots; they do not introduce a simulated Smalltalk collection runtime. The portable boundary carries description identities, values and actual stored order so each platform can reconstruct its own representation. It carries no C++/Swift object layout, executable code or backing-array alias promise.
+Child objects retain their actual native identity. At phase 0.29 child sequences were native snapshots. Phase 0.30 wraps native storage in shared ownership for explicit backing identity; it does not introduce a simulated Smalltalk collection runtime. The portable boundary carries description identities, values and actual stored order so each platform can reconstruct its own representation. It carries no C++/Swift object layout, executable code or executable implementation; backing alias identity is now represented explicitly in graph/4.
 
 Use `setChildren`/`add`/`addAll` to construct or mutate a container. The public children vector/array remains a low-level stored-sequence bridge for adapters, codecs and rollback. Direct writes bypass the source mutation protocol; changing className from a plain to a priority container also does not initialize or sort its storage. `orderedChildren` returns the stored sequence, retaining the existing null-child check in C++.
 

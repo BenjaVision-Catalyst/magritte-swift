@@ -71,6 +71,7 @@ func checkLocalValue(_ value: Value, limits: Limits = Limits()) throws {
     work += 1
     try require(work <= limits.visits && depth <= limits.depth, "Local value work/depth limit")
     switch v {
+    case .mutableCollection: try checkRuntimeValue(v, limits, &work, depth); return .undefined
     case .conflict(let c):
       if let kind = c.kind { try require(knownClass(kind), "Unknown conflict kind") }
       return .array([.string(c.string)] + (c.kind.map { [.string($0)] } ?? []))

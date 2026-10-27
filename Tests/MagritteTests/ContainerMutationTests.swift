@@ -98,8 +98,10 @@ final class ContainerMutationTests: XCTestCase {
     XCTAssertEqual(try ids(root), ["b", "c", "a"])
     b.properties["priority"] = .integer(50)
     let previous = try ids(root)
+    let previousStorage=root.childCollection
     XCTAssertThrowsError(try binding.write(.array([.reference("root")]), using: children))
     XCTAssertEqual(try ids(root), previous)
+    XCTAssertTrue(root.childCollection === previousStorage)
     try root.setChildren([a, b, c])
     b.properties["priority"] = .integer(5)
     try root.add(c)

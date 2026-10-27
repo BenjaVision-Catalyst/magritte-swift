@@ -1,0 +1,187 @@
+{
+  "upstreamRevision": "d67f318686b7779aed79416db121e257d1191f2e",
+  "verification": "Upstream source only; GT was not accessed. Historical GT alias rows are replayed unchanged.",
+  "methods": [
+    {
+      "className": "MACachedMemento",
+      "classSide": false,
+      "selector": "reset",
+      "path": "source/Magritte-Model/MACachedMemento.class.st",
+      "sourceSHA256": "32a49e0a7f85af6732313662837738416dccf5b13a12dbd231f699407146c2b4"
+    },
+    {
+      "className": "MACachedMemento",
+      "classSide": false,
+      "selector": "commit",
+      "path": "source/Magritte-Model/MACachedMemento.class.st",
+      "sourceSHA256": "250e9748ada6e90e93708dac0c1c917b62c92bd316a8f53599a46054b2df5000"
+    },
+    {
+      "className": "MACachedMemento",
+      "classSide": false,
+      "selector": "hasChanges",
+      "path": "source/Magritte-Model/MACachedMemento.class.st",
+      "sourceSHA256": "0618090599f13ac483005c751ac501558f9b98dbc0420dcfe199a12f316c0298"
+    },
+    {
+      "className": "MACachedMemento",
+      "classSide": false,
+      "selector": "write:using:",
+      "path": "source/Magritte-Model/MACachedMemento.class.st",
+      "sourceSHA256": "d4eb04177ef71d4a87a6eba21221d0cf3cb25c95ccbe116e205417178d2166e9"
+    },
+    {
+      "className": "MACheckedMemento",
+      "classSide": false,
+      "selector": "reset",
+      "path": "source/Magritte-Model/MACheckedMemento.class.st",
+      "sourceSHA256": "94dc736b07a80809ec3351e1275375f452c654d7c234b0c30b4925c9f39f2933"
+    },
+    {
+      "className": "MACheckedMemento",
+      "classSide": false,
+      "selector": "hasConflict",
+      "path": "source/Magritte-Model/MACheckedMemento.class.st",
+      "sourceSHA256": "e3a3d980e1944b46a54972526a3fd2c542e193973d92661d1b60dad0f5ac90fa"
+    },
+    {
+      "className": "MACheckedMemento",
+      "classSide": false,
+      "selector": "hasModelChangedElsewhere",
+      "path": "source/Magritte-Model/MACheckedMemento.class.st",
+      "sourceSHA256": "3ec7e3dd292a7dd89ba9bb27b82ac3c354726b44389b04dcfde952e6e4c4cea6"
+    },
+    {
+      "className": "MACheckedMemento",
+      "classSide": false,
+      "selector": "shouldPush:using:",
+      "path": "source/Magritte-Model/MACheckedMemento.class.st",
+      "sourceSHA256": "1a413f75d6217c5dc7bfad612d7e685beafcfdd7817c85ddcdb1eabafb55a012"
+    },
+    {
+      "className": "MACheckedMemento",
+      "classSide": false,
+      "selector": "validate",
+      "path": "source/Magritte-Model/MACheckedMemento.class.st",
+      "sourceSHA256": "32a5d1a9746704fae07e41123a5ada0d986dc6b146419ea74ec4e40b4928dc2a"
+    },
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "children",
+      "path": "source/Magritte-Model/MAContainer.class.st",
+      "sourceSHA256": "904c9e39c224523386a9e48fa7f2f7e072f7a7939d091a3e4cf032660d8a1c35"
+    },
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "setChildren:",
+      "path": "source/Magritte-Model/MAContainer.class.st",
+      "sourceSHA256": "e4402aa9893639b51e8947ab0f20f4e9677cf91e61e740869d239fc1a813c05a"
+    },
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "postCopy",
+      "path": "source/Magritte-Model/MAContainer.class.st",
+      "sourceSHA256": "d527b5b1ae3a327411b8aaef5e323e256e2b549225cb1855f6c83cd0ff63a049"
+    },
+    {
+      "className": "MAContainer",
+      "classSide": false,
+      "selector": "removeAll",
+      "path": "source/Magritte-Model/MAContainer.class.st",
+      "sourceSHA256": "3ae3d840ac5d788d29e4d824c864b766faadb31e4123bde446b76a405c50395f"
+    },
+    {
+      "className": "MAReferenceDescription",
+      "classSide": false,
+      "selector": "postCopy",
+      "path": "source/Magritte-Model/MAReferenceDescription.class.st",
+      "sourceSHA256": "618bb4f844e62f4bd22a5bb53a485abbd79f0ba5b7cf4d26fa18f2f4e6f63e39"
+    },
+    {
+      "className": "MAPriorityContainer",
+      "classSide": false,
+      "selector": "setChildren:",
+      "path": "source/Magritte-Model/MAPriorityContainer.class.st",
+      "sourceSHA256": "f20bbc084f0aa87f1f7a27995e2756c07c6895d12d719cf9e77ad52b77c61984"
+    },
+    {
+      "className": "MAPriorityContainer",
+      "classSide": false,
+      "selector": "resort",
+      "path": "source/Magritte-Model/MAPriorityContainer.class.st",
+      "sourceSHA256": "a60d279f923e655e9d6b9f75a74b94e9c44b0f6f8a57358420c5ef47201d5749"
+    },
+    {
+      "className": "MAMementoTest",
+      "classSide": false,
+      "selector": "testSingletonValue",
+      "path": "source/Magritte-Tests-Model/MAMementoTest.class.st",
+      "sourceSHA256": "0716f96a4f516f939a00a6f82b0023e9535a1014dcba2f3bd8ce8df06302728a"
+    },
+    {
+      "className": "MAMemento",
+      "classSide": false,
+      "selector": "cookRawPull:",
+      "path": "source/Magritte-Model/MAMemento.class.st",
+      "sourceSHA256": "7940bb76270a0e6225cf8570c4ab4860acd139aa4a8985d67aa3e466b9cc58a9"
+    },
+    {
+      "className": "MAMemento",
+      "classSide": false,
+      "selector": "has:changedFrom:",
+      "path": "source/Magritte-Model/MAMemento.class.st",
+      "sourceSHA256": "f51cecdc52141d20dd4380976c41a5570639478ac913be403a12b158bbe391f8"
+    },
+    {
+      "className": "MAMemento",
+      "classSide": false,
+      "selector": "pull",
+      "path": "source/Magritte-Model/MAMemento.class.st",
+      "sourceSHA256": "2b0c7826792638ae216c5e4f6792121ef9161a9a3d59791666e7580693dd0e2e"
+    },
+    {
+      "className": "MAMemento",
+      "classSide": false,
+      "selector": "pullRaw",
+      "path": "source/Magritte-Model/MAMemento.class.st",
+      "sourceSHA256": "006b3f0f2bb817e98b7ffbb2a1629f8d3dfd59c2cebd817c33d8b3b15a9d0f19"
+    },
+    {
+      "className": "MAMemento",
+      "classSide": false,
+      "selector": "pullRawTransforming:",
+      "path": "source/Magritte-Model/MAMemento.class.st",
+      "sourceSHA256": "0e0860ecf072a6e48e6b689ba819f8465a2b4f9d494d17734fb1f5e079132e0e"
+    },
+    {
+      "className": "MAMemento",
+      "classSide": false,
+      "selector": "shouldPush:using:",
+      "path": "source/Magritte-Model/MAMemento.class.st",
+      "sourceSHA256": "403751815d7caa8c733d62115461c49450d5d3fc806ef6f619e1fe68c97cf729"
+    }
+  ],
+  "supportingKernel": {
+    "revision": "81f614957ca93536d2483a0f64480456b0350451",
+    "methods": [
+      {
+        "className": "SequenceableCollection",
+        "classSide": false,
+        "selector": "=",
+        "sourceSHA256": "d364d4c33e27d78bffec39b58a5e199a4bbd6af7fda201ea22aed3243def06c6",
+        "url": "https://github.com/pharo-project/pharo/blob/81f614957ca93536d2483a0f64480456b0350451/src/Collections-Sequenceable/SequenceableCollection.class.st"
+      },
+      {
+        "className": "SortedCollection",
+        "classSide": false,
+        "selector": "=",
+        "sourceSHA256": "44ab3522bc01d7b4b756ee4b6b752fe6b4e3f778c7893d86498997a3d712d07f",
+        "url": "https://github.com/pharo-project/pharo/blob/81f614957ca93536d2483a0f64480456b0350451/src/Collections-Sequenceable/SortedCollection.class.st"
+      }
+    ],
+    "note": "Supporting species/identity equality profile, not whole-image provenance."
+  }
+}
